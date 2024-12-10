@@ -3,9 +3,11 @@
 > [!NOTE]
 > https://arxiv.org/pdf/2406.11200
 
+> [!TIP]
+> https://github.com/zou-group/avatar
 
 > [!IMPORTANT]
-> AVATAR is an automated framework that optimizes LLM agents for effective tool use by employing a contrastive reasoning mechanism to identify systemic flaws and generate holistic prompts. It focuses on iterative improvements in task decomposition, tool usage, and response synthesis, achieving significant performance gains in complex retrieval and question-answering tasks. The main idea is to use a comparator module that contrasts successful and failed task instances to iteratively refine the LLM agent's strategies, enhancing generalization and task performance.
+> TL;DR: AVATAR is an automated framework that optimizes LLM agents for effective tool use by employing a contrastive reasoning mechanism to identify systemic flaws and generate holistic prompts. It focuses on iterative improvements in task decomposition, tool usage, and response synthesis, achieving significant performance gains in complex retrieval and question-answering tasks. The main idea is to use a comparator module that contrasts successful and failed task instances to iteratively refine the LLM agent's strategies, enhancing generalization and task performance.
 
 
 ## Problem Summary:

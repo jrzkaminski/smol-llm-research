@@ -8,7 +8,7 @@
 
 
 > [!IMPORTANT]
-> TL;DR MetaGPT is a meta-programming framework leveraging LLM-based multi-agent collaboration with human-inspired SOPs for structured task execution. It outperforms previous systems like AutoGPT and ChatDev in generating robust, executable software solutions, achieving state-of-the-art results on benchmarks. The framework introduces structured communication, role specialization, and an iterative feedback mechanism, making it highly efficient and error-resistant.
+> TL;DR: MetaGPT is a meta-programming framework leveraging LLM-based multi-agent collaboration with human-inspired SOPs for structured task execution. It outperforms previous systems like AutoGPT and ChatDev in generating robust, executable software solutions, achieving state-of-the-art results on benchmarks. The framework introduces structured communication, role specialization, and an iterative feedback mechanism, making it highly efficient and error-resistant.
 
 
 ## Introduction:

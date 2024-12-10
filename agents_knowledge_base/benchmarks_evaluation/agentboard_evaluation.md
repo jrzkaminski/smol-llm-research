@@ -3,9 +3,12 @@
 > [!NOTE]
 > https://arxiv.org/pdf/2401.13178
 
+> [!TIP]
+> https://github.com/hkust-nlp/AgentBoard
+
 
 > [!IMPORTANT]
-> TL;DR AGENTBOARD is a novel benchmark and evaluation framework for assessing large language models as agents in diverse and complex tasks. It introduces a progress rate metric, surpassing traditional success rates, and offers an open-source toolkit with interactive visualizations for detailed performance analysis. Key findings highlight GPT-4's superior performance and open-weight models' limitations in planning and grounding.
+> TL;DR: AGENTBOARD is a novel benchmark and evaluation framework for assessing large language models as agents in diverse and complex tasks. It introduces a progress rate metric, surpassing traditional success rates, and offers an open-source toolkit with interactive visualizations for detailed performance analysis. Key findings highlight GPT-4's superior performance and open-weight models' limitations in planning and grounding.
 
 ## Problem
 The evaluation of Large Language Models (LLMs) as general-purpose agents poses significant challenges due to the following reasons:
@@ -53,5 +56,3 @@ The authors introduce **AGENTBOARD**, a benchmark and open-source evaluation fra
 
 ## Implications
 AGENTBOARD represents a significant advancement in the evaluation of LLM agents by addressing gaps in current benchmarking systems. It facilitates deeper insights into agentic abilities, helping developers identify areas for improvement and design stronger, more capable LLM agents.
-
-This comprehensive framework, with its diverse tasks and analytical tools, aims to accelerate the development and understanding of general-purpose LLM agents in real-world settings.

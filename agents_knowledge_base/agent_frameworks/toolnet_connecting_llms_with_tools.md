@@ -3,8 +3,11 @@
 >[!NOTE]
 > https://arxiv.org/pdf/2403.00839
 
+> [!TIP]
+> No open-source code available.
+
 >[!IMPORTANT]
-> ToolNet is a framework that organizes external tools into a directed graph to enhance large language models' ability to interact with thousands of tools efficiently. It reduces token usage, dynamically adapts to tool changes, and performs robustly even with noisy or failed tools. Experiments across various datasets confirm its superiority over existing methods like ReAct and Reflexion.
+> TL;DR ToolNet is a framework that organizes external tools into a directed graph to enhance large language models' ability to interact with thousands of tools efficiently. It reduces token usage, dynamically adapts to tool changes, and performs robustly even with noisy or failed tools. Experiments across various datasets confirm its superiority over existing methods like ReAct and Reflexion.
 
 ## Problem Addressed:
 Large Language Models (LLMs) have demonstrated impressive capabilities but face challenges when interfacing with extensive libraries of external tools or APIs:
