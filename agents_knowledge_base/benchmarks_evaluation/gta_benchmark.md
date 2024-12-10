@@ -1,7 +1,12 @@
 # GTA: A Benchmark for General Tool Agents
 
 ---
-https://arxiv.org/pdf/2407.08713
+> [!NOTE]
+> https://arxiv.org/pdf/2407.08713
+
+> [!IMPORTANT]
+> TL;DR: GTA is a new benchmark for evaluating LLMs' tool-use capabilities in realistic, multimodal scenarios using human-written queries and real tools. Results show that even advanced models struggle, revealing critical weaknesses in reasoning, tool invocation, and argument formatting.
+
 ## **Problem**
 
 1. **Gaps in Current Tool-Use Evaluations**:
