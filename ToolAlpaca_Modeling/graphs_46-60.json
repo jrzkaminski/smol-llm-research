@@ -1,0 +1,471 @@
+[
+    {
+        "api_name": "Czech National Bank API",
+        "nodes": [
+            "getCurrentExchangeRates",
+            "searchCurrency",
+            "getHistoricalExchangeRates",
+            "listAvailableCurrencies"
+        ],
+        "edges": [
+            [
+                "getCurrentExchangeRates",
+                "searchCurrency"
+            ],
+            [
+                "getCurrentExchangeRates",
+                "listAvailableCurrencies"
+            ],
+            [
+                "getHistoricalExchangeRates",
+                "searchCurrency"
+            ],
+            [
+                "getHistoricalExchangeRates",
+                "listAvailableCurrencies"
+            ]
+        ]
+    },
+    {
+        "api_name": "Rick and Morty API",
+        "nodes": [
+            "getAllCharacters",
+            "getCharacterById",
+            "getAllEpisodes",
+            "getEpisodeById",
+            "getAllLocations",
+            "getLocationById",
+            "getAllDimensions",
+            "getDimensionById"
+        ],
+        "edges": [
+            [
+                "getCharacterById",
+                "getAllCharacters"
+            ],
+            [
+                "getEpisodeById",
+                "getAllEpisodes"
+            ],
+            [
+                "getLocationById",
+                "getAllLocations"
+            ],
+            [
+                "getDimensionById",
+                "getAllDimensions"
+            ]
+        ]
+    },
+    {
+        "api_name": "openFDA",
+        "nodes": [
+            "searchDrugData",
+            "searchRecalls",
+            "searchDeviceData",
+            "getDrugById",
+            "getRecallById",
+            "getDeviceById"
+        ],
+        "edges": [
+            [
+                "getDrugById",
+                "searchDrugData"
+            ],
+            [
+                "getRecallById",
+                "searchRecalls"
+            ],
+            [
+                "getDeviceById",
+                "searchDeviceData"
+            ]
+        ]
+    },
+    {
+        "api_name": "Luchtmeetnet",
+        "nodes": [
+            "getMonitoringStations",
+            "getStationPollutants",
+            "getAirQualityReadings",
+            "getHistoricalData",
+            "getDatasetMetadata"
+        ],
+        "edges": [
+            [
+                "getStationPollutants",
+                "getMonitoringStations"
+            ],
+            [
+                "getAirQualityReadings",
+                "getMonitoringStations"
+            ],
+            [
+                "getAirQualityReadings",
+                "getStationPollutants"
+            ],
+            [
+                "getHistoricalData",
+                "getStationPollutants"
+            ]
+        ]
+    },
+    {
+        "api_name": "Helipaddy sites",
+        "nodes": [
+            "searchLandingSites",
+            "getLandingSiteDetails",
+            "getLandingSiteReviews",
+            "getSurfaceTypes",
+            "getFacilities"
+        ],
+        "edges": [
+            [
+                "getLandingSiteDetails",
+                "searchLandingSites"
+            ],
+            [
+                "getLandingSiteReviews",
+                "searchLandingSites"
+            ],
+            [
+                "searchLandingSites",
+                "getSurfaceTypes"
+            ],
+            [
+                "searchLandingSites",
+                "getFacilities"
+            ]
+        ]
+    },
+    {
+        "api_name": "AZ511",
+        "nodes": [
+            "getTrafficAlerts",
+            "getRoadConditions",
+            "planRoute",
+            "getCameraImages",
+            "searchCameras",
+            "listRegions",
+            "listRoads"
+        ],
+        "edges": [
+            [
+                "getCameraImages",
+                "searchCameras"
+            ],
+            [
+                "getCameraImages",
+                "listRoads"
+            ],
+            [
+                "getCameraImages",
+                "listRegions"
+            ],
+            [
+                "getTrafficAlerts",
+                "listRegions"
+            ],
+            [
+                "searchCameras",
+                "listRegions"
+            ],
+            [
+                "searchCameras",
+                "listRoads"
+            ],
+            [
+                "planRoute",
+                "listRoads"
+            ],
+            [
+                "planRoute",
+                "listRegions"
+            ],
+            [
+                "getRoadConditions",
+                "listRoads"
+            ]
+        ]
+    },
+    {
+        "api_name": "Catch The Show API",
+        "nodes": [
+            "getAllTvShows",
+            "getShowDetails",
+            "getUpcomingEpisodes",
+            "getEpisodeDetails",
+            "searchTvShow"
+        ],
+        "edges": [
+            [
+                "getShowDetails",
+                "getAllTvShows"
+            ],
+            [
+                "getUpcomingEpisodes",
+                "getAllTvShows"
+            ],
+            [
+                "getShowDetails",
+                "searchTvShow"
+            ],
+            [
+                "getUpcomingEpisodes",
+                "searchTvShow"
+            ],
+            [
+                "getEpisodeDetails",
+                "getUpcomingEpisodes"
+            ],
+            [
+                "getEpisodeDetails",
+                "getShowDetails"
+            ]
+        ]
+    },
+    {
+        "api_name": "Tenders in Hungary",
+        "nodes": [
+            "searchTenders",
+            "getTenderDetails",
+            "subscribeToTenders",
+            "unsubscribeFromTenders",
+            "listIndustries"
+        ],
+        "edges": [
+            [
+                "getTenderDetails",
+                "searchTenders"
+            ],
+            [
+                "searchTenders",
+                "listIndustries"
+            ],
+            [
+                "subscribeToTenders",
+                "listIndustries"
+            ]
+        ]
+    },
+    {
+        "api_name": "Rappi API",
+        "nodes": [
+            "getStoreInformation",
+            "searchStores",
+            "getOrderInformation",
+            "updateOrderStatus",
+            "processPayment",
+            "getOrderHistory"
+        ],
+        "edges": [
+            [
+                "getStoreInformation",
+                "searchStores"
+            ],
+            [
+                "getOrderHistory",
+                "searchStores"
+            ],
+            [
+                "getOrderInformation",
+                "getOrderHistory"
+            ],
+            [
+                "updateOrderStatus",
+                "getOrderHistory"
+            ],
+            [
+                "processPayment",
+                "getOrderHistory"
+            ],
+            [
+                "updateOrderStatus",
+                "getOrderInformation"
+            ]
+        ]
+    },
+    {
+        "api_name": "AI Mastering",
+        "nodes": [
+            "uploadAudioFile",
+            "masterAudioFile",
+            "downloadMasteredFile",
+            "analyzeAudioData",
+            "trackMusicDistribution",
+            "listAvailableGenres",
+            "listAvailableStyles"
+        ],
+        "edges": [
+            [
+                "masterAudioFile",
+                "uploadAudioFile"
+            ],
+            [
+                "downloadMasteredFile",
+                "masterAudioFile"
+            ],
+            [
+                "analyzeAudioData",
+                "uploadAudioFile"
+            ],
+            [
+                "trackMusicDistribution",
+                "masterAudioFile"
+            ],
+            [
+                "masterAudioFile",
+                "listAvailableGenres"
+            ],
+            [
+                "masterAudioFile",
+                "listAvailableStyles"
+            ]
+        ]
+    },
+    {
+        "api_name": "Domainsdb.info",
+        "nodes": [
+            "searchDomains",
+            "getDomainDetails",
+            "listAllDomains",
+            "getRegistrarDetails",
+            "listRegistrars"
+        ],
+        "edges": [
+            [
+                "getDomainDetails",
+                "searchDomains"
+            ],
+            [
+                "getDomainDetails",
+                "listAllDomains"
+            ],
+            [
+                "getRegistrarDetails",
+                "listRegistrars"
+            ],
+            [
+                "getRegistrarDetails",
+                "getDomainDetails"
+            ]
+        ]
+    },
+    {
+        "api_name": "Postmon API",
+        "nodes": [
+            "getAddressByZipCode",
+            "validateZipCode",
+            "getZipCodeLocation",
+            "getOrderStatus",
+            "searchZipCode"
+        ],
+        "edges": [
+            [
+                "getAddressByZipCode",
+                "searchZipCode"
+            ],
+            [
+                "validateZipCode",
+                "searchZipCode"
+            ],
+            [
+                "getZipCodeLocation",
+                "searchZipCode"
+            ],
+            [
+                "searchZipCode",
+                "getAddressByZipCode"
+            ],
+            [
+                "getAddressByZipCode",
+                "validateZipCode"
+            ],
+            [
+                "getZipCodeLocation",
+                "validateZipCode"
+            ]
+        ]
+    },
+    {
+        "api_name": "Mono API",
+        "nodes": [
+            "verifyBankAccount",
+            "getTransactionHistory",
+            "checkAccountBalance",
+            "searchBank",
+            "listBanks",
+            "getAccountDetails"
+        ],
+        "edges": [
+            [
+                "verifyBankAccount",
+                "searchBank"
+            ],
+            [
+                "verifyBankAccount",
+                "listBanks"
+            ]
+        ]
+    },
+    {
+        "api_name": "EPO",
+        "nodes": [
+            "searchPatents",
+            "getPatentDetails",
+            "getPatentImages",
+            "getPatentDocuments",
+            "listPatentLegalEvents"
+        ],
+        "edges": [
+            [
+                "getPatentDetails",
+                "searchPatents"
+            ],
+            [
+                "getPatentImages",
+                "searchPatents"
+            ],
+            [
+                "getPatentDocuments",
+                "searchPatents"
+            ],
+            [
+                "listPatentLegalEvents",
+                "searchPatents"
+            ]
+        ]
+    },
+    {
+        "api_name": "Jservice",
+        "nodes": [
+            "getRandomQuestions",
+            "searchQuestions",
+            "getQuestionDetails",
+            "listCategories",
+            "getCategoryQuestions"
+        ],
+        "edges": [
+            [
+                "searchQuestions",
+                "getRandomQuestions"
+            ],
+            [
+                "getQuestionDetails",
+                "getRandomQuestions"
+            ],
+            [
+                "getQuestionDetails",
+                "searchQuestions"
+            ],
+            [
+                "searchQuestions",
+                "listCategories"
+            ],
+            [
+                "getCategoryQuestions",
+                "listCategories"
+            ]
+        ]
+    }
+]
