@@ -8,12 +8,12 @@ from numpy.linalg import norm
 import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt
-import networkx as nx
-import networkx as nx
 import numpy as np
 from scipy.spatial.distance import hamming
 from itertools import combinations
 import warnings
+from sklearn.preprocessing import MinMaxScaler
+import seaborn as sns
 
 warnings.filterwarnings("ignore")
 
@@ -106,6 +106,7 @@ def get_bonds(all_params_encoded, all_outputs_encoded, threshold):
     This list contains only function and parameter IDs.
     """
     bonds = []  # [[input_func_id, output_func_id, input_param_id, cos_sim], ...]
+    similarities = []
     for input_func_id in range(len(all_outputs_encoded)):
         for param_id in range(len(all_params_encoded[input_func_id])):
             for output_func_id in range(len(all_outputs_encoded)):
@@ -114,11 +115,23 @@ def get_bonds(all_params_encoded, all_outputs_encoded, threshold):
                         all_params_encoded[input_func_id][param_id],
                         all_outputs_encoded[output_func_id],
                     )
-                    if cosine_similarity > threshold:
-                        bonds.append(
-                            [input_func_id, output_func_id, param_id, cosine_similarity]
-                        )
-    return bonds
+                    similarities.append(cosine_similarity)
+                    bonds.append(
+                        [input_func_id, output_func_id, param_id, cosine_similarity]
+                    )
+    if similarities:
+        similarities = np.array(similarities).reshape(-1, 1)
+        scaler = MinMaxScaler()
+        scaled_similarities = scaler.fit_transform(similarities).flatten()
+        for i in range(len(bonds)):
+            bonds[i][3] = scaled_similarities[i]
+
+    final_bonds = []
+    for i in range(len(bonds)):
+        if bonds[i][3] > threshold:
+            final_bonds.append(bonds[i])
+
+    return final_bonds
 
 
 def decode_bonds(bonds, funcs_preprocessed):
@@ -225,7 +238,7 @@ def degree_distribution_similarity(G1, G2):
     norm1 = np.linalg.norm(deg1)
     norm2 = np.linalg.norm(deg2)
 
-    return dot_product / (norm1 * norm2)
+    return dot_product / (norm1 * norm2) if norm1 * norm2 > 0 else 0
 
 
 def hamming_distance_similarity(G1, G2):
@@ -309,39 +322,59 @@ def create_weighted_directed_graph(edges, nodes):
     return graph
 
 
+def get_optimal_idx(metrics_list):
+    """
+    Выбор индекса оптимального threshold
+    """
+    metrics_matrix = np.array(
+        [
+            [
+                m.get("Adjacency Matrix", 0),
+                m.get("Degree Distribution", 0),
+                m.get("Hamming Distance", 0),
+                m.get("Jaccard Similarity", 0),
+                m.get("Graph Edit Distance", 0),
+                1 / (1 + m.get("Spectral Similarity", 0)),
+            ]
+            for m in metrics_list
+        ],
+        dtype=float,
+    )
+    scaler = MinMaxScaler()
+    normalized_matrix = scaler.fit_transform(metrics_matrix)
+    sums = normalized_matrix.sum(axis=1)
+    max_val = np.max(sums)
+    idx = np.where(sums == max_val)[0][-1]
+    return idx
+
+
 with open("ToolAlpaca_Modeling/ToolAlpaca.json", "r") as file:
     data = json.load(file)
 
-with open("ToolAlpaca_Modeling/graphs_46-60.json", "r") as file:
-    edges46_60 = json.load(file)
-
-with open("ToolAlpaca_Modeling/graphs_16-30.json", "r") as file:
-    edges16_30 = json.load(file)
+with open("ToolAlpaca_Modeling/graphs_16-60.json", "r") as file:
+    edges16_60 = json.load(file)
 
 tokenizer = AutoTokenizer.from_pretrained("sentence-transformers/all-MiniLM-L6-v2")
 model = AutoModel.from_pretrained("sentence-transformers/all-MiniLM-L6-v2")
 
-edges = edges16_30
-bias = 16
+edges = edges16_60
+# 0..15 + 16
+# 15..30 + 46 - 15
 
-for i in range(15):
-    best_threshold = None
-    best_metrics = None
-    best_score = float("-inf")
-    best_G1 = best_G1 = None
-    for threshold in np.arange(0, 1.05, 0.05):
+num_nodes = []
+best_thresholds = []
+for i in range(30):
+    bias = 16 if i < 15 else 31
+    metrics_list = []
+    G2_list = []
+    G1 = create_directed_graph(edges[i]["edges"], edges[i]["nodes"])
+    thresholds = np.arange(0, 1.05, 0.05)
+    for threshold in thresholds:
         api_id = i + bias
         funcs = get_funcs(data[api_id]["Function_Description"])
         params, outputs = encode_funcs(funcs)
         bonds = get_bonds(params, outputs, threshold)
         decoded_bonds = decode_bonds(bonds, funcs)
-
-        df = pd.DataFrame(
-            decoded_bonds,
-            columns=["input_func", "output_func", "input_param", "cos_sim"],
-        )
-
-        G1 = create_directed_graph(edges[i]["edges"], edges[i]["nodes"])
         G2 = create_weighted_directed_graph(decoded_bonds, list(funcs.keys()))
 
         metrics = {
@@ -352,29 +385,33 @@ for i in range(15):
             "Spectral Similarity": spectral_similarity(G1, G2),
             "Graph Edit Distance": graph_edit_distance_similarity(G1, G2),
         }
+        metrics_list.append(metrics)
+        G2_list.append(G2)
 
-        total_score = sum(metrics.values())
-        if total_score >= best_score:
-            best_G1 = G1
-            best_G2 = G2
-            best_score = total_score
-            best_threshold = threshold
-            best_metrics = metrics
-
+    best_idx = get_optimal_idx(metrics_list)
     print("API name:", edges[i]["api_name"])
     print("number of nodes:", len(edges[i]["nodes"]))
-    print("best threshold:", best_threshold)
+    print("best threshold:", thresholds[best_idx])
     print("metrics:")
-    print(json.dumps(best_metrics, indent=4))
+    print(json.dumps(metrics_list[best_idx], indent=4))
     print("----------------------------")
+    num_nodes.append(len(edges[i]["nodes"]))
+    best_thresholds.append(thresholds[best_idx])
     try:
-        position = nx.spring_layout(best_G1, k=1.5)
+        position = nx.spring_layout(G1, k=1.5)
         fig, axes = plt.subplots(1, 2, figsize=(12, 6))
         fig.suptitle(edges[i]["api_name"])
-        draw_graph(best_G1, axes[0], title="Reference graph", pos=position)
-        draw_graph(best_G2, axes[1], title="Constructed graph", pos=position)
+        draw_graph(G1, axes[0], title="Reference graph", pos=position)
+        draw_graph(G2_list[best_idx], axes[1], title="Constructed graph", pos=position)
         plt.savefig(f"ToolAlpaca_Modeling/images/{edges[i]['api_name']}.png")
         plt.show()
     except Exception as e:
-        print(list(funcs.keys()))
-        print(edges[i]["nodes"])
+        print(e)
+
+print(num_nodes)
+print(best_thresholds)
+plt.figure(figsize=(10, 5))
+sns.scatterplot(x=num_nodes, y=best_thresholds, color="b")
+plt.xlabel("number of nodes")
+plt.ylabel("best threshold")
+plt.show()
