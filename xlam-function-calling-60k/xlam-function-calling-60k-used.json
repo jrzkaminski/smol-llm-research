@@ -1,0 +1,2568 @@
+[
+    {
+        "id":47119,
+        "query":"Find the latest 20 tweets from the user with the ID 456789123 and get the Instagram user information for the user with the ID 111222333. Then, download the song from this SoundCloud URL: 'https:\/\/soundcloud.com\/user\/other_song' and retrieve information for the Instagram user with the username 'jane_doe'. Finally, get all images and videos from the Instagram highlight with the ID 'ABC789'.",
+        "answers":[
+            {
+                "name":"get_user_tweets",
+                "arguments":{
+                    "count":"20",
+                    "user":"456789123"
+                }
+            },
+            {
+                "name":"get_user_info_by_user_id",
+                "arguments":{
+                    "is_id":111222333
+                }
+            },
+            {
+                "name":"song_download",
+                "arguments":{
+                    "track_url":"https:\/\/soundcloud.com\/user\/other_song"
+                }
+            },
+            {
+                "name":"info",
+                "arguments":{
+                    "username":"jane_doe"
+                }
+            },
+            {
+                "name":"get_highlight_by_id",
+                "arguments":{
+                    "highlightid":"ABC789"
+                }
+            }
+        ],
+        "tools":[
+            {
+                "name":"song_download",
+                "description":"Downloads a song from the provided SoundCloud URL using the specified RapidAPI key.",
+                "parameters":{
+                    "track_url":{
+                        "description":"The URL of the SoundCloud track to be downloaded.",
+                        "type":"str",
+                        "default":"https:\/\/soundcloud.com\/user-977421934\/the-phoenix"
+                    }
+                }
+            },
+            {
+                "name":"get_user_info_by_user_id",
+                "description":"Fetch Instagram user information by user ID using the RapidAPI service.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The Instagram user ID for which the information is to be fetched.",
+                        "type":"int",
+                        "default":"18527"
+                    }
+                }
+            },
+            {
+                "name":"get_user_tweets",
+                "description":"Fetches tweets for a specified user using the provided RapidAPI key.",
+                "parameters":{
+                    "count":{
+                        "description":"The number of tweets to retrieve.",
+                        "type":"str",
+                        "default":"20"
+                    },
+                    "user":{
+                        "description":"The ID of the user whose tweets are to be fetched.",
+                        "type":"str",
+                        "default":"2455740283"
+                    },
+                    "cursor":{
+                        "description":"The cursor for pagination. Default is None.",
+                        "type":"str, optional",
+                        "default":""
+                    }
+                }
+            },
+            {
+                "name":"info",
+                "description":"Fetches profile information for a given Instagram username using the RapidAPI service.",
+                "parameters":{
+                    "username":{
+                        "description":"The Instagram username for which to fetch profile information. Defaults to 'kimkardashian'.",
+                        "type":"str",
+                        "default":"kimkardashian"
+                    }
+                }
+            },
+            {
+                "name":"get_highlight_by_id",
+                "description":"Fetches all images and videos of a specific Instagram highlight by its ID.",
+                "parameters":{
+                    "highlightid":{
+                        "description":"The ID of the Instagram highlight.",
+                        "type":"str",
+                        "default":"highlight:18042967741398634"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id":43159,
+        "query":"Find a pastry recipe with 'chocolate' as an ingredient, get the drink recipe with ID '123', and fetch the recipe with ID '456' from the Ghana Food Recipe API. Also, generate a recipe using 'beef' as the main ingredient and get the menu details for ID '789' in English.",
+        "answers":[
+            {
+                "name":"pastry_ingredient",
+                "arguments":{
+                    "ingredient":"chocolate"
+                }
+            },
+            {
+                "name":"drink_by_id",
+                "arguments":{
+                    "is_id":"123"
+                }
+            },
+            {
+                "name":"get_recipe_by_id",
+                "arguments":{
+                    "is_id":"456"
+                }
+            },
+            {
+                "name":"generate_recipe",
+                "arguments":{
+                    "ingredient":"beef"
+                }
+            },
+            {
+                "name":"menudetails",
+                "arguments":{
+                    "is_id":"789",
+                    "lang":"en"
+                }
+            }
+        ],
+        "tools":[
+            {
+                "name":"pastry_ingredient",
+                "description":"Retrieves a random pastry recipe that contains a specific ingredient using the Toolbench RapidAPI.",
+                "parameters":{
+                    "ingredient":{
+                        "description":"The specific ingredient to include in the pastry recipe.",
+                        "type":"str",
+                        "default":"strawberry"
+                    }
+                }
+            },
+            {
+                "name":"drink_by_id",
+                "description":"Fetches a specific drink recipe by its ID using the Ghana Food Recipe API.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The unique identifier for the drink recipe.",
+                        "type":"str",
+                        "default":"63c67c9db06a3ed9f92b2367"
+                    }
+                }
+            },
+            {
+                "name":"get_recipe_by_id",
+                "description":"Fetches a specific recipe by its ID from the Ghana Food Recipe API.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The ID of the recipe to fetch.",
+                        "type":"str",
+                        "default":"63c2e83b09852be5facb894a"
+                    }
+                }
+            },
+            {
+                "name":"generate_recipe",
+                "description":"This function generates a recipe using an ingredient and a provided RapidAPI key.",
+                "parameters":{
+                    "ingredient":{
+                        "description":"The main ingredient to be used in the recipe. Default is 'chicken'.",
+                        "type":"str",
+                        "default":"chicken"
+                    }
+                }
+            },
+            {
+                "name":"menudetails",
+                "description":"Fetch menu details using a given menu ID and language preference.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The ID of the menu whose details are to be fetched.",
+                        "type":"str",
+                        "default":"5a76c927bb5d660001e09731"
+                    },
+                    "lang":{
+                        "description":"The language code in which the menu details should be returned.",
+                        "type":"str",
+                        "default":"zh-hans"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id":52763,
+        "query":"1. Retrieve the availability status of a listing with ID '77777' for September 2030. 2. Fetch data for the biggest city with ID '19'. 3. Obtain route information for the BART API with command 'get_trip_planner'. 4. Get host language filters using language ID 'ro-RO'. 5. Fetch a list of room facility types for room facility type ID '130' and facility type ID '140'.",
+        "answers":[
+            {
+                "name":"listing_status",
+                "arguments":{
+                    "is_id":"77777",
+                    "year":2030,
+                    "month":9
+                }
+            },
+            {
+                "name":"biggest_cities",
+                "arguments":{
+                    "is_id":19
+                }
+            },
+            {
+                "name":"route_information",
+                "arguments":{
+                    "cmd":"get_trip_planner"
+                }
+            },
+            {
+                "name":"get_host_language_filters",
+                "arguments":{
+                    "languageid":"ro-RO"
+                }
+            },
+            {
+                "name":"list_of_room_facility_types",
+                "arguments":{
+                    "room_facility_type_id":"130",
+                    "facility_type_id":"140"
+                }
+            }
+        ],
+        "tools":[
+            {
+                "name":"listing_status",
+                "description":"Retrieve the availability status of a listing for a given month and year.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The ID of the listing.",
+                        "type":"str",
+                        "default":"619966061834034729"
+                    },
+                    "year":{
+                        "description":"The year for which the status is to be retrieved.",
+                        "type":"int",
+                        "default":"2024"
+                    },
+                    "month":{
+                        "description":"The month for which the status is to be retrieved.",
+                        "type":"int",
+                        "default":"1"
+                    }
+                }
+            },
+            {
+                "name":"biggest_cities",
+                "description":"Fetches the biggest cities' data from the specified API using the provided ID and API key.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The ID representing a specific query for biggest cities.",
+                        "type":"int",
+                        "default":"1"
+                    }
+                }
+            },
+            {
+                "name":"route_information",
+                "description":"Fetch route information from the BART API using the given command.",
+                "parameters":{
+                    "cmd":{
+                        "description":"The command to send to the BART API. Possible commands can be found at http:\/\/api.bart.gov\/docs\/overview\/examples.aspx.",
+                        "type":"str",
+                        "default":"routes"
+                    }
+                }
+            },
+            {
+                "name":"get_host_language_filters",
+                "description":"Fetches host language filters from the Airbnb API.",
+                "parameters":{
+                    "languageid":{
+                        "description":"The LanguageId for the desired response language. To obtain a LanguageId, call the getLanguages API and use the Id.",
+                        "type":"str, optional",
+                        "default":""
+                    }
+                }
+            },
+            {
+                "name":"list_of_room_facility_types",
+                "description":"Fetches a list of room facility types from the Booking.com API based on given criteria.",
+                "parameters":{
+                    "room_facility_type_id":{
+                        "description":"ID of the specific room facility type to filter.",
+                        "type":"str, optional",
+                        "default":""
+                    },
+                    "facility_type_id":{
+                        "description":"ID of the specific room facility type to filter.",
+                        "type":"str, optional",
+                        "default":""
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id":6431,
+        "query":"What's the missing integer in the list [0, 1, 2, 4, 5]? Merge {'x': 5, 'y': 6} with {'y': 7, 'z': 8}. Are 'debit card' and 'bad credit' anagrams? Count the occurrences in [5, 5, 6, 6, 6, 7, 7, 7, 7]. Is 'hello' a rotation of 'lohel'? Check if 'Was it a car or a cat I saw' is a palindrome.",
+        "answers":[
+            {
+                "name":"find_missing_number",
+                "arguments":{
+                    "nums":[
+                        0,
+                        1,
+                        2,
+                        4,
+                        5
+                    ]
+                }
+            },
+            {
+                "name":"merge_dictionaries",
+                "arguments":{
+                    "dict1":{
+                        "x":5,
+                        "y":6
+                    },
+                    "dict2":{
+                        "y":7,
+                        "z":8
+                    }
+                }
+            },
+            {
+                "name":"is_anagram",
+                "arguments":{
+                    "word1":"debit card",
+                    "word2":"bad credit"
+                }
+            },
+            {
+                "name":"count_occurrences",
+                "arguments":{
+                    "lst":[
+                        5,
+                        5,
+                        6,
+                        6,
+                        6,
+                        7,
+                        7,
+                        7,
+                        7
+                    ]
+                }
+            },
+            {
+                "name":"is_rotation",
+                "arguments":{
+                    "str1":"hello",
+                    "str2":"lohel"
+                }
+            },
+            {
+                "name":"is_palindrome",
+                "arguments":{
+                    "text":"Was it a car or a cat I saw"
+                }
+            }
+        ],
+        "tools":[
+            {
+                "name":"find_missing_number",
+                "description":"Finds the missing number in a list of integers from 0 to n.",
+                "parameters":{
+                    "nums":{
+                        "description":"The list of integers.",
+                        "type":"List[int]"
+                    }
+                }
+            },
+            {
+                "name":"merge_dictionaries",
+                "description":"Merges two dictionaries into a single dictionary.",
+                "parameters":{
+                    "dict1":{
+                        "description":"The first dictionary.",
+                        "type":"Dict"
+                    },
+                    "dict2":{
+                        "description":"The second dictionary.",
+                        "type":"Dict"
+                    }
+                }
+            },
+            {
+                "name":"is_anagram",
+                "description":"Checks if two words are anagrams of each other.",
+                "parameters":{
+                    "word1":{
+                        "description":"The first word.",
+                        "type":"str"
+                    },
+                    "word2":{
+                        "description":"The second word.",
+                        "type":"str"
+                    }
+                }
+            },
+            {
+                "name":"count_occurrences",
+                "description":"Counts the occurrences of each element in a list and returns a dictionary with the counts.",
+                "parameters":{
+                    "lst":{
+                        "description":"The input list.",
+                        "type":"List"
+                    }
+                }
+            },
+            {
+                "name":"is_rotation",
+                "description":"Checks if one string is a rotation of another string.",
+                "parameters":{
+                    "str1":{
+                        "description":"The first string.",
+                        "type":"str"
+                    },
+                    "str2":{
+                        "description":"The second string.",
+                        "type":"str"
+                    }
+                }
+            },
+            {
+                "name":"is_palindrome",
+                "description":"Checks if a string is a palindrome.",
+                "parameters":{
+                    "text":{
+                        "description":"The input string.",
+                        "type":"str"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id":428,
+        "query":"Compute the 20th Fibonacci number and the factorial of 10. Also, determine the maximum subarray sum for the numbers [5, -3, 7, -2, 8, -10, 4]. Finally, reverse the words in 'Machine learning is fun' and the characters in 'C++'.",
+        "answers":[
+            {
+                "name":"fibonacci",
+                "arguments":{
+                    "n":20
+                }
+            },
+            {
+                "name":"calculate_factorial",
+                "arguments":{
+                    "n":10
+                }
+            },
+            {
+                "name":"find_max_subarray_sum",
+                "arguments":{
+                    "nums":[
+                        5,
+                        -3,
+                        7,
+                        -2,
+                        8,
+                        -10,
+                        4
+                    ]
+                }
+            },
+            {
+                "name":"reverse_words",
+                "arguments":{
+                    "sentence":"Machine learning is fun"
+                }
+            },
+            {
+                "name":"reverse_string",
+                "arguments":{
+                    "text":"C++"
+                }
+            }
+        ],
+        "tools":[
+            {
+                "name":"fibonacci",
+                "description":"Calculates the nth Fibonacci number.",
+                "parameters":{
+                    "n":{
+                        "description":"The position of the Fibonacci number.",
+                        "type":"int"
+                    }
+                }
+            },
+            {
+                "name":"calculate_factorial",
+                "description":"Calculates the factorial of a non-negative integer.",
+                "parameters":{
+                    "n":{
+                        "description":"The non-negative integer.",
+                        "type":"int"
+                    }
+                }
+            },
+            {
+                "name":"find_max_subarray_sum",
+                "description":"Finds the maximum sum of a contiguous subarray within a list of integers.",
+                "parameters":{
+                    "nums":{
+                        "description":"The input list of integers.",
+                        "type":"List[int]"
+                    }
+                }
+            },
+            {
+                "name":"reverse_words",
+                "description":"Reverses the order of words in a sentence.",
+                "parameters":{
+                    "sentence":{
+                        "description":"The input sentence.",
+                        "type":"str"
+                    }
+                }
+            },
+            {
+                "name":"reverse_string",
+                "description":"Reverses the characters in a string.",
+                "parameters":{
+                    "text":{
+                        "description":"The input string.",
+                        "type":"str"
+                    }
+                }
+            },
+            {
+                "name":"calculate_grade",
+                "description":"Calculates the weighted average grade based on scores and their corresponding weights.",
+                "parameters":{
+                    "scores":{
+                        "description":"A list of scores.",
+                        "type":"List[float]"
+                    },
+                    "weights":{
+                        "description":"A list of weights corresponding to each score.",
+                        "type":"List[float]"
+                    }
+                }
+            },
+            {
+                "name":"merge_dictionaries",
+                "description":"Merges two dictionaries into a single dictionary.",
+                "parameters":{
+                    "dict1":{
+                        "description":"The first dictionary.",
+                        "type":"Dict"
+                    },
+                    "dict2":{
+                        "description":"The second dictionary.",
+                        "type":"Dict"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id":40876,
+        "query":"Calculate the standard deviation of the numbers [2.3, 5.6, 7.8, 9.1], find the palindromic substring in 'racecar' around the center 'ace', draw 3 cards from a shuffled deck of 52 cards, compute the Euclidean distance between the points (1, 2) and (4, 6), and calculate the angle between the hour and minute hands of a clock at 3:15.",
+        "answers":[
+            {
+                "name":"std_deviation",
+                "arguments":{
+                    "numbers":[
+                        2.3,
+                        5.6,
+                        7.8,
+                        9.1
+                    ]
+                }
+            },
+            {
+                "name":"expand_around_center",
+                "arguments":{
+                    "s":"racecar",
+                    "left":2,
+                    "right":4
+                }
+            },
+            {
+                "name":"draw_cards",
+                "arguments":{
+                    "num_draw":3
+                }
+            },
+            {
+                "name":"euclidean_distance",
+                "arguments":{
+                    "point_a":[
+                        1,
+                        2
+                    ],
+                    "point_b":[
+                        4,
+                        6
+                    ]
+                }
+            },
+            {
+                "name":"calculate_angle",
+                "arguments":{
+                    "hour":3,
+                    "minute":15
+                }
+            }
+        ],
+        "tools":[
+            {
+                "name":"std_deviation",
+                "description":"Calculates the standard deviation of a list of numbers.",
+                "parameters":{
+                    "numbers":{
+                        "description":"The list of numbers.",
+                        "type":"List[float]"
+                    }
+                }
+            },
+            {
+                "name":"calculate_angle",
+                "description":"Calculates the angle between the hour and minute hands of a clock.",
+                "parameters":{
+                    "hour":{
+                        "description":"The hour value (1-12).",
+                        "type":"int"
+                    },
+                    "minute":{
+                        "description":"The minute value (0-59).",
+                        "type":"int"
+                    }
+                }
+            },
+            {
+                "name":"expand_around_center",
+                "description":"Helper function to expand around a center for finding palindromic substrings.",
+                "parameters":{
+                    "s":{
+                        "description":"The input string.",
+                        "type":"str"
+                    },
+                    "left":{
+                        "description":"The left index of the center.",
+                        "type":"int"
+                    },
+                    "right":{
+                        "description":"The right index of the center.",
+                        "type":"int"
+                    }
+                }
+            },
+            {
+                "name":"draw_cards",
+                "description":"Shuffles a standard deck of 52 cards and draws a specified number of cards from the top.",
+                "parameters":{
+                    "num_draw":{
+                        "description":"The number of cards to be drawn. Defaults to 1.",
+                        "type":"int, optional",
+                        "default":1
+                    }
+                }
+            },
+            {
+                "name":"euclidean_distance",
+                "description":"Computes the Euclidean distance between two points in a 2D plane.",
+                "parameters":{
+                    "point_a":{
+                        "description":"The coordinates of the first point (x, y).",
+                        "type":"Tuple[float, float]"
+                    },
+                    "point_b":{
+                        "description":"The coordinates of the second point (x, y).",
+                        "type":"Tuple[float, float]"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id":36526,
+        "query":"1. Check the availability status of a listing with ID '44444' for June 2027. 2. Fetch data for the biggest city with ID '13'. 3. Obtain route information for the BART API with command 'get_station_location'. 4. Get host language filters using language ID 'nl-NL'. 5. Fetch a list of room facility types for facility type ID '90'.",
+        "answers":[
+            {
+                "name":"listing_status",
+                "arguments":{
+                    "is_id":"44444",
+                    "year":2027,
+                    "month":6
+                }
+            },
+            {
+                "name":"biggest_cities",
+                "arguments":{
+                    "is_id":13
+                }
+            },
+            {
+                "name":"route_information",
+                "arguments":{
+                    "cmd":"get_station_location"
+                }
+            },
+            {
+                "name":"get_host_language_filters",
+                "arguments":{
+                    "languageid":"nl-NL"
+                }
+            },
+            {
+                "name":"list_of_room_facility_types",
+                "arguments":{
+                    "facility_type_id":"90"
+                }
+            }
+        ],
+        "tools":[
+            {
+                "name":"listing_status",
+                "description":"Retrieve the availability status of a listing for a given month and year.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The ID of the listing.",
+                        "type":"str",
+                        "default":"619966061834034729"
+                    },
+                    "year":{
+                        "description":"The year for which the status is to be retrieved.",
+                        "type":"int",
+                        "default":"2024"
+                    },
+                    "month":{
+                        "description":"The month for which the status is to be retrieved.",
+                        "type":"int",
+                        "default":"1"
+                    }
+                }
+            },
+            {
+                "name":"biggest_cities",
+                "description":"Fetches the biggest cities' data from the specified API using the provided ID and API key.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The ID representing a specific query for biggest cities.",
+                        "type":"int",
+                        "default":"1"
+                    }
+                }
+            },
+            {
+                "name":"route_information",
+                "description":"Fetch route information from the BART API using the given command.",
+                "parameters":{
+                    "cmd":{
+                        "description":"The command to send to the BART API. Possible commands can be found at http:\/\/api.bart.gov\/docs\/overview\/examples.aspx.",
+                        "type":"str",
+                        "default":"routes"
+                    }
+                }
+            },
+            {
+                "name":"get_host_language_filters",
+                "description":"Fetches host language filters from the Airbnb API.",
+                "parameters":{
+                    "languageid":{
+                        "description":"The LanguageId for the desired response language. To obtain a LanguageId, call the getLanguages API and use the Id.",
+                        "type":"str, optional",
+                        "default":""
+                    }
+                }
+            },
+            {
+                "name":"list_of_room_facility_types",
+                "description":"Fetches a list of room facility types from the Booking.com API based on given criteria.",
+                "parameters":{
+                    "room_facility_type_id":{
+                        "description":"ID of the specific room facility type to filter.",
+                        "type":"str, optional",
+                        "default":""
+                    },
+                    "facility_type_id":{
+                        "description":"ID of the specific room facility type to filter.",
+                        "type":"str, optional",
+                        "default":""
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id":37040,
+        "query":"Give me a salad recipe with bell peppers, and fetch the venue details for is_id 'BCD567' in Portuguese. Plus, search for foods using the keyword 'peanuts' and get the menu details for the menu with is_id 'EFG890' in Russian. Finally, get a list of reviews from Yummly with an offset of 60, globalid 'HIJ123', and a limit of 30.",
+        "answers":[
+            {
+                "name":"salad_ingredient",
+                "arguments":{
+                    "ingredient":"bell peppers"
+                }
+            },
+            {
+                "name":"venuedetails",
+                "arguments":{
+                    "is_id":"BCD567",
+                    "lang":"pt"
+                }
+            },
+            {
+                "name":"search_foods_using_keywords",
+                "arguments":{
+                    "query":"peanuts"
+                }
+            },
+            {
+                "name":"menudetails",
+                "arguments":{
+                    "is_id":"EFG890",
+                    "lang":"ru"
+                }
+            },
+            {
+                "name":"reviews_list",
+                "arguments":{
+                    "offset":60,
+                    "globalid":"HIJ123",
+                    "limit":30
+                }
+            }
+        ],
+        "tools":[
+            {
+                "name":"salad_ingredient",
+                "description":"Fetches a random salad recipe that includes the specified ingredient from the API.",
+                "parameters":{
+                    "ingredient":{
+                        "description":"The ingredient to be included in the salad recipe search.",
+                        "type":"str",
+                        "default":"cucumbers"
+                    }
+                }
+            },
+            {
+                "name":"venuedetails",
+                "description":"Fetch the venue details from the RapidAPI Viva City Documentation endpoint and return the information in the specified language.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The identifier of the venue for which details are to be fetched.",
+                        "type":"str",
+                        "default":"56c467cb7b0d464811a42017"
+                    },
+                    "lang":{
+                        "description":"The language code in which the venue details should be returned.",
+                        "type":"str",
+                        "default":"zh-hans"
+                    }
+                }
+            },
+            {
+                "name":"menudetails",
+                "description":"Fetch menu details using a given menu ID and language preference.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The ID of the menu whose details are to be fetched.",
+                        "type":"str",
+                        "default":"5a76c927bb5d660001e09731"
+                    },
+                    "lang":{
+                        "description":"The language code in which the menu details should be returned.",
+                        "type":"str",
+                        "default":"zh-hans"
+                    }
+                }
+            },
+            {
+                "name":"search_foods_using_keywords",
+                "description":"Search for foods using the given keywords and optional filters such as brand owner, page size, and page number.",
+                "parameters":{
+                    "query":{
+                        "description":"The search term to query for foods.",
+                        "type":"str",
+                        "default":"cheese"
+                    },
+                    "brandowner":{
+                        "description":"The brand owner of the foods. Default is 'Kar Nut Products Company'.",
+                        "type":"str, optional",
+                        "default":"Kar Nut Products Company"
+                    },
+                    "pagesize":{
+                        "description":"The number of results per page. Default is '1'.",
+                        "type":"str, optional",
+                        "default":"1"
+                    },
+                    "pagenumber":{
+                        "description":"The page number to retrieve. Default is '1'.",
+                        "type":"str, optional",
+                        "default":"1"
+                    }
+                }
+            },
+            {
+                "name":"reviews_list",
+                "description":"Fetches a list of reviews and feedback from users using the Yummly API.",
+                "parameters":{
+                    "offset":{
+                        "description":"The number of items to skip before starting to collect the result set.",
+                        "type":"int",
+                        "default":"0"
+                    },
+                    "globalid":{
+                        "description":"The value of the globalId field returned in the feeds\/list and feeds\/search API.",
+                        "type":"str",
+                        "default":"a8d6747a-bfaa-46a7-92fb-892e3f76b264"
+                    },
+                    "limit":{
+                        "description":"The maximum number of items to return.",
+                        "type":"int",
+                        "default":"20"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id":46776,
+        "query":"Download the song from this SoundCloud URL: 'https:\/\/soundcloud.com\/user\/song' and get the Instagram user information for the user with the ID 123456789. Then, fetch the latest 10 tweets from the user with the ID 987654321 and retrieve information for the Instagram user with the username 'john_doe'. Finally, get all images and videos from the Instagram highlight with the ID 'XYZ123'.",
+        "answers":[
+            {
+                "name":"song_download",
+                "arguments":{
+                    "track_url":"https:\/\/soundcloud.com\/user\/song"
+                }
+            },
+            {
+                "name":"get_user_info_by_user_id",
+                "arguments":{
+                    "is_id":123456789
+                }
+            },
+            {
+                "name":"get_user_tweets",
+                "arguments":{
+                    "count":"10",
+                    "user":"987654321"
+                }
+            },
+            {
+                "name":"info",
+                "arguments":{
+                    "username":"john_doe"
+                }
+            },
+            {
+                "name":"get_highlight_by_id",
+                "arguments":{
+                    "highlightid":"XYZ123"
+                }
+            }
+        ],
+        "tools":[
+            {
+                "name":"song_download",
+                "description":"Downloads a song from the provided SoundCloud URL using the specified RapidAPI key.",
+                "parameters":{
+                    "track_url":{
+                        "description":"The URL of the SoundCloud track to be downloaded.",
+                        "type":"str",
+                        "default":"https:\/\/soundcloud.com\/user-977421934\/the-phoenix"
+                    }
+                }
+            },
+            {
+                "name":"get_user_info_by_user_id",
+                "description":"Fetch Instagram user information by user ID using the RapidAPI service.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The Instagram user ID for which the information is to be fetched.",
+                        "type":"int",
+                        "default":"18527"
+                    }
+                }
+            },
+            {
+                "name":"get_user_tweets",
+                "description":"Fetches tweets for a specified user using the provided RapidAPI key.",
+                "parameters":{
+                    "count":{
+                        "description":"The number of tweets to retrieve.",
+                        "type":"str",
+                        "default":"20"
+                    },
+                    "user":{
+                        "description":"The ID of the user whose tweets are to be fetched.",
+                        "type":"str",
+                        "default":"2455740283"
+                    },
+                    "cursor":{
+                        "description":"The cursor for pagination. Default is None.",
+                        "type":"str, optional",
+                        "default":""
+                    }
+                }
+            },
+            {
+                "name":"info",
+                "description":"Fetches profile information for a given Instagram username using the RapidAPI service.",
+                "parameters":{
+                    "username":{
+                        "description":"The Instagram username for which to fetch profile information. Defaults to 'kimkardashian'.",
+                        "type":"str",
+                        "default":"kimkardashian"
+                    }
+                }
+            },
+            {
+                "name":"get_highlight_by_id",
+                "description":"Fetches all images and videos of a specific Instagram highlight by its ID.",
+                "parameters":{
+                    "highlightid":{
+                        "description":"The ID of the Instagram highlight.",
+                        "type":"str",
+                        "default":"highlight:18042967741398634"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id":48062,
+        "query":"Display the crops grown in Spain with the subcategory 'De verano', family 'Fabaceae', common name 'Jud\u00eda', species name 'Phaseolus', consistency 'herb\u00e1cea', crop cycle 'anual', fruit type 'legumbre', and category 'Leguminosas'. Additionally, find the verse in the Bible with verse ID 456, book name 'Exodus', and chapter ID 3. Furthermore, search for breweries containing the keyword 'ale'. After that, identify the country associated with phone number +0987654321. Lastly, conduct a video search for 'dog tricks'.",
+        "answers":[
+            {
+                "name":"crops_list",
+                "arguments":{
+                    "subcategory":"De verano",
+                    "family":"Fabaceae",
+                    "commonname":"Jud\u00eda",
+                    "speciename":"Phaseolus",
+                    "consistency":"herb\u00e1cea",
+                    "cropcycle":"anual",
+                    "fruittype":"legumbre",
+                    "category":"Leguminosas"
+                }
+            },
+            {
+                "name":"get_verse_by_bookname",
+                "arguments":{
+                    "verseid":456,
+                    "bookname":"Exodus",
+                    "chapterid":3
+                }
+            },
+            {
+                "name":"search",
+                "arguments":{
+                    "query":"ale"
+                }
+            },
+            {
+                "name":"getcountrybynumber",
+                "arguments":{
+                    "q":"+0987654321"
+                }
+            },
+            {
+                "name":"video",
+                "arguments":{
+                    "query":"dog tricks"
+                }
+            }
+        ],
+        "tools":[
+            {
+                "name":"crops_list",
+                "description":"Fetches a list of crops grown in Spain, allowing filtering through multiple query string parameters.",
+                "parameters":{
+                    "subcategory":{
+                        "description":"Optional. The subcategory of the crop. Default is 'De invierno'.",
+                        "type":"str",
+                        "default":"De invierno"
+                    },
+                    "family":{
+                        "description":"Optional. The family of the crop. Default is 'Poaceae'.",
+                        "type":"str",
+                        "default":"Poaceae"
+                    },
+                    "commonname":{
+                        "description":"Optional. The common name of the crop. Default is 'Trigo'.",
+                        "type":"str",
+                        "default":"Trigo"
+                    },
+                    "speciename":{
+                        "description":"Optional. The species name of the crop. Default is 'Triticum'.",
+                        "type":"str",
+                        "default":"Triticum"
+                    },
+                    "consistency":{
+                        "description":"Optional. The consistency of the crop. Default is 'herb\u00e1cea'.",
+                        "type":"str",
+                        "default":"herb\u00e1cea"
+                    },
+                    "cropcycle":{
+                        "description":"Optional. The crop cycle of the crop. Default is 'anual'.",
+                        "type":"str",
+                        "default":"anual"
+                    },
+                    "fruittype":{
+                        "description":"Optional. The type of fruit of the crop. Default is 'cariopsis'.",
+                        "type":"str",
+                        "default":"cariopsis"
+                    },
+                    "category":{
+                        "description":"Optional. The subcategory of the crop. Default is 'De invierno'.",
+                        "type":"str",
+                        "default":"Cereales de grano"
+                    }
+                }
+            },
+            {
+                "name":"get_verse_by_bookname",
+                "description":"Fetches a specific verse from the Bible given the verse ID, book name, and chapter ID using the Toolbench RapidAPI.",
+                "parameters":{
+                    "verseid":{
+                        "description":"The ID of the verse to retrieve.",
+                        "type":"int",
+                        "default":"1"
+                    },
+                    "bookname":{
+                        "description":"The name of the book in the Bible.",
+                        "type":"str",
+                        "default":"Revelation"
+                    },
+                    "chapterid":{
+                        "description":"The chapter number within the specified book.",
+                        "type":"int",
+                        "default":"12"
+                    }
+                }
+            },
+            {
+                "name":"search",
+                "description":"Search for breweries based on a query string.",
+                "parameters":{
+                    "query":{
+                        "description":"The search query for the brewery. Default is 'dog'.",
+                        "type":"str",
+                        "default":"dog"
+                    }
+                }
+            },
+            {
+                "name":"getcountrybynumber",
+                "description":"Retrieves country information based on a phone number using the Telephone to Country API.",
+                "parameters":{
+                    "q":{
+                        "description":"The phone number to search for the corresponding country information.",
+                        "type":"str",
+                        "default":"12136210002"
+                    }
+                }
+            },
+            {
+                "name":"video",
+                "description":"Perform a video search using the given query string.",
+                "parameters":{
+                    "query":{
+                        "description":"URL encoded query string for the video search.",
+                        "type":"str",
+                        "default":""
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id":51904,
+        "query":"1. Retrieve the availability status of a listing with ID '12345' for February 2022. 2. Fetch data for the biggest city with ID '3'. 3. Obtain route information for the BART API with command 'get_route_details'. 4. Get host language filters using language ID 'en-US'. 5. Fetch a list of room facility types for room facility type ID '10' and facility type ID '20'.",
+        "answers":[
+            {
+                "name":"listing_status",
+                "arguments":{
+                    "is_id":"12345",
+                    "year":2022,
+                    "month":2
+                }
+            },
+            {
+                "name":"biggest_cities",
+                "arguments":{
+                    "is_id":3
+                }
+            },
+            {
+                "name":"route_information",
+                "arguments":{
+                    "cmd":"get_route_details"
+                }
+            },
+            {
+                "name":"get_host_language_filters",
+                "arguments":{
+                    "languageid":"en-US"
+                }
+            },
+            {
+                "name":"list_of_room_facility_types",
+                "arguments":{
+                    "room_facility_type_id":"10",
+                    "facility_type_id":"20"
+                }
+            }
+        ],
+        "tools":[
+            {
+                "name":"listing_status",
+                "description":"Retrieve the availability status of a listing for a given month and year.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The ID of the listing.",
+                        "type":"str",
+                        "default":"619966061834034729"
+                    },
+                    "year":{
+                        "description":"The year for which the status is to be retrieved.",
+                        "type":"int",
+                        "default":"2024"
+                    },
+                    "month":{
+                        "description":"The month for which the status is to be retrieved.",
+                        "type":"int",
+                        "default":"1"
+                    }
+                }
+            },
+            {
+                "name":"biggest_cities",
+                "description":"Fetches the biggest cities' data from the specified API using the provided ID and API key.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The ID representing a specific query for biggest cities.",
+                        "type":"int",
+                        "default":"1"
+                    }
+                }
+            },
+            {
+                "name":"route_information",
+                "description":"Fetch route information from the BART API using the given command.",
+                "parameters":{
+                    "cmd":{
+                        "description":"The command to send to the BART API. Possible commands can be found at http:\/\/api.bart.gov\/docs\/overview\/examples.aspx.",
+                        "type":"str",
+                        "default":"routes"
+                    }
+                }
+            },
+            {
+                "name":"get_host_language_filters",
+                "description":"Fetches host language filters from the Airbnb API.",
+                "parameters":{
+                    "languageid":{
+                        "description":"The LanguageId for the desired response language. To obtain a LanguageId, call the getLanguages API and use the Id.",
+                        "type":"str, optional",
+                        "default":""
+                    }
+                }
+            },
+            {
+                "name":"list_of_room_facility_types",
+                "description":"Fetches a list of room facility types from the Booking.com API based on given criteria.",
+                "parameters":{
+                    "room_facility_type_id":{
+                        "description":"ID of the specific room facility type to filter.",
+                        "type":"str, optional",
+                        "default":""
+                    },
+                    "facility_type_id":{
+                        "description":"ID of the specific room facility type to filter.",
+                        "type":"str, optional",
+                        "default":""
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id":39364,
+        "query":"Fetch domain information for domains 'example1' and 'example2'. Also, retrieve the first 10 cars from the Car Data API with a limit of 5 cars per page. Additionally, get the details of YouTube playlists with IDs 'PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG' and 'PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG1'. Finally, get the crimes that occurred at the location with latitude 51.5074 and longitude -0.1278 on 2022-01-01, and the list of content regions supported by YouTube.",
+        "answers":[
+            {
+                "name":"domain",
+                "arguments":{
+                    "domain_id":"example1"
+                }
+            },
+            {
+                "name":"domain",
+                "arguments":{
+                    "domain_id":"example2"
+                }
+            },
+            {
+                "name":"cars",
+                "arguments":{
+                    "page":"1",
+                    "limit":"5"
+                }
+            },
+            {
+                "name":"cars",
+                "arguments":{
+                    "page":"2",
+                    "limit":"5"
+                }
+            },
+            {
+                "name":"playlist",
+                "arguments":{
+                    "is_id":"PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG"
+                }
+            },
+            {
+                "name":"playlist",
+                "arguments":{
+                    "is_id":"PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG1"
+                }
+            },
+            {
+                "name":"crimes_at_location",
+                "arguments":{
+                    "date":"2022-01-01",
+                    "lat":"51.5074",
+                    "lng":"-0.1278"
+                }
+            },
+            {
+                "name":"i18nregions",
+                "arguments":{
+                    "part":"snippet"
+                }
+            }
+        ],
+        "tools":[
+            {
+                "name":"domain",
+                "description":"Fetch domain data using the Neostrada Domains API.",
+                "parameters":{
+                    "domain_id":{
+                        "description":"The ID of the domain to fetch data for.",
+                        "type":"str",
+                        "default":"576517"
+                    }
+                }
+            },
+            {
+                "name":"playlist",
+                "description":"Fetch details and videos of a YouTube playlist using the provided playlist ID and optional parameters.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The ID of the YouTube playlist.",
+                        "type":"str",
+                        "default":"PLMC9KNkIncKseYxDN2niH6glGRWKsLtde"
+                    },
+                    "x_cachebypass":{
+                        "description":"The cache bypass value. Default is None.",
+                        "type":"str, optional",
+                        "default":""
+                    },
+                    "token":{
+                        "description":"Pagination token for retrieving additional results. Default is None.",
+                        "type":"str, optional",
+                        "default":""
+                    }
+                }
+            },
+            {
+                "name":"cars",
+                "description":"Fetches and filters a list of cars from the RapidAPI service.",
+                "parameters":{
+                    "page":{
+                        "description":"The page number to retrieve.",
+                        "type":"str",
+                        "default":"0"
+                    },
+                    "limit":{
+                        "description":"The maximum number of results to return per page.",
+                        "type":"str",
+                        "default":"10"
+                    },
+                    "type":{
+                        "description":"Filter cars by type (e.g., SUV, sedan).",
+                        "type":"str, optional",
+                        "default":""
+                    },
+                    "model":{
+                        "description":"Filter cars by model.",
+                        "type":"str, optional",
+                        "default":""
+                    },
+                    "make":{
+                        "description":"Filter cars by make (manufacturer).",
+                        "type":"str, optional",
+                        "default":""
+                    },
+                    "year":{
+                        "description":"Filter cars by year of manufacture.",
+                        "type":"str, optional",
+                        "default":""
+                    }
+                }
+            },
+            {
+                "name":"crimes_at_location",
+                "description":"Retrieves the crimes that occurred at the specified location on a given date.",
+                "parameters":{
+                    "date":{
+                        "description":"The date for which to retrieve crime data in 'YYYY-MM-DD' format.",
+                        "type":"str",
+                        "default":"2012-02"
+                    },
+                    "lat":{
+                        "description":"The latitude of the location.",
+                        "type":"str",
+                        "default":"52.629729"
+                    },
+                    "lng":{
+                        "description":"The longitude of the location.",
+                        "type":"str",
+                        "default":"-1.131592"
+                    }
+                }
+            },
+            {
+                "name":"i18nregions",
+                "description":"Fetches a list of content regions supported by the YouTube website.",
+                "parameters":{
+                    "part":{
+                        "description":"Specifies the i18nRegion resource properties that the API response will include. Should be set to 'snippet'.",
+                        "type":"str",
+                        "default":"snippet"
+                    },
+                    "hl":{
+                        "description":"Specifies the language that should be used for text values in the API response. Defaults to 'en_US'.",
+                        "type":"str, optional",
+                        "default":"en_US"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id":39885,
+        "query":"I need to find out the city name for the location with latitude 5.5704 and longitude -0.2009, retrieve information for the US ZIP code 90210, and get the country information for Switzerland using its ISO code. Also, I want to perform reverse geocoding with the Geokeo API using latitude 48.8588443 and longitude 2.2943506, and finally, calculate the distance between a starting point at latitude 40.712776 and longitude -74.005974, and an ending point at latitude 48.8588443 and longitude 2.2943506.",
+        "answers":[
+            {
+                "name":"reverse_geocode",
+                "arguments":{
+                    "lon":"-0.2009",
+                    "lat":"5.5704"
+                }
+            },
+            {
+                "name":"get_zip_info",
+                "arguments":{
+                    "zipcode":"90210"
+                }
+            },
+            {
+                "name":"country_by_iso_code",
+                "arguments":{
+                    "iso_code":"CH"
+                }
+            },
+            {
+                "name":"reverse_php",
+                "arguments":{
+                    "api":"YOUR_GEOKEO_API_KEY",
+                    "lng":"2.2943506",
+                    "lat":"48.8588443"
+                }
+            },
+            {
+                "name":"directions_between_2_locations",
+                "arguments":{
+                    "start_lon":-74.005974,
+                    "end_lon":2.2943506,
+                    "start_lat":40.712776,
+                    "end_lat":48.8588443
+                }
+            }
+        ],
+        "tools":[
+            {
+                "name":"reverse_geocode",
+                "description":"Performs reverse geocoding in Ghana by providing latitude and longitude coordinates. Returns the name of the city where the location is situated.",
+                "parameters":{
+                    "lon":{
+                        "description":"The longitude of the location.",
+                        "type":"str",
+                        "default":"-0.1870"
+                    },
+                    "lat":{
+                        "description":"The latitude of the location.",
+                        "type":"str",
+                        "default":"5.6037"
+                    }
+                }
+            },
+            {
+                "name":"get_zip_info",
+                "description":"Retrieve information about a given ZIP code using the Toolbench API.",
+                "parameters":{
+                    "zipcode":{
+                        "description":"The ZIP code for which the information is to be retrieved.",
+                        "type":"str",
+                        "default":"30043"
+                    }
+                }
+            },
+            {
+                "name":"reverse_php",
+                "description":"Performs reverse geocoding using the specified API, longitude, and latitude.",
+                "parameters":{
+                    "api":{
+                        "description":"Your API key for accessing the Geokeo reverse geocoding service.",
+                        "type":"str",
+                        "default":"api key from geokeo"
+                    },
+                    "lng":{
+                        "description":"The longitude coordinate for the reverse geocoding request.",
+                        "type":"str",
+                        "default":"-73.9856"
+                    },
+                    "lat":{
+                        "description":"The latitude coordinate for the reverse geocoding request.",
+                        "type":"str",
+                        "default":"40.74842"
+                    }
+                }
+            },
+            {
+                "name":"country_by_iso_code",
+                "description":"Fetches information about a country using its 2-letter ISO code, localized to a specified language.",
+                "parameters":{
+                    "iso_code":{
+                        "description":"The 2-letter ISO country code.",
+                        "type":"str",
+                        "default":"US"
+                    },
+                    "fields":{
+                        "description":"A comma-delimited list of fields to include in the response. Defaults to None.",
+                        "type":"str, optional",
+                        "default":""
+                    },
+                    "lang":{
+                        "description":"The 2-letter ISO language code for localizing the country name. Defaults to 'en'.",
+                        "type":"str, optional",
+                        "default":"en"
+                    }
+                }
+            },
+            {
+                "name":"directions_between_2_locations",
+                "description":"Returns information about the route between two locations, including distance, duration, and steps.",
+                "parameters":{
+                    "start_lon":{
+                        "description":"Longitude of the starting point (required).",
+                        "type":"int",
+                        "default":"10.7603483"
+                    },
+                    "end_lon":{
+                        "description":"Longitude of the ending point (required).",
+                        "type":"int",
+                        "default":"10.103167361330975"
+                    },
+                    "start_lat":{
+                        "description":"Latitude of the starting point (required).",
+                        "type":"int",
+                        "default":"34.797783"
+                    },
+                    "end_lat":{
+                        "description":"Latitude of the ending point (required).",
+                        "type":"int",
+                        "default":"36.81395975"
+                    },
+                    "distance_unit":{
+                        "description":"Unit of distance measurement, either 'km' (default) or 'mi'.",
+                        "type":"str, optional",
+                        "default":"km"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id":33614,
+        "query":"Can you find a pastry recipe using 'apple' as an ingredient, get the drink recipe with ID '321', and fetch the recipe with ID '654' from the Ghana Food Recipe API? Additionally, generate a recipe using 'pork' as the main ingredient and get the menu details for ID '987' in Spanish.",
+        "answers":[
+            {
+                "name":"pastry_ingredient",
+                "arguments":{
+                    "ingredient":"apple"
+                }
+            },
+            {
+                "name":"drink_by_id",
+                "arguments":{
+                    "is_id":"321"
+                }
+            },
+            {
+                "name":"get_recipe_by_id",
+                "arguments":{
+                    "is_id":"654"
+                }
+            },
+            {
+                "name":"generate_recipe",
+                "arguments":{
+                    "ingredient":"pork"
+                }
+            },
+            {
+                "name":"menudetails",
+                "arguments":{
+                    "is_id":"987",
+                    "lang":"es"
+                }
+            }
+        ],
+        "tools":[
+            {
+                "name":"pastry_ingredient",
+                "description":"Retrieves a random pastry recipe that contains a specific ingredient using the Toolbench RapidAPI.",
+                "parameters":{
+                    "ingredient":{
+                        "description":"The specific ingredient to include in the pastry recipe.",
+                        "type":"str",
+                        "default":"strawberry"
+                    }
+                }
+            },
+            {
+                "name":"drink_by_id",
+                "description":"Fetches a specific drink recipe by its ID using the Ghana Food Recipe API.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The unique identifier for the drink recipe.",
+                        "type":"str",
+                        "default":"63c67c9db06a3ed9f92b2367"
+                    }
+                }
+            },
+            {
+                "name":"get_recipe_by_id",
+                "description":"Fetches a specific recipe by its ID from the Ghana Food Recipe API.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The ID of the recipe to fetch.",
+                        "type":"str",
+                        "default":"63c2e83b09852be5facb894a"
+                    }
+                }
+            },
+            {
+                "name":"generate_recipe",
+                "description":"This function generates a recipe using an ingredient and a provided RapidAPI key.",
+                "parameters":{
+                    "ingredient":{
+                        "description":"The main ingredient to be used in the recipe. Default is 'chicken'.",
+                        "type":"str",
+                        "default":"chicken"
+                    }
+                }
+            },
+            {
+                "name":"menudetails",
+                "description":"Fetch menu details using a given menu ID and language preference.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The ID of the menu whose details are to be fetched.",
+                        "type":"str",
+                        "default":"5a76c927bb5d660001e09731"
+                    },
+                    "lang":{
+                        "description":"The language code in which the menu details should be returned.",
+                        "type":"str",
+                        "default":"zh-hans"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id":28877,
+        "query":"Can you find the missing number in the sequence 0, 1, 2, 3, 5, 6? Also, merge these dictionaries: {'a': 1, 'b': 2} and {'b': 3, 'c': 4}. Check if 'listen' and 'silent' are anagrams. Count occurrences of each element in the list [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]. Is 'waterbottle' a rotation of 'erbottlewat'? Lastly, is 'A man a plan a canal Panama' a palindrome?",
+        "answers":[
+            {
+                "name":"find_missing_number",
+                "arguments":{
+                    "nums":[
+                        0,
+                        1,
+                        2,
+                        3,
+                        5,
+                        6
+                    ]
+                }
+            },
+            {
+                "name":"merge_dictionaries",
+                "arguments":{
+                    "dict1":{
+                        "a":1,
+                        "b":2
+                    },
+                    "dict2":{
+                        "b":3,
+                        "c":4
+                    }
+                }
+            },
+            {
+                "name":"is_anagram",
+                "arguments":{
+                    "word1":"listen",
+                    "word2":"silent"
+                }
+            },
+            {
+                "name":"count_occurrences",
+                "arguments":{
+                    "lst":[
+                        1,
+                        2,
+                        2,
+                        3,
+                        3,
+                        3,
+                        4,
+                        4,
+                        4,
+                        4
+                    ]
+                }
+            },
+            {
+                "name":"is_rotation",
+                "arguments":{
+                    "str1":"waterbottle",
+                    "str2":"erbottlewat"
+                }
+            },
+            {
+                "name":"is_palindrome",
+                "arguments":{
+                    "text":"A man a plan a canal Panama"
+                }
+            }
+        ],
+        "tools":[
+            {
+                "name":"find_missing_number",
+                "description":"Finds the missing number in a list of integers from 0 to n.",
+                "parameters":{
+                    "nums":{
+                        "description":"The list of integers.",
+                        "type":"List[int]"
+                    }
+                }
+            },
+            {
+                "name":"merge_dictionaries",
+                "description":"Merges two dictionaries into a single dictionary.",
+                "parameters":{
+                    "dict1":{
+                        "description":"The first dictionary.",
+                        "type":"Dict"
+                    },
+                    "dict2":{
+                        "description":"The second dictionary.",
+                        "type":"Dict"
+                    }
+                }
+            },
+            {
+                "name":"is_anagram",
+                "description":"Checks if two words are anagrams of each other.",
+                "parameters":{
+                    "word1":{
+                        "description":"The first word.",
+                        "type":"str"
+                    },
+                    "word2":{
+                        "description":"The second word.",
+                        "type":"str"
+                    }
+                }
+            },
+            {
+                "name":"count_occurrences",
+                "description":"Counts the occurrences of each element in a list and returns a dictionary with the counts.",
+                "parameters":{
+                    "lst":{
+                        "description":"The input list.",
+                        "type":"List"
+                    }
+                }
+            },
+            {
+                "name":"is_rotation",
+                "description":"Checks if one string is a rotation of another string.",
+                "parameters":{
+                    "str1":{
+                        "description":"The first string.",
+                        "type":"str"
+                    },
+                    "str2":{
+                        "description":"The second string.",
+                        "type":"str"
+                    }
+                }
+            },
+            {
+                "name":"is_palindrome",
+                "description":"Checks if a string is a palindrome.",
+                "parameters":{
+                    "text":{
+                        "description":"The input string.",
+                        "type":"str"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id":3798,
+        "query":"What is the 15th Fibonacci number and the factorial of 5? Additionally, find the maximum sum of a subarray in the list [2, -1, 2, 3, -4, 1]. Can you also reverse the sentence 'Data science is cool' and the string 'Java'?",
+        "answers":[
+            {
+                "name":"fibonacci",
+                "arguments":{
+                    "n":15
+                }
+            },
+            {
+                "name":"calculate_factorial",
+                "arguments":{
+                    "n":5
+                }
+            },
+            {
+                "name":"find_max_subarray_sum",
+                "arguments":{
+                    "nums":[
+                        2,
+                        -1,
+                        2,
+                        3,
+                        -4,
+                        1
+                    ]
+                }
+            },
+            {
+                "name":"reverse_words",
+                "arguments":{
+                    "sentence":"Data science is cool"
+                }
+            },
+            {
+                "name":"reverse_string",
+                "arguments":{
+                    "text":"Java"
+                }
+            }
+        ],
+        "tools":[
+            {
+                "name":"fibonacci",
+                "description":"Calculates the nth Fibonacci number.",
+                "parameters":{
+                    "n":{
+                        "description":"The position of the Fibonacci number.",
+                        "type":"int"
+                    }
+                }
+            },
+            {
+                "name":"calculate_factorial",
+                "description":"Calculates the factorial of a non-negative integer.",
+                "parameters":{
+                    "n":{
+                        "description":"The non-negative integer.",
+                        "type":"int"
+                    }
+                }
+            },
+            {
+                "name":"find_max_subarray_sum",
+                "description":"Finds the maximum sum of a contiguous subarray within a list of integers.",
+                "parameters":{
+                    "nums":{
+                        "description":"The input list of integers.",
+                        "type":"List[int]"
+                    }
+                }
+            },
+            {
+                "name":"reverse_words",
+                "description":"Reverses the order of words in a sentence.",
+                "parameters":{
+                    "sentence":{
+                        "description":"The input sentence.",
+                        "type":"str"
+                    }
+                }
+            },
+            {
+                "name":"reverse_string",
+                "description":"Reverses the characters in a string.",
+                "parameters":{
+                    "text":{
+                        "description":"The input string.",
+                        "type":"str"
+                    }
+                }
+            },
+            {
+                "name":"calculate_grade",
+                "description":"Calculates the weighted average grade based on scores and their corresponding weights.",
+                "parameters":{
+                    "scores":{
+                        "description":"A list of scores.",
+                        "type":"List[float]"
+                    },
+                    "weights":{
+                        "description":"A list of weights corresponding to each score.",
+                        "type":"List[float]"
+                    }
+                }
+            },
+            {
+                "name":"merge_dictionaries",
+                "description":"Merges two dictionaries into a single dictionary.",
+                "parameters":{
+                    "dict1":{
+                        "description":"The first dictionary.",
+                        "type":"Dict"
+                    },
+                    "dict2":{
+                        "description":"The second dictionary.",
+                        "type":"Dict"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id":39001,
+        "query":"List the actors born today, find politicians in Ontario, retrieve awards summary for actor with IMDb ID 'nm0000136', get news from 'The Washington Post', fetch AI companies from page 2, and get detailed information for Kompas news article with GUID '506883e3-e29b-4c63-98a2-037101251847'.",
+        "answers":[
+            {
+                "name":"actors_list_born_today",
+                "arguments":{
+                    "month":12,
+                    "day":14
+                }
+            },
+            {
+                "name":"politicians",
+                "arguments":{
+                    "province":"Ontario"
+                }
+            },
+            {
+                "name":"actors_get_awards_summary",
+                "arguments":{
+                    "nconst":"nm0000136"
+                }
+            },
+            {
+                "name":"get_individual_news_from_source",
+                "arguments":{
+                    "newspaperid":"the_washington_post"
+                }
+            },
+            {
+                "name":"getcompanies",
+                "arguments":{
+                    "page":2
+                }
+            },
+            {
+                "name":"kompas_detail",
+                "arguments":{
+                    "guid":"506883e3-e29b-4c63-98a2-037101251847"
+                }
+            }
+        ],
+        "tools":[
+            {
+                "name":"actors_list_born_today",
+                "description":"Fetches a list of actors and actresses born on a specific day and month from the Online Movie Database via the RapidAPI platform.",
+                "parameters":{
+                    "month":{
+                        "description":"The month of birth of the actors.",
+                        "type":"int",
+                        "default":"7"
+                    },
+                    "day":{
+                        "description":"The day of birth of the actors.",
+                        "type":"int",
+                        "default":"27"
+                    }
+                }
+            },
+            {
+                "name":"politicians",
+                "description":"Fetches a list of politicians' data based on given filters.",
+                "parameters":{
+                    "offset":{
+                        "description":"The starting point in the list of results. Defaults to None.",
+                        "type":"int, optional",
+                        "default":""
+                    },
+                    "limit":{
+                        "description":"The maximum number of results to return. Defaults to None.",
+                        "type":"int, optional",
+                        "default":""
+                    },
+                    "active":{
+                        "description":"Filter for active politicians. Defaults to None.",
+                        "type":"bool, optional",
+                        "default":""
+                    },
+                    "province":{
+                        "description":"Filter politicians by province. Defaults to None.",
+                        "type":"str, optional",
+                        "default":""
+                    },
+                    "municipality":{
+                        "description":"Filter politicians by municipality. Defaults to None.",
+                        "type":"str, optional",
+                        "default":""
+                    },
+                    "level_of_government":{
+                        "description":"Filter politicians by level of government (e.g., federal, provincial, municipal). Defaults to None.",
+                        "type":"str, optional",
+                        "default":""
+                    }
+                }
+            },
+            {
+                "name":"actors_get_awards_summary",
+                "description":"Retrieves the awards summary for a specified actor or actress using the IMDb API.",
+                "parameters":{
+                    "nconst":{
+                        "description":"The unique identifier for the actor or actress, typically starting with \"nm\" (e.g., 'nm0001667').",
+                        "type":"str",
+                        "default":"nm0001667"
+                    }
+                }
+            },
+            {
+                "name":"get_individual_news_from_source",
+                "description":"Fetch LGBTQ+ related news from a specific newspaper using the newspaper's ID.",
+                "parameters":{
+                    "newspaperid":{
+                        "description":"The unique identifier of the newspaper from which to retrieve news.",
+                        "type":"str",
+                        "default":"gaytimes"
+                    }
+                }
+            },
+            {
+                "name":"getcompanies",
+                "description":"Fetches AI companies from a given page through the RapidAPI service.",
+                "parameters":{
+                    "page":{
+                        "description":"The page number to retrieve companies from.",
+                        "type":"int",
+                        "default":"1"
+                    }
+                }
+            },
+            {
+                "name":"kompas_detail",
+                "description":"Fetches detailed information from the Kompas news API using a specified GUID.",
+                "parameters":{
+                    "guid":{
+                        "description":"The unique identifier for the news article to fetch details for.",
+                        "type":"str",
+                        "default":".xml.2023.06.20.114935178"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id":38624,
+        "query":"I want to fetch 5 jokes, but I don't know if it's possible. Also, can you get me details about a character with ID 321, a riddle with ID 654, and an ASCII image with ID 987? Oh, and I'm curious about episode 2 of title 202 from the Webtoon API.",
+        "answers":[
+            {
+                "name":"v1_jokes",
+                "arguments":{
+                    "limit":"5"
+                }
+            },
+            {
+                "name":"get_extra_character_details",
+                "arguments":{
+                    "is_id":"321"
+                }
+            },
+            {
+                "name":"riddle_by_id",
+                "arguments":{
+                    "is_id":"654"
+                }
+            },
+            {
+                "name":"get_ascii_by_id",
+                "arguments":{
+                    "is_id":"987"
+                }
+            },
+            {
+                "name":"originals_episodes_get_info",
+                "arguments":{
+                    "episodeno":2,
+                    "titleno":202
+                }
+            }
+        ],
+        "tools":[
+            {
+                "name":"v1_jokes",
+                "description":"Fetches a set number of jokes from the API Ninjas Jokes API endpoint.",
+                "parameters":{
+                    "limit":{
+                        "description":"The number of jokes to return, with a valid range of 1 to 30. Defaults to None, which returns a single joke.",
+                        "type":"str, optional",
+                        "default":""
+                    }
+                }
+            },
+            {
+                "name":"get_extra_character_details",
+                "description":"Fetch additional details about a character using the provided character ID and RapidAPI key.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The unique identifier of the character for which details are being fetched.",
+                        "type":"str",
+                        "default":""
+                    }
+                }
+            },
+            {
+                "name":"riddle_by_id",
+                "description":"Fetches a riddle by its ID from the Riddlie API.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The ID of the riddle to fetch.",
+                        "type":"str",
+                        "default":"63bdef0283b194664ee6c121"
+                    }
+                }
+            },
+            {
+                "name":"get_ascii_by_id",
+                "description":"Retrieves a previously generated ASCII image using its unique identifier.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The unique identifier of the ASCII image.",
+                        "type":"str",
+                        "default":"2"
+                    }
+                }
+            },
+            {
+                "name":"originals_episodes_get_info",
+                "description":"Fetch information and photo links for a specific episode of a Webtoon Original.",
+                "parameters":{
+                    "episodeno":{
+                        "description":"The episode number. It corresponds to the `episodeNo` field returned by the `\/originals\/episodes\/list` endpoint.",
+                        "type":"int",
+                        "default":"1"
+                    },
+                    "titleno":{
+                        "description":"The title number. It corresponds to the `titleNo` field returned by the `\/originals\/titles\/list` or `\/originals\/titles\/list-by-rank` endpoint.",
+                        "type":"int",
+                        "default":"2113"
+                    },
+                    "language":{
+                        "description":"The language code for the response. Defaults to 'en'. Accepted values are 'en', 'zh-hant', 'de', 'fr', 'es', 'th', 'id'.",
+                        "type":"str, optional",
+                        "default":"en"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id":46181,
+        "query":"1. Check the availability status of a listing with ID '66666' for August 2029. 2. Fetch data for the biggest city with ID '17'. 3. Obtain route information for the BART API with command 'get_station_accessibility'. 4. Get host language filters using language ID 'pt-PT'. 5. Fetch a list of room facility types for facility type ID '120'.",
+        "answers":[
+            {
+                "name":"listing_status",
+                "arguments":{
+                    "is_id":"66666",
+                    "year":2029,
+                    "month":8
+                }
+            },
+            {
+                "name":"biggest_cities",
+                "arguments":{
+                    "is_id":17
+                }
+            },
+            {
+                "name":"route_information",
+                "arguments":{
+                    "cmd":"get_station_accessibility"
+                }
+            },
+            {
+                "name":"get_host_language_filters",
+                "arguments":{
+                    "languageid":"pt-PT"
+                }
+            },
+            {
+                "name":"list_of_room_facility_types",
+                "arguments":{
+                    "facility_type_id":"120"
+                }
+            }
+        ],
+        "tools":[
+            {
+                "name":"listing_status",
+                "description":"Retrieve the availability status of a listing for a given month and year.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The ID of the listing.",
+                        "type":"str",
+                        "default":"619966061834034729"
+                    },
+                    "year":{
+                        "description":"The year for which the status is to be retrieved.",
+                        "type":"int",
+                        "default":"2024"
+                    },
+                    "month":{
+                        "description":"The month for which the status is to be retrieved.",
+                        "type":"int",
+                        "default":"1"
+                    }
+                }
+            },
+            {
+                "name":"biggest_cities",
+                "description":"Fetches the biggest cities' data from the specified API using the provided ID and API key.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The ID representing a specific query for biggest cities.",
+                        "type":"int",
+                        "default":"1"
+                    }
+                }
+            },
+            {
+                "name":"route_information",
+                "description":"Fetch route information from the BART API using the given command.",
+                "parameters":{
+                    "cmd":{
+                        "description":"The command to send to the BART API. Possible commands can be found at http:\/\/api.bart.gov\/docs\/overview\/examples.aspx.",
+                        "type":"str",
+                        "default":"routes"
+                    }
+                }
+            },
+            {
+                "name":"get_host_language_filters",
+                "description":"Fetches host language filters from the Airbnb API.",
+                "parameters":{
+                    "languageid":{
+                        "description":"The LanguageId for the desired response language. To obtain a LanguageId, call the getLanguages API and use the Id.",
+                        "type":"str, optional",
+                        "default":""
+                    }
+                }
+            },
+            {
+                "name":"list_of_room_facility_types",
+                "description":"Fetches a list of room facility types from the Booking.com API based on given criteria.",
+                "parameters":{
+                    "room_facility_type_id":{
+                        "description":"ID of the specific room facility type to filter.",
+                        "type":"str, optional",
+                        "default":""
+                    },
+                    "facility_type_id":{
+                        "description":"ID of the specific room facility type to filter.",
+                        "type":"str, optional",
+                        "default":""
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id":28392,
+        "query":"I need to find the 10th Fibonacci number, the factorial of 7, and the maximum subarray sum of the list [1, -2, 3, 10, -8, 9, 2]. Also, could you reverse the words in the sentence 'Hello world this is a test' and the characters in the string 'Python'?",
+        "answers":[
+            {
+                "name":"fibonacci",
+                "arguments":{
+                    "n":10
+                }
+            },
+            {
+                "name":"calculate_factorial",
+                "arguments":{
+                    "n":7
+                }
+            },
+            {
+                "name":"find_max_subarray_sum",
+                "arguments":{
+                    "nums":[
+                        1,
+                        -2,
+                        3,
+                        10,
+                        -8,
+                        9,
+                        2
+                    ]
+                }
+            },
+            {
+                "name":"reverse_words",
+                "arguments":{
+                    "sentence":"Hello world this is a test"
+                }
+            },
+            {
+                "name":"reverse_string",
+                "arguments":{
+                    "text":"Python"
+                }
+            }
+        ],
+        "tools":[
+            {
+                "name":"fibonacci",
+                "description":"Calculates the nth Fibonacci number.",
+                "parameters":{
+                    "n":{
+                        "description":"The position of the Fibonacci number.",
+                        "type":"int"
+                    }
+                }
+            },
+            {
+                "name":"calculate_factorial",
+                "description":"Calculates the factorial of a non-negative integer.",
+                "parameters":{
+                    "n":{
+                        "description":"The non-negative integer.",
+                        "type":"int"
+                    }
+                }
+            },
+            {
+                "name":"find_max_subarray_sum",
+                "description":"Finds the maximum sum of a contiguous subarray within a list of integers.",
+                "parameters":{
+                    "nums":{
+                        "description":"The input list of integers.",
+                        "type":"List[int]"
+                    }
+                }
+            },
+            {
+                "name":"reverse_words",
+                "description":"Reverses the order of words in a sentence.",
+                "parameters":{
+                    "sentence":{
+                        "description":"The input sentence.",
+                        "type":"str"
+                    }
+                }
+            },
+            {
+                "name":"reverse_string",
+                "description":"Reverses the characters in a string.",
+                "parameters":{
+                    "text":{
+                        "description":"The input string.",
+                        "type":"str"
+                    }
+                }
+            },
+            {
+                "name":"calculate_grade",
+                "description":"Calculates the weighted average grade based on scores and their corresponding weights.",
+                "parameters":{
+                    "scores":{
+                        "description":"A list of scores.",
+                        "type":"List[float]"
+                    },
+                    "weights":{
+                        "description":"A list of weights corresponding to each score.",
+                        "type":"List[float]"
+                    }
+                }
+            },
+            {
+                "name":"merge_dictionaries",
+                "description":"Merges two dictionaries into a single dictionary.",
+                "parameters":{
+                    "dict1":{
+                        "description":"The first dictionary.",
+                        "type":"Dict"
+                    },
+                    "dict2":{
+                        "description":"The second dictionary.",
+                        "type":"Dict"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id":50940,
+        "query":"1. Check the availability status of a listing with ID '67890' for March 2023. 2. Fetch data for the biggest city with ID '5'. 3. Obtain route information for the BART API with command 'get_station_details'. 4. Get host language filters using language ID 'es-ES'. 5. Fetch a list of room facility types for facility type ID '30'.",
+        "answers":[
+            {
+                "name":"listing_status",
+                "arguments":{
+                    "is_id":"67890",
+                    "year":2023,
+                    "month":3
+                }
+            },
+            {
+                "name":"biggest_cities",
+                "arguments":{
+                    "is_id":5
+                }
+            },
+            {
+                "name":"route_information",
+                "arguments":{
+                    "cmd":"get_station_details"
+                }
+            },
+            {
+                "name":"get_host_language_filters",
+                "arguments":{
+                    "languageid":"es-ES"
+                }
+            },
+            {
+                "name":"list_of_room_facility_types",
+                "arguments":{
+                    "facility_type_id":"30"
+                }
+            }
+        ],
+        "tools":[
+            {
+                "name":"listing_status",
+                "description":"Retrieve the availability status of a listing for a given month and year.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The ID of the listing.",
+                        "type":"str",
+                        "default":"619966061834034729"
+                    },
+                    "year":{
+                        "description":"The year for which the status is to be retrieved.",
+                        "type":"int",
+                        "default":"2024"
+                    },
+                    "month":{
+                        "description":"The month for which the status is to be retrieved.",
+                        "type":"int",
+                        "default":"1"
+                    }
+                }
+            },
+            {
+                "name":"biggest_cities",
+                "description":"Fetches the biggest cities' data from the specified API using the provided ID and API key.",
+                "parameters":{
+                    "is_id":{
+                        "description":"The ID representing a specific query for biggest cities.",
+                        "type":"int",
+                        "default":"1"
+                    }
+                }
+            },
+            {
+                "name":"route_information",
+                "description":"Fetch route information from the BART API using the given command.",
+                "parameters":{
+                    "cmd":{
+                        "description":"The command to send to the BART API. Possible commands can be found at http:\/\/api.bart.gov\/docs\/overview\/examples.aspx.",
+                        "type":"str",
+                        "default":"routes"
+                    }
+                }
+            },
+            {
+                "name":"get_host_language_filters",
+                "description":"Fetches host language filters from the Airbnb API.",
+                "parameters":{
+                    "languageid":{
+                        "description":"The LanguageId for the desired response language. To obtain a LanguageId, call the getLanguages API and use the Id.",
+                        "type":"str, optional",
+                        "default":""
+                    }
+                }
+            },
+            {
+                "name":"list_of_room_facility_types",
+                "description":"Fetches a list of room facility types from the Booking.com API based on given criteria.",
+                "parameters":{
+                    "room_facility_type_id":{
+                        "description":"ID of the specific room facility type to filter.",
+                        "type":"str, optional",
+                        "default":""
+                    },
+                    "facility_type_id":{
+                        "description":"ID of the specific room facility type to filter.",
+                        "type":"str, optional",
+                        "default":""
+                    }
+                }
+            }
+        ]
+    }
+]

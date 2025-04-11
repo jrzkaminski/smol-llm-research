@@ -1,0 +1,922 @@
+{
+  "nodes": [
+    {
+      "desc": "[Collection Detail] Retrieve details for a collection based on its ID.",
+      "id": "GetCollectionDetail"
+    },
+    {
+      "desc": "[Collection Image] Retrieve a collection's images based on its ID.",
+      "id": "GetCollectionImage"
+    },
+    {
+      "desc": "[Company Detail] Retrieve details about a company based on its ID.",
+      "id": "GetCompanyDetail"
+    },
+    {
+      "desc": "[Company Logo] Retrieve the logos of a company based on its ID.",
+      "id": "GetCompanyLogo"
+    },
+    {
+      "desc": "[Movie Discover] Discover new movies based on RATINGs.",
+      "id": "DiscoverMovie"
+    },
+    {
+      "desc": "[Movie Latest] Retrieve information about the most recently created movie.",
+      "id": "GetLatestMovie"
+    },
+    {
+      "desc": "[Movie Playing] Obtain a list of movies currently being shown in theaters.",
+      "id": "GetNewPlayingMovie"
+    },
+    {
+      "desc": "[Movie Popular] Retrieve a list of currently popular movies.",
+      "id": "GetPopularMovie"
+    },
+    {
+      "desc": "[Movie Top Rated] Obtain a list of the highest-rated movies.",
+      "id": "GetTopRatedMovie"
+    },
+    {
+      "desc": "[Movie] Retrieve information about a movie using its ID.",
+      "id": "GetMovieDetail"
+    },
+    {
+      "desc": "[Movie Credit (Cast&Crew)] Retrieve the cast and crew information for a movie using its ID.",
+      "id": "GetMovieCredit"
+    },
+    {
+      "desc": "[Movie Image] Fetch images of a movie using its ID",
+      "id": "GetMovieImage"
+    },
+    {
+      "desc": "[Movie Keyword] Retrieve the keywords of a movie using its ID",
+      "id": "GetMovieKeyword"
+    },
+    {
+      "desc": "[Movie Recommendation] Obtain a list of recommended movies related to a particular movie using its ID.",
+      "id": "MovieRecommendation"
+    },
+    {
+      "desc": "[Movie Release Date] Retrieve the release date of a movie using its ID.",
+      "id": "GetMovieReleaseDate"
+    },
+    {
+      "desc": "[Movie Review] Retrieve user reviews for a movie.",
+      "id": "GetMovieReview"
+    },
+    {
+      "desc": "[Movie Similar] Obtain a list of movies that are similar to a particular movie using its ID.",
+      "id": "GetSimilarMovie"
+    },
+    {
+      "desc": "[Network] Retrieve detailed information about a TV network using its ID.",
+      "id": "GetNetworkDetail"
+    },
+    {
+      "desc": "[Network Logo] Fetch the logos of a TV using ID",
+      "id": "GetNetworkLogo"
+    },
+    {
+      "desc": "[Person Popular] Retrieve a list of popular individuals.",
+      "id": "GetPopularPerson"
+    },
+    {
+      "desc": "[Person Detail] Retrieve details of a person using ID.",
+      "id": "GetPersonDetail"
+    },
+    {
+      "desc": "[Person Image] Fetch the images of a person using ID",
+      "id": "GetPersonImage"
+    },
+    {
+      "desc": "[Person Movie Credit] Retrieve the movie credits for a person.",
+      "id": "GetPersonMovieCredit"
+    },
+    {
+      "desc": "[Person TV Credit] Retrieve the TV show credits for a person.",
+      "id": "GetPersonTVCredit"
+    },
+    {
+      "desc": "[Search Collection]  Search and find collections.",
+      "id": "SearchCollection"
+    },
+    {
+      "desc": "[Search Company] Search and find companies.",
+      "id": "SearchCompany"
+    },
+    {
+      "desc": "[Search Movie] Search and find movies.",
+      "id": "SearchMovie"
+    },
+    {
+      "desc": "[Search People] Search and find movies.",
+      "id": "SearchPeople"
+    },
+    {
+      "desc": "[Search TV Show] Search and find TV shows.",
+      "id": "SearchTV"
+    },
+    {
+      "desc": "[Trending] Retrieve trending items.",
+      "id": "GetTrendingItem"
+    },
+    {
+      "desc": "[TV On Air]  Obtain a list of TV shows that are currently on the air.",
+      "id": "GetOnAirTV"
+    },
+    {
+      "desc": "[TV Popular] Retrieve a list of the currently popular TV shows.",
+      "id": "GetPopularTVShow"
+    },
+    {
+      "desc": "[TV Top Rated] Obtain a list of the highest-rated TV shows.",
+      "id": "GetTopRatedTV"
+    },
+    {
+      "desc": "[TV] Retrieve details about a TV show using its ID.",
+      "id": "GetTVDetail"
+    },
+    {
+      "desc": "[TV Credit] Retrieve the credits (cast, crew, and director) for a TV",
+      "id": "GetTVCredit"
+    },
+    {
+      "desc": "[TV Image] Fetch the images of a TV show using its ID.",
+      "id": "GetTVImage"
+    },
+    {
+      "desc": "[TV Keyword] Retrieve the keywords of a TV show using its ID.",
+      "id": "GetTVKeyword"
+    },
+    {
+      "desc": "[TV Recommendation] Obtain a list of recommended TV shows for a particular TV.",
+      "id": "GetTVRecommendation"
+    },
+    {
+      "desc": "[TV Review] Retrieve reviews for a TV show using its ID.",
+      "id": "GetTVReview"
+    },
+    {
+      "desc": "[TV Season] Retrieve detailed information about a TV season of its season number.",
+      "id": "GetTVSeasonDetail"
+    },
+    {
+      "desc": "[TV Credits based on SEASON] Retrieve the credits (cast and crew) for a TV season using its season number.",
+      "id": "GetTVSeaonCredit"
+    },
+    {
+      "desc": "[TV Episode] Retrieve detailed information about a TV episode.",
+      "id": "GetTVEpisodeDetail"
+    },
+    {
+      "desc": "[TV Credits based on EPISODE]  Retrieve the credits (cast, crew, and guest stars) for a TV episode.",
+      "id": "GetTVEpisodeCredit"
+    },
+    {
+      "desc": "[TV Image of EPISODE] Fetch the images of a TV EPISODE.",
+      "id": "GetTVEpisodeImage"
+    },
+    {
+      "desc": "[TV Image of SEASON] Fetch the images of a TV SEASON.",
+      "id": "GetTVSeaonImage"
+    },
+    {
+      "desc": "[TV Similar] Obtain a list of TV shows that are similar to a particular TV show using its ID.",
+      "id": "GetSimilarTVShow"
+    }
+  ],
+  "links": [
+    {
+      "source": "GetCollectionDetail",
+      "target": "GetCollectionImage"
+    },
+    {
+      "source": "GetCollectionImage",
+      "target": "GetCollectionDetail"
+    },
+    {
+      "source": "GetCollectionImage",
+      "target": "GetMovieImage"
+    },
+    {
+      "source": "GetCollectionImage",
+      "target": "GetPersonImage"
+    },
+    {
+      "source": "GetCollectionImage",
+      "target": "GetTVImage"
+    },
+    {
+      "source": "GetCompanyLogo",
+      "target": "GetNetworkLogo"
+    },
+    {
+      "source": "DiscoverMovie",
+      "target": "GetLatestMovie"
+    },
+    {
+      "source": "DiscoverMovie",
+      "target": "GetPopularMovie"
+    },
+    {
+      "source": "DiscoverMovie",
+      "target": "GetTopRatedMovie"
+    },
+    {
+      "source": "DiscoverMovie",
+      "target": "GetMovieDetail"
+    },
+    {
+      "source": "DiscoverMovie",
+      "target": "MovieRecommendation"
+    },
+    {
+      "source": "GetNewPlayingMovie",
+      "target": "GetLatestMovie"
+    },
+    {
+      "source": "GetNewPlayingMovie",
+      "target": "GetPopularMovie"
+    },
+    {
+      "source": "GetNewPlayingMovie",
+      "target": "GetTopRatedMovie"
+    },
+    {
+      "source": "GetNewPlayingMovie",
+      "target": "GetMovieDetail"
+    },
+    {
+      "source": "GetNewPlayingMovie",
+      "target": "MovieRecommendation"
+    },
+    {
+      "source": "GetNewPlayingMovie",
+      "target": "SearchMovie"
+    },
+    {
+      "source": "GetPopularMovie",
+      "target": "GetLatestMovie"
+    },
+    {
+      "source": "GetPopularMovie",
+      "target": "GetNewPlayingMovie"
+    },
+    {
+      "source": "GetPopularMovie",
+      "target": "GetTopRatedMovie"
+    },
+    {
+      "source": "GetPopularMovie",
+      "target": "MovieRecommendation"
+    },
+    {
+      "source": "GetPopularMovie",
+      "target": "GetPopularTVShow"
+    },
+    {
+      "source": "GetPopularMovie",
+      "target": "GetTopRatedTV"
+    },
+    {
+      "source": "GetTopRatedMovie",
+      "target": "GetTopRatedTV"
+    },
+    {
+      "source": "GetMovieDetail",
+      "target": "GetLatestMovie"
+    },
+    {
+      "source": "GetMovieDetail",
+      "target": "GetPopularMovie"
+    },
+    {
+      "source": "GetMovieDetail",
+      "target": "GetTopRatedMovie"
+    },
+    {
+      "source": "GetMovieDetail",
+      "target": "GetMovieKeyword"
+    },
+    {
+      "source": "GetMovieDetail",
+      "target": "MovieRecommendation"
+    },
+    {
+      "source": "GetMovieDetail",
+      "target": "SearchMovie"
+    },
+    {
+      "source": "GetMovieCredit",
+      "target": "GetTVCredit"
+    },
+    {
+      "source": "GetMovieImage",
+      "target": "GetLatestMovie"
+    },
+    {
+      "source": "GetMovieImage",
+      "target": "GetMovieDetail"
+    },
+    {
+      "source": "GetMovieImage",
+      "target": "SearchMovie"
+    },
+    {
+      "source": "GetMovieKeyword",
+      "target": "GetLatestMovie"
+    },
+    {
+      "source": "GetMovieKeyword",
+      "target": "GetMovieDetail"
+    },
+    {
+      "source": "GetMovieKeyword",
+      "target": "GetMovieCredit"
+    },
+    {
+      "source": "GetMovieKeyword",
+      "target": "SearchMovie"
+    },
+    {
+      "source": "GetMovieKeyword",
+      "target": "GetTVKeyword"
+    },
+    {
+      "source": "MovieRecommendation",
+      "target": "DiscoverMovie"
+    },
+    {
+      "source": "MovieRecommendation",
+      "target": "GetLatestMovie"
+    },
+    {
+      "source": "MovieRecommendation",
+      "target": "GetNewPlayingMovie"
+    },
+    {
+      "source": "MovieRecommendation",
+      "target": "GetPopularMovie"
+    },
+    {
+      "source": "MovieRecommendation",
+      "target": "GetTopRatedMovie"
+    },
+    {
+      "source": "MovieRecommendation",
+      "target": "GetMovieDetail"
+    },
+    {
+      "source": "MovieRecommendation",
+      "target": "GetSimilarMovie"
+    },
+    {
+      "source": "MovieRecommendation",
+      "target": "SearchMovie"
+    },
+    {
+      "source": "MovieRecommendation",
+      "target": "GetTVRecommendation"
+    },
+    {
+      "source": "GetMovieReview",
+      "target": "DiscoverMovie"
+    },
+    {
+      "source": "GetMovieReview",
+      "target": "GetLatestMovie"
+    },
+    {
+      "source": "GetMovieReview",
+      "target": "GetTVReview"
+    },
+    {
+      "source": "GetSimilarMovie",
+      "target": "GetLatestMovie"
+    },
+    {
+      "source": "GetSimilarMovie",
+      "target": "GetNewPlayingMovie"
+    },
+    {
+      "source": "GetSimilarMovie",
+      "target": "GetPopularMovie"
+    },
+    {
+      "source": "GetSimilarMovie",
+      "target": "GetTopRatedMovie"
+    },
+    {
+      "source": "GetSimilarMovie",
+      "target": "GetMovieDetail"
+    },
+    {
+      "source": "GetSimilarMovie",
+      "target": "MovieRecommendation"
+    },
+    {
+      "source": "GetSimilarMovie",
+      "target": "SearchMovie"
+    },
+    {
+      "source": "GetSimilarMovie",
+      "target": "GetSimilarTVShow"
+    },
+    {
+      "source": "GetNetworkLogo",
+      "target": "GetCompanyLogo"
+    },
+    {
+      "source": "GetNetworkLogo",
+      "target": "GetNetworkDetail"
+    },
+    {
+      "source": "GetNetworkLogo",
+      "target": "GetTVDetail"
+    },
+    {
+      "source": "GetNetworkLogo",
+      "target": "GetTVImage"
+    },
+    {
+      "source": "GetNetworkLogo",
+      "target": "GetTVKeyword"
+    },
+    {
+      "source": "GetNetworkLogo",
+      "target": "GetTVEpisodeImage"
+    },
+    {
+      "source": "GetPopularPerson",
+      "target": "GetPopularMovie"
+    },
+    {
+      "source": "GetPopularPerson",
+      "target": "GetPopularTVShow"
+    },
+    {
+      "source": "GetPersonDetail",
+      "target": "GetMovieCredit"
+    },
+    {
+      "source": "GetPersonDetail",
+      "target": "GetPersonImage"
+    },
+    {
+      "source": "GetPersonMovieCredit",
+      "target": "GetLatestMovie"
+    },
+    {
+      "source": "GetPersonMovieCredit",
+      "target": "GetNewPlayingMovie"
+    },
+    {
+      "source": "GetPersonMovieCredit",
+      "target": "GetPopularMovie"
+    },
+    {
+      "source": "GetPersonMovieCredit",
+      "target": "GetTopRatedMovie"
+    },
+    {
+      "source": "GetPersonMovieCredit",
+      "target": "GetMovieDetail"
+    },
+    {
+      "source": "GetPersonMovieCredit",
+      "target": "GetMovieCredit"
+    },
+    {
+      "source": "GetPersonMovieCredit",
+      "target": "MovieRecommendation"
+    },
+    {
+      "source": "GetPersonMovieCredit",
+      "target": "GetMovieReleaseDate"
+    },
+    {
+      "source": "GetPersonMovieCredit",
+      "target": "GetPersonTVCredit"
+    },
+    {
+      "source": "GetPersonMovieCredit",
+      "target": "SearchMovie"
+    },
+    {
+      "source": "GetPersonMovieCredit",
+      "target": "SearchPeople"
+    },
+    {
+      "source": "GetPersonMovieCredit",
+      "target": "GetTVCredit"
+    },
+    {
+      "source": "GetPersonTVCredit",
+      "target": "GetTVCredit"
+    },
+    {
+      "source": "GetPersonTVCredit",
+      "target": "GetTVSeaonCredit"
+    },
+    {
+      "source": "GetPersonTVCredit",
+      "target": "GetTVEpisodeCredit"
+    },
+    {
+      "source": "SearchMovie",
+      "target": "GetLatestMovie"
+    },
+    {
+      "source": "SearchMovie",
+      "target": "GetMovieDetail"
+    },
+    {
+      "source": "SearchMovie",
+      "target": "MovieRecommendation"
+    },
+    {
+      "source": "SearchMovie",
+      "target": "SearchPeople"
+    },
+    {
+      "source": "SearchTV",
+      "target": "GetOnAirTV"
+    },
+    {
+      "source": "SearchTV",
+      "target": "GetTVDetail"
+    },
+    {
+      "source": "SearchTV",
+      "target": "GetTVEpisodeDetail"
+    },
+    {
+      "source": "SearchTV",
+      "target": "GetTVEpisodeImage"
+    },
+    {
+      "source": "GetOnAirTV",
+      "target": "SearchTV"
+    },
+    {
+      "source": "GetOnAirTV",
+      "target": "GetPopularTVShow"
+    },
+    {
+      "source": "GetOnAirTV",
+      "target": "GetTopRatedTV"
+    },
+    {
+      "source": "GetOnAirTV",
+      "target": "GetTVDetail"
+    },
+    {
+      "source": "GetOnAirTV",
+      "target": "GetTVKeyword"
+    },
+    {
+      "source": "GetOnAirTV",
+      "target": "GetTVRecommendation"
+    },
+    {
+      "source": "GetPopularTVShow",
+      "target": "GetPopularMovie"
+    },
+    {
+      "source": "GetPopularTVShow",
+      "target": "SearchTV"
+    },
+    {
+      "source": "GetPopularTVShow",
+      "target": "GetOnAirTV"
+    },
+    {
+      "source": "GetPopularTVShow",
+      "target": "GetTopRatedTV"
+    },
+    {
+      "source": "GetPopularTVShow",
+      "target": "GetTVDetail"
+    },
+    {
+      "source": "GetPopularTVShow",
+      "target": "GetTVRecommendation"
+    },
+    {
+      "source": "GetPopularTVShow",
+      "target": "GetTVSeasonDetail"
+    },
+    {
+      "source": "GetPopularTVShow",
+      "target": "GetSimilarTVShow"
+    },
+    {
+      "source": "GetTopRatedTV",
+      "target": "GetTopRatedMovie"
+    },
+    {
+      "source": "GetTopRatedTV",
+      "target": "GetOnAirTV"
+    },
+    {
+      "source": "GetTopRatedTV",
+      "target": "GetPopularTVShow"
+    },
+    {
+      "source": "GetTopRatedTV",
+      "target": "GetTVRecommendation"
+    },
+    {
+      "source": "GetTVDetail",
+      "target": "GetNetworkDetail"
+    },
+    {
+      "source": "GetTVDetail",
+      "target": "SearchTV"
+    },
+    {
+      "source": "GetTVDetail",
+      "target": "GetOnAirTV"
+    },
+    {
+      "source": "GetTVDetail",
+      "target": "GetPopularTVShow"
+    },
+    {
+      "source": "GetTVDetail",
+      "target": "GetTVImage"
+    },
+    {
+      "source": "GetTVDetail",
+      "target": "GetTVKeyword"
+    },
+    {
+      "source": "GetTVDetail",
+      "target": "GetTVReview"
+    },
+    {
+      "source": "GetTVDetail",
+      "target": "GetTVSeasonDetail"
+    },
+    {
+      "source": "GetTVDetail",
+      "target": "GetTVEpisodeDetail"
+    },
+    {
+      "source": "GetTVDetail",
+      "target": "GetTVEpisodeImage"
+    },
+    {
+      "source": "GetTVDetail",
+      "target": "GetSimilarTVShow"
+    },
+    {
+      "source": "GetTVCredit",
+      "target": "GetMovieCredit"
+    },
+    {
+      "source": "GetTVCredit",
+      "target": "GetPersonTVCredit"
+    },
+    {
+      "source": "GetTVCredit",
+      "target": "GetTVSeaonCredit"
+    },
+    {
+      "source": "GetTVCredit",
+      "target": "GetTVEpisodeCredit"
+    },
+    {
+      "source": "GetTVImage",
+      "target": "SearchTV"
+    },
+    {
+      "source": "GetTVImage",
+      "target": "GetTVDetail"
+    },
+    {
+      "source": "GetTVImage",
+      "target": "GetTVEpisodeDetail"
+    },
+    {
+      "source": "GetTVImage",
+      "target": "GetTVEpisodeImage"
+    },
+    {
+      "source": "GetTVImage",
+      "target": "GetTVSeaonImage"
+    },
+    {
+      "source": "GetTVKeyword",
+      "target": "GetMovieKeyword"
+    },
+    {
+      "source": "GetTVKeyword",
+      "target": "SearchTV"
+    },
+    {
+      "source": "GetTVKeyword",
+      "target": "GetOnAirTV"
+    },
+    {
+      "source": "GetTVKeyword",
+      "target": "GetTVDetail"
+    },
+    {
+      "source": "GetTVKeyword",
+      "target": "GetTVSeasonDetail"
+    },
+    {
+      "source": "GetTVKeyword",
+      "target": "GetTVEpisodeDetail"
+    },
+    {
+      "source": "GetTVRecommendation",
+      "target": "SearchTV"
+    },
+    {
+      "source": "GetTVRecommendation",
+      "target": "GetOnAirTV"
+    },
+    {
+      "source": "GetTVRecommendation",
+      "target": "GetPopularTVShow"
+    },
+    {
+      "source": "GetTVRecommendation",
+      "target": "GetTopRatedTV"
+    },
+    {
+      "source": "GetTVRecommendation",
+      "target": "GetTVDetail"
+    },
+    {
+      "source": "GetTVRecommendation",
+      "target": "GetTVKeyword"
+    },
+    {
+      "source": "GetTVRecommendation",
+      "target": "GetTVSeasonDetail"
+    },
+    {
+      "source": "GetTVRecommendation",
+      "target": "GetTVEpisodeDetail"
+    },
+    {
+      "source": "GetTVRecommendation",
+      "target": "GetSimilarTVShow"
+    },
+    {
+      "source": "GetTVSeasonDetail",
+      "target": "GetTVDetail"
+    },
+    {
+      "source": "GetTVSeasonDetail",
+      "target": "GetTVEpisodeDetail"
+    },
+    {
+      "source": "GetTVSeaonCredit",
+      "target": "GetPersonTVCredit"
+    },
+    {
+      "source": "GetTVSeaonCredit",
+      "target": "GetTVDetail"
+    },
+    {
+      "source": "GetTVSeaonCredit",
+      "target": "GetTVCredit"
+    },
+    {
+      "source": "GetTVSeaonCredit",
+      "target": "GetTVEpisodeCredit"
+    },
+    {
+      "source": "GetTVEpisodeDetail",
+      "target": "GetTVDetail"
+    },
+    {
+      "source": "GetTVEpisodeDetail",
+      "target": "GetTVSeasonDetail"
+    },
+    {
+      "source": "GetTVEpisodeDetail",
+      "target": "GetTVEpisodeCredit"
+    },
+    {
+      "source": "GetTVEpisodeDetail",
+      "target": "GetTVEpisodeImage"
+    },
+    {
+      "source": "GetTVEpisodeCredit",
+      "target": "GetMovieCredit"
+    },
+    {
+      "source": "GetTVEpisodeCredit",
+      "target": "GetPersonTVCredit"
+    },
+    {
+      "source": "GetTVEpisodeCredit",
+      "target": "GetTVCredit"
+    },
+    {
+      "source": "GetTVEpisodeCredit",
+      "target": "GetTVSeaonCredit"
+    },
+    {
+      "source": "GetTVEpisodeCredit",
+      "target": "GetTVEpisodeDetail"
+    },
+    {
+      "source": "GetTVEpisodeCredit",
+      "target": "GetTVEpisodeImage"
+    },
+    {
+      "source": "GetTVEpisodeImage",
+      "target": "GetTVDetail"
+    },
+    {
+      "source": "GetTVEpisodeImage",
+      "target": "GetTVImage"
+    },
+    {
+      "source": "GetTVEpisodeImage",
+      "target": "GetTVEpisodeDetail"
+    },
+    {
+      "source": "GetTVEpisodeImage",
+      "target": "GetTVEpisodeCredit"
+    },
+    {
+      "source": "GetTVEpisodeImage",
+      "target": "GetTVSeaonImage"
+    },
+    {
+      "source": "GetTVSeaonImage",
+      "target": "SearchTV"
+    },
+    {
+      "source": "GetTVSeaonImage",
+      "target": "GetTVDetail"
+    },
+    {
+      "source": "GetTVSeaonImage",
+      "target": "GetTVImage"
+    },
+    {
+      "source": "GetTVSeaonImage",
+      "target": "GetTVSeasonDetail"
+    },
+    {
+      "source": "GetTVSeaonImage",
+      "target": "GetTVSeaonCredit"
+    },
+    {
+      "source": "GetTVSeaonImage",
+      "target": "GetTVEpisodeDetail"
+    },
+    {
+      "source": "GetTVSeaonImage",
+      "target": "GetTVEpisodeImage"
+    },
+    {
+      "source": "GetSimilarTVShow",
+      "target": "GetSimilarMovie"
+    },
+    {
+      "source": "GetSimilarTVShow",
+      "target": "SearchTV"
+    },
+    {
+      "source": "GetSimilarTVShow",
+      "target": "GetOnAirTV"
+    },
+    {
+      "source": "GetSimilarTVShow",
+      "target": "GetPopularTVShow"
+    },
+    {
+      "source": "GetSimilarTVShow",
+      "target": "GetTopRatedTV"
+    },
+    {
+      "source": "GetSimilarTVShow",
+      "target": "GetTVDetail"
+    },
+    {
+      "source": "GetSimilarTVShow",
+      "target": "GetTVImage"
+    },
+    {
+      "source": "GetSimilarTVShow",
+      "target": "GetTVKeyword"
+    },
+    {
+      "source": "GetSimilarTVShow",
+      "target": "GetTVRecommendation"
+    },
+    {
+      "source": "GetSimilarTVShow",
+      "target": "GetTVEpisodeDetail"
+    }
+  ]
+}

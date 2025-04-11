@@ -1,0 +1,377 @@
+API name: Czech National Bank API
+number of nodes: 4
+best threshold: 0.65
+metrics:
+{
+    "Adjacency Matrix": 0.75,
+    "Degree Distribution": 0.7071067811865475,
+    "Hamming Distance": 0.75,
+    "Jaccard Similarity": 0.25,
+    "Spectral Similarity": 2.4098963560896185,
+    "Graph Edit Distance": 0.25
+}
+----------------------------
+API name: Rick and Morty API
+number of nodes: 8
+best threshold: 0.45
+metrics:
+{
+    "Adjacency Matrix": 0.921875,
+    "Degree Distribution": 0.8660254037844387,
+    "Hamming Distance": 0.921875,
+    "Jaccard Similarity": 0.4,
+    "Spectral Similarity": 1.506793830213215,
+    "Graph Edit Distance": 0.25
+}
+----------------------------
+API name: openFDA
+number of nodes: 6
+best threshold: 0.2
+metrics:
+{
+    "Adjacency Matrix": 0.3888888888888889,
+    "Degree Distribution": 0.8616404368553291,
+    "Hamming Distance": 0.38888888888888884,
+    "Jaccard Similarity": 0.13636363636363635,
+    "Spectral Similarity": 2.382786953480517,
+    "Graph Edit Distance": 0.05
+}
+----------------------------
+API name: Luchtmeetnet
+number of nodes: 5
+best threshold: 0.55
+metrics:
+{
+    "Adjacency Matrix": 0.84,
+    "Degree Distribution": 1.0000000000000002,
+    "Hamming Distance": 0.84,
+    "Jaccard Similarity": 1.0,
+    "Spectral Similarity": 0.9301253472714033,
+    "Graph Edit Distance": 1.0
+}
+----------------------------
+API name: Helipaddy sites
+number of nodes: 5
+best threshold: 0.6000000000000001
+metrics:
+{
+    "Adjacency Matrix": 0.84,
+    "Degree Distribution": 0.8164965809277261,
+    "Hamming Distance": 0.84,
+    "Jaccard Similarity": 0.25,
+    "Spectral Similarity": 1.968229415075679,
+    "Graph Edit Distance": 0.25
+}
+----------------------------
+API name: AZ511
+number of nodes: 7
+best threshold: 0.55
+metrics:
+{
+    "Adjacency Matrix": 0.7959183673469388,
+    "Degree Distribution": 0.827170191868511,
+    "Hamming Distance": 0.7959183673469388,
+    "Jaccard Similarity": 0.4,
+    "Spectral Similarity": 2.887444018523379,
+    "Graph Edit Distance": 0.14285714285714285
+}
+----------------------------
+API name: Catch The Show API
+number of nodes: 5
+best threshold: 0.5
+metrics:
+{
+    "Adjacency Matrix": 0.72,
+    "Degree Distribution": 0.8164965809277259,
+    "Hamming Distance": 0.72,
+    "Jaccard Similarity": 0.42857142857142855,
+    "Spectral Similarity": 2.403559446018028,
+    "Graph Edit Distance": 0.2
+}
+----------------------------
+API name: Tenders in Hungary
+number of nodes: 5
+best threshold: 0.5
+metrics:
+{
+    "Adjacency Matrix": 0.88,
+    "Degree Distribution": 0.8164965809277259,
+    "Hamming Distance": 0.88,
+    "Jaccard Similarity": 0.6666666666666666,
+    "Spectral Similarity": 1.1785808946155663,
+    "Graph Edit Distance": 0.5
+}
+----------------------------
+API name: Rappi API
+number of nodes: 6
+best threshold: 0.45
+metrics:
+{
+    "Adjacency Matrix": 0.7777777777777778,
+    "Degree Distribution": 0.9354143466934852,
+    "Hamming Distance": 0.7777777777777778,
+    "Jaccard Similarity": 0.375,
+    "Spectral Similarity": 1.7067624150377267,
+    "Graph Edit Distance": 0.25
+}
+----------------------------
+API name: AI Mastering
+number of nodes: 7
+best threshold: 0.75
+metrics:
+{
+    "Adjacency Matrix": 0.8775510204081632,
+    "Degree Distribution": 0.8660254037844387,
+    "Hamming Distance": 0.8775510204081632,
+    "Jaccard Similarity": 0.6666666666666666,
+    "Spectral Similarity": 2.1876886166075638,
+    "Graph Edit Distance": 0.3333333333333333
+}
+----------------------------
+API name: Domainsdb.info
+number of nodes: 5
+best threshold: 0.6000000000000001
+metrics:
+{
+    "Adjacency Matrix": 0.8,
+    "Degree Distribution": 0.9999999999999998,
+    "Hamming Distance": 0.8,
+    "Jaccard Similarity": 0.2,
+    "Spectral Similarity": 2.140695518434253,
+    "Graph Edit Distance": 0.2
+}
+----------------------------
+API name: Postmon API
+number of nodes: 5
+best threshold: 0.05
+metrics:
+{
+    "Adjacency Matrix": 0.36,
+    "Degree Distribution": 0.9486832980505138,
+    "Hamming Distance": 0.36,
+    "Jaccard Similarity": 0.375,
+    "Spectral Similarity": 2.9129315102738373,
+    "Graph Edit Distance": 0.09090909090909091
+}
+----------------------------
+API name: Mono API
+number of nodes: 6
+best threshold: 0.1
+metrics:
+{
+    "Adjacency Matrix": 0.8055555555555556,
+    "Degree Distribution": 1.0,
+    "Hamming Distance": 0.8055555555555556,
+    "Jaccard Similarity": 0.0,
+    "Spectral Similarity": 1.487575113773346,
+    "Graph Edit Distance": 0.25
+}
+----------------------------
+API name: EPO
+number of nodes: 5
+best threshold: 0.35000000000000003
+metrics:
+{
+    "Adjacency Matrix": 0.36,
+    "Degree Distribution": 1.0,
+    "Hamming Distance": 0.36,
+    "Jaccard Similarity": 0.25,
+    "Spectral Similarity": 2.748524121467961,
+    "Graph Edit Distance": 0.07692307692307693
+}
+----------------------------
+API name: Jservice
+number of nodes: 5
+best threshold: 0.55
+metrics:
+{
+    "Adjacency Matrix": 0.68,
+    "Degree Distribution": 0.6666666666666666,
+    "Hamming Distance": 0.6799999999999999,
+    "Jaccard Similarity": 0.0,
+    "Spectral Similarity": 2.2552356076785687,
+    "Graph Edit Distance": 0.2
+}
+----------------------------
+API name: Merriam-Webster
+number of nodes: 4
+best threshold: 0.45
+metrics:
+{
+    "Adjacency Matrix": 0.625,
+    "Degree Distribution": 0.5773502691896258,
+    "Hamming Distance": 0.625,
+    "Jaccard Similarity": 0.16666666666666666,
+    "Spectral Similarity": 2.599416742453779,
+    "Graph Edit Distance": 0.16666666666666666
+}
+----------------------------
+API name: bng2latlong
+number of nodes: 2
+best threshold: 0.15000000000000002
+metrics:
+{
+    "Adjacency Matrix": 0.5,
+    "Degree Distribution": 0.9999999999999998,
+    "Hamming Distance": 0.5,
+    "Jaccard Similarity": 1.0,
+    "Spectral Similarity": 1.6554830074310303,
+    "Graph Edit Distance": 1.0
+}
+----------------------------
+API name: markerapi
+number of nodes: 7
+best threshold: 0.2
+metrics:
+{
+    "Adjacency Matrix": 0.2653061224489796,
+    "Degree Distribution": 0.4931044209710944,
+    "Hamming Distance": 0.26530612244897955,
+    "Jaccard Similarity": 0.1388888888888889,
+    "Spectral Similarity": 6.364361896061622,
+    "Graph Edit Distance": 0.03333333333333333
+}
+----------------------------
+API name: Nutritionix
+number of nodes: 6
+best threshold: 0.55
+metrics:
+{
+    "Adjacency Matrix": 0.8333333333333334,
+    "Degree Distribution": 0.6666666666666666,
+    "Hamming Distance": 0.8333333333333334,
+    "Jaccard Similarity": 0.0,
+    "Spectral Similarity": 2.638909438497321,
+    "Graph Edit Distance": 0.2
+}
+----------------------------
+API name: GeoNames
+number of nodes: 6
+best threshold: 0.7000000000000001
+metrics:
+{
+    "Adjacency Matrix": 0.75,
+    "Degree Distribution": 0.9128709291752769,
+    "Hamming Distance": 0.75,
+    "Jaccard Similarity": 0.0,
+    "Spectral Similarity": 4.134232288994896,
+    "Graph Edit Distance": 0.125
+}
+----------------------------
+API name: Open Skills
+number of nodes: 5
+best threshold: 0.6000000000000001
+metrics:
+{
+    "Adjacency Matrix": 0.68,
+    "Degree Distribution": 0.8944271909999159,
+    "Hamming Distance": 0.6799999999999999,
+    "Jaccard Similarity": 0.0,
+    "Spectral Similarity": 2.5538533494127895,
+    "Graph Edit Distance": 0.14285714285714285
+}
+----------------------------
+API name: SoundCloud
+number of nodes: 10
+best threshold: 0.55
+metrics:
+{
+    "Adjacency Matrix": 0.91,
+    "Degree Distribution": 0.7071067811865476,
+    "Hamming Distance": 0.91,
+    "Jaccard Similarity": 0.0,
+    "Spectral Similarity": 3.8531172243811245,
+    "Graph Edit Distance": 0.125
+}
+----------------------------
+API name: Metabase
+number of nodes: 7
+best threshold: 0.45
+metrics:
+{
+    "Adjacency Matrix": 0.8775510204081632,
+    "Degree Distribution": 0.6324555320336759,
+    "Hamming Distance": 0.8775510204081632,
+    "Jaccard Similarity": 0.16666666666666666,
+    "Spectral Similarity": 3.377011060206815,
+    "Graph Edit Distance": 0.16666666666666666
+}
+----------------------------
+API name: Lexigram
+number of nodes: 6
+best threshold: 0.35000000000000003
+metrics:
+{
+    "Adjacency Matrix": 0.25,
+    "Degree Distribution": 0.9486832980505138,
+    "Hamming Distance": 0.25,
+    "Jaccard Similarity": 0.14814814814814814,
+    "Spectral Similarity": 4.196227780797702,
+    "Graph Edit Distance": 0.05
+}
+----------------------------
+API name: World Bank
+number of nodes: 7
+best threshold: 0.05
+metrics:
+{
+    "Adjacency Matrix": 0.42857142857142855,
+    "Degree Distribution": 0.8825226081218283,
+    "Hamming Distance": 0.4285714285714286,
+    "Jaccard Similarity": 0.21428571428571427,
+    "Spectral Similarity": 4.277367542823517,
+    "Graph Edit Distance": 0.058823529411764705
+}
+----------------------------
+API name: apilayer numverify
+number of nodes: 4
+best threshold: 0.75
+metrics:
+{
+    "Adjacency Matrix": 0.4375,
+    "Degree Distribution": 0.9237604307034011,
+    "Hamming Distance": 0.4375,
+    "Jaccard Similarity": 0.1111111111111111,
+    "Spectral Similarity": 2.7767600437860582,
+    "Graph Edit Distance": 0.2
+}
+----------------------------
+API name: Advice Slip
+number of nodes: 3
+best threshold: 0.55
+metrics:
+{
+    "Adjacency Matrix": 0.5555555555555556,
+    "Degree Distribution": 0.5773502691896258,
+    "Hamming Distance": 0.5555555555555556,
+    "Jaccard Similarity": 0.0,
+    "Spectral Similarity": 1.09117512406357,
+    "Graph Edit Distance": 0.3333333333333333
+}
+----------------------------
+API name: Kraken
+number of nodes: 8
+best threshold: 0.15000000000000002
+metrics:
+{
+    "Adjacency Matrix": 0.6875,
+    "Degree Distribution": 0.8944271909999159,
+    "Hamming Distance": 0.6875,
+    "Jaccard Similarity": 0.0,
+    "Spectral Similarity": 1.7889537206407504,
+    "Graph Edit Distance": 0.07692307692307693
+}
+----------------------------
+API name: HG Weather
+number of nodes: 4
+best threshold: 0.0
+metrics:
+{
+    "Adjacency Matrix": 0.25,
+    "Degree Distribution": 0.753778361444409,
+    "Hamming Distance": 0.25,
+    "Jaccard Similarity": 0.4166666666666667,
+    "Spectral Similarity": 2.9199888153219224,
+    "Graph Edit Distance": 0.125
+}
+----------------------------
