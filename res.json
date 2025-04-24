@@ -1,0 +1,1000 @@
+[
+    {
+        "id": "3186",
+        "user_request": "I need to cancel the single alarm set for 8:00 AM today, and change the daily alarm from 7:00 AM to 6:30 AM every day.\n",
+        "task_steps": [
+            "Step 1 Call clock_alarm_cancel to cancel the alarm set for 8:00 AM today",
+            "Step 2 Call clock_alarm_change to change the daily alarm from 7:00 AM to 6:30 AM every day"
+        ],
+        "task_nodes": [
+            {
+                "task": "clock_alarm_cancel"
+            },
+            {
+                "task": "clock_alarm_change"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "clock_alarm_cancel",
+                "target": "clock_alarm_change"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "['clock_alarm_cancel', 'clock_alarm_change']"
+    },
+    {
+        "id": "1689",
+        "user_request": "I have booked flight CA1234 from Beijing to Shanghai on March 20th, but now something urgent has come up, and I need to change this ticket to another flight on March 25th. Please help me check what flights are available for selection.\n",
+        "task_steps": [
+            "Step 1 Call flight_search to check available flights from Beijing to Shanghai",
+            "Step 2 Call flight_ticket_changing to change the ticket from March 20th to March 25th based on the available options"
+        ],
+        "task_nodes": [
+            {
+                "task": "flight_search"
+            },
+            {
+                "task": "flight_ticket_changing"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "flight_search",
+                "target": "flight_ticket_changing"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "[\"flight_search\", \"check_flight_availability\", \"flight_ticket_booking\", \"flight_ticket_changing\"]"
+    },
+    {
+        "id": "403",
+        "user_request": "Please book a direct flight for me from Beijing to New York on the morning of next Monday (2023-08-14), the passenger's name is Li Lei, and remind me to check in for the boarding pass the day before departure.",
+        "task_steps": [
+            "Step 1 Call flight_search to search for a direct flight from Beijing to New York on the morning of next Monday (2023-08-14)",
+            "Step 2 Call book_flight to book the flight for passenger Li Lei",
+            "Step 3 Call set_reminder to set a reminder to check in for the boarding pass the day before departure"
+        ],
+        "task_nodes": [
+            {
+                "task": "flight_search"
+            },
+            {
+                "task": "book_flight"
+            },
+            {
+                "task": "set_reminder"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "flight_search",
+                "target": "book_flight"
+            },
+            {
+                "source": "book_flight",
+                "target": "set_reminder"
+            }
+        ],
+        "n_tools": 3,
+        "type": "chain",
+        "generated": "[\n    \"flight_search\",\n    \"check_flight_availability\",\n    \"book_flight\",\n    \"create_reminder\",\n    \"send_email\"\n]"
+    },
+    {
+        "id": "3019",
+        "user_request": "Please check the balance of my bank card number 6222000000000000, and based on my preference for time deposits, which is an annual interest rate of at least 3.5% and a minimum deposit amount of more than 10,000 yuan, recommend a suitable deposit product, and then use the same bank card to handle a 15,000 yuan time deposit business.",
+        "task_steps": [
+            "Step 1 Call bank_balance_query to check the balance of bank card number 6222000000000000",
+            "Step 2 Call deposit_product_search to search for a suitable time deposit product based on the preference",
+            "Step 3 Call fixed_deposit_transaction to handle a 15,000 yuan time deposit using the same bank card"
+        ],
+        "task_nodes": [
+            {
+                "task": "bank_balance_query"
+            },
+            {
+                "task": "deposit_product_search"
+            },
+            {
+                "task": "fixed_deposit_transaction"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "bank_balance_query",
+                "target": "deposit_product_search"
+            },
+            {
+                "source": "deposit_product_search",
+                "target": "fixed_deposit_transaction"
+            }
+        ],
+        "n_tools": 3,
+        "type": "chain",
+        "generated": "[\"bank_balance_query\", \"deposit_product_search\", \"deposit_product_selection\", \"fixed_deposit_transaction\", \"bank_balance_query\"]"
+    },
+    {
+        "id": "202",
+        "user_request": "Please create a project named 'New Market Research', describe the market research task as 'Investigate potential customers and demands in the target market' and assign it to Zhang Hua, with a deadline set for 2023-05-10, describe the competitive analysis task as 'Analyze the products and strategies of major competitors' and assign it to Li Lei, with a deadline set for 2023-05-15, and describe the report writing task as 'Integrate research and analysis information, write the market research report' and assign it to Han Meimei, with a deadline set for 2023-05-20, and plan a self-driving route from Beijing to Shanghai at 10:00 AM on May 1st, avoiding toll roads.",
+        "task_steps": [
+            "Step 1 Call team_collaboration_tool to create a project named 'New Market Research', describe the market research task as 'Investigate potential customers and demands in the target market' and assign it to Zhang Hua, with a deadline set for 2023-05-10",
+            "Step 2 Call team_collaboration_tool to describe the competitive analysis task as 'Analyze the products and strategies of major competitors' and assign it to Li Lei, with a deadline set for 2023-05-15",
+            "Step 3 Call team_collaboration_tool to describe the report writing task as 'Integrate research and analysis information, write the market research report' and assign it to Han Meimei, with a deadline set for 2023-05-20",
+            "Step 4 Call route_planning to plan a self-driving route from Beijing to Shanghai at 10:00 AM on May 1st, avoiding toll roads"
+        ],
+        "task_nodes": [
+            {
+                "task": "team_collaboration_tool"
+            },
+            {
+                "task": "route_planning"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "team_collaboration_tool",
+                "target": "route_planning"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "['create_agenda', 'edit_agenda', 'manage_schedule', 'schedule_planner']"
+    },
+    {
+        "id": "2624",
+        "user_request": "I want to buy a train ticket for October 10, 2023, departing from Beijing to Shanghai, with a seat preference for a hard seat. My ID number is 130984XXXXXX9102, and my name is Xiao Ming.\n",
+        "task_steps": [
+            "Step 1 Call search_train to find the available trains for the specified date and route",
+            "Step 2 Call train_ticket_booking to book the ticket with the specified seat preference using ID number and name for verification"
+        ],
+        "task_nodes": [
+            {
+                "task": "search_train"
+            },
+            {
+                "task": "train_ticket_booking"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "search_train",
+                "target": "train_ticket_booking"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "[\"train_ticket_query\", \"train_route_planner\", \"train_schedule_checker\", \"fare_comparator\"]"
+    },
+    {
+        "id": "1668",
+        "user_request": "I need to inquire about the flight tickets from Beijing to Shanghai on May 18th at 3:40 PM, and book a suitable ticket for me, the passenger is Wang Xiaoming.\n",
+        "task_steps": [
+            "Step 1 Call flight_search to inquire about the flight tickets from Beijing to Shanghai on May 18th at 3:40 PM",
+            "Step 2 Call book_flight to book a suitable ticket for Wang Xiaoming"
+        ],
+        "task_nodes": [
+            {
+                "task": "flight_search"
+            },
+            {
+                "task": "book_flight"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "flight_search",
+                "target": "book_flight"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "['flight_search', 'check_flight_availability', 'flight_status_check', 'send_email', 'flight_status_tracker', 'flight_ticket_changing', 'create_reminder', 'send_email', 'flight_ticket_cancelling', 'send_email']"
+    },
+    {
+        "id": "1183",
+        "user_request": "Please create a file named \"2023-12-08 Schedule.txt\" in my document directory, to record the important meeting at 9 AM and the schedule for preparing the project report at 2 PM, then add my reflections at the end of the file \"Today's meeting was very productive, we have set the development goals for the next stage\", and after the project report preparation is completed in the afternoon, further append \"The project report preparation is thorough, I hope it will be recognized by the team\".",
+        "task_steps": [
+            "Step 1 Call file_write to create the file '2023-12-08 Schedule.txt' in the document directory and record the important meeting at 9 AM and the schedule for preparing the project report at 2 PM",
+            "Step 2 Call file_modify to append the reflections 'Today's meeting was very productive, we have set the development goals for the next stage' at the end of the file",
+            "Step 3 Call file_modify to further append 'The project report preparation is thorough, I hope it will be recognized by the team' after the project report preparation is completed in the afternoon"
+        ],
+        "task_nodes": [
+            {
+                "task": "file_write"
+            },
+            {
+                "task": "file_modify"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "file_write",
+                "target": "file_modify"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "```python\n['check_file_existence', 'create_document', 'file_write', 'file_modify', 'file_modify']\n```"
+    },
+    {
+        "id": "2058",
+        "user_request": "As Li Hua, I need you to arrange for me to rent a BMW 5 Series car starting at 9 am on February 26th in Beijing for 3 days, and book a hotel near Beijing airport, and also tell me the weather forecast for that day so that I know what clothes to prepare.",
+        "task_steps": [
+            "Step 1 Call car_rental_booking to rent a BMW 5 Series car starting at 9 am on February 26th for 3 days in Beijing",
+            "Step 2 Call search_hotels to find a hotel near Beijing airport",
+            "Step 3 Call hotel_booking to book the hotel near Beijing airport",
+            "Step 4 Call weather_query to query the weather forecast for February 26th in Beijing"
+        ],
+        "task_nodes": [
+            {
+                "task": "car_rental_booking"
+            },
+            {
+                "task": "search_hotels"
+            },
+            {
+                "task": "hotel_booking"
+            },
+            {
+                "task": "weather_query"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "car_rental_booking",
+                "target": "search_hotels"
+            },
+            {
+                "source": "search_hotels",
+                "target": "hotel_booking"
+            },
+            {
+                "source": "hotel_booking",
+                "target": "weather_query"
+            }
+        ],
+        "n_tools": 4,
+        "type": "chain",
+        "generated": "['car_rental', 'property_listing', 'rental_agreement', 'payment_processing']"
+    },
+    {
+        "id": "927",
+        "user_request": "Please help me modify yesterday's transaction record, correct the amount of transaction ID 123456 to 500 yuan, and update the transaction description to 'purchase of one summer short-sleeve shirt', and also submit a complaint for me using my account ID 78910 and merchant ID 24680, stating that the clerk had a bad attitude and the quality of the clothes was poor.",
+        "task_steps": [
+            "Step 1 Call modify_transaction to correct the amount and update transaction description for transaction ID 123456",
+            "Step 2 Call complaint_merchant to submit a complaint using account ID 78910 and merchant ID 24680 for the clerk's attitude and clothes quality"
+        ],
+        "task_nodes": [
+            {
+                "task": "modify_transaction"
+            },
+            {
+                "task": "complaint_merchant"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "modify_transaction",
+                "target": "complaint_merchant"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "['search_transactions', 'account_balance_query', 'transfer_money', 'custom_product_service_messenger']"
+    },
+    {
+        "id": "1939",
+        "user_request": "I need to retrieve my schedule using agenda id A123BC to find all events containing the keyword 'project meeting' from today for the next week, and reserve a meeting room for 20 people and 10 people respectively for the project kickoff meeting starting at 2023-08-14 15:00 lasting 3 hours, and the project progress report meeting starting at 2023-08-16 10:00 lasting 1 hour.",
+        "task_steps": [
+            "Step 1 Call search_agenda to retrieve the schedule using agenda id A123BC and find all events containing the keyword 'project meeting' from today for the next week",
+            "Step 2 Call book_meeting_room to reserve a meeting room for 20 people for the project kickoff meeting starting at 2023-08-14 15:00 lasting 3 hours",
+            "Step 3 Call book_meeting_room to reserve a meeting room for 10 people for the project progress report meeting starting at 2023-08-16 10:00 lasting 1 hour"
+        ],
+        "task_nodes": [
+            {
+                "task": "search_agenda"
+            },
+            {
+                "task": "book_meeting_room"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "search_agenda",
+                "target": "book_meeting_room"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "[\n    'read_agenda', \n    'search_agenda', \n    'manage_schedule', \n    'create_meeting', \n    'check_meeting_room_availability', \n    'book_meeting_room', \n    'send_meeting_invitations'\n]"
+    },
+    {
+        "id": "2104",
+        "user_request": "Please set a weekday alarm for me, ringing at 7:00 AM from Monday to Friday, but cancel the alarm for tomorrow Sunday, adjust Monday's to 6:45 AM so I have time to run, move Wednesday's forward by ten minutes to 6:35 AM, and set Thursday's for 5:30 AM to catch the early meeting.",
+        "task_steps": [
+            "Step 1 Call clock_alarm_set to set a weekday alarm at 7:00 AM from Monday to Friday",
+            "Step 2 Call clock_alarm_cancel to cancel the alarm for tomorrow Sunday",
+            "Step 3 Call clock_alarm_change to adjust Monday's alarm to 6:45 AM",
+            "Step 4 Call clock_alarm_change to move Wednesday's alarm forward by ten minutes to 6:35 AM",
+            "Step 5 Call clock_alarm_set to set Thursday's alarm for 5:30 AM to catch the early meeting"
+        ],
+        "task_nodes": [
+            {
+                "task": "clock_alarm_set"
+            },
+            {
+                "task": "clock_alarm_change"
+            },
+            {
+                "task": "clock_alarm_cancel"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "clock_alarm_set",
+                "target": "clock_alarm_change"
+            },
+            {
+                "source": "clock_alarm_change",
+                "target": "clock_alarm_cancel"
+            }
+        ],
+        "n_tools": 3,
+        "type": "chain",
+        "generated": "[\"clock_alarm_set\", \"clock_alarm_cancel\", \"clock_alarm_change\"]"
+    },
+    {
+        "id": "877",
+        "user_request": "Find me cruise options departing from the Maldives at 8 AM on May 1, 2023, including at least one 7-day round-the-island trip on the 'Ocean Miracle' and one 5-day luxury cruise on the 'Dream Ocean', and provide their ticket pricing information.",
+        "task_steps": [
+            "Step 1 Call cruise_search to find cruise options departing from the Maldives at 8 AM on May 1, 2023",
+            "Step 2 Call cruise_ticket_search to obtain ticket pricing information for the 'Ocean Miracle' 7-day round-the-island trip and the 'Dream Ocean' 5-day luxury cruise"
+        ],
+        "task_nodes": [
+            {
+                "task": "cruise_search"
+            },
+            {
+                "task": "cruise_ticket_search"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "cruise_search",
+                "target": "cruise_ticket_search"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "['travel_plan_maker', 'cruise_ticket_search', 'cruise_ship_booking', 'payment_confirmation', 'itinerary_confirmation']"
+    },
+    {
+        "id": "3002",
+        "user_request": "I want to check the login status of my account 12345 with the password Pwd2023, and I want to change the password.\n",
+        "task_steps": [
+            "Step 1 Call account_login to check the login status of account 12345 with the password Pwd2023",
+            "Step 2 Call change_password to change the password"
+        ],
+        "task_nodes": [
+            {
+                "task": "account_login"
+            },
+            {
+                "task": "change_password"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "account_login",
+                "target": "change_password"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "['check_login_status', 'login_gear', 'change_password', 'account_logout']"
+    },
+    {
+        "id": "1546",
+        "user_request": "I need to save a memo file with the content 'Meeting at 3 PM tomorrow', and then change its content to 'Meeting at 10 AM tomorrow'.\n",
+        "task_steps": [
+            "Step 1 Call file_write to save the memo with the content 'Meeting at 3 PM tomorrow'",
+            "Step 2 Call file_modify to change the memo content to 'Meeting at 10 AM tomorrow'"
+        ],
+        "task_nodes": [
+            {
+                "task": "file_write"
+            },
+            {
+                "task": "file_modify"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "file_write",
+                "target": "file_modify"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "```python\n[\n    'create_document', \n    'verify_file_content', \n    'file_write', \n    'verify_file_content', \n    'file_modify', \n    'verify_file_content'\n]\n```"
+    },
+    {
+        "id": "900",
+        "user_request": "Please create a travel diary entry detailing my arrival in Beijing on August 22, 2023, which should include a detailed description of my visits to the Forbidden City and the Summer Palace, my experience tasting local cuisine, and include the three photo links I provided (http://example-photo1.com, http://example-photo2.com, http://example-photo3.com). Finally, save this diary entry to my travel journal.",
+        "task_steps": [
+            "Step 1 Call travel_diary_generator to create a diary entry with details of arrival and visits in Beijing, as well as local cuisine experiences",
+            "Step 2 Call travel_diary_generator to include the three provided photo links in the diary entry",
+            "Step 3 Call travel_journal to save the diary entry to the travel journal"
+        ],
+        "task_nodes": [
+            {
+                "task": "travel_diary_generator"
+            },
+            {
+                "task": "travel_journal"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "travel_diary_generator",
+                "target": "travel_journal"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "[\"travel_diary_generator\", \"travel_assistant\", \"scenic_spot_ticket_search\", \"souvenir_recommender\", \"weather_forecaster\", \"geo_location_finder\", \"notify_user\"]"
+    },
+    {
+        "id": "585",
+        "user_request": "I need to rent a Compact002 model car in Beijing, starting from 10 AM today until 3 PM tomorrow, and then return it in the same city, but due to a schedule conflict, I now need to cancel this reservation.",
+        "task_steps": [
+            "Step 1 Call car_rental_booking to book the Compact002 model car in Beijing from 10 AM today until 3 PM tomorrow",
+            "Step 2 Call car_rental_cancelling to cancel the reservation based on the original booking information"
+        ],
+        "task_nodes": [
+            {
+                "task": "car_rental_booking"
+            },
+            {
+                "task": "car_rental_cancelling"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "car_rental_booking",
+                "target": "car_rental_cancelling"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "[\"contract_review\", \"background_check\", \"property_inspection\", \"lease_agreement\", \"payment_processing\", \"cancel_reservation\"]"
+    },
+    {
+        "id": "42",
+        "user_request": "Please check the status of my office computer equipment, device ID is PC12345, and after confirming that the device is operating normally and the last login time was 2023-09-09 18:30, use my user ID 23456 and username john_doe as well as password password123 to help me log into the system so that I can carry out today's work.",
+        "task_steps": [
+            "Step 1 Call login_equipment_check to check the status of the office computer equipment with device ID PC12345",
+            "Step 2 Call login_system to log into the system using user ID 23456, username john_doe, and password password123"
+        ],
+        "task_nodes": [
+            {
+                "task": "login_equipment_check"
+            },
+            {
+                "task": "login_system"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "login_equipment_check",
+                "target": "login_system"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "[\"contract_review\", \"background_check\", \"property_inspection\", \"lease_agreement\", \"payment_processing\", \"cancel_reservation\"]"
+    },
+    {
+        "id": "974",
+        "user_request": "I would like to order two portions of dish number 5, Yu Xiang Rou Si, to be allocated to table number 2, and pay electronically.",
+        "task_steps": [
+            "Step 1 Call menu_select_api to select dish number 5, Yu Xiang Rou Si",
+            "Step 2 Call place_order to allocate the dishes to table number 2",
+            "Step 3 Call checkout_api to proceed to checkout for electronic payment",
+            "Step 4 Call payment_processing to process the electronic payment"
+        ],
+        "task_nodes": [
+            {
+                "task": "menu_select_api"
+            },
+            {
+                "task": "place_order"
+            },
+            {
+                "task": "checkout_api"
+            },
+            {
+                "task": "payment_processing"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "menu_select_api",
+                "target": "place_order"
+            },
+            {
+                "source": "place_order",
+                "target": "checkout_api"
+            },
+            {
+                "source": "checkout_api",
+                "target": "payment_processing"
+            }
+        ],
+        "n_tools": 4,
+        "type": "chain",
+        "generated": "```python\n[\n    'get_dish_id', \n    'menu_select_api', \n    'place_order', \n    'create_transaction', \n    'checkout_api', \n    'send_confirmation'\n]\n```"
+    },
+    {
+        "id": "1417",
+        "user_request": "I booked the wrong flight and need to change the ticket for flight CA1234 from Beijing to Shanghai from April 5, 2023, to April 6, 2023. My name is Li Hua.\n",
+        "task_steps": [
+            "Step 1 Call flight_search to find the original flight ticket information",
+            "Step 2 Call flight_ticket_changing to change the ticket for flight CA1234 from Beijing to Shanghai from April 5, 2023, to April 6, 2023"
+        ],
+        "task_nodes": [
+            {
+                "task": "flight_search"
+            },
+            {
+                "task": "flight_ticket_changing"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "flight_search",
+                "target": "flight_ticket_changing"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "```python\n[\n    'flight_search', \n    'check_flight_seats_availability', \n    'flight_ticket_changing', \n    'flight_status_check', \n    'send_email', \n    'create_reminder'\n]\n```"
+    },
+    {
+        "id": "327",
+        "user_request": "Please help me cancel the home cleaning reservation at 9 AM on 2023-06-26 at No. 88 Hongxing Road, and change the cleaning reservation at the same address from 2 PM to the same time next Wednesday.",
+        "task_steps": [
+            "Step 1 Call home_cleaning_cancelling to cancel the original cleaning reservation",
+            "Step 2 Call home_cleaning_changing to change the cleaning reservation to the same time next Wednesday at the same address"
+        ],
+        "task_nodes": [
+            {
+                "task": "home_cleaning_cancelling"
+            },
+            {
+                "task": "home_cleaning_changing"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "home_cleaning_cancelling",
+                "target": "home_cleaning_changing"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "['account_login', 'meeting_reservation', 'meeting_reservation', 'geolocation_tracker']"
+    },
+    {
+        "id": "2009",
+        "user_request": "Please check the current status of my Samsung washing machine repair request number 12345, and schedule the new on-site repair time for 10 a.m. this Thursday.",
+        "task_steps": [
+            "Step 1 Call appliance_repair_status_query to check the current status of the repair request with number 12345",
+            "Step 2 Call appliance_repair_rescheduling to schedule the new on-site repair time for 10 a.m. this Thursday"
+        ],
+        "task_nodes": [
+            {
+                "task": "appliance_repair_status_query"
+            },
+            {
+                "task": "appliance_repair_rescheduling"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "appliance_repair_status_query",
+                "target": "appliance_repair_rescheduling"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "```python\n[\n    'appliance_repair_status_query', \n    'appliance_repair_rescheduling', \n    'send_confirmation_message'\n]\n```"
+    },
+    {
+        "id": "3117",
+        "user_request": "I need to change my hotel reservation order, the confirmation number is JF12345, the new check-in date is adjusted to April 10, 2023, and the check-out date is adjusted to April 15, 2023.\n",
+        "task_steps": [
+            "Step 1 Call hotel_booking_query to retrieve the reservation details based on the confirmation number JF12345",
+            "Step 2 Call hotel_booking_modification to modify the check-in and check-out dates of the reservation"
+        ],
+        "task_nodes": [
+            {
+                "task": "hotel_booking_query"
+            },
+            {
+                "task": "hotel_booking_modification"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "hotel_booking_query",
+                "target": "hotel_booking_modification"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "['hotel_booking_query', 'hotel_booking_modification']"
+    },
+    {
+        "id": "1108",
+        "user_request": "Please help me check the home cleaning reservation status for a certain community in Chaoyang District, Beijing, on the morning of October 3rd at 9 AM, and cancel the reservation if there is one confirmed. Then, please rearrange a home cleaning service for me at 14:00 on October 4th.",
+        "task_steps": [
+            "Step 1 Call home_cleaning_query to check the reservation status for a certain community in Chaoyang District, Beijing, on the morning of October 3rd at 9 AM",
+            "Step 2 Call home_cleaning_cancelling to cancel the reservation if there is one confirmed",
+            "Step 3 Call home_cleaning_booking to rearrange a home cleaning service for me at 14:00 on October 4th"
+        ],
+        "task_nodes": [
+            {
+                "task": "home_cleaning_query"
+            },
+            {
+                "task": "home_cleaning_cancelling"
+            },
+            {
+                "task": "home_cleaning_booking"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "home_cleaning_query",
+                "target": "home_cleaning_cancelling"
+            },
+            {
+                "source": "home_cleaning_cancelling",
+                "target": "home_cleaning_booking"
+            }
+        ],
+        "n_tools": 3,
+        "type": "chain",
+        "generated": "['account_login', 'event_planning_tool', 'meeting_reservation']"
+    },
+    {
+        "id": "2103",
+        "user_request": "I need to find and compare all flight options from Shanghai to Beijing on the morning of September 15, 2023, including flight numbers and fares from different airlines, and then choose the cheapest flight MU9876 to book.",
+        "task_steps": [
+            "Step 1 Call flight_search to find and compare all flight options from Shanghai to Beijing on the morning of September 15, 2023, including flight numbers and fares",
+            "Step 2 Call book_flight to book the cheapest flight MU9876"
+        ],
+        "task_nodes": [
+            {
+                "task": "flight_search"
+            },
+            {
+                "task": "book_flight"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "flight_search",
+                "target": "book_flight"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "[\n    \"flight_search\", \n    \"check_flight_availability\", \n    \"book_flight\", \n    \"flight_status_search\", \n    \"send_email\"\n]"
+    },
+    {
+        "id": "801",
+        "user_request": "Please help me change the alarm originally set for 8 a.m. every day to 7:30 a.m., and adjust the reminder to read books every night at 10 p.m. to 9:30 p.m.",
+        "task_steps": [
+            "Step 1 Call clock_alarm_cancel to cancel the original 8 a.m. alarm",
+            "Step 2 Call clock_alarm_set to set a new alarm for 7:30 a.m.",
+            "Step 3 Call clock_alarm_cancel to cancel the original 10 p.m. reminder",
+            "Step 4 Call clock_alarm_set to set a new reminder for 9:30 p.m."
+        ],
+        "task_nodes": [
+            {
+                "task": "clock_alarm_cancel"
+            },
+            {
+                "task": "clock_alarm_set"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "clock_alarm_cancel",
+                "target": "clock_alarm_set"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "['clock_alarm_cancel', 'clock_alarm_set', 'set_reminder', 'add_reminder']"
+    },
+    {
+        "id": "2741",
+        "user_request": "I want to set an alarm for 7:30 tomorrow morning and cancel the alarm I originally set for 8:00 tomorrow.\n",
+        "task_steps": [
+            "Step 1 Call clock_alarm_set to set an alarm for 7:30 tomorrow morning",
+            "Step 2 Call clock_alarm_cancel to cancel the original alarm set for 8:00 tomorrow"
+        ],
+        "task_nodes": [
+            {
+                "task": "clock_alarm_set"
+            },
+            {
+                "task": "clock_alarm_cancel"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "clock_alarm_set",
+                "target": "clock_alarm_cancel"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "[\n    \"clock_alarm_cancel\", \n    \"clock_alarm_set\", \n    \"clock_alarm_change\"\n]"
+    },
+    {
+        "id": "440",
+        "user_request": "Please create a document named 'Work Plan.txt' on my desktop, first write 'Annual Work Plan for 2023', then append 'The sales target for 2023 is 100 million', and then add the sales targets for each quarter in sequence, which are 20 million for the first quarter, 30 million for the second quarter, 25 million for the third quarter, and 25 million for the fourth quarter. After completion, delete this document.",
+        "task_steps": [
+            "Step 1 Call file_write to create a document named 'Work Plan.txt' on the desktop and write 'Annual Work Plan for 2023'",
+            "Step 2 Call file_modify to append 'The sales target for 2023 is 100 million' to the 'Work Plan.txt'",
+            "Step 3 Call file_modify to add the sales targets for each quarter in sequence: 20 million for the first quarter, 30 million for the second quarter, 25 million for the third quarter, and 25 million for the fourth quarter to 'Work Plan.txt'",
+            "Step 4 Call file_delete to delete the 'Work Plan.txt' document"
+        ],
+        "task_nodes": [
+            {
+                "task": "file_write"
+            },
+            {
+                "task": "file_modify"
+            },
+            {
+                "task": "file_delete"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "file_write",
+                "target": "file_modify"
+            },
+            {
+                "source": "file_modify",
+                "target": "file_delete"
+            }
+        ],
+        "n_tools": 3,
+        "type": "chain",
+        "generated": "```python\n[\n    \"check_file_existence\", \n    \"create_document\", \n    \"file_modify\", \n    \"verify_file_content\", \n    \"file_delete\"\n]\n```"
+    },
+    {
+        "id": "3028",
+        "user_request": "Please help me delete the transaction that was accidentally duplicated yesterday, the transaction ID is 123456789, and create a correct transaction record for me with Merchant A at 3 PM yesterday, the amount is 300 yuan, using my user account ID 987654321.",
+        "task_steps": [
+            "Step 1 Call del_transaction to delete the duplicated transaction with ID 123456789",
+            "Step 2 Call create_transaction to create a new transaction record with Merchant A at 3 PM yesterday, the amount is 300 yuan, using user account ID 987654321"
+        ],
+        "task_nodes": [
+            {
+                "task": "del_transaction"
+            },
+            {
+                "task": "create_transaction"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "del_transaction",
+                "target": "create_transaction"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "['search_transactions', 'detailed_inquiry', 'transfer_money']"
+    },
+    {
+        "id": "603",
+        "user_request": "Please create a project named 'Annual Market Analysis' for me, assign two tasks, the first one is 'Market Trend Analysis', which is in charge of Li Hua, with the deadline of December 10th, the second one is 'Competitor Research', which is in charge of Zhao Lei, with the deadline of December 15th, and plan a route from our office (coordinates 34.0522,-118.2437) to the client's company (coordinates 37.7749,-122.4194) so that Li Hua can set off to the client's company at 9 am next Monday.",
+        "task_steps": [
+            "Step 1 Call team_collaboration_tool to create a project named 'Annual Market Analysis' and assign tasks 'Market Trend Analysis' and 'Competitor Research' with corresponding details",
+            "Step 2 Call route_planning to plan a route from our office to the client's company for Li Hua to set off at 9 am next Monday"
+        ],
+        "task_nodes": [
+            {
+                "task": "team_collaboration_tool"
+            },
+            {
+                "task": "route_planning"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "team_collaboration_tool",
+                "target": "route_planning"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "['create_agenda', 'create_schedule', 'manage_schedule', 'search_agenda']"
+    },
+    {
+        "id": "2968",
+        "user_request": "I want to create a new document in the Work folder on drive D, named \"Meeting_Summary.txt\", and write the following content: \"Today's meeting discussed the project progress and the plan for the next phase.\" A few minutes later, I would like to update the content of this file to: \"Today's meeting discussed the project progress and the plan for the next phase, and also decided on the time for the next meeting.\"\n",
+        "task_steps": [
+            "Step 1 Call file_write to create a new document named 'Meeting_Summary.txt' in the Work folder on drive D and write the initial content",
+            "Step 2 Call file_modify to update the content of the document to include the additional information"
+        ],
+        "task_nodes": [
+            {
+                "task": "file_write"
+            },
+            {
+                "task": "file_modify"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "file_write",
+                "target": "file_modify"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "['check_file_existence', 'create_document', 'file_write', 'verify_file_content', 'file_modify', 'verify_file_content']"
+    },
+    {
+        "id": "1441",
+        "user_request": "I need to set an alarm for every day at 8:00 AM, and adjust my current alarm from 7:30 AM to 7:45 AM.\n",
+        "task_steps": [
+            "Step 1 Call clock_alarm_set to set the alarm for 8:00 AM",
+            "Step 2 Call clock_alarm_change to adjust the current alarm from 7:30 AM to 7:45 AM"
+        ],
+        "task_nodes": [
+            {
+                "task": "clock_alarm_set"
+            },
+            {
+                "task": "clock_alarm_change"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "clock_alarm_set",
+                "target": "clock_alarm_change"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "['clock_alarm_set', 'clock_alarm_change']"
+    },
+    {
+        "id": "869",
+        "user_request": "Please help me arrange and book the CZ335 flight departing from Beijing to Shanghai, ensuring the departure date is next Tuesday at 1 PM, and register the flight booking information under the passenger named Zhang San, while also canceling my previous booking of the MU5002 flight on the same day at 9:30 AM.",
+        "task_steps": [
+            "Step 1 Call check_flight_availability to verify the availability of CZ335 flight from Beijing to Shanghai next Tuesday at 1 PM",
+            "Step 2 Call book_flight to arrange and book the flight for Zhang San",
+            "Step 3 Call flight_ticket_cancelling to cancel the previous booking of the MU5002 flight on the same day at 9:30 AM"
+        ],
+        "task_nodes": [
+            {
+                "task": "check_flight_availability"
+            },
+            {
+                "task": "book_flight"
+            },
+            {
+                "task": "flight_ticket_cancelling"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "check_flight_availability",
+                "target": "book_flight"
+            },
+            {
+                "source": "book_flight",
+                "target": "flight_ticket_cancelling"
+            }
+        ],
+        "n_tools": 3,
+        "type": "chain",
+        "generated": "['flight_search', 'check_flight_seats_availability', 'flight_status_check', 'send_email', 'create_reminder', 'flight_ticket_cancelling']"
+    },
+    {
+        "id": "1639",
+        "user_request": "I would like to change the flight ticket of flight CA123 on April 10th to flight CA456 on April 17th, passenger name Wang Xiaoming.\n",
+        "task_steps": [
+            "Step 1 Call flight_search to find the original flight ticket information for flight CA123 on April 10th",
+            "Step 2 Call flight_ticket_changing to change the flight ticket to flight CA456 on April 17th for passenger Wang Xiaoming"
+        ],
+        "task_nodes": [
+            {
+                "task": "flight_search"
+            },
+            {
+                "task": "flight_ticket_changing"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "flight_search",
+                "target": "flight_ticket_changing"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "```python\n[\n    'flight_search', \n    'check_flight_seats_availability', \n    'flight_ticket_changing', \n    'flight_status_check', \n    'send_email'\n]\n```"
+    },
+    {
+        "id": "97",
+        "user_request": "Please find me a fixed deposit product with an interest rate of at least 3.5%, a minimum deposit amount of 10,000 yuan, and use this card to transfer 10,000 yuan to handle the deposit business after confirming that the account balance of my bank card number 62220202020 is sufficient.",
+        "task_steps": [
+            "Step 1 Call deposit_product_search to find a fixed deposit product meeting the requirements",
+            "Step 2 Call bank_balance_query to check the account balance of bank card number 62220202020",
+            "Step 3 Call fixed_deposit_transaction to transfer 10,000 yuan for the deposit business"
+        ],
+        "task_nodes": [
+            {
+                "task": "deposit_product_search"
+            },
+            {
+                "task": "bank_balance_query"
+            },
+            {
+                "task": "fixed_deposit_transaction"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "deposit_product_search",
+                "target": "bank_balance_query"
+            },
+            {
+                "source": "bank_balance_query",
+                "target": "fixed_deposit_transaction"
+            }
+        ],
+        "n_tools": 3,
+        "type": "chain",
+        "generated": "[\"check_balance\", \"deposit_product_search\", \"transfer_money\", \"fixed_deposit_transaction\"]"
+    },
+    {
+        "id": "3198",
+        "user_request": "I want to cancel my single alarm at 7:30 in the morning, and change my daily alarm at 9:00 in the evening to Monday through Friday, can you help me with that?\n",
+        "task_steps": [
+            "Step 1 Call clock_alarm_cancel to cancel the single alarm at 7:30 in the morning",
+            "Step 2 Call clock_alarm_change to change the daily alarm at 9:00 in the evening to Monday through Friday"
+        ],
+        "task_nodes": [
+            {
+                "task": "clock_alarm_cancel"
+            },
+            {
+                "task": "clock_alarm_change"
+            }
+        ],
+        "task_links": [
+            {
+                "source": "clock_alarm_cancel",
+                "target": "clock_alarm_change"
+            }
+        ],
+        "n_tools": 2,
+        "type": "chain",
+        "generated": "[\"clock_alarm_cancel\", \"clock_alarm_change\", \"clock_alarm_set\"]"
+    }
+]
