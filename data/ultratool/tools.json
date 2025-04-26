@@ -6362,6 +6362,7 @@
             "type": "object",
             "properties": {
                 "trend": {
+                    "type": "string",
                     "description": "Stock Market Trend",
                     "enum": [
                         "Rising",
