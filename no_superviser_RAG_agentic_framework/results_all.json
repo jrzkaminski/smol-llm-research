@@ -1,0 +1,24 @@
+[
+  {
+    "id": "benchmark_1",
+    "question": "I need you to help me create a file called 'Work_Tasks.txt' on the desktop, and then write 'Preparation for Tomorrow's Meeting' into it.\n",
+    "generated_calls": [
+      {
+        "tool": "create_data_file",
+        "param": {}
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Desktop/Work_Tasks.txt",
+          "content": "Preparation for Tomorrow's Meeting"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 763,
+    "completion_tokens": 161
+  }
+]
