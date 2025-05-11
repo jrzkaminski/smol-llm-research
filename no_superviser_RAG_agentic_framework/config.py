@@ -24,13 +24,16 @@ If the request seems to require tools from multiple categories, decide the prima
 Output only the final list of tool calls in the specified format.
 """
 
-AGENT_SYSTEM_PROMPT = """You are a specialist agent responsible for tools.
+AGENT_SYSTEM_PROMPT = """You are a specialized agent for performing user tasks. You have a set of tools for that.
 You have access to the following tools:
 {tool_descriptions}
 
 Your task is to process the user request: "{user_request}"
 You must select the appropriate tool(s) from *your* available list and determine the correct arguments to fulfill the request.
 You need to output a list of proposed tool calls. Each tool call should be a dictionary with 'tool' (the tool name) and 'param' (a dictionary of arguments).
+If you CANNOT complete the entire task, IN ANY CASE, WRITE DOWN THE FUNCTIONS that, in your opinion, CAN BRING you CLOSER to solving the problem in JSON format.
+If the function is not available to you, DO NOT WRITE it in JSON.
+Make sure that your response in JSON format is correct!!
 
 Example Output Format:
 [

@@ -1,17 +1,17 @@
 {
   "source_results_file": "results_all.json",
-  "total_benchmarks_processed": 10,
+  "total_benchmarks_processed": 100,
   "aggregated_metrics": {
-    "Avg_InstAcc": 0.9,
-    "Avg_ToolAcc": 0.8,
+    "Avg_InstAcc": 0.27,
+    "Avg_ToolAcc": 0.11583333333333332,
     "Avg_ArgAcc": 1.0,
-    "Avg_Precision": 0.9,
-    "Avg_Recall": 0.85,
-    "Avg_F1": 0.8666666666666666,
-    "Total_Prompt_Tokens": 2352,
-    "Total_Completion_Tokens": 988,
-    "Avg_Prompt_Tokens_Per_Run": 235.2,
-    "Avg_Completion_Tokens_Per_Run": 98.8
+    "Avg_Precision": 0.17166666666666663,
+    "Avg_Recall": 0.11916666666666666,
+    "Avg_F1": 0.13399999999999998,
+    "Total_Prompt_Tokens": 104692,
+    "Total_Completion_Tokens": 14112,
+    "Avg_Prompt_Tokens_Per_Run": 1046.92,
+    "Avg_Completion_Tokens_Per_Run": 141.12
   },
   "individual_results_metrics": [
     {
@@ -19,89 +19,89 @@
       "question": "I need you to help me create a file called 'Work_Tasks.txt' on the desktop, and then write 'Preparation for Tomorrow's Meeting' into it.\n",
       "metrics": {
         "InstAcc": 1.0,
-        "ToolAcc": 1.0,
+        "ToolAcc": 0.0,
         "ArgAcc": 1.0,
-        "Precision": 1.0,
-        "Recall": 1.0,
-        "F1": 1.0
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
       },
-      "prompt_tokens": 218,
-      "completion_tokens": 80,
+      "prompt_tokens": 838,
+      "completion_tokens": 73,
       "run_error": null
     },
     {
       "id": "benchmark_2",
       "question": "I need to organize a report to give to the client. Please help me write the following content into \"D:/\u5ba2\u6237\u62a5\u544a.txt\": \"The project is progressing smoothly, and all development tasks are expected to be completed by the end of the month.\", and after confirming it is correct, delete the \"Old Data Backup.txt\" file in the same directory.\n",
       "metrics": {
-        "InstAcc": 1.0,
-        "ToolAcc": 1.0,
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
         "ArgAcc": 1.0,
-        "Precision": 1.0,
-        "Recall": 1.0,
-        "F1": 1.0
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
       },
-      "prompt_tokens": 256,
-      "completion_tokens": 113,
+      "prompt_tokens": 1308,
+      "completion_tokens": 137,
       "run_error": null
     },
     {
       "id": "benchmark_3",
       "question": "I need to write a paragraph of text into the test.txt file on the D drive, the content is Hello, AI. Then, I want to change the content to Hello, World. Finally, I want to delete this file.\n",
       "metrics": {
-        "InstAcc": 1.0,
-        "ToolAcc": 1.0,
+        "InstAcc": 0.0,
+        "ToolAcc": 0.3333333333333333,
         "ArgAcc": 1.0,
         "Precision": 1.0,
-        "Recall": 1.0,
-        "F1": 1.0
+        "Recall": 0.3333333333333333,
+        "F1": 0.5
       },
-      "prompt_tokens": 232,
-      "completion_tokens": 112,
+      "prompt_tokens": 1089,
+      "completion_tokens": 232,
       "run_error": null
     },
     {
       "id": "benchmark_4",
       "question": "I need to create a file named 'Important Meeting Notes.txt' on my computer desktop, and write the content 'The company will hold the annual strategy meeting on April 1, 2023.' Then, I hope to append a line 'Please have the relevant department personnel prepare the report materials in advance.'.\n",
       "metrics": {
-        "InstAcc": 1.0,
-        "ToolAcc": 1.0,
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
         "ArgAcc": 1.0,
-        "Precision": 1.0,
-        "Recall": 1.0,
-        "F1": 1.0
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
       },
-      "prompt_tokens": 248,
-      "completion_tokens": 118,
+      "prompt_tokens": 1185,
+      "completion_tokens": 150,
       "run_error": null
     },
     {
       "id": "benchmark_5",
       "question": "I need you to help me create a file named \"meeting_summary.txt\" in the system and write the meeting summary content: \"The 2023 Strategic Meeting was successfully held.\" Afterwards, I need you to modify the content of the file to: \"The 2023 Strategic Meeting was successfully held, and the implementation plan has been determined.\"\n",
       "metrics": {
-        "InstAcc": 1.0,
-        "ToolAcc": 1.0,
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
         "ArgAcc": 1.0,
-        "Precision": 1.0,
-        "Recall": 1.0,
-        "F1": 1.0
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
       },
-      "prompt_tokens": 254,
-      "completion_tokens": 105,
+      "prompt_tokens": 1070,
+      "completion_tokens": 147,
       "run_error": null
     },
     {
       "id": "benchmark_6",
       "question": "I need to create a new file named meeting_notes.txt with the content \"Meeting notes of March 15, 2023\". And after the file is created, I also need to update the content to \"Department meeting notes of March 15, 2023\".\n",
       "metrics": {
-        "InstAcc": 1.0,
-        "ToolAcc": 1.0,
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
         "ArgAcc": 1.0,
-        "Precision": 1.0,
-        "Recall": 1.0,
-        "F1": 1.0
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
       },
-      "prompt_tokens": 239,
-      "completion_tokens": 88,
+      "prompt_tokens": 1133,
+      "completion_tokens": 119,
       "run_error": null
     },
     {
@@ -109,14 +109,14 @@
       "question": "I need to first update my project memo, changing the content of the file path '/documents/project_notes.txt' to 'Project Phase Update: Preliminary development completed, ongoing testing.' After the modification, I no longer need this file, please help me delete it.\n",
       "metrics": {
         "InstAcc": 1.0,
-        "ToolAcc": 1.0,
+        "ToolAcc": 0.5,
         "ArgAcc": 1.0,
-        "Precision": 1.0,
-        "Recall": 1.0,
-        "F1": 1.0
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5
       },
-      "prompt_tokens": 237,
-      "completion_tokens": 83,
+      "prompt_tokens": 1182,
+      "completion_tokens": 239,
       "run_error": null
     },
     {
@@ -126,27 +126,27 @@
         "InstAcc": 0.0,
         "ToolAcc": 0.0,
         "ArgAcc": 1.0,
-        "Precision": 1.0,
-        "Recall": 0.5,
-        "F1": 0.6666666666666666
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
       },
-      "prompt_tokens": 238,
-      "completion_tokens": 124,
+      "prompt_tokens": 997,
+      "completion_tokens": 235,
       "run_error": null
     },
     {
       "id": "benchmark_9",
       "question": "I want to create a document called \"Work Summary.txt\" on my desktop, and write \"The work this week has been completed very well!\".\n",
       "metrics": {
-        "InstAcc": 1.0,
-        "ToolAcc": 1.0,
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
         "ArgAcc": 1.0,
-        "Precision": 1.0,
-        "Recall": 1.0,
-        "F1": 1.0
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
       },
-      "prompt_tokens": 215,
-      "completion_tokens": 82,
+      "prompt_tokens": 1006,
+      "completion_tokens": 54,
       "run_error": null
     },
     {
@@ -160,8 +160,1358 @@
         "Recall": 0.0,
         "F1": 0.0
       },
-      "prompt_tokens": 215,
+      "prompt_tokens": 788,
+      "completion_tokens": 101,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_11",
+      "question": "I need you to help me write a letter, the content is \"Dear Tom, I plan to go to London on a business trip on April 1, 2023, and will return on April 3. Looking forward to your reply. Best wishes, Jack.\" Please save this letter to the path \"/documents/letters/tom_letter.txt\".\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1006,
+      "completion_tokens": 161,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_12",
+      "question": "I need to write a section into my work report, and then I want to delete a sentence that I previously wrote which is irrelevant. My file path is /home/user/work_report.txt. The content I need to add is \"The completion degree of this week's market analysis has reached 95%.\" The content to be deleted is \"Preliminary market research has been initiated.\"\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0
+      },
+      "prompt_tokens": 977,
+      "completion_tokens": 136,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_13",
+      "question": "Please help me create a file named 'meeting_notes.txt' in the path '/documents/work/', write the content 'April 13th, Project Progress Meeting', and then help me delete the file at the path '/documents/work/unused.txt'.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 964,
+      "completion_tokens": 166,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_14",
+      "question": "I need to write today's meeting minutes into D:\\Documents\\Meeting Minutes.txt, which should focus on 'Today's meeting focused on market trend analysis'. Then, please rename the file to '2023-03-15 Meeting Minutes.txt'.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1153,
+      "completion_tokens": 113,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_15",
+      "question": "I need to create a document to record the minutes of our meeting, and first of all, indicate in the document that the meeting location is Shanghai.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1146,
+      "completion_tokens": 236,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_16",
+      "question": "Please help me create a document named \"Annual Summary\" under the announcement directory, and enter the content: \"The company has achieved remarkable results in 2023, thank you all for your hard work.\" Then modify the document, adding \"Please continue to work hard and contribute to the development of the company.\" after the content.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1016,
+      "completion_tokens": 133,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_17",
+      "question": "I want to first create a document to record today's work summary, then modify the document content to retain the important parts.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 889,
+      "completion_tokens": 171,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_18",
+      "question": "I need to update the last part of the project report document and delete the old backup files that are no longer needed.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1049,
+      "completion_tokens": 110,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_19",
+      "question": "I need to first create a new project log file on the system, the file name is \"ProjectABC_Log_20230315.txt\", with the content \"Project log recording starts:\". Then, I also need to append a record to the file, which is \"Project ABC has been initiated.\".\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1124,
+      "completion_tokens": 144,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_20",
+      "question": "I need a new daily report file, and add today's to-do items in it: 'Department meeting at 10 am, discuss new project progress with client Zhang San at 3 pm.'\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1042,
+      "completion_tokens": 171,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_21",
+      "question": "I need to create a work report document with the filename \"Work_Report_20231011.txt\", and the content should be \"Work Report for October 11, 2023\".\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 978,
+      "completion_tokens": 65,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_22",
+      "question": "I need to save some of my notes, the file path is D:/Notes/mynotes.txt, the content is \"Today I learned that file operations are very useful.\" After that, I want to append a sentence \"Need to review frequently.\".\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666
+      },
+      "prompt_tokens": 1224,
+      "completion_tokens": 170,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_23",
+      "question": "I need to update the content of a document about work arrangements and ensure that the previous version is backed up. The file path is \"/documents/work_plan.txt\", and the new content is \"The main focus of this week's work is to complete the preliminary design of Project A, ensuring that the timeline is in accordance with the plan.\"\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5
+      },
+      "prompt_tokens": 1006,
+      "completion_tokens": 271,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_24",
+      "question": "I need to modify some content in the project report, the file is located at \"D:/Project/2023/Report/project_summary.txt\", I want to change the \"Project Overview\" section to \"Project Execution Summary\", please help me complete this modification, and ensure the modification is successful.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0
+      },
+      "prompt_tokens": 1013,
+      "completion_tokens": 82,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_25",
+      "question": "I need to write today's work summary into the file \u201cE:\\Projects\\Report\\summary.txt\u201d, which is: \u201cCompleted the drafting of the project's phase report and have sent it to all project team members.\u201d. Then delete the file \u201cE:\\Projects\\Report\\temporary_notes.txt\u201d.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 831,
+      "completion_tokens": 150,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_26",
+      "question": "I just wrote a diary entry saved in \"D:/diary/march.txt\", the content needs to be updated, the original text was \"The weather is nice today.\" and I want to change it to \"The weather is gloomy today, but I am in a good mood.\".\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1033,
+      "completion_tokens": 115,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_27",
+      "question": "I need you to help me create a document named meeting_notes.txt and write 'Meeting Notes of April 5, 2023' as the start, then delete an old file named old_notes.txt on the desktop.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1038,
+      "completion_tokens": 84,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_28",
+      "question": "I need you to create a file named \"Work Plan.txt\" with the content \"2023 Annual Work Goals: Improve product quality, expand market share.\" Then change \"product quality\" in the file to \"customer satisfaction\".\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1194,
+      "completion_tokens": 100,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_29",
+      "question": "I need to create a document containing meeting minutes and mark today's date, then delete my old meeting minutes file.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 994,
+      "completion_tokens": 97,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_30",
+      "question": "I need to write content to the file path \"/home/user/project_report.txt\" at the final stage of completing the project report. First, please help me write the content \"Project Summary: This phase of the project was successfully completed.\" Then, immediately update the file content to \"Project Summary: This phase of the project was successfully completed and has been submitted for approval.\"\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0
+      },
+      "prompt_tokens": 1042,
+      "completion_tokens": 153,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_31",
+      "question": "I need to create a log file and record today's work content, then update the log file to add additional work entries.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 940,
+      "completion_tokens": 91,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_32",
+      "question": "I need to modify the /pic/images.jpg file, the content to be modified is: \"Company promotional image\", and delete it immediately after the modification is complete.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1228,
+      "completion_tokens": 305,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_33",
+      "question": "I need to create a text file with the content 'Today's Task List', and then modify the content of this file to 'Tomorrow's Task List'.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5
+      },
+      "prompt_tokens": 964,
+      "completion_tokens": 162,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_34",
+      "question": "I want to modify the test.txt file on my desktop, replacing its content with 'The sky is very clear today, suitable for going out.' After the modification, I feel this file is no longer useful, so I'll delete it.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666
+      },
+      "prompt_tokens": 1217,
+      "completion_tokens": 176,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_35",
+      "question": "I need to create a new configuration file on the server, the file path is /home/user/config.txt, the content is the database connection string \"DB_CONNECTION_STRING: SERVER:localhost;DATABASE:master;UID:admin;PASSWORD:password123.\" Then modify the content of this file, changing the database username to superadmin.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1090,
+      "completion_tokens": 289,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_36",
+      "question": "I want to create a file named \"MyFile.txt\", then write \"Hello world!\" into it, afterwards I need to change its content to \"I love AI\", and after completion, delete it. Could you please help me with the operation?\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.6666666666666666,
+        "ArgAcc": 1.0,
+        "Precision": 0.6666666666666666,
+        "Recall": 0.6666666666666666,
+        "F1": 0.6666666666666666
+      },
+      "prompt_tokens": 878,
+      "completion_tokens": 258,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_37",
+      "question": "I need to create a work report and modify it.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1109,
+      "completion_tokens": 275,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_38",
+      "question": "Please help me first create a document containing today's date and weather information, then add the content of my personal memo: \"Three key points to be mentioned in tomorrow's meeting: 1. Project progress report; 2. Next phase plan; 3. Budget review.\".\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1050,
       "completion_tokens": 83,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_39",
+      "question": "I need to create a new work record file in the system and write the content 'The first draft of the project report has been completed today', and then add a note 'The first draft has been completed, waiting for review' in the old record file 'meeting_notes.txt'.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 883,
+      "completion_tokens": 82,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_40",
+      "question": "I need to create a file named meeting_notes.txt and write \"Meeting discussion on project plan on April 16th\", then immediately update the content to \"Meeting at 10 a.m. on April 16th to discuss project plan\".\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1096,
+      "completion_tokens": 113,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_41",
+      "question": "I need to create a file named \"meeting_notes.txt\" in the \"/home/user/docs/\" directory on the server, and write \"Minutes of the 2023 Annual Sales Meeting...\" as the content.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1071,
+      "completion_tokens": 114,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_42",
+      "question": "I need to create a monthly report document on the desktop, and write 'Monthly Report for March 2023' on the first line.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1009,
+      "completion_tokens": 222,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_43",
+      "question": "Help me create a document on the desktop for work summary and write 'The work for this month has been successfully completed.', then add another sentence 'Plan to finish all projects ahead of schedule next month.'.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1008,
+      "completion_tokens": 152,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_44",
+      "question": "I need to update the data of \"Sales Report for the First Quarter of 2023\" into the company's shared file, the file path is \"/shared/sales/q1_report_2023.txt\", please delete the original data before writing in the new content: \"The sales volume for the first quarter reached 80 million, with a year-on-year increase of 20%.\"\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1190,
+      "completion_tokens": 273,
+      "run_error": "Tool 'file_management_tool' does not exist or is not available."
+    },
+    {
+      "id": "benchmark_45",
+      "question": "I need to create a file named \"Work Plan.txt\" on the desktop, and write the content \"Weekly Task List: 1. Complete the market analysis report; 2. Schedule a client meeting; 3. Update the product FAQ document.\".\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 973,
+      "completion_tokens": 21,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_46",
+      "question": "I need to create a document for work reporting, and write in it \"Weekly Work Summary: Completed the writing of Project X report.\" Afterwards, please update the document to \"Weekly Work Summary: Successfully completed the writing of Project X report and submitted it to the department manager on time.\"\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1025,
+      "completion_tokens": 205,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_47",
+      "question": "Please help me create a file named 'Work Plan.txt' in the D drive and write the content 'Meeting at 9:00 AM on March 16th, location: 3rd floor meeting room.'\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 954,
+      "completion_tokens": 21,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_48",
+      "question": "I have a file that needs to be updated, the file path is \"/home/user/docs/report.txt\", please change the content to \"Project progress update: Requirement analysis phase completed, design phase expected to start at the end of March.\", and then be sure to delete the original file.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666
+      },
+      "prompt_tokens": 1067,
+      "completion_tokens": 145,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_49",
+      "question": "I need you to help me create a new work report file and write the content, 'Summary of Today's Work', and then append the sentence 'Tomorrow's plan is pending.' at the end of the file.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 910,
+      "completion_tokens": 102,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_50",
+      "question": "I need to add my meeting notes from yesterday to the \"MeetingNotes.txt\" file and append today's date as a remark at the end.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 939,
+      "completion_tokens": 170,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_51",
+      "question": "I need to create a log.txt file on the server to record logs, with the content 'Logging starts'. Then add a line at the end of the file 'First log entry'.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.3333333333333333,
+        "F1": 0.5
+      },
+      "prompt_tokens": 764,
+      "completion_tokens": 141,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_52",
+      "question": "I would like to update my personal resume. Please create a file named 'Li Ming Resume 2023.docx' on my desktop, and write in 'Personal Information: Name: Li Ming, Age: 30, Occupation: Software Engineer.'. Then, immediately modify the file content to: 'Updated Personal Information: Name: Li Ming, Age: 31, Latest Position: Senior Software Engineer.'.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1441,
+      "completion_tokens": 156,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_53",
+      "question": "I need to organize my work notes, first create a file named '2023 Work Summary.txt', and write 'Review of My Work in 2023:' in it, then append the content 'The main achievements of this year include:' to this file.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 975,
+      "completion_tokens": 172,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_54",
+      "question": "I need to first write a piece of text into the document temp.txt on the D drive, then change the words '\u4e34\u65f6' to '\u6c38\u4e45' in the file, and finally delete the file after confirming the changes are correct.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.25,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.25,
+        "F1": 0.4
+      },
+      "prompt_tokens": 1089,
+      "completion_tokens": 283,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_55",
+      "question": "I need to create a document file for a work plan and fill in the following plans: \"Complete the market analysis report tomorrow, discuss customer feedback the day after tomorrow\".\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1095,
+      "completion_tokens": 112,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_56",
+      "question": "Please help me create a file named 'Meeting Minutes.txt' on the desktop, write the content 'March 15, 2023, Project Progress Discussion Meeting' into it, and then delete the file.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 898,
+      "completion_tokens": 129,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_57",
+      "question": "I need to create a log file on the server and write the content \"Server startup successful\", please set the file path to \"/var/log/server_startup.log\".\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0
+      },
+      "prompt_tokens": 803,
+      "completion_tokens": 82,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_58",
+      "question": "I need you to create a report file for me at the path \"D:/Documents/Work/Report.txt\" and write the following content: \"Annual Summary Report: The company has performed excellently this year, with a 30% year-on-year increase in performance.\" Then I hope you delete the file \"D:/Documents/Personal/Memo.txt\".\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1031,
+      "completion_tokens": 125,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_59",
+      "question": "I need to create a file named 'meeting_notes.txt' in the system, and write the content 'Meeting Notes of March 18, 2023', then update the content of the file to 'Project Meeting Notes of March 18, 2023'.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1093,
+      "completion_tokens": 113,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_60",
+      "question": "I need to create a sales report file named \"sales_report.txt\" in the server path \"/data/reports/\" with the content \"March 2023 Sales Volume Statistics\", and then immediately modify its content to \"Q1 2023 Sales Volume Statistics\".\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1050,
+      "completion_tokens": 111,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_61",
+      "question": "I need to update the report content and delete the previous backup files. The new content of the report is the financial market analysis of May 2023, and the file is located at D:/Reports/May2023.txt. The original backup file is located at D:/Reports/Backup/May2023_bak.txt, please help to handle it.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1076,
+      "completion_tokens": 74,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_62",
+      "question": "Please help me create a document named 'Meeting Minutes' in the project documentation folder on Drive D, and write the minutes of today's meeting: 'Discussed the market strategy for the next quarter and determined the launch schedule for new products.'\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1141,
+      "completion_tokens": 128,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_63",
+      "question": "I want to create a document in the system for my report, with the content 'Draft of the 2023 Annual Report, please check.', and then add 'The report is not yet complete, please continue to supplement.' at the end of the document. The file path can be set to '/reports/annual_report_2023.txt'.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1003,
+      "completion_tokens": 79,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_64",
+      "question": "I need to modify the personal information section of my resume and delete the old work experience.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1233,
+      "completion_tokens": 134,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_65",
+      "question": "I need you to help me create a file named 'Meeting Minutes' in the system, and write 'Minutes of the Project Progress Meeting on March 16, 2023' as the content.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1118,
+      "completion_tokens": 54,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_66",
+      "question": "I need to modify the content of the file C:/Documents/Report.txt, the new content should be 'The 2023 financial report has been audited.', and after completion, please delete this file.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666
+      },
+      "prompt_tokens": 994,
+      "completion_tokens": 87,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_67",
+      "question": "I need to create a meeting record file named 'meeting_notes.txt' and write the following content: 'Key points of the project kickoff meeting: Ensure that the project team is clear about the goals and the progress schedule.', then modify this file, changing the content to: 'Key points of the project kickoff meeting: Clarify the project goals and progress schedule as well as the team division of labor.'.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1305,
+      "completion_tokens": 122,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_68",
+      "question": "I need to record my work log into the document at D:/Work/log.txt with the content 'Complete the initial draft of the project report', and then change the content to 'Complete the initial draft of the project report and related data analysis'.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1079,
+      "completion_tokens": 130,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_69",
+      "question": "Please update the content of the work report for me, and then delete the previous old version. The file is located at /Users/zhangsan/Documents/report.txt. The new content is: \"Weekly Work Summary: Completed the requirement analysis for Project A; Development progress of Project B reached 50%; Market research for the newly initiated Project C.\"\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1012,
+      "completion_tokens": 58,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_70",
+      "question": "I need to add some content to my project report and then delete the original file, the file path is /home/user/documents/project_report.txt, the new content is \"The project is progressing smoothly, and the key stage is expected to be completed next month.\".\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5
+      },
+      "prompt_tokens": 1002,
+      "completion_tokens": 227,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_71",
+      "question": "I need to modify the D:/Project/Report.txt file, updating the content to \"April Project Progress Report: Completed Task List...\". Then delete this file.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5
+      },
+      "prompt_tokens": 866,
+      "completion_tokens": 150,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_72",
+      "question": "I need a new file to record the minutes of tomorrow's meeting, set the file name to 'Meeting_Minutes_2023-11-14.txt', and write 'November 14, 2023, Project Progress Update Meeting Minutes' at the beginning of the file.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1145,
+      "completion_tokens": 110,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_73",
+      "question": "I need to create a document to record the minutes of today's meeting and add the meeting date at the end of the document.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 933,
+      "completion_tokens": 133,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_74",
+      "question": "I want to create a new file to record today's work log, and I hope to update the content immediately after creation.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 996,
+      "completion_tokens": 84,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_75",
+      "question": "I want to modify the meeting.txt file on the desktop, changing its content to 'Product launch meeting from 9 AM to 3 PM tomorrow.', and also delete the draft.txt file on the desktop that is no longer needed.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1267,
+      "completion_tokens": 48,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_76",
+      "question": "I need to update a price list file in the system, the file path is /home/user/pricelist.txt, the new price list content is \"Product A: 199 yuan; Product B: 299 yuan; Product C: 399 yuan\". After the update, please immediately delete this file, thank you!\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 907,
+      "completion_tokens": 96,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_77",
+      "question": "I need you to help me create a document named 'Work Report' and write 'This is the content of today's work report.' into it. After creation, modify the content to 'This is the modified work report content.'.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 953,
+      "completion_tokens": 111,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_78",
+      "question": "There is a file named 'Important Notes.txt' in the D drive of my laptop, I want to update the file content to 'Work Goals for 2023', and delete the file after the update.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5
+      },
+      "prompt_tokens": 1095,
+      "completion_tokens": 206,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_79",
+      "question": "I need to create a file named 'meeting_notes.txt' and write the content 'Minutes of the project launch meeting on May 15, 2023'. After that, I need to change the file name to 'meeting_notes_updated.txt'.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5
+      },
+      "prompt_tokens": 1086,
+      "completion_tokens": 75,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_80",
+      "question": "Please help me create a file with the path \"/home/user/2023 Plan.txt\", the content should be \"Personal Plan for 2023: \", and then add my first plan to the file: \"1. Persist in exercising for 30 minutes every day.\".\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1031,
+      "completion_tokens": 103,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_81",
+      "question": "I need to update my project report document, the file path is /home/user/project_report.txt, the new content is \"2023 Project Progress Update: All design phase work has been completed.\".\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1071,
+      "completion_tokens": 66,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_82",
+      "question": "Please help me create a new file named 'Meeting Minutes.txt' and write the sentence 'Today's meeting went very smoothly.' into it.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1102,
+      "completion_tokens": 91,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_83",
+      "question": "Please help me create a new work report document and write the following content into it: 'Work Report April 2023. The key work summary for this month is as follows: 1. Completed the requirement analysis for Project A. 2. Successfully passed the design review for Project B. 3. Refactored and optimized the code for Project C.' Then delete the old work report document.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1096,
+      "completion_tokens": 164,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_84",
+      "question": "I hope to create a new file named 'meeting_summary.txt' and write the content 'Meeting Minutes of March 10, 2023: ......', then delete the old file 'old_notes.txt' in the same directory.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 959,
+      "completion_tokens": 97,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_85",
+      "question": "Please help me create a file named \"meeting_notes.txt\" first, and write the content \"Key points of today's discussion: Product design scheme discussion.\", then I need you to change the content of this file to \"Key points of today's discussion: Project progress update and assignment of future tasks.\".\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1138,
+      "completion_tokens": 109,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_86",
+      "question": "I want to create a document named \"Work Plan.txt\" and write the content \"Complete market analysis report by March 16th\". Then, I need to modify the content of the document to \"Submit market analysis report by March 17th\"\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1210,
+      "completion_tokens": 128,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_87",
+      "question": "I need to create a work report document and set its content to \"Today's work included completing the project report writing, updating the meeting PPT, and replying to client emails.\"\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1027,
+      "completion_tokens": 74,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_88",
+      "question": "I have two files that need to be processed. The path of the first file is \"/home/user/documents/report.txt\", and I need to write the content \"Annual Financial Report\" into it. The path of the second file is \"/home/user/documents/notes.txt\", please delete it.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1062,
+      "completion_tokens": 161,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_89",
+      "question": "Please help me create a file named \"meeting_minutes.txt\" in the \"/user/docs\" directory, and write the following content: \"Minutes of the Meeting on August 24, 2023\". After writing, I would like to add a line at the beginning of the file: \"Internal company meeting document, do not distribute.\".\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1104,
+      "completion_tokens": 148,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_90",
+      "question": "I need to create a text file named \"meeting_notes.txt\" on my desktop, with the content \"Key points of today's meeting:\" and then append \"1. Financial report review; 2. Discussion of new project plans.\"\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1114,
+      "completion_tokens": 112,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_91",
+      "question": "I now need to create a file named 'Task Schedule.txt' and write the content 'March 16th, 9 AM, meeting to discuss project proposal.' Then change the content to 'March 16th, 10 AM, meeting to discuss project proposal.'\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1109,
+      "completion_tokens": 126,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_92",
+      "question": "I need to update a configuration file stored on the server, the file path is \"/etc/config/settings.ini\". Change the \"max_connections=100\" in the file to \"max_connections:250\", and then delete the old log file \"old_logs.txt\" in the same directory.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.3333333333333333,
+        "F1": 0.5
+      },
+      "prompt_tokens": 1263,
+      "completion_tokens": 153,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_93",
+      "question": "I need to record the minutes of our meeting today in the file \"C:\\Documents\\Meeting_Notes.txt\" on my computer, which are: \"April 8, 2023, a marketing strategy meeting is scheduled to be held at 3 PM.\" After the meeting ends, please help me update the exact end time of the meeting in that file.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1256,
+      "completion_tokens": 170,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_94",
+      "question": "I need to create a file named 'Work Report.txt' and write 'All set goals for this week have been completed.' into it. Once done, please immediately update the file content to 'All set goals for this week have been exceeded.'.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 914,
+      "completion_tokens": 200,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_95",
+      "question": "I need to create a file named \"sales_20230315.txt\" in the \"/data/reports\" directory, with the content \"Content of March 2023 sales report to be supplemented\", and immediately append \"Sales data analysis completed.\" at the end of the file after creation.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 944,
+      "completion_tokens": 131,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_96",
+      "question": "I need to first save a report on market analysis to the path \u201cD:/Documents/Reports/market_analysis.txt\u201d, with the content \u201c2023 Market Analysis Report: 1. Industry Trends\u2026\u2026\u201d, and then because I found that some content needs to be updated, change the original file content to \u201c2023 Latest Market Analysis Report: 1. Updated Industry Trends\u2026\u2026\u201d.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 983,
+      "completion_tokens": 242,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_97",
+      "question": "I need to update the latest data of the company's marketing report into the document. The file path is \"/data/reports/marketing_report_2023.docx\", please replace the original \"The total sales volume is 200 million yuan\" with \"The total sales volume is 250 million yuan\".\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1106,
+      "completion_tokens": 165,
+      "run_error": "Tool 'edit_document_content' does not exist or is not available."
+    },
+    {
+      "id": "benchmark_98",
+      "question": "I want to create a new document in the Work folder on drive D, named \"Meeting_Summary.txt\", and write the following content: \"Today's meeting discussed the project progress and the plan for the next phase.\" A few minutes later, I would like to update the content of this file to: \"Today's meeting discussed the project progress and the plan for the next phase, and also decided on the time for the next meeting.\"\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 1037,
+      "completion_tokens": 133,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_99",
+      "question": "Please help me create a new file in the cloud and write \"This is my first document\", then I want to change the content to \"This is my modified document\".\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0
+      },
+      "prompt_tokens": 981,
+      "completion_tokens": 271,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_100",
+      "question": "I have a file located at /home/user/Desktop/file.txt, I want to modify its content to \"Hello, World!\" first, then delete this file.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666
+      },
+      "prompt_tokens": 819,
+      "completion_tokens": 164,
       "run_error": null
     }
   ]
