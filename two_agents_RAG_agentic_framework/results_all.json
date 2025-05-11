@@ -1,0 +1,3617 @@
+[
+  {
+    "id": "benchmark_1",
+    "question": "I need you to help me create a file called 'Work_Tasks.txt' on the desktop, and then write 'Preparation for Tomorrow's Meeting' into it.\n",
+    "generated_calls": [
+      {
+        "tool": "create_data_file",
+        "param": {}
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Desktop/Work_Tasks.txt",
+          "content": "Preparation for Tomorrow's Meeting"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 841,
+    "completion_tokens": 86
+  },
+  {
+    "id": "benchmark_2",
+    "question": "I need to organize a report to give to the client. Please help me write the following content into \"D:/\u5ba2\u6237\u62a5\u544a.txt\": \"The project is progressing smoothly, and all development tasks are expected to be completed by the end of the month.\", and after confirming it is correct, delete the \"Old Data Backup.txt\" file in the same directory.\n",
+    "generated_calls": [
+      {
+        "tool": "create_data_file",
+        "param": {}
+      },
+      {
+        "tool": "verify_file_content",
+        "param": {
+          "file_path": "D:/\u5ba2\u6237\u62a5\u544a.txt",
+          "expected_content": "The project is progressing smoothly, and all development tasks are expected to be completed by the end of the month.",
+          "required_contents": [
+            "The project is progressing smoothly, and all development tasks are expected to be completed by the end of the month."
+          ]
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "D:/\u5ba2\u6237\u62a5\u544a.txt",
+          "content": "The project is progressing smoothl"
+        }
+      },
+      {
+        "tool": "check_file_content",
+        "param": {
+          "file_path": "D:/\u5ba2\u6237\u62a5\u544a.txt",
+          "expected_content": "The project is progressing smoothl"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "D:/\u65e7\u6570\u636e\u5907\u4efd.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1258,
+    "completion_tokens": 223
+  },
+  {
+    "id": "benchmark_3",
+    "question": "I need to write a paragraph of text into the test.txt file on the D drive, the content is Hello, AI. Then, I want to change the content to Hello, World. Finally, I want to delete this file.\n",
+    "generated_calls": [
+      {
+        "tool": "create_data_file",
+        "param": {}
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "D:/test.txt",
+          "new_file_path": "D:/test.txt",
+          "content": "Hello, AI",
+          "append_content": "",
+          "original_content": "",
+          "section": "",
+          "new_title": ""
+        }
+      },
+      {
+        "tool": "text_replace",
+        "param": {
+          "file_path": "D:/test.txt",
+          "find": "Hello, AI",
+          "replace": "Hello, World"
+        }
+      },
+      {
+        "tool": "schedule_file_delete",
+        "param": {
+          "file_path": "D:/test.txt",
+          "delete_date": "2023-10-10",
+          "delete_time": "12:00:00",
+          "condition": "manual"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "D drive/test.txt",
+          "content": "Hell"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "D drive/test.txt",
+          "content": "Hell"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "D drive/test.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 925,
+    "completion_tokens": 306
+  },
+  {
+    "id": "benchmark_4",
+    "question": "I need to create a file named 'Important Meeting Notes.txt' on my computer desktop, and write the content 'The company will hold the annual strategy meeting on April 1, 2023.' Then, I hope to append a line 'Please have the relevant department personnel prepare the report materials in advance.'.\n",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Desktop/Important Meeting Notes.txt",
+          "content": "The company will hold the annual strategy meeting on April "
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "Desktop/Important Meeting Notes.txt",
+          "append_content": "Please have the relevant department personnel prepare the report materials in advance."
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 845,
+    "completion_tokens": 155
+  },
+  {
+    "id": "benchmark_5",
+    "question": "I need you to help me create a file named \"meeting_summary.txt\" in the system and write the meeting summary content: \"The 2023 Strategic Meeting was successfully held.\" Afterwards, I need you to modify the content of the file to: \"The 2023 Strategic Meeting was successfully held, and the implementation plan has been determined.\"\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_summary.txt",
+          "content": "The 2023 Strategic Meeting was successfully held."
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_summary.txt",
+          "content": "The 2023 Strategic Meeting was successfully held, and the implementation plan has been determined."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "system path/meeting_summary.txt",
+          "content": "The 2023 Strategic Meeting was successfully held."
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "system path/meeting_summary.txt",
+          "content": "The 2023 Strategic Meeting was successfully hel"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 985,
+    "completion_tokens": 158
+  },
+  {
+    "id": "benchmark_6",
+    "question": "I need to create a new file named meeting_notes.txt with the content \"Meeting notes of March 15, 2023\". And after the file is created, I also need to update the content to \"Department meeting notes of March 15, 2023\".\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_notes.txt",
+          "content": "Meeting notes of March 15, 2023"
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_notes.txt",
+          "content": "Department meeting notes of March 15, 2023"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_notes.txt",
+          "content": "Meeting notes of March 1"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "meeting_notes.txt",
+          "content": "Department meeting notes of March 1"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 942,
+    "completion_tokens": 94
+  },
+  {
+    "id": "benchmark_7",
+    "question": "I need to first update my project memo, changing the content of the file path '/documents/project_notes.txt' to 'Project Phase Update: Preliminary development completed, ongoing testing.' After the modification, I no longer need this file, please help me delete it.\n",
+    "generated_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "/documents/project_notes.txt",
+          "new_file_path": "/documents/project_notes.txt",
+          "content": "Project Phase Update: Preliminary development completed, ongoing testing.",
+          "append_content": "",
+          "original_content": "",
+          "section": "",
+          "new_title": ""
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "/documents/project_notes.txt"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "/documents/project_notes.txt",
+          "content": "Project Phase Update: Preliminary development complete"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "/documents/project_notes.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 971,
+    "completion_tokens": 114
+  },
+  {
+    "id": "benchmark_8",
+    "question": "I need to modify the configuration file config. on the server, changing the database connection string to \"db_connection\": \"Server:localhost;Database:mydb;User:myuser;Password:mypass\". Then delete a backup file named old_config_bak..\n",
+    "generated_calls": [
+      {
+        "tool": "ssh_connect",
+        "param": {
+          "server_address": "server_address_placeholder",
+          "username": "username_placeholder",
+          "password": "password_placeholder",
+          "key": "key_placeholder"
+        }
+      },
+      {
+        "tool": "schedule_file_delete",
+        "param": {
+          "file_path": "path_to_old_config_bak",
+          "delete_date": "date_placeholder",
+          "delete_time": "time_placeholder",
+          "condition": "condition_placeholder"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "ssh_connect",
+        "param": {
+          "server_address": "specific server address"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "specific server address/config.",
+          "content": "{\"db_connection\": \"Server:localhost;Database:mydb;User:myuser;Password:mypass\"}"
+        }
+      },
+      {
+        "tool": "check_file_existence",
+        "param": {
+          "file_path": "specific server address/old_config_bak."
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "specific server address/old_config_bak."
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 821,
+    "completion_tokens": 240
+  },
+  {
+    "id": "benchmark_9",
+    "question": "I want to create a document called \"Work Summary.txt\" on my desktop, and write \"The work this week has been completed very well!\".\n",
+    "generated_calls": [
+      {
+        "tool": "create_document",
+        "param": {
+          "document_name": "Work Summary.txt",
+          "content": "The work this week has been completed very well!",
+          "template": "",
+          "document_type": ""
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Desktop/Work Summary.txt",
+          "content": "The work this week has been completed very well!"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 673,
+    "completion_tokens": 114
+  },
+  {
+    "id": "benchmark_10",
+    "question": "I need to update the content of the 'Project Progress Report' and write it into the file located at '/documents/reports/progress_report.txt'.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/documents/reports/progress_report.txt",
+          "content": "Updated content of the Project Progress Report"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "/documents/reports/progress_report.txt",
+          "content": "the latest content of the Project Progress Report"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 877,
+    "completion_tokens": 134
+  },
+  {
+    "id": "benchmark_11",
+    "question": "I need you to help me write a letter, the content is \"Dear Tom, I plan to go to London on a business trip on April 1, 2023, and will return on April 3. Looking forward to your reply. Best wishes, Jack.\" Please save this letter to the path \"/documents/letters/tom_letter.txt\".\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/documents/letters/tom_letter.txt",
+          "content": "Dear Tom, I plan to go to London on a business trip on April 1, 2023, and will return on April 3. Looking forward to your reply. Best wishes, Jack."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/documents/letters/tom_letter.txt",
+          "content": "Dear To"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 954,
+    "completion_tokens": 82
+  },
+  {
+    "id": "benchmark_12",
+    "question": "I need to write a section into my work report, and then I want to delete a sentence that I previously wrote which is irrelevant. My file path is /home/user/work_report.txt. The content I need to add is \"The completion degree of this week's market analysis has reached 95%.\" The content to be deleted is \"Preliminary market research has been initiated.\"\n",
+    "generated_calls": [
+      {
+        "tool": "delete_report_section",
+        "param": {
+          "file_path": "/home/user/work_report.txt",
+          "section": "Preliminary market research has been initiated."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "/home/user/work_report.txt",
+          "append_content": "The completion degree of this week's market analysis has reached 95%."
+        }
+      },
+      {
+        "tool": "delete_specific_content",
+        "param": {
+          "file_path": "/home/user/work_report.txt",
+          "content_to_delete": "Preliminary market research has been initiated."
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1155,
+    "completion_tokens": 170
+  },
+  {
+    "id": "benchmark_13",
+    "question": "Please help me create a file named 'meeting_notes.txt' in the path '/documents/work/', write the content 'April 13th, Project Progress Meeting', and then help me delete the file at the path '/documents/work/unused.txt'.\n",
+    "generated_calls": [
+      {
+        "tool": "create_data_file",
+        "param": {}
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "/documents/work/unused.txt"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/documents/work/meeting_notes.txt",
+          "content": "April 13t"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "/documents/work/unused.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1054,
+    "completion_tokens": 141
+  },
+  {
+    "id": "benchmark_14",
+    "question": "I need to write today's meeting minutes into D:\\Documents\\Meeting Minutes.txt, which should focus on 'Today's meeting focused on market trend analysis'. Then, please rename the file to '2023-03-15 Meeting Minutes.txt'.\n",
+    "generated_calls": [
+      {
+        "tool": "rename_file",
+        "param": {
+          "original_file_path": "D:\\Documents\\Meeting Minutes.txt",
+          "new_file_name": "2023-03-15 Meeting Minutes.txt",
+          "new_file_path": "D:\\Documents\\2023-03-15 Meeting Minutes.txt"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "D:\\Documents\\Meeting Minutes.txt",
+          "content": "Today's meeting focused on market trend analysis"
+        }
+      },
+      {
+        "tool": "rename_file",
+        "param": {
+          "original_file_path": "D:\\Documents\\Meeting Minutes.txt",
+          "new_file_name": "2023-03-15 Meeting Minutes.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 976,
+    "completion_tokens": 75
+  },
+  {
+    "id": "benchmark_15",
+    "question": "I need to create a document to record the minutes of our meeting, and first of all, indicate in the document that the meeting location is Shanghai.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_minutes.txt",
+          "content": "Meeting Location: Shanghai\n"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "user-specified path/Minutes_Shanghai.docx",
+          "content": "Minutes template"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "user-specified path/Minutes_Shanghai.docx",
+          "append_content": "Meeting location: Shanghai"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 871,
+    "completion_tokens": 75
+  },
+  {
+    "id": "benchmark_16",
+    "question": "Please help me create a document named \"Annual Summary\" under the announcement directory, and enter the content: \"The company has achieved remarkable results in 2023, thank you all for your hard work.\" Then modify the document, adding \"Please continue to work hard and contribute to the development of the company.\" after the content.\n",
+    "generated_calls": [
+      {
+        "tool": "insert_content_to_document",
+        "param": {
+          "document_name": "Annual Summary",
+          "content": "The company has achieved remarkable results in 2023, thank you all for your hard work.",
+          "document": "announcement"
+        }
+      },
+      {
+        "tool": "insert_content_to_document",
+        "param": {
+          "document_name": "Annual Summary",
+          "content": "Please continue to work hard and contribute to the development of the company.",
+          "document": "announcement"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "announcement directory/Annual Summary.txt",
+          "content": "The company has achieved remarkable results in 202"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "announcement directory/Annual Summary.txt",
+          "append_content": "Please continue to work hard and contribute to the development of the company."
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1349,
+    "completion_tokens": 142
+  },
+  {
+    "id": "benchmark_17",
+    "question": "I want to first create a document to record today's work summary, then modify the document content to retain the important parts.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "work_summary.txt",
+          "content": "Today's work summary:\n"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "work summary document path",
+          "content": "work summary content"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "work summary document path",
+          "content": "retained important content"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 857,
+    "completion_tokens": 153
+  },
+  {
+    "id": "benchmark_18",
+    "question": "I need to update the last part of the project report document and delete the old backup files that are no longer needed.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "path_to_project_report_document",
+          "content": "updated_content_for_last_part"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "path_to_old_backup_file_1"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "path_to_old_backup_file_2"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "project report document path",
+          "content": "the last part to be updated"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "old backup file path"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 857,
+    "completion_tokens": 309
+  },
+  {
+    "id": "benchmark_19",
+    "question": "I need to first create a new project log file on the system, the file name is \"ProjectABC_Log_20230315.txt\", with the content \"Project log recording starts:\". Then, I also need to append a record to the file, which is \"Project ABC has been initiated.\".\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "ProjectABC_Log_20230315.txt",
+          "content": "Project log recording starts:"
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "ProjectABC_Log_20230315.txt",
+          "content": "\nProject ABC has been initiated."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "system path/ProjectABC_Log_20230315.txt",
+          "content": "Project log recording starts:"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "system path/ProjectABC_Log_20230315.txt",
+          "append_content": "Project ABC has been initiated."
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 962,
+    "completion_tokens": 146
+  },
+  {
+    "id": "benchmark_20",
+    "question": "I need a new daily report file, and add today's to-do items in it: 'Department meeting at 10 am, discuss new project progress with client Zhang San at 3 pm.'\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "daily_report.txt",
+          "content": "Department meeting at 10 am, discuss new project progress with client Zhang San at 3 pm."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Daily_Report_Today's_Date.txt",
+          "content": ""
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "Daily_Report_Today's_Date.txt",
+          "new_title": "To-Do Items"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "Daily_Report_Today's_Date.txt",
+          "append_content": "Department meeting at 10 am\n"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "Daily_Report_Today's_Date.txt",
+          "append_content": "Discuss new project progress with client Zhang San at 3 pm\n"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 904,
+    "completion_tokens": 92
+  },
+  {
+    "id": "benchmark_21",
+    "question": "I need to create a work report document with the filename \"Work_Report_20231011.txt\", and the content should be \"Work Report for October 11, 2023\".\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Work_Report_20231011.txt",
+          "content": "Work Report for October 11, 2023"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Desktop/Work_Report_20231011.txt",
+          "content": "Work Report for October 1"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 900,
+    "completion_tokens": 88
+  },
+  {
+    "id": "benchmark_22",
+    "question": "I need to save some of my notes, the file path is D:/Notes/mynotes.txt, the content is \"Today I learned that file operations are very useful.\" After that, I want to append a sentence \"Need to review frequently.\".\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "D:/Notes/mynotes.txt",
+          "content": "Today I learned that file operations are very useful."
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "D:/Notes/mynotes.txt",
+          "new_file_path": "D:/Notes/mynotes.txt",
+          "content": "",
+          "append_content": "Need to review frequently.",
+          "original_content": "",
+          "section": "",
+          "new_title": ""
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "D:/Notes/mynotes.txt",
+          "content": "Today I learned that file operations are very useful."
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "D:/Notes/mynotes.txt",
+          "append_content": "Need to review frequently."
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1175,
+    "completion_tokens": 132
+  },
+  {
+    "id": "benchmark_23",
+    "question": "I need to update the content of a document about work arrangements and ensure that the previous version is backed up. The file path is \"/documents/work_plan.txt\", and the new content is \"The main focus of this week's work is to complete the preliminary design of Project A, ensuring that the timeline is in accordance with the plan.\"\n",
+    "generated_calls": [
+      {
+        "tool": "file_copy",
+        "param": {
+          "source_file_path": "/documents/work_plan.txt",
+          "destination_file_path": "/documents/work_plan_backup.txt"
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/documents/work_plan.txt",
+          "content": "The main focus of this week's work is to complete the preliminary design of Project A, ensuring that the timeline is in accordance with the plan."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_backup",
+        "param": {
+          "source_file_path": "/documents/work_plan.txt",
+          "backup_file_path": "/documents/work_plan_backup.txt"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "/documents/work_plan.txt",
+          "content": "The main focus of this week's work is to complete the preliminary design of Project "
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 982,
+    "completion_tokens": 148
+  },
+  {
+    "id": "benchmark_24",
+    "question": "I need to modify some content in the project report, the file is located at \"D:/Project/2023/Report/project_summary.txt\", I want to change the \"Project Overview\" section to \"Project Execution Summary\", please help me complete this modification, and ensure the modification is successful.\n",
+    "generated_calls": [
+      {
+        "tool": "file_contains",
+        "param": {
+          "file_path": "D:/Project/2023/Report/project_summary.txt",
+          "content": "Project Overview"
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "D:/Project/2023/Report/project_summary.txt",
+          "content": "Project Execution Summary"
+        }
+      },
+      {
+        "tool": "file_contains",
+        "param": {
+          "file_path": "D:/Project/2023/Report/project_summary.txt",
+          "content": "Project Execution Summary"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "D:/Project/2023/Report/project_summary.txt",
+          "original_content": "Project Overview",
+          "content": "Project Execution Summary"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 971,
+    "completion_tokens": 239
+  },
+  {
+    "id": "benchmark_25",
+    "question": "I need to write today's work summary into the file \u201cE:\\Projects\\Report\\summary.txt\u201d, which is: \u201cCompleted the drafting of the project's phase report and have sent it to all project team members.\u201d. Then delete the file \u201cE:\\Projects\\Report\\temporary_notes.txt\u201d.\n",
+    "generated_calls": [
+      {
+        "tool": "write_summary",
+        "param": {
+          "key_information": "Completed the drafting of the project's phase report and have sent it to all project team members.",
+          "document": {
+            "file_path": "E:\\Projects\\Report\\summary.txt"
+          },
+          "content": "Completed the drafting of the project's phase report and have sent it to all project team members."
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "E:\\Projects\\Report\\temporary_notes.txt"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "E:\\Projects\\Report\\summary.txt",
+          "content": "Completed the drafting of the project's phase report and have sent it to all project team members."
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "E:\\Projects\\Report\\temporary_notes.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 855,
+    "completion_tokens": 178
+  },
+  {
+    "id": "benchmark_26",
+    "question": "I just wrote a diary entry saved in \"D:/diary/march.txt\", the content needs to be updated, the original text was \"The weather is nice today.\" and I want to change it to \"The weather is gloomy today, but I am in a good mood.\".\n",
+    "generated_calls": [
+      {
+        "tool": "free_reading_tool",
+        "param": {
+          "filePath": "C:/diary/march.txt",
+          "pageSize": 25,
+          "flipMode": "normal",
+          "fontSize": 12,
+          "colorMode": "light"
+        }
+      },
+      {
+        "tool": "verify_and_save_file",
+        "param": {}
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "D:/diary/march.txt",
+          "original_content": "The weather is nice today.",
+          "content": "The weather is gloomy toda"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1273,
+    "completion_tokens": 187
+  },
+  {
+    "id": "benchmark_27",
+    "question": "I need you to help me create a document named meeting_notes.txt and write 'Meeting Notes of April 5, 2023' as the start, then delete an old file named old_notes.txt on the desktop.\n",
+    "generated_calls": [
+      {
+        "tool": "create_document",
+        "param": {
+          "document_name": "meeting_notes.txt",
+          "content": "Meeting Notes of April 5, 2023",
+          "template": "",
+          "document_type": "text"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Desktop/meeting_notes.txt",
+          "content": "Meeting Notes of April "
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "Desktop/old_notes.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1109,
+    "completion_tokens": 61
+  },
+  {
+    "id": "benchmark_28",
+    "question": "I need you to create a file named \"Work Plan.txt\" with the content \"2023 Annual Work Goals: Improve product quality, expand market share.\" Then change \"product quality\" in the file to \"customer satisfaction\".\n",
+    "generated_calls": [
+      {
+        "tool": "create_data_file",
+        "param": {}
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Work Directory/Work Plan.txt",
+          "content": "2023 Annual Work Goals: Improve product qualit"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "Work Directory/Work Plan.txt",
+          "original_content": "product quality",
+          "content": "customer satisfaction"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1266,
+    "completion_tokens": 144
+  },
+  {
+    "id": "benchmark_29",
+    "question": "I need to create a document containing meeting minutes and mark today's date, then delete my old meeting minutes file.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_minutes.txt",
+          "content": "Meeting Minutes\nDate: 2023-10-05\n\n[Add your meeting minutes here]"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "old_meeting_minutes.txt"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "MeetingMinutes.txt",
+          "content": "Meeting minutes content\nToday's date"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "OldMeetingMinutesFilePath"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 855,
+    "completion_tokens": 181
+  },
+  {
+    "id": "benchmark_30",
+    "question": "I need to write content to the file path \"/home/user/project_report.txt\" at the final stage of completing the project report. First, please help me write the content \"Project Summary: This phase of the project was successfully completed.\" Then, immediately update the file content to \"Project Summary: This phase of the project was successfully completed and has been submitted for approval.\"\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/home/user/project_report.txt",
+          "content": "Project Summary: This phase of the project was successfully completed."
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/home/user/project_report.txt",
+          "content": "Project Summary: This phase of the project was successfully completed and has been submitted for approval."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/home/user/project_report.txt",
+          "content": "Project Summary: This phase of the project was successfully completed."
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "/home/user/project_report.txt",
+          "content": "Project Summary: This phase of the project was successfully complete"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 986,
+    "completion_tokens": 105
+  },
+  {
+    "id": "benchmark_31",
+    "question": "I need to create a log file and record today's work content, then update the log file to add additional work entries.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "work_log.txt",
+          "content": "Today's work content: [Your initial work content here]"
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "work_log.txt",
+          "content": "\nAdditional work entries: [Your additional work entries here]"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "User-specified storage path/log_Today's date.txt",
+          "content": ""
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "User-specified storage path/log_Today's date.txt",
+          "append_content": "User-provided work content"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "User-specified storage path/log_Today's date.txt",
+          "append_content": "User-provided additional work content"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 861,
+    "completion_tokens": 181
+  },
+  {
+    "id": "benchmark_32",
+    "question": "I need to modify the /pic/images.jpg file, the content to be modified is: \"Company promotional image\", and delete it immediately after the modification is complete.\n",
+    "generated_calls": [
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "/pic/images.jpg"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "/pic/images.jpg",
+          "content": "Company promotional image"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "/pic/images.jpg"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 882,
+    "completion_tokens": 93
+  },
+  {
+    "id": "benchmark_33",
+    "question": "I need to create a text file with the content 'Today's Task List', and then modify the content of this file to 'Tomorrow's Task List'.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "C:/Tasks.txt",
+          "content": "Today's Task List"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "C:/Tasks.txt",
+          "new_file_path": "C:/Tasks.txt",
+          "content": "Tomorrow's Task List",
+          "append_content": "",
+          "original_content": "Today's Task List",
+          "section": "",
+          "new_title": ""
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "user-specified path",
+          "content": "Today's Task List"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "user-specified path",
+          "content": "Tomorrow's Task List"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1157,
+    "completion_tokens": 168
+  },
+  {
+    "id": "benchmark_34",
+    "question": "I want to modify the test.txt file on my desktop, replacing its content with 'The sky is very clear today, suitable for going out.' After the modification, I feel this file is no longer useful, so I'll delete it.\n",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "Desktop/test.txt",
+          "content": "The sky is very clear toda"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "Desktop/test.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 923,
+    "completion_tokens": 82
+  },
+  {
+    "id": "benchmark_35",
+    "question": "I need to create a new configuration file on the server, the file path is /home/user/config.txt, the content is the database connection string \"DB_CONNECTION_STRING: SERVER:localhost;DATABASE:master;UID:admin;PASSWORD:password123.\" Then modify the content of this file, changing the database username to superadmin.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/home/user/config.txt",
+          "content": "DB_CONNECTION_STRING: SERVER:localhost;DATABASE:master;UID:admin;PASSWORD:password123"
+        }
+      },
+      {
+        "tool": "file_contains",
+        "param": {
+          "file_path": "/home/user/config.txt",
+          "content": "UID:admin"
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/home/user/config.txt",
+          "content": "DB_CONNECTION_STRING: SERVER:localhost;DATABASE:master;UID:superadmin;PASSWORD:password123"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/home/user/config.txt",
+          "content": "DB_CONNECTION_STRING: SERVER:localhost;DATABASE:master;UID:admin;PASSWORD:password123."
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "/home/user/config.txt",
+          "original_content": "UID:admin;",
+          "content": "UID:superadmin;"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 984,
+    "completion_tokens": 155
+  },
+  {
+    "id": "benchmark_36",
+    "question": "I want to create a file named \"MyFile.txt\", then write \"Hello world!\" into it, afterwards I need to change its content to \"I love AI\", and after completion, delete it. Could you please help me with the operation?\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "MyFile.txt",
+          "content": "Hello world!"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "MyFile.txt",
+          "new_file_path": "MyFile.txt",
+          "content": "I love AI",
+          "append_content": "",
+          "original_content": "Hello world!",
+          "section": "",
+          "new_title": ""
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "MyFile.txt"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "MyFile.txt",
+          "content": "Hello world!"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "MyFile.txt",
+          "content": "I love AI"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "MyFile.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1133,
+    "completion_tokens": 144
+  },
+  {
+    "id": "benchmark_37",
+    "question": "I need to create a work report and modify it.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "work_report.txt",
+          "content": "Initial work report content."
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "work_report.txt",
+          "content": "Modified work report content."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "work report path",
+          "content": "work report content"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "work report path",
+          "content": "modified work report content"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 820,
+    "completion_tokens": 147
+  },
+  {
+    "id": "benchmark_38",
+    "question": "Please help me first create a document containing today's date and weather information, then add the content of my personal memo: \"Three key points to be mentioned in tomorrow's meeting: 1. Project progress report; 2. Next phase plan; 3. Budget review.\".\n",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "weather_query",
+        "param": {
+          "location": "User's location",
+          "date": "Today's date"
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "To be obtained",
+          "content": "Today's date and today's weather information"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "To be obtained",
+          "content": "Three key points to be mentioned in tomorrow's meeting: 1. Project progress report; 2. Next phase plan; 3. Budget review."
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1160,
+    "completion_tokens": 280
+  },
+  {
+    "id": "benchmark_39",
+    "question": "I need to create a new work record file in the system and write the content 'The first draft of the project report has been completed today', and then add a note 'The first draft has been completed, waiting for review' in the old record file 'meeting_notes.txt'.\n",
+    "generated_calls": [
+      {
+        "tool": "document_creation",
+        "param": {
+          "file_path": "new_work_record.txt",
+          "content": "The first draft of the project report has been completed today",
+          "title": "Work Record",
+          "header": "",
+          "footer": "",
+          "image_link": "",
+          "video_link": ""
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "work_record_' + obtained date + '.txt",
+          "content": "The first draft of the project report has been completed today"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "meeting_notes.txt",
+          "append_content": "The first draft has been complete"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 933,
+    "completion_tokens": 169
+  },
+  {
+    "id": "benchmark_40",
+    "question": "I need to create a file named meeting_notes.txt and write \"Meeting discussion on project plan on April 16th\", then immediately update the content to \"Meeting at 10 a.m. on April 16th to discuss project plan\".\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_notes.txt",
+          "content": "Meeting discussion on project plan on April 16th"
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_notes.txt",
+          "content": "Meeting at 10 a.m. on April 16th to discuss project plan"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Desktop/meeting_notes.txt",
+          "content": "Meeting discussion on project plan on April 16th"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "Desktop/meeting_notes.txt",
+          "content": "Meeting at 10 a.m. on April 16th to discuss project plan"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 934,
+    "completion_tokens": 99
+  },
+  {
+    "id": "benchmark_41",
+    "question": "I need to create a file named \"meeting_notes.txt\" in the \"/home/user/docs/\" directory on the server, and write \"Minutes of the 2023 Annual Sales Meeting...\" as the content.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/home/user/docs/meeting_notes.txt",
+          "content": "Minutes of the 2023 Annual Sales Meeting..."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/home/user/docs/meeting_notes.txt",
+          "content": "Minutes of the 2023 Annual Sales Meeting..."
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 910,
+    "completion_tokens": 86
+  },
+  {
+    "id": "benchmark_42",
+    "question": "I need to create a monthly report document on the desktop, and write 'Monthly Report for March 2023' on the first line.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Desktop/Monthly_Report_March_2023.txt",
+          "content": "Monthly Report for March 2023"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Desktop/Monthly_Report.docx",
+          "content": "Monthly Report for March 2023"
+        }
+      },
+      {
+        "tool": "check_file_existence",
+        "param": {
+          "file_path": "Desktop/Monthly_Report.docx"
+        }
+      },
+      {
+        "tool": "verify_file_content",
+        "param": {
+          "file_path": "Desktop/Monthly_Report.docx",
+          "expected_content": "Monthly Report for March 2023"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 878,
+    "completion_tokens": 91
+  },
+  {
+    "id": "benchmark_43",
+    "question": "Help me create a document on the desktop for work summary and write 'The work for this month has been successfully completed.', then add another sentence 'Plan to finish all projects ahead of schedule next month.'.\n",
+    "generated_calls": [
+      {
+        "tool": "create_document",
+        "param": {
+          "document_name": "Work Summary",
+          "content": "The work for this month has been successfully completed. Plan to finish all projects ahead of schedule next month.",
+          "template": "Standard",
+          "document_type": "Summary"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Desktop/Work Summary.docx",
+          "content": "The work for this month has been successfully completed."
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "Desktop/Work Summary.docx",
+          "append_content": "Plan to finish all projects ahead of schedule next month."
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1184,
+    "completion_tokens": 114
+  },
+  {
+    "id": "benchmark_44",
+    "question": "I need to update the data of \"Sales Report for the First Quarter of 2023\" into the company's shared file, the file path is \"/shared/sales/q1_report_2023.txt\", please delete the original data before writing in the new content: \"The sales volume for the first quarter reached 80 million, with a year-on-year increase of 20%.\"\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/shared/sales/q1_report_2023.txt",
+          "content": "The sales volume for the first quarter reached 80 million, with a year-on-year increase of 20%."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "\"/shared/sales/q1_report_2023.txt\""
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "\"/shared/sales/q1_report_2023.txt\"",
+          "content": "\"The sales volume for the first quarter reached 80 million"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1000,
+    "completion_tokens": 106
+  },
+  {
+    "id": "benchmark_45",
+    "question": "I need to create a file named \"Work Plan.txt\" on the desktop, and write the content \"Weekly Task List: 1. Complete the market analysis report; 2. Schedule a client meeting; 3. Update the product FAQ document.\".\n",
+    "generated_calls": [
+      {
+        "tool": "desktop_organizer",
+        "param": {
+          "icon_name": "Work Plan.txt",
+          "icon_type": "text",
+          "icon_size": "unknown",
+          "creation_date": "unknown",
+          "sort_by": "name",
+          "order": "ascending"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Desktop/Work Plan.txt",
+          "content": "Weekly Task List: 1. Complete the market analysis report; 2. Schedule a client meeting; 3. Update the product FAQ document."
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 818,
+    "completion_tokens": 153
+  },
+  {
+    "id": "benchmark_46",
+    "question": "I need to create a document for work reporting, and write in it \"Weekly Work Summary: Completed the writing of Project X report.\" Afterwards, please update the document to \"Weekly Work Summary: Successfully completed the writing of Project X report and submitted it to the department manager on time.\"\n",
+    "generated_calls": [
+      {
+        "tool": "create_document",
+        "param": {
+          "document_name": "Work Report",
+          "content": "Weekly Work Summary: Completed the writing of Project X report.",
+          "template": "Standard Report",
+          "document_type": "Work Report"
+        }
+      },
+      {
+        "tool": "update_work_progress",
+        "param": {
+          "progress": "Weekly Work Summary: Successfully completed the writing of Project X report and submitted it to the department manager on time."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Work Directory/Work_Report.docx",
+          "content": "Weekly Work Summary: Completed the writing of Project X report."
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "Work Directory/Work_Report.docx",
+          "content": "Weekly Work Summary: Successfully completed the writing of Project X report and submitted it to the department manager on time."
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 833,
+    "completion_tokens": 158
+  },
+  {
+    "id": "benchmark_47",
+    "question": "Please help me create a file named 'Work Plan.txt' in the D drive and write the content 'Meeting at 9:00 AM on March 16th, location: 3rd floor meeting room.'\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "D:/Work Plan.txt",
+          "content": "Meeting at 9:00 AM on March 16th, location: 3rd floor meeting room."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "D drive/Work Plan.txt",
+          "content": "Meeting at 9:00 AM on March 16t"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 918,
+    "completion_tokens": 96
+  },
+  {
+    "id": "benchmark_48",
+    "question": "I have a file that needs to be updated, the file path is \"/home/user/docs/report.txt\", please change the content to \"Project progress update: Requirement analysis phase completed, design phase expected to start at the end of March.\", and then be sure to delete the original file.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/home/user/docs/report.txt",
+          "content": "Project progress update: Requirement analysis phase completed, design phase expected to start at the end of March."
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "/home/user/docs/report.txt"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "/home/user/docs/report.txt",
+          "content": "Project progress update: Requirement analysis phase complete"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "/home/user/docs/report.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 951,
+    "completion_tokens": 124
+  },
+  {
+    "id": "benchmark_49",
+    "question": "I need you to help me create a new work report file and write the content, 'Summary of Today's Work', and then append the sentence 'Tomorrow's plan is pending.' at the end of the file.\n",
+    "generated_calls": [
+      {
+        "tool": "create_document",
+        "param": {
+          "document_name": "Work Report",
+          "content": "Summary of Today's Work",
+          "template": "Standard",
+          "document_type": "Report"
+        }
+      },
+      {
+        "tool": "file_prepend",
+        "param": {
+          "file_path": "Work Report",
+          "content": "Tomorrow's plan is pending."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "User-specified save location/Current date_Work Report",
+          "content": "Summary of Today's Work\\n"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "User-specified save location/Current date_Work Report",
+          "append_content": "Tomorrow's plan is pending"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 853,
+    "completion_tokens": 96
+  },
+  {
+    "id": "benchmark_50",
+    "question": "I need to add my meeting notes from yesterday to the \"MeetingNotes.txt\" file and append today's date as a remark at the end.\n",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "MeetingNotes.txt",
+          "append_content": "Content of yesterday's meeting notes"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "MeetingNotes.txt",
+          "append_content": "System's current date"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 879,
+    "completion_tokens": 47
+  },
+  {
+    "id": "benchmark_51",
+    "question": "I need to create a log.txt file on the server to record logs, with the content 'Logging starts'. Then add a line at the end of the file 'First log entry'.\n",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "server_login",
+        "param": {
+          "credentials": "Server credentials"
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Server path/log.txt",
+          "content": "Logging starts"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "Server path/log.txt",
+          "append_content": "First log entry"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 773,
+    "completion_tokens": 223
+  },
+  {
+    "id": "benchmark_52",
+    "question": "I would like to update my personal resume. Please create a file named 'Li Ming Resume 2023.docx' on my desktop, and write in 'Personal Information: Name: Li Ming, Age: 30, Occupation: Software Engineer.'. Then, immediately modify the file content to: 'Updated Personal Information: Name: Li Ming, Age: 31, Latest Position: Senior Software Engineer.'.\n",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Desktop/Li Ming Resume 2023.docx",
+          "content": "Personal Information: Name: Li Min"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "Desktop/Li Ming Resume 2023.docx",
+          "content": "Updated Personal Information: Name: Li Min"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1532,
+    "completion_tokens": 68
+  },
+  {
+    "id": "benchmark_53",
+    "question": "I need to organize my work notes, first create a file named '2023 Work Summary.txt', and write 'Review of My Work in 2023:' in it, then append the content 'The main achievements of this year include:' to this file.\n",
+    "generated_calls": [
+      {
+        "tool": "create_data_file",
+        "param": {}
+      },
+      {
+        "tool": "file_prepend",
+        "param": {
+          "file_path": "2023 Work Summary.txt",
+          "content": "Review of My Work in 2023:"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "2023 Work Summary.txt",
+          "new_file_path": "2023 Work Summary.txt",
+          "content": "",
+          "append_content": "The main achievements of this year include:",
+          "original_content": "",
+          "section": "",
+          "new_title": ""
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "2023 Work Summary.txt",
+          "content": "Review of My Work in 2023:"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "2023 Work Summary.txt",
+          "append_content": "The main achievements of this year include:"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 941,
+    "completion_tokens": 253
+  },
+  {
+    "id": "benchmark_54",
+    "question": "I need to first write a piece of text into the document temp.txt on the D drive, then change the words '\u4e34\u65f6' to '\u6c38\u4e45' in the file, and finally delete the file after confirming the changes are correct.\n",
+    "generated_calls": [
+      {
+        "tool": "insert_text",
+        "param": {
+          "file_path": "D:/temp.txt",
+          "text": "Initial text with \u4e34\u65f6",
+          "position": "end"
+        }
+      },
+      {
+        "tool": "insert_text",
+        "param": {
+          "file_path": "D:/temp.txt",
+          "text": "Change \u4e34\u65f6 to \u6c38\u4e45",
+          "position": "replace"
+        }
+      },
+      {
+        "tool": "schedule_file_delete",
+        "param": {
+          "file_path": "D:/temp.txt",
+          "delete_date": "2023-10-10",
+          "delete_time": "12:00",
+          "condition": "after verification"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "D:/temp.txt",
+          "content": "Specified text"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "D:/temp.txt",
+          "original_content": "Temporary",
+          "content": "Permanent"
+        }
+      },
+      {
+        "tool": "check_file_content",
+        "param": {
+          "file_path": "D:/temp.txt",
+          "expected_content": "Permanent"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "D:/temp.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1122,
+    "completion_tokens": 268
+  },
+  {
+    "id": "benchmark_55",
+    "question": "I need to create a document file for a work plan and fill in the following plans: \"Complete the market analysis report tomorrow, discuss customer feedback the day after tomorrow\".\n",
+    "generated_calls": [
+      {
+        "tool": "market_trend_analysis",
+        "param": {
+          "product": "agricultural product",
+          "data": "historical price data",
+          "analysis_type": "trend analysis"
+        }
+      },
+      {
+        "tool": "user_feedback_tool",
+        "param": {
+          "userId": "user_id",
+          "feedbackType": "general",
+          "dateProvided": "current_date"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Work Directory/Work Plan Document.docx",
+          "content": "Complete the market analysis report tomorro"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 811,
+    "completion_tokens": 260
+  },
+  {
+    "id": "benchmark_56",
+    "question": "Please help me create a file named 'Meeting Minutes.txt' on the desktop, write the content 'March 15, 2023, Project Progress Discussion Meeting' into it, and then delete the file.\n",
+    "generated_calls": [
+      {
+        "tool": "create_data_file",
+        "param": {}
+      },
+      {
+        "tool": "schedule_file_delete",
+        "param": {
+          "file_path": "Desktop/Meeting Minutes.txt",
+          "delete_date": "2023-03-15",
+          "delete_time": "23:59",
+          "condition": "after meeting"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Desktop/Meeting Minutes.txt",
+          "content": "March 1"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "Desktop/Meeting Minutes.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 987,
+    "completion_tokens": 201
+  },
+  {
+    "id": "benchmark_57",
+    "question": "I need to create a log file on the server and write the content \"Server startup successful\", please set the file path to \"/var/log/server_startup.log\".\n",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/var/log/server_startup.log",
+          "content": "Server startup successful"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 740,
+    "completion_tokens": 92
+  },
+  {
+    "id": "benchmark_58",
+    "question": "I need you to create a report file for me at the path \"D:/Documents/Work/Report.txt\" and write the following content: \"Annual Summary Report: The company has performed excellently this year, with a 30% year-on-year increase in performance.\" Then I hope you delete the file \"D:/Documents/Personal/Memo.txt\".\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "D:/Documents/Work/Report.txt",
+          "content": "Annual Summary Report: The company has performed excellently this year, with a 30% year-on-year increase in performance."
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "D:/Documents/Personal/Memo.txt"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "D:/Documents/Work/Report.txt",
+          "content": "Annual Summary Report: The company has performed excellently this yea"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "D:/Documents/Personal/Memo.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 999,
+    "completion_tokens": 101
+  },
+  {
+    "id": "benchmark_59",
+    "question": "I need to create a file named 'meeting_notes.txt' in the system, and write the content 'Meeting Notes of March 18, 2023', then update the content of the file to 'Project Meeting Notes of March 18, 2023'.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_notes.txt",
+          "content": "Meeting Notes of March 18, 2023"
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_notes.txt",
+          "content": "Project Meeting Notes of March 18, 2023"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "system directory/meeting_notes.txt",
+          "content": "Meeting Notes of March 1"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "system directory/meeting_notes.txt",
+          "content": "Project Meeting Notes of March 1"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 948,
+    "completion_tokens": 184
+  },
+  {
+    "id": "benchmark_60",
+    "question": "I need to create a sales report file named \"sales_report.txt\" in the server path \"/data/reports/\" with the content \"March 2023 Sales Volume Statistics\", and then immediately modify its content to \"Q1 2023 Sales Volume Statistics\".\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/data/reports/sales_report.txt",
+          "content": "March 2023 Sales Volume Statistics"
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/data/reports/sales_report.txt",
+          "content": "Q1 2023 Sales Volume Statistics"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/data/reports/sales_report.txt",
+          "content": "March 2023 Sales Volume Statistics"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "/data/reports/sales_report.txt",
+          "content": "Q1 2023 Sales Volume Statistics"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 945,
+    "completion_tokens": 96
+  },
+  {
+    "id": "benchmark_61",
+    "question": "I need to update the report content and delete the previous backup files. The new content of the report is the financial market analysis of May 2023, and the file is located at D:/Reports/May2023.txt. The original backup file is located at D:/Reports/Backup/May2023_bak.txt, please help to handle it.\n",
+    "generated_calls": [
+      {
+        "tool": "backup_file",
+        "param": {
+          "original_file_path": "D:/Reports/May2023.txt",
+          "backup_location": "D:/Reports/Backup/May2023_bak.txt"
+        }
+      },
+      {
+        "tool": "schedule_file_delete",
+        "param": {
+          "file_path": "D:/Reports/Backup/May2023_bak.txt",
+          "delete_date": "2023-06-01",
+          "delete_time": "00:00",
+          "condition": "After new backup is created"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "D:/Reports/May2023.txt",
+          "content": "Financial market analysis of May 2023"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "D:/Reports/Backup/May2023_bak.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 941,
+    "completion_tokens": 130
+  },
+  {
+    "id": "benchmark_62",
+    "question": "Please help me create a document named 'Meeting Minutes' in the project documentation folder on Drive D, and write the minutes of today's meeting: 'Discussed the market strategy for the next quarter and determined the launch schedule for new products.'\n",
+    "generated_calls": [
+      {
+        "tool": "create_meeting_minutes",
+        "param": {
+          "document_format": "Meeting Minutes",
+          "content_items": "Discussed the market strategy for the next quarter and determined the launch schedule for new products."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Drive D/Project Documentation Folder/Meeting Minutes.docx",
+          "content": "Discussed the market strategy for the next quarte"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 905,
+    "completion_tokens": 91
+  },
+  {
+    "id": "benchmark_63",
+    "question": "I want to create a document in the system for my report, with the content 'Draft of the 2023 Annual Report, please check.', and then add 'The report is not yet complete, please continue to supplement.' at the end of the document. The file path can be set to '/reports/annual_report_2023.txt'.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/reports/annual_report_2023.txt",
+          "content": "Draft of the 2023 Annual Report, please check."
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/reports/annual_report_2023.txt",
+          "content": "The report is not yet complete, please continue to supplement."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/reports/annual_report_2023.txt",
+          "content": "Draft of the 2023 Annual Repor"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "/reports/annual_report_2023.txt",
+          "append_content": "The report is not yet complet"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 982,
+    "completion_tokens": 151
+  },
+  {
+    "id": "benchmark_64",
+    "question": "I need to modify the personal information section of my resume and delete the old work experience.\n",
+    "generated_calls": [
+      {
+        "tool": "file_contains",
+        "param": {
+          "file_path": "resume_path",
+          "content": "personal information"
+        }
+      },
+      {
+        "tool": "file_contains",
+        "param": {
+          "file_path": "resume_path",
+          "content": "old work experience"
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "resume_path",
+          "content": "new personal information and updated work experience"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "Resume path",
+          "content": "New personal information content"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "Resume path",
+          "content": "Content after deleting the specified work experience"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 842,
+    "completion_tokens": 216
+  },
+  {
+    "id": "benchmark_65",
+    "question": "I need you to help me create a file named 'Meeting Minutes' in the system, and write 'Minutes of the Project Progress Meeting on March 16, 2023' as the content.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Meeting Minutes",
+          "content": "Minutes of the Project Progress Meeting on March 16, 2023"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "System designated folder/Meeting Minutes.txt",
+          "content": "Minutes of the Project Progress Meeting on March 1"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 904,
+    "completion_tokens": 93
+  },
+  {
+    "id": "benchmark_66",
+    "question": "I need to modify the content of the file C:/Documents/Report.txt, the new content should be 'The 2023 financial report has been audited.', and after completion, please delete this file.\n",
+    "generated_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "C:/Documents/Report.txt",
+          "new_file_path": "C:/Documents/Report.txt",
+          "content": "The 2023 financial report has been audited.",
+          "append_content": "",
+          "original_content": "",
+          "section": "",
+          "new_title": ""
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "C:/Documents/Report.txt"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "C:/Documents/Report.txt",
+          "content": "The 2023 financial report has been audited."
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "C:/Documents/Report.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 887,
+    "completion_tokens": 119
+  },
+  {
+    "id": "benchmark_67",
+    "question": "I need to create a meeting record file named 'meeting_notes.txt' and write the following content: 'Key points of the project kickoff meeting: Ensure that the project team is clear about the goals and the progress schedule.', then modify this file, changing the content to: 'Key points of the project kickoff meeting: Clarify the project goals and progress schedule as well as the team division of labor.'.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_notes.txt",
+          "content": "Key points of the project kickoff meeting: Ensure that the project team is clear about the goals and the progress schedule."
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_notes.txt",
+          "content": "Key points of the project kickoff meeting: Clarify the project goals and progress schedule as well as the team division of labor."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_notes.txt",
+          "content": "Key points of the project kickoff meeting: Ensure that the project team is clear about the goals and the progress schedule."
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "meeting_notes.txt",
+          "original_content": "Key points of the project kickoff meeting: Ensure that the project team is clear about the goals and the progress schedule.",
+          "content": "Key points of the project kickoff meeting: Clarify the project goals and progress schedule as well as the team division of labor."
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1024,
+    "completion_tokens": 169
+  },
+  {
+    "id": "benchmark_68",
+    "question": "I need to record my work log into the document at D:/Work/log.txt with the content 'Complete the initial draft of the project report', and then change the content to 'Complete the initial draft of the project report and related data analysis'.\n",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "D:/Work/log.txt",
+          "content": "Complete the initial draft of the project report"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "D:/Work/log.txt",
+          "content": "Complete the initial draft of the project report and related data analysis"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 842,
+    "completion_tokens": 118
+  },
+  {
+    "id": "benchmark_69",
+    "question": "Please update the content of the work report for me, and then delete the previous old version. The file is located at /Users/zhangsan/Documents/report.txt. The new content is: \"Weekly Work Summary: Completed the requirement analysis for Project A; Development progress of Project B reached 50%; Market research for the newly initiated Project C.\"\n",
+    "generated_calls": [
+      {
+        "tool": "schedule_file_delete",
+        "param": {
+          "file_path": "/Users/zhangsan/Documents/report.txt",
+          "delete_date": "2023-10-10",
+          "delete_time": "12:00",
+          "condition": "After updating the content"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "/Users/zhangsan/Documents/report.txt",
+          "content": "Weekly Work Summary: Completed the requirement analysis for Project A; Development progress of Project B reached 50%; Market research for the newly initiated Project C."
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/Users/zhangsan/Documents/backup/report.txt",
+          "content": "old file content"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "/Users/zhangsan/Documents/report.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 872,
+    "completion_tokens": 218
+  },
+  {
+    "id": "benchmark_70",
+    "question": "I need to add some content to my project report and then delete the original file, the file path is /home/user/documents/project_report.txt, the new content is \"The project is progressing smoothly, and the key stage is expected to be completed next month.\".\n",
+    "generated_calls": [
+      {
+        "tool": "open_document",
+        "param": {
+          "file_path": "/home/user/documents/project_report.txt"
+        }
+      },
+      {
+        "tool": "review_report_content",
+        "param": {
+          "document": "The project is progressing smoothly, and the key stage is expected to be completed next month."
+        }
+      },
+      {
+        "tool": "create_data_file",
+        "param": {}
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "/home/user/documents/project_report.txt",
+          "content": "The project is progressing smoothl"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "/home/user/documents/project_report.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1163,
+    "completion_tokens": 216
+  },
+  {
+    "id": "benchmark_71",
+    "question": "I need to modify the D:/Project/Report.txt file, updating the content to \"April Project Progress Report: Completed Task List...\". Then delete this file.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "D:/Project/Report.txt",
+          "content": "April Project Progress Report: Completed Task List..."
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "D:/Project/Report.txt"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "D:/Project/Report.txt",
+          "content": "April Project Progress Report: Completed Task List..."
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "D:/Project/Report.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 889,
+    "completion_tokens": 128
+  },
+  {
+    "id": "benchmark_72",
+    "question": "I need a new file to record the minutes of tomorrow's meeting, set the file name to 'Meeting_Minutes_2023-11-14.txt', and write 'November 14, 2023, Project Progress Update Meeting Minutes' at the beginning of the file.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Meeting_Minutes_2023-11-14.txt",
+          "content": "November 14, 2023, Project Progress Update Meeting Minutes"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Meeting_Minutes_2023-11-14.txt",
+          "content": "November 1"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 947,
+    "completion_tokens": 99
+  },
+  {
+    "id": "benchmark_73",
+    "question": "I need to create a document to record the minutes of today's meeting and add the meeting date at the end of the document.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_minutes.txt",
+          "content": "Minutes of the Meeting:\n\n"
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_minutes.txt",
+          "content": "\nMeeting Date: [Insert Date Here]"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "specified folder/minutes of meeting document",
+          "content": "meeting topi"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "specified folder/minutes of meeting document",
+          "append_content": "\\nMeeting date: today's date"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 870,
+    "completion_tokens": 146
+  },
+  {
+    "id": "benchmark_74",
+    "question": "I want to create a new file to record today's work log, and I hope to update the content immediately after creation.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "work_log_today.txt",
+          "content": "Work log for today:\n"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "specified directory/today's date_work log.txt",
+          "content": ""
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "specified directory/today's date_work log.txt",
+          "content": "today's date log title and content"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 864,
+    "completion_tokens": 116
+  },
+  {
+    "id": "benchmark_75",
+    "question": "I want to modify the meeting.txt file on the desktop, changing its content to 'Product launch meeting from 9 AM to 3 PM tomorrow.', and also delete the draft.txt file on the desktop that is no longer needed.\n",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "Desktop/meeting.txt",
+          "content": "Product launch meeting from 9 AM to 3 PM tomorrow."
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "Desktop/draft.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 880,
+    "completion_tokens": 92
+  },
+  {
+    "id": "benchmark_76",
+    "question": "I need to update a price list file in the system, the file path is /home/user/pricelist.txt, the new price list content is \"Product A: 199 yuan; Product B: 299 yuan; Product C: 399 yuan\". After the update, please immediately delete this file, thank you!\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/home/user/pricelist.txt",
+          "content": "Product A: 199 yuan; Product B: 299 yuan; Product C: 399 yuan"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "/home/user/pricelist.txt"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "/home/user/pricelist.txt",
+          "content": "Product A: 199 yuan; Product B: 299 yuan; Product C: 399 yuan"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "/home/user/pricelist.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 974,
+    "completion_tokens": 97
+  },
+  {
+    "id": "benchmark_77",
+    "question": "I need you to help me create a document named 'Work Report' and write 'This is the content of today's work report.' into it. After creation, modify the content to 'This is the modified work report content.'.\n",
+    "generated_calls": [
+      {
+        "tool": "create_document",
+        "param": {
+          "document_name": "Work Report",
+          "content": "This is the content of today's work report.",
+          "template": "default",
+          "document_type": "report"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "Work Report",
+          "new_file_path": "Work Report",
+          "content": "This is the modified work report content.",
+          "append_content": "",
+          "original_content": "This is the content of today's work report.",
+          "section": "full",
+          "new_title": "Work Report"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Work Report.txt",
+          "content": "This is the content of today's work report."
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "Work Report.txt",
+          "content": "This is the modified work report content."
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 851,
+    "completion_tokens": 148
+  },
+  {
+    "id": "benchmark_78",
+    "question": "There is a file named 'Important Notes.txt' in the D drive of my laptop, I want to update the file content to 'Work Goals for 2023', and delete the file after the update.\n",
+    "generated_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "D:/Important Notes.txt",
+          "new_file_path": "D:/Important Notes.txt",
+          "content": "Work Goals for 2023",
+          "append_content": "",
+          "original_content": "",
+          "section": "",
+          "new_title": ""
+        }
+      },
+      {
+        "tool": "schedule_file_delete",
+        "param": {
+          "file_path": "D:/Important Notes.txt",
+          "delete_date": "2023-10-31",
+          "delete_time": "23:59",
+          "condition": "after update"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "D drive/Important Notes.txt",
+          "content": "Work Goals for 2023"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "D drive/Important Notes.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1206,
+    "completion_tokens": 145
+  },
+  {
+    "id": "benchmark_79",
+    "question": "I need to create a file named 'meeting_notes.txt' and write the content 'Minutes of the project launch meeting on May 15, 2023'. After that, I need to change the file name to 'meeting_notes_updated.txt'.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_notes.txt",
+          "content": "Minutes of the project launch meeting on May 15, 2023"
+        }
+      },
+      {
+        "tool": "file_rename",
+        "param": {
+          "original_file_path": "meeting_notes.txt",
+          "new_file_path": "meeting_notes_updated.txt",
+          "new_name": "meeting_notes_updated.txt"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_notes.txt",
+          "content": "Minutes of the project launch meeting on May 1"
+        }
+      },
+      {
+        "tool": "rename_file",
+        "param": {
+          "original_file_path": "meeting_notes.txt",
+          "new_file_name": "meeting_notes_updated.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 930,
+    "completion_tokens": 184
+  },
+  {
+    "id": "benchmark_80",
+    "question": "Please help me create a file with the path \"/home/user/2023 Plan.txt\", the content should be \"Personal Plan for 2023: \", and then add my first plan to the file: \"1. Persist in exercising for 30 minutes every day.\".\n",
+    "generated_calls": [
+      {
+        "tool": "create_data_file",
+        "param": {}
+      },
+      {
+        "tool": "verify_and_save_file",
+        "param": {}
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/home/user/2023 Plan.txt",
+          "content": "Personal Plan for 2023: "
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "/home/user/2023 Plan.txt",
+          "append_content": "1. Persist in exercising for 30 minutes every day."
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 877,
+    "completion_tokens": 157
+  },
+  {
+    "id": "benchmark_81",
+    "question": "I need to update my project report document, the file path is /home/user/project_report.txt, the new content is \"2023 Project Progress Update: All design phase work has been completed.\".\n",
+    "generated_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "/home/user/project_report.txt",
+          "new_file_path": "/home/user/project_report.txt",
+          "content": "2023 Project Progress Update: All design phase work has been completed.",
+          "append_content": "",
+          "original_content": "",
+          "section": "",
+          "new_title": ""
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "/home/user/project_report.txt",
+          "content": "2023 Project Progress Update: All design phase work has been completed."
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1143,
+    "completion_tokens": 89
+  },
+  {
+    "id": "benchmark_82",
+    "question": "Please help me create a new file named 'Meeting Minutes.txt' and write the sentence 'Today's meeting went very smoothly.' into it.\n",
+    "generated_calls": [
+      {
+        "tool": "create_data_file",
+        "param": {}
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Desktop/Meeting Minutes.txt",
+          "content": "Today's meeting went very smoothly."
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 782,
+    "completion_tokens": 21
+  },
+  {
+    "id": "benchmark_83",
+    "question": "Please help me create a new work report document and write the following content into it: 'Work Report April 2023. The key work summary for this month is as follows: 1. Completed the requirement analysis for Project A. 2. Successfully passed the design review for Project B. 3. Refactored and optimized the code for Project C.' Then delete the old work report document.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "work_report_april_2023.txt",
+          "content": "Work Report April 2023. The key work summary for this month is as follows: 1. Completed the requirement analysis for Project A. 2. Successfully passed the design review for Project B. 3. Refactored and optimized the code for Project C."
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "old_work_report.txt"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Work Directory/Work Report April 2023.txt",
+          "content": "Work Report April 2023. The key work summary for this month is as follows: 1. Completed the requirement analysis for Project A. 2. Successfully passed the design review for Project B. 3. Refactored and optimized the code for Project C."
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "Work Directory/Old Work Report.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 973,
+    "completion_tokens": 216
+  },
+  {
+    "id": "benchmark_84",
+    "question": "I hope to create a new file named 'meeting_summary.txt' and write the content 'Meeting Minutes of March 10, 2023: ......', then delete the old file 'old_notes.txt' in the same directory.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_summary.txt",
+          "content": "Meeting Minutes of March 10, 2023: ......"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "old_notes.txt"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_summary.txt",
+          "content": "Meeting Minutes of March 1"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "old_notes.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 928,
+    "completion_tokens": 83
+  },
+  {
+    "id": "benchmark_85",
+    "question": "Please help me create a file named \"meeting_notes.txt\" first, and write the content \"Key points of today's discussion: Product design scheme discussion.\", then I need you to change the content of this file to \"Key points of today's discussion: Project progress update and assignment of future tasks.\".\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_notes.txt",
+          "content": "Key points of today's discussion: Product design scheme discussion."
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_notes.txt",
+          "content": "Key points of today's discussion: Project progress update and assignment of future tasks."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "meeting_notes.txt",
+          "content": "Key points of today's discussion: Product design scheme discussion."
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "meeting_notes.txt",
+          "content": "Key points of today's discussion: Project progress update and assignment of future tasks."
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 964,
+    "completion_tokens": 101
+  },
+  {
+    "id": "benchmark_86",
+    "question": "I want to create a document named \"Work Plan.txt\" and write the content \"Complete market analysis report by March 16th\". Then, I need to modify the content of the document to \"Submit market analysis report by March 17th\"\n",
+    "generated_calls": [
+      {
+        "tool": "create_document",
+        "param": {
+          "document_name": "Work Plan.txt",
+          "content": "Complete market analysis report by March 16th",
+          "template": "",
+          "document_type": ""
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Work Directory/Work Plan.txt",
+          "content": "Complete market analysis report by March 16th"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "Work Directory/Work Plan.txt",
+          "content": "Submit market analysis report by March 17th"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 967,
+    "completion_tokens": 125
+  },
+  {
+    "id": "benchmark_87",
+    "question": "I need to create a work report document and set its content to \"Today's work included completing the project report writing, updating the meeting PPT, and replying to client emails.\"\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "work_report.txt",
+          "content": "Today's work included completing the project report writing, updating the meeting PPT, and replying to client emails."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Specified folder/Work_Report.docx",
+          "content": "Today's work included completing the project report writin"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 880,
+    "completion_tokens": 91
+  },
+  {
+    "id": "benchmark_88",
+    "question": "I have two files that need to be processed. The path of the first file is \"/home/user/documents/report.txt\", and I need to write the content \"Annual Financial Report\" into it. The path of the second file is \"/home/user/documents/notes.txt\", please delete it.\n",
+    "generated_calls": [
+      {
+        "tool": "secure_delete",
+        "param": {
+          "file_path": "/home/user/documents/notes.txt"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/home/user/documents/report.txt",
+          "content": "Annual Financial Report"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "/home/user/documents/notes.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 845,
+    "completion_tokens": 161
+  },
+  {
+    "id": "benchmark_89",
+    "question": "Please help me create a file named \"meeting_minutes.txt\" in the \"/user/docs\" directory, and write the following content: \"Minutes of the Meeting on August 24, 2023\". After writing, I would like to add a line at the beginning of the file: \"Internal company meeting document, do not distribute.\".\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/user/docs/meeting_minutes.txt",
+          "content": "Minutes of the Meeting on August 24, 2023"
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/user/docs/meeting_minutes.txt",
+          "content": "Internal company meeting document, do not distribute.\nMinutes of the Meeting on August 24, 2023"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/user/docs/meeting_minutes.txt",
+          "content": "Minutes of the Meeting on August 2"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "/user/docs/meeting_minutes.txt",
+          "append_content": "Internal company meeting documen"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 984,
+    "completion_tokens": 225
+  },
+  {
+    "id": "benchmark_90",
+    "question": "I need to create a text file named \"meeting_notes.txt\" on my desktop, with the content \"Key points of today's meeting:\" and then append \"1. Financial report review; 2. Discussion of new project plans.\"\n",
+    "generated_calls": [
+      {
+        "tool": "create_data_file",
+        "param": {}
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Desktop/meeting_notes.txt",
+          "content": "Key points of today's meeting:"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "Desktop/meeting_notes.txt",
+          "append_content": "1. Financial report review; 2. Discussion of new project plans."
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 922,
+    "completion_tokens": 81
+  },
+  {
+    "id": "benchmark_91",
+    "question": "I now need to create a file named 'Task Schedule.txt' and write the content 'March 16th, 9 AM, meeting to discuss project proposal.' Then change the content to 'March 16th, 10 AM, meeting to discuss project proposal.'\n",
+    "generated_calls": [
+      {
+        "tool": "create_task",
+        "param": {
+          "task_name": "Meeting to discuss project proposal",
+          "task_content": "March 16th, 9 AM, meeting to discuss project proposal.",
+          "task_time": "March 16th, 9 AM"
+        }
+      },
+      {
+        "tool": "create_task",
+        "param": {
+          "task_name": "Meeting to discuss project proposal",
+          "task_content": "March 16th, 10 AM, meeting to discuss project proposal.",
+          "task_time": "March 16th, 10 AM"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Desktop/Task Schedule.txt",
+          "content": "March 16t"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "Desktop/Task Schedule.txt",
+          "content": "March 16t"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 918,
+    "completion_tokens": 226
+  },
+  {
+    "id": "benchmark_92",
+    "question": "I need to update a configuration file stored on the server, the file path is \"/etc/config/settings.ini\". Change the \"max_connections=100\" in the file to \"max_connections:250\", and then delete the old log file \"old_logs.txt\" in the same directory.\n",
+    "generated_calls": [
+      {
+        "tool": "ssh_connect",
+        "param": {
+          "server_address": "server_ip_or_domain",
+          "username": "your_username",
+          "password": "your_password",
+          "key": "your_ssh_key"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "ssh_connect",
+        "param": {
+          "username": "server username",
+          "password": "server password"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "/etc/config/settings.ini",
+          "original_content": "max_connections=100",
+          "content": "max_connections=250"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "/etc/config/old_logs.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1486,
+    "completion_tokens": 197
+  },
+  {
+    "id": "benchmark_93",
+    "question": "I need to record the minutes of our meeting today in the file \"C:\\Documents\\Meeting_Notes.txt\" on my computer, which are: \"April 8, 2023, a marketing strategy meeting is scheduled to be held at 3 PM.\" After the meeting ends, please help me update the exact end time of the meeting in that file.\n",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "C:\\Documents\\Meeting_Notes.txt",
+          "content": "April "
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "C:\\Documents\\Meeting_Notes.txt",
+          "append_content": "Meeting end time: exact time"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1071,
+    "completion_tokens": 97
+  },
+  {
+    "id": "benchmark_94",
+    "question": "I need to create a file named 'Work Report.txt' and write 'All set goals for this week have been completed.' into it. Once done, please immediately update the file content to 'All set goals for this week have been exceeded.'.\n",
+    "generated_calls": [
+      {
+        "tool": "create_report",
+        "param": {
+          "activity_name": "Weekly Goals Report",
+          "activity_date": "2023-10-10",
+          "activity_type": "Report",
+          "activity_purpose": [
+            "Document weekly goals"
+          ],
+          "location": "Office",
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "content": "All set goals for this week have been completed."
+        }
+      },
+      {
+        "tool": "write_report",
+        "param": {
+          "china_male_population": 0,
+          "china_female_population": 0,
+          "usa_population": 0
+        }
+      },
+      {
+        "tool": "update_work_progress",
+        "param": {
+          "progress": "All set goals for this week have been exceeded."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "work directory/Work Report.txt",
+          "content": "All set goals for this week have been completed."
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "work directory/Work Report.txt",
+          "content": "All set goals for this week have been exceeded."
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 906,
+    "completion_tokens": 295
+  },
+  {
+    "id": "benchmark_95",
+    "question": "I need to create a file named \"sales_20230315.txt\" in the \"/data/reports\" directory, with the content \"Content of March 2023 sales report to be supplemented\", and immediately append \"Sales data analysis completed.\" at the end of the file after creation.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/data/reports/sales_20230315.txt",
+          "content": "Content of March 2023 sales report to be supplemented"
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/data/reports/sales_20230315.txt",
+          "content": "Sales data analysis completed."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/data/reports/sales_20230315.txt",
+          "content": "Content of March 2023 sales report to be supplemented"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "/data/reports/sales_20230315.txt",
+          "append_content": "Sales data analysis completed."
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 958,
+    "completion_tokens": 106
+  },
+  {
+    "id": "benchmark_96",
+    "question": "I need to first save a report on market analysis to the path \u201cD:/Documents/Reports/market_analysis.txt\u201d, with the content \u201c2023 Market Analysis Report: 1. Industry Trends\u2026\u2026\u201d, and then because I found that some content needs to be updated, change the original file content to \u201c2023 Latest Market Analysis Report: 1. Updated Industry Trends\u2026\u2026\u201d.\n",
+    "generated_calls": [
+      {
+        "tool": "save_and_export_report",
+        "param": {
+          "document": {
+            "content": "2023 Market Analysis Report: 1. Industry Trends\u2026\u2026"
+          },
+          "file_name": "D:/Documents/Reports/market_analysis.txt"
+        }
+      },
+      {
+        "tool": "save_and_export_report",
+        "param": {
+          "document": {
+            "content": "2023 Latest Market Analysis Report: 1. Updated Industry Trends\u2026\u2026"
+          },
+          "file_name": "D:/Documents/Reports/market_analysis.txt"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "D:/Documents/Reports/market_analysis.txt",
+          "content": "2023 Market Analysis Report: 1. Industry Trends\u2026\u2026"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "D:/Documents/Reports/market_analysis.txt",
+          "content": "2023 Latest Market Analysis Report: 1. Updated Industry Trends\u2026\u2026"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 765,
+    "completion_tokens": 218
+  },
+  {
+    "id": "benchmark_97",
+    "question": "I need to update the latest data of the company's marketing report into the document. The file path is \"/data/reports/marketing_report_2023.docx\", please replace the original \"The total sales volume is 200 million yuan\" with \"The total sales volume is 250 million yuan\".\n",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "/data/reports/marketing_report_2023.docx",
+          "original_content": "The total sales volume is 200 million yuan",
+          "content": "The total sales volume is 250 million yuan"
+        }
+      }
+    ],
+    "final_error": "Tool 'document_editing_tool' does not exist or is not available.",
+    "prompt_tokens": 1281,
+    "completion_tokens": 155
+  },
+  {
+    "id": "benchmark_98",
+    "question": "I want to create a new document in the Work folder on drive D, named \"Meeting_Summary.txt\", and write the following content: \"Today's meeting discussed the project progress and the plan for the next phase.\" A few minutes later, I would like to update the content of this file to: \"Today's meeting discussed the project progress and the plan for the next phase, and also decided on the time for the next meeting.\"\n",
+    "generated_calls": [
+      {
+        "tool": "create_data_file",
+        "param": {}
+      },
+      {
+        "tool": "create_report",
+        "param": {
+          "activity_name": "Meeting Summary",
+          "activity_date": "Today's Date",
+          "activity_type": "Summary",
+          "activity_purpose": [
+            "Discuss project progress",
+            "Plan for next phase"
+          ],
+          "location": "Work folder on drive D",
+          "startTime": "N/A",
+          "endTime": "N/A",
+          "content": "Today's meeting discussed the project progress and the plan for the next phase."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "D drive/Work/Meeting_Summary.txt",
+          "content": "Today's meeting discussed the project progress and the plan for the next phase."
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "D drive/Work/Meeting_Summary.txt",
+          "append_content": "and also decided on the time for the next meeting."
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1017,
+    "completion_tokens": 248
+  },
+  {
+    "id": "benchmark_99",
+    "question": "Please help me create a new file in the cloud and write \"This is my first document\", then I want to change the content to \"This is my modified document\".\n",
+    "generated_calls": [
+      {
+        "tool": "create_document",
+        "param": {
+          "document_name": "MyFirstDocument",
+          "content": "This is my first document",
+          "template": "default",
+          "document_type": "txt"
+        }
+      },
+      {
+        "tool": "content_replace",
+        "param": {
+          "file_path": "MyFirstDocument.txt",
+          "original_content": "This is my first document",
+          "new_content": "This is my modified document"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "cloud_service_login",
+        "param": {
+          "service_url": "Cloud service website/app URL",
+          "account_name": "User account name",
+          "password": "User password"
+        }
+      },
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Cloud service document path",
+          "content": "This is my first document"
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "Cloud service document path",
+          "content": "This is my modified document"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1048,
+    "completion_tokens": 148
+  },
+  {
+    "id": "benchmark_100",
+    "question": "I have a file located at /home/user/Desktop/file.txt, I want to modify its content to \"Hello, World!\" first, then delete this file.\n",
+    "generated_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "/home/user/Desktop/file.txt",
+          "content": "Hello, World!"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "/home/user/Desktop/file.txt"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "/home/user/Desktop/file.txt",
+          "content": "Hell"
+        }
+      },
+      {
+        "tool": "file_delete",
+        "param": {
+          "file_path": "/home/user/Desktop/file.txt"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 884,
+    "completion_tokens": 78
+  }
+]
