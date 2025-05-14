@@ -4,11 +4,9 @@ GRAPH_JSON_PATH = "../data/ultratool/graph.json"
 TOOLS_JSON_PATH = "../data/ultratool/tools.json"
 BENCHMARK_JSON_PATH = "../data/ultratool/benchmarks.json"
 
-OPENAI_API_KEY = os.getenv(
-    "OPENAI_API_KEY"
-)
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-LLM_MODEL = "gpt-4o"
+LLM_MODEL = "gpt-4o-mini"
 
 SUPERVISOR_SYSTEM_PROMPT = """You are a supervisor agent. Your role is to understand the user's request \
 and delegate it to the appropriate specialist agent based on the required tool category.
@@ -29,6 +27,7 @@ You have access to the following tools:
 Your task is to process the user request: "{user_request}"
 You must select the appropriate tool(s) from *your* available list and determine the correct arguments to fulfill the request.
 You need to output a list of proposed tool calls. Each tool call should be a dictionary with 'tool' (the tool name) and 'param' (a dictionary of arguments).
+Do not put any comments into your response, only a valid json.
 
 Example Output Format:
 [

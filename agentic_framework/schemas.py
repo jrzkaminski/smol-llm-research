@@ -2,6 +2,7 @@ from typing import List, Dict, Any, Optional, Union
 
 from pydantic import BaseModel, Field
 
+
 class GraphLink(BaseModel):
     source: str
     target: str
@@ -17,7 +18,9 @@ class GraphStructure(BaseModel):
     links: List[GraphLink]
     nodes: List[GraphNode]
 
+
 AnyToolProperty = Union["SimpleToolProperty", "NestedObjectProperty"]
+
 
 class BaseToolProperty(BaseModel):
     description: Optional[str] = None
@@ -29,17 +32,13 @@ class SimpleToolProperty(BaseToolProperty):
 
 class NestedObjectProperty(BaseToolProperty):
     type: str = "object"
-    properties: Dict[str, AnyToolProperty] = Field(
-        default_factory=dict
-    )
+    properties: Dict[str, AnyToolProperty] = Field(default_factory=dict)
     required: Optional[List[str]] = None
 
 
 class ToolIOSchema(BaseModel):
     type: str = "object"
-    properties: Dict[str, AnyToolProperty] = Field(
-        default_factory=dict
-    )
+    properties: Dict[str, AnyToolProperty] = Field(default_factory=dict)
     required: Optional[List[str]] = None
 
 
@@ -69,6 +68,7 @@ class BenchmarkItem(BaseModel):
     n_tools: Optional[int] = None
     type: Optional[str] = None
 
+
 class AgentState(BaseModel):
     user_request: str
     category: Optional[str] = None
@@ -79,9 +79,8 @@ class AgentState(BaseModel):
     tools_by_category: Optional[Dict[str, Dict[str, ToolSchema]]] = None
     total_prompt_tokens: int = 0
     total_completion_tokens: int = 0
-    available_tools_for_agent: Optional[Dict[str, ToolSchema]] = (
-        None
-    )
+    retry_count: int = 0
+    available_tools_for_agent: Optional[Dict[str, ToolSchema]] = None
 
     def clear_error(self):
         self.error_message = None

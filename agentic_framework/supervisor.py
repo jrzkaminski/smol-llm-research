@@ -9,21 +9,10 @@ from agentic_framework.schemas import AgentState
 
 
 def create_supervisor_router(categories: List[str]):
-    """
-    Creates a conditional routing function for the supervisor.
-    This node determines which agent (category) to delegate to and updates the state.
-    """
     llm = ChatOpenAI(model=LLM_MODEL, api_key=OPENAI_API_KEY, temperature=0)
+    prompt = ChatPromptTemplate.from_messages([("system", SUPERVISOR_SYSTEM_PROMPT)])
 
-    prompt = ChatPromptTemplate.from_messages(
-        [
-            ("system", SUPERVISOR_SYSTEM_PROMPT),
-        ]
-    )
-
-    def supervisor_router(
-        state: AgentState,
-    ) -> Dict[str, Any]:
+    def supervisor_router(state: AgentState) -> Dict[str, Any]:
         print("\n--- Supervisor Router Node ---")
         print(f"User Request: {state.user_request}")
         print(f"Available Categories: {categories}")
@@ -34,20 +23,21 @@ def create_supervisor_router(categories: List[str]):
         print(f"Routing prompt sent to LLM:\n{formatted_prompt.to_string()}")
 
         response: BaseMessage = llm.invoke(formatted_prompt)
-        chosen_category_text = (
-            response.content.strip()
-        )
-
-        prompt_tokens = 0
-        completion_tokens = 0
-        try:
-            token_usage = response.response_metadata.get('token_usage', {})
-            prompt_tokens = token_usage.get('prompt_tokens', 0)
-            completion_tokens = token_usage.get('completion_tokens', 0)
-            print(f"Supervisor Tokens - Prompt: {prompt_tokens}, Completion: {completion_tokens}")
-        except Exception as e:
-            print(f"Warning: Could not extract token usage from supervisor response: {e}")
+        chosen_category_text = response.content.strip()
         print(f"LLM suggested category text: {chosen_category_text}")
+
+        prompt_tokens, completion_tokens = 0, 0
+        try:
+            token_usage = response.response_metadata.get("token_usage", {})
+            prompt_tokens = token_usage.get("prompt_tokens", 0)
+            completion_tokens = token_usage.get("completion_tokens", 0)
+            print(
+                f"Supervisor Tokens - Prompt: {prompt_tokens}, Completion: {completion_tokens}"
+            )
+        except Exception as e:
+            print(
+                f"Warning: Could not extract token usage from supervisor response: {e}"
+            )
 
         best_match = None
         for cat in categories:
@@ -60,10 +50,18 @@ def create_supervisor_router(categories: List[str]):
                     best_match = cat
                     break
 
-        update_dict = {}
+        update_dict = {
+            "total_prompt_tokens": state.total_prompt_tokens + prompt_tokens,
+            "total_completion_tokens": state.total_completion_tokens
+            + completion_tokens,
+            "retry_count": state.retry_count,  # Pass along current retry_count
+        }
         if best_match:
             print(f"Routing to agent: {best_match}")
             update_dict["category"] = best_match
+            update_dict["error_message"] = (
+                None  # Clear any previous error from a different benchmark run
+            )
         else:
             print(
                 "Error: Supervisor could not determine a valid category from LLM response."
@@ -72,18 +70,18 @@ def create_supervisor_router(categories: List[str]):
             update_dict["error_message"] = (
                 f"Supervisor could not route based on LLM suggestion: '{chosen_category_text}'"
             )
-        update_dict["total_prompt_tokens"] = state.total_prompt_tokens + prompt_tokens
-        update_dict["total_completion_tokens"] = state.total_completion_tokens + completion_tokens
-
         return update_dict
 
     return supervisor_router
 
 
 def supervisor_aggregator_node(state: AgentState) -> Dict[str, Any]:
-    """Node where the supervisor receives the final validated outcome from the agent."""
     print("\n--- Supervisor Aggregator Node ---")
-    update_dict = {}
+    update_dict = {
+        "total_prompt_tokens": state.total_prompt_tokens,
+        "total_completion_tokens": state.total_completion_tokens,
+        "retry_count": state.retry_count,
+    }
     if state.agent_outcome:
         print(
             f"Received validated tool calls from agent ({state.category}): {state.agent_outcome}"
@@ -93,8 +91,8 @@ def supervisor_aggregator_node(state: AgentState) -> Dict[str, Any]:
     else:
         print("No valid outcome received from agent flow.")
         update_dict["supervisor_result"] = []
-        if not state.error_message:
+        if not state.error_message:  # If no error already set by validation/agent
             update_dict["error_message"] = "Agent could not complete the task."
-        else:
+        else:  # Keep existing error
             update_dict["error_message"] = state.error_message
     return update_dict
