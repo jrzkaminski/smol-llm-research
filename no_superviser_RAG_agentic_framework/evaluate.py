@@ -115,8 +115,8 @@ def calculate_metrics(
 
 
 if __name__ == "__main__":
-    results_file_path = Path("results_all.json")
-    evaluation_output_path = Path("evaluation_summary.json")  # Define output file path
+    results_file_path = Path("results_all_4o_mini.json")
+    evaluation_output_path = Path("evaluation_summary_4o_mini.json")  # Define output file path
 
     all_benchmark_results = load_results(results_file_path)
 

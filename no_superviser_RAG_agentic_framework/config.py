@@ -8,7 +8,7 @@ OPENAI_API_KEY = os.getenv(
     "OPENAI_API_KEY"
 )
 
-LLM_MODEL = "gpt-4o"
+LLM_MODEL = "gpt-4o-mini"
 
 TOP_RANK = 10
 

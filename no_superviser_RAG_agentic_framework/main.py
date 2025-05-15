@@ -115,7 +115,8 @@ for i, item in enumerate(benchmark_items):
         agent_outcome=None,
         error_message=None,
         total_prompt_tokens=0,
-        total_completion_tokens=0
+        total_completion_tokens=0,
+        retry_count=0,  # Initialize retry_count for this benchmark
     )
 
     final_state = {}
@@ -131,8 +132,10 @@ for i, item in enumerate(benchmark_items):
         final_prompt_tokens = final_state.get('total_prompt_tokens', 0)
         final_completion_tokens = final_state.get('total_completion_tokens', 0)
         final_cost = final_state.get('total_cost', 0.0)
+        final_retry_count = final_state.get("retry_count", 0)
         print(f"Final Supervisor Result (Raw Objects): {generated_calls_list}")
         print(f"Final Tokens - Prompt: {final_prompt_tokens}, Completion: {final_completion_tokens}")
+        print(f"Final Retries: {final_retry_count}")
         if error_msg:
             print(f"Run finished with error: {error_msg}")
 
@@ -144,6 +147,8 @@ for i, item in enumerate(benchmark_items):
         final_prompt_tokens = 0
         final_completion_tokens = 0
         final_cost = 0.0
+        # Inherit retry_count from initial_state if execution fails early
+        final_retry_count = initial_state.retry_count
 
     # --- Store results for this benchmark ---
     if generated_calls_list is None:
@@ -159,13 +164,14 @@ for i, item in enumerate(benchmark_items):
         "final_error": error_msg,
         "prompt_tokens": final_prompt_tokens,
         "completion_tokens": final_completion_tokens,
+        "retries_spent": final_retry_count
     }
     all_results.append(result_data)
 
     time.sleep(1)
 
 # --- Save All Results ---
-output_file = "results_all.json"
+output_file = "results_all_4o_mini.json"
 print(f"\n--- Saving all {len(all_results)} results to {output_file} ---")
 try:
     with open(output_file, "w", encoding="utf-8") as f:
