@@ -26,7 +26,7 @@ graph_structure = load_graph(GRAPH_JSON_PATH)
 all_tools_schema = load_tools(TOOLS_JSON_PATH)
 benchmark_items = load_benchmark(BENCHMARK_JSON_PATH)
 
-benchmark_items = benchmark_items[0:100]
+benchmark_items = benchmark_items[0:10]
 
 
 if not graph_structure or not all_tools_schema or not benchmark_items:

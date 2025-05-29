@@ -6,9 +6,22 @@ BENCHMARK_JSON_PATH = "../data/ultratool/benchmarks.json"
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-LLM_MODEL = "gpt-4o"
+LLM_MODEL = "gpt-4o-mini"
 
 TOP_RANK = 10
+
+
+PLANNER_AGENT_SYSTEM_PROMPT = """
+Rewrite the USER REQUEST as the smallest sequence of independent, solvable sub-requests.
+
+Rules:
+1. Each sub-request must be a self-contained natural-language instruction; no code or tool names.
+2. Preserve order and any quoted literals (file names, texts, numbers).
+3. Return ONLY a JSON array of strings. No keys, no commentary.
+
+User request: "{user_request}"
+"""
+
 
 SUPERVISOR_SYSTEM_PROMPT = """You are a supervisor agent. Your role is to understand the user's request \
 and delegate it to the appropriate specialist agent based on the required tool category.
@@ -29,6 +42,7 @@ You have access to the following tools:
 Your task is to process the user request: "{user_request}"
 You must select the appropriate tool(s) from *your* available list and determine the correct arguments to fulfill the request.
 You need to output a list of proposed tool calls. Each tool call should be a dictionary with 'tool' (the tool name) and 'param' (a dictionary of arguments).
+Return ONLY a JSON. No keys, no commentary.
 
 Example Output Format:
 [
