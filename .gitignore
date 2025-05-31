@@ -165,3 +165,6 @@ agents_knowledge_base/.obsidian/
 
 # MacOS-files
 .DS_Store
+
+# dev-files
+json_formatter.ipynb
