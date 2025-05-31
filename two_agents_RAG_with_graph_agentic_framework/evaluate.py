@@ -134,9 +134,10 @@ if __name__ == "__main__":
 
     total_prompt_tokens = 0
     total_completion_tokens = 0
+    total_retries_spent = 0
 
     for i, result_item in enumerate(all_benchmark_results):
-
+        total_retries_spent += result_item.get('retries_spent', 0)
         total_prompt_tokens += result_item.get('prompt_tokens', 0)
         total_completion_tokens += result_item.get('completion_tokens', 0)
 
@@ -151,6 +152,7 @@ if __name__ == "__main__":
             "metrics": metrics,
             "prompt_tokens": result_item.get('prompt_tokens', 0),
             "completion_tokens": result_item.get('completion_tokens', 0),
+            "retries_spent": result_item.get('retries_spent', 0),
             "run_error": result_item.get('final_error')
         })
 
@@ -172,10 +174,13 @@ if __name__ == "__main__":
 
         aggregated_metrics_dict["Total_Prompt_Tokens"] = total_prompt_tokens
         aggregated_metrics_dict["Total_Completion_Tokens"] = total_completion_tokens
+        aggregated_metrics_dict["Total_Retries_Spent"] = total_retries_spent
         aggregated_metrics_dict[
             "Avg_Prompt_Tokens_Per_Run"] = total_prompt_tokens / num_results if num_results > 0 else 0
         aggregated_metrics_dict[
             "Avg_Completion_Tokens_Per_Run"] = total_completion_tokens / num_results if num_results > 0 else 0
+        aggregated_metrics_dict[
+            "Avg_Retries_Spent_Per_Run"] = total_retries_spent / num_results if num_results > 0 else 0
 
         print(f"\nTotal Tokens (All Runs) - Prompt: {total_prompt_tokens}, Completion: {total_completion_tokens}")
 

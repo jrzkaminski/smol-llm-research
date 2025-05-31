@@ -63,8 +63,7 @@ def create_agent():
         return Chroma.from_documents(
             documents=docs,
             embedding=embeddings,
-            collection_name=f"{uuid.uuid4().hex}",
-            persist_directory=tmp_dir,
+            collection_name=f"{uuid.uuid4().hex}"
         )
 
     def agent_node(state: AgentState) -> Dict[str, Any]:

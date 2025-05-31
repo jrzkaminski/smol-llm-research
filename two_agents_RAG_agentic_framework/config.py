@@ -14,9 +14,14 @@ TOP_RANK = 10
 SUBTASK_TOP_RANK = 5
 
 PLANNER_AGENT_SYSTEM_PROMPT = """
-Your task is to process the user request: "{user_request}"
-You need to extract subtasks from the user's question. Return the list of subtasks in the following format (JSON):
-['subtask_1', 'subtask_2', 'subtask_3']
+Rewrite the USER REQUEST as the smallest sequence of independent, solvable sub-requests.
+
+Rules:
+1. Each sub-request must be a self-contained natural-language instruction; no code or tool names.
+2. Preserve order and any quoted literals (file names, texts, numbers).
+3. Return ONLY a JSON array of strings. No keys, no commentary.
+
+User request: "{user_request}"
 """
 
 AGENT_SYSTEM_PROMPT = """You are a specialized agent for performing user tasks. You have a set of tools for that.
@@ -52,4 +57,6 @@ If you receive an error message about an invalid tool call, analyze the error an
 Error: {error}
 
 Based on the request and your available tools, propose the sequence of tool calls.
+
+Return ONLY a JSON. No keys, no commentary.
 """

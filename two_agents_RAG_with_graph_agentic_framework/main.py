@@ -27,7 +27,7 @@ graph_structure = load_graph(GRAPH_JSON_PATH)
 all_tools_schema = load_tools(TOOLS_JSON_PATH)
 benchmark_items = load_benchmark(BENCHMARK_JSON_PATH)
 
-benchmark_items = benchmark_items[0:10]
+benchmark_items = benchmark_items[843:846]
 
 if not graph_structure or not all_tools_schema or not benchmark_items:
     print("Error loading necessary graph, tools, or benchmark data. Exiting.")

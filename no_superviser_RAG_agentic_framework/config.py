@@ -12,18 +12,6 @@ LLM_MODEL = "gpt-4o-mini"
 
 TOP_RANK = 10
 
-SUPERVISOR_SYSTEM_PROMPT = """You are a supervisor agent. Your role is to understand the user's request \
-and delegate it to the appropriate specialist agent based on the required tool category.
-The available agent categories are: {categories}.
-Analyze the user's request: "{user_request}".
-Determine which category of tools is most relevant to fulfill the request.
-Delegate the task to the agent responsible for that category.
-You will receive the proposed tool calls from the agent.
-Your final output should be the sequence of tool calls proposed by the agent.
-If the request seems to require tools from multiple categories, decide the primary category or sequence them if applicable (though current setup focuses on single delegation).
-Output only the final list of tool calls in the specified format.
-"""
-
 AGENT_SYSTEM_PROMPT = """You are a specialized agent for performing user tasks. You have a set of tools for that.
 You have access to the following tools:
 {tool_descriptions}

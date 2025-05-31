@@ -63,8 +63,7 @@ def create_agent():
         return Chroma.from_documents(
             documents=docs,
             embedding=embeddings,
-            collection_name=f"{uuid.uuid4().hex}",
-            persist_directory=tmp_dir,
+            collection_name=f"{uuid.uuid4().hex}"
         )
 
     def agent_node(state: AgentState) -> Dict[str, Any]:
@@ -100,7 +99,7 @@ def create_agent():
             for name in ranked_names
             if not (name in unique_tool_names or unique_tool_names.add(name))
         ]
-        # print("!!!!!", top_tool_names)
+
         top_tools: Dict[str, ToolSchema] = {
             name: current_agent_tools[name] for name in top_tool_names
         }
