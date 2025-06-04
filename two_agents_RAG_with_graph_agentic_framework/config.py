@@ -1,8 +1,8 @@
 import os
 
-GRAPH_JSON_PATH = "../data/ultratool/graph.json"
-TOOLS_JSON_PATH = "../data/ultratool/tools.json"
-BENCHMARK_JSON_PATH = "../data/ultratool/benchmarks.json"
+GRAPH_JSON_PATH = "data/ultratool/graph.json"
+TOOLS_JSON_PATH = "data/ultratool/tools.json"
+BENCHMARK_JSON_PATH = "data/ultratool/benchmarks_enriched.json"
 
 OPENAI_API_KEY = os.getenv(
     "OPENAI_API_KEY"
@@ -30,7 +30,12 @@ You have access to the following tools:
 
 Your task is to process the user request: "{user_request}"
 You must select the appropriate tool(s) from *your* available list and determine the correct arguments to fulfill the request.
-You need to output a list of proposed tool calls. Each tool call should be a dictionary with 'tool' (the tool name) and 'param' (a dictionary of arguments).
+You need to output a list of proposed tool calls. Each tool call should be a dictionary with 'tool' (the tool name), 'param' (a dictionary of arguments), and 'input_source' (indicating where the required information comes from).
+
+For the 'input_source' field:
+- Use "question" if the required information is present in the user request/question
+- Use "tool_name tool" if the required information comes from the output of a previous tool that should be run first (e.g., "file_write tool", "account_login tool")
+
 If you CANNOT complete the entire task, IN ANY CASE, WRITE DOWN THE FUNCTIONS that, in your opinion, CAN BRING you CLOSER to solving the problem in JSON format.
 Use tools ONLY FROM THE LIST PROVIDED TO YOU!
 If the function is not available to you, DO NOT WRITE it in JSON.
@@ -43,13 +48,15 @@ Example Output Format:
     "param": {{
       "arg_name_1": "value_1",
       "arg_name_2": "value_2"
-    }}
+    }},
+    "input_source": "question"
   }},
   {{
     "tool": "tool_name_2",
     "param": {{
       "arg_name_3": "value_3"
-    }}
+    }},
+    "input_source": "tool_name_1 tool"
   }}
 ]
 

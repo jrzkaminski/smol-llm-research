@@ -26,13 +26,13 @@ def calculate_metrics(
     generated_calls_raw: List[Dict], reference_calls_raw: List[Dict]
 ) -> Dict[str, float]:
     """
-    Calculates InstAcc, ToolAcc, ArgAcc, and F1 score for a single benchmark result.
-    (Keep the existing logic, but ensure it handles empty lists gracefully)
+    Calculates InstAcc, ToolAcc, ArgAcc, SeqAcc, and F1 score for a single benchmark result.
     """
     metrics = {
         "InstAcc": 0.0,
         "ToolAcc": 0.0,
         "ArgAcc": 0.0,
+        "SeqAcc": 0.0,
         "Precision": 0.0,
         "Recall": 0.0,
         "F1": 0.0,
@@ -77,6 +77,23 @@ def calculate_metrics(
     metrics["ArgAcc"] = (
         correct_args_count / total_reference_args_count
         if total_reference_args_count > 0
+        else 1.0
+    )
+
+    # --- SeqAcc ---
+    correct_input_sources = 0
+    total_reference_input_sources = 0
+    for i in range(min(num_generated, num_reference)):
+        ref_input_source = reference_calls[i].get("input_source")
+        if ref_input_source is not None:  # Only count if reference has input_source
+            total_reference_input_sources += 1
+            gen_input_source = generated_calls[i].get("input_source")
+            if gen_input_source == ref_input_source:
+                correct_input_sources += 1
+
+    metrics["SeqAcc"] = (
+        correct_input_sources / total_reference_input_sources
+        if total_reference_input_sources > 0
         else 1.0
     )
 
@@ -128,7 +145,7 @@ if __name__ == "__main__":
 
     individual_metrics_data = []
     all_metrics_lists = {
-        "InstAcc": [], "ToolAcc": [], "ArgAcc": [],
+        "InstAcc": [], "ToolAcc": [], "ArgAcc": [], "SeqAcc": [],
         "Precision": [], "Recall": [], "F1": []
     }
 
