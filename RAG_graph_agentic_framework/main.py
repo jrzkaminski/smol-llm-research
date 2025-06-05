@@ -3,18 +3,20 @@ import time
 
 from langgraph.graph import StateGraph, END
 
-from RAG_agentic_framework.agents import create_agent, validation_node
-from RAG_agentic_framework.config import (
+from RAG_graph_agentic_framework.agents import create_agent, validation_node
+from RAG_graph_agentic_framework.config import (
     GRAPH_JSON_PATH,
     TOOLS_JSON_PATH,
     BENCHMARK_JSON_PATH,
 )
-from RAG_agentic_framework.schemas import AgentState  # Ensure ToolCall is imported
-from RAG_agentic_framework.supervisor import (
+from RAG_graph_agentic_framework.schemas import (
+    AgentState,
+)  # Ensure ToolCall is imported
+from RAG_graph_agentic_framework.supervisor import (
     create_supervisor_router,
     supervisor_aggregator_node,
 )
-from RAG_agentic_framework.tool_utils import (
+from RAG_graph_agentic_framework.tool_utils import (
     load_graph,
     load_tools,
     load_benchmark,
@@ -25,7 +27,7 @@ print("--- Loading Setup Data ---")
 graph_structure = load_graph(GRAPH_JSON_PATH)
 all_tools_schema = load_tools(TOOLS_JSON_PATH)
 benchmark_items = load_benchmark(BENCHMARK_JSON_PATH)
-benchmark_items = benchmark_items[100:200]
+benchmark_items = benchmark_items[:100]
 
 if not graph_structure or not all_tools_schema or not benchmark_items:
     print("Error loading necessary graph, tools, or benchmark data. Exiting.")
@@ -40,7 +42,7 @@ workflow = StateGraph(AgentState)
 
 agent_nodes = {}
 for category, tools in tools_by_category.items():
-    agent_nodes[category] = create_agent()
+    agent_nodes[category] = create_agent(graph_structure, all_tools_schema)
     workflow.add_node(category, agent_nodes[category])
 
 # Add Validation Node

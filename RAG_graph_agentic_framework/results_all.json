@@ -1,0 +1,107 @@
+[
+  {
+    "id": "benchmark_1",
+    "question": "I need to create a file named 'Important Meeting Notes.txt' on my computer desktop, and write the content 'The company will hold the annual strategy meeting on April 1, 2023.' Then, I hope to append a line 'Please have the relevant department personnel prepare the report materials in advance.'.\n",
+    "generated_calls": [
+      {
+        "tool": "create_data_file",
+        "param": {}
+      },
+      {
+        "tool": "document_editor",
+        "param": {
+          "document_id": "unique_document_id",
+          "content": "The company will hold the annual strategy meeting on April 1, 2023.",
+          "photo_paths": [],
+          "file_path": "path_to_the_file"
+        }
+      },
+      {
+        "tool": "save_document",
+        "param": {
+          "document": "document_object",
+          "location": "path_to_the_file",
+          "document_id": "unique_document_id"
+        }
+      },
+      {
+        "tool": "document_editor",
+        "param": {
+          "document_id": "document_id_placeholder",
+          "content": "Please have the relevant department personnel prepare the report materials in advance.",
+          "photo_paths": [],
+          "file_path": "file_path_placeholder"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "Desktop/Important Meeting Notes.txt",
+          "content": "The company will hold the annual strategy meeting on April "
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "Desktop/Important Meeting Notes.txt",
+          "append_content": "Please have the relevant department personnel prepare the report materials in advance."
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 6465,
+    "completion_tokens": 253,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_2",
+    "question": "I need you to help me create a file named \"meeting_summary.txt\" in the system and write the meeting summary content: \"The 2023 Strategic Meeting was successfully held.\" Afterwards, I need you to modify the content of the file to: \"The 2023 Strategic Meeting was successfully held, and the implementation plan has been determined.\"\n",
+    "generated_calls": [
+      {
+        "tool": "create_data_file",
+        "param": {}
+      },
+      {
+        "tool": "insert_info_to_document",
+        "param": {
+          "document_id": "meeting_summary_document",
+          "info": "The 2023 Strategic Meeting was successfully held."
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "path/to/existing/file",
+          "new_file_path": "path/to/existing/file",
+          "content": "The 2023 Strategic Meeting was successfully held, and the implementation plan has been determined.",
+          "append_content": "",
+          "original_content": "",
+          "section": "main",
+          "new_title": ""
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "file_write",
+        "param": {
+          "file_path": "system path/meeting_summary.txt",
+          "content": "The 2023 Strategic Meeting was successfully held."
+        }
+      },
+      {
+        "tool": "file_modify",
+        "param": {
+          "file_path": "system path/meeting_summary.txt",
+          "content": "The 2023 Strategic Meeting was successfully hel"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 6704,
+    "completion_tokens": 257,
+    "retries_spent": 0
+  }
+]

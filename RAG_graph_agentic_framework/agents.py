@@ -11,21 +11,32 @@ from langchain_core.documents import Document
 from langchain_community.vectorstores import Chroma
 from pydantic import ValidationError
 
-from RAG_agentic_framework.config import (
+from RAG_graph_agentic_framework.config import (
     PLANNER_AGENT_SYSTEM_PROMPT,
     AGENT_SYSTEM_PROMPT,
     LLM_MODEL,
     OPENAI_API_KEY,
     TOP_RANK,
 )
-from RAG_agentic_framework.schemas import AgentState, ToolCall, ToolSchema
-from RAG_agentic_framework.tool_utils import (
+from RAG_graph_agentic_framework.schemas import (
+    AgentState,
+    ToolCall,
+    ToolSchema,
+    GraphStructure,
+)
+from RAG_graph_agentic_framework.tool_utils import (
     format_tool_descriptions,
     validate_tool_call_sequence,
+    build_tool_adjacency,
+    get_related_tools,
 )
 
 
-def create_agent():
+def create_agent(
+    graph: GraphStructure,
+    all_tools_schema: Dict[str, ToolSchema],
+):
+    adjacency_map = build_tool_adjacency(graph)
     embeddings = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
     vectorstore_cache: Dict[str, Chroma] = {}
 
@@ -124,15 +135,27 @@ def create_agent():
                 for name in ranked_names
                 if not (name in unique_tool_names or unique_tool_names.add(name))
             ]
-            top_tools: Dict[str, ToolSchema] = {
-                name: current_agent_tools[name] for name in top_tool_names
+            related_tool_names = get_related_tools(top_tool_names, adjacency_map)
+            extended_tool_names = [
+                name for name in related_tool_names if name in all_tools_schema
+            ]
+            extended_tools: Dict[str, ToolSchema] = {
+                name: all_tools_schema[name] for name in extended_tool_names
             }
-            tool_desc_string = format_tool_descriptions(top_tools)
+            edge_lines = [
+                f"{link.source} -> {link.target}"
+                for link in graph.links
+                if link.source in extended_tool_names
+                and link.target in extended_tool_names
+            ]
 
-            # Format the prompt with current state
+            links_desc_string = "\n".join(edge_lines) or "No explicit links"
+            tool_desc_string = format_tool_descriptions(extended_tools)
+
             formatted_prompt = agents_prompt.format_prompt(
                 category=state.category,
                 tool_descriptions=tool_desc_string,
+                links_description=links_desc_string,
                 user_request=retrieval_query,
                 error=state.error_message or "None",
             )
