@@ -56,11 +56,13 @@ class ToolSchema(BaseModel):
 class ToolCall(BaseModel):
     tool: str
     param: Dict[str, Any] = Field(default_factory=dict)
+    input_source: Optional[str] = None
 
 
 class BenchmarkReference(BaseModel):
     tool: str
     param: Dict[str, Any] = Field(default_factory=dict)
+    input_source: Optional[str] = None
 
 
 class BenchmarkItem(BaseModel):
@@ -76,8 +78,8 @@ class BenchmarkItem(BaseModel):
 class AgentState(BaseModel):
     user_request: str
     agent_outcome: Optional[List[ToolCall]] = None
-    error_message: Optional[str] = None,
-    subtasks: List[str] = None,
+    error_message: Optional[str] = None
+    subtasks: List[str] = []
     all_tools_schema: Optional[Dict[str, ToolSchema]] = None
     tools_by_category: Optional[Dict[str, Dict[str, ToolSchema]]] = None
     total_prompt_tokens: int = 0

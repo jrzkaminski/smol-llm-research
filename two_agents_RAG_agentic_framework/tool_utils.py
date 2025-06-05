@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 from typing import List, Dict, Optional, Tuple, Any
 
-from two_agents_RAG_agentic_framework.schemas import (
+from schemas import (
     GraphStructure,
     ToolSchema,
     ToolCall,
@@ -157,11 +157,12 @@ def validate_tool_call(
 ) -> Tuple[bool, Optional[str]]:
     """
     Validates a single tool call against the available tool schemas.
-    Checks tool existence, top-level argument names, and required top-level args.
+    Checks tool existence, top-level argument names, required top-level args, and input_source field.
     Does NOT recursively validate nested structures by default.
     """
     tool_name = tool_call.tool
     params = tool_call.param
+    input_source = tool_call.input_source
 
     if tool_name not in available_tools:
         return False, f"Tool '{tool_name}' does not exist or is not available."
@@ -190,6 +191,15 @@ def validate_tool_call(
             False,
             f"Tool '{tool_name}' is missing required top-level arguments: {', '.join(missing_args)}.",
         )
+
+    # Validate input_source format if present
+    if input_source is not None:
+        if input_source != "question" and not input_source.endswith(" tool"):
+            return (
+                False,
+                f"Tool '{tool_name}' has invalid input_source format: '{input_source}'. Expected 'question' or '<tool_name> tool'.",
+            )
+
     return True, None
 
 
@@ -213,7 +223,7 @@ def validate_tool_call_sequence(
 
 
 def format_tool_descriptions(tools: Dict[str, ToolSchema]) -> str:
-    """Formats tool descriptions for the agent prompt, using the nested schema."""
+    """Formats tool descriptions for the agent prompt, filtering out input_structure and output_structure fields."""
     if not tools:
         return "No tools available for this category."
     desc = []
@@ -225,6 +235,9 @@ def format_tool_descriptions(tools: Dict[str, ToolSchema]) -> str:
             props = schema.arguments.properties
             required = set(schema.arguments.required or [])
             for arg_name, arg_props in props.items():
+                # Filter out input_structure and output_structure fields
+                if arg_name in ["input_structure", "output_structure"]:
+                    continue
                 req_marker = " (required)" if arg_name in required else ""
                 args_list.append(
                     f"{arg_name}: {arg_props.type}{req_marker} ({arg_props.description})"

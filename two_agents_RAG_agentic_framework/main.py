@@ -1,29 +1,35 @@
 import json
 import time
+import psutil
+import gc
 
 from langgraph.graph import StateGraph, END
 
-from two_agents_RAG_agentic_framework.agents import create_agent, validation_node, create_planner
-from two_agents_RAG_agentic_framework.config import (
+from agents import create_agent, validation_node, create_planner
+from config import (
     GRAPH_JSON_PATH,
     TOOLS_JSON_PATH,
     BENCHMARK_JSON_PATH,
 )
-from two_agents_RAG_agentic_framework.schemas import AgentState  # Ensure ToolCall is imported
+from schemas import AgentState  # Ensure ToolCall is imported
 
-from two_agents_RAG_agentic_framework.tool_utils import (
+from tool_utils import (
     load_graph,
     load_tools,
     load_benchmark,
     get_tools_by_category,
 )
 
+import dotenv
+
+dotenv.load_dotenv()
+
 print("--- Loading Setup Data ---")
 graph_structure = load_graph(GRAPH_JSON_PATH)
 all_tools_schema = load_tools(TOOLS_JSON_PATH)
 benchmark_items = load_benchmark(BENCHMARK_JSON_PATH)
 
-benchmark_items = benchmark_items[0:100]
+benchmark_items = benchmark_items[0:5]
 
 if not graph_structure or not all_tools_schema or not benchmark_items:
     print("Error loading necessary graph, tools, or benchmark data. Exiting.")
@@ -90,6 +96,7 @@ for i, item in enumerate(benchmark_items):
         tools_by_category=tools_by_category,
         agent_outcome=None,
         error_message=None,
+        subtasks=[],  # Explicitly initialize empty list
         total_prompt_tokens=0,
         total_completion_tokens=0,
         retry_count=0,  # Initialize retry_count for this benchmark
@@ -142,6 +149,15 @@ for i, item in enumerate(benchmark_items):
     all_results.append(result_data)
 
     time.sleep(1)
+
+    if i % 10 == 0:  # Check every 10 benchmarks
+        process = psutil.Process()
+        memory_mb = process.memory_info().rss / 1024 / 1024
+        print(f"Memory usage: {memory_mb:.1f} MB")
+        
+        if memory_mb > 4000:  # If over 4GB
+            print("High memory usage detected, forcing garbage collection")
+            gc.collect()
 
 # --- Save All Results ---
 output_file = "results_all_4o_mini.json"

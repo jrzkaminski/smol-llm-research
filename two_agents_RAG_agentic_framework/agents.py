@@ -1,6 +1,8 @@
 import json
 import tempfile
 import uuid
+import shutil
+import atexit
 from typing import Dict, List, Optional, Any
 
 import regex as re
@@ -10,7 +12,7 @@ from langchain_core.documents import Document
 from langchain_community.vectorstores import Chroma
 from pydantic import ValidationError
 
-from two_agents_RAG_agentic_framework.config import (
+from config import (
     AGENT_SYSTEM_PROMPT,
     PLANNER_AGENT_SYSTEM_PROMPT,
     LLM_MODEL,
@@ -18,12 +20,12 @@ from two_agents_RAG_agentic_framework.config import (
     TOP_RANK,
     SUBTASK_TOP_RANK
 )
-from two_agents_RAG_agentic_framework.schemas import (
+from schemas import (
     AgentState,
     ToolCall,
     ToolSchema
 )
-from two_agents_RAG_agentic_framework.tool_utils import (
+from tool_utils import (
     format_tool_descriptions,
     validate_tool_call_sequence,
 )
@@ -31,8 +33,10 @@ from two_agents_RAG_agentic_framework.tool_utils import (
 
 def create_agent():
     embeddings = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
-
     llm = ChatOpenAI(model=LLM_MODEL, api_key=OPENAI_API_KEY, temperature=0)
+    
+    # Create vector store once, outside the agent function
+    global_vectorstore = None
 
     prompt_template = ChatPromptTemplate.from_messages(
         [
@@ -43,6 +47,16 @@ def create_agent():
 
     def _build_vectorstore(tools_dict: Dict[str, ToolSchema]) -> Chroma:
         tmp_dir = tempfile.mkdtemp(prefix=f"chroma_rag_tools_")
+        
+        # Register cleanup function
+        def cleanup():
+            try:
+                shutil.rmtree(tmp_dir, ignore_errors=True)
+            except:
+                pass
+        
+        atexit.register(cleanup)
+        
         docs: List[Document] = []
 
         for tool_name, schema in tools_dict.items():
@@ -60,27 +74,34 @@ def create_agent():
                 Document(page_content=page_text, metadata={"tool_name": tool_name})
             )
 
-        return Chroma.from_documents(
+        vectordb = Chroma.from_documents(
             documents=docs,
             embedding=embeddings,
-            collection_name=f"{uuid.uuid4().hex}"
+            collection_name=f"{uuid.uuid4().hex}",
+            persist_directory=tmp_dir  # Explicitly set directory
         )
 
+        return vectordb
+
     def agent_node(state: AgentState) -> Dict[str, Any]:
+        nonlocal global_vectorstore
+        
         print(f"\n--- Agent Node ---")
         print(f"User Request: {state.user_request}")
         if state.error_message:
             print(f"Previous Error (Retry Attempt {state.retry_count}): {state.error_message}")
 
         current_agent_tools = state.get_agent_tools()
-
-        vectordb = _build_vectorstore(current_agent_tools)
+        
+        # Only rebuild if tools changed significantly
+        if global_vectorstore is None:
+            global_vectorstore = _build_vectorstore(current_agent_tools)
 
         ranked_names = []
 
         try:
             for task in state.subtasks:
-                retrieved_docs = vectordb.similarity_search(task, k=SUBTASK_TOP_RANK)
+                retrieved_docs = global_vectorstore.similarity_search(task, k=SUBTASK_TOP_RANK)
                 ranked_names += [
                     doc.metadata.get("tool_name")
                     for doc in retrieved_docs
@@ -195,45 +216,83 @@ def create_planner():
         # Format the prompt with current state
         formatted_prompt = prompt_template.format_prompt(
             user_request=state.user_request,
-            error=state.error_message or "None",
         )
         print(f"Prompt sent to LLM:\n{formatted_prompt.to_string()}")
 
         # Invoke the LLM
-        response = llm.invoke(formatted_prompt)
-        response_content = response.content
-        print(f"LLM Response:\n{response_content}")
-
-        parsed_outcome: List[str] = None
-        error_parsing = None
         try:
-            json_match = re.search(r"\[[^\[\]]*\]", response_content, re.DOTALL)
-            if json_match:
-                json_str = json_match.group(0)
-                parsed_outcome = json.loads(json_str)
-                print(f"Successfully parsed subtasks: {parsed_outcome}")
+            response = llm.invoke(formatted_prompt)
+            response_content = response.content
+            print(f"LLM Response:\n{response_content}")
+        except Exception as e:
+            print(f"Error calling LLM: {e}")
+            # Fallback to using original request
+            return {
+                "subtasks": [state.user_request],
+                "error_message": None
+            }
+
+        parsed_outcome: List[str] = []
+        error_parsing = None
+        
+        try:
+            # Try multiple approaches to extract JSON
+            
+            # Method 1: Look for content between first [ and last ]
+            start_idx = response_content.find('[')
+            end_idx = response_content.rfind(']')
+            
+            if start_idx != -1 and end_idx != -1 and end_idx > start_idx:
+                json_str = response_content[start_idx:end_idx + 1]
+                print(f"Extracted JSON string: {json_str}")
+                
+                try:
+                    parsed_data = json.loads(json_str)
+                    print(f"Parsed data: {parsed_data}")
+                    
+                    # Validate that it's a list
+                    if isinstance(parsed_data, list):
+                        # Convert all items to strings and filter out None/empty values
+                        string_items = []
+                        for item in parsed_data:
+                            if item is not None:
+                                if isinstance(item, str) and item.strip():
+                                    string_items.append(item.strip())
+                                elif not isinstance(item, str):
+                                    string_items.append(str(item).strip())
+                        
+                        if string_items:
+                            parsed_outcome = string_items
+                            print(f"Successfully parsed subtasks: {parsed_outcome}")
+                        else:
+                            error_parsing = "No valid string items found in the parsed list"
+                    else:
+                        error_parsing = f"Parsed JSON is not a list: {type(parsed_data)}"
+                        
+                except json.JSONDecodeError as je:
+                    error_parsing = f"JSON decode error: {je}"
+                    print(error_parsing)
             else:
-                error_parsing = (
-                    "Could not find valid JSON list of subtasks in the LLM response."
-                )
+                error_parsing = "Could not find valid JSON array brackets in the LLM response."
                 print(error_parsing)
 
-        except (json.JSONDecodeError, ValidationError, Exception) as e:
-            error_parsing = f"Failed to parse or validate LLM response into SubTasks list: {e}. Response was: {response_content}"
+        except Exception as e:
+            error_parsing = f"General parsing error: {e}"
             print(error_parsing)
 
-        update_dict = {}
-        if parsed_outcome:
-            update_dict["subtasks"] = parsed_outcome
-            update_dict["error_message"] = None
-        else:
-            update_dict["subtasks"] = []
-            update_dict["error_message"] = (
-                state.error_message
-                or error_parsing
-                or "Planner failed to produce valid subtasks."
-            )
+        # If parsing failed, use fallback
+        if not parsed_outcome:
+            print("Parsing failed, using fallback: original user request as single subtask")
+            parsed_outcome = [state.user_request]
+
+        update_dict = {
+            "subtasks": parsed_outcome,
+            "error_message": None
+        }
+        
+        print(f"Final subtasks: {update_dict['subtasks']}")
         return update_dict
+        
     return planner_node
 
 
