@@ -1,5 +1,7 @@
 import json
 import time
+import psutil
+import gc
 
 from langgraph.graph import StateGraph, END
 
@@ -152,6 +154,15 @@ for i, item in enumerate(benchmark_items):
     all_results.append(result_data)
 
     time.sleep(1)
+
+    if i % 10 == 0:  # Check every 10 benchmarks
+        process = psutil.Process()
+        memory_mb = process.memory_info().rss / 1024 / 1024
+        print(f"Memory usage: {memory_mb:.1f} MB")
+        
+        if memory_mb > 4000:  # If over 4GB
+            print("High memory usage detected, forcing garbage collection")
+            gc.collect()
 
 # --- Save All Results ---
 output_file = "results_all_4o_mini.json"

@@ -1,6 +1,8 @@
 import json
 import tempfile
 import uuid
+import shutil
+import atexit
 from typing import Dict, List, Optional, Any
 
 import regex as re
@@ -31,18 +33,23 @@ from tool_utils import (
 
 def create_agent():
     embeddings = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
-
     llm = ChatOpenAI(model=LLM_MODEL, api_key=OPENAI_API_KEY, temperature=0)
-
-    prompt_template = ChatPromptTemplate.from_messages(
-        [
-            ("system", AGENT_SYSTEM_PROMPT),
-            ("human", "{user_request}"),
-        ]
-    )
-
+    
+    # Create vector store once, outside the agent function
+    global_vectorstore = None
+    
     def _build_vectorstore(tools_dict: Dict[str, ToolSchema]) -> Chroma:
         tmp_dir = tempfile.mkdtemp(prefix=f"chroma_rag_tools_")
+        
+        # Register cleanup function
+        def cleanup():
+            try:
+                shutil.rmtree(tmp_dir, ignore_errors=True)
+            except:
+                pass
+        
+        atexit.register(cleanup)
+        
         docs: List[Document] = []
 
         for tool_name, schema in tools_dict.items():
@@ -60,27 +67,29 @@ def create_agent():
                 Document(page_content=page_text, metadata={"tool_name": tool_name})
             )
 
-        return Chroma.from_documents(
+        vectordb = Chroma.from_documents(
             documents=docs,
             embedding=embeddings,
-            collection_name=f"{uuid.uuid4().hex}"
+            collection_name=f"{uuid.uuid4().hex}",
+            persist_directory=tmp_dir  # Explicitly set directory
         )
 
+        return vectordb
+
     def agent_node(state: AgentState) -> Dict[str, Any]:
-        print(f"\n--- Agent Node ---")
-        print(f"User Request: {state.user_request}")
-        if state.error_message:
-            print(f"Previous Error (Retry Attempt {state.retry_count}): {state.error_message}")
-
+        nonlocal global_vectorstore
+        
         current_agent_tools = state.get_agent_tools()
-
-        vectordb = _build_vectorstore(current_agent_tools)
-
+        
+        # Only rebuild if tools changed significantly
+        if global_vectorstore is None:
+            global_vectorstore = _build_vectorstore(current_agent_tools)
+        
+        # Use the existing vectorstore
         ranked_names = []
-
         try:
             for task in state.subtasks:
-                retrieved_docs = vectordb.similarity_search(task, k=SUBTASK_TOP_RANK)
+                retrieved_docs = global_vectorstore.similarity_search(task, k=SUBTASK_TOP_RANK)
                 ranked_names += [
                     doc.metadata.get("tool_name")
                     for doc in retrieved_docs
@@ -93,18 +102,23 @@ def create_agent():
         if not ranked_names:
             ranked_names = list(current_agent_tools.keys())[:TOP_RANK]
 
-        while True:
+        # Add a limit to prevent infinite expansion
+        MAX_TOOLS = 50
+
+        while len(ranked_names) < MAX_TOOLS:
             tools_from_graph = set()
-            for tool_name in ranked_names:
+            for tool_name in ranked_names[-10:]:  # Only check recent additions
                 for link in state.tools_graph.links:
                     if tool_name == link.source and link.target not in ranked_names:
                         tools_from_graph.add(link.target)
                     elif tool_name == link.target and link.source not in ranked_names:
                         tools_from_graph.add(link.source)
-            for i in tools_from_graph:
-                ranked_names.append(i)
-            if len(tools_from_graph) == 0:
+            
+            if not tools_from_graph:
                 break
+            
+            for tool in list(tools_from_graph)[:10]:  # Limit additions per iteration
+                ranked_names.append(tool)
 
         unique_tool_names: set = set()
         top_tool_names = [
@@ -120,7 +134,12 @@ def create_agent():
         tool_desc_string = format_tool_descriptions(top_tools)
 
         # Format the prompt with current state
-        formatted_prompt = prompt_template.format_prompt(
+        formatted_prompt = ChatPromptTemplate.from_messages(
+            [
+                ("system", AGENT_SYSTEM_PROMPT),
+                ("human", "{user_request}"),
+            ]
+        ).format_prompt(
             tool_descriptions=tool_desc_string,
             user_request=state.user_request,
             error=state.error_message or "None",
