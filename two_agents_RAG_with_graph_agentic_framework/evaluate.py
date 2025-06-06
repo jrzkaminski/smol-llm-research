@@ -33,6 +33,7 @@ def calculate_metrics(
         "ToolAcc": 0.0,
         "ArgAcc": 0.0,
         "SeqAcc": 0.0,
+        "TotalCorrectSeq": 0,
         "Precision": 0.0,
         "Recall": 0.0,
         "F1": 0.0,
@@ -96,6 +97,7 @@ def calculate_metrics(
         if total_reference_input_sources > 0
         else 1.0
     )
+    metrics["TotalCorrectSeq"] = correct_input_sources
 
     # --- F1 Score (Set-based on tool names) ---
     gen_tool_names = [call.get("tool") for call in generated_calls if call.get("tool")]
@@ -145,7 +147,7 @@ if __name__ == "__main__":
 
     individual_metrics_data = []
     all_metrics_lists = {
-        "InstAcc": [], "ToolAcc": [], "ArgAcc": [], "SeqAcc": [],
+        "InstAcc": [], "ToolAcc": [], "ArgAcc": [], "SeqAcc": [], "TotalCorrectSeq": [],
         "Precision": [], "Recall": [], "F1": []
     }
 

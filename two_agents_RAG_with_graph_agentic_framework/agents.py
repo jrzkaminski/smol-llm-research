@@ -103,7 +103,7 @@ def create_agent():
             ranked_names = list(current_agent_tools.keys())[:TOP_RANK]
 
         # Add a limit to prevent infinite expansion
-        MAX_TOOLS = 50
+        MAX_TOOLS = 200
 
         while len(ranked_names) < MAX_TOOLS:
             tools_from_graph = set()

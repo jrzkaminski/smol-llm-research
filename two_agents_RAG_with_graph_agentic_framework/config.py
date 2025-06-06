@@ -1,6 +1,6 @@
 import os
 
-GRAPH_JSON_PATH = "data/ultratool/graph.json"
+GRAPH_JSON_PATH = "data/ultratool/new_graph.json"
 TOOLS_JSON_PATH = "data/ultratool/tools.json"
 BENCHMARK_JSON_PATH = "data/ultratool/benchmarks_enriched.json"
 
