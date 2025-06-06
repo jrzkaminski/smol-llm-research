@@ -1,0 +1,5189 @@
+[
+  {
+    "id": "benchmark_201",
+    "question": "Please inquire about the current debt amount of my credit card with the last five digits 12345, and deduct the corresponding 12000 RMB from my savings card number 6212345678900011 to repay this debt, then help me check the amount of the outstanding bill for the same credit card within 30 days after today.",
+    "generated_calls": [
+      {
+        "tool": "query_credit_card_debt",
+        "param": {
+          "account_id": "unknown",
+          "card_number": "unknown"
+        }
+      },
+      {
+        "tool": "credit_card_repayment",
+        "param": {
+          "overdraft_card_number": "6212345678900011",
+          "repayment_amount": 12000,
+          "payment_card_number": "6212345678900011",
+          "currency": "RMB"
+        }
+      },
+      {
+        "tool": "query_credit_card_debt",
+        "param": {
+          "account_id": 0,
+          "card_number": "***********12345"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": "Account ID",
+          "password": "Account Password",
+          "verification_code": "Verification Code"
+        }
+      },
+      {
+        "tool": "credit_card_debt",
+        "param": {
+          "credit_card_number": "Last five digits 12345"
+        }
+      },
+      {
+        "tool": "credit_card_repayment",
+        "param": {
+          "overdraft_card_number": "Last five digits 12345",
+          "repayment_amount": "12000",
+          "payment_card_number": "6212345678900011",
+          "currency": "RMB"
+        }
+      },
+      {
+        "tool": "credit_card_debt",
+        "param": {
+          "credit_card_number": "Last five digits 12345",
+          "date_range": "Within 30 days after today"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2179,
+    "completion_tokens": 347,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_202",
+    "question": "Please help me log into my online banking account using account ID 12345678, password abcd1234, and verification code 8888, then check the balance of my bank card 6225880112345678, and find a time deposit product with an annual interest rate of at least 3% and an initial deposit amount not exceeding 5000 yuan, and finally use my account funds to invest 5000 yuan in this product.",
+    "generated_calls": [
+      {
+        "tool": "loan_application",
+        "param": {
+          "account": "12345678",
+          "password": "abcd1234",
+          "captcha": "8888"
+        }
+      },
+      {
+        "tool": "check_balance",
+        "param": {
+          "account_id": "your_account_id",
+          "card_number": "6225880112345678",
+          "required_amount": 0
+        }
+      },
+      {
+        "tool": "search_deposit_products",
+        "param": {
+          "bank_name": "Any",
+          "product_type": "Time Deposit",
+          "min_annual_rate": 3,
+          "max_initial_amount": 5000
+        }
+      },
+      {
+        "tool": "purchase_fixed_deposit",
+        "param": {
+          "product_amount": 5000,
+          "interest_rate": 0,
+          "duration_years": 1,
+          "card_ending": "XXXX"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": "12345678",
+          "password": "abcd1234",
+          "verification_code": "8888"
+        }
+      },
+      {
+        "tool": "bank_balance_query",
+        "param": {
+          "bank_card_number": "6225880112345678"
+        }
+      },
+      {
+        "tool": "deposit_product_search",
+        "param": {
+          "product_type": "Time Deposit",
+          "product_rate": "3",
+          "minimum_deposit": "5000"
+        }
+      },
+      {
+        "tool": "fixed_deposit_transaction",
+        "param": {
+          "product_name": "<Name of the filtered product>",
+          "transfer_card_number": "6225880112345678",
+          "amount": "5000"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2683,
+    "completion_tokens": 367,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_203",
+    "question": "Please log into my online banking account using account ID 123456 and password abc123 as well as the verification code 7890 I received, check the balance of bank card number 6225880169871234, and after confirming the balance, remit 1000 RMB in real time from this card to Zhang Sanfeng's ICBC account 6222001234567890123.",
+    "generated_calls": [
+      {
+        "tool": "loan_application",
+        "param": {
+          "account": "123456",
+          "password": "abc123",
+          "captcha": ""
+        }
+      },
+      {
+        "tool": "check_balance",
+        "param": {
+          "account_id": "6225880169871234",
+          "card_number": "6225880169871234",
+          "required_amount": 0
+        }
+      },
+      {
+        "tool": "complete_transfer",
+        "param": {
+          "transfer_card_number": "your_card_number",
+          "amount": 1000,
+          "account_password": "your_account_password",
+          "verification_code": "your_verification_code"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": "123456",
+          "password": "abc123",
+          "verification_code": "7890"
+        }
+      },
+      {
+        "tool": "bank_balance_query",
+        "param": {
+          "bank_card_number": "6225880169871234"
+        }
+      },
+      {
+        "tool": "domestic_remittance",
+        "param": {
+          "payee_name": "张三丰",
+          "payee_card_number": "6222001234567890123",
+          "payee_bank": "工商银行",
+          "remittance_amount": "1000",
+          "remittance_method": "实时",
+          "payer_card_number": "6225880169871234"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2299,
+    "completion_tokens": 357,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_204",
+    "question": "Please modify my transaction ID T12345, correct the amount to 200 yuan, and provide feedback to customer service about my user account ID U67890, explaining the issue of the online store overcharging without notice. Request the platform to pay attention to prevent other consumers from being affected, and also file a complaint against merchant ID M12345, pointing out that their checkout system failed to clearly inform the price before payment, resulting in me being overcharged.",
+    "generated_calls": [
+      {
+        "tool": "modify_transaction",
+        "param": {
+          "transaction_id": "T12345",
+          "amount": 0,
+          "description": ""
+        }
+      },
+      {
+        "tool": "request_refund",
+        "param": {
+          "account_id": "user_account_id",
+          "merchant_id": "M12345",
+          "amount": "overcharged_amount",
+          "transaction_time": "transaction_time",
+          "description": "Complaint regarding unclear pricing information leading to overcharge."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "modify_transaction",
+        "param": {
+          "transaction_id": "T12345",
+          "amount": "200"
+        }
+      },
+      {
+        "tool": "customer_service",
+        "param": {
+          "account_id": "U67890",
+          "content": "The online store overcharged without notic",
+          "merchant_id": "M12345"
+        }
+      },
+      {
+        "tool": "complaint_merchant",
+        "param": {
+          "account_id": "U67890",
+          "merchant_id": "M12345",
+          "content": "The checkout system failed to clearly inform the price before paymen"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 17757,
+    "completion_tokens": 459,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_205",
+    "question": "Please use my identity information, including name Zhang San, ID number 123456789012345678 and verification code 8888, to inquire about the progress of the credit card application I submitted. Then log in to my online banking account with account ID abc123, password password456 and verification code 5566 to check the account balance of my bank card number 6222000001111111111, and inquire about the amount owed on my credit card account 6222888800000000. Finally, repay 2500 yuan from my debit card number 6222000001111111111 to the credit card account.",
+    "generated_calls": [
+      {
+        "tool": "application_progress_query",
+        "param": {
+          "name": "Zhang San",
+          "id_number": "123456789012345678",
+          "verification_code": "8888"
+        }
+      },
+      {
+        "tool": "loan_application",
+        "param": {
+          "account": "abc123",
+          "password": "password456",
+          "captcha": "5566"
+        }
+      },
+      {
+        "tool": "check_balance",
+        "param": {
+          "account_id": "6222000001111111111",
+          "card_number": "6222000001111111111",
+          "required_amount": 0
+        }
+      },
+      {
+        "tool": "query_credit_card_debt",
+        "param": {
+          "account_id": "6222888800000000",
+          "card_number": "6222888800000000"
+        }
+      },
+      {
+        "tool": "credit_card_repayment",
+        "param": {
+          "overdraft_card_number": "6222000001111111111",
+          "repayment_amount": 2500,
+          "payment_card_number": "credit_card_account",
+          "currency": "CNY"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "credit_card_progress",
+        "param": {
+          "name": "Zhang San",
+          "id_type": "ID card",
+          "id_number": "123456789012345678",
+          "verification_code": "8888"
+        }
+      },
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": "abc123",
+          "password": "password456",
+          "verification_code": "5566"
+        }
+      },
+      {
+        "tool": "bank_balance_query",
+        "param": {
+          "bank_card_number": "6222000001111111111"
+        }
+      },
+      {
+        "tool": "credit_card_debt",
+        "param": {
+          "credit_card_number": "6222888800000000"
+        }
+      },
+      {
+        "tool": "credit_card_repayment",
+        "param": {
+          "overdraft_card_number": "6222888800000000",
+          "repayment_amount": "2500",
+          "payment_card_number": "6222000001111111111",
+          "currency": "RMB"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 3197,
+    "completion_tokens": 522,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_206",
+    "question": "Please help me delete the transaction that was accidentally duplicated yesterday, the transaction ID is 123456789, and create a correct transaction record for me with Merchant A at 3 PM yesterday, the amount is 300 yuan, using my user account ID 987654321.",
+    "generated_calls": [
+      {
+        "tool": "del_transaction",
+        "param": {
+          "transaction_id": "123456789"
+        }
+      },
+      {
+        "tool": "create_transaction",
+        "param": {
+          "account_id": "987654321",
+          "merchant_id": "Merchant A",
+          "amount": 300,
+          "transaction_time": "2023-10-02T15:00:00",
+          "description": "Transaction for Merchant A"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "del_transaction",
+        "param": {
+          "transaction_id": "123456789"
+        }
+      },
+      {
+        "tool": "create_transaction",
+        "param": {
+          "account_id": "987654321",
+          "merchant_id": "Merchant A",
+          "amount": "300",
+          "transaction_time": "yesterday afternoon at 3 PM"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1308,
+    "completion_tokens": 234,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_207",
+    "question": "Please inquire about the debt amount of my credit card 6222002020202020, and use my payment card 6217002020202021 to pay off the corresponding RMB amount, then immediately tell me the current balance of this payment card.",
+    "generated_calls": [
+      {
+        "tool": "query_credit_card_debt",
+        "param": {
+          "account_id": "unknown",
+          "card_number": "6222002020202020"
+        }
+      },
+      {
+        "tool": "credit_card_repayment",
+        "param": {
+          "overdraft_card_number": "6217002020202021",
+          "repayment_amount": 0,
+          "payment_card_number": "6217002020202021",
+          "currency": "RMB"
+        }
+      },
+      {
+        "tool": "check_balance",
+        "param": {
+          "account_id": "6217002020202021",
+          "card_number": "6217002020202021",
+          "required_amount": 0
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "credit_card_debt",
+        "param": {
+          "credit_card_number": "6222002020202020"
+        }
+      },
+      {
+        "tool": "credit_card_repayment",
+        "param": {
+          "overdraft_card_number": "6222002020202020",
+          "repayment_amount": "<Current credit card debt>",
+          "payment_card_number": "6217002020202021",
+          "currency": "RMB"
+        }
+      },
+      {
+        "tool": "bank_balance_query",
+        "param": {
+          "bank_card_number": "6217002020202021"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1978,
+    "completion_tokens": 336,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_208",
+    "question": "I need to first check the current balance of my ICBC card 6222002021123456789, then find out the specific amount owed on my China Construction Bank credit card 6227002021123456789, and finally inquire about the debt situation on my Agricultural Bank of China credit card 6228002021123456789.",
+    "generated_calls": [
+      {
+        "tool": "check_balance",
+        "param": {
+          "account_id": "6222002021123456789",
+          "card_number": "6222002021123456789",
+          "required_amount": 0
+        }
+      },
+      {
+        "tool": "query_credit_card_debt",
+        "param": {
+          "account_id": "6227002021123456789",
+          "card_number": "6227002021123456789"
+        }
+      },
+      {
+        "tool": "query_credit_card_debt",
+        "param": {
+          "account_id": "Agricultural Bank of China",
+          "card_number": "6228002021123456789"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "bank_balance_query",
+        "param": {
+          "bank_card_number": "6222002021123456789"
+        }
+      },
+      {
+        "tool": "credit_card_debt",
+        "param": {
+          "credit_card_number": "6227002021123456789"
+        }
+      },
+      {
+        "tool": "credit_card_debt",
+        "param": {
+          "credit_card_number": "6228002021123456789"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2083,
+    "completion_tokens": 316,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_209",
+    "question": "Please address the issue of multiple charges that occurred at 8 PM last night between account ID 123456 and merchant ID 001, refund the extra 100 yuan deducted, and provide detailed information on this refund transaction. Additionally, I need to file a complaint regarding the merchant's consecutive double charges, expressing my doubts and dissatisfaction with their financial management.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "customer_service",
+        "param": {
+          "account_id": "123456",
+          "merchant_id": "001",
+          "content": "Address the issue of multiple charges at 8 PM last nigh"
+        }
+      },
+      {
+        "tool": "get_refund_transaction_details",
+        "param": {
+          "account_id": "123456",
+          "merchant_id": "001",
+          "transaction_time": "last night at 8 PM"
+        }
+      },
+      {
+        "tool": "complaint_merchant",
+        "param": {
+          "account_id": "123456",
+          "merchant_id": "001",
+          "content": "Complaint about the merchant's consecutive double charge"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_210",
+    "question": "I need to find a fixed deposit product with an interest rate of no less than 1.5%, the minimum deposit amount does not exceed 5000 yuan, and handle the business of depositing 5000 yuan, then check my bank card balance, and finally make a real-time remittance of 2000 yuan from this card to my brother Wang Qiang's account at the Bank of China, no need for postscripts or SMS notifications.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "deposit_product_search",
+        "param": {
+          "product_type": "fixed deposit",
+          "product_rate": "1.5",
+          "minimum_deposit": "5000"
+        }
+      },
+      {
+        "tool": "fixed_deposit_transaction",
+        "param": {
+          "product_name": "<Product name>",
+          "transfer_card_number": "User bank card number",
+          "amount": "5000"
+        }
+      },
+      {
+        "tool": "bank_balance_query",
+        "param": {
+          "bank_card_number": "User bank card number"
+        }
+      },
+      {
+        "tool": "domestic_remittance",
+        "param": {
+          "payee_name": "Wang Qiang",
+          "payee_card_number": "Bank of China account",
+          "payee_bank": "Bank of China",
+          "remittance_amount": "2000",
+          "remittance_method": "Real-time",
+          "payer_card_number": "User bank card number",
+          "postscript": "",
+          "sms_notification": ""
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_211",
+    "question": "Please help me log into my bank account using account number 123456 and password mypassword, then check my bank card balance.",
+    "generated_calls": [
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": 123456,
+          "verification_code": "your_verification_code",
+          "username": "your_username",
+          "password": "your_password"
+        }
+      },
+      {
+        "tool": "bank_balance_query",
+        "param": {
+          "bank_card_number": "your_bank_card_number_here"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": "123456",
+          "password": "mypassword"
+        }
+      },
+      {
+        "tool": "balance_query",
+        "param": {
+          "account_id": "123456"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1436,
+    "completion_tokens": 110,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_212",
+    "question": "I need to know the current exchange rate of RMB to Japanese Yen, so as to exchange 5000 RMB for the corresponding amount of Japanese Yen, and I would like to know the price of a plane ticket to Tokyo within a week from now.",
+    "generated_calls": [
+      {
+        "tool": "travel_assistant",
+        "param": {
+          "destination": "Japan",
+          "departure_date": "",
+          "return_date": "",
+          "language": "",
+          "currency": "JPY",
+          "itinerary": false
+        }
+      },
+      {
+        "tool": "travel_info_search",
+        "param": {
+          "destination": "Tokyo",
+          "startDate": "2023-10-30",
+          "endDate": "2023-11-06"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "currency_exchange_rate",
+        "param": {
+          "currency_from": "RMB",
+          "currency_to": "Japanese Yen"
+        }
+      },
+      {
+        "tool": "foreign_currency_exchange",
+        "param": {
+          "amount": "5000",
+          "sourceCurrency": "RMB",
+          "targetCurrency": "Japanese Yen",
+          "rate": "<current exchange rate>"
+        }
+      },
+      {
+        "tool": "flight_price_query",
+        "param": {
+          "departure": "current city",
+          "destination": "Tokyo",
+          "time_range": "within a week from now"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2568,
+    "completion_tokens": 253,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_213",
+    "question": "I need to understand the credit rating for 2023, the credit score for 2022, and the overall corporate credit assessment of Wisdom Sprout Technology Co., Ltd., which was established in Beijing in 2015 and mainly operates in the information technology industry.",
+    "generated_calls": [
+      {
+        "tool": "enterprise_credit_search",
+        "param": {
+          "companyName": "N/A",
+          "fiscalYear": "2023",
+          "sector": "N/A"
+        }
+      },
+      {
+        "tool": "company_credit_score",
+        "param": {
+          "companyName": "Wisdom Sprout Technology Co., Ltd.",
+          "industry": "Technology",
+          "establishmentDate": "N/A"
+        }
+      },
+      {
+        "tool": "enterprise_credit_search",
+        "param": {
+          "companyName": "Wisdom Sprout Technology Co., Ltd.",
+          "fiscalYear": "2023",
+          "sector": "Technology"
+        }
+      },
+      {
+        "tool": "corporate_credit_information",
+        "param": {
+          "companyName": "Wisdom Sprout Technology Co., Ltd.",
+          "businessLicense": "N/A",
+          "queryDate": "2023-10-01"
+        }
+      },
+      {
+        "tool": "company_credit_check",
+        "param": {
+          "companyName": "Wisdom Sprout Technology Co., Ltd.",
+          "country": "China",
+          "checkDate": "2023-10-01",
+          "reportingPeriod": "2023",
+          "region": "N/A",
+          "checkType": "overall"
+        }
+      },
+      {
+        "tool": "company_credit_score",
+        "param": {
+          "companyName": "Wisdom Sprout Technology Co., Ltd.",
+          "industry": "Information Technology",
+          "establishmentDate": "2015"
+        }
+      },
+      {
+        "tool": "enterprise_credit_report",
+        "param": {
+          "companyName": "Wisdom Sprout Technology Co., Ltd.",
+          "registerDate": "2015",
+          "region": "Beijing"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "enterprise_credit_search",
+        "param": {
+          "companyName": "Wisdom Sprout Technology Co",
+          "fiscalYear": "2023",
+          "sector": "Information Technology Industry"
+        }
+      },
+      {
+        "tool": "company_credit_score",
+        "param": {
+          "companyName": "Wisdom Sprout Technology Co",
+          "industry": "Information Technology Industry",
+          "establishmentDate": "2015"
+        }
+      },
+      {
+        "tool": "company_credit_check",
+        "param": {
+          "companyName": "Wisdom Sprout Technology Co",
+          "reportingPeriod": "2023",
+          "region": "Beijing"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2585,
+    "completion_tokens": 488,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_214",
+    "question": "Please help me check the debt amount on my credit card 6225887854561234, then use my savings card 6214988712345678 to pay off the same amount, and after completing the repayment, inquire and inform me of the current balance on that savings card.",
+    "generated_calls": [
+      {
+        "tool": "query_credit_card_debt",
+        "param": {
+          "account_id": "your_account_id",
+          "card_number": "6225887854561234"
+        }
+      },
+      {
+        "tool": "credit_card_repayment",
+        "param": {
+          "overdraft_card_number": "6214988712345678",
+          "repayment_amount": 0,
+          "payment_card_number": "6214988712345678",
+          "currency": "CNY"
+        }
+      },
+      {
+        "tool": "credit_card_repayment",
+        "param": {
+          "overdraft_card_number": "6214988712345678",
+          "repayment_amount": 0,
+          "payment_card_number": "6214988712345678",
+          "currency": "USD"
+        }
+      },
+      {
+        "tool": "check_and_record_balance",
+        "param": {}
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "credit_card_debt",
+        "param": {
+          "credit_card_number": "6225887854561234"
+        }
+      },
+      {
+        "tool": "credit_card_repayment",
+        "param": {
+          "overdraft_card_number": "6225887854561234",
+          "repayment_amount": "<current credit card debt amount>",
+          "payment_card_number": "6214988712345678"
+        }
+      },
+      {
+        "tool": "bank_balance_query",
+        "param": {
+          "bank_card_number": "6214988712345678"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1897,
+    "completion_tokens": 367,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_215",
+    "question": "I need to immediately create a new transaction using my user account ID U123456 and merchant ID M654321, set the amount to 500 yuan, time as now, then change the transaction amount to 1000 yuan and add a description 'Emergency supplies purchase', and finally, since this is a misoperation, I need to delete it.",
+    "generated_calls": [
+      {
+        "tool": "create_transaction",
+        "param": {
+          "account_id": "U123456",
+          "merchant_id": "M654321",
+          "amount": 0,
+          "transaction_time": "",
+          "description": ""
+        }
+      },
+      {
+        "tool": "modify_transaction",
+        "param": {
+          "transaction_id": "transaction_id_placeholder",
+          "amount": 500,
+          "description": "Updated transaction amount to 500 yuan"
+        }
+      },
+      {
+        "tool": "check_and_record_recent_transaction",
+        "param": {}
+      },
+      {
+        "tool": "modify_transaction",
+        "param": {
+          "transaction_id": "transaction_id_placeholder",
+          "amount": 1000,
+          "description": "Updated transaction amount"
+        }
+      },
+      {
+        "tool": "modify_transaction",
+        "param": {
+          "transaction_id": "transaction_id_placeholder",
+          "amount": 0,
+          "description": "Emergency supplies purchase"
+        }
+      },
+      {
+        "tool": "request_transaction_deletion",
+        "param": {
+          "account_id": "user_account_id",
+          "transaction_id": "erroneous_transaction_id"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "create_transaction",
+        "param": {
+          "account_id": "U123456",
+          "merchant_id": "M654321",
+          "amount": "500",
+          "transaction_time": "now"
+        }
+      },
+      {
+        "tool": "modify_transaction",
+        "param": {
+          "transaction_id": "<created transaction ID>",
+          "amount": "1000",
+          "description": "Emergency supplies purchase"
+        }
+      },
+      {
+        "tool": "del_transaction",
+        "param": {
+          "transaction_id": "<created transaction ID>"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 3444,
+    "completion_tokens": 427,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_216",
+    "question": "Please log into my bank account using account ID 123456 and password abcdef, check the amount of US dollars I currently hold, and purchase 500 euros for me at the current market price after confirmation.",
+    "generated_calls": [
+      {
+        "tool": "loan_application",
+        "param": {
+          "account": "123456",
+          "password": "abcdef",
+          "captcha": ""
+        }
+      },
+      {
+        "tool": "foreign_currency_query",
+        "param": {
+          "currency_type": "USD"
+        }
+      },
+      {
+        "tool": "check_and_calculate_purchase",
+        "param": {
+          "currency_type": "EUR",
+          "buy_amount": 500
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": "123456",
+          "password": "abcdef"
+        }
+      },
+      {
+        "tool": "foreign_currency_query",
+        "param": {
+          "currency_type": "US dollar"
+        }
+      },
+      {
+        "tool": "foreign_currency_purchase",
+        "param": {
+          "currency_type": "Euro",
+          "buy_amount": "500",
+          "account_balance": "<the checked US dollar balance>"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1858,
+    "completion_tokens": 237,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_217",
+    "question": "Please log into my account using username user123 and password password321, check the amount of British pounds I currently hold, and purchase an additional 5000 British pounds at the latest exchange rate.",
+    "generated_calls": [
+      {
+        "tool": "loan_application",
+        "param": {
+          "account": "user123",
+          "password": "password321",
+          "captcha": ""
+        }
+      },
+      {
+        "tool": "foreign_currency_query",
+        "param": {
+          "currency_type": "GBP"
+        }
+      },
+      {
+        "tool": "foreign_exchange_rate_search",
+        "param": {
+          "date": "2023-10-01",
+          "currencyName": "British Pound"
+        }
+      },
+      {
+        "tool": "special_foreign_currency_purchase",
+        "param": {
+          "currency_type": "GBP",
+          "purchased_amount": 5000,
+          "account_balance": "YOUR_ACCOUNT_BALANCE"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": "user123",
+          "password": "password321"
+        }
+      },
+      {
+        "tool": "foreign_currency_query",
+        "param": {
+          "currency_type": "British pounds"
+        }
+      },
+      {
+        "tool": "exchange_rate_query",
+        "param": {
+          "currency_type": "British pounds"
+        }
+      },
+      {
+        "tool": "currency_conversion",
+        "param": {
+          "amount": "5000",
+          "exchange_rate": "Current exchange rate of British pounds"
+        }
+      },
+      {
+        "tool": "foreign_currency_purchase",
+        "param": {
+          "currency_type": "British pounds",
+          "buy_amount": "Local currency amount required to purchase 5000 British pounds"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1819,
+    "completion_tokens": 247,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_218",
+    "question": "I need to file a complaint against merchant ID 654321 because I received a blue shirt instead of the red T-shirt I purchased. Also, please change the order amount for transaction ID 987654 to 0 and note that the reason is due to the product description not matching. Lastly, I need to inquire about the delivery status of order number 765432, as it has already exceeded the expected delivery time.",
+    "generated_calls": [
+      {
+        "tool": "navigate_to_orders_page",
+        "param": {}
+      },
+      {
+        "tool": "display_order_details",
+        "param": {}
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "complaint_merchant",
+        "param": {
+          "account_id": "user account ID",
+          "merchant_id": "654321",
+          "content": "Received a blue shirt instead of a red T-shirt"
+        }
+      },
+      {
+        "tool": "modify_transaction",
+        "param": {
+          "transaction_id": "987654",
+          "amount": "0",
+          "description": "Product description does not match"
+        }
+      },
+      {
+        "tool": "check_delivery_status",
+        "param": {
+          "order_id": "765432"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1561,
+    "completion_tokens": 199,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_219",
+    "question": "Please query and adjust the transaction record at the SuperMarket merchant for my account ID 123456789 from yesterday, change the incorrectly displayed amount of 300 yuan to the actual 500 yuan, then delete this modified transaction record, and report the issue of incorrect amount displayed by the system to customer service, requesting them to check the system to avoid similar errors in the future.",
+    "generated_calls": [
+      {
+        "tool": "query_transaction",
+        "param": {
+          "account_id": "123456789",
+          "merchant_id": "SuperMarket",
+          "transaction_time": "",
+          "amount": 0,
+          "date": "2023-10-02"
+        }
+      },
+      {
+        "tool": "update_financial_report",
+        "param": {
+          "transaction_id": "transaction_id_placeholder",
+          "new_amount": 500
+        }
+      },
+      {
+        "tool": "del_transaction",
+        "param": {
+          "transaction_id": "modified_transaction_id"
+        }
+      },
+      {
+        "tool": "query_bank_customer_service",
+        "param": {}
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "find_transaction",
+        "param": {
+          "account_id": "123456789",
+          "merchant_name": "SuperMarket",
+          "transaction_time": "yesterday's date"
+        }
+      },
+      {
+        "tool": "modify_transaction",
+        "param": {
+          "transaction_id": "<specific transaction record's transaction ID>",
+          "amount": "500"
+        }
+      },
+      {
+        "tool": "del_transaction",
+        "param": {
+          "transaction_id": "<specific transaction record's transaction ID>"
+        }
+      },
+      {
+        "tool": "customer_service",
+        "param": {
+          "account_id": "123456789",
+          "content": "The system displays an incorrect amoun"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2863,
+    "completion_tokens": 306,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_220",
+    "question": "Please modify last night's bill, correct the amount of transaction ID 20230825TXN789 to 500 yuan while keeping the description unchanged, and delete the bill record of transaction ID 20230730TXN456, and help me contact customer service, using my account ID123456789, to inquire about how to operate the fund refund within the account, especially the specific steps about canceling a transaction.",
+    "generated_calls": [
+      {
+        "tool": "modify_transaction",
+        "param": {
+          "transaction_id": "20230825TXN789",
+          "amount": 500,
+          "description": "Unchanged"
+        }
+      },
+      {
+        "tool": "del_transaction",
+        "param": {
+          "transaction_id": "20230730TXN456"
+        }
+      },
+      {
+        "tool": "query_bank_customer_service",
+        "param": {}
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "modify_transaction",
+        "param": {
+          "transaction_id": "20230825TXN789",
+          "amount": "500"
+        }
+      },
+      {
+        "tool": "del_transaction",
+        "param": {
+          "transaction_id": "20230730TXN456"
+        }
+      },
+      {
+        "tool": "customer_service",
+        "param": {
+          "account_id": "123456789",
+          "content": "The specific steps for operating fund refund within the accoun"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2514,
+    "completion_tokens": 289,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_221",
+    "question": "I would like to check my bank account balance, the account number is 12345, and the password is abcd1234.\n",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": "12345",
+          "password": "abcd1234"
+        }
+      },
+      {
+        "tool": "balance_query",
+        "param": {
+          "account_id": "12345"
+        }
+      },
+      {
+        "tool": "account_logout",
+        "param": {
+          "account_id": "12345"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_222",
+    "question": "Please provide me with the current prices of gold, silver, and platinum, as well as their price change percentages for today, this week, this month, and this year. Also, verify if the price mentioned in my \"Gold Investment Purchase Agreement\" is consistent with the current market price, especially the clause that states 'Party A shall purchase 20 ounces of gold from Party B at the price of $1800 per ounce'.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "precious_metals_quotes_search",
+        "param": {
+          "metalsType": "gold"
+        }
+      },
+      {
+        "tool": "precious_metals_quotes_search",
+        "param": {
+          "metalsType": "silver"
+        }
+      },
+      {
+        "tool": "precious_metals_quotes_search",
+        "param": {
+          "metalsType": "platinum"
+        }
+      },
+      {
+        "tool": "contract_content_search",
+        "param": {
+          "input": "Gold Investment Purchase Agreement",
+          "contractType": "investment agreement",
+          "contractName": "Gold Investment Purchase Agreement"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_223",
+    "question": "Please log into my account using my account ID 123456 and password 78910, and tell me what is the balance of my account today, on March 15, 2023.",
+    "generated_calls": [
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": 123456,
+          "verification_code": "",
+          "username": "",
+          "password": ""
+        }
+      },
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": 1,
+          "verification_code": "123456",
+          "username": "user_example",
+          "password": "78910"
+        }
+      },
+      {
+        "tool": "current_balance_query",
+        "param": {}
+      },
+      {
+        "tool": "current_balance_query",
+        "param": {}
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": "123456",
+          "password": "78910"
+        }
+      },
+      {
+        "tool": "account_balance_query",
+        "param": {
+          "date": "March 1",
+          "account_id": "123456"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 9195,
+    "completion_tokens": 604,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_224",
+    "question": "I need to find a suitable annual payment health insurance product for middle-aged people provided by Ping An Insurance Company, and I want to confirm whether the personal information update for my customer ID PA12345678 has been processed.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "insurance_product_search",
+        "param": {
+          "insuranceCompany": "Ping An Insurance Company",
+          "productCategory": "Health Insurance",
+          "paymentMethod": "Annual",
+          "targetAudience": "Middle-aged people"
+        }
+      },
+      {
+        "tool": "insurance_customer_update",
+        "param": {
+          "customerID": "PA12345678"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_225",
+    "question": "I need to find a fixed deposit product with an annual interest rate of at least 4%, the initial deposit amount should not exceed 50,000 yuan, and to handle a deposit of 50,000 yuan from my ICBC card 622200202003056789, then I also need to check the balance of this card, the password is 998877.",
+    "generated_calls": [
+      {
+        "tool": "search_deposit_products",
+        "param": {
+          "bank_name": "",
+          "product_type": "Fixed Deposit",
+          "min_annual_rate": 4,
+          "max_initial_amount": 1000000
+        }
+      },
+      {
+        "tool": "deposit_product_search",
+        "param": {
+          "product_type": "Time Deposit",
+          "product_rate": 0,
+          "minimum_deposit": 50000
+        }
+      },
+      {
+        "tool": "submit_deposit",
+        "param": {
+          "account_name": "ICBC Deposit",
+          "deposit_amount": 50000,
+          "accountNumber": "622200202003056789",
+          "deposit_term": "Time Deposit",
+          "product_id": "default_product_id"
+        }
+      },
+      {
+        "tool": "check_balance",
+        "param": {
+          "account_id": "622200202003056789",
+          "card_number": "622200202003056789",
+          "required_amount": 0
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "deposit_product_search",
+        "param": {
+          "product_type": "Fixed deposit",
+          "product_rate": "4",
+          "minimum_deposit": "50000"
+        }
+      },
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": "622200202003056789",
+          "password": "998877",
+          "verification_code": "The obtained verification code"
+        }
+      },
+      {
+        "tool": "fixed_deposit_transaction",
+        "param": {
+          "product_name": "<The name of the best fixed deposit product filtered>",
+          "transfer_card_number": "622200202003056789",
+          "amount": "50000"
+        }
+      },
+      {
+        "tool": "bank_balance_query",
+        "param": {
+          "bank_card_number": "622200202003056789"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2810,
+    "completion_tokens": 446,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_226",
+    "question": "Please perform a real-time query and inform me how much Japanese Yen can be exchanged with 5000 Chinese Yuan using the latest exchange rate, and also tell me how much Chinese Yuan is 100 Euros according to the current exchange rate.",
+    "generated_calls": [
+      {
+        "tool": "exchange_rate_query",
+        "param": {
+          "currency_type": "CNYJPY"
+        }
+      },
+      {
+        "tool": "currency_conversion",
+        "param": {
+          "amount": 5000,
+          "from_currency": "CNY",
+          "to_currency": "JPY",
+          "exchange_rate": "latest_exchange_rate_placeholder",
+          "date": "2023-10-01"
+        }
+      },
+      {
+        "tool": "foreign_exchange_rate_search",
+        "param": {
+          "date": "2023-10-01",
+          "currencyName": "EUR"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "currency_conversion",
+        "param": {
+          "amount": "1",
+          "from_currency": "CNY",
+          "to_currency": "JPY"
+        }
+      },
+      {
+        "tool": "currency_conversion",
+        "param": {
+          "amount": "1",
+          "from_currency": "EUR",
+          "to_currency": "CNY"
+        }
+      },
+      {
+        "tool": "currency_conversion",
+        "param": {
+          "amount": "5000",
+          "from_currency": "CNY",
+          "to_currency": "JPY"
+        }
+      },
+      {
+        "tool": "currency_conversion",
+        "param": {
+          "amount": "100",
+          "from_currency": "EUR",
+          "to_currency": "CNY"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1375,
+    "completion_tokens": 248,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_227",
+    "question": "I need to use my account ID 123456789 and password abc@xyz123 along with the most recently received verification code 778899 to log into my bank account, then check the current debt amount of the credit card number 987654321 that is bound, and use my savings card number 123123123 to make a repayment in RMB.",
+    "generated_calls": [
+      {
+        "tool": "loan_application",
+        "param": {
+          "account": "123456789",
+          "password": "abc@xyz123",
+          "captcha": "778899"
+        }
+      },
+      {
+        "tool": "query_credit_card_debt",
+        "param": {
+          "account_id": "unknown",
+          "card_number": "987654321"
+        }
+      },
+      {
+        "tool": "credit_card_repayment",
+        "param": {
+          "overdraft_card_number": "123123123",
+          "repayment_amount": 0,
+          "payment_card_number": "123123123",
+          "currency": "RMB"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": "123456789",
+          "password": "abc@xyz123",
+          "verification_code": "778899"
+        }
+      },
+      {
+        "tool": "credit_card_debt",
+        "param": {
+          "credit_card_number": "987654321"
+        }
+      },
+      {
+        "tool": "credit_card_repayment",
+        "param": {
+          "overdraft_card_number": "987654321",
+          "repayment_amount": "<Queried debt amount>",
+          "payment_card_number": "123123123",
+          "currency": "RMB"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2091,
+    "completion_tokens": 303,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_228",
+    "question": "I need to purchase 5000 euros for a business trip to Europe departing tomorrow, and find the contact information of Wang Xiaomei, the financial manager of our company's finance department, to handle some financial affairs.",
+    "generated_calls": [
+      {
+        "tool": "special_foreign_currency_purchase",
+        "param": {
+          "currency_type": "Euros",
+          "purchased_amount": 5000,
+          "account_balance": 0
+        }
+      },
+      {
+        "tool": "query_bank_customer_service",
+        "param": {}
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "special_foreign_currency_purchase",
+        "param": {
+          "currency_type": "Euro",
+          "purchased_amount": "5000",
+          "account_balance": "User's bank account balance"
+        }
+      },
+      {
+        "tool": "internal_person_search",
+        "param": {
+          "name": "Wang Xiaomei"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1508,
+    "completion_tokens": 106,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_229",
+    "question": "Please remove the unauthorized transaction record with transaction ID 123456789, and amend another transaction amount to 500 yuan with transaction ID 987654321, finally help me to file a complaint against the merchant with account ID A12345 and merchant ID M54321, as they have made transactions without my consent.",
+    "generated_calls": [
+      {
+        "tool": "del_transaction",
+        "param": {
+          "transaction_id": "123456789"
+        }
+      },
+      {
+        "tool": "modify_transaction",
+        "param": {
+          "transaction_id": "987654321",
+          "amount": 500,
+          "description": ""
+        }
+      },
+      {
+        "tool": "investigate_unauthorized_transaction",
+        "param": {
+          "account_id": "A12345",
+          "transaction_id": "unknown",
+          "transaction_date": "unknown",
+          "transaction_amount": 0
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "del_transaction",
+        "param": {
+          "transaction_id": "123456789"
+        }
+      },
+      {
+        "tool": "modify_transaction",
+        "param": {
+          "transaction_id": "987654321",
+          "amount": "500"
+        }
+      },
+      {
+        "tool": "complaint_merchant",
+        "param": {
+          "account_id": "A12345",
+          "merchant_id": "M54321",
+          "content": "Transactions were made without my consent"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1891,
+    "completion_tokens": 271,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_230",
+    "question": "Please help me log in to my online banking account using account ID user123 and password pwd456 as well as the verification code 7890 I received, then transfer 5000 yuan from my savings card number 6221000000000000 to pay off the overdraft amount on my credit card number 6222000000000000.",
+    "generated_calls": [
+      {
+        "tool": "loan_application",
+        "param": {
+          "account": "user123",
+          "password": "pwd456",
+          "captcha": ""
+        }
+      },
+      {
+        "tool": "query_credit_card_debt",
+        "param": {
+          "account_id": "your_account_id",
+          "card_number": "6222000000000000"
+        }
+      },
+      {
+        "tool": "credit_card_repayment",
+        "param": {
+          "overdraft_card_number": "6222000000000000",
+          "repayment_amount": "debt_amount",
+          "payment_card_number": "your_payment_card_number",
+          "currency": "your_currency"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": "user123",
+          "password": "pwd456",
+          "verification_code": "7890"
+        }
+      },
+      {
+        "tool": "credit_card_repayment",
+        "param": {
+          "overdraft_card_number": "6222000000000000",
+          "repayment_amount": "5000",
+          "payment_card_number": "6221000000000000",
+          "currency": "RMB"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2627,
+    "completion_tokens": 408,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_231",
+    "question": "Please use today's date as a reference to inquire about the current price of Nike sports shoes in Shanghai, and compare the prices of the product with the unique identifier NK-00123 on the JD.com and Tmall e-commerce platforms, so that I can understand where it is more cost-effective to purchase.",
+    "generated_calls": [
+      {
+        "tool": "get_current_date",
+        "param": {}
+      },
+      {
+        "tool": "price_search",
+        "param": {
+          "productId": 0,
+          "vendorId": 0,
+          "date": "2023-10-01",
+          "productName": "Nike sports shoes",
+          "productType": "Footwear",
+          "location": "Shanghai"
+        }
+      },
+      {
+        "tool": "price_search",
+        "param": {
+          "productId": "NK-00123",
+          "vendorId": 3,
+          "date": "2023-10-01",
+          "productName": "Product with ID NK-00123",
+          "productType": "General",
+          "location": "China"
+        }
+      },
+      {
+        "tool": "compare_shopping_prices",
+        "param": {
+          "item_name": "product_name_placeholder",
+          "amazon_price": 0,
+          "alibaba_price": 0,
+          "jd_price": 0,
+          "discount_code": "discount_code_placeholder",
+          "shipment_fee": 0,
+          "user_location": "user_location_placeholder"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "price_comparison_tool",
+        "param": {
+          "productID": "NK-00123",
+          "storeName": "JD.com",
+          "date": "today's date"
+        }
+      },
+      {
+        "tool": "price_comparison_tool",
+        "param": {
+          "productID": "NK-00123",
+          "storeName": "Tmall",
+          "date": "today's date"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2940,
+    "completion_tokens": 358,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_232",
+    "question": "Please help me log in to the online banking using my account ID 12345678, password abcd1234 and verification code 8888, then repay 1000 RMB to my credit card number 987654321 using my savings card number 1234567890123456, and check the progress of my credit card application using my name Zhang San, ID number 110101199001011234 and the latest verification code 5566.",
+    "generated_calls": [
+      {
+        "tool": "loan_application",
+        "param": {
+          "account": "12345678",
+          "password": "abcd1234",
+          "captcha": "8888"
+        }
+      },
+      {
+        "tool": "credit_card_repayment",
+        "param": {
+          "overdraft_card_number": "1234567890123456",
+          "repayment_amount": 1000,
+          "payment_card_number": "987654321",
+          "currency": "RMB"
+        }
+      },
+      {
+        "tool": "application_progress_query",
+        "param": {
+          "name": "Zhang San",
+          "id_number": "110101199001011234",
+          "verification_code": "5566"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": "12345678",
+          "password": "abcd1234",
+          "verification_code": "8888"
+        }
+      },
+      {
+        "tool": "credit_card_repayment",
+        "param": {
+          "overdraft_card_number": "987654321",
+          "repayment_amount": "1000",
+          "payment_card_number": "1234567890123456",
+          "currency": "RMB"
+        }
+      },
+      {
+        "tool": "credit_card_progress",
+        "param": {
+          "name": "Zhang San",
+          "id_type": "ID card",
+          "id_number": "110101199001011234",
+          "verification_code": "5566"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2182,
+    "completion_tokens": 315,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_233",
+    "question": "I would like to inquire about the login status of the account 1029384756, the password is ienf2903.\n",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": "1029384756",
+          "password": "ienf2903"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_234",
+    "question": "I need to log into my online banking account at Ping An Bank, the account number is 123456, and the password is ABC666.\n",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": "123456",
+          "password": "ABC666"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_235",
+    "question": "Please log into my account using account ID 123456 and password abc123, purchase foreign exchange worth 5000 US dollars, and check the total amount of Euros I currently hold.",
+    "generated_calls": [
+      {
+        "tool": "loan_application",
+        "param": {
+          "account": "123456",
+          "password": "abc123",
+          "captcha": ""
+        }
+      },
+      {
+        "tool": "special_foreign_currency_purchase",
+        "param": {
+          "currency_type": "USD",
+          "purchased_amount": 5000,
+          "account_balance": 0
+        }
+      },
+      {
+        "tool": "foreign_currency_query",
+        "param": {
+          "currency_type": "EUR"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": "123456",
+          "password": "abc123"
+        }
+      },
+      {
+        "tool": "foreign_currency_purchase",
+        "param": {
+          "currency_type": "US dollars",
+          "buy_amount": "5000"
+        }
+      },
+      {
+        "tool": "foreign_currency_query",
+        "param": {
+          "currency_type": "Euro"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1912,
+    "completion_tokens": 253,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_236",
+    "question": "Please log into my bank account using account ID 123456 and password abc123, inquire and tell me the current purchase price of US dollars, and execute the operation to purchase 5000 US dollars.",
+    "generated_calls": [
+      {
+        "tool": "query_currency_price",
+        "param": {
+          "currency_type": "USD"
+        }
+      },
+      {
+        "tool": "special_foreign_currency_purchase",
+        "param": {
+          "currency_type": "USD",
+          "purchased_amount": 5000,
+          "account_balance": 0
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": "123456",
+          "password": "abc123"
+        }
+      },
+      {
+        "tool": "foreign_currency_query",
+        "param": {
+          "currency_type": "US dollars"
+        }
+      },
+      {
+        "tool": "foreign_currency_purchase",
+        "param": {
+          "currency_type": "US dollars",
+          "buy_amount": "5000",
+          "buy_price": "<Current purchase price of US dollars>"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1871,
+    "completion_tokens": 198,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_237",
+    "question": "Please inquire about the current debt amount of my credit card account 6225880143210011, and use my savings account 6225778999003344 to pay off the entire debt of 4800.00 RMB.",
+    "generated_calls": [
+      {
+        "tool": "savings_account_balance_query",
+        "param": {
+          "card_ending": "3344"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "credit_card_debt",
+        "param": {
+          "credit_card_number": "6225880143210011"
+        }
+      },
+      {
+        "tool": "credit_card_repayment",
+        "param": {
+          "overdraft_card_number": "6225880143210011",
+          "repayment_amount": "<current debt amount>",
+          "payment_card_number": "6225778999003344",
+          "currency": "RMB"
+        }
+      },
+      {
+        "tool": "credit_card_debt",
+        "param": {
+          "credit_card_number": "6225880143210011"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1050,
+    "completion_tokens": 82,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_238",
+    "question": "First, I need to check the progress of my credit card application under my ID card, then check the balance of my ICBC (Industrial and Commercial Bank of China) card, and inquire about the debt amount of my China Merchants Bank credit card. Finally, I want to use the balance of my ICBC card to pay off the 500 yuan debt on my China Merchants Bank credit card.",
+    "generated_calls": [
+      {
+        "tool": "application_progress_query",
+        "param": {
+          "name": "Your Name",
+          "id_number": "Your ID Number",
+          "verification_code": "Your Verification Code"
+        }
+      },
+      {
+        "tool": "navigate_to_balance_page",
+        "param": {}
+      },
+      {
+        "tool": "query_credit_card_debt",
+        "param": {
+          "account_id": "your_account_id",
+          "card_number": "your_card_number"
+        }
+      },
+      {
+        "tool": "query_credit_card_debt",
+        "param": {
+          "account_id": "your_account_id",
+          "card_number": "your_card_number"
+        }
+      },
+      {
+        "tool": "credit_card_repayment",
+        "param": {
+          "overdraft_card_number": "your_icbc_card_number",
+          "repayment_amount": 500,
+          "payment_card_number": "your_china_merchants_card_number",
+          "currency": "CNY"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "credit_card_progress",
+        "param": {
+          "name": "User Name",
+          "id_type": "ID Card",
+          "id_number": "User ID Card Number",
+          "verification_code": "Verification Code"
+        }
+      },
+      {
+        "tool": "bank_balance_query",
+        "param": {
+          "bank_card_number": "ICBC Card Number"
+        }
+      },
+      {
+        "tool": "credit_card_debt",
+        "param": {
+          "credit_card_number": "China Merchants Bank Credit Card Number"
+        }
+      },
+      {
+        "tool": "credit_card_repayment",
+        "param": {
+          "overdraft_card_number": "China Merchants Bank Credit Card Number",
+          "repayment_amount": "500",
+          "payment_card_number": "ICBC Card Number",
+          "currency": "RMB"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2744,
+    "completion_tokens": 400,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_239",
+    "question": "Please create a transaction complaint using my account ID A123456 and merchant ID M654321, record the incorrect transaction amount of 299 yuan and the transaction time at 9 o'clock this morning, then immediately submit a complaint about receiving goods in the wrong color, and finally delete the transaction after the merchant agrees to refund and compensate me 50 yuan for the loss.",
+    "generated_calls": [
+      {
+        "tool": "investigate_unauthorized_transaction",
+        "param": {
+          "account_id": "A123456",
+          "transaction_id": "complaint_transaction_id",
+          "transaction_date": "complaint_transaction_date",
+          "transaction_amount": "complaint_transaction_amount"
+        }
+      },
+      {
+        "tool": "search_and_confirm_transaction",
+        "param": {
+          "account_id": "user_account_id",
+          "merchant_id": "merchant_id",
+          "expected_amount": 299,
+          "actual_amount": 299
+        }
+      },
+      {
+        "tool": "check_and_record_recent_transaction",
+        "param": {}
+      },
+      {
+        "tool": "submit_return_and_compensation",
+        "param": {
+          "order_id": "12345",
+          "reason": "Received goods in the wrong color",
+          "compensation_details": "Requesting a replacement or refund"
+        }
+      },
+      {
+        "tool": "request_refund",
+        "param": {
+          "account_id": "user_account_id",
+          "merchant_id": "merchant_id",
+          "amount": 50,
+          "transaction_time": "transaction_time",
+          "description": "Compensation for loss"
+        }
+      },
+      {
+        "tool": "transaction_details_query",
+        "param": {
+          "account_id": "user_account_id",
+          "merchant_id": "merchant_id",
+          "transaction_date": "transaction_date",
+          "transaction_amount": "transaction_amount",
+          "transaction_id": "transaction_id",
+          "bank_card_number": "bank_card_number",
+          "start_date": "start_date",
+          "end_date": "end_date"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "create_transaction",
+        "param": {
+          "account_id": "A123456",
+          "merchant_id": "M654321",
+          "amount": "299",
+          "transaction_time": "this morning at 9 o'clock",
+          "description": "Received goods in the wrong color"
+        }
+      },
+      {
+        "tool": "customer_service",
+        "param": {
+          "account_id": "A123456",
+          "content": "Confirm merchant refund of 299 yuan and compensation of 50 yuan loss"
+        }
+      },
+      {
+        "tool": "create_transaction",
+        "param": {
+          "account_id": "A123456",
+          "merchant_id": "M654321",
+          "amount": "299",
+          "transaction_time": "this morning at 9 o'clock",
+          "description": "Received goods in the wrong color"
+        }
+      },
+      {
+        "tool": "del_transaction",
+        "param": {
+          "transaction_id": "<Transaction ID>"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 3044,
+    "completion_tokens": 541,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_240",
+    "question": "Please check the current balance of my bank card number 6214567890123456, and if it is sufficient, help me handle a large fixed deposit with an annual interest rate of 3.5% and a minimum deposit amount of 50,000 yuan, and transfer funds from the same bank card to complete the deposit.",
+    "generated_calls": [
+      {
+        "tool": "check_balance",
+        "param": {
+          "account_id": "your_account_id",
+          "card_number": "6214567890123456",
+          "required_amount": 0
+        }
+      },
+      {
+        "tool": "fixed_deposit_transaction",
+        "param": {
+          "product_name": "Fixed Deposit",
+          "transfer_card_number": "your_transfer_card_number",
+          "amount": "your_transfer_amount",
+          "account": "your_account_number",
+          "password": "your_account_password",
+          "deposit_term": "your_deposit_term",
+          "verification_code": "your_verification_code"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "bank_balance_query",
+        "param": {
+          "bank_card_number": "6214567890123456"
+        }
+      },
+      {
+        "tool": "deposit_product_search",
+        "param": {
+          "product_type": "Large fixed deposit",
+          "product_rate": "3.5",
+          "minimum_deposit": "50000"
+        }
+      },
+      {
+        "tool": "fixed_deposit_transaction",
+        "param": {
+          "product_name": "Large fixed deposit",
+          "transfer_card_number": "6214567890123456",
+          "amount": "50000"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1999,
+    "completion_tokens": 400,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_241",
+    "question": "Please calculate for me the monthly repayment amount, total interest, and total repayment amount of a mortgage with a principal of 1.5 million yuan, a term of 30 years, and an annual interest rate of 4.5%, and provide some professional photography tips suitable for indoor lighting conditions and automatic camera settings, so that I can better document the renovation process of my new home.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "mortgage_calculator_tool",
+        "param": {
+          "loanAmount": "1500000",
+          "loanTerm": "30",
+          "annualInterestRate": "4.5",
+          "repaymentMethod": "Equal repayment"
+        }
+      },
+      {
+        "tool": "professional_photography_tips",
+        "param": {
+          "lighting_conditions": "Indoor lighting",
+          "camera_settings": "Automatic"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: 'AgentState' object has no attribute 'get'",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_242",
+    "question": "As a 35-year-old mother, I need a stock market investment portfolio with a duration of 3 years, an expected annualized return rate of 6%, and a robust risk tolerance level of 100,000 yuan. I would also like to know today's exchange rate of RMB to USD, and seek some advice suitable for teaching my 10-year-old son about financial investment.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "investment_portfolio_builder",
+        "param": {
+          "investment_type": "stock",
+          "investment_amount": "100000",
+          "risk_tolerance": "robust",
+          "investment_period": "3",
+          "expected_return_rate": "0.06"
+        }
+      },
+      {
+        "tool": "currency_conversion",
+        "param": {
+          "from_currency": "CNY",
+          "to_currency": "USD",
+          "date": "Today's date"
+        }
+      },
+      {
+        "tool": "parenting_advice_tool",
+        "param": {
+          "parent_age": "35",
+          "child_age": "10",
+          "parent_sex": "female",
+          "issue": "financial investment knowledge education"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: 'AgentState' object has no attribute 'get'",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_243",
+    "question": "I need to use my online banking account ID 123456789 and password passwd2023 as well as the verification code 778899 I just received to log into my online banking account, then check the RMB debt amount of the credit card account number 987654321 bound to it, and use my savings card account number 741258963 to pay off the 3500 yuan RMB credit card debt.",
+    "generated_calls": [
+      {
+        "tool": "loan_application",
+        "param": {
+          "account": "123456789",
+          "password": "passwd2023",
+          "captcha": ""
+        }
+      },
+      {
+        "tool": "final_loan_verification",
+        "param": {
+          "account": "your_account_number",
+          "password": "your_account_password",
+          "final_captcha": "778899"
+        }
+      },
+      {
+        "tool": "query_credit_card_debt",
+        "param": {
+          "account_id": "987654321",
+          "card_number": ""
+        }
+      },
+      {
+        "tool": "credit_card_repayment",
+        "param": {
+          "overdraft_card_number": "741258963",
+          "repayment_amount": 3500,
+          "payment_card_number": "741258963",
+          "currency": "RMB"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": "123456789",
+          "password": "passwd2023",
+          "verification_code": "778899"
+        }
+      },
+      {
+        "tool": "credit_card_debt",
+        "param": {
+          "credit_card_number": "987654321"
+        }
+      },
+      {
+        "tool": "credit_card_repayment",
+        "param": {
+          "overdraft_card_number": "987654321",
+          "repayment_amount": "3500",
+          "payment_card_number": "741258963",
+          "currency": "RMB"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2647,
+    "completion_tokens": 307,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_244",
+    "question": "Please analyze and display the daily K-line trend chart of stock code \"600519\" starting from last Monday, January 16, 2023, so that I can understand the overall and specific daily stock market trends during this period.",
+    "generated_calls": [
+      {
+        "tool": "create_stock_trend_chart",
+        "param": {
+          "stock_code": "600519",
+          "start_date": "2023-01-01",
+          "end_date": "2023-10-31"
+        }
+      },
+      {
+        "tool": "stock_market_trend",
+        "param": {
+          "stock_code": "AAPL",
+          "start_date": "2023-01-16",
+          "end_date": "2023-10-16",
+          "historical_data": "relevant historical data",
+          "external_information": "any external information that may affect the stock market"
+        }
+      },
+      {
+        "tool": "stock_market_trend",
+        "param": {
+          "stock_code": "market_index",
+          "start_date": "2023-01-01",
+          "end_date": "2023-10-31",
+          "historical_data": "relevant_historical_data",
+          "external_information": "economic_indicators"
+        }
+      },
+      {
+        "tool": "create_stock_trend_chart",
+        "param": {
+          "stock_code": "AAPL",
+          "start_date": "2023-01-01",
+          "end_date": "2023-10-01"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "stock_market_trend",
+        "param": {
+          "stock_code": "600519",
+          "start_date": "2023-01-16",
+          "end_date": "today's date"
+        }
+      },
+      {
+        "tool": "generate_kline_chart",
+        "param": {
+          "kline_data": "daily K-line data",
+          "title": "K-line Chart of Stock Code 600519 from 2023-01-16 to Present",
+          "x_label": "Date",
+          "y_label": "Price",
+          "legend": "K-line"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2311,
+    "completion_tokens": 355,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_245",
+    "question": "I need to analyze the stock trend of BOE Technology Group Co., Ltd. with stock code 000725 starting from last Monday, September 18, 2023, and predict the trend for the following week.",
+    "generated_calls": [
+      {
+        "tool": "stock_market_trend",
+        "param": {
+          "stock_code": "000725",
+          "start_date": "2023-09-18",
+          "end_date": "2023-10-02",
+          "historical_data": "",
+          "external_information": ""
+        }
+      },
+      {
+        "tool": "stock_trend_predictor",
+        "param": {
+          "stock_code": "000725",
+          "start_time": "2023-10-30",
+          "end_time": "2023-11-05"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "stock_market_trend",
+        "param": {
+          "stock_code": "000725",
+          "start_date": "2023-09-18",
+          "end_date": "today's date"
+        }
+      },
+      {
+        "tool": "stock_trend_predictor",
+        "param": {
+          "stock_code": "000725",
+          "start_time": "2023-09-18",
+          "end_time": "today's date"
+        }
+      },
+      {
+        "tool": "stock_trend_predictor",
+        "param": {
+          "stock_code": "000725",
+          "start_time": "2023-09-18",
+          "end_time": "today's date"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1326,
+    "completion_tokens": 220,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_246",
+    "question": "I need to create a transaction record at 5 PM today, with account ID 123456, merchant ID 78910, and the amount of 500 yuan. Then, I need to change the transaction description to \"Office Supplies Purchase\", followed by cancelling and deleting this transaction, and I would like to have a feature that allows customer service to set a reminder for me.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "create_transaction",
+        "param": {
+          "account_id": "123456",
+          "merchant_id": "78910",
+          "amount": "500",
+          "transaction_time": "5 PM today"
+        }
+      },
+      {
+        "tool": "modify_transaction",
+        "param": {
+          "transaction_id": "<created transaction ID>",
+          "description": "Office Supplies Purchase"
+        }
+      },
+      {
+        "tool": "del_transaction",
+        "param": {
+          "transaction_id": "<created transaction ID>"
+        }
+      },
+      {
+        "tool": "customer_service",
+        "param": {
+          "account_id": "123456",
+          "content": "Please set up a reminder for me"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_247",
+    "question": "Please first help me log into my account using account ID 123456 and password abc123, then inquire and tell me the current US dollar balance, and then buy 3000 US dollars at the current exchange rate.",
+    "generated_calls": [
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": 123456,
+          "verification_code": "",
+          "username": "",
+          "password": "abc123"
+        }
+      },
+      {
+        "tool": "current_balance_query",
+        "param": {}
+      },
+      {
+        "tool": "display_current_balance",
+        "param": {}
+      },
+      {
+        "tool": "current_balance_query",
+        "param": {}
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "account_login",
+        "param": {
+          "account_id": "123456",
+          "password": "abc123"
+        }
+      },
+      {
+        "tool": "foreign_currency_query",
+        "param": {
+          "currency_type": "USD"
+        }
+      },
+      {
+        "tool": "foreign_currency_purchase",
+        "param": {
+          "currency_type": "USD",
+          "buy_amount": "3000",
+          "exchange_rate": "the obtained exchange rate"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1447,
+    "completion_tokens": 145,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_248",
+    "question": "My hotel reservation confirmation number is JD202344, I would like to check the status of my order.\n",
+    "generated_calls": [
+      {
+        "tool": "hotel_reservation_status",
+        "param": {
+          "hotelName": "",
+          "checkIn": "",
+          "checkOut": ""
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "hotel_booking_query",
+        "param": {
+          "confirmation_number": "JD202344"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1153,
+    "completion_tokens": 81,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_249",
+    "question": "I need to track the specific movement route of my friend in Beijing, especially between 1 PM to 3 PM, using his device ID ABCDEFG123 to obtain relevant information.",
+    "generated_calls": [
+      {
+        "tool": "geo_location_tracker",
+        "param": {
+          "deviceID": "friend_device_id",
+          "startTime": "2023-10-01T00:00:00Z",
+          "endTime": "2023-10-01T23:59:59Z"
+        }
+      },
+      {
+        "tool": "geo_location_tracker",
+        "param": {
+          "deviceID": "ABCDEFG123",
+          "startTime": "2023-10-01T00:00:00Z",
+          "endTime": "2023-10-31T23:59:59Z"
+        }
+      },
+      {
+        "tool": "geolocation_tracker",
+        "param": {
+          "deviceID": "ABCDEFG123",
+          "startTime": "2023-10-01T00:00:00Z",
+          "endTime": "2023-10-31T23:59:59Z"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "geolocation_tracker",
+        "param": {
+          "deviceID": "ABCDEFG123",
+          "startTime": "13:00",
+          "endTime": "15:00"
+        }
+      },
+      {
+        "tool": "visualize_location_data",
+        "param": {
+          "location_data": "<Movement route data>"
+        }
+      },
+      {
+        "tool": "create_movement_report",
+        "param": {
+          "location_data": "<Movement route data>"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2432,
+    "completion_tokens": 281,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_250",
+    "question": "I need to check the latest logistics status of three packages. The first one is shipped via SF Express with tracking number YT123456789CN, the second one is via China Post EMS with tracking number LS987654321CN, and the third one is via JD Express with tracking number JD000123456789, shipped on October 13, 2023, containing a computer monitor.",
+    "generated_calls": [
+      {
+        "tool": "package_status_tracking",
+        "param": {
+          "trackingNumber": "YT123456789CN",
+          "carrierName": "SF Express",
+          "dateShipped": ""
+        }
+      },
+      {
+        "tool": "package_status_tracking",
+        "param": {
+          "trackingNumber": "LS987654321CN",
+          "carrierName": "China Post EMS",
+          "dateShipped": ""
+        }
+      },
+      {
+        "tool": "package_status_tracking",
+        "param": {
+          "trackingNumber": "JD000123456789",
+          "carrierName": "JD Express",
+          "dateShipped": "2023-10-13T00:00:00"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "package_status_tracker",
+        "param": {
+          "tracking_number": "YT123456789CN",
+          "courier_name": "SF Express"
+        }
+      },
+      {
+        "tool": "package_status_tracker",
+        "param": {
+          "tracking_number": "LS987654321CN",
+          "courier_name": "China Post EMS"
+        }
+      },
+      {
+        "tool": "package_status_tracking",
+        "param": {
+          "trackingNumber": "JD000123456789",
+          "carrierName": "JD Express",
+          "dateShipped": "2023-10-13T00:00:00Z"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2474,
+    "completion_tokens": 204,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_251",
+    "question": "I need to start tracking the company vehicle with the license plate number Jing A12345 from 9 AM today, and view its specific driving trajectory between 9 AM and 11 AM.",
+    "generated_calls": [
+      {
+        "tool": "continuous_vehicle_tracking",
+        "param": {
+          "vehicle_id": "Jing A12345"
+        }
+      },
+      {
+        "tool": "display_last_two_hours_track",
+        "param": {
+          "location_history": "vehicle_location_history_data",
+          "start_time": "2023-10-03T09:00:00",
+          "end_time": "2023-10-03T11:00:00"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "vehicle_tracker",
+        "param": {
+          "vehicleNumber": "Jing A12345",
+          "startTime": "9 AM today",
+          "duration": "2"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1714,
+    "completion_tokens": 110,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_252",
+    "question": "I need to use a service to track the exact location of my friend at 3 PM yesterday based on his mobile number 13812345678, starting with which area in Chaoyang District, Beijing, and then further determine which street in Chaoyang District he might be on, although I am not sure about his service provider, I suspect it is China Mobile.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "mobile_number_info",
+        "param": {
+          "phoneNumber": "13812345678"
+        }
+      },
+      {
+        "tool": "mobile_number_location",
+        "param": {
+          "mobileNumber": "13812345678",
+          "time": "3 PM yesterday",
+          "countryCode": "CN"
+        }
+      },
+      {
+        "tool": "mobile_phone_locator",
+        "param": {
+          "phoneNumber": "13812345678",
+          "country": "China",
+          "serviceProvider": "<Service provider>"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_253",
+    "question": "Please help me check when my order 123456 was dispatched, its current location, and when it is expected to arrive at my hands, my customer ID is C78910.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "order_tracking",
+        "param": {
+          "orderNumber": "123456",
+          "customerID": "C78910"
+        }
+      },
+      {
+        "tool": "order_tracking",
+        "param": {
+          "orderNumber": "123456",
+          "customerID": "C78910"
+        }
+      },
+      {
+        "tool": "order_tracking",
+        "param": {
+          "orderNumber": "123456",
+          "customerID": "C78910"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_254",
+    "question": "Please track the latest status of SF Express tracking number 123456789, the estimated delivery time, and the current location, and coordinate with the courier to delay the delivery by one hour from the originally scheduled time.",
+    "generated_calls": [
+      {
+        "tool": "package_status_tracker",
+        "param": {
+          "tracking_number": "123456789",
+          "courier_name": "SF Express",
+          "request_date": "2023-10-05T12:00:00",
+          "notificationMethod": "SMS",
+          "expectedDeliveryDate": ""
+        }
+      },
+      {
+        "tool": "estimated_delivery_time",
+        "param": {
+          "parcelNumber": "123456789",
+          "deliveryAddress": ""
+        }
+      },
+      {
+        "tool": "package_status_tracking",
+        "param": {
+          "trackingNumber": "123456789",
+          "carrierName": "SF Express",
+          "dateShipped": ""
+        }
+      },
+      {
+        "tool": "package_status_tracker",
+        "param": {
+          "tracking_number": "unknown",
+          "courier_name": "unknown",
+          "request_date": "unknown",
+          "notificationMethod": "unknown",
+          "expectedDeliveryDate": "unknown"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "package_status_tracker",
+        "param": {
+          "tracking_number": "123456789",
+          "courier_name": "SF Express"
+        }
+      },
+      {
+        "tool": "delay_delivery",
+        "param": {
+          "trackingNumber": "123456789",
+          "courierCompany": "SF Express",
+          "newDeliveryTime": "One hour after the original delivery time"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 3103,
+    "completion_tokens": 228,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_255",
+    "question": "Please help me check the status of my visa application using ID 123456, and confirm the validity and detailed information of my visa, including type and duration, using my passport number G12345678 and Chinese nationality, as well as the date of birth 1990-08-10 as query parameters.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "visa_status_check",
+        "param": {
+          "applicationId": "123456"
+        }
+      },
+      {
+        "tool": "visa_status_check",
+        "param": {
+          "passportNo": "G12345678",
+          "nationality": "China",
+          "birthDate": "1990-08-10"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_256",
+    "question": "Please check the inventory status of product ID A001 in warehouse ID W01 using today's data, and based on the product name 'Super Battery', today's release date, and its category as an electronic product, generate a detailed product catalog.",
+    "generated_calls": [
+      {
+        "tool": "product_catalog_import",
+        "param": {
+          "category": "electronic",
+          "importDate": "2023-10-05",
+          "dataSource": "Super Battery"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "product_inventory_search",
+        "param": {
+          "productID": "A001",
+          "warehouseID": "W01",
+          "checkDate": "today's date"
+        }
+      },
+      {
+        "tool": "product_catalog_create",
+        "param": {
+          "productName": "Super Battery",
+          "launchDate": "today's date",
+          "category": "Electronic product"
+        }
+      },
+      {
+        "tool": "export_to_pdf",
+        "param": {
+          "documentName": "Super Battery Product Catalog_today's date",
+          "document_content": "<generated product catalog>",
+          "pdf_path": "Super Battery Product Catalog_today's date.pdf"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1229,
+    "completion_tokens": 140,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_257",
+    "question": "Please check the latest status of my two orders with the numbers 123456789 and 987654321, and confirm whether they are both associated with my customer ID A123456.",
+    "generated_calls": [
+      {
+        "tool": "order_details_api",
+        "param": {
+          "order_id": 123456789
+        }
+      },
+      {
+        "tool": "order_details_api",
+        "param": {
+          "order_id": 987654321
+        }
+      },
+      {
+        "tool": "get_customer_id",
+        "param": {}
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "order_tracking",
+        "param": {
+          "orderNumber": "123456789"
+        }
+      },
+      {
+        "tool": "order_tracking",
+        "param": {
+          "orderNumber": "987654321"
+        }
+      },
+      {
+        "tool": "order_tracking",
+        "param": {
+          "orderNumber": "123456789",
+          "customerID": "A123456"
+        }
+      },
+      {
+        "tool": "order_tracking",
+        "param": {
+          "orderNumber": "987654321",
+          "customerID": "A123456"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1433,
+    "completion_tokens": 167,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_258",
+    "question": "I need to track the hourly movement trajectory of my company vehicle Jing A12345 from 8 am today until now, including the detailed locations passed between 8 am to 9 am and 9 am to 10 am.",
+    "generated_calls": [
+      {
+        "tool": "vehicle_tracker",
+        "param": {
+          "vehicleId": "Jing A12345",
+          "startTime": "2023-10-10T08:00:00",
+          "stopTime": "2023-10-10T14:00:00",
+          "vehicleNumber": "Jing A12345",
+          "duration": 6
+        }
+      },
+      {
+        "tool": "vehicle_tracker",
+        "param": {
+          "vehicleId": "Jing A12345",
+          "startTime": "2023-10-01T08:00:00",
+          "stopTime": "2023-10-01T09:00:00",
+          "vehicleNumber": "Jing A12345",
+          "duration": 1
+        }
+      },
+      {
+        "tool": "vehicle_tracker",
+        "param": {
+          "vehicleId": "Jing A12345",
+          "startTime": "2023-10-01T09:00:00",
+          "stopTime": "2023-10-01T10:00:00",
+          "vehicleNumber": "A12345",
+          "duration": 1
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "vehicle_tracker",
+        "param": {
+          "vehicleId": "Jing A12345",
+          "startTime": "8 am today",
+          "stopTime": "now"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2524,
+    "completion_tokens": 269,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_259",
+    "question": "Please help me check the status of the STO Express parcel, tracking number 123456789, the current status and the estimated delivery time for today, and also look for another package that might be delivered by YTO Express, tracking number 987654321, for the estimated delivery time.",
+    "generated_calls": [
+      {
+        "tool": "package_status_tracker",
+        "param": {
+          "tracking_number": "123456789",
+          "courier_name": "STO Express",
+          "request_date": "2023-10-05T12:00:00",
+          "notificationMethod": "SMS",
+          "expectedDeliveryDate": "2023-10-10"
+        }
+      },
+      {
+        "tool": "package_status_tracker",
+        "param": {
+          "tracking_number": "STO Express tracking number",
+          "courier_name": "STO Express",
+          "request_date": "current date and time",
+          "notificationMethod": "none",
+          "expectedDeliveryDate": "none"
+        }
+      },
+      {
+        "tool": "package_status_tracking",
+        "param": {
+          "trackingNumber": "987654321",
+          "carrierName": "YTO Express",
+          "dateShipped": ""
+        }
+      },
+      {
+        "tool": "estimated_delivery_time",
+        "param": {
+          "parcelNumber": "YTO Express package tracking number",
+          "deliveryAddress": "YTO Express package delivery address"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "package_status_tracker",
+        "param": {
+          "tracking_number": "123456789",
+          "courier_name": "STO Express"
+        }
+      },
+      {
+        "tool": "package_status_tracker",
+        "param": {
+          "tracking_number": "987654321",
+          "courier_name": "YTO Express"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 3804,
+    "completion_tokens": 413,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_260",
+    "question": "I need to track and obtain the real-time location of my vehicle with the license plate Jing A88888 in Chaoyang District, Beijing, from 7 a.m. today until now, as well as the complete movement trajectory within these 5 hours.",
+    "generated_calls": [
+      {
+        "tool": "continuous_vehicle_tracking",
+        "param": {
+          "vehicle_id": "Jing A88888"
+        }
+      },
+      {
+        "tool": "vehicle_tracker",
+        "param": {
+          "vehicleId": "Jing A88888",
+          "startTime": "2023-10-10T14:00:00Z",
+          "stopTime": "2023-10-10T19:00:00Z",
+          "vehicleNumber": "Jing A88888",
+          "duration": 5
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "vehicle_tracker",
+        "param": {
+          "vehicleNumber": "Jing A88888",
+          "startTime": "7 a.m. today",
+          "duration": "5"
+        }
+      },
+      {
+        "tool": "vehicle_tracker",
+        "param": {
+          "vehicleNumber": "Jing A88888",
+          "startTime": "7 a.m. today",
+          "stopTime": "now"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1768,
+    "completion_tokens": 127,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_261",
+    "question": "Please inquire and inform me of the latest status, estimated arrival time, and current specific location of my SF Express parcel AA123456789BB.",
+    "generated_calls": [
+      {
+        "tool": "package_status_tracker",
+        "param": {
+          "tracking_number": "AA123456789BB",
+          "courier_name": "SF Express",
+          "request_date": "2023-10-05T12:00:00",
+          "notificationMethod": "SMS",
+          "expectedDeliveryDate": ""
+        }
+      },
+      {
+        "tool": "package_status_tracker",
+        "param": {
+          "tracking_number": "AA123456789BB",
+          "courier_name": "SF Express",
+          "request_date": "2023-10-05T12:00:00",
+          "notificationMethod": "SMS",
+          "expectedDeliveryDate": "2023-10-10"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "package_status_tracker",
+        "param": {
+          "tracking_number": "AA123456789BB",
+          "courier_name": "SF Express"
+        }
+      },
+      {
+        "tool": "package_status_tracker",
+        "param": {
+          "tracking_number": "AA123456789BB",
+          "courier_name": "SF Express"
+        }
+      },
+      {
+        "tool": "package_status_tracking",
+        "param": {
+          "trackingNumber": "AA123456789BB",
+          "carrierName": "SF Express"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2406,
+    "completion_tokens": 279,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_262",
+    "question": "I need to use a tracking system to determine the real-time location and movement trajectory of my company vehicle Jing A12345 from 8 o'clock this morning to the current time, and also to query the location history record of this vehicle for the entire day yesterday.",
+    "generated_calls": [
+      {
+        "tool": "vehicle_tracker",
+        "param": {
+          "vehicleId": "Jing A12345",
+          "startTime": "2023-10-04T08:00:00",
+          "stopTime": "2023-10-04T12:00:00",
+          "vehicleNumber": "A12345",
+          "duration": 4
+        }
+      },
+      {
+        "tool": "vehicle_tracker",
+        "param": {
+          "vehicleId": "Jing A12345",
+          "startTime": "2023-10-05T08:00:00",
+          "stopTime": "2023-10-05T14:00:00",
+          "vehicleNumber": "Jing A12345",
+          "duration": 6
+        }
+      },
+      {
+        "tool": "vehicle_tracker",
+        "param": {
+          "vehicleId": "Jing A12345",
+          "startTime": "2023-10-02T00:00:00",
+          "stopTime": "2023-10-02T23:59:59",
+          "vehicleNumber": "Jing A12345",
+          "duration": 24
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "vehicle_tracker",
+        "param": {
+          "vehicleId": "Jing A12345",
+          "startTime": "8 o'clock this morning",
+          "stopTime": "current time"
+        }
+      },
+      {
+        "tool": "vehicle_tracker",
+        "param": {
+          "vehicleId": "Jing A12345",
+          "startTime": "yesterday's date 00:00",
+          "stopTime": "yesterday's date 23:59"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2489,
+    "completion_tokens": 348,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_263",
+    "question": "I need to find a Chinese restaurant in Beijing that offers vegetarian options and has a budget of around 100 yuan. I also want to check the weather forecast for this weekend to choose a sunny day to go, and finally send a reminder message about the reservation at Green Tea Restaurant on the 23rd through my 'Food Gathering' WeChat group at 6 pm today.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "gourmet_tour_guide",
+        "param": {
+          "continent": "Asia",
+          "city": "Beijing",
+          "cuisine_type": "Chinese cuisine",
+          "budget": "100",
+          "special_dietary_requirement": "Vegetarian"
+        }
+      },
+      {
+        "tool": "special_weather_forecast_tool",
+        "param": {
+          "city": "Beijing",
+          "date": "This weekend",
+          "forecast_type": "Clear weather"
+        }
+      },
+      {
+        "tool": "instant_messaging",
+        "param": {
+          "communication_mode": "Text",
+          "target_user": "Food Gathering WeChat group",
+          "message_content": "Reminder about the reservation at Green Tea Restaurant on the 23rd",
+          "send_time": "Today at 6 pm",
+          "need_notification": "true"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_264",
+    "question": "Please reserve a table for dinner for me and another guest at the restaurant, order a serving of Kung Pao Chicken (Dish ID 101) and two bowls of rice (Dish ID 105), combine these two orders, randomly assign a table, and finally use online payment to settle the bill for this dinner.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": "101",
+          "quantity": "1"
+        }
+      },
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": "105",
+          "quantity": "2"
+        }
+      },
+      {
+        "tool": "merge_orders",
+        "param": {
+          "order_ids": "['<Kung Pao Chicken order ID>'"
+        }
+      },
+      {
+        "tool": "assign_random_table",
+        "param": {
+          "number_of_guests": "2"
+        }
+      },
+      {
+        "tool": "checkout_api",
+        "param": {
+          "order_id": "<Combined order ID>"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_265",
+    "question": "I would like to know the public reviews of the 'Leisure Time' cafe in Chaoyang District, and I hope to receive feedback on whether my personal review 'I spent a very relaxing afternoon here, the coffee and pastries were delicious' conforms to the general customer review standards.",
+    "generated_calls": [
+      {
+        "tool": "restaurant_review_analyzer",
+        "param": {
+          "reviewText": "I spent a very relaxing afternoon here, the coffee and pastries were delicious",
+          "visitDate": "2023-10-01",
+          "restaurantName": "Unknown"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "restaurant_review",
+        "param": {
+          "location": "Chaoyang District",
+          "cuisine": "Leisure Time Cafe"
+        }
+      },
+      {
+        "tool": "restaurant_review_analyzer",
+        "param": {
+          "reviewText": "I spent a very relaxing afternoon her",
+          "restaurantName": "Leisure Time Cafe"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1919,
+    "completion_tokens": 138,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_266",
+    "question": "Please design a restaurant website for me with an e-commerce template, a light color theme, including responsive design, SEO optimization, and online store features, and plan a two-day music-themed dinner event with a budget of 10,000 yuan, expecting 50 attendees, which I will be in charge of, scheduled for this weekend.",
+    "generated_calls": [
+      {
+        "tool": "book_dinner",
+        "param": {
+          "venue_type": "music-themed restaurant",
+          "date": "2023-11-01T19:00:00",
+          "location": "City Center"
+        }
+      },
+      {
+        "tool": "book_dinner",
+        "param": {
+          "venue_type": "music-themed restaurant",
+          "date": "2023-11-02T19:00:00",
+          "location": "City Center"
+        }
+      },
+      {
+        "tool": "book_catering_service",
+        "param": {
+          "service_type": "catering",
+          "start_time": "09:00",
+          "end_time": "17:00",
+          "supplier": "Preferred Supplier",
+          "service_name": "Corporate Event Catering",
+          "budget": "10,000 yuan",
+          "event_date": "2023-10-15",
+          "attendees": "100"
+        }
+      },
+      {
+        "tool": "book_catering_service",
+        "param": {
+          "service_type": "Catering",
+          "start_time": "12:00",
+          "end_time": "14:00",
+          "supplier": "Preferred Catering Supplier",
+          "service_name": "Event Catering",
+          "budget": "50",
+          "event_date": "2023-10-15",
+          "attendees": "50"
+        }
+      },
+      {
+        "tool": "book_catering_service",
+        "param": {
+          "service_type": "Catering",
+          "start_time": "12:00",
+          "end_time": "15:00",
+          "supplier": "Local Catering Co.",
+          "service_name": "Weekend Event Catering",
+          "budget": "20",
+          "event_date": "2023-10-28",
+          "attendees": "50"
+        }
+      },
+      {
+        "tool": "contact_restaurant",
+        "param": {
+          "restaurant_type": "family gathering",
+          "days_before_event": 14
+        }
+      },
+      {
+        "tool": "book_catering_service",
+        "param": {
+          "service_type": "catering",
+          "start_time": "12:00",
+          "end_time": "15:00",
+          "supplier": "Preferred Catering Co.",
+          "service_name": "Family Gathering Catering",
+          "budget": "$20 per person",
+          "event_date": "2023-11-15",
+          "attendees": "50"
+        }
+      },
+      {
+        "tool": "book_dinner",
+        "param": {
+          "venue_type": "family-friendly restaurant",
+          "date": "2023-11-15T19:00",
+          "location": "Downtown"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "website_design_tool",
+        "param": {
+          "template_type": "e-commerce",
+          "color_theme": "light",
+          "features_required": "['Responsive design'"
+        }
+      },
+      {
+        "tool": "event_planning_tool",
+        "param": {
+          "eventType": "concert",
+          "location": "inside the restaurant",
+          "date": "this weekend's date",
+          "budget": "10000",
+          "guestNumber": "50",
+          "theme": "Music-themed dinner",
+          "responsiblePerson": "User themselves"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 9546,
+    "completion_tokens": 665,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_267",
+    "question": "I need to use the ordering service to order 2 portions of Tomato and Eggs with ID 101 and 1 portion of Green Pepper Beef with ID 102, and I wish to confirm the details of the generated order.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": "101",
+          "quantity": "2"
+        }
+      },
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": "102",
+          "quantity": "1"
+        }
+      },
+      {
+        "tool": "order_details_api",
+        "param": {
+          "order_id": "<Generated order ID>"
+        }
+      },
+      {
+        "tool": "checkout_api",
+        "param": {
+          "order_id": "<Generated order ID>"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_268",
+    "question": "I need to understand the overall evaluation of Chinese restaurants in Chaoyang District, Beijing, and also submit a 4-star review for the 'Manhan Quanxi' restaurant, mentioning the elegant environment and authentic Beijing roast duck. I would also like to view my previous review for the 'Jinmanlou' restaurant and predict the star rating I might give.",
+    "generated_calls": [
+      {
+        "tool": "restaurant_review",
+        "param": {
+          "location": "Chaoyang District, Beijing",
+          "cuisine": "Chinese",
+          "visitDate": "2023-10-01"
+        }
+      },
+      {
+        "tool": "restaurant_review_tool",
+        "param": {
+          "restaurantName": "Manhan Quanxi",
+          "visitDate": "2023-10-10",
+          "stars": 4,
+          "reviewText": "The environment was elegant and the Beijing roast duck was authentic."
+        }
+      },
+      {
+        "tool": "restaurant_review",
+        "param": {
+          "location": "unknown",
+          "cuisine": "unknown",
+          "visitDate": "unknown"
+        }
+      },
+      {
+        "tool": "restaurant_review_analyzer",
+        "param": {
+          "reviewText": "I had a wonderful experience at the restaurant. The food was delicious, the service was excellent, and the ambiance was perfect.",
+          "visitDate": "2023-10-01",
+          "restaurantName": "Example Restaurant"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "restaurant_review",
+        "param": {
+          "location": "Chaoyang Distric",
+          "cuisine": "Chinese"
+        }
+      },
+      {
+        "tool": "restaurant_review_tool",
+        "param": {
+          "restaurantName": "Manhan Quanxi",
+          "stars": "4",
+          "reviewText": "Elegant environment and authentic Beijing roast duck"
+        }
+      },
+      {
+        "tool": "restaurant_review_tool",
+        "param": {
+          "restaurantName": "Jinmanlou"
+        }
+      },
+      {
+        "tool": "restaurant_review_analyzer",
+        "param": {
+          "reviewText": "<User's previous review content>",
+          "restaurantName": "Jinmanlou"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 3591,
+    "completion_tokens": 327,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_269",
+    "question": "I need to submit a complaint about extremely poor service attitude and concerning food hygiene against merchant ID 654321, using my account ID 123456, and wish to contact customer service simultaneously to understand the progress of my complaint handling and the expected resolution measures.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "complaint_merchant",
+        "param": {
+          "account_id": "123456",
+          "merchant_id": "654321",
+          "content": "Description and specific events of extremely poor service attitude; Photos or videos of food hygiene issues"
+        }
+      },
+      {
+        "tool": "customer_service",
+        "param": {
+          "account_id": "123456",
+          "content": "Understand the progress of complaint handling and the expected resolution measures"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_270",
+    "question": "Tonight I will go to a restaurant for dinner with two friends, I need to reserve a table and pre-order a serving of Kung Pao Chicken and a serving of Steamed Sea Bass, then please help me combine these two dish orders and prepare the bill, but I will choose to pay with my mobile phone after arriving at the restaurant.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "table_booking_api",
+        "param": {
+          "restaurant_name": "restaurant name",
+          "contact": "restaurant contact",
+          "time": "tonight",
+          "number_of_people": "3"
+        }
+      },
+      {
+        "tool": "request_menu",
+        "param": {
+          "restaurant_name": "restaurant name"
+        }
+      },
+      {
+        "tool": "submit_preorder",
+        "param": {
+          "dish1": "Kung Pao Chicken",
+          "dish2": "Steamed Sea Bass",
+          "restaurant_name": "restaurant name"
+        }
+      },
+      {
+        "tool": "merge_orders",
+        "param": {
+          "restaurant_name": "restaurant name",
+          "order_ids": "<pre-order submission status>"
+        }
+      },
+      {
+        "tool": "confirm_payment_method",
+        "param": {
+          "restaurant_name": "restaurant name",
+          "payment_method": "mobile payment"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_271",
+    "question": "I need to modify the lunch transaction at 'Gourmet Paradise' restaurant from yesterday, correcting the amount to 250 yuan, and submit a complaint about the poor attitude of the waiter and the poor quality of the food.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "modify_transaction",
+        "param": {
+          "transaction_id": "Transaction ID",
+          "amount": "250",
+          "description": "Lunch transaction"
+        }
+      },
+      {
+        "tool": "complaint_merchant",
+        "param": {
+          "account_id": "User Account ID",
+          "merchant_id": "Merchant ID",
+          "content": "Complaint content"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_272",
+    "question": "Please order a Spicy Hot Pot for me at the restaurant, add two extra servings of beef and a plate of hand-torn cabbage, then place the order using my table ID 10, and help me check out.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "get_dish_id",
+        "param": {
+          "dish_name": "Spicy Hot Pot"
+        }
+      },
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": "<Spicy Hot Pot ID>",
+          "quantity": "1"
+        }
+      },
+      {
+        "tool": "get_dish_id",
+        "param": {
+          "dish_name": "Beef"
+        }
+      },
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": "<Beef ID>",
+          "quantity": "2"
+        }
+      },
+      {
+        "tool": "get_dish_id",
+        "param": {
+          "dish_name": "Hand-torn Cabbage"
+        }
+      },
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": "<Hand-torn Cabbage ID>",
+          "quantity": "1"
+        }
+      },
+      {
+        "tool": "place_order",
+        "param": {
+          "order_id": "<Updated Order Number>",
+          "table_id": "10"
+        }
+      },
+      {
+        "tool": "checkout_api",
+        "param": {
+          "order_id": "<Updated Order Number>",
+          "amount": "<Order Amount>"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_273",
+    "question": "Please book table number 5 for me, and order one serving of Tomato Scrambled Eggs with ID 101 and two servings of Steamed Perch with ID 202, then immediately check out for these dishes and the table.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "book_table",
+        "param": {
+          "table_number": "5"
+        }
+      },
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": "101",
+          "quantity": "1"
+        }
+      },
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": "202",
+          "quantity": "2"
+        }
+      },
+      {
+        "tool": "place_order",
+        "param": {
+          "order_id": "<Order ID from ordering>",
+          "table_id": "5"
+        }
+      },
+      {
+        "tool": "checkout_api",
+        "param": {
+          "order_id": "<Order ID from ordering>"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_274",
+    "question": "Please arrange a dinner gathering for me on Friday evening, order four servings of Fish-Flavored Shredded Pork with ID 202, reserve table ID 15, and complete the payment process for the order.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "table_booking_api",
+        "param": {
+          "time": "Friday dinner",
+          "table_id": "15"
+        }
+      },
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": "202",
+          "quantity": "4"
+        }
+      },
+      {
+        "tool": "checkout_api",
+        "param": {
+          "order_id": "<order ID>"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: 'AgentState' object has no attribute 'get'",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_275",
+    "question": "Please arrange a table for four at your restaurant at 7 o'clock tonight, and pre-order a tomato beef brisket pot and a steamed sea bass. Also, complete the payment in advance so that we can enjoy the meal directly.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "table_booking_api",
+        "param": {
+          "time": "Tonight at 7 o'clock",
+          "number_of_people": "Four"
+        }
+      },
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": "Tomato Beef Brisket Pot ID",
+          "quantity": "1"
+        }
+      },
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": "Steamed Sea Bass ID",
+          "quantity": "1"
+        }
+      },
+      {
+        "tool": "checkout_api",
+        "param": {
+          "order_id": "<Generated Order ID>",
+          "amount": "Total Dish Price",
+          "payment_method": "Restaurant Payment Methods"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_276",
+    "question": "Please help me find a Sichuan cuisine restaurant located in Beijing with high ratings, especially for the upcoming Friday when I plan to dine there. Then, conduct sentiment analysis on a specific review that mentions Yu Xiang Rou Si and La Zi Ji, estimated to be five-star, and finally determine the name of the restaurant.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "restaurant_review",
+        "param": {
+          "location": "Beijing",
+          "cuisine": "Sichuan",
+          "visitDate": "this Friday"
+        }
+      },
+      {
+        "tool": "restaurant_review_analyzer",
+        "param": {
+          "reviewText": "Specific review text",
+          "restaurantName": "Filtered restaurant name"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_277",
+    "question": "Please reserve table number 15 for me at the restaurant, and order two dishes of number 3 and an additional two desserts of number 5, then help me complete the payment.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "table_booking_api",
+        "param": {
+          "table_id": "15"
+        }
+      },
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": "3",
+          "quantity": "2"
+        }
+      },
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": "5",
+          "quantity": "2"
+        }
+      },
+      {
+        "tool": "place_order",
+        "param": {
+          "dishes": "[{'dish_id': 3",
+          "table_id": "15"
+        }
+      },
+      {
+        "tool": "checkout_api",
+        "param": {
+          "order_id": "<Order ID>"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_278",
+    "question": "Please book a serving of scrambled eggs with tomatoes and two servings of Kung Pao chicken for table number 8 at tonight's party, and help me check out after confirming the order.",
+    "generated_calls": [
+      {
+        "tool": "restaurant_login",
+        "param": {
+          "username": "your_username",
+          "password": "your_password"
+        }
+      },
+      {
+        "tool": "display_order_details",
+        "param": {}
+      },
+      {
+        "tool": "navigate_to_orders_page",
+        "param": {}
+      },
+      {
+        "tool": "display_order_details",
+        "param": {}
+      },
+      {
+        "tool": "navigate_to_orders_page",
+        "param": {}
+      },
+      {
+        "tool": "display_order_details",
+        "param": {}
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": "scrambled eggs with tomatoes",
+          "quantity": "1"
+        }
+      },
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": "Kung Pao chicken",
+          "quantity": "2"
+        }
+      },
+      {
+        "tool": "place_order",
+        "param": {
+          "order_id": "<Generated order ID>",
+          "table_id": "8"
+        }
+      },
+      {
+        "tool": "checkout_api",
+        "param": {
+          "order_id": "<Generated order ID>",
+          "amount": "<Confirmed order amount>",
+          "payment_method": "User-selected payment method"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 1928,
+    "completion_tokens": 171,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_279",
+    "question": "I am Li Ming, due to some urgent matters, I need to cancel my flight booking for CA123 on March 20th at 17:00.\n",
+    "generated_calls": [
+      {
+        "tool": "check_booking_information",
+        "param": {
+          "bookingName": "Passenger Name",
+          "flightNumber": "Flight Number",
+          "departureDate": "2023-03-20T17:00:00"
+        }
+      },
+      {
+        "tool": "flight_ticket_cancelling",
+        "param": {
+          "departureDate": "unknown",
+          "flightNumber": "CA123",
+          "bookingName": "unknown"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "flight_ticket_cancelling",
+        "param": {
+          "bookingName": "Li Ming",
+          "flightNumber": "CA123",
+          "departureDate": "2023-03-20 17:00"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2840,
+    "completion_tokens": 197,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_280",
+    "question": "I want to find Italian restaurants located in Central, especially those that have received customer reviews in the past month, and conduct sentiment analysis and star rating prediction for a restaurant named La Tavola, and finally, I would like to post a 4-star review saying 'The dishes are exquisite, but the service is a bit slow.'",
+    "generated_calls": [
+      {
+        "tool": "search_nearby_restaurants",
+        "param": {
+          "location": "Central"
+        }
+      },
+      {
+        "tool": "restaurant_review_analyzer",
+        "param": {
+          "reviewText": "",
+          "visitDate": "",
+          "restaurantName": "La Tavola"
+        }
+      },
+      {
+        "tool": "restaurant_review_analyzer",
+        "param": {
+          "reviewText": "La Tavola",
+          "visitDate": "2023-10-01",
+          "restaurantName": "La Tavola"
+        }
+      },
+      {
+        "tool": "restaurant_review_tool",
+        "param": {
+          "restaurantName": "Unknown Restaurant",
+          "visitDate": "2023-10-10",
+          "stars": 4,
+          "reviewText": "The dishes are exquisite, but the service is a bit slow."
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "restaurant_review",
+        "param": {
+          "location": "Central",
+          "cuisine": "Italian",
+          "visitDate": "One month before the current date"
+        }
+      },
+      {
+        "tool": "restaurant_review_analyzer",
+        "param": {
+          "reviewText": "<List of high reviews for La Tavola restaurant>",
+          "restaurantName": "La Tavola"
+        }
+      },
+      {
+        "tool": "restaurant_review_analyzer",
+        "param": {
+          "reviewText": "<List of high reviews for La Tavola restaurant>",
+          "restaurantName": "La Tavola"
+        }
+      },
+      {
+        "tool": "restaurant_review_tool",
+        "param": {
+          "restaurantName": "La Tavola",
+          "visitDate": "Current date",
+          "stars": "4",
+          "reviewText": "The dishes are exquisit"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 4746,
+    "completion_tokens": 367,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_281",
+    "question": "I need to understand the overall evaluation of the 'Haidilao' restaurant on Nanjing East Road for the last month, especially the detailed analysis and emotional tendency regarding the environmental noise issue, as well as the updated latest average star rating based on this.",
+    "generated_calls": [
+      {
+        "tool": "restaurant_review",
+        "param": {
+          "location": "Nanjing East Road",
+          "cuisine": "Hot Pot",
+          "visitDate": "2023-09-01 to 2023-09-30"
+        }
+      },
+      {
+        "tool": "restaurant_review_analyzer",
+        "param": {
+          "reviewText": "environmental noise issue at 'Haidilao' restaurant",
+          "visitDate": "2023-10-01",
+          "restaurantName": "Haidilao"
+        }
+      },
+      {
+        "tool": "restaurant_review",
+        "param": {
+          "location": "Haidilao",
+          "cuisine": "",
+          "visitDate": ""
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "restaurant_review",
+        "param": {
+          "location": "Nanjing East Road",
+          "cuisine": "Haidilao",
+          "visitDate": "Last month's date range"
+        }
+      },
+      {
+        "tool": "restaurant_review_analyzer",
+        "param": {
+          "reviewText": "Comments on environmental noise",
+          "restaurantName": "Haidilao"
+        }
+      },
+      {
+        "tool": "restaurant_review_tool",
+        "param": {
+          "restaurantName": "Haidilao",
+          "visitDate": "Last month's date range"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 3650,
+    "completion_tokens": 173,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_282",
+    "question": "I need to host a party at home and would like to use a service to select 3 servings of Kung Pao Chicken and 5 servings of Shredded Pork with Green Pepper, add them to the same order, and assign it to my table ID 32. Then confirm the order, prepare the dishes, and help me complete the payment after a bill of 520 yuan is generated.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": "Kung Pao Chicken ID",
+          "quantity": "3"
+        }
+      },
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": "Shredded Pork with Green Pepper ID",
+          "quantity": "5"
+        }
+      },
+      {
+        "tool": "place_order",
+        "param": {
+          "dishes": "[{'dish_id':'Kung Pao Chicken ID'",
+          "table_id": "32",
+          "order_id": "<Order ID>"
+        }
+      },
+      {
+        "tool": "checkout_api",
+        "param": {
+          "order_id": "<Order ID>",
+          "amount": "520",
+          "payment_method": "online_payment"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_283",
+    "question": "I need to book a dinner table, order two No. 8 steaks and a bottle of No. 16 red wine at table 5, and complete the payment.",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "get_contact_information",
+        "param": {
+          "restaurant_id": "restaurant_ID"
+        }
+      },
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": "8",
+          "quantity": "2"
+        }
+      },
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": "16",
+          "quantity": "1"
+        }
+      },
+      {
+        "tool": "place_order",
+        "param": {
+          "order_id": "<order result>",
+          "table_id": "5"
+        }
+      },
+      {
+        "tool": "checkout_api",
+        "param": {
+          "order_id": "<order result>"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_284",
+    "question": "Please recommend some vegetarian delicacies in Pudong New Area, Shanghai, including local vegetarian options, and arrange a restaurant suitable for a vegetarian gathering at 7 pm tonight.",
+    "generated_calls": [
+      {
+        "tool": "food_recommendation",
+        "param": {
+          "location": "Pudong New Area, Shanghai",
+          "dietPreferences": "vegetarian",
+          "allergies": ""
+        }
+      },
+      {
+        "tool": "food_recommendation",
+        "param": {
+          "location": "local area",
+          "dietPreferences": "vegetarian",
+          "allergies": ""
+        }
+      },
+      {
+        "tool": "book_restaurant",
+        "param": {
+          "restaurant_name": "Vegetarian Delight",
+          "reservation_time": "19:00",
+          "customer_name": "Customer",
+          "contact_info": "customer@example.com",
+          "party_size": 10,
+          "special_requests": "Vegetarian menu",
+          "view_requirement": "None",
+          "area": "Main dining area",
+          "nearby_location": "City Center",
+          "budgetPerPerson": 20,
+          "special_requirements": "Vegetarian"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "food_recommendation",
+        "param": {
+          "location": "Pudong New Are",
+          "dietPreferences": "Vegetarian"
+        }
+      },
+      {
+        "tool": "book_restaurant",
+        "param": {
+          "restaurant_name": "<Recommended Vegetarian Delicacies List>",
+          "reservation_time": "Tonight at 7 pm",
+          "party_size": "<Number of People Suitable for Gatherings>",
+          "special_requirements": "Vegetarian"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 2855,
+    "completion_tokens": 270,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_285",
+    "question": "Tonight I would like to reserve table ID 10 at your restaurant, and place an order for one dish of Tomato Scrambled Eggs with ID 101 and two dishes of Kung Pao Chicken with ID 102, please generate the corresponding order IDs for each dish.",
+    "generated_calls": [
+      {
+        "tool": "check_table_availability",
+        "param": {
+          "table_id": "10"
+        }
+      },
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": 101,
+          "quantity": 1
+        }
+      },
+      {
+        "tool": "order_dishes",
+        "param": {
+          "dish1": "Kung Pao Chicken",
+          "quantity1": 2,
+          "dish2": "",
+          "quantity2": 0
+        }
+      },
+      {
+        "tool": "query_dish_id",
+        "param": {
+          "dish_name": "dish1"
+        }
+      },
+      {
+        "tool": "query_dish_id",
+        "param": {
+          "dish_name": "dish2"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "check_table_availability",
+        "param": {
+          "table_id": "10"
+        }
+      },
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": "101",
+          "quantity": "1"
+        }
+      },
+      {
+        "tool": "menu_select_api",
+        "param": {
+          "dish_id": "102",
+          "quantity": "2"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 3291,
+    "completion_tokens": 225,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_286",
+    "question": "My name is Li Si, I would like to book a double room at the JW Marriott Hotel in Shanghai, with check-in date on May 20, 2023, and check-out date on May 23, 2023, I need two rooms.\n",
+    "generated_calls": [
+      {
+        "tool": "hotel_reservation_search",
+        "param": {
+          "hotelName": "JW Marriott Hotel",
+          "checkInDate": "2023-10-01",
+          "checkOutDate": "2023-10-02",
+          "roomType": "double"
+        }
+      },
+      {
+        "tool": "select_room_for_booking",
+        "param": {
+          "hotel_name": "string",
+          "check_in": "string",
+          "check_out": "string",
+          "room_type": "string",
+          "number_of_rooms": 2
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "hotel_booking_query",
+        "param": {
+          "confirmation_number": "Booking confirmation number"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 5497,
+    "completion_tokens": 218,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_287",
+    "question": "I would like to book 2 standard rooms at the Huangshan Welcoming Pine Hotel, with the check-in date on April 15th and the check-out date on April 18th. The customer's name is Li Lei.\n",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "check_availability_and_price",
+        "param": {
+          "hotel_name": "Huangshan Welcoming Pine Hotel",
+          "room_type": "Standard room",
+          "check_in": "2023-04-15",
+          "check_out": "2023-04-18",
+          "number_of_rooms": "2"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_288",
+    "question": "I am Zhang Sanli, I have booked a single room at H1234 Hotel, with the check-in date on January 1, 2023, and the check-out date on January 10, 2023. I now need to change the room type to a deluxe single room and change the check-out date to January 15, 2023.\n",
+    "generated_calls": [
+      {
+        "tool": "hotel_booking_query",
+        "param": {
+          "checkInDate": "",
+          "checkOutDate": "",
+          "hotelName": "H1234 Hotel",
+          "confirmation_number": "",
+          "hotel_id": "H1234",
+          "room_type": "",
+          "number_of_rooms": 0
+        }
+      },
+      {
+        "tool": "select_room_for_booking",
+        "param": {
+          "hotel_name": "Current Hotel Name",
+          "check_in": "Current Check-in Date",
+          "check_out": "Current Check-out Date",
+          "room_type": "deluxe single room",
+          "number_of_rooms": 1
+        }
+      },
+      {
+        "tool": "hotel_booking_query",
+        "param": {
+          "checkInDate": "2023-01-01",
+          "checkOutDate": "2023-01-15",
+          "hotelName": "Your Hotel Name",
+          "confirmation_number": "Your Confirmation Number",
+          "hotel_id": "Your Hotel ID",
+          "room_type": "Your Room Type",
+          "number_of_rooms": 1
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "hotel_booking_query",
+        "param": {
+          "hotelName": "H1234 Hotel",
+          "checkInDate": "January ",
+          "checkOutDate": "January 1",
+          "room_type": "Single room"
+        }
+      },
+      {
+        "tool": "hotel_booking_modification",
+        "param": {
+          "confirmation_number": "<Booking Confirmation Number>",
+          "room_type": "Deluxe single room"
+        }
+      },
+      {
+        "tool": "hotel_booking_modification",
+        "param": {
+          "confirmation_number": "<Booking Confirmation Number>",
+          "check_out": "January 1"
+        }
+      },
+      {
+        "tool": "hotel_booking_query",
+        "param": {
+          "confirmation_number": "<Booking Confirmation Number>"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 3480,
+    "completion_tokens": 284,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_289",
+    "question": "Please help me modify the hotel reservation I made yesterday, the confirmation number is JH6489, change it to check in tomorrow and check out the day after tomorrow.\n",
+    "generated_calls": [
+      {
+        "tool": "hotel_booking_query",
+        "param": {
+          "checkInDate": "2023-10-02",
+          "checkOutDate": "2023-10-03",
+          "hotelName": "Hotel Name Placeholder",
+          "confirmation_number": "Confirmation Number Placeholder",
+          "hotel_id": "Hotel ID Placeholder",
+          "room_type": "Room Type Placeholder",
+          "number_of_rooms": 1
+        }
+      },
+      {
+        "tool": "get_booking_confirmation",
+        "param": {
+          "hotel_name": "",
+          "check_in": "",
+          "check_out": "",
+          "confirmation_number": "JH6489"
+        }
+      },
+      {
+        "tool": "hotel_booking_query",
+        "param": {
+          "checkInDate": "2023-10-06",
+          "checkOutDate": "2023-10-07",
+          "hotelName": "Your Hotel Name",
+          "confirmation_number": "Your Confirmation Number",
+          "hotel_id": "Your Hotel ID",
+          "room_type": "Your Room Type",
+          "number_of_rooms": 1
+        }
+      },
+      {
+        "tool": "calculate_checkout_date",
+        "param": {
+          "check_in": "2023-10-25",
+          "duration": 2
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "hotel_booking_query",
+        "param": {
+          "confirmation_number": "JH6489"
+        }
+      },
+      {
+        "tool": "hotel_booking_modification",
+        "param": {
+          "confirmation_number": "JH6489",
+          "check_in": "tomorrow",
+          "check_out": "the day after tomorrow"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 4227,
+    "completion_tokens": 342,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_290",
+    "question": "I want to know the weather in Beijing today, followed by setting a meeting reminder for 2 pm tomorrow.\n",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "weather_query",
+        "param": {
+          "location": "Beijing",
+          "date": "today's date"
+        }
+      },
+      {
+        "tool": "create_meeting_reminder",
+        "param": {
+          "title": "Meeting",
+          "reminder_time": "2 pm tomorrow"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_291",
+    "question": "My name is Li Ming, I would like to book a luxury double room in Shanghai, with the check-in date on May 1st and check-out date on May 5th, I need to book 2 rooms.\n",
+    "generated_calls": [
+      {
+        "tool": "search_and_select_luxury_suite",
+        "param": {
+          "location": "Shanghai",
+          "check_in": "2023-10-01",
+          "check_out": "2023-10-05"
+        }
+      },
+      {
+        "tool": "calculate_checkout_date",
+        "param": {
+          "check_in": "2023-05-01",
+          "duration": 4
+        }
+      },
+      {
+        "tool": "hotel_room_availability",
+        "param": {
+          "hotelName": "Hotel Name",
+          "roomType": "Room Type",
+          "checkIn": "Check-in Date",
+          "checkOut": "Check-out Date",
+          "hotel_id": "Hotel Identifier ID",
+          "number_of_rooms": 2
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "select_best_hotel",
+        "param": {
+          "room_type": "luxury double room",
+          "check_in": "May 1st",
+          "check_out": "May 5th"
+        }
+      },
+      {
+        "tool": "hotel_booking_query",
+        "param": {
+          "confirmation_number": "<Booking confirmation number>"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 5389,
+    "completion_tokens": 216,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_292",
+    "question": "I need to modify my hotel reservation details, the confirmation number is CN12345ABC. Change the check-in date to October 15th, check-out date to October 20th, adjust the room type to Deluxe Suite, and reserve 3 rooms.\n",
+    "generated_calls": [
+      {
+        "tool": "hotel_booking_modification",
+        "param": {
+          "confirmation_number": "string",
+          "check_in": "string",
+          "check_out": "string",
+          "room_type": "string",
+          "number_of_rooms": 1
+        }
+      },
+      {
+        "tool": "get_booking_confirmation",
+        "param": {
+          "hotel_name": "",
+          "check_in": "",
+          "check_out": "",
+          "confirmation_number": "CN12345ABC"
+        }
+      },
+      {
+        "tool": "calculate_checkout_date",
+        "param": {
+          "check_in": "2023-10-18",
+          "duration": 2
+        }
+      },
+      {
+        "tool": "select_room_for_booking",
+        "param": {
+          "hotel_name": "Current Hotel Name",
+          "check_in": "Current Check-in Date",
+          "check_out": "Current Check-out Date",
+          "room_type": "Deluxe Suite",
+          "number_of_rooms": "Current Number of Rooms"
+        }
+      },
+      {
+        "tool": "hotel_reservation_search",
+        "param": {
+          "hotelName": "Your Hotel Name",
+          "checkInDate": "Your Check-in Date",
+          "checkOutDate": "Your Check-out Date",
+          "roomType": "Your Room Type"
+        }
+      },
+      {
+        "tool": "select_room_for_booking",
+        "param": {
+          "hotel_name": "Your Hotel Name",
+          "check_in": "Your Check-in Date",
+          "check_out": "Your Check-out Date",
+          "room_type": "Your Room Type",
+          "number_of_rooms": 3
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "hotel_booking_query",
+        "param": {
+          "confirmation_number": "CN12345ABC"
+        }
+      },
+      {
+        "tool": "hotel_booking_modification",
+        "param": {
+          "confirmation_number": "CN12345ABC",
+          "check_in": "October 15th"
+        }
+      },
+      {
+        "tool": "hotel_booking_modification",
+        "param": {
+          "confirmation_number": "CN12345ABC",
+          "check_out": "October 20th"
+        }
+      },
+      {
+        "tool": "hotel_booking_modification",
+        "param": {
+          "confirmation_number": "CN12345ABC",
+          "room_type": "Deluxe Suite"
+        }
+      },
+      {
+        "tool": "hotel_booking_modification",
+        "param": {
+          "confirmation_number": "CN12345ABC",
+          "number_of_rooms": "3"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 6422,
+    "completion_tokens": 421,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_293",
+    "question": "I would like to book a hotel for check-in tomorrow, my name is Li Si, I want to book a king room at Yuehua Hotel with the ID 008, one room, planning to stay until April 10th.\n",
+    "generated_calls": [
+      {
+        "tool": "hotel_search_and_book",
+        "param": {
+          "check_in_date": "2023-10-07",
+          "check_out_date": "2023-10-08",
+          "customer_name": "Guest",
+          "identity_number": "ID123456",
+          "location": "City Center",
+          "hotel_brand": "Any",
+          "room_type": "Standard",
+          "number_of_rooms": 1
+        }
+      },
+      {
+        "tool": "hotel_reservation_search",
+        "param": {
+          "hotelName": "Yuehua Hotel",
+          "checkInDate": "2023-10-01",
+          "checkOutDate": "2023-10-02",
+          "roomType": "king room"
+        }
+      },
+      {
+        "tool": "hotel_info_query",
+        "param": {
+          "hotel_id": "008"
+        }
+      },
+      {
+        "tool": "search_single_room",
+        "param": {
+          "hotel_location": "unspecified",
+          "price_range": "unspecified",
+          "check_in_date": "unspecified",
+          "check_out_date": "unspecified",
+          "special_requirements": "unspecified"
+        }
+      },
+      {
+        "tool": "homestay_availability_check",
+        "param": {
+          "date": "2024-04-10",
+          "duration": 1,
+          "location": "your_location"
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "check_room_availability",
+        "param": {
+          "hotel_id": "008",
+          "check_in_date": "tomorrow",
+          "check_out_date": "April 10th"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 7276,
+    "completion_tokens": 376,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_294",
+    "question": "I need to modify my hotel reservation, my confirmation number is CN12345, I need to change the room type to a deluxe suite and add one more room on next Monday.\n",
+    "generated_calls": [
+      {
+        "tool": "get_booking_confirmation",
+        "param": {
+          "hotel_name": "",
+          "check_in": "",
+          "check_out": "",
+          "confirmation_number": "CN12345"
+        }
+      },
+      {
+        "tool": "select_room_for_booking",
+        "param": {
+          "hotel_name": "Current Hotel Name",
+          "check_in": "Current Check-in Date",
+          "check_out": "Current Check-out Date",
+          "room_type": "deluxe suite",
+          "number_of_rooms": 1
+        }
+      },
+      {
+        "tool": "additional_room_booking",
+        "param": {
+          "hotel_id": "your_hotel_id",
+          "check_in": "your_check_in_date",
+          "check_out": "your_check_out_date",
+          "room_type": "your_room_type",
+          "number_of_rooms": 1,
+          "same_floor_requirement": true
+        }
+      },
+      {
+        "tool": "additional_room_booking",
+        "param": {
+          "hotel_id": "12345",
+          "check_in": "2023-10-30",
+          "check_out": "2023-10-31",
+          "room_type": "standard",
+          "number_of_rooms": 1,
+          "same_floor_requirement": true
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "hotel_booking_query",
+        "param": {
+          "confirmation_number": "CN12345"
+        }
+      },
+      {
+        "tool": "hotel_booking_modification",
+        "param": {
+          "confirmation_number": "CN12345",
+          "room_type": "deluxe suite",
+          "number_of_rooms": "1"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 5493,
+    "completion_tokens": 392,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_295",
+    "question": "I just got my annual leave for this year, and I plan to go on vacation to a popular hotel with an ocean view room on January 1, 2025. Please help me book a room, my name is Zhang San.\n",
+    "generated_calls": [],
+    "reference_calls": [
+      {
+        "tool": "search_and_select_hotel",
+        "param": {
+          "check_in_date": "2025-01-01",
+          "room_type": "Popular hotel ocean view room"
+        }
+      }
+    ],
+    "final_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_296",
+    "question": "I have booked a room called 'Sunshine Hotel', and the reservation number is CN12345H. Please check my reservation details, and I would like to change my check-in to April 4th and check-out to April 6th.\n",
+    "generated_calls": [
+      {
+        "tool": "contact_hotel_service",
+        "param": {
+          "hotelName": "Sunshine Hotel",
+          "confirmation_number": "CN12345H"
+        }
+      },
+      {
+        "tool": "calculate_checkout_date",
+        "param": {
+          "check_in": "April 6th",
+          "duration": 1
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "hotel_booking_query",
+        "param": {
+          "confirmation_number": "CN12345H"
+        }
+      },
+      {
+        "tool": "hotel_booking_modification",
+        "param": {
+          "confirmation_number": "CN12345H",
+          "check_in": "2023-04-04",
+          "check_out": "2023-04-06"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 3387,
+    "completion_tokens": 125,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_297",
+    "question": "My name is Li Si, I need to book a business hotel, the hotel ID is H00123, planning to check in on October 15th and check out on October 18th, book a standard single room, the number of rooms is 1.\n",
+    "generated_calls": [
+      {
+        "tool": "hotel_info_query",
+        "param": {
+          "hotel_id": "H00123"
+        }
+      },
+      {
+        "tool": "search_single_room",
+        "param": {
+          "hotel_location": "hotel",
+          "price_range": "standard",
+          "check_in_date": "2023-10-01",
+          "check_out_date": "2023-10-02",
+          "special_requirements": ""
+        }
+      },
+      {
+        "tool": "search_single_room",
+        "param": {
+          "hotel_location": "hotel",
+          "price_range": "standard",
+          "check_in_date": "2023-10-01",
+          "check_out_date": "2023-10-02",
+          "special_requirements": ""
+        }
+      },
+      {
+        "tool": "calculate_checkout_date",
+        "param": {
+          "check_in": "October 18th",
+          "duration": 1
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "check_room_availability",
+        "param": {
+          "hotel_id": "H00123",
+          "check_in_date": "2023-10-15",
+          "check_out_date": "2023-10-18",
+          "room_type": "standard single room",
+          "number_of_rooms": "1"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 5395,
+    "completion_tokens": 273,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_298",
+    "question": "I need to book a luxury twin room in a five-star hotel in Beijing, with the check-in date from April 15th to April 20th, booking 2 rooms. The customer's name is Zhang San.\n",
+    "generated_calls": [
+      {
+        "tool": "search_and_select_luxury_suite",
+        "param": {
+          "location": "Beijing",
+          "check_in": "",
+          "check_out": ""
+        }
+      },
+      {
+        "tool": "hotel_booking_query",
+        "param": {
+          "checkInDate": "2024-04-20",
+          "checkOutDate": "",
+          "hotelName": "",
+          "confirmation_number": "",
+          "hotel_id": "",
+          "room_type": "",
+          "number_of_rooms": 0
+        }
+      },
+      {
+        "tool": "hotel_room_availability",
+        "param": {
+          "hotelName": "Hotel Name",
+          "roomType": "Room Type",
+          "checkIn": "Check-in Date",
+          "checkOut": "Check-out Date",
+          "hotel_id": "Hotel Identifier ID",
+          "number_of_rooms": 2
+        }
+      },
+      {
+        "tool": "hotel_search_and_book",
+        "param": {
+          "check_in_date": "",
+          "check_out_date": "",
+          "customer_name": "Zhang San",
+          "identity_number": "",
+          "location": "",
+          "hotel_brand": "",
+          "room_type": "",
+          "number_of_rooms": 0
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "search_hotels",
+        "param": {
+          "city": "Beijing",
+          "check_in_date": "April 15th",
+          "check_out_date": "April 20th",
+          "star_rating": "5",
+          "room_type": "Luxury twin room"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 22135,
+    "completion_tokens": 1088,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_299",
+    "question": "I need to modify my hotel reservation. The confirmation number is H123456. I would like to change the check-in date to May 10, 2023, and the check-out date to May 15, 2023, and also change the room type to a deluxe suite.\n",
+    "generated_calls": [
+      {
+        "tool": "hotel_booking_modification",
+        "param": {
+          "confirmation_number": "H123456",
+          "check_in": "New check-in date",
+          "check_out": "New check-out date",
+          "room_type": "New room type",
+          "number_of_rooms": 1
+        }
+      },
+      {
+        "tool": "calculate_checkout_date",
+        "param": {
+          "check_in": "2023-05-15",
+          "duration": 0
+        }
+      },
+      {
+        "tool": "select_room_for_booking",
+        "param": {
+          "hotel_name": "Current Hotel Name",
+          "check_in": "Current Check-in Date",
+          "check_out": "Current Check-out Date",
+          "room_type": "deluxe suite",
+          "number_of_rooms": 1
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "hotel_booking_query",
+        "param": {
+          "confirmation_number": "H123456"
+        }
+      },
+      {
+        "tool": "hotel_booking_modification",
+        "param": {
+          "confirmation_number": "H123456",
+          "check_in": "2023-05-10",
+          "check_out": "2023-05-15",
+          "room_type": "Deluxe Suite"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 4402,
+    "completion_tokens": 231,
+    "retries_spent": 0
+  },
+  {
+    "id": "benchmark_300",
+    "question": "I would like to cancel the booking for flight number MU5132 on March 20th at 8:00 AM, passenger name Zhang San.\n",
+    "generated_calls": [
+      {
+        "tool": "flight_ticket_cancelling",
+        "param": {
+          "departureDate": "unknown",
+          "flightNumber": "MU5132",
+          "bookingName": "unknown"
+        }
+      },
+      {
+        "tool": "flight_ticket_confirmation",
+        "param": {
+          "bookingName": "Zhang San",
+          "flightNumber": "",
+          "departureDate": ""
+        }
+      }
+    ],
+    "reference_calls": [
+      {
+        "tool": "flight_search",
+        "param": {
+          "departure_date": "2023-03-20 08:00",
+          "flightNumber": "MU5132",
+          "bookingName": "Zhang San"
+        }
+      },
+      {
+        "tool": "flight_ticket_cancelling",
+        "param": {
+          "bookingName": "Zhang San",
+          "flightNumber": "MU5132",
+          "departureDate": "2023-03-20 08:00"
+        }
+      }
+    ],
+    "final_error": null,
+    "prompt_tokens": 7791,
+    "completion_tokens": 175,
+    "retries_spent": 0
+  }
+]

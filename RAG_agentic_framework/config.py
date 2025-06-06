@@ -42,7 +42,12 @@ You have access to the following tools:
 Your task is to process the user request: "{user_request}"
 You must select the appropriate tool(s) from *your* available list and determine the correct arguments to fulfill the request.
 You need to output a list of proposed tool calls. Each tool call should be a dictionary with 'tool' (the tool name) and 'param' (a dictionary of arguments).
-Return ONLY a JSON. No keys, no commentary.
+
+If you CANNOT complete the entire task, IN ANY CASE, WRITE DOWN THE FUNCTIONS that, in your opinion, CAN BRING you CLOSER to solving the problem in JSON format.
+Use tools ONLY FROM THE LIST PROVIDED TO YOU!
+If the function is not available to you, DO NOT WRITE it in JSON.
+Make sure that your response in JSON format is correct!!
+Return ONLY a JSON. No keys, no commentary. At least one tool must be in it.
 
 Example Output Format:
 [

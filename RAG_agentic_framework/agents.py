@@ -23,6 +23,7 @@ from RAG_agentic_framework.tool_utils import (
     format_tool_descriptions,
     validate_tool_call_sequence,
 )
+from pathlib import Path
 
 
 def create_agent():
@@ -40,9 +41,12 @@ def create_agent():
             ("human", "{user_request}"),
         ]
     )
+    VECTORSTORE_ROOT = Path("/tmp/chroma_agents")
+    VECTORSTORE_ROOT.mkdir(parents=True, exist_ok=True)
 
     def _build_vectorstore(category: str, tools_dict: Dict[str, ToolSchema]) -> Chroma:
-        tmp_dir = tempfile.mkdtemp(prefix=f"chroma_{category}_")
+        tmp_dir = VECTORSTORE_ROOT / category
+        tmp_dir.mkdir(exist_ok=True)
         docs: List[Document] = []
 
         for tool_name, schema in tools_dict.items():
@@ -63,8 +67,8 @@ def create_agent():
         return Chroma.from_documents(
             documents=docs,
             embedding=embeddings,
-            collection_name=f"{category}_{uuid.uuid4().hex}",
-            persist_directory=tmp_dir,
+            collection_name=f"{category}_tools",
+            persist_directory=str(tmp_dir),
         )
 
     def agent_node(state: AgentState) -> Dict[str, Any]:

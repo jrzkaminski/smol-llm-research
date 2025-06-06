@@ -52,11 +52,13 @@ class ToolSchema(BaseModel):
 class ToolCall(BaseModel):
     tool: str
     param: Dict[str, Any] = Field(default_factory=dict)
+    input_source: Optional[str] = None
 
 
 class BenchmarkReference(BaseModel):
     tool: str
     param: Dict[str, Any] = Field(default_factory=dict)
+    input_source: Optional[str] = None
 
 
 class BenchmarkItem(BaseModel):
@@ -71,15 +73,15 @@ class BenchmarkItem(BaseModel):
 
 class AgentState(BaseModel):
     user_request: str
-    category: Optional[str] = None
     agent_outcome: Optional[List[ToolCall]] = None
     error_message: Optional[str] = None
-    supervisor_result: Optional[List[ToolCall]] = None
+    subtasks: List[str] = []
     all_tools_schema: Optional[Dict[str, ToolSchema]] = None
     tools_by_category: Optional[Dict[str, Dict[str, ToolSchema]]] = None
     total_prompt_tokens: int = 0
     total_completion_tokens: int = 0
     retry_count: int = 0
+    tools_graph: GraphStructure = None
     available_tools_for_agent: Optional[Dict[str, ToolSchema]] = None
 
     def clear_error(self):
@@ -90,10 +92,11 @@ class AgentState(BaseModel):
         self.error_message = error
         return self
 
-    def get_current_agent_tools(self) -> Dict[str, ToolSchema]:
-        if self.category and self.tools_by_category:
-            return self.tools_by_category.get(self.category, {})
-        return {}
+    def get_agent_tools(self) -> Dict[str, ToolSchema]:
+        result_dict = {}
+        for category in self.tools_by_category.keys():
+            result_dict.update(self.tools_by_category.get(category, {}))
+        return result_dict
 
     class Config:
         arbitrary_types_allowed = True

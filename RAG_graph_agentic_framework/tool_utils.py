@@ -16,7 +16,7 @@ from collections import defaultdict
 
 
 def build_tool_adjacency(graph: GraphStructure) -> Dict[str, Set[str]]:
-    """Returns {tool_name: {neighbour1, neighbour2, …}} for *all* graph links."""
+    """Returns {tool_name: {neighbour1, neighbour2, etc}} for *all* graph links."""
     adj: Dict[str, Set[str]] = defaultdict(set)
     for link in graph.links:
         adj[link.source].add(link.target)
@@ -164,7 +164,8 @@ def get_tools_by_category(
                 )
         else:
             print(
-                f"Warning: Tool '{node_name}' found in graph node but not found in the loaded tool descriptions (tools.json). Skipping this tool for category '{node_category}'."
+                f"Warning: Tool '{node_name}' found in graph node but not found in the loaded tool descriptions ("
+                f"tools.json). Skipping this tool for category '{node_category}'."
             )
 
     print(f"\nFound categories in graph: {categories}")
@@ -186,11 +187,12 @@ def validate_tool_call(
 ) -> Tuple[bool, Optional[str]]:
     """
     Validates a single tool call against the available tool schemas.
-    Checks tool existence, top-level argument names, and required top-level args.
+    Checks tool existence, top-level argument names, required top-level args, and input_source field.
     Does NOT recursively validate nested structures by default.
     """
     tool_name = tool_call.tool
     params = tool_call.param
+    input_source = tool_call.input_source
 
     if tool_name not in available_tools:
         return False, f"Tool '{tool_name}' does not exist or is not available."
@@ -219,6 +221,15 @@ def validate_tool_call(
             False,
             f"Tool '{tool_name}' is missing required top-level arguments: {', '.join(missing_args)}.",
         )
+
+    # Validate input_source format if present
+    if input_source is not None:
+        if input_source != "question" and not input_source.endswith(" tool"):
+            return (
+                False,
+                f"Tool '{tool_name}' has invalid input_source format: '{input_source}'. Expected 'question' or '<tool_name> tool'.",
+            )
+
     return True, None
 
 
