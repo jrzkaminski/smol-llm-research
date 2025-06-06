@@ -1,21 +1,21 @@
 {
-  "evaluation_timestamp_utc": "1749137607.706552",
+  "evaluation_timestamp_utc": "1749227111.648916",
   "evaluated_by_user": "jrzkaminski",
   "source_results_file": "results_all1-700.json",
-  "total_benchmarks_processed": 700,
+  "total_benchmarks_processed": 1000,
   "aggregated_metrics": {
-    "Avg_InstAcc": 0.2914285714285714,
-    "Avg_ToolAcc": 0.1840238095238095,
+    "Avg_InstAcc": 0.276,
+    "Avg_ToolAcc": 0.2005,
     "Avg_ArgAcc": 1.0,
-    "Avg_Precision": 0.254921768707483,
-    "Avg_Recall": 0.30092857142857143,
-    "Avg_F1": 0.2645683364254793,
-    "Avg_RetriesSpent": 0.004285714285714286,
-    "Total_Prompt_Tokens": 1638878,
-    "Total_Completion_Tokens": 154794,
+    "Avg_Precision": 0.2694964285714286,
+    "Avg_Recall": 0.3165428571428571,
+    "Avg_F1": 0.2742367243867244,
+    "Avg_RetriesSpent": 0.003,
+    "Total_Prompt_Tokens": 2448886,
+    "Total_Completion_Tokens": 242016,
     "Total_Retries": 3,
-    "Avg_Prompt_Tokens_Per_Run": 2341.2542857142857,
-    "Avg_Completion_Tokens_Per_Run": 221.1342857142857
+    "Avg_Prompt_Tokens_Per_Run": 2448.886,
+    "Avg_Completion_Tokens_Per_Run": 242.016
   },
   "individual_results_metrics": [
     {
@@ -11216,6 +11216,4806 @@
       },
       "prompt_tokens": 2554,
       "completion_tokens": 235,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_701",
+      "question": "I need to book a meeting room in both Beijing and Shanghai for March 20th from 9 AM to 11 AM, with the topic \"Annual Sales Strategy\".\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1187,
+      "completion_tokens": 238,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_702",
+      "question": "I would like to cancel the meeting room reservation with the ID SH01 in Shanghai at 10 a.m. on March 18th, and inquire about the availability of meeting rooms in Beijing from 2 p.m. to 3 p.m. on the same day.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1268,
+      "completion_tokens": 134,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_703",
+      "question": "I need to book a meeting room in Beijing for next Monday, from 9 AM to 5 PM, and also check the weather in Beijing for that day.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.3333333333333333,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1205,
+      "completion_tokens": 74,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_704",
+      "question": "I need to book the fifth meeting room in Beijing for a meeting about the annual sales report from 9 am to 11 am on March 20th, and I would like to be reminded to prepare the meeting materials at 5 pm the day before.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2507,
+      "completion_tokens": 424,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_705",
+      "question": "I need to book a conference room in Shanghai, the room number is SH-101, the time is from tomorrow morning at 9:00 to 5:00 in the afternoon, and the meeting topic is market analysis report.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.25,
+        "Recall": 0.5,
+        "F1": 0.3333333333333333,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2170,
+      "completion_tokens": 308,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_706",
+      "question": "I need to book a meeting room in Beijing, Room 301, from 10:00 am to 12:00 pm on March 6, 2023. The meeting topic is '2023 Market Strategy Discussion'. I also need to confirm the booking situation for the same day from 3:00 pm to 5:00 pm.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.6666666666666666,
+        "Recall": 1.0,
+        "F1": 0.8,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1672,
+      "completion_tokens": 296,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_707",
+      "question": "I would like to check the reservation status of conference room No. 303 in Beijing for today from 9 am to 10 am, and if it's not booked, please book it for me.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1213,
+      "completion_tokens": 248,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_708",
+      "question": "I need to cancel the meeting that was scheduled in Shanghai's Room 007 from 14:00 to 16:00 on October 10, 2023, and reschedule it to Room 089 in Beijing, with the new meeting time set to 9:00-11:00 on October 11, 2023.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1966,
+      "completion_tokens": 210,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_709",
+      "question": "I need to book two meetings in the B301 conference room in Beijing, the first meeting is from 9 am to 11 am, and the second meeting is from 3 pm to 5 pm, with the themes being product launch and team training, respectively. Please help me arrange the booking.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1210,
+      "completion_tokens": 171,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_710",
+      "question": "Can you help me check if my account has any online meetings scheduled for tomorrow? The account ID is 12345, and the password is password456.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1407,
+      "completion_tokens": 114,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_711",
+      "question": "I need to start an online meeting at 3 PM on time and set a reminder one hour before the meeting. Can you help me schedule and set the reminder?\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_712",
+      "question": "I need to cancel the reservation of Conference Room 101 in Beijing, with the meeting start time being April 30, 2022, 10:00, and the end time being April 30, 2022, 12:00. And after the cancellation, reserve Conference Room 201 in Shanghai, with the meeting start time being April 30, 2022, 14:00, and the end time being April 30, 2022, 16:00, and the meeting content is project progress report.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.3333333333333333,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1457,
+      "completion_tokens": 216,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_713",
+      "question": "I would like to book a conference room in Beijing, the usage time is from 9:00 am to 11:00 am on May 5, 2023, the conference room number is BJ-001, and the meeting topic is Mid-Year Team Summary Meeting.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 1.0,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2217,
+      "completion_tokens": 332,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_714",
+      "question": "I need to book a conference room in Shanghai, from March 20, 2023, 9:00 to March 20, 2023, 12:00, for the meeting topic \"Annual Market Analysis Report\".\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1778,
+      "completion_tokens": 245,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_715",
+      "question": "I need to book a conference room in Beijing, the meeting time is from March 20, 2023, 9:00 AM to 12:00 PM, and the topic is about the discussion of annual market strategy.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1602,
+      "completion_tokens": 282,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_716",
+      "question": "I have an important business meeting next week, the location is in Hangzhou, I need to book a meeting room from 9 am to 3 pm on March 12th, and ensure there are no other reservations before that.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2482,
+      "completion_tokens": 372,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_717",
+      "question": "I need to first check the reservation status of the Shanghai A101 meeting room from 10 a.m. to 11 a.m. If it's not booked, then help me reserve the meeting room for this time slot.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1431,
+      "completion_tokens": 205,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_718",
+      "question": "I would like to book an online meeting from 20:00 to 22:00 tonight, and check the weather in Beijing today.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1193,
+      "completion_tokens": 68,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_719",
+      "question": "I need to change the meeting originally scheduled in Beijing A102 conference room, from 2 PM to 5 PM tomorrow to start at 3 PM.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1575,
+      "completion_tokens": 223,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_720",
+      "question": "I need to attend two meetings in Shanghai, one is a product launch from 9 am to 11 am on March 18th, and the other is a strategic planning meeting from 2:30 pm to 4 pm on the same day. Please help me search for available meeting rooms in Shanghai during these two time slots and book one.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 1.0,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3140,
+      "completion_tokens": 548,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_721",
+      "question": "I have an important meeting in Beijing at 1 PM, and I need to book a conference room for 10 people, with the meeting ending at 3 PM.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 0.5,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1642,
+      "completion_tokens": 257,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_722",
+      "question": "I need to organize a sales training meeting in Beijing, the meeting room reservation number is A203, and the meeting time is from 8 am tomorrow until 12 pm at noon. Additionally, considering there might be remote participants, I would also like to reserve an online meeting room, please help me arrange and confirm the reservation status.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.2,
+        "Recall": 0.25,
+        "F1": 0.22222222222222224,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2810,
+      "completion_tokens": 499,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_723",
+      "question": "Please help me check the reservation status of the meeting room with the number B203 in Beijing city for today from 14:00 to 16:00. If it is not reserved, please book this meeting room for me during this time slot, with the meeting topic being 'Annual Financial Report Review'.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1457,
+      "completion_tokens": 249,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_724",
+      "question": "I need to book a conference room in Shanghai, the room number is SH001, the meeting time is from 9 am to 11 am on March 20, 2023. Additionally, I need to cancel another conference room in Beijing, the room number is BJ002, the original meeting time was from 10 am to 3 pm on March 18, 2023.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2748,
+      "completion_tokens": 426,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_725",
+      "question": "I need to book a meeting room with the ID B003 in Beijing for April 27th from 9 am to 12 pm, and I would like to be reminded of the meeting content at 2 pm the day before the meeting starts.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1276,
+      "completion_tokens": 107,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_726",
+      "question": "I am Li Si, the meeting scheduled for December 31, 2023, from 15:00 to 16:00 in Beijing Conference Room 101 has been canceled, and then rescheduled for December 31, 2023, from 13:00 to 14:00.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3654,
+      "completion_tokens": 313,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_727",
+      "question": "I would like to book a conference room with the ID A888 in Beijing, from 10 a.m. to 3 p.m. on April 10th, 2023, for the annual financial audit meeting.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 0.5,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1752,
+      "completion_tokens": 372,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_728",
+      "question": "There are some sudden issues with meeting room B003 in Shanghai at 3 PM, it needs to be changed to another meeting room, please check if there are any other meeting rooms available for booking, the meeting duration is 1 hour.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.25,
+        "Recall": 0.5,
+        "F1": 0.3333333333333333,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2522,
+      "completion_tokens": 293,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_729",
+      "question": "I need to cancel the reservation of Beijing B23 conference room from 9 AM to 11 AM on next Monday (March 20th), and inquire about the reservation status of Shanghai A02 conference room for the same time period.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1279,
+      "completion_tokens": 238,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_730",
+      "question": "I need to change the reservation of the Beijing B003 meeting room from 3 PM to 5 PM to 4 PM to 6 PM, and also check the reservation status of the meeting room for the new time slot.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.3333333333333333,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1588,
+      "completion_tokens": 249,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_731",
+      "question": "I need to book a conference room in Beijing for a product launch on the morning of September 8th. The room number is BJ001, from 9 am to 12 pm. Please also check if the room is available during this time.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: 'AgentState' object has no attribute 'get'"
+    },
+    {
+      "id": "benchmark_732",
+      "question": "I need to cancel the reservation of conference room No. 172 in Beijing from 8 AM to 10 AM tomorrow, and then book a new conference room for the same time.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.3333333333333333,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1262,
+      "completion_tokens": 192,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_733",
+      "question": "I need to cancel the reservation of the meeting room with the ID 20230401 in Beijing, which was originally scheduled for today from 3 pm to 5 pm.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1418,
+      "completion_tokens": 185,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_734",
+      "question": "I need to change the arrangement for the meeting on Wednesday morning next week. The original reservation was for the Beijing A101 conference room, starting at 09:00 on April 12th and ending at 12:00 on April 12th. Now I want to change the meeting to start at 13:30 on April 12th and end at 16:30, with the location unchanged.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 0.3333333333333333,
+        "F1": 0.3333333333333333,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3221,
+      "completion_tokens": 556,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_735",
+      "question": "I need to cancel the meeting room reservation for A305 at the Beijing Head Office tomorrow, and check if there are any available meeting rooms in Shanghai during the same time period.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1334,
+      "completion_tokens": 167,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_736",
+      "question": "I need to book a conference room in Beijing for a product launch on April 18th from 14:00 to 16:00, and then check the availability of conference rooms in Shanghai during the same time period.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1309,
+      "completion_tokens": 176,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_737",
+      "question": "I would like to book a conference room in Shanghai, with the meeting scheduled for March 16, 2023, from 9 AM to 11 AM, meeting number SH888, and the agenda is the annual financial report review.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2749,
+      "completion_tokens": 365,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_738",
+      "question": "There will be a project kickoff meeting this afternoon, I need to book the meeting room No. 302 in Beijing, the time is from 14:00 to 16:00 today, and the meeting topic is \"Intelligent Product Development Project Kickoff\".\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 0.5,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1698,
+      "completion_tokens": 253,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_739",
+      "question": "I would like to book a data analysis group meeting in Hangzhou from 3 PM to 5 PM on March 18th, and check the weather forecast in Hangzhou for that day.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1227,
+      "completion_tokens": 86,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_740",
+      "question": "I would like to change the reservation of meeting room No. 823 of the Beijing company, originally scheduled for March 20, 2023, from 14:00 to 16:00, to March 20, 2023, from 9:00 to 11:00.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2148,
+      "completion_tokens": 307,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_741",
+      "question": "I need to book a conference room in Shanghai for a product launch event. The room needs to be used between 9 AM and 6 PM on March 20, 2023, and the room number is SH-RM10086.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1719,
+      "completion_tokens": 225,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_742",
+      "question": "I need to change the meeting room reservation from 9 AM to 11 AM on April 6th in Shanghai's room 305 to 3 PM to 5 PM on April 7th, and check if there are any available meeting rooms for the new time slot.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1469,
+      "completion_tokens": 251,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_743",
+      "question": "A product launch event is scheduled at 3 PM in Shanghai, requiring the reservation of conference room number SH888, with the meeting time from 3 PM to 5 PM.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 0.25,
+        "F1": 0.28571428571428575,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1773,
+      "completion_tokens": 289,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_744",
+      "question": "I would like to book a conference room in Beijing from 9 AM to 11 AM on March 20th for a meeting on the topic of 2023 Annual Market Analysis. Additionally, I would like to know if another conference room is available from 2 PM to 4 PM on the same day.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1264,
+      "completion_tokens": 167,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_745",
+      "question": "I need to cancel the reservation of meeting room A01 in Beijing on April 8th from 10 am to 12 pm, and book another meeting room at the same time.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.6666666666666666,
+        "F1": 0.8,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1218,
+      "completion_tokens": 219,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_746",
+      "question": "I would like to know the reservation status of Beijing Meeting Room No. 7 on this Friday, and I also want to book this meeting room from 9 am to 11 am to discuss project progress.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1296,
+      "completion_tokens": 211,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_747",
+      "question": "I have an important meeting at 7 PM, I need to book a meeting room in Beijing, and write 'Welcome everyone to this meeting' on the whiteboard in the meeting room. Please help me arrange it.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_748",
+      "question": "I have an online team meeting from 10 AM to 2 PM on the 3rd of next month, and I need a reminder and meeting minutes.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.3333333333333333,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1210,
+      "completion_tokens": 163,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_749",
+      "question": "I need to check if the Beijing 3005 conference room has been booked today from 2 PM to 5 PM, if not, I would like to reserve it for a product launch event.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: 'AgentState' object has no attribute 'get'"
+    },
+    {
+      "id": "benchmark_750",
+      "question": "I need to book a meeting room, it needs to be a meeting room in Shanghai, the meeting room number is SH001, and the reservation time is from 2 PM to 4 PM today.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1824,
+      "completion_tokens": 233,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_751",
+      "question": "I would like to change the reservation of the meeting room originally scheduled for March 20, 2023, from 9:00 to 11:00 in Beijing, room number BJ001, to March 21, 2023.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1418,
+      "completion_tokens": 196,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_752",
+      "question": "I would like to book a meeting room in Shanghai for next Monday morning, from 9 am to 11 am, for the Annual Market Analysis Meeting. Could you check which meeting room is available and make the reservation for me?\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1275,
+      "completion_tokens": 203,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_753",
+      "question": "I want to manage my schedule and tasks, my account ID is 123456, and the password is password789, please set up a reading task for me at 8 o'clock tonight, the content is \"Modern Economics\".\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 0.5,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3351,
+      "completion_tokens": 312,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_754",
+      "question": "I have two tasks for which I need the assistant to set reminders. The first task is a hospital follow-up appointment at 14:00, remind me \"Go to the hospital for a follow-up at 14:00\"; the second task is a team meeting at 19:00, with the reminder content \"Attend the team meeting at 19:00\".\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1244,
+      "completion_tokens": 107,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_755",
+      "question": "I have an online meeting tomorrow morning, starting at 8:15 and ending at 9:00. There is also a stock trade in the evening, I need to sell 200 shares of stock number 000002 at 19:45 for 25 yuan per share, please help me arrange it.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_756",
+      "question": "Please set a weekly recurring reminder titled 'Weekly Meeting' for me at 3 PM on June 25th in Building B, and starting from next Monday, which is June 26th, create a daily recurring reminder named 'Project Deadline' at 7 PM in the office on every workday.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1620,
+      "completion_tokens": 233,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_757",
+      "question": "I need to share my schedule with id \"1234ABC\" for next Monday starting from 8 AM with my assistant, user id \"5678DEF\", with read-only permission, until it expires on next Friday at 18:00. Also, I need to grant edit permissions to my colleague, user id \"9876GHI\", for the same time period.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_758",
+      "question": "Please find all the schedules related to 'market analysis' between next Monday (August 14) and next Sunday (August 20), and automatically send a reminder email with the content 'Don't forget to attend the market analysis related meeting tomorrow.' to my team the afternoon before each relevant schedule is found. The email address is team@company.com.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 0.5,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2177,
+      "completion_tokens": 319,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_759",
+      "question": "Please create a class schedule for student Zhang San on June 7th, including a Chinese language class at 8 a.m. in classroom A101, followed by a math class in classroom A102, and an afternoon physics class in classroom C303. Set up a video conference starting at 8 a.m. lasting for 3 hours titled 'Zhang San's Remote Course', and add the teacher laozhang@example.com and teaching assistant zhaoli@example.com to the meeting, with no need to set a meeting password.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 21584,
+      "completion_tokens": 3744,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_760",
+      "question": "I need to create three schedules. First is the 'Annual Market Strategy Review' on Thursday, August 3, 2023, from 9 AM to 11 AM in Conference Room A, with the id Agu1, and the participants are Li Hua, Wang Wei, and Zhang Min; second is the 'New Product Development Plan Discussion' on the same day from 2 PM to 4 PM in Conference Room B, with the id Tech1, and the participants are Chen Chen, Li Lei, and Hao Qiang; lastly, the 'Mid-Year Summary Meeting for All Employees' on Friday morning from 10 AM to 12 PM in the Multifunction Hall, with the id AllStaff1, and the participants are all company employees.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2445,
+      "completion_tokens": 475,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_761",
+      "question": "Please create a schedule with ID JH234 titled 'Team Building Activity', scheduled from 08:00 to 12:00 on 2023-01-14 in the company's east meeting room, and also create another schedule with ID TD789 and title 'Department Team Building', adding participants Zhang San, Li Si, Wang Wu, and Zhao Liu, and set a reminder for all attendees at 5 PM the day before the event.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_762",
+      "question": "Please back up two schedules for me. The first one uses id \"meeting-407\", with the title \"Quarterly Strategy Planning Meeting\", starting at 13:00 this afternoon, lasting 120 minutes, and includes detailed content such as discussing the company's development strategy for the next quarter, market analysis, goal setting, and budget allocation; the second one uses id \"project-0407\", the title is not mentioned, the time is now, stored on the company's main server, involving the minutes of discussions about the upcoming new technology project, including project objectives, team configuration, and preliminary timetable.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1831,
+      "completion_tokens": 309,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_763",
+      "question": "I need to back up my work schedule to the company's European regional cloud server, including the Market Strategy Meeting on July 1st starting at 9 am lasting for 2 hours, described as \"Discussing the marketing promotion outline and budget allocation for the second half of the year\", and the all-day Employee Skills Enhancement Training on July 15th, titled \"Employee Skills Enhancement Training\", described as \"Comprehensively enhancing employee skills, including communication, collaboration, and professional technology\", and create a summary for these backups, detailing all the schedules' times and contents.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3096,
+      "completion_tokens": 562,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_764",
+      "question": "I need to create a new work schedule without a specific id for the market analysis report discussion that will be held in Conference Room B from 9 am to 11 am tomorrow, and generate an agenda titled 'Market Analysis Discussion'. Please add Tom, Sarah, and Alex to the invitation list.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 0.5,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4529,
+      "completion_tokens": 674,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_765",
+      "question": "I need to restore the schedule with ID 12345 from the cancelled status to a confirmed status starting at 3 PM today, lasting for 30 minutes. Also, I need to restore the meeting schedule named \"Monthly Summary Meeting\" with ID 67890 to a confirmed status starting at 9 AM on October 1, 2023, which should last for 2 hours and be held in Meeting Room 1.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1441,
+      "completion_tokens": 297,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_766",
+      "question": "Please schedule an important work meeting from 10 AM to 11 AM next Monday in meeting room A of company A, book two tickets for a concert at 3 PM on February 21st with middle row seats, and add a private friends gathering from 7 PM to 10 PM on February 23rd at the Italian restaurant in the city center, setting its importance to 3.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1692,
+      "completion_tokens": 207,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_767",
+      "question": "Add a recurring reminder in your schedule management app, set for every Monday at 08:00, with a brief schedule description, such as 'Start of a new week'. Additionally, modify the existing daily 07:00 alarm so that it only goes off on Mondays, and set a different ringtone for this specific alarm to distinguish it from others.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.6666666666666666,
+        "ArgAcc": 1.0,
+        "Precision": 0.6666666666666666,
+        "Recall": 0.6666666666666666,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1700,
+      "completion_tokens": 229,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_768",
+      "question": "Please retrieve and summarize all the work schedules for my agenda with id 12345 from today until this Friday (2023-03-05 to 2023-03-10) in the 'UTC+8' time zone.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4383,
+      "completion_tokens": 645,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_769",
+      "question": "Arrange family gatherings at my house starting from November 26th, on the next four Sundays at 6 pm, and contact the nearby Italian restaurant two days in advance to find out if they offer special family gathering packages or services, and to obtain their menu and price list. Also, reserve two bouquets of mixed roses and lilies for decoration the day before each gathering, and ensure that the flowers are delivered between 4 pm and 5 pm on the day of the gathering to maintain their freshness.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.25,
+        "Recall": 0.25,
+        "F1": 0.25,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 13561,
+      "completion_tokens": 2038,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_770",
+      "question": "Please organize and export information for my two upcoming events. The first is the monthly operations team meeting held from 10 AM to 11 AM today in the company conference room, with the event ID OP12345. The second is the all-staff outdoor team-building activity taking place all day this Friday at the suburban Sunshine Lawn, with the event ID TB67890. Include the time, location, and detailed description for each event.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_771",
+      "question": "I need to create three to-do items. The first one is 'Project Report Draft', with a deadline of April 25th, high priority, and the status is not started; the second one is 'Budget Audit', with a deadline of May 5th, medium priority, and the status is in progress; the last one is 'Check Contract Details', with a deadline of April 28th, highest priority, and the status is not started.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2098,
+      "completion_tokens": 318,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_772",
+      "question": "I need to check my schedule for today, the schedule id is 12345, I am in GMT+8, and set an email reminder half an hour in advance for the 9 AM department meeting, the 2 PM to 4 PM client video conference, and the 7 PM business dinner, to be sent to my email example@email.com.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2221,
+      "completion_tokens": 326,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_773",
+      "question": "I need to export three important calendar events this week, including the team meeting on Monday, the market analysis meeting on Tuesday, and the client visit on Wednesday. Each event should include the event id, title, start and end time, location, and description. They are event123's \"Weekly Team Meeting\" from 2023-12-18 09:00 to 10:00 in \"Meeting Room A\" discussing last week's progress and this week's plan, event456's \"Market Analysis Meeting\" from 2023-12-19 13:30 to 15:00 in \"Meeting Room B\" analyzing the latest market trends, and event789's \"Client Visit\" from 2023-12-20 10:00 to 11:30 at \"Client Company C\" discussing cooperation matters with the client.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4220,
+      "completion_tokens": 612,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_774",
+      "question": "Please add a team building event named 'Company Spring Team Building' to my schedule, ensuring that the event starts at 9 AM on April 1st and ends at 6 PM on the same day, held at the Happy Farm in the city center. Set reminders for 1 day and 1 hour before the event starts, and sync all the details of this event to the personal schedules of Li Hua and Wang Ming.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: 'AgentState' object has no attribute 'get'"
+    },
+    {
+      "id": "benchmark_775",
+      "question": "Please help me set up two recurring events. The first one is a weekly event named 'Friday Reading Night', which takes place every Friday at 7 PM in the multi-purpose hall of the city library. The second one is a monthly event named 'Monthly Department Meet-up', which occurs on the first Monday of every month at 9 AM in conference room 1 on the 5th floor of the company, and ensure that a unique event id is generated for each activity.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3023,
+      "completion_tokens": 486,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_776",
+      "question": "Please retrieve and summarize the schedule for my user ID U123456 on January 8, 2023, from 8 AM to 12 PM and from 2 PM to 4 PM.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2077,
+      "completion_tokens": 140,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_777",
+      "question": "I need to create a new shared calendar named 'Department Activity Calendar' to record important events of our department, and grant editing permissions to my colleagues Xiao Wang and Xiao Li, whose emails are xiaowang@example.com and xiaoli@example.com. Also, add the first event 'Year-end Summary Meeting' to the calendar, scheduled for 3 PM on December 20th in Conference Room A, expected to last 90 minutes.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3496,
+      "completion_tokens": 297,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_778",
+      "question": "Please arrange a week's work tasks for me, including preparing a project report in the office from 1 PM to 3 PM today and set it as high priority, holding a 'Team Strategic Planning' meeting with medium priority in Conference Room A from 9 AM to 11 AM on Wednesday, and writing an important research paper in my office all day Thursday.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2694,
+      "completion_tokens": 607,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_779",
+      "question": "I need to start from next Monday, arrange an event named \"Monday Fitness\" at the city center gym at 12 PM every Monday, and send an email reminder one hour before the event starts to myemail@domain.com with the subject \"Fitness Reminder\" and the content \"Don't forget today's fitness activity\".",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: 'AgentState' object has no attribute 'get'"
+    },
+    {
+      "id": "benchmark_780",
+      "question": "I need to search for all information mentioned about 'project updates' in my schedule 123456 from today to the end of this month, and arrange a meeting on July 15th from 2 PM to 4 PM to discuss budget issues, ensuring the meeting room can accommodate 15 people and is equipped with a projector and whiteboard.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2759,
+      "completion_tokens": 518,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_781",
+      "question": "Please retrieve and display my schedule for today, especially all activities from 9 AM to 5 PM, and for the project progress report meeting at 3 PM, I need to view its detailed information, my user ID is U123456, and the meeting's agenda_id is AG78910.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 0.5,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3169,
+      "completion_tokens": 279,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_782",
+      "question": "Please import my two meeting schedules into the system. The first one is 'Project Planning Meeting', with the schedule id 'Meeting1001', held tomorrow from 9 am to 11 am in Conference Room 3, remind me 30 minutes in advance; the second one is 'Project Review Meeting', with the schedule id 'Review1005', held this Friday from 2 pm to 4 pm, attended by General Manager Zhang and Manager Li, remind us respectively 15 minutes and 1 hour before the start.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1504,
+      "completion_tokens": 278,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_783",
+      "question": "I need to arrange this week's work schedule, including setting the project meeting from 9 AM to 11 AM tomorrow in the first meeting room as high priority, writing the department work report from 2 PM to 4 PM and setting the event id as \"report_department_002\", and preparing the customer demonstration from 3 PM to 5 PM on Wednesday in the exhibition hall also as high priority.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2783,
+      "completion_tokens": 615,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_784",
+      "question": "Please add a note to my calendar, note id as \"note001\", title as \"Department Meeting\", set it at 9 AM next Monday, with the content stating \"Department Meeting at 9 AM next Monday\" and assign it a priority level of 3, also add another reminder, reminder id as \"family001\", title as \"Family Gathering\", scheduled at 7 PM this Sunday, with the content \"Family Gathering at 7 PM this Sunday\", and this reminder does not need a priority setting.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1411,
+      "completion_tokens": 238,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_785",
+      "question": "I need to share the edit permissions of my schedule with ID 123456 to user ID 654321 until the end of this month, and also share the view permissions of the meeting schedule with ID 789012 to the same colleague for tomorrow, setting the expiration date of the permissions to the end of this month.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_786",
+      "question": "I need to create a work plan, which includes adjusting my existing alarm clock from 6:30 AM every workday and 10:00 PM rest reminder to ring at 7:00 AM every day, and setting a new daily alarm at 7:00 AM as well as a one-time meeting reminder for 7:30 AM tomorrow.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 1.0,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2235,
+      "completion_tokens": 369,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_787",
+      "question": "Please update my schedule, change the title of the speech with id SPK123457 to \"Trends in Future Technology Development\", set the time at 2 PM today, the location at the International Conference Center, lasting for 1 hour, and add a roundtable discussion at the end of the agenda titled \"Exploration of Technology and Ethics\", to be held in the VIP room of the same location, lasting for 90 minutes, with a detailed description of \u201cDiscussing the challenges and opportunities of future technology in the field of ethics.\u201d",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.25,
+        "Recall": 1.0,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 6068,
+      "completion_tokens": 774,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_788",
+      "question": "My washing machine suddenly started leaking, how am I supposed to do laundry now. My washing machine is a Little Swan brand, model TB65-1200G, I will be home at 8 pm, please arrange a home repair service.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3510,
+      "completion_tokens": 277,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_789",
+      "question": "I need to repair my Samsung refrigerator, model RT38K5980SL, which has a problem with decreased cooling efficiency. My phone number is 17712345678, and the address is Zhangjiang Hi-Tech Park, Pudong New District, Shanghai. I hope the repair can be done before 10:00 AM on April 6, 2023.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 0.3333333333333333,
+        "F1": 0.3333333333333333,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3027,
+      "completion_tokens": 388,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_790",
+      "question": "My washing machine has a problem and cannot drain water, it needs repair. The brand is Haier, model ABC123. Please provide on-site service at 3 pm on March 20th, the address is No. 168 Software Avenue, Yuhuatai District, Nanjing City, contact number is 13812345678.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3439,
+      "completion_tokens": 384,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_791",
+      "question": "My washing machine suddenly started making noise and stopped working. Please help me schedule a repair service for tomorrow morning at 10 o'clock. The brand of the washing machine is Toshiba, and the model is AW-DC1300WT. The fault description is: After starting, the drain pump makes an abnormal noise and is unable to drain water. My contact number is 18888888888, and the address is No. 123, Nanquan North Road, Pudong New District, Shanghai.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4142,
+      "completion_tokens": 458,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_792",
+      "question": "I would like to schedule a repair for my refrigerator at 5 a.m. The brand is Haier, model BCD-200L, and it's not cooling anymore. My contact number is 13800138000, and the service address is No. 15, Zhongguancun Street, Haidian District, Beijing.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3973,
+      "completion_tokens": 411,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_793",
+      "question": "My washing machine has encountered some problems, and I need to schedule a repair service. The washing machine is of TCL brand, model XQG-100F, with obvious abnormal noise. My contact number is 13800138000, the service address is No. 123, Some Street, Chaoyang District, Beijing, and I hope the repair can be carried out at 2 PM on March 16, 2023.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4089,
+      "completion_tokens": 513,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_794",
+      "question": "The dehumidifier has some issues, I would like to schedule a repair for tomorrow morning at 10 o'clock, the contact number is 18012345678, the address is in Pudong New District, Shanghai. If the appointment is successful, please help me check the repair status.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2806,
+      "completion_tokens": 333,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_795",
+      "question": "My refrigerator is broken, the brand is Samsung, can you help me find a door-to-door repair service? My phone number is 13888888888, and my home address is Zhangjiang Town, Pudong New District, Shanghai. I hope the service time is at 10 am on March 25, 2023.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2650,
+      "completion_tokens": 337,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_796",
+      "question": "My TV suddenly broke down, and now I can't watch any programs. I need to get it repaired as soon as possible. The TV is from Xiaomi, model L55M5-AD, and the current issue is that it won't turn on. I live at 123 Guiping Road, Xuhui District, Shanghai City, and my contact number is 13800138000. I hope the repair can be done tomorrow afternoon at three.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3602,
+      "completion_tokens": 425,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_797",
+      "question": "My refrigerator is not cooling and needs repair. The model is BCD-215KM, the brand is Haier, and I hope to have on-site service at 9 am this Saturday. My phone number is 13800138000, and the address is No. 28, Qilin Community, Chaoyang District, Beijing.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.16666666666666666,
+        "Recall": 1.0,
+        "F1": 0.2857142857142857,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4069,
+      "completion_tokens": 482,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_798",
+      "question": "My refrigerator is not cooling, I am in room 601, building 3, Anju Community, please arrange a repair for me as soon as possible, I hope it can be completed before 10:00 AM on March 14th. Contact phone number is 13800138000.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 20279,
+      "completion_tokens": 1595,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_799",
+      "question": "I need to reschedule my refrigerator repair to March 20, 2023, at 10 AM, my repair request number is XF123456.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 1.0,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2169,
+      "completion_tokens": 195,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_800",
+      "question": "My TV suddenly has a flickering image issue and needs repair. I live at No. 101 Century Avenue, Pudong New District, Shanghai. My contact number is 12345678901. Please help me schedule a repair service for next Monday morning at 10 o'clock.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3242,
+      "completion_tokens": 332,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_801",
+      "question": "My refrigerator suddenly stopped cooling, the model is TCL BCD-260, I hope someone can come to my house for repair at 10 am tomorrow, contact number is 13800138000, home address is Jiuxianqiao Road, Chaoyang District, Beijing.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2935,
+      "completion_tokens": 353,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_802",
+      "question": "I would like to cancel the previously submitted maintenance request with the ID \"WH30758\", and reschedule it to next Monday at 3 PM.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.6666666666666666,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.6666666666666666,
+        "F1": 0.8,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1274,
+      "completion_tokens": 159,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_803",
+      "question": "I am Liu Hua, please help me cancel the maintenance request with the number 20230308RH, and reschedule the maintenance for the same device at 2 PM next Thursday.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2658,
+      "completion_tokens": 329,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_804",
+      "question": "My refrigerator started malfunctioning this morning, and I hope it can be repaired as soon as possible. The brand of the refrigerator is Haier, model BCD-210TM, the cooling effect has deteriorated, and the low-temperature compartment cannot reach the preset temperature. My contact number is 13912345678, and the address is No. 100, Xin Song Road, Xinzhuang Town, Minhang District, Shanghai. I would like to schedule a repair service for this afternoon at 14:00.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3525,
+      "completion_tokens": 374,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_805",
+      "question": "I would like to reschedule my washing machine repair appointment, the booking number is WX20230405, and the new appointment time is changed to 10:00 AM on April 15, 2023.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 1.0,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2103,
+      "completion_tokens": 179,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_806",
+      "question": "I need to schedule a repair service for my washing machine. The brand of my washing machine is Haier, model HW70-14636, it's making an abnormal noise. My contact number is 13800138000, the address is No. 200 Renmin Avenue, Huangpu District, Shanghai, and the appointment time is 9 a.m. on the 10th of this month.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.16666666666666666,
+        "Recall": 1.0,
+        "F1": 0.2857142857142857,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4713,
+      "completion_tokens": 501,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_807",
+      "question": "Please help me cancel a washing machine repair request with the request number RQ123456, and check the repair status of my TV after the cancellation, my TV is a Samsung brand.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3106,
+      "completion_tokens": 336,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_808",
+      "question": "My washing machine encountered a problem last night and needs to be repaired as soon as possible. I have an appointment for service today at 15:00, but I have an emergency and need to change the repair time to the day after tomorrow at 9:00 AM, the request number is WX12345.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2072,
+      "completion_tokens": 179,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_809",
+      "question": "My washing machine has a problem, it doesn't drain or spin, and I hope to get it repaired as soon as possible. The washing machine is a Siemens brand model XQG70-WD12FG, the contact number is 13800001111, and the home address is 100 Tianping Road, Xuhui District, Shanghai. Please help me schedule a door-to-door service for 10 am tomorrow.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3399,
+      "completion_tokens": 254,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_810",
+      "question": "Yesterday my washing machine broke down, I need to schedule a repair for the 2015 Samsung washing machine model, the fault description is that it does not spin, my contact number is 13800000000, the service address is Sanlitun SOHO, Chaoyang District, Beijing, and the appointment time for the service is November 16, 2023, at 10:00:00\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.14285714285714285,
+        "Recall": 0.14285714285714285,
+        "F1": 0.14285714285714285,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3510,
+      "completion_tokens": 560,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_811",
+      "question": "I would like to book a repair service for the refrigerator, it's a Midea brand model BCD-572WTPM, and it's not cooling. My contact number is 13800000000, and the address is No. 66, Qinghe Street, Haidian District, Beijing. Please arrange it for 9 a.m. on March 23rd.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.125,
+        "Recall": 1.0,
+        "F1": 0.2222222222222222,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4129,
+      "completion_tokens": 627,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_812",
+      "question": "My washing machine is not draining, I need to schedule a repair service. The brand is Samsung, model WF5000AW, contact number is 13800138000, the address is No. 101 Century Avenue, Pudong New District, Shanghai, the appointment time is 9 AM on March 20, 2023.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.2,
+        "Recall": 0.5,
+        "F1": 0.28571428571428575,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3516,
+      "completion_tokens": 438,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_813",
+      "question": "My washing machine has encountered some problems, the brand is Haier, model XQB50-M808, there are issues with leaking and abnormal noise. Please help me schedule a repair service for tomorrow afternoon at 2 o'clock, my contact number is 13800138000, and my home address is Room 501, Unit 2, Building 10, Shaoyaoju, Chaoyang District, Beijing.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3471,
+      "completion_tokens": 442,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_814",
+      "question": "My refrigerator model is HaiSpace K5000, and yesterday I encountered an issue where the temperature could not be adjusted. I need to have it repaired as soon as possible. Please arrange the maintenance when I am off work tomorrow morning at 10 am. My contact number is 13800138000, and the address is No.88 Jianguo Road, Chaoyang District, Beijing.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3487,
+      "completion_tokens": 431,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_815",
+      "question": "My washing machine is broken, I need to schedule a repair. The brand at home is Midea, model MB100, and I hope the repair can be done at home between 3 pm to 5 pm on Friday. The contact number is 13800138000, and the home address is XX Road, Xuhui District, Shanghai City.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.16666666666666666,
+        "Recall": 1.0,
+        "F1": 0.2857142857142857,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4774,
+      "completion_tokens": 508,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_816",
+      "question": "My washing machine model XZ123 suddenly stopped working and needs immediate repair. My name is Li Ming, contact number 13800138000, living at No. 88 Jianguo Road, Chaoyang District, Beijing. Please arrange a door-to-door service at 14:00 tomorrow afternoon.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3934,
+      "completion_tokens": 372,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_817",
+      "question": "I need to book a repair service for my washing machine at home in Beijing. The brand is Daliu, model XW13378. Recently, it has been making strange noises during operation. I hope the repair can be done at 14:00 on March 18th. My contact number is 13800138000.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4463,
+      "completion_tokens": 426,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_818",
+      "question": "My TV has encountered a problem and needs help with repairs. My TV is a Sony KT-75A1 model. The fault is that there is no display after turning on the TV. I live in Chaoyang District, Beijing, and my contact number is 13800138000. I hope someone can come for repairs at 9 am on September 7th.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2844,
+      "completion_tokens": 325,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_819",
+      "question": "I would like to book an on-site repair for a TV, the brand is Hisense, the model is HDR-55XT880, the fault is that the screen is flickering frequently, my contact number is 13800138000, the address is No.1 Zhongguancun Street, Haidian District, Beijing, the appointment time is 10:00 AM on March 16, 2023.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.16666666666666666,
+        "Recall": 1.0,
+        "F1": 0.2857142857142857,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4531,
+      "completion_tokens": 341,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_820",
+      "question": "I have a Haier refrigerator, model BCD-220, which is experiencing poor cooling performance. I would like to schedule a home repair service for March 18th at 10 am. My contact number is 13800138000, and the address is No. 200, Century Avenue, Pudong New District, Shanghai.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3407,
+      "completion_tokens": 359,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_821",
+      "question": "I want to cancel the TV repair appointment I made last week.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1489,
+      "completion_tokens": 129,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_822",
+      "question": "I need to reschedule the repair time for my home refrigerator. The original repair request number is FR12345678, and the original appointment time is this Saturday at 9 am. However, I have other commitments and need to change it to next Monday at 2 pm.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2211,
+      "completion_tokens": 184,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_823",
+      "question": "My Haier refrigerator is not cooling, model BCD-210TMPF, I need to schedule a repair service. I am in Shanghai, contact number is 13800138000, address is No.100, Lujiazui, Pudong New District, Shanghai. I hope the repair can be done tomorrow morning at 10 o'clock.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.2,
+        "Recall": 0.5,
+        "F1": 0.28571428571428575,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4089,
+      "completion_tokens": 449,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_824",
+      "question": "My washing machine suddenly cannot drain water, the brand is Midea, model MB50-7000, I need to get it repaired as soon as possible, please help me schedule a home visit service at 3 PM today, my address is No.1, Keji South 12th Road, Nanshan District, Shenzhen City, and please arrange for an engineer to contact me, my mobile number is 13800138000.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.2,
+        "Recall": 1.0,
+        "F1": 0.33333333333333337,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4150,
+      "completion_tokens": 437,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_825",
+      "question": "My refrigerator is experiencing abnormal cooling issues, please help me schedule a repair service and perform a status check in two hours. My contact number is 13800138000, and the address is Zhangjiang Town, Pudong New District, Shanghai.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 0.25,
+        "F1": 0.28571428571428575,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2842,
+      "completion_tokens": 293,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_826",
+      "question": "I need to cancel the appliance repair appointment scheduled for tomorrow afternoon at two o'clock, the appointment number is R123456789.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: 'AgentState' object has no attribute 'get'"
+    },
+    {
+      "id": "benchmark_827",
+      "question": "My refrigerator is not working and needs to be repaired as soon as possible. The brand is Haier, model BCD-185TMPQ, and the problem is that it's not cooling. My contact number is 13800138000, and the address is No.38 Xueyuan Road, Haidian District, Beijing. I hope the repair can be done at 2 PM today.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3582,
+      "completion_tokens": 299,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_828",
+      "question": "What is the progress of the washing machine repair I applied for last time? The request number is A123456.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1521,
+      "completion_tokens": 152,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_829",
+      "question": "I have booked a washing machine repair service, but I suddenly have an emergency and cannot receive the repairman at the scheduled time, I need to cancel this order, the order number is WX20230415001.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1477,
+      "completion_tokens": 109,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_830",
+      "question": "My washing machine is broken, I have to go to work at 3 pm tomorrow, I want to change the appliance repair appointment from 1 pm today to 10 am the day after tomorrow, my contact number is 13800138000.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "Precision": 0.2,
+        "Recall": 0.3333333333333333,
+        "F1": 0.25,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3327,
+      "completion_tokens": 316,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_831",
+      "question": "I would like to cancel the appliance repair request with the ID 20230915001 and reschedule it to tomorrow afternoon at three o'clock.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1553,
+      "completion_tokens": 130,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_832",
+      "question": "My washing machine model is TCL-XQG75-V556UW and it has a problem, it's not draining. I live at 123 Quyang Road, Hongkou District, Shanghai, and my contact number is 18812345678. Please help me schedule a repair.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.25,
+        "Recall": 0.5,
+        "F1": 0.3333333333333333,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2746,
+      "completion_tokens": 309,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_833",
+      "question": "My washing machine has malfunctioned, and I would like to schedule a home appliance repair service for 9 AM tomorrow. The brand of my washing machine is Little Swan, and the model is XQB60-M1269. The fault phenomenon is that it suddenly stops during washing.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2773,
+      "completion_tokens": 258,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_834",
+      "question": "My TV suddenly stopped working last night. I need to schedule a repair service for tomorrow morning at 10 am, the TV brand is Samsung, model Q90R, and the screen has no picture. My contact number is 13800138000, and the service address is in Wangjing SOHO, Chaoyang District, Beijing. I would also like to know the progress of this appointment request.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2874,
+      "completion_tokens": 392,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_835",
+      "question": "My washing machine is malfunctioning and needs repair. The appliance brand is Midea, and the model is MG70-V1201D. The fault description is that it does not drain. My contact number is 12345678901. Please help me schedule a repair service for this afternoon at 14:00, the address is 100 Century Avenue, Pudong New District, Shanghai.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4000,
+      "completion_tokens": 378,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_836",
+      "question": "My washing machine is broken, the brand is Midea, model MB100, it's not draining. Please help me schedule a repair at 10 am tomorrow morning, my contact number is 13800138000, the address is No.10 Jiuxianqiao Road, Chaoyang District, Beijing.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3564,
+      "completion_tokens": 387,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_837",
+      "question": "I want to cancel the refrigerator repair request submitted yesterday, with the ID RH123456, because the refrigerator issue has been resolved.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2096,
+      "completion_tokens": 189,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_838",
+      "question": "I need to cancel the refrigerator repair request I submitted yesterday, with the ID 20230304FRZ, due to an emergency.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2030,
+      "completion_tokens": 164,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_839",
+      "question": "My TV is not working, the brand is Sony, and the model is KD-75X8500F. The screen is very dim and the picture is almost unclear. I need to schedule a home repair service, please arrange it between 9 am and 10 am on March 28th. My contact number is 13800138000, and my address is No. 10, Chaowai Street, Chaoyang District, Beijing.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4194,
+      "completion_tokens": 640,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_840",
+      "question": "I would like to book a repair for the Haier refrigerator, model BCD-220TL, as it is not cooling anymore. The contact number is 13788886666, and the address is No. 561, Jinqiao Road, Pudong New District, Shanghai. I hope a repairman can come over at 10 am on April 8, 2023.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3622,
+      "completion_tokens": 475,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_841",
+      "question": "My washing machine suddenly has a problem, it might be because I washed too many things, now the washing machine is leaking a bit, the model is Midea MG70-V2101D, I live at No.58 Jianguo Road, Chaoyang District, Beijing, I hope it can be repaired as soon as possible, the appointment time is at 10 am on March 16, 2023, my contact number is 13912345678.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.4,
+        "Recall": 0.6666666666666666,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 8157,
+      "completion_tokens": 874,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_842",
+      "question": "My washing machine started having issues this morning, it seems like the drainage system is not working, I need it repaired as soon as possible. My contact number is 123456789, I live at No.88 Guanghua Road, Sunshine Community, Building 5, Unit 1, Room 202, and I hope someone can come to fix it tomorrow morning at 10 am.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3409,
+      "completion_tokens": 359,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_843",
+      "question": "My washing machine has malfunctioned and is unable to drain water, I need to schedule a repair service for tomorrow morning. The washing machine is a Midea brand, model XQB50-M805, my contact number is 13012345678, and the service address is No. 66, Some Street, Chaoyang District, Beijing.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2768,
+      "completion_tokens": 343,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_844",
+      "question": "The service request number for the refrigerator repair I booked last week is FR12345. It was originally scheduled for today at 10:00 AM, but now it needs to be rescheduled to this Thursday at 14:00 PM.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.25,
+        "Recall": 1.0,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3011,
+      "completion_tokens": 294,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_845",
+      "question": "My TV suddenly has a problem with the screen not displaying, and I need to schedule a repair service. My TV is a Sony brand, model KD-75X8000H, and I hope to have it repaired at my home at 9 am on March 17th. The contact number is 13800138000, and the address is Zhangjiang Hi-Tech Park, Pudong New District, Shanghai.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3701,
+      "completion_tokens": 490,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_846",
+      "question": "My washing machine is malfunctioning and needs repair. The washing machine is a Panasonic NA-V90GB2WGN, and the problem is that it does not spin. My contact number is 12345678901, and I live in Pudong New District, Shanghai. I hope a technician can come for service around 10:00AM on March 20th.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3449,
+      "completion_tokens": 344,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_847",
+      "question": "My refrigerator is not cooling and needs repair service. The refrigerator is a Haier BCD-210TMPF, contact number is 13800138000, and the home address is No. 66 Zhichun Road, Haidian District, Beijing. Please help me schedule a repair visit for the nearest workday.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 6718,
+      "completion_tokens": 565,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_848",
+      "question": "My TV has a problem, the brand is Samsung, and the model is Q80T, the screen is always flickering. I would like to schedule a repair service for today at 3 PM, the contact number is 13800138000, and the address is No. 258 Guilin Road, Xuhui District, Shanghai.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3421,
+      "completion_tokens": 391,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_849",
+      "question": "I need to repair a Haier brand refrigerator, model HRF-668FF/A, the refrigerator is not cooling. My contact number is 13800138000, the address is No. 37, Xueyuan Road, Haidian District, Beijing. The appointment time is September 19, 2023, at 10:00:00.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.16666666666666666,
+        "Recall": 0.5,
+        "F1": 0.25,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4165,
+      "completion_tokens": 519,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_850",
+      "question": "My TV suddenly has a problem, I hope to get it repaired as soon as possible, can you help me arrange it? The TV brand is Haier, model is LE55M7000CF, now the screen does not display any image at all. My contact number is 13912345678, the address is Room 501, Unit 2, Building 5, XX Community, Haidian District, Beijing, and I would like to schedule the repair for May 20, 2023, at 10:00:00.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.2,
+        "Recall": 1.0,
+        "F1": 0.33333333333333337,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3630,
+      "completion_tokens": 486,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_851",
+      "question": "My refrigerator has a serious water leakage problem and needs urgent repair. The contact number at home is 13800138000, and the address is No. 100, Zhongguancun Street, Haidian District, Beijing. I would like to schedule the repair service for this afternoon at 2 PM.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2878,
+      "completion_tokens": 297,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_852",
+      "question": "My TV model is BX-300, the brand is Lingmei, it stopped working last night, I would like to schedule a door-to-door repair service for tomorrow morning at 9 o'clock, please help me arrange it.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2670,
+      "completion_tokens": 261,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_853",
+      "question": "My washing machine is malfunctioning, and I need to schedule a technician to come to my house for repairs. The brand of the washing machine is Little Swan, and the model is TCL-123. The problem is that there is a noise during the washing process. My contact number is 13122334455, and the address is in Nanhui New Town, Pudong New District, Shanghai. I hope the repair can be done tomorrow morning at 9 o'clock.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4164,
+      "completion_tokens": 465,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_854",
+      "question": "My refrigerator has malfunctioned, and I need to immediately schedule a home appliance repair service. Please help me book a repair, the refrigerator brand is Haier, model BCD-200KM, the problem is that it's not cooling. Contact number is 13800138000, the address is No. 5 South Road, Science Park, Haidian District, Beijing. I hope the service can be done at 2 PM today.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4651,
+      "completion_tokens": 519,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_855",
+      "question": "My washing machine suddenly stopped working, the brand is Midea, model MB70-20, it made a strange noise and then stopped spinning. Please help me arrange a home repair service, contact number 13712345678, the address is Room 502, Unit 2, Building 100, Fangcaodi, Chaoyang District, Beijing. The preferred appointment time is 10:00 AM on April 8, 2023.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4337,
+      "completion_tokens": 482,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_856",
+      "question": "I need to cancel the appliance repair service scheduled for tomorrow morning, the request number is A1234, due to a change in plans and not being at home.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1992,
+      "completion_tokens": 168,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_857",
+      "question": "My air conditioner is not cooling and needs repair. The air conditioner is a Haier brand model KFR-35GW. I hope the repair can be done on Saturday morning at 9 am. The contact number is 13800138000, and the home address is No. 88 Zhichun Road, Haidian District, Beijing.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3526,
+      "completion_tokens": 377,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_858",
+      "question": "My microwave is not working, the brand is Panasonic, model NN-ST253W, can I book a door-to-door service for tomorrow afternoon at 3 o'clock? My contact number is 13612345678, and the service address is No. 100 Tianshan Road, Changning District, Shanghai.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3284,
+      "completion_tokens": 506,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_859",
+      "question": "My air conditioner can't be turned on, the brand is Gree, model KFR-35GW/10FBA23AU1, please help me schedule a repair service for tomorrow afternoon at 3 o'clock, my contact number is 13800138000, and I live at No.1, Shangdi 10th Street, Haidian District, Beijing.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3371,
+      "completion_tokens": 364,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_860",
+      "question": "I need to schedule a repair for my TV at 6 PM tomorrow evening. The brand is Sony, model X800H, and there is an issue with the screen. Please book the repair service and tell me the reservation number.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.4,
+        "Recall": 0.4,
+        "F1": 0.4000000000000001,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3988,
+      "completion_tokens": 374,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_861",
+      "question": "My refrigerator is not cooling, please arrange a professional technician to repair it at my home as soon as possible.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2830,
+      "completion_tokens": 202,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_862",
+      "question": "My TV has a problem with screen glitches, the brand is Skyworth, model 55S9A, and it needs immediate repair. I live in Nanhui New Town, Pudong New District, Shanghai, and my phone number is 13800138000. I hope to have the repair service on Saturday morning at 9 am this week, can you help me handle it?\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2945,
+      "completion_tokens": 409,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_863",
+      "question": "My washing machine is broken, the brand is Haier, model XQG50-808, there is a problem with water leakage, please help me schedule a repair service for today at 3 PM, my address is No. 800 Zhongshan South Road, Huangpu District, Shanghai, contact number is 13800138000.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.25,
+        "Recall": 0.3333333333333333,
+        "F1": 0.28571428571428575,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3525,
+      "completion_tokens": 462,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_864",
+      "question": "I need to reschedule the fridge repair appointment from March 22nd to 2 PM on March 27th. The repair request number is R1314.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1571,
+      "completion_tokens": 142,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_865",
+      "question": "There is a problem with the TV at my home, it needs repair. The TV is a Xiaomi brand model L55M5, and there is an issue with the screen flickering. My contact number is 13800138000, and the service address is Huayuan Industrial Park, Nankai District, Tianjin. The appointment is scheduled for April 3, 2023, at 15:00:00 PM.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3888,
+      "completion_tokens": 335,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_866",
+      "question": "I would like to cancel the repair request for my refrigerator, the ID is WX20230314005.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 1.0,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1495,
+      "completion_tokens": 131,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_867",
+      "question": "I need to cancel the TV repair request with the ID 202303140001 scheduled for tomorrow.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1339,
+      "completion_tokens": 113,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_868",
+      "question": "My TV has encountered a problem, the brand is Sony, and the model is XBR-55X900F. The fault phenomenon is that the screen sometimes suddenly turns black and then recovers. I would like to schedule a door-to-door repair service for today at 3 PM, the home address is No. 18 Biyun Road, Pudong New District, Shanghai, contact phone number is 13800138000.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3467,
+      "completion_tokens": 373,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_869",
+      "question": "I need to have my home air conditioner repaired, the brand is Gree, and the model is KFR-35GW/NhAa3, the problem is that it's not cooling anymore. Please help me schedule a repair at 12 PM tomorrow, my contact number is 13012345678, and my home address is No. 998, Dongfang Road, Pudong New District, Shanghai.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4742,
+      "completion_tokens": 436,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_870",
+      "question": "Please find the components, indications, and possible side effects of aspirin for me, as well as retrieve similar information for ibuprofen produced by Bayer, and provide detailed information on sorafenib with an expiration date of May 1, 2024.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.6666666666666666,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 1.0,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4346,
+      "completion_tokens": 456,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_871",
+      "question": "I need a system to help me record my running data today, including my username Leo, the sport type of running, the expected duration of 45 minutes, intensity level 2, and the distance of 8 kilometers, and tell me whether the weather condition today is suitable for running before this, and also I want to calculate how much personal income tax I need to pay as a freelancer who is a local resident with a monthly income of 8000 yuan.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.3333333333333333,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2686,
+      "completion_tokens": 94,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_872",
+      "question": "As a 27-year-old professional, I need to work in front of a computer for 9 hours every day. I have good eye condition and a vision index of 1.0, but due to a hand-eye coordination grade of C and using dark mode 70% of the time, I need a customized vision protection plan, as well as a healthy and delicious Kung Pao Chicken recipe from Sichuan cuisine, with extra spiciness to suit my taste and lifestyle.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_873",
+      "question": "I have recently been experiencing a lack of appetite, low-grade fever, and nausea, suspecting that I may have gastritis. I need to understand how to adjust my diet to alleviate the symptoms, and would like to know what medications should be taken if diagnosed with gastritis.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.2,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 1.0,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1398,
+      "completion_tokens": 92,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_874",
+      "question": "Please analyze the symptoms of my frequent headaches accompanied by nausea and vomiting, speculate the possible diseases, and suggest medications that can relieve migraines.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1971,
+      "completion_tokens": 181,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_875",
+      "question": "I feel unwell and suspect that I might have a cold because I have symptoms of fever and sore throat, so I need to know the appropriate medicine brands for these symptoms and would like to find a pharmacy nearby in Chaoyang District, Beijing to make a purchase.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1371,
+      "completion_tokens": 143,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_876",
+      "question": "Please analyze the nutritional content of all the food I consumed today, including 250ml of soy milk for breakfast, 200g of chicken breast for lunch, and 300g of broccoli planned for dinner.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1919,
+      "completion_tokens": 222,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_877",
+      "question": "I feel a headache and cough today, and I want to know what diseases these symptoms may indicate, and I hope to get some suggestions, such as which medications should be taken to relieve these symptoms.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.6666666666666666,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1938,
+      "completion_tokens": 168,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_878",
+      "question": "Please calculate and tell me, what percentage of the total intake of 80 grams of protein and 60 grams of fat does the 26 grams of protein and 15 grams of fat in the 100 grams of beef I ate today represent?",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4767,
+      "completion_tokens": 226,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_879",
+      "question": "I want to understand the possible diseases that cause my postprandial bloating and occasional stomach pain, and obtain dietary recommendations for undiagnosed functional dyspepsia.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 1.0,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1962,
+      "completion_tokens": 164,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_880",
+      "question": "I need to modify the configuration file \"/etc/system.conf\" on the server, update the content to \"MaxConnections:100\", and then delete the no longer needed log file \"/var/log/old_logs.txt\".\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1626,
+      "completion_tokens": 289,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_881",
+      "question": "I saw an advertisement for a TV on the internet, but I am not clear about the sales situation of this TV in Beijing and Shanghai malls. Can you help me check it? At the same time, I want to log into my account to check the status of my online shopping order from yesterday, my account ID is 123456, and the password is abc123.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 0.5,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1949,
+      "completion_tokens": 144,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_882",
+      "question": "I just updated my phone specifications, and now my phone model is Xiaomi 11, and the system version is MIUI13. I want to check if there are any known system vulnerabilities.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "Precision": 0.6666666666666666,
+        "Recall": 0.6666666666666666,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1514,
+      "completion_tokens": 200,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_883",
+      "question": "I need to modify the configuration file path on the server to \"/etc/config.\", please change the content \"timeout\": 120 to \"timeout\": 60, and then delete an unnecessary temporary file, the path is \"/tmp/tempfile.txt\".\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1808,
+      "completion_tokens": 159,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_884",
+      "question": "I need to update the configuration file /config/service.conf on the server, changing the database address from db.oldserver.com to the new address db.newserver.com.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.25,
+        "F1": 0.3333333333333333,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1078,
+      "completion_tokens": 99,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_885",
+      "question": "Please find the range of ZIP codes for the city of Los Angeles, California, USA, and also provide the specific ZIP code for the Hollywood district in Los Angeles.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1112,
+      "completion_tokens": 178,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_886",
+      "question": "I need you to help me design a personal photography website today named \"Journey of Light and Shadow\", it should be based on a photography template, use a bright color theme, and have a responsive design, SEO optimization, and video embedding capabilities. The page layout should be single-column with the navigation menu at the top of the page, and the website description should be \"This is a personal website that records my photography works and travel stories\"; in addition, please plan an online photography exhibition named \"Digital Vision\", scheduled for September 1st, with a budget of 10,000 yuan, expected to have 500 viewers, and I, Zhang Hua, will be in charge.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 17516,
+      "completion_tokens": 936,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_887",
+      "question": "I need to find out the latitude and longitude of Beijing Tiananmen, then determine its local time zone and obtain its specific address.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1478,
+      "completion_tokens": 168,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_888",
+      "question": "As user ID U123456, I need to report a bug about the inability to sync the latest data, and wish to conduct sentiment analysis on the issue, while also making a product suggestion to add a cloud backup feature for free syncing across multiple devices.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.25,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 0.3333333333333333,
+        "F1": 0.3333333333333333,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1736,
+      "completion_tokens": 301,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_889",
+      "question": "I need to analyze and understand the user feedback on the navigation button issues in the latest version of our product, including the situation where it did not work properly mentioned by Zhang San yesterday, the situation where there was no response when clicked mentioned by Li Si the day before yesterday, as well as the emotional score and prevalence of this issue, hoping to get a comprehensive report.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.2,
+        "Recall": 0.5,
+        "F1": 0.28571428571428575,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2956,
+      "completion_tokens": 392,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_890",
+      "question": "I need a tool to calculate and tell me the population numbers of males and females in China for the year 2023, and to verify whether the sum of these two numbers equals the total population of China.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.6,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.3333333333333333,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1549,
+      "completion_tokens": 286,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_891",
+      "question": "I need to create a log file named \"/var/log/2023-11-24-system.log\" on the server, first record the content \"2023-11-24 System backup completed, no errors found.\", then update the file to add the information \"System scheduled for routine check on 2023-11-25.\", and finally delete this log file after these operations are completed.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 0.3333333333333333,
+        "F1": 0.3333333333333333,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2147,
+      "completion_tokens": 234,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_892",
+      "question": "I need to inquire about the postal codes of three different regions, starting with Chaoyang District in Beijing, China, followed by Minato District in Tokyo, Japan, and finally Manhattan in New York City, USA.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1572,
+      "completion_tokens": 259,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_893",
+      "question": "Please outline and provide the complete legal regulation process for company registration in the Shanghai area, including but not limited to capital requirements and a list of documents that must be submitted, and conduct a compliance assessment of 'Future Technology Co., Ltd.' in the information technology industry to ensure it complies with relevant laws and regulations. In addition, list the labor law requirements that must be followed for recruiting full-time and part-time employees in the Shanghai area, and the potential legal risks that may be faced.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.3333333333333333,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3397,
+      "completion_tokens": 452,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_894",
+      "question": "Please start from tomorrow, automatically turn on the lights in my living room at 8 pm every day, and automatically turn off the air conditioner in the bedroom at 10 pm every day.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1437,
+      "completion_tokens": 222,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_895",
+      "question": "I need to find out the buyer reviews for the mobile phone I just purchased, with the product number PN12345, for today, and conduct sentiment analysis and keyword extraction on it, finally assessing the importance of this review for me personally.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_896",
+      "question": "I want to know the population numbers of China and the United States in 2022, and the population of India in 2010, and if possible, the total global population in 2020.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.25,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1890,
+      "completion_tokens": 274,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_897",
+      "question": "Please find the postal codes for Sanlitun Sub-district, Chaoyang District, Beijing City and for the city of San Francisco, California, USA.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1121,
+      "completion_tokens": 190,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_898",
+      "question": "I need to know the number of male and female population in China for the year 2023 and the total population for the year 2022.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3876,
+      "completion_tokens": 304,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_899",
+      "question": "Please perform an operation for me, first use Zhang Wei's full name and date of birth 1992-05-16 to conduct a background check, then search by his participant ID PTCP900837 to see if he has participated in the survey numbered SURV001245, and report to me his participation status.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 1.0,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3323,
+      "completion_tokens": 271,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_900",
+      "question": "Please schedule and confirm a driving license theory test appointment for me at the city center branch from 9:00 AM to 11:00 AM this Friday, and submit my appointment information including appointment number 1024, location, date and time for record-keeping, and ensure that I have agreed to the 'Appointment Service Agreement'.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_901",
+      "question": "I need to conduct a comprehensive background check, including searching for the educational and professional history of the guest John Smith (born on 1975-05-20) who will attend the company strategy meeting, investigating the specific content and role he played in a survey named 'Global Economic Trends 2023' on July 10, 2023, as well as analyzing his activity level on social media.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_902",
+      "question": "Please automatically turn on my living room lights and air conditioning at 7 pm tonight, and set up a twice-daily feeding care plan for my newly adopted two-month-old cat weighing about 1000 grams, taking into account that I have already scheduled vaccinations for next week.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.25,
+        "F1": 0.3333333333333333,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3357,
+      "completion_tokens": 217,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_903",
+      "question": "Please help me purchase 2000 US dollars in foreign exchange, then archive my work folder D:/Work/Projects into a zip format and store it in the E:/Archive path, and finally find the primary department of Zhang Wei in the company, his mobile number is 13800138000.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: 'AgentState' object has no attribute 'get'"
+    },
+    {
+      "id": "benchmark_904",
+      "question": "Please help me find and list the postal codes for Zhongguancun Street in Haidian District, Beijing, New York City in the USA, Los Angeles City in California, and San Francisco City in California.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1997,
+      "completion_tokens": 323,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_905",
+      "question": "Please find and generate a detailed news headline about an AI chip company in Silicon Valley completing a $50 million Series B funding round today.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1920,
+      "completion_tokens": 197,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_906",
+      "question": "I want to get the hot headlines of domestic financial news today, especially reports on stock market fluctuations, and generate a related news headline, then find an article in The Wall Street Journal where experts analyze this phenomenon.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.6666666666666666,
+        "F1": 0.5714285714285715,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2441,
+      "completion_tokens": 207,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_907",
+      "question": "Please find and summarize the international news headlines for October 1, 2023, and provide the latest developments and detailed information on the Global Climate Change Emergency Summit.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2511,
+      "completion_tokens": 239,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_908",
+      "question": "Please book a home cleaning service for me at No. 100 Caohejing Road, Xuhui District, Shanghai, originally scheduled for 2 p.m. on March 27, 2023, but due to an important meeting I have to attend, I need to reschedule it to 10 a.m. on March 28, and confirm my booking status after the change.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.3333333333333333,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3494,
+      "completion_tokens": 218,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_909",
+      "question": "Please help me rearrange the home cleaning service located at 666 North Zhongshan Road, Shanghai. After cancelling the original booking on Saturday afternoon at 3 PM, change it to this Sunday morning at 10 AM.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3415,
+      "completion_tokens": 200,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_910",
+      "question": "I need you to change the originally scheduled home cleaning service from next Wednesday to a service that offers eco-friendly cleaning options during 9 AM to 12 PM next Friday, and ensure that the service location remains at No.6 Jianguomenwai Avenue, Chaoyang District, Beijing. After the change, please provide the contact information of the service provider and the confirmation of the new booking time.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.2,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 6635,
+      "completion_tokens": 583,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_911",
+      "question": "I need to cancel my home cleaning reservation at No.1 Jianguomenwai Avenue, Chaoyang District, Beijing, originally scheduled for 14:00 on June 5, 2023, and reschedule it to 09:00 on June 7, 2023. Please also inform me of the confirmation status of the new reservation.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.3333333333333333,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3497,
+      "completion_tokens": 262,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_912",
+      "question": "Please help me inquire and cancel the home cleaning service I previously booked for 10 a.m. on March 10th at No. 300, East Nanjing Road, Shanghai, and ensure that a confirmation of cancellation is immediately notified to me via email.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.3333333333333333,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3494,
+      "completion_tokens": 252,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_913",
+      "question": "Please help me confirm and cancel the home cleaning service reservation originally scheduled for 10 a.m. on October 30, 2023, at the residence on Zhongxin Road, Futian District, Shenzhen, and reschedule the cleaning service at the same address for 2 p.m. on the same day.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 0.3333333333333333,
+        "F1": 0.3333333333333333,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3546,
+      "completion_tokens": 302,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_914",
+      "question": "Please inquire about the home cleaning reservation at No. 10, Wanshou Road, Haidian District, Beijing, at 10 a.m. today, and change the reservation time to 2 p.m. this afternoon, and also arrange the same home cleaning service at 2 p.m. next Sunday.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.3333333333333333,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3470,
+      "completion_tokens": 242,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_915",
+      "question": "Please book and then cancel the home cleaning service for me at 10:00 AM on February 10, 2023, at No.xx, xx Street, Pudong New District, Shanghai, and ensure that I can check the detailed information of this booking.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.6666666666666666,
+        "ArgAcc": 1.0,
+        "Precision": 0.6666666666666666,
+        "Recall": 0.6666666666666666,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3480,
+      "completion_tokens": 271,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_916",
+      "question": "I need to book a home cleaning service at 10 a.m. on December 1st to the address at No. 88 Jianguo Road, Chaoyang District, Beijing. I would also like to know if it is possible to change the time to 2 p.m. if it rains on that day, as well as how to check the detailed information of the changed booking, and tell me what information is needed to cancel the booking.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.2,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.2,
+        "F1": 0.28571428571428575,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4581,
+      "completion_tokens": 311,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_917",
+      "question": "Please rearrange the originally scheduled home cleaning service from next Wednesday to next Friday morning between 9 AM and 12 PM, and select a service provider with good reviews within the address range of No.6 Jianguomenwai Avenue, Chaoyang District, Beijing. After completing the booking, verify and confirm the service provider's reputation score and the new booking details.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.4,
+        "F1": 0.4444444444444445,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4537,
+      "completion_tokens": 350,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_918",
+      "question": "Please arrange a cleaning service for my home located at No. 100 Xianxia Road, Changning District, Shanghai at 9 AM next Wednesday, and inquire and inform me of the home cleaning appointment situation on the 15th of this month.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3466,
+      "completion_tokens": 252,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_919",
+      "question": "I need to book a home cleaning service on May 10th from 2 PM to 4 PM at Wangjing SOHO in Chaoyang District, Beijing, but due to a change in plans, I would like to change this booking to the same time period on May 15th.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.3333333333333333,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2403,
+      "completion_tokens": 150,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_920",
+      "question": "I need to view and change my home cleaning service appointment, originally scheduled for 14:00 on 2023-01-25 at No. 12 South Road of Chaoyang Park, Chaoyang District, Beijing. Please adjust it to the same day of next month, with the time remaining unchanged.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2437,
+      "completion_tokens": 155,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_921",
+      "question": "Please cancel my home cleaning service scheduled for today at 14:00 on 5th Avenue in downtown New York City, and reschedule it to tomorrow morning at 10:00, also check and book the same address for home cleaning service on September 30th at 15:00.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1751,
+      "completion_tokens": 319,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_922",
+      "question": "I need to book a home cleaning service at 10 a.m. on May 15, 2023, at No.1 Zhongguancun Street, Haidian District, Beijing, and change the service time to 2 p.m. on the same day after the booking is successful, and finally confirm and view the adjusted booking details.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.2,
+        "ArgAcc": 1.0,
+        "Precision": 0.6666666666666666,
+        "Recall": 0.6666666666666666,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3495,
+      "completion_tokens": 379,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_923",
+      "question": "Please book and confirm the home cleaning service for me at 2 PM on November 27, 2023, at No.1 Jianguomenwai Avenue, Chaoyang District, Beijing, and ensure that the previous appointment set for 10 AM has been successfully changed.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.6666666666666666,
+        "Recall": 1.0,
+        "F1": 0.8,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3447,
+      "completion_tokens": 255,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_924",
+      "question": "I need to book a car with the ID A01 in Beijing, starting from 9 AM on May 15, 2023. The original plan was to return the car at 6 PM on May 20, but now I need to change the return time to 8 PM on May 18 and would like to confirm the updated booking details.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_925",
+      "question": "I need to book an SUV with the model BC752, departing from Beijing at 10 a.m. on October 31, 2023, and I would like to return the car in advance in Shanghai on the evening of November 4, 2023. The original reservation was from October 30 to November 5, 2023.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.3333333333333333,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3159,
+      "completion_tokens": 373,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_926",
+      "question": "Please book for me a white BMW 5 Series with the ID BMWH001 in Shanghai, starting from 1 PM tomorrow for a duration of three days, and cancel my reservation for the silver Audi A6 with the ID AUDI002 at the same time.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1853,
+      "completion_tokens": 230,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_927",
+      "question": "I need to book a car with the ID BJ2023XP, starting from 9 AM on September 25, 2023, in Beijing. The original plan was to return the car at 5 PM on September 30, but now I need to change the return time to 3 PM on the same day, and check the latest booking status of the vehicle after booking to confirm the change.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.3333333333333333,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2641,
+      "completion_tokens": 429,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_928",
+      "question": "Please help me find a part-time job in education near the teaching building that takes place on weekends, with an hourly wage of not less than 40 yuan. It requires teaching experience and student identity verification. Then send a concise cover letter to Teacher Liu through my email student_zhang@example.com, expressing my passion for English education and related tutoring experience, and attach my personal resume located at C:/Users/Zhang/Desktop/resume.pdf.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.25,
+        "Recall": 0.5,
+        "F1": 0.3333333333333333,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 14869,
+      "completion_tokens": 1031,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_929",
+      "question": "I need to find a part-time job in the education sector in Haidian District, Beijing for the weekend, with a requirement of no less than 50 yuan per hour, working hours from Saturday morning to afternoon. As a student, I also need you to help me send an email through zhangsan@example.com with the subject 'Inquiry about Weekend Education Part-Time Teaching Assistant Job Details', including confirmation of specific working hours, location, job content, and whether there is a training period.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 33714,
+      "completion_tokens": 131,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_930",
+      "question": "I need to find company information for recruiting Java developers in Shanghai, and customize a cover letter for the position at Cloud Technology Co., Ltd. using my name Li Ming.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_931",
+      "question": "Please help me post a job seeking message, looking for a Java developer with at least a bachelor's degree and more than 3 years of work experience, with a salary range of 8k-15k, working in a company with 100-500 people in Shanghai, familiar with Java and Spring framework, and send an email from my company email hr@company.com to john.doe@example.com and jane.smith@example.net, with the subject 'Java Developer Position Vacancy', mentioning that our company is looking for a Java developer that meets these conditions.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 11638,
+      "completion_tokens": 716,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_932",
+      "question": "Please post a job advertisement for me, the position is Java Developer, requiring candidates to have at least a Bachelor's degree, over 3 years of work experience, offering a monthly salary of 8k-12k, working in Shanghai, company size of 200-500 people, and possessing skills in Java and the Spring framework. Then, using an email marketing tool, send the email from hr@ourcompany.com with the subject '[Recruitment] Java Developer - Shanghai', and send the content I provided to the potential candidates applicant1@example.com and applicant2@example.com.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_933",
+      "question": "I need to conduct a comprehensive background check on a prospective employee named Li Ming, born on February 15, 1990, residing at No. 93 Jianguo Road, Chaoyang District, Beijing, including verifying his employment record and criminal history, confirming whether his educational background truly includes a Bachelor's degree in Computer Science from Tsinghua University, and reviewing the results of his last background check, with the investigation ID being BC123456 and the personal participant ID being LM78910.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_934",
+      "question": "I need to know the weather on the 25th of this month, and then remind me to handle an important task at 9 am on that day.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_935",
+      "question": "I want to check the weather in Beijing today, and then schedule an online meeting from 3 pm to 4 pm today.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_936",
+      "question": "I want to know the weather forecast for Beijing tomorrow and set a reminder.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_937",
+      "question": "I want to know the weather in Shanghai, and then help me set a task reminder for 3 pm.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_938",
+      "question": "I want to know the weather conditions in Beijing for today and tomorrow so that I can arrange my business trip plan.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1156,
+      "completion_tokens": 103,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_939",
+      "question": "I want to check the weather in Shanghai for tomorrow, and also want to know the highest and lowest temperature in Beijing for tomorrow.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1641,
+      "completion_tokens": 143,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_940",
+      "question": "Please help me check the weather forecast for Beijing tomorrow, and then help me book an online meeting, scheduled from 3 PM to 4 PM tomorrow.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_941",
+      "question": "Please recommend some highly-rated action movies from 2015 to the present with ratings between 8 and 10, and search for 'xXx'",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2690,
+      "completion_tokens": 211,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_942",
+      "question": "Please help me book two movie tickets for 'Star Trek' on this Friday evening at 7:30 PM, with seats in the middle row, and set a schedule reminder half an hour before the movie starts.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_943",
+      "question": "Please recommend action movies with a rating above 7 from 2015 to 2022, search for 'Mad Max: Fury Road'",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1866,
+      "completion_tokens": 161,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_944",
+      "question": "I want to log in using the account with ID 562774, the password is abcd1234.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 1.0,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1059,
+      "completion_tokens": 152,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_945",
+      "question": "Please help me log into my game account, the account ID is 123456, and the password is GamePass789.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 1.0,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1403,
+      "completion_tokens": 167,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_946",
+      "question": "I need to log into my language learning platform account, the account ID is 123456, the password is mySecretPwd.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 1.0,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1428,
+      "completion_tokens": 110,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_947",
+      "question": "I want to log into my two accounts, the first account ID is 123456, the password is password1, the second account ID is 654321, the password is password2.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1103,
+      "completion_tokens": 99,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_948",
+      "question": "I want to log into my account, the account ID is 2135894, the password is xye74922, can you help me with the operation?\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 1.0,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1776,
+      "completion_tokens": 121,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_949",
+      "question": "I need to log into my company email, the account is 123456, the password is mypassword.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 1.0,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1378,
+      "completion_tokens": 149,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_950",
+      "question": "I want to log in to the online library with the account number 638421, the password is BookLover2023.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1434,
+      "completion_tokens": 167,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_951",
+      "question": "I have an account ID which is 123456, and the password is abc123, please help me log into the account.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 1.0,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1504,
+      "completion_tokens": 125,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_952",
+      "question": "I need to log into my company account, the account ID is 10086, the password is 123456.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 1.0,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1432,
+      "completion_tokens": 188,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_953",
+      "question": "I need to log into my two different accounts to update information, the account IDs are 123456 and 654321, and the passwords for both are passwd123.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.16666666666666666,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.6666666666666666,
+        "F1": 0.8,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1940,
+      "completion_tokens": 196,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_954",
+      "question": "I need to log into my account, the account ID is 123456, the password is XYZ789.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 1.0,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1408,
+      "completion_tokens": 130,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_955",
+      "question": "Please help me log into my two accounts, the ID of the first account is 963852, and the password is Qwerty123. The ID of the second account is 789456, and the password is Asdfg678.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1074,
+      "completion_tokens": 167,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_956",
+      "question": "I need to log in to my account 10086, the password is password123.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1005,
+      "completion_tokens": 117,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_957",
+      "question": "Please help me log into my two accounts, the first account ID is 123456, the password is abcd1234; the second account ID is 654321, the password is dcba4321.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1122,
+      "completion_tokens": 102,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_958",
+      "question": "Please help me log in to my account with the account number 12345, the password is WxYz789.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1059,
+      "completion_tokens": 122,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_959",
+      "question": "I want to know the login status of account 123456, the password is abc123.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1060,
+      "completion_tokens": 150,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_960",
+      "question": "I want to log in with my 123456 account and abc123 password.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 1.0,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1052,
+      "completion_tokens": 114,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_961",
+      "question": "I want to log into my learning platform account, the account ID is 123456, and the password is myPwd123. Please help me with this.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1425,
+      "completion_tokens": 136,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_962",
+      "question": "I want to log in to the account with ID number 125, the password is ABC123.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 1.0,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1078,
+      "completion_tokens": 130,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_963",
+      "question": "I need to use my two accounts today, one account ID is 123456, the password is 1q2w3e4r5t; the other account ID is 654321, the password is 5t4r3e2w1q. I want to log into the first account first to check the login status.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 0.5,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1585,
+      "completion_tokens": 156,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_964",
+      "question": "I need to log into my account, the account ID is 24601, the password is Valjean123.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.25,
+        "Recall": 1.0,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1414,
+      "completion_tokens": 151,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_965",
+      "question": "I want to use my account (12345678) and password (Pa$$w0rd) to log in.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1029,
+      "completion_tokens": 145,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_966",
+      "question": "I need to log into my account, the account ID is 123456, and the password is password123.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.25,
+        "Recall": 1.0,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1429,
+      "completion_tokens": 162,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_967",
+      "question": "My account ID is 123456, and the password is abc123, please help me log into the account.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 1.0,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1511,
+      "completion_tokens": 181,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_968",
+      "question": "Please randomly play a well-known piece of light music, set the volume to 50, and automatically stop playing after 30 minutes, while opening the PDF document located at C:/Documents/work_report.pdf, apply dark mode, adjust the font size to 16, and set to display 25 lines per page.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.3333333333333333,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 17493,
+      "completion_tokens": 1094,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_969",
+      "question": "To relax during afternoon tea, please recommend some light music from the 90s, and provide some music for weekend yoga sessions that is both relaxing and rhythmic.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 1.0,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2133,
+      "completion_tokens": 139,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_970",
+      "question": "I would like to know and obtain a personalized list of the latest popular music based on my preference for pop music and my current location in Shanghai, and I want to know who the artist of 'Pop Song 4' in this list is and his other recent popular songs.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_971",
+      "question": "I want to find some of the latest songs that fit my taste in rock music, including new songs by Green Day, and I would like to get some recommendations. These recommendations should be based on my current time and location in Shanghai, suggesting music suitable for the current environment.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.25,
+        "Recall": 1.0,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4921,
+      "completion_tokens": 244,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_972",
+      "question": "Please help me cancel my flight ticket for MU5138 from Beijing to Shanghai on November 14, 2023, and rebook for the MU9947 flight on the same evening.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_973",
+      "question": "My account ID is 123456, and the password is abc@123, please help me log in to the system to check the login status.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.25,
+        "Recall": 1.0,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1498,
+      "completion_tokens": 211,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_974",
+      "question": "Please schedule a high-priority annotation for the 'Monthly Team Meeting' at 9 AM next Monday on my calendar, set the location to the company meeting room, and set a reminder categorized as 'Meeting Preparation' on next Saturday morning so that I can prepare the meeting materials two days in advance.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_975",
+      "question": "Please log into my account using ID 123456 and password password123, tell me the current market exchange rate of the US dollar, and use my account to purchase $5000 worth of US dollars, then sell the 10000 euros I have on hand.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2581,
+      "completion_tokens": 270,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_976",
+      "question": "I need to cancel the TV repair service I booked last night, the repair request number is TV00012345.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 1.0,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1536,
+      "completion_tokens": 135,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_977",
+      "question": "I need to log in to my two accounts, the first account ID is 456789, the password is Pass01! The second account ID is 123456, the password is Pass02!.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1108,
+      "completion_tokens": 168,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_978",
+      "question": "I want to find a highly-rated Xinjiang cuisine restaurant in Dongcheng District, especially to know about those recommended dishes, and after trying them, I need to post a 5-star review about the 'Tianshan Xinjiang Flavor' restaurant, mentioning my dining experience on March 4th.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.6666666666666666,
+        "F1": 0.5714285714285715,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3263,
+      "completion_tokens": 340,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_979",
+      "question": "I need to create a file named \"report.txt\" in the \"/home/user/documents\" directory and write the content \"This year's financial report\". Then I want to update the file content to \"Updated financial report\".\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1674,
+      "completion_tokens": 151,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_980",
+      "question": "My refrigerator has some issues, I would like to schedule a repair at 1 PM, 3 days from now. My contact number is 13800138000, and the service address is No. 100 Century Avenue, Pudong New District, Shanghai.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2736,
+      "completion_tokens": 283,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_981",
+      "question": "I need to create a 'Work' schedule with a blue tag and the highest priority, starting from today, Tuesday, 2023-05-02, and covering all the weekdays until Friday of this week.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.25,
+        "Recall": 0.16666666666666666,
+        "F1": 0.2,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3337,
+      "completion_tokens": 501,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_982",
+      "question": "I need to rebook a conference room in Shanghai for next Wednesday, equipped with complete video broadcasting facilities, from 9 am to 11 am, changing the original SH08 room to SH12, and ensure the meeting theme is \"Next Phase Project Planning\".",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.25,
+        "Recall": 0.5,
+        "F1": 0.3333333333333333,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2290,
+      "completion_tokens": 292,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_983",
+      "question": "Please organize and display all my schedule for this week, ensuring to use my schedule ID A123 to retrieve and arrange them in chronological order, and schedule a new meeting named 'Strategic Planning Meeting' at 10 a.m. this Wednesday in Meeting Room 5, setting it as the highest priority.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.2,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 0.25,
+        "F1": 0.28571428571428575,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2172,
+      "completion_tokens": 690,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_984",
+      "question": "Please inquire about the debt amount of my credit card account 6222000012345678, and use my savings card account 6212345678901234 to pay off the full amount of 15,000 RMB debt, then tell me the current balance of the savings card.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.25,
+        "Recall": 0.3333333333333333,
+        "F1": 0.28571428571428575,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1472,
+      "completion_tokens": 192,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_985",
+      "question": "Please book a home cleaning service for me at 10:00 AM on October 13th, located at No. 88 Jianguo Road, Chaoyang District, Beijing, and tell me how to cancel the service if necessary.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 0.5,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3436,
+      "completion_tokens": 246,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_986",
+      "question": "I need to book a sleeper train ticket from Beijing Station to Shanghai Station at 9:00 AM on July 4, 2023, using my ID number 110101199003076533 and name Zhang San to complete the booking, and then change this train ticket to July 5th.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1461,
+      "completion_tokens": 264,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_987",
+      "question": "I would like to know the current status of my order (order number 123456, customer ID C78910, date 2023-02-23) and the estimated delivery date.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1923,
+      "completion_tokens": 213,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_988",
+      "question": "Please book a hard seat train ticket for me from Beijing to Shanghai at 8:00 AM on May 15, 2023, and change the ticket to the same time on May 17, 2023, after the booking is successful.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2792,
+      "completion_tokens": 476,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_989",
+      "question": "Please help me log into my online banking account using account ID123456789 and password 0987Abc* as well as the verification code 4321 I received, then check the balance of the bank card ending in 1234, and transfer the entire balance of 15000 yuan into the 'Stable Earnings' fixed deposit product.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 8255,
+      "completion_tokens": 864,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_990",
+      "question": "I hope to log in to the account with ID 123456, the password is password.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1990,
+      "completion_tokens": 231,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_991",
+      "question": "I need to immediately repay 3000 yuan to my overdraft credit card number 1234567890123456 using my savings card number 6543210987654321, and after completion, inquire about the latest progress of handling or applying for that credit card, using my personal information Zhang San, ID number 110108199003073456, and the verification code that I am about to receive for verification.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.3333333333333333,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1655,
+      "completion_tokens": 303,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_992",
+      "question": "Please cancel my car rental reservation starting from March 10th to 3 PM on March 15th in Shanghai, with the vehicle ID SH123, and arrange a new vehicle for me, ID SH456, rental period from April 1st to April 5th, the pickup and return location remains Shanghai.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.3333333333333333,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1792,
+      "completion_tokens": 254,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_993",
+      "question": "I need to cancel my schedules before a few specific holidays, starting with deleting the schedule with id 12345, then cancel the schedule with id 67890, and finally remove the total schedule with id 54321 under my user id user123.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2169,
+      "completion_tokens": 276,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_994",
+      "question": "Please book two standard rooms for Zhang San, with the check-in date on March 12, 2023, and the check-out date on March 15, 2023. Confirm the availability of Hotel ID H879 during booking, and ensure the rooms are close to the elevator for convenience.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_995",
+      "question": "Please help me cancel the reservation for the hard sleeper train ticket from Beijing to Shanghai on December 2, 2024, at 8:30 AM with the reservation number SH12411202, which was booked under Mr. Wang's name and ID number 110101199003076295.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_996",
+      "question": "I am Zhang San, my account ID is 123456, and my password is abc123. I want to log into my account, and after logging in successfully, please help me check the login records of the past week.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1429,
+      "completion_tokens": 97,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_997",
+      "question": "Please help me verify the current stock of 'Italian Espresso Beans' with our store ID 12345, and retrieve all product information under the 'Italian Flavor' category, as well as inquire about the status of the AZ789 flight from the Capital International Airport to Rome that I booked on November 15th and the detailed flight information for that day.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_998",
+      "question": "I need to understand the stock market trend of Guizhou Moutai with stock code 600519 from yesterday to today, predict its future trend, and analyze the specific rise and fall since this Monday.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.75,
+        "ArgAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1865,
+      "completion_tokens": 291,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_999",
+      "question": "I would like to book a double room in Shanghai, with the check-in date on April 10, 2023, and the check-out date on April 13, 2023. I hope the hotel is close to the Lujiazui Financial District.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2403,
+      "completion_tokens": 237,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_1000",
+      "question": "I need to apply for a refrigerator repair service. My refrigerator is a Samsung RT22FARADSA/SS, which has a cooling problem. I hope to get it repaired around 9 am on the 26th. The appointment address is Room 1907, T3 Building, Wangjing SOHO, Chaoyang District, Beijing, and my contact number is 13912345678.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4140,
+      "completion_tokens": 450,
       "run_error": null
     }
   ]
