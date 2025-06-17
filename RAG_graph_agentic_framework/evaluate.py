@@ -98,6 +98,7 @@ def calculate_metrics(
         if total_reference_input_sources > 0
         else 1.0
     )
+    print(total_reference_input_sources)
 
     # --- F1 Score (Set-based on tool names) ---
     gen_tool_names = [call.get("tool") for call in generated_calls if call.get("tool")]

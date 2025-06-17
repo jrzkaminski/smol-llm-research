@@ -23,11 +23,17 @@ from RAG_graph_agentic_framework.tool_utils import (
     get_tools_by_category,
 )
 
+import random
+
 print("--- Loading Setup Data ---")
 graph_structure = load_graph(GRAPH_JSON_PATH)
 all_tools_schema = load_tools(TOOLS_JSON_PATH)
 benchmark_items = load_benchmark(BENCHMARK_JSON_PATH)
-benchmark_items = benchmark_items[:100]
+# benchmark_items = benchmark_items[:10]
+
+random.seed(10)
+benchmark_items = random.sample(benchmark_items, 100)
+
 
 if not graph_structure or not all_tools_schema or not benchmark_items:
     print("Error loading necessary graph, tools, or benchmark data. Exiting.")

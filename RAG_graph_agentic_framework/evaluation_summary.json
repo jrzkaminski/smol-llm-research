@@ -1,0 +1,1724 @@
+{
+  "evaluation_timestamp_utc": "1750184604.61812",
+  "evaluated_by_user": "jrzkaminski",
+  "source_results_file": "results_all.json",
+  "total_benchmarks_processed": 100,
+  "aggregated_metrics": {
+    "Avg_InstAcc": 0.51,
+    "Avg_ToolAcc": 0.2583333333333333,
+    "Avg_ArgAcc": 1.0,
+    "Avg_SeqAcc": 1.0,
+    "Avg_Precision": 0.42,
+    "Avg_Recall": 0.3108333333333333,
+    "Avg_F1": 0.34333333333333327,
+    "Avg_RetriesSpent": 0.06,
+    "Total_Prompt_Tokens": 455164,
+    "Total_Completion_Tokens": 20109,
+    "Total_Retries": 6,
+    "Avg_Prompt_Tokens_Per_Run": 4551.64,
+    "Avg_Completion_Tokens_Per_Run": 201.09,
+    "Avg_Retries_Spent_Per_Run": 0.06
+  },
+  "individual_results_metrics": [
+    {
+      "id": "benchmark_101",
+      "question": "I need to organize a sales training meeting in Beijing, the meeting room reservation number is A203, and the meeting time is from 8 am tomorrow until 12 pm at noon. Additionally, considering there might be remote participants, I would also like to reserve an online meeting room, please help me arrange and confirm the reservation status.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2291,
+      "completion_tokens": 271,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_102",
+      "question": "I need to change the alarm on my phone from 7:30 every morning to 7:00 on workdays, and cancel the one-time alarm tonight at 22:00.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2419,
+      "completion_tokens": 172,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_103",
+      "question": "I need to first create a new document and write my meeting notes into it. The document path is /home/user/meetings/20230315.txt, and the content is 'Project Review Meeting Minutes'. After completion, immediately check to see if it has been written successfully.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 1.0
+      },
+      "prompt_tokens": 10073,
+      "completion_tokens": 188,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_104",
+      "question": "I need to book a flight ticket for tomorrow from Shanghai to Beijing, the flight number is CA1234, the passenger's name is Zhang San.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3401,
+      "completion_tokens": 93,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_105",
+      "question": "Please help me check all the train ticket information from Shanghai to Beijing for today, and help me cancel the ticket with the reservation number TJ202304011220, the ID number is 310101198012081234.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4919,
+      "completion_tokens": 155,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_106",
+      "question": "I need to book a train ticket from Beijing to Shanghai on April 25th, hard seat, my ID number is 310110198905053377, name Zhang San. Please help me with it.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2829,
+      "completion_tokens": 141,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_107",
+      "question": "I need to rent a BMW 320i (car model number Car003) in Hangzhou from 3 PM on Friday, April 21st until 4 PM on Sunday, April 23rd, and please adjust the original car return time from 8 PM on Sunday to 4 PM on the same day.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: 'AgentState' object has no attribute 'get'"
+    },
+    {
+      "id": "benchmark_108",
+      "question": "Can you help me check if my account has any online meetings scheduled for tomorrow? The account ID is 12345, and the password is password456.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3813,
+      "completion_tokens": 82,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_109",
+      "question": "I would like to book a train ticket from Chengdu to Chongqing on March 20th, requiring a business class seat. My ID number is 510108199003075651, name Zhang San.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2808,
+      "completion_tokens": 143,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_110",
+      "question": "Today is March 15, 2023, I want to set a daily alarm for 7:00 AM, and then change my Monday 8:00 AM alarm to Friday 6:00 AM.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2809,
+      "completion_tokens": 185,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_111",
+      "question": "I would like to book two meeting rooms in Beijing and Shanghai, each for 4 hours, with the meeting starting at 9 a.m. today.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2016,
+      "completion_tokens": 179,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_112",
+      "question": "I need to create a work report and modify it.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1763,
+      "completion_tokens": 111,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_113",
+      "question": "My refrigerator is not cooling, please arrange a professional technician to repair it at my home as soon as possible.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2808,
+      "completion_tokens": 122,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_114",
+      "question": "My washing machine has malfunctioned, and I would like to schedule a home appliance repair service for 9 AM tomorrow. The brand of my washing machine is Little Swan, and the model is XQB60-M1269. The fault phenomenon is that it suddenly stops during washing.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3329,
+      "completion_tokens": 116,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_115",
+      "question": "I want to know the net income status of my company account today.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.3333333333333333,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1432,
+      "completion_tokens": 43,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_116",
+      "question": "Please book a professional tour guide who can provide English services in Beijing on June 16, 2023, which is next Friday, from 9 am to 6 pm, and confirm the total duration and exact price of the service, including museum tickets and lunch.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.3333333333333333,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2529,
+      "completion_tokens": 224,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_117",
+      "question": "I need to change the booking of the flight CA985 on April 20th to April 22nd, the new flight number after changing is CA995, my name is Zhang San.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.3333333333333333,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4590,
+      "completion_tokens": 165,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_118",
+      "question": "My air conditioner is not cooling and needs repair. The air conditioner is a Haier brand model KFR-35GW. I hope the repair can be done on Saturday morning at 9 am. The contact number is 13800138000, and the home address is No. 88 Zhichun Road, Haidian District, Beijing.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3101,
+      "completion_tokens": 191,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_119",
+      "question": "I need to create a new document in the system and write content into it, the file path is \"/home/user/documents/meeting_notes.txt\", and the content is \"Meeting notes for April 5, 2023\". Then update the content of this file to \"Project meeting notes for April 5, 2023\".\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 1.0
+      },
+      "prompt_tokens": 11382,
+      "completion_tokens": 552,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_120",
+      "question": "I need to cancel my booked flight ticket for MU5153 on October 20, 2023, and then book a ticket for flight CA1234 on the same day, passenger name is Zhang San.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 6290,
+      "completion_tokens": 167,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_121",
+      "question": "I would like to inquire about my account balance, my account ID is 998877, and the password is MyPassword123.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 0.5,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3261,
+      "completion_tokens": 132,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_122",
+      "question": "My TV has encountered a problem, the brand is Sony, and the model is XBR-55X900F. The fault phenomenon is that the screen sometimes suddenly turns black and then recovers. I would like to schedule a door-to-door repair service for today at 3 PM, the home address is No. 18 Biyun Road, Pudong New District, Shanghai, contact phone number is 13800138000.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3306,
+      "completion_tokens": 185,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_123",
+      "question": "I want to change my alarm from 7:00 AM every Monday to 6:30 AM every Tuesday, and cancel the original alarm for Monday.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2753,
+      "completion_tokens": 166,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_124",
+      "question": "I need to reschedule my flight ticket for MU5128 on September 18th to September 19th, name Zhang San.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4615,
+      "completion_tokens": 146,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_125",
+      "question": "I want to check the balance of my bank account, the account ID is 123456, and the password is Pwd789.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1722,
+      "completion_tokens": 108,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_126",
+      "question": "I need to modify the lunch transaction at 'Gourmet Paradise' restaurant from yesterday, correcting the amount to 250 yuan, and submit a complaint about the poor attitude of the waiter and the poor quality of the food.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2052,
+      "completion_tokens": 117,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_127",
+      "question": "I would like to book a flight ticket from Shanghai to Beijing on March 20th, the name is Wang Xiaoming.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3645,
+      "completion_tokens": 98,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_128",
+      "question": "My account ID is 1234567, and the password is Password123, I need to log in to the account to check the detailed bill of the last month.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1551,
+      "completion_tokens": 123,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_129",
+      "question": "My Samsung refrigerator is not working, the model is RT53K6237BS, please help me book a repair service for tomorrow morning at 10 o'clock, my contact number is 13812345678, the address is No. 100 Century Avenue, Pudong New District, Shanghai.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3079,
+      "completion_tokens": 169,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_130",
+      "question": "I need to cancel my flight ticket for HU7788 on March 20th at 15:30, booked under the name Wang Xiaoming. Also, please help me book a flight from Beijing to Shanghai at 08:00 on March 21st, any flight will do.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 1.0
+      },
+      "prompt_tokens": 12331,
+      "completion_tokens": 359,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_131",
+      "question": "Please help me log in to my account with the account number 12345, the password is WxYz789.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1744,
+      "completion_tokens": 65,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_132",
+      "question": "I need to book a conference room with the ID SH888 in Shanghai, for a product launch meeting from 10 a.m. to 2 p.m. on May 3, 2023.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1789,
+      "completion_tokens": 84,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_133",
+      "question": "I would like to book a hotel with the ID BH10086, starting from March 20th for 3 nights, booking 2 standard rooms.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3332,
+      "completion_tokens": 259,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_134",
+      "question": "I need you to help me create a new work report file and write the content, 'Summary of Today's Work', and then append the sentence 'Tomorrow's plan is pending.' at the end of the file.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1723,
+      "completion_tokens": 138,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_135",
+      "question": "I plan to go to Beijing on a business trip and would like to book an executive suite at the China World Hotel. The check-in date is March 20, 2023, and the check-out date is March 22, 2023. I need to book 2 rooms for guests named Zhang San and Li Si. After completion, please help me check the order details.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 1.0
+      },
+      "prompt_tokens": 13504,
+      "completion_tokens": 636,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_136",
+      "question": "Please book an SUV rental service for me on April 9th for a period of three days. I hold a type C1 driver's license and do not need to purchase insurance. Also, recommend some Chinese restaurants in Beijing for me, especially those that offer traditional Beijing cuisine. My budget is within 300 yuan, and I have no special dietary requirements.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 7403,
+      "completion_tokens": 206,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_137",
+      "question": "I need to cancel the booking for flight number MU5376 on March 10th and rebook for flight number MU5123 on March 15th, the passenger's name is Zhang Wei.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.3333333333333333,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 6246,
+      "completion_tokens": 167,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_138",
+      "question": "I need to check my schedule for today, the schedule id is 12345, I am in GMT+8, and set an email reminder half an hour in advance for the 9 AM department meeting, the 2 PM to 4 PM client video conference, and the 7 PM business dinner, to be sent to my email example@email.com.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 33189,
+      "completion_tokens": 665,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_139",
+      "question": "I need to log into my bank account, the account ID is 123456789, the password is qwert98765.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1611,
+      "completion_tokens": 108,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_140",
+      "question": "I would like to book a conference room with the ID A888 in Beijing, from 10 a.m. to 3 p.m. on April 10th, 2023, for the annual financial audit meeting.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1811,
+      "completion_tokens": 129,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_141",
+      "question": "I need you to help me design a personal photography website today named \"Journey of Light and Shadow\", it should be based on a photography template, use a bright color theme, and have a responsive design, SEO optimization, and video embedding capabilities. The page layout should be single-column with the navigation menu at the top of the page, and the website description should be \"This is a personal website that records my photography works and travel stories\"; in addition, please plan an online photography exhibition named \"Digital Vision\", scheduled for September 1st, with a budget of 10,000 yuan, expected to have 500 viewers, and I, Zhang Hua, will be in charge.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "run_error": "Graph execution failed: Recursion limit of 20 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "id": "benchmark_142",
+      "question": "I have an account ID which is 123456, and the password is abc123, please help me log into the account.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1520,
+      "completion_tokens": 104,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_143",
+      "question": "I need to create a new configuration file on the server, the file path is /home/user/config.txt, the content is the database connection string \"DB_CONNECTION_STRING: SERVER:localhost;DATABASE:master;UID:admin;PASSWORD:password123.\" Then modify the content of this file, changing the database username to superadmin.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2575,
+      "completion_tokens": 344,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_144",
+      "question": "I need to view and change my home cleaning service appointment, originally scheduled for 14:00 on 2023-01-25 at No. 12 South Road of Chaoyang Park, Chaoyang District, Beijing. Please adjust it to the same day of next month, with the time remaining unchanged.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3770,
+      "completion_tokens": 167,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_145",
+      "question": "I need to set a weekend alarm for 7:30 in the morning. Also, I need to cancel the daily 10 p.m. alarm that I set yesterday.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2276,
+      "completion_tokens": 162,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_146",
+      "question": "I need to log into my two different accounts, one account ID is 123456, the password is password789; the other account ID is 987654, the password is password321, please help me log into these two accounts.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3290,
+      "completion_tokens": 170,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_147",
+      "question": "I need to use a service to track the exact location of my friend at 3 PM yesterday based on his mobile number 13812345678, starting with which area in Chaoyang District, Beijing, and then further determine which street in Chaoyang District he might be on, although I am not sure about his service provider, I suspect it is China Mobile.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.6666666666666666,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.6666666666666666,
+        "F1": 0.8,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 8077,
+      "completion_tokens": 105,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_148",
+      "question": "I need to set an alarm for 7 AM and another for 10 PM, with the evening one reminding me every day.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 1.0
+      },
+      "prompt_tokens": 5467,
+      "completion_tokens": 236,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_149",
+      "question": "Please schedule and confirm a driving license theory test appointment for me at the city center branch from 9:00 AM to 11:00 AM this Friday, and submit my appointment information including appointment number 1024, location, date and time for record-keeping, and ensure that I have agreed to the 'Appointment Service Agreement'.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.6666666666666666,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.6666666666666666,
+        "F1": 0.8,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3995,
+      "completion_tokens": 350,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_150",
+      "question": "I need to update the last part of the project report document and delete the old backup files that are no longer needed.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 5516,
+      "completion_tokens": 139,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_151",
+      "question": "Please reserve table number 15 for me at the restaurant, and order two dishes of number 3 and an additional two desserts of number 5, then help me complete the payment.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 9246,
+      "completion_tokens": 277,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_152",
+      "question": "I need a new file to record the minutes of tomorrow's meeting, set the file name to 'Meeting_Minutes_2023-11-14.txt', and write 'November 14, 2023, Project Progress Update Meeting Minutes' at the beginning of the file.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4848,
+      "completion_tokens": 137,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_153",
+      "question": "I need to modify the personal information section of my resume and delete the old work experience.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1096,
+      "completion_tokens": 54,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_154",
+      "question": "I need to modify the configuration file path on the server to \"/etc/config.\", please change the content \"timeout\": 120 to \"timeout\": 60, and then delete an unnecessary temporary file, the path is \"/tmp/tempfile.txt\".\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1769,
+      "completion_tokens": 239,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_155",
+      "question": "There will be a project kickoff meeting this afternoon, I need to book the meeting room No. 302 in Beijing, the time is from 14:00 to 16:00 today, and the meeting topic is \"Intelligent Product Development Project Kickoff\".\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1214,
+      "completion_tokens": 285,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_156",
+      "question": "I want to change my train ticket. The ticket number is T789412, my ID number is 44058219960403256X, I need to change to the Z106 train at 9:30 AM on April 1st, the starting and ending stations remain the same.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3303,
+      "completion_tokens": 151,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_157",
+      "question": "I need to change my 6:30 alarm to 7:00 and switch it from a daily reminder to weekdays only, which are Monday to Friday. Then cancel the weekend alarm at 10:00.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.6666666666666666,
+        "Recall": 1.0,
+        "F1": 0.8,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 7952,
+      "completion_tokens": 257,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_158",
+      "question": "Please book a car with the ID GT500 for me, renting from 9 AM on August 3rd to 3 PM on August 5th, with pickup and return in Shanghai. Then inquire about the detailed information of this car rental, and change the start time of the rental to 9 AM on August 4th, keeping all other information unchanged.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.6666666666666666,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.6666666666666666,
+        "Recall": 0.6666666666666666,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3561,
+      "completion_tokens": 403,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_159",
+      "question": "I would like to book a luxury suite in Shanghai, check-in on March 20th, check-out on March 23rd, and also inquire about the hotel's booking details.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4225,
+      "completion_tokens": 101,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_160",
+      "question": "I need to create a log file named \"/var/log/2023-11-24-system.log\" on the server, first record the content \"2023-11-24 System backup completed, no errors found.\", then update the file to add the information \"System scheduled for routine check on 2023-11-25.\", and finally delete this log file after these operations are completed.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 11293,
+      "completion_tokens": 407,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_161",
+      "question": "My washing machine suddenly has a problem, it might be because I washed too many things, now the washing machine is leaking a bit, the model is Midea MG70-V2101D, I live at No.58 Jianguo Road, Chaoyang District, Beijing, I hope it can be repaired as soon as possible, the appointment time is at 10 am on March 16, 2023, my contact number is 13912345678.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3377,
+      "completion_tokens": 186,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_162",
+      "question": "Please find me a Beijing tour group that departs on April 1st, returns on April 8th, with a budget within 5000 yuan, and provide the detailed itinerary and service content for the option 'Beijing Historical and Cultural Tour'.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4652,
+      "completion_tokens": 179,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_163",
+      "question": "I need to reschedule the fridge repair appointment from March 22nd to 2 PM on March 27th. The repair request number is R1314.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2221,
+      "completion_tokens": 82,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_164",
+      "question": "I need to change my alarm from 8:00 AM every Friday to 7:30 AM every Thursday, and cancel the one-time alarm at 10:00 PM.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2843,
+      "completion_tokens": 179,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_165",
+      "question": "I want to check and purchase foreign exchange, my account ID is 12345, and the password is password123. I want to know how much Euro I have and how much RMB is needed to purchase 5000 US dollars.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.25,
+        "F1": 0.3333333333333333,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2517,
+      "completion_tokens": 113,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_166",
+      "question": "Please help me create a file named \"meeting_notes.txt\" first, and write the content \"Key points of today's discussion: Product design scheme discussion.\", then I need you to change the content of this file to \"Key points of today's discussion: Project progress update and assignment of future tasks.\".\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4949,
+      "completion_tokens": 193,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_167",
+      "question": "I need to change the reservation of the Beijing B003 meeting room from 3 PM to 5 PM to 4 PM to 6 PM, and also check the reservation status of the meeting room for the new time slot.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.3333333333333333,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2708,
+      "completion_tokens": 258,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_168",
+      "question": "I need to cancel my alarm for tomorrow at 6:30 and change it to every day at 7:00.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2880,
+      "completion_tokens": 163,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_169",
+      "question": "My name is Zhang San, and I would like to book a flight ticket from Beijing to Guangzhou, flight number CZ398, departing at 3:30 pm on March 19, 2023. Additionally, if my meeting is postponed, please help me check the information for all flights from Beijing to Guangzhou on March 20th.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 5785,
+      "completion_tokens": 193,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_170",
+      "question": "Please plan a trip to Bali for me from 2023-07-10 to 2023-07-24, including airfare, hotel accommodation, and travel guidance services, and ensure that the entire itinerary is detailed within a budget of 10,000 yuan. Also, provide activities that include beach tours, water activities, and traditional cultural experiences, and inform me of the specific travel package details after completion.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.3333333333333333,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4480,
+      "completion_tokens": 158,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_171",
+      "question": "I would like to inquire about the flight schedule from Beijing to Shanghai on August 25th and book an economy class ticket for a flight departing at 20:00 from Beijing to Shanghai on the same day. The passenger's name is Li Lei.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 6077,
+      "completion_tokens": 191,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_172",
+      "question": "I have a very important meeting at 7:30 tomorrow morning, I need to adjust the alarm originally set for 8:00 AM on my phone to 7:00 AM, and cancel the recurring alarms set for 7:00 AM from Monday to Friday.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2640,
+      "completion_tokens": 176,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_173",
+      "question": "I need to modify my hotel reservation, my confirmation number is CN12345, I need to change the room type to a deluxe suite and add one more room on next Monday.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3326,
+      "completion_tokens": 88,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_174",
+      "question": "I need to cancel the meeting that was scheduled in Shanghai's Room 007 from 14:00 to 16:00 on October 10, 2023, and reschedule it to Room 089 in Beijing, with the new meeting time set to 9:00-11:00 on October 11, 2023.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2737,
+      "completion_tokens": 278,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_175",
+      "question": "I want to first create a document to record today's work summary, then modify the document content to retain the important parts.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3611,
+      "completion_tokens": 182,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_176",
+      "question": "I want to create a document called \"Work Summary.txt\" on my desktop, and write \"The work this week has been completed very well!\".\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 5740,
+      "completion_tokens": 132,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_177",
+      "question": "I have a file that needs to be updated, the file path is \"/home/user/docs/report.txt\", please change the content to \"Project progress update: Requirement analysis phase completed, design phase expected to start at the end of March.\", and then be sure to delete the original file.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1542,
+      "completion_tokens": 291,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_178",
+      "question": "Please find and summarize the international news headlines for October 1, 2023, and provide the latest developments and detailed information on the Global Climate Change Emergency Summit.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4434,
+      "completion_tokens": 149,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_179",
+      "question": "I need to update my project report document, the file path is /home/user/project_report.txt, the new content is \"2023 Project Progress Update: All design phase work has been completed.\".\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 936,
+      "completion_tokens": 126,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_180",
+      "question": "I need to create a 'Work' schedule with a blue tag and the highest priority, starting from today, Tuesday, 2023-05-02, and covering all the weekdays until Friday of this week.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 6674,
+      "completion_tokens": 235,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_181",
+      "question": "Please add a new record in the trading system, marked as the transaction at 2 PM today, set the amount to 500 yuan, and associate it using my account ID 123456 and merchant ID 654321. After completion, verify the transaction details to ensure accuracy, and generate a detailed transaction report for this transaction. Then, since there is an overpayment in the transaction, a refund operation needs to be performed on the record, adjust the transaction amount to 450 yuan, and update the transaction status.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 0.3333333333333333,
+        "F1": 0.3333333333333333,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 6969,
+      "completion_tokens": 426,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_182",
+      "question": "I need to create a sales report file named \"sales_report.txt\" in the server path \"/data/reports/\" with the content \"March 2023 Sales Volume Statistics\", and then immediately modify its content to \"Q1 2023 Sales Volume Statistics\".\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4006,
+      "completion_tokens": 238,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_183",
+      "question": "I need to set an alarm for 6:30 AM every day, and then cancel the one-time alarm for tonight at 23:00.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2331,
+      "completion_tokens": 136,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_184",
+      "question": "I need to book a meeting room with the ID B003 in Beijing for April 27th from 9 am to 12 pm, and I would like to be reminded of the meeting content at 2 pm the day before the meeting starts.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1695,
+      "completion_tokens": 232,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_185",
+      "question": "My TV has encountered a problem and needs help with repairs. My TV is a Sony KT-75A1 model. The fault is that there is no display after turning on the TV. I live in Chaoyang District, Beijing, and my contact number is 13800138000. I hope someone can come for repairs at 9 am on September 7th.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3275,
+      "completion_tokens": 166,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_186",
+      "question": "I would like to backup important meeting minutes and modify one of the files, the file path is \"/home/user/documents/meeting_notes.txt\", the backup path is \"/home/user/documents/backups/meeting_notes_backup.txt\", and the modification is to change \"The project is progressing well\" to \"The project is progressing very smoothly\".\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1762,
+      "completion_tokens": 318,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_187",
+      "question": "I previously set an alarm for 07:00 AM, repeating daily. Now I want to change it to 08:00 AM, still repeating daily. Additionally, I have another alarm set for every Monday at 08:30 AM, which I now want to cancel.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.5,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.5,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2465,
+      "completion_tokens": 175,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_188",
+      "question": "I want to cancel my single alarm at 7:30 in the morning, and change my daily alarm at 9:00 in the evening to Monday through Friday, can you help me with that?\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2775,
+      "completion_tokens": 185,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_189",
+      "question": "I need to find a time deposit product with an annual interest rate over 2.5%, the initial deposit amount not more than 10,000 yuan, and to handle a deposit of 5,000 yuan into my chosen 'JinliBao' product, and finally check the balance of my transfer card number 6212261001001234567.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.3333333333333333,
+        "Recall": 0.3333333333333333,
+        "F1": 0.3333333333333333,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 4968,
+      "completion_tokens": 434,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_190",
+      "question": "I need to write a paragraph of text into the test.txt file on the D drive, the content is Hello, AI. Then, I want to change the content to Hello, World. Finally, I want to delete this file.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.6666666666666666,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.6666666666666666,
+        "Recall": 0.6666666666666666,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2267,
+      "completion_tokens": 303,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_191",
+      "question": "I need to share my schedule with id \"1234ABC\" for next Monday starting from 8 AM with my assistant, user id \"5678DEF\", with read-only permission, until it expires on next Friday at 18:00. Also, I need to grant edit permissions to my colleague, user id \"9876GHI\", for the same time period.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 1.0
+      },
+      "prompt_tokens": 24386,
+      "completion_tokens": 459,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_192",
+      "question": "Please retrieve and display my schedule for today, especially all activities from 9 AM to 5 PM, and for the project progress report meeting at 3 PM, I need to view its detailed information, my user ID is U123456, and the meeting's agenda_id is AG78910.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 10123,
+      "completion_tokens": 155,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_193",
+      "question": "My washing machine is broken, I have to go to work at 3 pm tomorrow, I want to change the appliance repair appointment from 1 pm today to 10 am the day after tomorrow, my contact number is 13800138000.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.3333333333333333,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2333,
+      "completion_tokens": 86,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_194",
+      "question": "Please arrange a week's work tasks for me, including preparing a project report in the office from 1 PM to 3 PM today and set it as high priority, holding a 'Team Strategic Planning' meeting with medium priority in Conference Room A from 9 AM to 11 AM on Wednesday, and writing an important research paper in my office all day Thursday.",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 18288,
+      "completion_tokens": 305,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_195",
+      "question": "I need to write content to the file path \"/home/user/project_report.txt\" at the final stage of completing the project report. First, please help me write the content \"Project Summary: This phase of the project was successfully completed.\" Then, immediately update the file content to \"Project Summary: This phase of the project was successfully completed and has been submitted for approval.\"\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 1.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1": 1.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 1700,
+      "completion_tokens": 271,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_196",
+      "question": "I need to back up my work schedule to the company's European regional cloud server, including the Market Strategy Meeting on July 1st starting at 9 am lasting for 2 hours, described as \"Discussing the marketing promotion outline and budget allocation for the second half of the year\", and the all-day Employee Skills Enhancement Training on July 15th, titled \"Employee Skills Enhancement Training\", described as \"Comprehensively enhancing employee skills, including communication, collaboration, and professional technology\", and create a summary for these backups, detailing all the schedules' times and contents.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.6666666666666666,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 10521,
+      "completion_tokens": 472,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_197",
+      "question": "Please book a business vehicle V12345 for me at 8 AM tomorrow from the company to the airport, and complete the reservation process under my name Wang Ming. Also, handle the approval of the portable projector with asset number P001XYZ so that I can depart from the company building at the same time to go to the client's location for a presentation.",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.3333333333333333,
+        "F1": 0.5,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2273,
+      "completion_tokens": 182,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_198",
+      "question": "My TV suddenly has a problem, I hope to get it repaired as soon as possible, can you help me arrange it? The TV brand is Haier, model is LE55M7000CF, now the screen does not display any image at all. My contact number is 13912345678, the address is Room 501, Unit 2, Building 5, XX Community, Haidian District, Beijing, and I would like to schedule the repair for May 20, 2023, at 10:00:00.\n",
+      "metrics": {
+        "InstAcc": 1.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 3131,
+      "completion_tokens": 221,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_199",
+      "question": "I would like to cancel the reservation for the meeting room 302 in Shanghai tomorrow morning, which is originally scheduled from 9 a.m. to 11 a.m. Then help me to book a new meeting from 2 p.m. to 4 p.m. tomorrow afternoon in the Beijing 101 meeting room for the product launch event.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.3333333333333333,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 0.5,
+        "Recall": 0.3333333333333333,
+        "F1": 0.4,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2740,
+      "completion_tokens": 223,
+      "run_error": null
+    },
+    {
+      "id": "benchmark_200",
+      "question": "I would like to book a train ticket from Beijing to Shanghai on March 20th, my name is Li Ming, and my ID number is 310101198501012345.\n",
+      "metrics": {
+        "InstAcc": 0.0,
+        "ToolAcc": 0.0,
+        "ArgAcc": 1.0,
+        "SeqAcc": 1.0,
+        "Precision": 1.0,
+        "Recall": 0.5,
+        "F1": 0.6666666666666666,
+        "RetriesSpent": 0.0
+      },
+      "prompt_tokens": 2765,
+      "completion_tokens": 122,
+      "run_error": null
+    }
+  ]
+}

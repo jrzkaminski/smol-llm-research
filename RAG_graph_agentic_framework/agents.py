@@ -1,6 +1,4 @@
 import json
-import tempfile
-import uuid
 import regex as re
 
 from typing import Dict, List, Optional, Any
@@ -12,7 +10,6 @@ from langchain_community.vectorstores import Chroma
 from pydantic import ValidationError
 
 from RAG_graph_agentic_framework.config import (
-    PLANNER_AGENT_SYSTEM_PROMPT,
     AGENT_SYSTEM_PROMPT,
     LLM_MODEL,
     OPENAI_API_KEY,
@@ -30,6 +27,8 @@ from RAG_graph_agentic_framework.tool_utils import (
     build_tool_adjacency,
     get_related_tools,
 )
+from RAG_graph_agentic_framework.planner import run_planner
+from RAG_graph_agentic_framework.tool_pruner import init_pruner
 from pathlib import Path
 
 
@@ -43,15 +42,13 @@ def create_agent(
 
     llm = ChatOpenAI(model=LLM_MODEL, api_key=OPENAI_API_KEY, temperature=0)
 
-    planner_prompt = ChatPromptTemplate.from_messages(
-        [("system", PLANNER_AGENT_SYSTEM_PROMPT)]
-    )
     agents_prompt = ChatPromptTemplate.from_messages(
         [
             ("system", AGENT_SYSTEM_PROMPT),
             ("human", "{user_request}"),
         ]
     )
+    init_pruner(all_tools_schema)
 
     VECTORSTORE_ROOT = Path("/tmp/chroma_agents")
     VECTORSTORE_ROOT.mkdir(parents=True, exist_ok=True)
@@ -101,17 +98,10 @@ def create_agent(
         vectordb = vectorstore_cache[state.category]
 
         try:
-            planner_resp = llm.invoke(
-                planner_prompt.format(user_request=state.user_request)
-            )
-            subtasks = json.loads(planner_resp.content)
-            if not isinstance(subtasks, list):
-                print("Planner returned not a list")
+            subtasks = run_planner(state.user_request, llm, top_k=40)
         except Exception as e:
-            print(e)
+            print(f"Planner failed: {e}")
             subtasks = [state.user_request]
-
-        print(f"Subtasks: {subtasks}")
 
         accumulated_parsed_outcome: List[ToolCall] = []
         accumulated_parsing_error: Optional[str] = ""

@@ -12,16 +12,26 @@ TOP_RANK = 10
 
 
 PLANNER_AGENT_SYSTEM_PROMPT = """
-Rewrite the USER REQUEST as the smallest sequence of independent, solvable sub-requests.
+You are a task-planner agent for an autonomous tool-execution system.
 
-Rules:
-1. Each sub-request must be a self-contained natural-language instruction; no code or tool names.
-2. Preserve order and any quoted literals (file names, texts, numbers).
-3. Return ONLY a JSON array of strings. No keys, no commentary.
+Below are the tools most relevant to the current request.
+Other tools exist, but build your plan using ONLY the tools listed here.
 
-User request: "{user_request}"
+{tool_block}
+
+Rules for the plan you will output:
+
+1. Generate the SHORTEST ordered list of subtasks that, if done in sequence, fully solve the USER REQUEST below.  
+2. Write every subtask as a **bare infinitive clause** (verb first) that already contains ALL required argument names and values.  
+Do NOT include tool names, JSON keys, or any stop words such as “the”, “a”, “an”, “please”, “should”, “need to”, “kindly”.  
+3. If one tool can handle the request, output exactly ONE subtask.  
+4. Preserve order and every literal from the user (dates, codes, names, numbers, quoted text) in each subtask.  
+5. Return ONLY a valid JSON array of strings, e.g.  
+   [
+     "Retrieve stock trend for code 600519 from 2025-06-16 to 2025-06-17",
+     "Predict future trend for code 600519 using historical data above"
+   ]
 """
-
 
 SUPERVISOR_SYSTEM_PROMPT = """You are a supervisor agent. Your role is to understand the user's request \
 and delegate it to the appropriate specialist agent based on the required tool category.
@@ -54,6 +64,7 @@ If you CANNOT complete the entire task, IN ANY CASE, WRITE DOWN THE FUNCTIONS th
 Use tools ONLY FROM THE LIST PROVIDED TO YOU!
 If the function is not available to you, DO NOT WRITE it in JSON.
 Make sure that your response in JSON format is correct!!
+Return ONLY a JSON. No keys, no commentary. At least one tool must be in it.
 
 Example Output Format:
 [
@@ -78,5 +89,4 @@ If you receive an error message about an invalid tool call, analyze the error an
 Error: {error}
 
 Based on the request and your available tools, propose the sequence of tool calls.
-Return ONLY a JSON. No keys, no commentary.
 """

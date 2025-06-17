@@ -73,15 +73,15 @@ class BenchmarkItem(BaseModel):
 
 class AgentState(BaseModel):
     user_request: str
+    category: Optional[str] = None
     agent_outcome: Optional[List[ToolCall]] = None
     error_message: Optional[str] = None
-    subtasks: List[str] = []
+    supervisor_result: Optional[List[ToolCall]] = None
     all_tools_schema: Optional[Dict[str, ToolSchema]] = None
     tools_by_category: Optional[Dict[str, Dict[str, ToolSchema]]] = None
     total_prompt_tokens: int = 0
     total_completion_tokens: int = 0
     retry_count: int = 0
-    tools_graph: GraphStructure = None
     available_tools_for_agent: Optional[Dict[str, ToolSchema]] = None
 
     def clear_error(self):
@@ -92,7 +92,7 @@ class AgentState(BaseModel):
         self.error_message = error
         return self
 
-    def get_agent_tools(self) -> Dict[str, ToolSchema]:
+    def get_current_agent_tools(self) -> Dict[str, ToolSchema]:
         result_dict = {}
         for category in self.tools_by_category.keys():
             result_dict.update(self.tools_by_category.get(category, {}))
