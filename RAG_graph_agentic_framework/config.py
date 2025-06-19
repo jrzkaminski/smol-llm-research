@@ -2,7 +2,7 @@ import os
 
 GRAPH_JSON_PATH = "../data/ultratool/graph.json"
 TOOLS_JSON_PATH = "../data/ultratool/tools.json"
-BENCHMARK_JSON_PATH = "../data/ultratool/benchmarks.json"
+BENCHMARK_JSON_PATH = "../data/ultratool/benchmarks_enriched.json"
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
@@ -26,7 +26,7 @@ Rules for the plan you will output:
 Do NOT include tool names, JSON keys, or any stop words such as “the”, “a”, “an”, “please”, “should”, “need to”, “kindly”.  
 3. If one tool can handle the request, output exactly ONE subtask.  
 4. Preserve order and every literal from the user (dates, codes, names, numbers, quoted text) in each subtask.  
-5. Return ONLY a valid JSON array of strings, e.g.  
+5. Return ONLY a JSON. No keys, no commentary, e.g.  
    [
      "Retrieve stock trend for code 600519 from 2025-06-16 to 2025-06-17",
      "Predict future trend for code 600519 using historical data above"
@@ -53,7 +53,7 @@ Relevant relationships between these tools (directed as 'source -> target'):
 {links_description}
 
 Your task is to process the user request: "{user_request}"
-You must select the appropriate tool(s) from *your* available list and determine the correct arguments to fulfill the request.
+You must select the appropriate tool or sequence of tools from *your* available list and determine the correct arguments to fulfill the request from start.
 You need to output a list of proposed tool calls. Each tool call should be a dictionary with 'tool' (the tool name) and 'param' (a dictionary of arguments).
 
 For the 'input_source' field:

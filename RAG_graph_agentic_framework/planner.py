@@ -1,5 +1,6 @@
 import json
-from typing import List, Dict
+from typing import List
+import re
 
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
@@ -27,8 +28,8 @@ def run_planner(
     response = llm.invoke(
         planner_prompt.format(tool_block=tool_block, user_request=user_request)
     )
-
-    subtasks = json.loads(response.content)
+    clean_response = re.sub(r"^```json\s*|```$", "", response.content.strip())
+    subtasks = json.loads(clean_response)
     print(f"[PLANNER] request: {user_request}")
     print(f"[PLANNER] subtasks: {subtasks}")
     return subtasks if isinstance(subtasks, list) else [user_request]
