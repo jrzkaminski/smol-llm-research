@@ -1,0 +1,7594 @@
+{
+  "completed": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99
+  ],
+  "detail_table": {
+    "0": [
+      {
+        "idx": 0,
+        "ref": [
+          "book_ticket",
+          "hotel_search",
+          "transportation_booking",
+          "travel_itinerary_planner"
+        ],
+        "selected": [
+          "hotel_search",
+          "travel_itinerary_planner"
+        ]
+      },
+      {
+        "idx": 1,
+        "ref": [
+          "checkout_api",
+          "get_dish_id",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 2,
+        "ref": [
+          "call_service_provider",
+          "confirm_available_appointment_times",
+          "ensure_appointment_confirmation",
+          "finalize_appointment_time",
+          "provide_repair_details",
+          "search_authorized_service_provider",
+          "select_nearest_service_provider"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 3,
+        "ref": [
+          "labor_law_guide",
+          "legal_compliance_check",
+          "legal_regulation_search"
+        ],
+        "selected": [
+          "labor_law_guide",
+          "legal_compliance_check",
+          "legal_regulation_search"
+        ]
+      },
+      {
+        "idx": 4,
+        "ref": [
+          "pet_care_tool",
+          "search_information",
+          "set_reminder",
+          "smart_home_control"
+        ],
+        "selected": [
+          "pet_care_tool",
+          "smart_home_control"
+        ]
+      },
+      {
+        "idx": 5,
+        "ref": [
+          "account_login",
+          "account_logout",
+          "update_account_info"
+        ],
+        "selected": [
+          "account_login"
+        ]
+      },
+      {
+        "idx": 6,
+        "ref": [
+          "create_schedule",
+          "save_schedule",
+          "set_schedule_date_range",
+          "set_schedule_priority",
+          "set_schedule_repetition",
+          "set_schedule_tag"
+        ],
+        "selected": [
+          "create_schedule",
+          "save_schedule",
+          "set_schedule_priority",
+          "set_schedule_repetition",
+          "set_schedule_tag"
+        ]
+      },
+      {
+        "idx": 7,
+        "ref": [
+          "account_login",
+          "account_logout",
+          "balance_query"
+        ],
+        "selected": [
+          "account_login"
+        ]
+      },
+      {
+        "idx": 8,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ],
+        "selected": [
+          "account_login",
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ]
+      },
+      {
+        "idx": 9,
+        "ref": [
+          "account_login",
+          "currency_conversion",
+          "exchange_rate_query",
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ],
+        "selected": [
+          "account_login",
+          "exchange_rate_query",
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ]
+      },
+      {
+        "idx": 10,
+        "ref": [
+          "assign_random_table",
+          "checkout_api",
+          "menu_select_api",
+          "merge_orders"
+        ],
+        "selected": [
+          "assign_random_table",
+          "checkout_api",
+          "menu_select_api",
+          "merge_orders"
+        ]
+      },
+      {
+        "idx": 11,
+        "ref": [
+          "confirm_payment_method",
+          "merge_orders",
+          "request_menu",
+          "submit_preorder",
+          "table_booking_api"
+        ],
+        "selected": [
+          "confirm_payment_method",
+          "merge_orders",
+          "submit_preorder",
+          "table_booking_api"
+        ]
+      },
+      {
+        "idx": 12,
+        "ref": [
+          "book_table",
+          "checkout_api",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 13,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "place_order",
+          "table_booking_api"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 14,
+        "ref": [
+          "checkout_api",
+          "get_contact_information",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 15,
+        "ref": [
+          "hotel_booking_modification",
+          "hotel_booking_query"
+        ],
+        "selected": [
+          "hotel_booking_modification"
+        ]
+      },
+      {
+        "idx": 16,
+        "ref": [
+          "identity_verification",
+          "seat_availability_check",
+          "ticket_info_query",
+          "train_ticket_changing"
+        ],
+        "selected": [
+          "ticket_info_query",
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 17,
+        "ref": [
+          "check_weather",
+          "purchase_travel_insurance",
+          "search_train",
+          "train_ticket_booking"
+        ],
+        "selected": [
+          "check_weather",
+          "purchase_travel_insurance",
+          "search_train"
+        ]
+      },
+      {
+        "idx": 18,
+        "ref": [
+          "appliance_repair_request",
+          "find_nearest_service_center",
+          "get_service_center_working_hours",
+          "select_nearest_working_day"
+        ],
+        "selected": [
+          "appliance_repair_request",
+          "find_nearest_service_center",
+          "get_service_center_working_hours",
+          "select_nearest_working_day"
+        ]
+      },
+      {
+        "idx": 19,
+        "ref": [
+          "appliance_repair_request",
+          "find_authorized_service_provider",
+          "get_service_provider_contact",
+          "notify_user",
+          "select_nearest_service_provider"
+        ],
+        "selected": [
+          "appliance_repair_request",
+          "find_authorized_service_provider"
+        ]
+      },
+      {
+        "idx": 20,
+        "ref": [
+          "medical_knowledge_search"
+        ],
+        "selected": [
+          "medical_knowledge_search"
+        ]
+      },
+      {
+        "idx": 21,
+        "ref": [
+          "check_file_deleted",
+          "file_delete",
+          "file_modify",
+          "ssh_connect",
+          "verify_file_content"
+        ],
+        "selected": [
+          "file_delete",
+          "file_modify"
+        ]
+      },
+      {
+        "idx": 22,
+        "ref": [
+          "calculate_population_sum",
+          "compare_population",
+          "population_info_search"
+        ],
+        "selected": [
+          "population_info_search"
+        ]
+      },
+      {
+        "idx": 23,
+        "ref": [
+          "filter_cleaning_service",
+          "home_cleaning_booking",
+          "home_cleaning_cancelling",
+          "home_cleaning_query"
+        ],
+        "selected": [
+          "filter_cleaning_service",
+          "home_cleaning_booking",
+          "home_cleaning_cancelling"
+        ]
+      },
+      {
+        "idx": 24,
+        "ref": [
+          "home_cleaning_booking",
+          "home_cleaning_cancelling",
+          "home_cleaning_changing",
+          "home_cleaning_query",
+          "weather_query"
+        ],
+        "selected": [
+          "home_cleaning_booking",
+          "home_cleaning_changing",
+          "home_cleaning_query",
+          "weather_query"
+        ]
+      },
+      {
+        "idx": 25,
+        "ref": [
+          "check_provider_reputation",
+          "confirm_cleaning_availability",
+          "filter_good_reputation_cleaners",
+          "home_cleaning_booking",
+          "home_cleaning_cancelling"
+        ],
+        "selected": [
+          "check_provider_reputation",
+          "filter_good_reputation_cleaners",
+          "home_cleaning_booking",
+          "home_cleaning_cancelling"
+        ]
+      },
+      {
+        "idx": 26,
+        "ref": [
+          "home_cleaning_booking",
+          "home_cleaning_changing",
+          "home_cleaning_query"
+        ],
+        "selected": [
+          "home_cleaning_booking",
+          "home_cleaning_changing"
+        ]
+      },
+      {
+        "idx": 27,
+        "ref": [
+          "agenda_sorting",
+          "check_room_availability",
+          "manage_schedule",
+          "schedule_sorter"
+        ],
+        "selected": [
+          "agenda_sorting",
+          "manage_schedule"
+        ]
+      },
+      {
+        "idx": 28,
+        "ref": [
+          "check_file_existence",
+          "file_delete",
+          "file_modify",
+          "ssh_connect"
+        ],
+        "selected": [
+          "file_delete",
+          "file_modify",
+          "ssh_connect"
+        ]
+      },
+      {
+        "idx": 29,
+        "ref": [
+          "file_modify",
+          "file_write"
+        ],
+        "selected": [
+          "file_write"
+        ]
+      },
+      {
+        "idx": 30,
+        "ref": [
+          "check_file_content",
+          "file_delete",
+          "file_modify",
+          "file_write"
+        ],
+        "selected": [
+          "file_delete",
+          "file_modify",
+          "file_write"
+        ]
+      },
+      {
+        "idx": 31,
+        "ref": [
+          "account_balance_query",
+          "account_login"
+        ],
+        "selected": [
+          "account_balance_query",
+          "account_login"
+        ]
+      },
+      {
+        "idx": 32,
+        "ref": [
+          "account_login",
+          "check_balance",
+          "foreign_currency_purchase",
+          "stock_query"
+        ],
+        "selected": [
+          "account_login",
+          "stock_query"
+        ]
+      },
+      {
+        "idx": 33,
+        "ref": [
+          "account_login",
+          "calculate_exchange_amount",
+          "foreign_currency_query",
+          "get_exchange_rate"
+        ],
+        "selected": [
+          "account_login",
+          "calculate_exchange_amount",
+          "foreign_currency_query",
+          "get_exchange_rate"
+        ]
+      },
+      {
+        "idx": 34,
+        "ref": [
+          "account_login",
+          "account_logout",
+          "get_asset_overview",
+          "get_transaction_history"
+        ],
+        "selected": [
+          "account_login",
+          "get_asset_overview",
+          "get_transaction_history"
+        ]
+      },
+      {
+        "idx": 35,
+        "ref": [
+          "account_login",
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ],
+        "selected": [
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ]
+      },
+      {
+        "idx": 36,
+        "ref": [
+          "account_login",
+          "foreign_currency_purchase",
+          "foreign_currency_query",
+          "foreign_currency_sale"
+        ],
+        "selected": [
+          "account_login",
+          "foreign_currency_purchase",
+          "foreign_currency_sale"
+        ]
+      },
+      {
+        "idx": 37,
+        "ref": [
+          "account_login",
+          "credit_card_debt"
+        ],
+        "selected": [
+          "credit_card_debt"
+        ]
+      },
+      {
+        "idx": 38,
+        "ref": [
+          "account_login",
+          "balance_query",
+          "confirm_transfer",
+          "transfer_money"
+        ],
+        "selected": [
+          "account_login",
+          "balance_query"
+        ]
+      },
+      {
+        "idx": 39,
+        "ref": [
+          "account_login",
+          "transfer_all_to_main_account"
+        ],
+        "selected": [
+          "account_login"
+        ]
+      },
+      {
+        "idx": 40,
+        "ref": [
+          "account_balance_query",
+          "account_login"
+        ],
+        "selected": [
+          "account_balance_query",
+          "account_login"
+        ]
+      },
+      {
+        "idx": 41,
+        "ref": [
+          "deposit_product_selection",
+          "detailed_inquiry",
+          "loan_application",
+          "loan_application_time"
+        ],
+        "selected": [
+          "deposit_product_selection",
+          "loan_application",
+          "loan_application_time"
+        ]
+      },
+      {
+        "idx": 42,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ]
+      },
+      {
+        "idx": 43,
+        "ref": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction",
+          "modify_transaction"
+        ],
+        "selected": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction",
+          "modify_transaction"
+        ]
+      },
+      {
+        "idx": 44,
+        "ref": [
+          "currency_exchange_rate",
+          "foreign_currency_exchange"
+        ],
+        "selected": [
+          "currency_exchange_rate",
+          "foreign_currency_exchange"
+        ]
+      },
+      {
+        "idx": 45,
+        "ref": [
+          "account_login",
+          "credit_card_debt",
+          "credit_card_repayment"
+        ],
+        "selected": [
+          "credit_card_debt",
+          "credit_card_repayment"
+        ]
+      },
+      {
+        "idx": 46,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ]
+      },
+      {
+        "idx": 47,
+        "ref": [
+          "bank_balance_query",
+          "deposit_product_search",
+          "domestic_remittance",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "deposit_product_search",
+          "domestic_remittance",
+          "fixed_deposit_transaction"
+        ]
+      },
+      {
+        "idx": 48,
+        "ref": [
+          "customer_service",
+          "del_transaction",
+          "find_transaction",
+          "modify_transaction"
+        ],
+        "selected": [
+          "customer_service",
+          "del_transaction",
+          "find_transaction",
+          "modify_transaction"
+        ]
+      },
+      {
+        "idx": 49,
+        "ref": [
+          "contract_content_search",
+          "precious_metals_quotes_search"
+        ],
+        "selected": [
+          "contract_content_search",
+          "precious_metals_quotes_search"
+        ]
+      },
+      {
+        "idx": 50,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ]
+      },
+      {
+        "idx": 51,
+        "ref": [
+          "currency_conversion"
+        ],
+        "selected": [
+          "currency_conversion"
+        ]
+      },
+      {
+        "idx": 52,
+        "ref": [
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ]
+      },
+      {
+        "idx": 53,
+        "ref": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction"
+        ],
+        "selected": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction"
+        ]
+      },
+      {
+        "idx": 54,
+        "ref": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction",
+          "modify_transaction"
+        ],
+        "selected": [
+          "create_transaction",
+          "del_transaction",
+          "modify_transaction"
+        ]
+      },
+      {
+        "idx": 55,
+        "ref": [
+          "order_tracking"
+        ],
+        "selected": [
+          "order_tracking"
+        ]
+      },
+      {
+        "idx": 56,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "order_details_api"
+        ],
+        "selected": [
+          "menu_select_api",
+          "order_details_api"
+        ]
+      },
+      {
+        "idx": 57,
+        "ref": [
+          "restaurant_review",
+          "restaurant_review_analyzer",
+          "restaurant_review_tool"
+        ],
+        "selected": [
+          "restaurant_review",
+          "restaurant_review_analyzer",
+          "restaurant_review_tool"
+        ]
+      },
+      {
+        "idx": 58,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "table_booking_api"
+        ],
+        "selected": [
+          "checkout_api",
+          "menu_select_api",
+          "table_booking_api"
+        ]
+      },
+      {
+        "idx": 59,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 60,
+        "ref": [
+          "restaurant_review",
+          "restaurant_review_analyzer",
+          "restaurant_review_tool"
+        ],
+        "selected": [
+          "restaurant_review",
+          "restaurant_review_analyzer",
+          "restaurant_review_tool"
+        ]
+      },
+      {
+        "idx": 61,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 62,
+        "ref": [
+          "hotel_booking_modification",
+          "hotel_booking_query"
+        ],
+        "selected": [
+          "hotel_booking_modification"
+        ]
+      },
+      {
+        "idx": 63,
+        "ref": [
+          "check_room_availability",
+          "hotel_booking_modification",
+          "hotel_booking_query"
+        ],
+        "selected": [
+          "hotel_booking_modification"
+        ]
+      },
+      {
+        "idx": 64,
+        "ref": [
+          "check_room_availability",
+          "confirm_room_price_and_policy",
+          "hotel_booking_query",
+          "search_luxury_hotels"
+        ],
+        "selected": [
+          "check_room_availability",
+          "search_luxury_hotels"
+        ]
+      },
+      {
+        "idx": 65,
+        "ref": [
+          "clock_alarm_change",
+          "clock_alarm_set"
+        ],
+        "selected": [
+          "clock_alarm_change",
+          "clock_alarm_set"
+        ]
+      },
+      {
+        "idx": 66,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_booking"
+        ]
+      },
+      {
+        "idx": 67,
+        "ref": [
+          "flight_search",
+          "flight_ticket_cancelling"
+        ],
+        "selected": [
+          "flight_search",
+          "flight_ticket_cancelling"
+        ]
+      },
+      {
+        "idx": 68,
+        "ref": [
+          "flight_search",
+          "flight_ticket_changing",
+          "send_ticket"
+        ],
+        "selected": [
+          "flight_ticket_changing"
+        ]
+      },
+      {
+        "idx": 69,
+        "ref": [
+          "search_train",
+          "train_ticket_booking"
+        ],
+        "selected": [
+          "search_train"
+        ]
+      },
+      {
+        "idx": 70,
+        "ref": [
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_changing",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "train_ticket_booking",
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 71,
+        "ref": [
+          "search_train",
+          "train_ticket_changing",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 72,
+        "ref": [
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_cancelling",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "train_ticket_booking",
+          "train_ticket_cancelling"
+        ]
+      },
+      {
+        "idx": 73,
+        "ref": [
+          "query_past_ticket",
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_cancelling"
+        ],
+        "selected": [
+          "query_past_ticket",
+          "train_ticket_booking",
+          "train_ticket_cancelling"
+        ]
+      },
+      {
+        "idx": 74,
+        "ref": [
+          "train_ticket_changing",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 75,
+        "ref": [
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_cancelling",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "search_train",
+          "train_ticket_cancelling"
+        ]
+      },
+      {
+        "idx": 76,
+        "ref": [
+          "company_vehicle_service",
+          "outward_reception_approval",
+          "send_notifications"
+        ],
+        "selected": [
+          "company_vehicle_service",
+          "outward_reception_approval"
+        ]
+      },
+      {
+        "idx": 77,
+        "ref": [
+          "official_ticket_platform_search",
+          "scenic_spot_ticket_search"
+        ],
+        "selected": [
+          "official_ticket_platform_search",
+          "scenic_spot_ticket_search"
+        ]
+      },
+      {
+        "idx": 78,
+        "ref": [
+          "schedule_delivery",
+          "souvenir_purchase",
+          "souvenir_recommender",
+          "tourist_souvenir_creator"
+        ],
+        "selected": [
+          "schedule_delivery",
+          "souvenir_purchase",
+          "souvenir_recommender",
+          "tourist_souvenir_creator"
+        ]
+      },
+      {
+        "idx": 79,
+        "ref": [
+          "company_vehicle_service",
+          "internal_purchase",
+          "outward_reception_approval",
+          "purchase_product"
+        ],
+        "selected": [
+          "company_vehicle_service",
+          "internal_purchase",
+          "outward_reception_approval"
+        ]
+      },
+      {
+        "idx": 80,
+        "ref": [
+          "business_travel_standard_search",
+          "submit_subsidy_application",
+          "train_ticket_booking"
+        ],
+        "selected": [
+          "submit_subsidy_application",
+          "train_ticket_booking"
+        ]
+      },
+      {
+        "idx": 81,
+        "ref": [
+          "travel_info_search",
+          "travel_route_search"
+        ],
+        "selected": [
+          "travel_info_search",
+          "travel_route_search"
+        ]
+      },
+      {
+        "idx": 82,
+        "ref": [
+          "purchase_missing_items",
+          "travel_backpack_checker",
+          "travel_backpack_generator",
+          "travel_backpack_inventory"
+        ],
+        "selected": [
+          "travel_backpack_checker",
+          "travel_backpack_generator"
+        ]
+      },
+      {
+        "idx": 83,
+        "ref": [
+          "car_rental_booking",
+          "car_rental_cancelling",
+          "car_rental_changing",
+          "car_rental_query"
+        ],
+        "selected": [
+          "car_rental_booking",
+          "car_rental_cancelling",
+          "car_rental_changing",
+          "car_rental_query"
+        ]
+      },
+      {
+        "idx": 84,
+        "ref": [
+          "theme_park_attractions_search",
+          "theme_park_info_search",
+          "theme_park_ticket_search"
+        ],
+        "selected": [
+          "theme_park_attractions_search",
+          "theme_park_info_search",
+          "theme_park_ticket_search"
+        ]
+      },
+      {
+        "idx": 85,
+        "ref": [
+          "special_vehicle_rental_service",
+          "special_weather_forecast_tool"
+        ],
+        "selected": [
+          "special_vehicle_rental_service",
+          "special_weather_forecast_tool"
+        ]
+      },
+      {
+        "idx": 86,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_booking"
+        ]
+      },
+      {
+        "idx": 87,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_query",
+          "create_virtual_meeting",
+          "send_meeting_notification"
+        ],
+        "selected": [
+          "conference_room_query",
+          "create_virtual_meeting"
+        ]
+      },
+      {
+        "idx": 88,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_cancelling",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_booking",
+          "conference_room_cancelling"
+        ]
+      },
+      {
+        "idx": 89,
+        "ref": [
+          "check_meeting_room_availability",
+          "conference_room_booking",
+          "conference_room_cancelling",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_booking",
+          "conference_room_cancelling"
+        ]
+      },
+      {
+        "idx": 90,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_cancelling",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_cancelling",
+          "conference_room_query"
+        ]
+      },
+      {
+        "idx": 91,
+        "ref": [
+          "arrange_technical_staff",
+          "conference_room_booking",
+          "conference_room_query",
+          "send_meeting_invitations"
+        ],
+        "selected": [
+          "conference_room_query"
+        ]
+      },
+      {
+        "idx": 92,
+        "ref": [
+          "assign_staff_to_meeting_room",
+          "book_and_pay_for_meeting_room",
+          "search_and_select_meeting_room",
+          "write_on_whiteboard"
+        ],
+        "selected": [
+          "book_and_pay_for_meeting_room",
+          "search_and_select_meeting_room",
+          "write_on_whiteboard"
+        ]
+      },
+      {
+        "idx": 93,
+        "ref": [
+          "add_periodic_event",
+          "contact_restaurant",
+          "order_flowers",
+          "schedule_flower_delivery"
+        ],
+        "selected": [
+          "add_periodic_event",
+          "contact_restaurant",
+          "order_flowers"
+        ]
+      },
+      {
+        "idx": 94,
+        "ref": [
+          "create_document_with_events",
+          "export_calendar",
+          "export_document_to_pdf"
+        ],
+        "selected": [
+          "create_document_with_events",
+          "export_calendar",
+          "export_document_to_pdf"
+        ]
+      },
+      {
+        "idx": 95,
+        "ref": [
+          "add_periodic_event",
+          "generate_unique_id"
+        ],
+        "selected": [
+          "add_periodic_event",
+          "generate_unique_id"
+        ]
+      },
+      {
+        "idx": 96,
+        "ref": [
+          "clock_alarm_change",
+          "clock_alarm_set"
+        ],
+        "selected": [
+          "clock_alarm_change",
+          "clock_alarm_set"
+        ]
+      },
+      {
+        "idx": 97,
+        "ref": [
+          "appliance_repair_request",
+          "check_service_provider_availability",
+          "confirm_repair_cost_and_payment",
+          "find_authorized_service_provider"
+        ],
+        "selected": [
+          "appliance_repair_request",
+          "find_authorized_service_provider"
+        ]
+      },
+      {
+        "idx": 98,
+        "ref": [
+          "appliance_repair_request",
+          "appliance_repair_status_query",
+          "notify_user",
+          "set_reminder"
+        ],
+        "selected": [
+          "appliance_repair_request",
+          "appliance_repair_status_query"
+        ]
+      },
+      {
+        "idx": 99,
+        "ref": [
+          "appliance_repair_request",
+          "call_service_provider",
+          "check_service_provider_coverage",
+          "search_authorized_service_provider"
+        ],
+        "selected": [
+          "appliance_repair_request",
+          "search_authorized_service_provider"
+        ]
+      }
+    ],
+    "10": [
+      {
+        "idx": 0,
+        "ref": [
+          "book_ticket",
+          "hotel_search",
+          "transportation_booking",
+          "travel_itinerary_planner"
+        ],
+        "selected": [
+          "hotel_search",
+          "travel_itinerary_planner"
+        ]
+      },
+      {
+        "idx": 1,
+        "ref": [
+          "checkout_api",
+          "get_dish_id",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 2,
+        "ref": [
+          "call_service_provider",
+          "confirm_available_appointment_times",
+          "ensure_appointment_confirmation",
+          "finalize_appointment_time",
+          "provide_repair_details",
+          "search_authorized_service_provider",
+          "select_nearest_service_provider"
+        ],
+        "selected": [
+          "confirm_available_appointment_times",
+          "finalize_appointment_time",
+          "provide_repair_details",
+          "search_authorized_service_provider"
+        ]
+      },
+      {
+        "idx": 3,
+        "ref": [
+          "labor_law_guide",
+          "legal_compliance_check",
+          "legal_regulation_search"
+        ],
+        "selected": [
+          "labor_law_guide",
+          "legal_compliance_check",
+          "legal_regulation_search"
+        ]
+      },
+      {
+        "idx": 4,
+        "ref": [
+          "pet_care_tool",
+          "search_information",
+          "set_reminder",
+          "smart_home_control"
+        ],
+        "selected": [
+          "pet_care_tool",
+          "smart_home_control"
+        ]
+      },
+      {
+        "idx": 5,
+        "ref": [
+          "account_login",
+          "account_logout",
+          "update_account_info"
+        ],
+        "selected": [
+          "account_login",
+          "update_account_info"
+        ]
+      },
+      {
+        "idx": 6,
+        "ref": [
+          "create_schedule",
+          "save_schedule",
+          "set_schedule_date_range",
+          "set_schedule_priority",
+          "set_schedule_repetition",
+          "set_schedule_tag"
+        ],
+        "selected": [
+          "create_schedule",
+          "set_schedule_priority",
+          "set_schedule_repetition",
+          "set_schedule_tag"
+        ]
+      },
+      {
+        "idx": 7,
+        "ref": [
+          "account_login",
+          "account_logout",
+          "balance_query"
+        ],
+        "selected": [
+          "account_login",
+          "balance_query"
+        ]
+      },
+      {
+        "idx": 8,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ],
+        "selected": [
+          "account_login",
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ]
+      },
+      {
+        "idx": 9,
+        "ref": [
+          "account_login",
+          "currency_conversion",
+          "exchange_rate_query",
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ],
+        "selected": [
+          "account_login",
+          "exchange_rate_query",
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ]
+      },
+      {
+        "idx": 10,
+        "ref": [
+          "assign_random_table",
+          "checkout_api",
+          "menu_select_api",
+          "merge_orders"
+        ],
+        "selected": [
+          "assign_random_table",
+          "checkout_api",
+          "menu_select_api",
+          "merge_orders"
+        ]
+      },
+      {
+        "idx": 11,
+        "ref": [
+          "confirm_payment_method",
+          "merge_orders",
+          "request_menu",
+          "submit_preorder",
+          "table_booking_api"
+        ],
+        "selected": [
+          "confirm_payment_method",
+          "merge_orders",
+          "submit_preorder",
+          "table_booking_api"
+        ]
+      },
+      {
+        "idx": 12,
+        "ref": [
+          "book_table",
+          "checkout_api",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 13,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "place_order",
+          "table_booking_api"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 14,
+        "ref": [
+          "checkout_api",
+          "get_contact_information",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 15,
+        "ref": [
+          "hotel_booking_modification",
+          "hotel_booking_query"
+        ],
+        "selected": [
+          "hotel_booking_modification"
+        ]
+      },
+      {
+        "idx": 16,
+        "ref": [
+          "identity_verification",
+          "seat_availability_check",
+          "ticket_info_query",
+          "train_ticket_changing"
+        ],
+        "selected": [
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 17,
+        "ref": [
+          "check_weather",
+          "purchase_travel_insurance",
+          "search_train",
+          "train_ticket_booking"
+        ],
+        "selected": [
+          "check_weather",
+          "purchase_travel_insurance",
+          "search_train"
+        ]
+      },
+      {
+        "idx": 18,
+        "ref": [
+          "appliance_repair_request",
+          "find_nearest_service_center",
+          "get_service_center_working_hours",
+          "select_nearest_working_day"
+        ],
+        "selected": [
+          "appliance_repair_request",
+          "select_nearest_working_day"
+        ]
+      },
+      {
+        "idx": 19,
+        "ref": [
+          "appliance_repair_request",
+          "find_authorized_service_provider",
+          "get_service_provider_contact",
+          "notify_user",
+          "select_nearest_service_provider"
+        ],
+        "selected": [
+          "appliance_repair_request"
+        ]
+      },
+      {
+        "idx": 20,
+        "ref": [
+          "medical_knowledge_search"
+        ],
+        "selected": [
+          "medical_knowledge_search"
+        ]
+      },
+      {
+        "idx": 21,
+        "ref": [
+          "check_file_deleted",
+          "file_delete",
+          "file_modify",
+          "ssh_connect",
+          "verify_file_content"
+        ],
+        "selected": [
+          "file_delete",
+          "file_modify"
+        ]
+      },
+      {
+        "idx": 22,
+        "ref": [
+          "calculate_population_sum",
+          "compare_population",
+          "population_info_search"
+        ],
+        "selected": [
+          "compare_population",
+          "population_info_search"
+        ]
+      },
+      {
+        "idx": 23,
+        "ref": [
+          "filter_cleaning_service",
+          "home_cleaning_booking",
+          "home_cleaning_cancelling",
+          "home_cleaning_query"
+        ],
+        "selected": [
+          "filter_cleaning_service",
+          "home_cleaning_booking",
+          "home_cleaning_cancelling"
+        ]
+      },
+      {
+        "idx": 24,
+        "ref": [
+          "home_cleaning_booking",
+          "home_cleaning_cancelling",
+          "home_cleaning_changing",
+          "home_cleaning_query",
+          "weather_query"
+        ],
+        "selected": [
+          "home_cleaning_booking",
+          "home_cleaning_cancelling",
+          "home_cleaning_changing",
+          "weather_query"
+        ]
+      },
+      {
+        "idx": 25,
+        "ref": [
+          "check_provider_reputation",
+          "confirm_cleaning_availability",
+          "filter_good_reputation_cleaners",
+          "home_cleaning_booking",
+          "home_cleaning_cancelling"
+        ],
+        "selected": [
+          "check_provider_reputation",
+          "filter_good_reputation_cleaners",
+          "home_cleaning_booking"
+        ]
+      },
+      {
+        "idx": 26,
+        "ref": [
+          "home_cleaning_booking",
+          "home_cleaning_changing",
+          "home_cleaning_query"
+        ],
+        "selected": [
+          "home_cleaning_booking",
+          "home_cleaning_changing"
+        ]
+      },
+      {
+        "idx": 27,
+        "ref": [
+          "agenda_sorting",
+          "check_room_availability",
+          "manage_schedule",
+          "schedule_sorter"
+        ],
+        "selected": [
+          "manage_schedule",
+          "schedule_sorter"
+        ]
+      },
+      {
+        "idx": 28,
+        "ref": [
+          "check_file_existence",
+          "file_delete",
+          "file_modify",
+          "ssh_connect"
+        ],
+        "selected": [
+          "file_delete",
+          "file_modify",
+          "ssh_connect"
+        ]
+      },
+      {
+        "idx": 29,
+        "ref": [
+          "file_modify",
+          "file_write"
+        ],
+        "selected": [
+          "file_write"
+        ]
+      },
+      {
+        "idx": 30,
+        "ref": [
+          "check_file_content",
+          "file_delete",
+          "file_modify",
+          "file_write"
+        ],
+        "selected": [
+          "file_delete",
+          "file_modify",
+          "file_write"
+        ]
+      },
+      {
+        "idx": 31,
+        "ref": [
+          "account_balance_query",
+          "account_login"
+        ],
+        "selected": [
+          "account_balance_query",
+          "account_login"
+        ]
+      },
+      {
+        "idx": 32,
+        "ref": [
+          "account_login",
+          "check_balance",
+          "foreign_currency_purchase",
+          "stock_query"
+        ],
+        "selected": [
+          "account_login",
+          "stock_query"
+        ]
+      },
+      {
+        "idx": 33,
+        "ref": [
+          "account_login",
+          "calculate_exchange_amount",
+          "foreign_currency_query",
+          "get_exchange_rate"
+        ],
+        "selected": [
+          "foreign_currency_query",
+          "get_exchange_rate"
+        ]
+      },
+      {
+        "idx": 34,
+        "ref": [
+          "account_login",
+          "account_logout",
+          "get_asset_overview",
+          "get_transaction_history"
+        ],
+        "selected": [
+          "get_asset_overview",
+          "get_transaction_history"
+        ]
+      },
+      {
+        "idx": 35,
+        "ref": [
+          "account_login",
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ],
+        "selected": [
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ]
+      },
+      {
+        "idx": 36,
+        "ref": [
+          "account_login",
+          "foreign_currency_purchase",
+          "foreign_currency_query",
+          "foreign_currency_sale"
+        ],
+        "selected": [
+          "account_login",
+          "foreign_currency_purchase",
+          "foreign_currency_sale",
+          "get_latest_exchange_rate"
+        ]
+      },
+      {
+        "idx": 37,
+        "ref": [
+          "account_login",
+          "credit_card_debt"
+        ],
+        "selected": [
+          "credit_card_debt"
+        ]
+      },
+      {
+        "idx": 38,
+        "ref": [
+          "account_login",
+          "balance_query",
+          "confirm_transfer",
+          "transfer_money"
+        ],
+        "selected": [
+          "account_login",
+          "balance_query"
+        ]
+      },
+      {
+        "idx": 39,
+        "ref": [
+          "account_login",
+          "transfer_all_to_main_account"
+        ],
+        "selected": [
+          "account_login",
+          "transfer_all_to_main_account"
+        ]
+      },
+      {
+        "idx": 40,
+        "ref": [
+          "account_balance_query",
+          "account_login"
+        ],
+        "selected": [
+          "account_balance_query"
+        ]
+      },
+      {
+        "idx": 41,
+        "ref": [
+          "deposit_product_selection",
+          "detailed_inquiry",
+          "loan_application",
+          "loan_application_time"
+        ],
+        "selected": [
+          "deposit_product_selection",
+          "loan_application",
+          "loan_application_time"
+        ]
+      },
+      {
+        "idx": 42,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "deposit_product_search"
+        ]
+      },
+      {
+        "idx": 43,
+        "ref": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction",
+          "modify_transaction"
+        ],
+        "selected": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction",
+          "modify_transaction"
+        ]
+      },
+      {
+        "idx": 44,
+        "ref": [
+          "currency_exchange_rate",
+          "foreign_currency_exchange"
+        ],
+        "selected": [
+          "currency_exchange_rate",
+          "foreign_currency_exchange"
+        ]
+      },
+      {
+        "idx": 45,
+        "ref": [
+          "account_login",
+          "credit_card_debt",
+          "credit_card_repayment"
+        ],
+        "selected": [
+          "credit_card_debt",
+          "credit_card_repayment"
+        ]
+      },
+      {
+        "idx": 46,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ]
+      },
+      {
+        "idx": 47,
+        "ref": [
+          "bank_balance_query",
+          "deposit_product_search",
+          "domestic_remittance",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "deposit_product_search",
+          "domestic_remittance",
+          "fixed_deposit_transaction"
+        ]
+      },
+      {
+        "idx": 48,
+        "ref": [
+          "customer_service",
+          "del_transaction",
+          "find_transaction",
+          "modify_transaction"
+        ],
+        "selected": [
+          "customer_service",
+          "del_transaction",
+          "find_transaction",
+          "modify_transaction"
+        ]
+      },
+      {
+        "idx": 49,
+        "ref": [
+          "contract_content_search",
+          "precious_metals_quotes_search"
+        ],
+        "selected": [
+          "contract_content_search",
+          "precious_metals_quotes_search"
+        ]
+      },
+      {
+        "idx": 50,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ]
+      },
+      {
+        "idx": 51,
+        "ref": [
+          "currency_conversion"
+        ],
+        "selected": [
+          "currency_conversion"
+        ]
+      },
+      {
+        "idx": 52,
+        "ref": [
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ]
+      },
+      {
+        "idx": 53,
+        "ref": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction"
+        ],
+        "selected": [
+          "create_transaction",
+          "del_transaction"
+        ]
+      },
+      {
+        "idx": 54,
+        "ref": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction",
+          "modify_transaction"
+        ],
+        "selected": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction",
+          "modify_transaction"
+        ]
+      },
+      {
+        "idx": 55,
+        "ref": [
+          "order_tracking"
+        ],
+        "selected": [
+          "order_tracking"
+        ]
+      },
+      {
+        "idx": 56,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "order_details_api"
+        ],
+        "selected": [
+          "menu_select_api",
+          "order_details_api"
+        ]
+      },
+      {
+        "idx": 57,
+        "ref": [
+          "restaurant_review",
+          "restaurant_review_analyzer",
+          "restaurant_review_tool"
+        ],
+        "selected": [
+          "restaurant_review",
+          "restaurant_review_analyzer",
+          "restaurant_review_tool"
+        ]
+      },
+      {
+        "idx": 58,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "table_booking_api"
+        ],
+        "selected": [
+          "checkout_api",
+          "menu_select_api",
+          "table_booking_api"
+        ]
+      },
+      {
+        "idx": 59,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 60,
+        "ref": [
+          "restaurant_review",
+          "restaurant_review_analyzer",
+          "restaurant_review_tool"
+        ],
+        "selected": [
+          "restaurant_review",
+          "restaurant_review_analyzer",
+          "restaurant_review_tool"
+        ]
+      },
+      {
+        "idx": 61,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 62,
+        "ref": [
+          "hotel_booking_modification",
+          "hotel_booking_query"
+        ],
+        "selected": [
+          "hotel_booking_modification"
+        ]
+      },
+      {
+        "idx": 63,
+        "ref": [
+          "check_room_availability",
+          "hotel_booking_modification",
+          "hotel_booking_query"
+        ],
+        "selected": [
+          "hotel_booking_modification"
+        ]
+      },
+      {
+        "idx": 64,
+        "ref": [
+          "check_room_availability",
+          "confirm_room_price_and_policy",
+          "hotel_booking_query",
+          "search_luxury_hotels"
+        ],
+        "selected": [
+          "check_room_availability",
+          "search_luxury_hotels"
+        ]
+      },
+      {
+        "idx": 65,
+        "ref": [
+          "clock_alarm_change",
+          "clock_alarm_set"
+        ],
+        "selected": [
+          "clock_alarm_set"
+        ]
+      },
+      {
+        "idx": 66,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_booking"
+        ]
+      },
+      {
+        "idx": 67,
+        "ref": [
+          "flight_search",
+          "flight_ticket_cancelling"
+        ],
+        "selected": [
+          "flight_search",
+          "flight_ticket_cancelling"
+        ]
+      },
+      {
+        "idx": 68,
+        "ref": [
+          "flight_search",
+          "flight_ticket_changing",
+          "send_ticket"
+        ],
+        "selected": [
+          "flight_ticket_changing"
+        ]
+      },
+      {
+        "idx": 69,
+        "ref": [
+          "search_train",
+          "train_ticket_booking"
+        ],
+        "selected": [
+          "search_train"
+        ]
+      },
+      {
+        "idx": 70,
+        "ref": [
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_changing",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "search_train",
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 71,
+        "ref": [
+          "search_train",
+          "train_ticket_changing",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 72,
+        "ref": [
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_cancelling",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "train_ticket_booking",
+          "train_ticket_cancelling"
+        ]
+      },
+      {
+        "idx": 73,
+        "ref": [
+          "query_past_ticket",
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_cancelling"
+        ],
+        "selected": [
+          "train_ticket_booking",
+          "train_ticket_cancelling"
+        ]
+      },
+      {
+        "idx": 74,
+        "ref": [
+          "train_ticket_changing",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 75,
+        "ref": [
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_cancelling",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "search_train",
+          "train_ticket_cancelling"
+        ]
+      },
+      {
+        "idx": 76,
+        "ref": [
+          "company_vehicle_service",
+          "outward_reception_approval",
+          "send_notifications"
+        ],
+        "selected": [
+          "company_vehicle_service",
+          "outward_reception_approval"
+        ]
+      },
+      {
+        "idx": 77,
+        "ref": [
+          "official_ticket_platform_search",
+          "scenic_spot_ticket_search"
+        ],
+        "selected": [
+          "official_ticket_platform_search",
+          "scenic_spot_ticket_search"
+        ]
+      },
+      {
+        "idx": 78,
+        "ref": [
+          "schedule_delivery",
+          "souvenir_purchase",
+          "souvenir_recommender",
+          "tourist_souvenir_creator"
+        ],
+        "selected": [
+          "schedule_delivery",
+          "souvenir_recommender",
+          "tourist_souvenir_creator"
+        ]
+      },
+      {
+        "idx": 79,
+        "ref": [
+          "company_vehicle_service",
+          "internal_purchase",
+          "outward_reception_approval",
+          "purchase_product"
+        ],
+        "selected": [
+          "company_vehicle_service",
+          "internal_purchase",
+          "outward_reception_approval"
+        ]
+      },
+      {
+        "idx": 80,
+        "ref": [
+          "business_travel_standard_search",
+          "submit_subsidy_application",
+          "train_ticket_booking"
+        ],
+        "selected": [
+          "submit_subsidy_application",
+          "train_ticket_booking"
+        ]
+      },
+      {
+        "idx": 81,
+        "ref": [
+          "travel_info_search",
+          "travel_route_search"
+        ],
+        "selected": [
+          "travel_info_search",
+          "travel_route_search"
+        ]
+      },
+      {
+        "idx": 82,
+        "ref": [
+          "purchase_missing_items",
+          "travel_backpack_checker",
+          "travel_backpack_generator",
+          "travel_backpack_inventory"
+        ],
+        "selected": [
+          "travel_backpack_checker",
+          "travel_backpack_generator"
+        ]
+      },
+      {
+        "idx": 83,
+        "ref": [
+          "car_rental_booking",
+          "car_rental_cancelling",
+          "car_rental_changing",
+          "car_rental_query"
+        ],
+        "selected": [
+          "car_rental_booking",
+          "car_rental_cancelling",
+          "car_rental_changing",
+          "car_rental_query"
+        ]
+      },
+      {
+        "idx": 84,
+        "ref": [
+          "theme_park_attractions_search",
+          "theme_park_info_search",
+          "theme_park_ticket_search"
+        ],
+        "selected": [
+          "theme_park_attractions_search",
+          "theme_park_info_search",
+          "theme_park_ticket_search"
+        ]
+      },
+      {
+        "idx": 85,
+        "ref": [
+          "special_vehicle_rental_service",
+          "special_weather_forecast_tool"
+        ],
+        "selected": [
+          "special_vehicle_rental_service",
+          "special_weather_forecast_tool"
+        ]
+      },
+      {
+        "idx": 86,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_booking"
+        ]
+      },
+      {
+        "idx": 87,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_query",
+          "create_virtual_meeting",
+          "send_meeting_notification"
+        ],
+        "selected": [
+          "conference_room_booking",
+          "create_virtual_meeting"
+        ]
+      },
+      {
+        "idx": 88,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_cancelling",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_booking",
+          "conference_room_cancelling"
+        ]
+      },
+      {
+        "idx": 89,
+        "ref": [
+          "check_meeting_room_availability",
+          "conference_room_booking",
+          "conference_room_cancelling",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_booking",
+          "conference_room_cancelling"
+        ]
+      },
+      {
+        "idx": 90,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_cancelling",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_cancelling",
+          "conference_room_query"
+        ]
+      },
+      {
+        "idx": 91,
+        "ref": [
+          "arrange_technical_staff",
+          "conference_room_booking",
+          "conference_room_query",
+          "send_meeting_invitations"
+        ],
+        "selected": [
+          "conference_room_booking"
+        ]
+      },
+      {
+        "idx": 92,
+        "ref": [
+          "assign_staff_to_meeting_room",
+          "book_and_pay_for_meeting_room",
+          "search_and_select_meeting_room",
+          "write_on_whiteboard"
+        ],
+        "selected": [
+          "book_and_pay_for_meeting_room",
+          "search_available_rooms",
+          "write_on_whiteboard"
+        ]
+      },
+      {
+        "idx": 93,
+        "ref": [
+          "add_periodic_event",
+          "contact_restaurant",
+          "order_flowers",
+          "schedule_flower_delivery"
+        ],
+        "selected": [
+          "add_periodic_event",
+          "contact_restaurant",
+          "order_flowers"
+        ]
+      },
+      {
+        "idx": 94,
+        "ref": [
+          "create_document_with_events",
+          "export_calendar",
+          "export_document_to_pdf"
+        ],
+        "selected": [
+          "create_document_with_events",
+          "export_document_to_pdf"
+        ]
+      },
+      {
+        "idx": 95,
+        "ref": [
+          "add_periodic_event",
+          "generate_unique_id"
+        ],
+        "selected": [
+          "add_periodic_event",
+          "generate_unique_id"
+        ]
+      },
+      {
+        "idx": 96,
+        "ref": [
+          "clock_alarm_change",
+          "clock_alarm_set"
+        ],
+        "selected": [
+          "clock_alarm_change",
+          "clock_alarm_set"
+        ]
+      },
+      {
+        "idx": 97,
+        "ref": [
+          "appliance_repair_request",
+          "check_service_provider_availability",
+          "confirm_repair_cost_and_payment",
+          "find_authorized_service_provider"
+        ],
+        "selected": [
+          "appliance_repair_request"
+        ]
+      },
+      {
+        "idx": 98,
+        "ref": [
+          "appliance_repair_request",
+          "appliance_repair_status_query",
+          "notify_user",
+          "set_reminder"
+        ],
+        "selected": [
+          "appliance_repair_request",
+          "appliance_repair_status_query"
+        ]
+      },
+      {
+        "idx": 99,
+        "ref": [
+          "appliance_repair_request",
+          "call_service_provider",
+          "check_service_provider_coverage",
+          "search_authorized_service_provider"
+        ],
+        "selected": [
+          "appliance_repair_request"
+        ]
+      }
+    ],
+    "20": [
+      {
+        "idx": 0,
+        "ref": [
+          "book_ticket",
+          "hotel_search",
+          "transportation_booking",
+          "travel_itinerary_planner"
+        ],
+        "selected": [
+          "hotel_search",
+          "travel_itinerary_planner"
+        ]
+      },
+      {
+        "idx": 1,
+        "ref": [
+          "checkout_api",
+          "get_dish_id",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 2,
+        "ref": [
+          "call_service_provider",
+          "confirm_available_appointment_times",
+          "ensure_appointment_confirmation",
+          "finalize_appointment_time",
+          "provide_repair_details",
+          "search_authorized_service_provider",
+          "select_nearest_service_provider"
+        ],
+        "selected": [
+          "confirm_available_appointment_times",
+          "provide_repair_details",
+          "search_authorized_service_provider"
+        ]
+      },
+      {
+        "idx": 3,
+        "ref": [
+          "labor_law_guide",
+          "legal_compliance_check",
+          "legal_regulation_search"
+        ],
+        "selected": [
+          "labor_law_guide",
+          "legal_compliance_check",
+          "legal_regulation_search"
+        ]
+      },
+      {
+        "idx": 4,
+        "ref": [
+          "pet_care_tool",
+          "search_information",
+          "set_reminder",
+          "smart_home_control"
+        ],
+        "selected": [
+          "pet_care_tool",
+          "smart_home_control"
+        ]
+      },
+      {
+        "idx": 5,
+        "ref": [
+          "account_login",
+          "account_logout",
+          "update_account_info"
+        ],
+        "selected": [
+          "account_login"
+        ]
+      },
+      {
+        "idx": 6,
+        "ref": [
+          "create_schedule",
+          "save_schedule",
+          "set_schedule_date_range",
+          "set_schedule_priority",
+          "set_schedule_repetition",
+          "set_schedule_tag"
+        ],
+        "selected": [
+          "create_schedule",
+          "set_schedule_priority"
+        ]
+      },
+      {
+        "idx": 7,
+        "ref": [
+          "account_login",
+          "account_logout",
+          "balance_query"
+        ],
+        "selected": [
+          "balance_query"
+        ]
+      },
+      {
+        "idx": 8,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ],
+        "selected": [
+          "account_login",
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ]
+      },
+      {
+        "idx": 9,
+        "ref": [
+          "account_login",
+          "currency_conversion",
+          "exchange_rate_query",
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ],
+        "selected": [
+          "account_login",
+          "exchange_rate_query",
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ]
+      },
+      {
+        "idx": 10,
+        "ref": [
+          "assign_random_table",
+          "checkout_api",
+          "menu_select_api",
+          "merge_orders"
+        ],
+        "selected": [
+          "assign_random_table",
+          "checkout_api",
+          "menu_select_api",
+          "merge_orders",
+          "restaurant_search_and_select_api"
+        ]
+      },
+      {
+        "idx": 11,
+        "ref": [
+          "confirm_payment_method",
+          "merge_orders",
+          "request_menu",
+          "submit_preorder",
+          "table_booking_api"
+        ],
+        "selected": [
+          "merge_orders",
+          "payment_processing",
+          "submit_preorder",
+          "table_booking_api"
+        ]
+      },
+      {
+        "idx": 12,
+        "ref": [
+          "book_table",
+          "checkout_api",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 13,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "place_order",
+          "table_booking_api"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 14,
+        "ref": [
+          "checkout_api",
+          "get_contact_information",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 15,
+        "ref": [
+          "hotel_booking_modification",
+          "hotel_booking_query"
+        ],
+        "selected": [
+          "hotel_booking_modification"
+        ]
+      },
+      {
+        "idx": 16,
+        "ref": [
+          "identity_verification",
+          "seat_availability_check",
+          "ticket_info_query",
+          "train_ticket_changing"
+        ],
+        "selected": [
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 17,
+        "ref": [
+          "check_weather",
+          "purchase_travel_insurance",
+          "search_train",
+          "train_ticket_booking"
+        ],
+        "selected": [
+          "check_weather",
+          "purchase_travel_insurance",
+          "search_train"
+        ]
+      },
+      {
+        "idx": 18,
+        "ref": [
+          "appliance_repair_request",
+          "find_nearest_service_center",
+          "get_service_center_working_hours",
+          "select_nearest_working_day"
+        ],
+        "selected": [
+          "appliance_repair_request",
+          "select_nearest_working_day"
+        ]
+      },
+      {
+        "idx": 19,
+        "ref": [
+          "appliance_repair_request",
+          "find_authorized_service_provider",
+          "get_service_provider_contact",
+          "notify_user",
+          "select_nearest_service_provider"
+        ],
+        "selected": [
+          "appliance_repair_request"
+        ]
+      },
+      {
+        "idx": 20,
+        "ref": [
+          "medical_knowledge_search"
+        ],
+        "selected": [
+          "medical_knowledge_search"
+        ]
+      },
+      {
+        "idx": 21,
+        "ref": [
+          "check_file_deleted",
+          "file_delete",
+          "file_modify",
+          "ssh_connect",
+          "verify_file_content"
+        ],
+        "selected": [
+          "file_delete",
+          "file_modify"
+        ]
+      },
+      {
+        "idx": 22,
+        "ref": [
+          "calculate_population_sum",
+          "compare_population",
+          "population_info_search"
+        ],
+        "selected": [
+          "compare_population",
+          "population_info_search"
+        ]
+      },
+      {
+        "idx": 23,
+        "ref": [
+          "filter_cleaning_service",
+          "home_cleaning_booking",
+          "home_cleaning_cancelling",
+          "home_cleaning_query"
+        ],
+        "selected": [
+          "filter_cleaning_service",
+          "home_cleaning_booking"
+        ]
+      },
+      {
+        "idx": 24,
+        "ref": [
+          "home_cleaning_booking",
+          "home_cleaning_cancelling",
+          "home_cleaning_changing",
+          "home_cleaning_query",
+          "weather_query"
+        ],
+        "selected": [
+          "home_cleaning_booking",
+          "home_cleaning_cancelling",
+          "weather_query"
+        ]
+      },
+      {
+        "idx": 25,
+        "ref": [
+          "check_provider_reputation",
+          "confirm_cleaning_availability",
+          "filter_good_reputation_cleaners",
+          "home_cleaning_booking",
+          "home_cleaning_cancelling"
+        ],
+        "selected": [
+          "check_provider_reputation",
+          "filter_good_reputation_cleaners",
+          "home_cleaning_booking"
+        ]
+      },
+      {
+        "idx": 26,
+        "ref": [
+          "home_cleaning_booking",
+          "home_cleaning_changing",
+          "home_cleaning_query"
+        ],
+        "selected": [
+          "home_cleaning_booking",
+          "home_cleaning_changing"
+        ]
+      },
+      {
+        "idx": 27,
+        "ref": [
+          "agenda_sorting",
+          "check_room_availability",
+          "manage_schedule",
+          "schedule_sorter"
+        ],
+        "selected": [
+          "agenda_sorting",
+          "manage_schedule"
+        ]
+      },
+      {
+        "idx": 28,
+        "ref": [
+          "check_file_existence",
+          "file_delete",
+          "file_modify",
+          "ssh_connect"
+        ],
+        "selected": [
+          "file_delete",
+          "file_modify"
+        ]
+      },
+      {
+        "idx": 29,
+        "ref": [
+          "file_modify",
+          "file_write"
+        ],
+        "selected": [
+          "file_write"
+        ]
+      },
+      {
+        "idx": 30,
+        "ref": [
+          "check_file_content",
+          "file_delete",
+          "file_modify",
+          "file_write"
+        ],
+        "selected": [
+          "file_delete",
+          "file_modify",
+          "file_write"
+        ]
+      },
+      {
+        "idx": 31,
+        "ref": [
+          "account_balance_query",
+          "account_login"
+        ],
+        "selected": [
+          "account_balance_query",
+          "account_login"
+        ]
+      },
+      {
+        "idx": 32,
+        "ref": [
+          "account_login",
+          "check_balance",
+          "foreign_currency_purchase",
+          "stock_query"
+        ],
+        "selected": [
+          "account_login",
+          "foreign_currency_purchase",
+          "stock_query"
+        ]
+      },
+      {
+        "idx": 33,
+        "ref": [
+          "account_login",
+          "calculate_exchange_amount",
+          "foreign_currency_query",
+          "get_exchange_rate"
+        ],
+        "selected": [
+          "foreign_currency_query",
+          "get_exchange_rate"
+        ]
+      },
+      {
+        "idx": 34,
+        "ref": [
+          "account_login",
+          "account_logout",
+          "get_asset_overview",
+          "get_transaction_history"
+        ],
+        "selected": [
+          "get_asset_overview",
+          "get_transaction_history"
+        ]
+      },
+      {
+        "idx": 35,
+        "ref": [
+          "account_login",
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ],
+        "selected": [
+          "foreign_currency_query",
+          "special_foreign_currency_purchase"
+        ]
+      },
+      {
+        "idx": 36,
+        "ref": [
+          "account_login",
+          "foreign_currency_purchase",
+          "foreign_currency_query",
+          "foreign_currency_sale"
+        ],
+        "selected": [
+          "account_login",
+          "foreign_currency_purchase",
+          "foreign_currency_sale"
+        ]
+      },
+      {
+        "idx": 37,
+        "ref": [
+          "account_login",
+          "credit_card_debt"
+        ],
+        "selected": [
+          "credit_card_debt"
+        ]
+      },
+      {
+        "idx": 38,
+        "ref": [
+          "account_login",
+          "balance_query",
+          "confirm_transfer",
+          "transfer_money"
+        ],
+        "selected": [
+          "account_login",
+          "balance_query"
+        ]
+      },
+      {
+        "idx": 39,
+        "ref": [
+          "account_login",
+          "transfer_all_to_main_account"
+        ],
+        "selected": [
+          "account_login",
+          "transfer_all_to_main_account"
+        ]
+      },
+      {
+        "idx": 40,
+        "ref": [
+          "account_balance_query",
+          "account_login"
+        ],
+        "selected": [
+          "account_balance_query"
+        ]
+      },
+      {
+        "idx": 41,
+        "ref": [
+          "deposit_product_selection",
+          "detailed_inquiry",
+          "loan_application",
+          "loan_application_time"
+        ],
+        "selected": [
+          "deposit_product_selection",
+          "loan_application",
+          "loan_application_time"
+        ]
+      },
+      {
+        "idx": 42,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ]
+      },
+      {
+        "idx": 43,
+        "ref": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction",
+          "modify_transaction"
+        ],
+        "selected": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction",
+          "modify_transaction"
+        ]
+      },
+      {
+        "idx": 44,
+        "ref": [
+          "currency_exchange_rate",
+          "foreign_currency_exchange"
+        ],
+        "selected": [
+          "currency_exchange_rate",
+          "foreign_currency_exchange"
+        ]
+      },
+      {
+        "idx": 45,
+        "ref": [
+          "account_login",
+          "credit_card_debt",
+          "credit_card_repayment"
+        ],
+        "selected": [
+          "credit_card_debt",
+          "credit_card_repayment"
+        ]
+      },
+      {
+        "idx": 46,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ]
+      },
+      {
+        "idx": 47,
+        "ref": [
+          "bank_balance_query",
+          "deposit_product_search",
+          "domestic_remittance",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "deposit_product_search",
+          "domestic_remittance",
+          "fixed_deposit_transaction"
+        ]
+      },
+      {
+        "idx": 48,
+        "ref": [
+          "customer_service",
+          "del_transaction",
+          "find_transaction",
+          "modify_transaction"
+        ],
+        "selected": [
+          "customer_service",
+          "del_transaction",
+          "find_transaction",
+          "modify_transaction"
+        ]
+      },
+      {
+        "idx": 49,
+        "ref": [
+          "contract_content_search",
+          "precious_metals_quotes_search"
+        ],
+        "selected": [
+          "contract_content_search",
+          "precious_metals_quotes_search"
+        ]
+      },
+      {
+        "idx": 50,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ]
+      },
+      {
+        "idx": 51,
+        "ref": [
+          "currency_conversion"
+        ],
+        "selected": [
+          "historical_currency_exchange_rate"
+        ]
+      },
+      {
+        "idx": 52,
+        "ref": [
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ]
+      },
+      {
+        "idx": 53,
+        "ref": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction"
+        ],
+        "selected": [
+          "create_transaction",
+          "del_transaction"
+        ]
+      },
+      {
+        "idx": 54,
+        "ref": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction",
+          "modify_transaction"
+        ],
+        "selected": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction",
+          "modify_transaction"
+        ]
+      },
+      {
+        "idx": 55,
+        "ref": [
+          "order_tracking"
+        ],
+        "selected": [
+          "order_tracking"
+        ]
+      },
+      {
+        "idx": 56,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "order_details_api"
+        ],
+        "selected": [
+          "menu_select_api",
+          "order_details_api"
+        ]
+      },
+      {
+        "idx": 57,
+        "ref": [
+          "restaurant_review",
+          "restaurant_review_analyzer",
+          "restaurant_review_tool"
+        ],
+        "selected": [
+          "restaurant_review",
+          "restaurant_review_analyzer"
+        ]
+      },
+      {
+        "idx": 58,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "table_booking_api"
+        ],
+        "selected": [
+          "checkout_api",
+          "get_dish_id",
+          "table_booking_api"
+        ]
+      },
+      {
+        "idx": 59,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 60,
+        "ref": [
+          "restaurant_review",
+          "restaurant_review_analyzer",
+          "restaurant_review_tool"
+        ],
+        "selected": [
+          "restaurant_review",
+          "restaurant_review_analyzer",
+          "restaurant_review_tool"
+        ]
+      },
+      {
+        "idx": 61,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 62,
+        "ref": [
+          "hotel_booking_modification",
+          "hotel_booking_query"
+        ],
+        "selected": [
+          "hotel_booking_modification"
+        ]
+      },
+      {
+        "idx": 63,
+        "ref": [
+          "check_room_availability",
+          "hotel_booking_modification",
+          "hotel_booking_query"
+        ],
+        "selected": [
+          "hotel_booking_modification"
+        ]
+      },
+      {
+        "idx": 64,
+        "ref": [
+          "check_room_availability",
+          "confirm_room_price_and_policy",
+          "hotel_booking_query",
+          "search_luxury_hotels"
+        ],
+        "selected": [
+          "check_room_availability",
+          "search_luxury_hotels"
+        ]
+      },
+      {
+        "idx": 65,
+        "ref": [
+          "clock_alarm_change",
+          "clock_alarm_set"
+        ],
+        "selected": [
+          "clock_alarm_set"
+        ]
+      },
+      {
+        "idx": 66,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_booking"
+        ]
+      },
+      {
+        "idx": 67,
+        "ref": [
+          "flight_search",
+          "flight_ticket_cancelling"
+        ],
+        "selected": [
+          "flight_search",
+          "flight_ticket_cancelling"
+        ]
+      },
+      {
+        "idx": 68,
+        "ref": [
+          "flight_search",
+          "flight_ticket_changing",
+          "send_ticket"
+        ],
+        "selected": [
+          "flight_ticket_changing"
+        ]
+      },
+      {
+        "idx": 69,
+        "ref": [
+          "search_train",
+          "train_ticket_booking"
+        ],
+        "selected": [
+          "search_train"
+        ]
+      },
+      {
+        "idx": 70,
+        "ref": [
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_changing",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "search_train",
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 71,
+        "ref": [
+          "search_train",
+          "train_ticket_changing",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 72,
+        "ref": [
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_cancelling",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "train_ticket_booking",
+          "train_ticket_cancelling"
+        ]
+      },
+      {
+        "idx": 73,
+        "ref": [
+          "query_past_ticket",
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_cancelling"
+        ],
+        "selected": [
+          "train_ticket_booking",
+          "train_ticket_cancelling"
+        ]
+      },
+      {
+        "idx": 74,
+        "ref": [
+          "train_ticket_changing",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 75,
+        "ref": [
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_cancelling",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "train_ticket_booking",
+          "train_ticket_cancelling"
+        ]
+      },
+      {
+        "idx": 76,
+        "ref": [
+          "company_vehicle_service",
+          "outward_reception_approval",
+          "send_notifications"
+        ],
+        "selected": [
+          "company_vehicle_service",
+          "outward_reception_approval"
+        ]
+      },
+      {
+        "idx": 77,
+        "ref": [
+          "official_ticket_platform_search",
+          "scenic_spot_ticket_search"
+        ],
+        "selected": [
+          "official_ticket_platform_search",
+          "scenic_spot_ticket_search"
+        ]
+      },
+      {
+        "idx": 78,
+        "ref": [
+          "schedule_delivery",
+          "souvenir_purchase",
+          "souvenir_recommender",
+          "tourist_souvenir_creator"
+        ],
+        "selected": [
+          "get_jd_price",
+          "souvenir_purchase",
+          "tourist_souvenir_creator"
+        ]
+      },
+      {
+        "idx": 79,
+        "ref": [
+          "company_vehicle_service",
+          "internal_purchase",
+          "outward_reception_approval",
+          "purchase_product"
+        ],
+        "selected": [
+          "company_vehicle_service",
+          "internal_purchase",
+          "outward_reception_approval"
+        ]
+      },
+      {
+        "idx": 80,
+        "ref": [
+          "business_travel_standard_search",
+          "submit_subsidy_application",
+          "train_ticket_booking"
+        ],
+        "selected": [
+          "select_business_hotel",
+          "submit_subsidy_application",
+          "train_ticket_booking"
+        ]
+      },
+      {
+        "idx": 81,
+        "ref": [
+          "travel_info_search",
+          "travel_route_search"
+        ],
+        "selected": [
+          "hotel_selection_and_verification",
+          "travel_info_search",
+          "travel_route_search"
+        ]
+      },
+      {
+        "idx": 82,
+        "ref": [
+          "purchase_missing_items",
+          "travel_backpack_checker",
+          "travel_backpack_generator",
+          "travel_backpack_inventory"
+        ],
+        "selected": [
+          "travel_backpack_checker",
+          "travel_backpack_generator"
+        ]
+      },
+      {
+        "idx": 83,
+        "ref": [
+          "car_rental_booking",
+          "car_rental_cancelling",
+          "car_rental_changing",
+          "car_rental_query"
+        ],
+        "selected": [
+          "car_rental_booking",
+          "car_rental_cancelling",
+          "car_rental_changing"
+        ]
+      },
+      {
+        "idx": 84,
+        "ref": [
+          "theme_park_attractions_search",
+          "theme_park_info_search",
+          "theme_park_ticket_search"
+        ],
+        "selected": [
+          "theme_park_attractions_search",
+          "theme_park_info_search",
+          "theme_park_ticket_search"
+        ]
+      },
+      {
+        "idx": 85,
+        "ref": [
+          "special_vehicle_rental_service",
+          "special_weather_forecast_tool"
+        ],
+        "selected": [
+          "special_vehicle_rental_service",
+          "special_weather_forecast_tool"
+        ]
+      },
+      {
+        "idx": 86,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_booking"
+        ]
+      },
+      {
+        "idx": 87,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_query",
+          "create_virtual_meeting",
+          "send_meeting_notification"
+        ],
+        "selected": [
+          "conference_room_booking",
+          "create_virtual_meeting"
+        ]
+      },
+      {
+        "idx": 88,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_cancelling",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_booking",
+          "conference_room_cancelling"
+        ]
+      },
+      {
+        "idx": 89,
+        "ref": [
+          "check_meeting_room_availability",
+          "conference_room_booking",
+          "conference_room_cancelling",
+          "conference_room_query"
+        ],
+        "selected": [
+          "check_meeting_room_availability",
+          "conference_room_booking",
+          "conference_room_cancelling"
+        ]
+      },
+      {
+        "idx": 90,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_cancelling",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_cancelling",
+          "conference_room_query"
+        ]
+      },
+      {
+        "idx": 91,
+        "ref": [
+          "arrange_technical_staff",
+          "conference_room_booking",
+          "conference_room_query",
+          "send_meeting_invitations"
+        ],
+        "selected": [
+          "conference_room_booking"
+        ]
+      },
+      {
+        "idx": 92,
+        "ref": [
+          "assign_staff_to_meeting_room",
+          "book_and_pay_for_meeting_room",
+          "search_and_select_meeting_room",
+          "write_on_whiteboard"
+        ],
+        "selected": [
+          "search_and_select_meeting_room",
+          "write_on_whiteboard"
+        ]
+      },
+      {
+        "idx": 93,
+        "ref": [
+          "add_periodic_event",
+          "contact_restaurant",
+          "order_flowers",
+          "schedule_flower_delivery"
+        ],
+        "selected": [
+          "contact_restaurant",
+          "order_flowers",
+          "repeat_event_scheduler"
+        ]
+      },
+      {
+        "idx": 94,
+        "ref": [
+          "create_document_with_events",
+          "export_calendar",
+          "export_document_to_pdf"
+        ],
+        "selected": [
+          "create_document_with_events",
+          "export_document_to_pdf"
+        ]
+      },
+      {
+        "idx": 95,
+        "ref": [
+          "add_periodic_event",
+          "generate_unique_id"
+        ],
+        "selected": [
+          "add_periodic_event",
+          "generate_unique_id"
+        ]
+      },
+      {
+        "idx": 96,
+        "ref": [
+          "clock_alarm_change",
+          "clock_alarm_set"
+        ],
+        "selected": [
+          "clock_alarm_change",
+          "clock_alarm_set",
+          "set_single_reminder"
+        ]
+      },
+      {
+        "idx": 97,
+        "ref": [
+          "appliance_repair_request",
+          "check_service_provider_availability",
+          "confirm_repair_cost_and_payment",
+          "find_authorized_service_provider"
+        ],
+        "selected": [
+          "appliance_repair_request"
+        ]
+      },
+      {
+        "idx": 98,
+        "ref": [
+          "appliance_repair_request",
+          "appliance_repair_status_query",
+          "notify_user",
+          "set_reminder"
+        ],
+        "selected": [
+          "appliance_repair_request",
+          "appliance_repair_status_query"
+        ]
+      },
+      {
+        "idx": 99,
+        "ref": [
+          "appliance_repair_request",
+          "call_service_provider",
+          "check_service_provider_coverage",
+          "search_authorized_service_provider"
+        ],
+        "selected": [
+          "appliance_repair_request"
+        ]
+      }
+    ],
+    "30": [
+      {
+        "idx": 0,
+        "ref": [
+          "book_ticket",
+          "hotel_search",
+          "transportation_booking",
+          "travel_itinerary_planner"
+        ],
+        "selected": [
+          "hotel_search",
+          "travel_itinerary_planner"
+        ]
+      },
+      {
+        "idx": 1,
+        "ref": [
+          "checkout_api",
+          "get_dish_id",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 2,
+        "ref": [
+          "call_service_provider",
+          "confirm_available_appointment_times",
+          "ensure_appointment_confirmation",
+          "finalize_appointment_time",
+          "provide_repair_details",
+          "search_authorized_service_provider",
+          "select_nearest_service_provider"
+        ],
+        "selected": [
+          "confirm_technician_availability",
+          "provide_repair_details",
+          "search_authorized_service_provider"
+        ]
+      },
+      {
+        "idx": 3,
+        "ref": [
+          "labor_law_guide",
+          "legal_compliance_check",
+          "legal_regulation_search"
+        ],
+        "selected": [
+          "labor_law_guide",
+          "legal_compliance_check",
+          "legal_regulation_search"
+        ]
+      },
+      {
+        "idx": 4,
+        "ref": [
+          "pet_care_tool",
+          "search_information",
+          "set_reminder",
+          "smart_home_control"
+        ],
+        "selected": [
+          "pet_care_tool",
+          "smart_home_control"
+        ]
+      },
+      {
+        "idx": 5,
+        "ref": [
+          "account_login",
+          "account_logout",
+          "update_account_info"
+        ],
+        "selected": [
+          "account_login"
+        ]
+      },
+      {
+        "idx": 6,
+        "ref": [
+          "create_schedule",
+          "save_schedule",
+          "set_schedule_date_range",
+          "set_schedule_priority",
+          "set_schedule_repetition",
+          "set_schedule_tag"
+        ],
+        "selected": [
+          "set_schedule_date_range",
+          "set_schedule_priority",
+          "set_schedule_repetition",
+          "set_schedule_tag"
+        ]
+      },
+      {
+        "idx": 7,
+        "ref": [
+          "account_login",
+          "account_logout",
+          "balance_query"
+        ],
+        "selected": [
+          "balance_query"
+        ]
+      },
+      {
+        "idx": 8,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ],
+        "selected": [
+          "account_login",
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ]
+      },
+      {
+        "idx": 9,
+        "ref": [
+          "account_login",
+          "currency_conversion",
+          "exchange_rate_query",
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ],
+        "selected": [
+          "account_login",
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ]
+      },
+      {
+        "idx": 10,
+        "ref": [
+          "assign_random_table",
+          "checkout_api",
+          "menu_select_api",
+          "merge_orders"
+        ],
+        "selected": [
+          "assign_random_table",
+          "checkout_api",
+          "menu_select_api",
+          "merge_orders"
+        ]
+      },
+      {
+        "idx": 11,
+        "ref": [
+          "confirm_payment_method",
+          "merge_orders",
+          "request_menu",
+          "submit_preorder",
+          "table_booking_api"
+        ],
+        "selected": [
+          "confirm_payment_method",
+          "merge_orders",
+          "submit_preorder",
+          "table_booking_api"
+        ]
+      },
+      {
+        "idx": 12,
+        "ref": [
+          "book_table",
+          "checkout_api",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 13,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "place_order",
+          "table_booking_api"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 14,
+        "ref": [
+          "checkout_api",
+          "get_contact_information",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 15,
+        "ref": [
+          "hotel_booking_modification",
+          "hotel_booking_query"
+        ],
+        "selected": [
+          "hotel_booking_modification"
+        ]
+      },
+      {
+        "idx": 16,
+        "ref": [
+          "identity_verification",
+          "seat_availability_check",
+          "ticket_info_query",
+          "train_ticket_changing"
+        ],
+        "selected": [
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 17,
+        "ref": [
+          "check_weather",
+          "purchase_travel_insurance",
+          "search_train",
+          "train_ticket_booking"
+        ],
+        "selected": [
+          "check_weather",
+          "purchase_travel_insurance",
+          "search_train"
+        ]
+      },
+      {
+        "idx": 18,
+        "ref": [
+          "appliance_repair_request",
+          "find_nearest_service_center",
+          "get_service_center_working_hours",
+          "select_nearest_working_day"
+        ],
+        "selected": [
+          "appliance_repair_request",
+          "select_nearest_working_day"
+        ]
+      },
+      {
+        "idx": 19,
+        "ref": [
+          "appliance_repair_request",
+          "find_authorized_service_provider",
+          "get_service_provider_contact",
+          "notify_user",
+          "select_nearest_service_provider"
+        ],
+        "selected": [
+          "appliance_repair_request",
+          "find_authorized_service_provider"
+        ]
+      },
+      {
+        "idx": 20,
+        "ref": [
+          "medical_knowledge_search"
+        ],
+        "selected": [
+          "medical_knowledge_search"
+        ]
+      },
+      {
+        "idx": 21,
+        "ref": [
+          "check_file_deleted",
+          "file_delete",
+          "file_modify",
+          "ssh_connect",
+          "verify_file_content"
+        ],
+        "selected": [
+          "file_delete",
+          "file_modify"
+        ]
+      },
+      {
+        "idx": 22,
+        "ref": [
+          "calculate_population_sum",
+          "compare_population",
+          "population_info_search"
+        ],
+        "selected": [
+          "calculate_population_sum",
+          "population_info_search"
+        ]
+      },
+      {
+        "idx": 23,
+        "ref": [
+          "filter_cleaning_service",
+          "home_cleaning_booking",
+          "home_cleaning_cancelling",
+          "home_cleaning_query"
+        ],
+        "selected": [
+          "filter_cleaning_service",
+          "home_cleaning_booking",
+          "home_cleaning_cancelling"
+        ]
+      },
+      {
+        "idx": 24,
+        "ref": [
+          "home_cleaning_booking",
+          "home_cleaning_cancelling",
+          "home_cleaning_changing",
+          "home_cleaning_query",
+          "weather_query"
+        ],
+        "selected": [
+          "home_cleaning_booking",
+          "home_cleaning_cancelling",
+          "home_cleaning_query"
+        ]
+      },
+      {
+        "idx": 25,
+        "ref": [
+          "check_provider_reputation",
+          "confirm_cleaning_availability",
+          "filter_good_reputation_cleaners",
+          "home_cleaning_booking",
+          "home_cleaning_cancelling"
+        ],
+        "selected": [
+          "check_provider_reputation",
+          "filter_good_reputation_cleaners",
+          "home_cleaning_booking",
+          "home_cleaning_cancelling"
+        ]
+      },
+      {
+        "idx": 26,
+        "ref": [
+          "home_cleaning_booking",
+          "home_cleaning_changing",
+          "home_cleaning_query"
+        ],
+        "selected": [
+          "home_cleaning_booking",
+          "home_cleaning_changing"
+        ]
+      },
+      {
+        "idx": 27,
+        "ref": [
+          "agenda_sorting",
+          "check_room_availability",
+          "manage_schedule",
+          "schedule_sorter"
+        ],
+        "selected": [
+          "manage_schedule",
+          "schedule_sorter"
+        ]
+      },
+      {
+        "idx": 28,
+        "ref": [
+          "check_file_existence",
+          "file_delete",
+          "file_modify",
+          "ssh_connect"
+        ],
+        "selected": [
+          "file_delete",
+          "file_modify"
+        ]
+      },
+      {
+        "idx": 29,
+        "ref": [
+          "file_modify",
+          "file_write"
+        ],
+        "selected": [
+          "file_write"
+        ]
+      },
+      {
+        "idx": 30,
+        "ref": [
+          "check_file_content",
+          "file_delete",
+          "file_modify",
+          "file_write"
+        ],
+        "selected": [
+          "file_delete",
+          "file_modify",
+          "file_write"
+        ]
+      },
+      {
+        "idx": 31,
+        "ref": [
+          "account_balance_query",
+          "account_login"
+        ],
+        "selected": [
+          "account_balance_query",
+          "account_login"
+        ]
+      },
+      {
+        "idx": 32,
+        "ref": [
+          "account_login",
+          "check_balance",
+          "foreign_currency_purchase",
+          "stock_query"
+        ],
+        "selected": [
+          "foreign_currency_purchase",
+          "stock_query"
+        ]
+      },
+      {
+        "idx": 33,
+        "ref": [
+          "account_login",
+          "calculate_exchange_amount",
+          "foreign_currency_query",
+          "get_exchange_rate"
+        ],
+        "selected": [
+          "calculate_exchange_amount",
+          "foreign_currency_query",
+          "get_exchange_rate"
+        ]
+      },
+      {
+        "idx": 34,
+        "ref": [
+          "account_login",
+          "account_logout",
+          "get_asset_overview",
+          "get_transaction_history"
+        ],
+        "selected": [
+          "account_login",
+          "get_asset_overview",
+          "get_transaction_history"
+        ]
+      },
+      {
+        "idx": 35,
+        "ref": [
+          "account_login",
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ],
+        "selected": [
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ]
+      },
+      {
+        "idx": 36,
+        "ref": [
+          "account_login",
+          "foreign_currency_purchase",
+          "foreign_currency_query",
+          "foreign_currency_sale"
+        ],
+        "selected": [
+          "foreign_currency_purchase",
+          "foreign_currency_sale"
+        ]
+      },
+      {
+        "idx": 37,
+        "ref": [
+          "account_login",
+          "credit_card_debt"
+        ],
+        "selected": [
+          "credit_card_debt"
+        ]
+      },
+      {
+        "idx": 38,
+        "ref": [
+          "account_login",
+          "balance_query",
+          "confirm_transfer",
+          "transfer_money"
+        ],
+        "selected": [
+          "balance_query",
+          "transfer_money"
+        ]
+      },
+      {
+        "idx": 39,
+        "ref": [
+          "account_login",
+          "transfer_all_to_main_account"
+        ],
+        "selected": [
+          "check_balance",
+          "transfer_all_to_main_account"
+        ]
+      },
+      {
+        "idx": 40,
+        "ref": [
+          "account_balance_query",
+          "account_login"
+        ],
+        "selected": [
+          "account_balance_query"
+        ]
+      },
+      {
+        "idx": 41,
+        "ref": [
+          "deposit_product_selection",
+          "detailed_inquiry",
+          "loan_application",
+          "loan_application_time"
+        ],
+        "selected": [
+          "deposit_product_selection",
+          "loan_application",
+          "loan_application_time",
+          "order_status_query"
+        ]
+      },
+      {
+        "idx": 42,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ]
+      },
+      {
+        "idx": 43,
+        "ref": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction",
+          "modify_transaction"
+        ],
+        "selected": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction",
+          "modify_transaction"
+        ]
+      },
+      {
+        "idx": 44,
+        "ref": [
+          "currency_exchange_rate",
+          "foreign_currency_exchange"
+        ],
+        "selected": [
+          "currency_exchange_rate",
+          "foreign_currency_exchange"
+        ]
+      },
+      {
+        "idx": 45,
+        "ref": [
+          "account_login",
+          "credit_card_debt",
+          "credit_card_repayment"
+        ],
+        "selected": [
+          "credit_card_debt",
+          "credit_card_payment_history",
+          "credit_card_repayment"
+        ]
+      },
+      {
+        "idx": 46,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ]
+      },
+      {
+        "idx": 47,
+        "ref": [
+          "bank_balance_query",
+          "deposit_product_search",
+          "domestic_remittance",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "deposit_product_search",
+          "domestic_remittance",
+          "fixed_deposit_transaction"
+        ]
+      },
+      {
+        "idx": 48,
+        "ref": [
+          "customer_service",
+          "del_transaction",
+          "find_transaction",
+          "modify_transaction"
+        ],
+        "selected": [
+          "customer_service",
+          "del_transaction",
+          "find_transaction",
+          "modify_transaction"
+        ]
+      },
+      {
+        "idx": 49,
+        "ref": [
+          "contract_content_search",
+          "precious_metals_quotes_search"
+        ],
+        "selected": [
+          "precious_metals_quotes_search"
+        ]
+      },
+      {
+        "idx": 50,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ]
+      },
+      {
+        "idx": 51,
+        "ref": [
+          "currency_conversion"
+        ],
+        "selected": [
+          "exchange_rate_query"
+        ]
+      },
+      {
+        "idx": 52,
+        "ref": [
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ]
+      },
+      {
+        "idx": 53,
+        "ref": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction"
+        ],
+        "selected": [
+          "create_transaction",
+          "del_transaction"
+        ]
+      },
+      {
+        "idx": 54,
+        "ref": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction",
+          "modify_transaction"
+        ],
+        "selected": [
+          "create_transaction",
+          "del_transaction",
+          "modify_transaction",
+          "set_task_reminder"
+        ]
+      },
+      {
+        "idx": 55,
+        "ref": [
+          "order_tracking"
+        ],
+        "selected": [
+          "order_tracking"
+        ]
+      },
+      {
+        "idx": 56,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "order_details_api"
+        ],
+        "selected": [
+          "menu_select_api",
+          "order_details_api"
+        ]
+      },
+      {
+        "idx": 57,
+        "ref": [
+          "restaurant_review",
+          "restaurant_review_analyzer",
+          "restaurant_review_tool"
+        ],
+        "selected": [
+          "restaurant_review",
+          "restaurant_review_analyzer"
+        ]
+      },
+      {
+        "idx": 58,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "table_booking_api"
+        ],
+        "selected": [
+          "checkout_api",
+          "table_booking_api"
+        ]
+      },
+      {
+        "idx": 59,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 60,
+        "ref": [
+          "restaurant_review",
+          "restaurant_review_analyzer",
+          "restaurant_review_tool"
+        ],
+        "selected": [
+          "restaurant_review",
+          "restaurant_review_analyzer",
+          "restaurant_review_tool"
+        ]
+      },
+      {
+        "idx": 61,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 62,
+        "ref": [
+          "hotel_booking_modification",
+          "hotel_booking_query"
+        ],
+        "selected": [
+          "hotel_booking_modification"
+        ]
+      },
+      {
+        "idx": 63,
+        "ref": [
+          "check_room_availability",
+          "hotel_booking_modification",
+          "hotel_booking_query"
+        ],
+        "selected": [
+          "hotel_booking_modification"
+        ]
+      },
+      {
+        "idx": 64,
+        "ref": [
+          "check_room_availability",
+          "confirm_room_price_and_policy",
+          "hotel_booking_query",
+          "search_luxury_hotels"
+        ],
+        "selected": [
+          "check_room_availability",
+          "search_luxury_hotels"
+        ]
+      },
+      {
+        "idx": 65,
+        "ref": [
+          "clock_alarm_change",
+          "clock_alarm_set"
+        ],
+        "selected": [
+          "clock_alarm_set"
+        ]
+      },
+      {
+        "idx": 66,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_booking"
+        ]
+      },
+      {
+        "idx": 67,
+        "ref": [
+          "flight_search",
+          "flight_ticket_cancelling"
+        ],
+        "selected": [
+          "airline_policy_query",
+          "flight_search",
+          "flight_ticket_cancelling"
+        ]
+      },
+      {
+        "idx": 68,
+        "ref": [
+          "flight_search",
+          "flight_ticket_changing",
+          "send_ticket"
+        ],
+        "selected": [
+          "flight_ticket_changing"
+        ]
+      },
+      {
+        "idx": 69,
+        "ref": [
+          "search_train",
+          "train_ticket_booking"
+        ],
+        "selected": [
+          "train_ticket_booking"
+        ]
+      },
+      {
+        "idx": 70,
+        "ref": [
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_changing",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "train_ticket_booking",
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 71,
+        "ref": [
+          "search_train",
+          "train_ticket_changing",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 72,
+        "ref": [
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_cancelling",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "train_ticket_booking",
+          "train_ticket_cancelling"
+        ]
+      },
+      {
+        "idx": 73,
+        "ref": [
+          "query_past_ticket",
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_cancelling"
+        ],
+        "selected": [
+          "train_ticket_booking",
+          "train_ticket_cancelling"
+        ]
+      },
+      {
+        "idx": 74,
+        "ref": [
+          "train_ticket_changing",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 75,
+        "ref": [
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_cancelling",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "search_train",
+          "train_ticket_cancelling"
+        ]
+      },
+      {
+        "idx": 76,
+        "ref": [
+          "company_vehicle_service",
+          "outward_reception_approval",
+          "send_notifications"
+        ],
+        "selected": [
+          "company_vehicle_service",
+          "outward_reception_approval"
+        ]
+      },
+      {
+        "idx": 77,
+        "ref": [
+          "official_ticket_platform_search",
+          "scenic_spot_ticket_search"
+        ],
+        "selected": [
+          "official_ticket_platform_search",
+          "scenic_spot_ticket_search"
+        ]
+      },
+      {
+        "idx": 78,
+        "ref": [
+          "schedule_delivery",
+          "souvenir_purchase",
+          "souvenir_recommender",
+          "tourist_souvenir_creator"
+        ],
+        "selected": [
+          "schedule_delivery",
+          "souvenir_recommender",
+          "tourist_souvenir_creator"
+        ]
+      },
+      {
+        "idx": 79,
+        "ref": [
+          "company_vehicle_service",
+          "internal_purchase",
+          "outward_reception_approval",
+          "purchase_product"
+        ],
+        "selected": [
+          "company_vehicle_service",
+          "internal_purchase",
+          "outward_reception_approval"
+        ]
+      },
+      {
+        "idx": 80,
+        "ref": [
+          "business_travel_standard_search",
+          "submit_subsidy_application",
+          "train_ticket_booking"
+        ],
+        "selected": [
+          "book_specific_train",
+          "filter_hotels_by_date",
+          "submit_subsidy_application"
+        ]
+      },
+      {
+        "idx": 81,
+        "ref": [
+          "travel_info_search",
+          "travel_route_search"
+        ],
+        "selected": [
+          "travel_info_search",
+          "travel_route_search"
+        ]
+      },
+      {
+        "idx": 82,
+        "ref": [
+          "purchase_missing_items",
+          "travel_backpack_checker",
+          "travel_backpack_generator",
+          "travel_backpack_inventory"
+        ],
+        "selected": [
+          "travel_backpack_generator"
+        ]
+      },
+      {
+        "idx": 83,
+        "ref": [
+          "car_rental_booking",
+          "car_rental_cancelling",
+          "car_rental_changing",
+          "car_rental_query"
+        ],
+        "selected": [
+          "car_rental_booking",
+          "car_rental_cancelling",
+          "car_rental_changing",
+          "car_rental_query"
+        ]
+      },
+      {
+        "idx": 84,
+        "ref": [
+          "theme_park_attractions_search",
+          "theme_park_info_search",
+          "theme_park_ticket_search"
+        ],
+        "selected": [
+          "theme_park_attractions_search",
+          "theme_park_info_search",
+          "theme_park_ticket_search"
+        ]
+      },
+      {
+        "idx": 85,
+        "ref": [
+          "special_vehicle_rental_service",
+          "special_weather_forecast_tool"
+        ],
+        "selected": [
+          "special_vehicle_rental_service",
+          "special_weather_forecast_tool"
+        ]
+      },
+      {
+        "idx": 86,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_booking"
+        ]
+      },
+      {
+        "idx": 87,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_query",
+          "create_virtual_meeting",
+          "send_meeting_notification"
+        ],
+        "selected": [
+          "conference_room_query",
+          "create_virtual_meeting"
+        ]
+      },
+      {
+        "idx": 88,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_cancelling",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_booking",
+          "conference_room_cancelling"
+        ]
+      },
+      {
+        "idx": 89,
+        "ref": [
+          "check_meeting_room_availability",
+          "conference_room_booking",
+          "conference_room_cancelling",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_booking",
+          "conference_room_cancelling"
+        ]
+      },
+      {
+        "idx": 90,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_cancelling",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_cancelling",
+          "conference_room_query"
+        ]
+      },
+      {
+        "idx": 91,
+        "ref": [
+          "arrange_technical_staff",
+          "conference_room_booking",
+          "conference_room_query",
+          "send_meeting_invitations"
+        ],
+        "selected": [
+          "conference_room_booking"
+        ]
+      },
+      {
+        "idx": 92,
+        "ref": [
+          "assign_staff_to_meeting_room",
+          "book_and_pay_for_meeting_room",
+          "search_and_select_meeting_room",
+          "write_on_whiteboard"
+        ],
+        "selected": [
+          "search_and_select_meeting_room",
+          "write_on_whiteboard"
+        ]
+      },
+      {
+        "idx": 93,
+        "ref": [
+          "add_periodic_event",
+          "contact_restaurant",
+          "order_flowers",
+          "schedule_flower_delivery"
+        ],
+        "selected": [
+          "add_periodic_event",
+          "contact_restaurant",
+          "order_flowers"
+        ]
+      },
+      {
+        "idx": 94,
+        "ref": [
+          "create_document_with_events",
+          "export_calendar",
+          "export_document_to_pdf"
+        ],
+        "selected": [
+          "create_document_with_events",
+          "export_document_to_pdf"
+        ]
+      },
+      {
+        "idx": 95,
+        "ref": [
+          "add_periodic_event",
+          "generate_unique_id"
+        ],
+        "selected": [
+          "add_periodic_event",
+          "generate_unique_id"
+        ]
+      },
+      {
+        "idx": 96,
+        "ref": [
+          "clock_alarm_change",
+          "clock_alarm_set"
+        ],
+        "selected": [
+          "clock_alarm_change",
+          "set_single_alarm"
+        ]
+      },
+      {
+        "idx": 97,
+        "ref": [
+          "appliance_repair_request",
+          "check_service_provider_availability",
+          "confirm_repair_cost_and_payment",
+          "find_authorized_service_provider"
+        ],
+        "selected": [
+          "appliance_repair_request"
+        ]
+      },
+      {
+        "idx": 98,
+        "ref": [
+          "appliance_repair_request",
+          "appliance_repair_status_query",
+          "notify_user",
+          "set_reminder"
+        ],
+        "selected": [
+          "appliance_repair_request",
+          "appliance_repair_status_query"
+        ]
+      },
+      {
+        "idx": 99,
+        "ref": [
+          "appliance_repair_request",
+          "call_service_provider",
+          "check_service_provider_coverage",
+          "search_authorized_service_provider"
+        ],
+        "selected": [
+          "appliance_repair_request",
+          "search_repair_technician"
+        ]
+      }
+    ],
+    "40": [
+      {
+        "idx": 0,
+        "ref": [
+          "book_ticket",
+          "hotel_search",
+          "transportation_booking",
+          "travel_itinerary_planner"
+        ],
+        "selected": [
+          "hotel_search",
+          "travel_itinerary_planner"
+        ]
+      },
+      {
+        "idx": 1,
+        "ref": [
+          "checkout_api",
+          "get_dish_id",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 2,
+        "ref": [
+          "call_service_provider",
+          "confirm_available_appointment_times",
+          "ensure_appointment_confirmation",
+          "finalize_appointment_time",
+          "provide_repair_details",
+          "search_authorized_service_provider",
+          "select_nearest_service_provider"
+        ],
+        "selected": [
+          "finalize_appointment_time",
+          "provide_repair_details",
+          "search_authorized_service_provider"
+        ]
+      },
+      {
+        "idx": 3,
+        "ref": [
+          "labor_law_guide",
+          "legal_compliance_check",
+          "legal_regulation_search"
+        ],
+        "selected": [
+          "labor_law_guide",
+          "law_reference_tool",
+          "legal_compliance_check"
+        ]
+      },
+      {
+        "idx": 4,
+        "ref": [
+          "pet_care_tool",
+          "search_information",
+          "set_reminder",
+          "smart_home_control"
+        ],
+        "selected": [
+          "pet_care_tool",
+          "smart_home_control"
+        ]
+      },
+      {
+        "idx": 5,
+        "ref": [
+          "account_login",
+          "account_logout",
+          "update_account_info"
+        ],
+        "selected": [
+          "account_login"
+        ]
+      },
+      {
+        "idx": 6,
+        "ref": [
+          "create_schedule",
+          "save_schedule",
+          "set_schedule_date_range",
+          "set_schedule_priority",
+          "set_schedule_repetition",
+          "set_schedule_tag"
+        ],
+        "selected": [
+          "create_schedule",
+          "set_schedule_priority",
+          "set_schedule_repetition"
+        ]
+      },
+      {
+        "idx": 7,
+        "ref": [
+          "account_login",
+          "account_logout",
+          "balance_query"
+        ],
+        "selected": [
+          "balance_query"
+        ]
+      },
+      {
+        "idx": 8,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ],
+        "selected": [
+          "account_login",
+          "check_current_balance",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ]
+      },
+      {
+        "idx": 9,
+        "ref": [
+          "account_login",
+          "currency_conversion",
+          "exchange_rate_query",
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ],
+        "selected": [
+          "account_login",
+          "exchange_rate_query",
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ]
+      },
+      {
+        "idx": 10,
+        "ref": [
+          "assign_random_table",
+          "checkout_api",
+          "menu_select_api",
+          "merge_orders"
+        ],
+        "selected": [
+          "assign_random_table",
+          "checkout_api",
+          "menu_select_api",
+          "merge_orders"
+        ]
+      },
+      {
+        "idx": 11,
+        "ref": [
+          "confirm_payment_method",
+          "merge_orders",
+          "request_menu",
+          "submit_preorder",
+          "table_booking_api"
+        ],
+        "selected": [
+          "confirm_payment_method",
+          "merge_orders",
+          "submit_preorder",
+          "table_booking_api"
+        ]
+      },
+      {
+        "idx": 12,
+        "ref": [
+          "book_table",
+          "checkout_api",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 13,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "place_order",
+          "table_booking_api"
+        ],
+        "selected": [
+          "flight_payment",
+          "order_dishes",
+          "table_booking_api"
+        ]
+      },
+      {
+        "idx": 14,
+        "ref": [
+          "checkout_api",
+          "get_contact_information",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 15,
+        "ref": [
+          "hotel_booking_modification",
+          "hotel_booking_query"
+        ],
+        "selected": [
+          "hotel_booking_modification"
+        ]
+      },
+      {
+        "idx": 16,
+        "ref": [
+          "identity_verification",
+          "seat_availability_check",
+          "ticket_info_query",
+          "train_ticket_changing"
+        ],
+        "selected": [
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 17,
+        "ref": [
+          "check_weather",
+          "purchase_travel_insurance",
+          "search_train",
+          "train_ticket_booking"
+        ],
+        "selected": [
+          "check_weather",
+          "purchase_travel_insurance",
+          "search_train"
+        ]
+      },
+      {
+        "idx": 18,
+        "ref": [
+          "appliance_repair_request",
+          "find_nearest_service_center",
+          "get_service_center_working_hours",
+          "select_nearest_working_day"
+        ],
+        "selected": [
+          "appliance_repair_request",
+          "select_nearest_working_day"
+        ]
+      },
+      {
+        "idx": 19,
+        "ref": [
+          "appliance_repair_request",
+          "find_authorized_service_provider",
+          "get_service_provider_contact",
+          "notify_user",
+          "select_nearest_service_provider"
+        ],
+        "selected": [
+          "appliance_repair_request"
+        ]
+      },
+      {
+        "idx": 20,
+        "ref": [
+          "medical_knowledge_search"
+        ],
+        "selected": [
+          "medical_knowledge_search"
+        ]
+      },
+      {
+        "idx": 21,
+        "ref": [
+          "check_file_deleted",
+          "file_delete",
+          "file_modify",
+          "ssh_connect",
+          "verify_file_content"
+        ],
+        "selected": [
+          "file_delete",
+          "file_modify"
+        ]
+      },
+      {
+        "idx": 22,
+        "ref": [
+          "calculate_population_sum",
+          "compare_population",
+          "population_info_search"
+        ],
+        "selected": [
+          "calculate_population_sum",
+          "population_info_search"
+        ]
+      },
+      {
+        "idx": 23,
+        "ref": [
+          "filter_cleaning_service",
+          "home_cleaning_booking",
+          "home_cleaning_cancelling",
+          "home_cleaning_query"
+        ],
+        "selected": [
+          "filter_cleaning_service",
+          "home_cleaning_booking",
+          "home_cleaning_query"
+        ]
+      },
+      {
+        "idx": 24,
+        "ref": [
+          "home_cleaning_booking",
+          "home_cleaning_cancelling",
+          "home_cleaning_changing",
+          "home_cleaning_query",
+          "weather_query"
+        ],
+        "selected": [
+          "home_cleaning_booking",
+          "home_cleaning_cancelling",
+          "home_cleaning_changing"
+        ]
+      },
+      {
+        "idx": 25,
+        "ref": [
+          "check_provider_reputation",
+          "confirm_cleaning_availability",
+          "filter_good_reputation_cleaners",
+          "home_cleaning_booking",
+          "home_cleaning_cancelling"
+        ],
+        "selected": [
+          "check_provider_reputation",
+          "confirm_cleaning_availability",
+          "filter_good_reputation_cleaners"
+        ]
+      },
+      {
+        "idx": 26,
+        "ref": [
+          "home_cleaning_booking",
+          "home_cleaning_changing",
+          "home_cleaning_query"
+        ],
+        "selected": [
+          "home_cleaning_booking",
+          "home_cleaning_changing",
+          "home_cleaning_query"
+        ]
+      },
+      {
+        "idx": 27,
+        "ref": [
+          "agenda_sorting",
+          "check_room_availability",
+          "manage_schedule",
+          "schedule_sorter"
+        ],
+        "selected": [
+          "manage_schedule",
+          "read_agenda"
+        ]
+      },
+      {
+        "idx": 28,
+        "ref": [
+          "check_file_existence",
+          "file_delete",
+          "file_modify",
+          "ssh_connect"
+        ],
+        "selected": [
+          "file_delete",
+          "file_modify"
+        ]
+      },
+      {
+        "idx": 29,
+        "ref": [
+          "file_modify",
+          "file_write"
+        ],
+        "selected": [
+          "file_write"
+        ]
+      },
+      {
+        "idx": 30,
+        "ref": [
+          "check_file_content",
+          "file_delete",
+          "file_modify",
+          "file_write"
+        ],
+        "selected": [
+          "file_delete",
+          "file_modify",
+          "file_write"
+        ]
+      },
+      {
+        "idx": 31,
+        "ref": [
+          "account_balance_query",
+          "account_login"
+        ],
+        "selected": [
+          "account_balance_query",
+          "account_login"
+        ]
+      },
+      {
+        "idx": 32,
+        "ref": [
+          "account_login",
+          "check_balance",
+          "foreign_currency_purchase",
+          "stock_query"
+        ],
+        "selected": [
+          "account_login",
+          "foreign_currency_purchase",
+          "stock_query"
+        ]
+      },
+      {
+        "idx": 33,
+        "ref": [
+          "account_login",
+          "calculate_exchange_amount",
+          "foreign_currency_query",
+          "get_exchange_rate"
+        ],
+        "selected": [
+          "calculate_exchange_amount",
+          "foreign_currency_query",
+          "get_exchange_rate"
+        ]
+      },
+      {
+        "idx": 34,
+        "ref": [
+          "account_login",
+          "account_logout",
+          "get_asset_overview",
+          "get_transaction_history"
+        ],
+        "selected": [
+          "get_asset_overview",
+          "get_transaction_history"
+        ]
+      },
+      {
+        "idx": 35,
+        "ref": [
+          "account_login",
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ],
+        "selected": [
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ]
+      },
+      {
+        "idx": 36,
+        "ref": [
+          "account_login",
+          "foreign_currency_purchase",
+          "foreign_currency_query",
+          "foreign_currency_sale"
+        ],
+        "selected": [
+          "foreign_currency_purchase",
+          "foreign_currency_sale"
+        ]
+      },
+      {
+        "idx": 37,
+        "ref": [
+          "account_login",
+          "credit_card_debt"
+        ],
+        "selected": [
+          "credit_card_debt"
+        ]
+      },
+      {
+        "idx": 38,
+        "ref": [
+          "account_login",
+          "balance_query",
+          "confirm_transfer",
+          "transfer_money"
+        ],
+        "selected": [
+          "balance_query",
+          "transfer_money"
+        ]
+      },
+      {
+        "idx": 39,
+        "ref": [
+          "account_login",
+          "transfer_all_to_main_account"
+        ],
+        "selected": [
+          "transfer_all_to_main_account"
+        ]
+      },
+      {
+        "idx": 40,
+        "ref": [
+          "account_balance_query",
+          "account_login"
+        ],
+        "selected": [
+          "account_balance_query"
+        ]
+      },
+      {
+        "idx": 41,
+        "ref": [
+          "deposit_product_selection",
+          "detailed_inquiry",
+          "loan_application",
+          "loan_application_time"
+        ],
+        "selected": [
+          "fixed_deposit_details",
+          "get_transaction_history",
+          "loan_application",
+          "loan_application_time"
+        ]
+      },
+      {
+        "idx": 42,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ]
+      },
+      {
+        "idx": 43,
+        "ref": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction",
+          "modify_transaction"
+        ],
+        "selected": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction",
+          "modify_transaction"
+        ]
+      },
+      {
+        "idx": 44,
+        "ref": [
+          "currency_exchange_rate",
+          "foreign_currency_exchange"
+        ],
+        "selected": [
+          "currency_exchange_rate",
+          "foreign_currency_exchange"
+        ]
+      },
+      {
+        "idx": 45,
+        "ref": [
+          "account_login",
+          "credit_card_debt",
+          "credit_card_repayment"
+        ],
+        "selected": [
+          "credit_card_debt",
+          "credit_card_repayment"
+        ]
+      },
+      {
+        "idx": 46,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ]
+      },
+      {
+        "idx": 47,
+        "ref": [
+          "bank_balance_query",
+          "deposit_product_search",
+          "domestic_remittance",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "deposit_product_search",
+          "domestic_remittance",
+          "fixed_deposit_transaction"
+        ]
+      },
+      {
+        "idx": 48,
+        "ref": [
+          "customer_service",
+          "del_transaction",
+          "find_transaction",
+          "modify_transaction"
+        ],
+        "selected": [
+          "customer_service",
+          "del_transaction",
+          "find_transaction",
+          "modify_transaction"
+        ]
+      },
+      {
+        "idx": 49,
+        "ref": [
+          "contract_content_search",
+          "precious_metals_quotes_search"
+        ],
+        "selected": [
+          "precious_metals_quotes_search"
+        ]
+      },
+      {
+        "idx": 50,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "fixed_deposit_transaction",
+          "search_deposit_products"
+        ]
+      },
+      {
+        "idx": 51,
+        "ref": [
+          "currency_conversion"
+        ],
+        "selected": [
+          "compare_exchange_rates",
+          "currency_conversion"
+        ]
+      },
+      {
+        "idx": 52,
+        "ref": [
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ]
+      },
+      {
+        "idx": 53,
+        "ref": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction"
+        ],
+        "selected": [
+          "customer_service"
+        ]
+      },
+      {
+        "idx": 54,
+        "ref": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction",
+          "modify_transaction"
+        ],
+        "selected": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction",
+          "modify_transaction"
+        ]
+      },
+      {
+        "idx": 55,
+        "ref": [
+          "order_tracking"
+        ],
+        "selected": [
+          "order_tracking"
+        ]
+      },
+      {
+        "idx": 56,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "order_details_api"
+        ],
+        "selected": [
+          "menu_select_api",
+          "order_details_api"
+        ]
+      },
+      {
+        "idx": 57,
+        "ref": [
+          "restaurant_review",
+          "restaurant_review_analyzer",
+          "restaurant_review_tool"
+        ],
+        "selected": [
+          "restaurant_review",
+          "restaurant_review_analyzer",
+          "restaurant_review_tool"
+        ]
+      },
+      {
+        "idx": 58,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "table_booking_api"
+        ],
+        "selected": [
+          "checkout_api",
+          "table_booking_api"
+        ]
+      },
+      {
+        "idx": 59,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 60,
+        "ref": [
+          "restaurant_review",
+          "restaurant_review_analyzer",
+          "restaurant_review_tool"
+        ],
+        "selected": [
+          "restaurant_review",
+          "restaurant_review_analyzer",
+          "restaurant_review_tool"
+        ]
+      },
+      {
+        "idx": 61,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 62,
+        "ref": [
+          "hotel_booking_modification",
+          "hotel_booking_query"
+        ],
+        "selected": [
+          "hotel_booking_modification"
+        ]
+      },
+      {
+        "idx": 63,
+        "ref": [
+          "check_room_availability",
+          "hotel_booking_modification",
+          "hotel_booking_query"
+        ],
+        "selected": [
+          "hotel_booking_modification"
+        ]
+      },
+      {
+        "idx": 64,
+        "ref": [
+          "check_room_availability",
+          "confirm_room_price_and_policy",
+          "hotel_booking_query",
+          "search_luxury_hotels"
+        ],
+        "selected": [
+          "check_room_availability",
+          "complete_hotel_booking",
+          "search_luxury_hotels"
+        ]
+      },
+      {
+        "idx": 65,
+        "ref": [
+          "clock_alarm_change",
+          "clock_alarm_set"
+        ],
+        "selected": [
+          "clock_alarm_change",
+          "clock_alarm_set"
+        ]
+      },
+      {
+        "idx": 66,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_booking"
+        ]
+      },
+      {
+        "idx": 67,
+        "ref": [
+          "flight_search",
+          "flight_ticket_cancelling"
+        ],
+        "selected": [
+          "flight_search",
+          "flight_ticket_cancelling"
+        ]
+      },
+      {
+        "idx": 68,
+        "ref": [
+          "flight_search",
+          "flight_ticket_changing",
+          "send_ticket"
+        ],
+        "selected": [
+          "flight_ticket_changing"
+        ]
+      },
+      {
+        "idx": 69,
+        "ref": [
+          "search_train",
+          "train_ticket_booking"
+        ],
+        "selected": [
+          "search_train"
+        ]
+      },
+      {
+        "idx": 70,
+        "ref": [
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_changing",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "train_ticket_booking",
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 71,
+        "ref": [
+          "search_train",
+          "train_ticket_changing",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 72,
+        "ref": [
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_cancelling",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "train_ticket_booking",
+          "train_ticket_cancelling"
+        ]
+      },
+      {
+        "idx": 73,
+        "ref": [
+          "query_past_ticket",
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_cancelling"
+        ],
+        "selected": [
+          "train_ticket_booking",
+          "train_ticket_cancelling"
+        ]
+      },
+      {
+        "idx": 74,
+        "ref": [
+          "train_ticket_changing",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 75,
+        "ref": [
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_cancelling",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "search_train",
+          "train_ticket_cancelling"
+        ]
+      },
+      {
+        "idx": 76,
+        "ref": [
+          "company_vehicle_service",
+          "outward_reception_approval",
+          "send_notifications"
+        ],
+        "selected": [
+          "company_vehicle_service",
+          "outward_reception_approval"
+        ]
+      },
+      {
+        "idx": 77,
+        "ref": [
+          "official_ticket_platform_search",
+          "scenic_spot_ticket_search"
+        ],
+        "selected": [
+          "official_ticket_platform_search",
+          "scenic_spot_ticket_search"
+        ]
+      },
+      {
+        "idx": 78,
+        "ref": [
+          "schedule_delivery",
+          "souvenir_purchase",
+          "souvenir_recommender",
+          "tourist_souvenir_creator"
+        ],
+        "selected": [
+          "schedule_delivery",
+          "souvenir_recommender",
+          "tourist_souvenir_creator"
+        ]
+      },
+      {
+        "idx": 79,
+        "ref": [
+          "company_vehicle_service",
+          "internal_purchase",
+          "outward_reception_approval",
+          "purchase_product"
+        ],
+        "selected": [
+          "company_vehicle_service",
+          "internal_purchase",
+          "outward_reception_approval"
+        ]
+      },
+      {
+        "idx": 80,
+        "ref": [
+          "business_travel_standard_search",
+          "submit_subsidy_application",
+          "train_ticket_booking"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 81,
+        "ref": [
+          "travel_info_search",
+          "travel_route_search"
+        ],
+        "selected": [
+          "search_food_history",
+          "select_business_hotel",
+          "travel_route_search"
+        ]
+      },
+      {
+        "idx": 82,
+        "ref": [
+          "purchase_missing_items",
+          "travel_backpack_checker",
+          "travel_backpack_generator",
+          "travel_backpack_inventory"
+        ],
+        "selected": [
+          "travel_backpack_generator"
+        ]
+      },
+      {
+        "idx": 83,
+        "ref": [
+          "car_rental_booking",
+          "car_rental_cancelling",
+          "car_rental_changing",
+          "car_rental_query"
+        ],
+        "selected": [
+          "car_rental_booking",
+          "car_rental_cancelling",
+          "car_rental_changing",
+          "car_rental_query"
+        ]
+      },
+      {
+        "idx": 84,
+        "ref": [
+          "theme_park_attractions_search",
+          "theme_park_info_search",
+          "theme_park_ticket_search"
+        ],
+        "selected": [
+          "theme_park_attractions_search",
+          "theme_park_info_search",
+          "theme_park_ticket_search"
+        ]
+      },
+      {
+        "idx": 85,
+        "ref": [
+          "special_vehicle_rental_service",
+          "special_weather_forecast_tool"
+        ],
+        "selected": [
+          "special_vehicle_rental_service",
+          "special_weather_forecast_tool"
+        ]
+      },
+      {
+        "idx": 86,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_booking"
+        ]
+      },
+      {
+        "idx": 87,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_query",
+          "create_virtual_meeting",
+          "send_meeting_notification"
+        ],
+        "selected": [
+          "check_reservation_status",
+          "conference_room_booking",
+          "create_virtual_meeting"
+        ]
+      },
+      {
+        "idx": 88,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_cancelling",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_booking",
+          "conference_room_cancelling"
+        ]
+      },
+      {
+        "idx": 89,
+        "ref": [
+          "check_meeting_room_availability",
+          "conference_room_booking",
+          "conference_room_cancelling",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_booking",
+          "conference_room_cancelling"
+        ]
+      },
+      {
+        "idx": 90,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_cancelling",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_query"
+        ]
+      },
+      {
+        "idx": 91,
+        "ref": [
+          "arrange_technical_staff",
+          "conference_room_booking",
+          "conference_room_query",
+          "send_meeting_invitations"
+        ],
+        "selected": [
+          "conference_room_booking"
+        ]
+      },
+      {
+        "idx": 92,
+        "ref": [
+          "assign_staff_to_meeting_room",
+          "book_and_pay_for_meeting_room",
+          "search_and_select_meeting_room",
+          "write_on_whiteboard"
+        ],
+        "selected": [
+          "search_and_select_meeting_room",
+          "write_on_whiteboard"
+        ]
+      },
+      {
+        "idx": 93,
+        "ref": [
+          "add_periodic_event",
+          "contact_restaurant",
+          "order_flowers",
+          "schedule_flower_delivery"
+        ],
+        "selected": [
+          "calculate_next_weekday",
+          "contact_restaurant",
+          "order_flowers"
+        ]
+      },
+      {
+        "idx": 94,
+        "ref": [
+          "create_document_with_events",
+          "export_calendar",
+          "export_document_to_pdf"
+        ],
+        "selected": [
+          "create_document_with_events"
+        ]
+      },
+      {
+        "idx": 95,
+        "ref": [
+          "add_periodic_event",
+          "generate_unique_id"
+        ],
+        "selected": [
+          "add_periodic_event",
+          "generate_unique_id"
+        ]
+      },
+      {
+        "idx": 96,
+        "ref": [
+          "clock_alarm_change",
+          "clock_alarm_set"
+        ],
+        "selected": [
+          "clock_alarm_change",
+          "clock_alarm_set",
+          "set_reminder"
+        ]
+      },
+      {
+        "idx": 97,
+        "ref": [
+          "appliance_repair_request",
+          "check_service_provider_availability",
+          "confirm_repair_cost_and_payment",
+          "find_authorized_service_provider"
+        ],
+        "selected": [
+          "appliance_repair_request"
+        ]
+      },
+      {
+        "idx": 98,
+        "ref": [
+          "appliance_repair_request",
+          "appliance_repair_status_query",
+          "notify_user",
+          "set_reminder"
+        ],
+        "selected": [
+          "appliance_repair_request",
+          "appliance_repair_status_query"
+        ]
+      },
+      {
+        "idx": 99,
+        "ref": [
+          "appliance_repair_request",
+          "call_service_provider",
+          "check_service_provider_coverage",
+          "search_authorized_service_provider"
+        ],
+        "selected": [
+          "appliance_repair_request"
+        ]
+      }
+    ],
+    "50": [
+      {
+        "idx": 0,
+        "ref": [
+          "book_ticket",
+          "hotel_search",
+          "transportation_booking",
+          "travel_itinerary_planner"
+        ],
+        "selected": [
+          "hotel_search",
+          "travel_itinerary_planner"
+        ]
+      },
+      {
+        "idx": 1,
+        "ref": [
+          "checkout_api",
+          "get_dish_id",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 2,
+        "ref": [
+          "call_service_provider",
+          "confirm_available_appointment_times",
+          "ensure_appointment_confirmation",
+          "finalize_appointment_time",
+          "provide_repair_details",
+          "search_authorized_service_provider",
+          "select_nearest_service_provider"
+        ],
+        "selected": [
+          "provide_repair_details",
+          "search_authorized_service_provider"
+        ]
+      },
+      {
+        "idx": 3,
+        "ref": [
+          "labor_law_guide",
+          "legal_compliance_check",
+          "legal_regulation_search"
+        ],
+        "selected": [
+          "labor_law_guide",
+          "legal_compliance_check",
+          "legal_regulation_search"
+        ]
+      },
+      {
+        "idx": 4,
+        "ref": [
+          "pet_care_tool",
+          "search_information",
+          "set_reminder",
+          "smart_home_control"
+        ],
+        "selected": [
+          "pet_care_tool",
+          "smart_home_control"
+        ]
+      },
+      {
+        "idx": 5,
+        "ref": [
+          "account_login",
+          "account_logout",
+          "update_account_info"
+        ],
+        "selected": [
+          "account_login"
+        ]
+      },
+      {
+        "idx": 6,
+        "ref": [
+          "create_schedule",
+          "save_schedule",
+          "set_schedule_date_range",
+          "set_schedule_priority",
+          "set_schedule_repetition",
+          "set_schedule_tag"
+        ],
+        "selected": [
+          "create_schedule",
+          "set_schedule_priority",
+          "set_schedule_repetition"
+        ]
+      },
+      {
+        "idx": 7,
+        "ref": [
+          "account_login",
+          "account_logout",
+          "balance_query"
+        ],
+        "selected": [
+          "balance_query"
+        ]
+      },
+      {
+        "idx": 8,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ],
+        "selected": [
+          "account_login",
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ]
+      },
+      {
+        "idx": 9,
+        "ref": [
+          "account_login",
+          "currency_conversion",
+          "exchange_rate_query",
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ],
+        "selected": [
+          "account_login",
+          "exchange_rate_query",
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ]
+      },
+      {
+        "idx": 10,
+        "ref": [
+          "assign_random_table",
+          "checkout_api",
+          "menu_select_api",
+          "merge_orders"
+        ],
+        "selected": [
+          "assign_random_table",
+          "checkout_api",
+          "merge_orders"
+        ]
+      },
+      {
+        "idx": 11,
+        "ref": [
+          "confirm_payment_method",
+          "merge_orders",
+          "request_menu",
+          "submit_preorder",
+          "table_booking_api"
+        ],
+        "selected": [
+          "confirm_payment_method",
+          "merge_orders",
+          "search_local_restaurants",
+          "submit_preorder"
+        ]
+      },
+      {
+        "idx": 12,
+        "ref": [
+          "book_table",
+          "checkout_api",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 13,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "place_order",
+          "table_booking_api"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 14,
+        "ref": [
+          "checkout_api",
+          "get_contact_information",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 15,
+        "ref": [
+          "hotel_booking_modification",
+          "hotel_booking_query"
+        ],
+        "selected": [
+          "hotel_booking_modification"
+        ]
+      },
+      {
+        "idx": 16,
+        "ref": [
+          "identity_verification",
+          "seat_availability_check",
+          "ticket_info_query",
+          "train_ticket_changing"
+        ],
+        "selected": [
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 17,
+        "ref": [
+          "check_weather",
+          "purchase_travel_insurance",
+          "search_train",
+          "train_ticket_booking"
+        ],
+        "selected": [
+          "check_weather",
+          "purchase_travel_insurance",
+          "search_train"
+        ]
+      },
+      {
+        "idx": 18,
+        "ref": [
+          "appliance_repair_request",
+          "find_nearest_service_center",
+          "get_service_center_working_hours",
+          "select_nearest_working_day"
+        ],
+        "selected": [
+          "appliance_repair_request",
+          "select_nearest_working_day"
+        ]
+      },
+      {
+        "idx": 19,
+        "ref": [
+          "appliance_repair_request",
+          "find_authorized_service_provider",
+          "get_service_provider_contact",
+          "notify_user",
+          "select_nearest_service_provider"
+        ],
+        "selected": [
+          "appliance_repair_request",
+          "find_authorized_service_provider"
+        ]
+      },
+      {
+        "idx": 20,
+        "ref": [
+          "medical_knowledge_search"
+        ],
+        "selected": [
+          "get_standard_treatment",
+          "medical_knowledge_search"
+        ]
+      },
+      {
+        "idx": 21,
+        "ref": [
+          "check_file_deleted",
+          "file_delete",
+          "file_modify",
+          "ssh_connect",
+          "verify_file_content"
+        ],
+        "selected": [
+          "file_delete",
+          "file_modify"
+        ]
+      },
+      {
+        "idx": 22,
+        "ref": [
+          "calculate_population_sum",
+          "compare_population",
+          "population_info_search"
+        ],
+        "selected": [
+          "calculate_population_sum",
+          "compare_population",
+          "population_info_search"
+        ]
+      },
+      {
+        "idx": 23,
+        "ref": [
+          "filter_cleaning_service",
+          "home_cleaning_booking",
+          "home_cleaning_cancelling",
+          "home_cleaning_query"
+        ],
+        "selected": [
+          "home_cleaning_booking",
+          "home_cleaning_cancelling"
+        ]
+      },
+      {
+        "idx": 24,
+        "ref": [
+          "home_cleaning_booking",
+          "home_cleaning_cancelling",
+          "home_cleaning_changing",
+          "home_cleaning_query",
+          "weather_query"
+        ],
+        "selected": [
+          "home_cleaning_booking",
+          "home_cleaning_cancelling",
+          "home_cleaning_changing",
+          "home_cleaning_query"
+        ]
+      },
+      {
+        "idx": 25,
+        "ref": [
+          "check_provider_reputation",
+          "confirm_cleaning_availability",
+          "filter_good_reputation_cleaners",
+          "home_cleaning_booking",
+          "home_cleaning_cancelling"
+        ],
+        "selected": [
+          "check_provider_reputation",
+          "filter_good_reputation_cleaners",
+          "home_cleaning_booking",
+          "search_cleaning_providers"
+        ]
+      },
+      {
+        "idx": 26,
+        "ref": [
+          "home_cleaning_booking",
+          "home_cleaning_changing",
+          "home_cleaning_query"
+        ],
+        "selected": [
+          "home_cleaning_booking",
+          "home_cleaning_changing",
+          "home_cleaning_query"
+        ]
+      },
+      {
+        "idx": 27,
+        "ref": [
+          "agenda_sorting",
+          "check_room_availability",
+          "manage_schedule",
+          "schedule_sorter"
+        ],
+        "selected": [
+          "manage_schedule"
+        ]
+      },
+      {
+        "idx": 28,
+        "ref": [
+          "check_file_existence",
+          "file_delete",
+          "file_modify",
+          "ssh_connect"
+        ],
+        "selected": [
+          "file_delete",
+          "text_replace"
+        ]
+      },
+      {
+        "idx": 29,
+        "ref": [
+          "file_modify",
+          "file_write"
+        ],
+        "selected": [
+          "file_write"
+        ]
+      },
+      {
+        "idx": 30,
+        "ref": [
+          "check_file_content",
+          "file_delete",
+          "file_modify",
+          "file_write"
+        ],
+        "selected": [
+          "file_delete",
+          "file_modify",
+          "file_write"
+        ]
+      },
+      {
+        "idx": 31,
+        "ref": [
+          "account_balance_query",
+          "account_login"
+        ],
+        "selected": [
+          "account_balance_query",
+          "account_login"
+        ]
+      },
+      {
+        "idx": 32,
+        "ref": [
+          "account_login",
+          "check_balance",
+          "foreign_currency_purchase",
+          "stock_query"
+        ],
+        "selected": [
+          "account_login",
+          "stock_query"
+        ]
+      },
+      {
+        "idx": 33,
+        "ref": [
+          "account_login",
+          "calculate_exchange_amount",
+          "foreign_currency_query",
+          "get_exchange_rate"
+        ],
+        "selected": [
+          "account_login",
+          "calculate_exchange_amount",
+          "foreign_currency_query",
+          "get_exchange_rate"
+        ]
+      },
+      {
+        "idx": 34,
+        "ref": [
+          "account_login",
+          "account_logout",
+          "get_asset_overview",
+          "get_transaction_history"
+        ],
+        "selected": [
+          "get_asset_overview",
+          "get_transaction_history"
+        ]
+      },
+      {
+        "idx": 35,
+        "ref": [
+          "account_login",
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ],
+        "selected": [
+          "foreign_currency_purchase",
+          "foreign_currency_query"
+        ]
+      },
+      {
+        "idx": 36,
+        "ref": [
+          "account_login",
+          "foreign_currency_purchase",
+          "foreign_currency_query",
+          "foreign_currency_sale"
+        ],
+        "selected": [
+          "foreign_currency_purchase",
+          "foreign_currency_sale"
+        ]
+      },
+      {
+        "idx": 37,
+        "ref": [
+          "account_login",
+          "credit_card_debt"
+        ],
+        "selected": [
+          "credit_card_debt"
+        ]
+      },
+      {
+        "idx": 38,
+        "ref": [
+          "account_login",
+          "balance_query",
+          "confirm_transfer",
+          "transfer_money"
+        ],
+        "selected": [
+          "balance_query",
+          "check_account_functionality"
+        ]
+      },
+      {
+        "idx": 39,
+        "ref": [
+          "account_login",
+          "transfer_all_to_main_account"
+        ],
+        "selected": [
+          "transfer_all_to_main_account"
+        ]
+      },
+      {
+        "idx": 40,
+        "ref": [
+          "account_balance_query",
+          "account_login"
+        ],
+        "selected": [
+          "account_balance_query"
+        ]
+      },
+      {
+        "idx": 41,
+        "ref": [
+          "deposit_product_selection",
+          "detailed_inquiry",
+          "loan_application",
+          "loan_application_time"
+        ],
+        "selected": [
+          "get_insurance_purchase_process",
+          "loan_application",
+          "loan_application_time"
+        ]
+      },
+      {
+        "idx": 42,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ]
+      },
+      {
+        "idx": 43,
+        "ref": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction",
+          "modify_transaction"
+        ],
+        "selected": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction",
+          "modify_transaction"
+        ]
+      },
+      {
+        "idx": 44,
+        "ref": [
+          "currency_exchange_rate",
+          "foreign_currency_exchange"
+        ],
+        "selected": [
+          "currency_exchange_rate",
+          "foreign_currency_exchange",
+          "market_exchange_rate_query"
+        ]
+      },
+      {
+        "idx": 45,
+        "ref": [
+          "account_login",
+          "credit_card_debt",
+          "credit_card_repayment"
+        ],
+        "selected": [
+          "credit_card_debt",
+          "credit_card_repayment",
+          "view_recent_bill"
+        ]
+      },
+      {
+        "idx": 46,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "purchase_deposit_product"
+        ]
+      },
+      {
+        "idx": 47,
+        "ref": [
+          "bank_balance_query",
+          "deposit_product_search",
+          "domestic_remittance",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "deposit_product_search",
+          "domestic_remittance",
+          "fixed_deposit_transaction"
+        ]
+      },
+      {
+        "idx": 48,
+        "ref": [
+          "customer_service",
+          "del_transaction",
+          "find_transaction",
+          "modify_transaction"
+        ],
+        "selected": [
+          "customer_service",
+          "del_transaction",
+          "find_transaction",
+          "modify_transaction"
+        ]
+      },
+      {
+        "idx": 49,
+        "ref": [
+          "contract_content_search",
+          "precious_metals_quotes_search"
+        ],
+        "selected": [
+          "precious_metals_quotes_search"
+        ]
+      },
+      {
+        "idx": 50,
+        "ref": [
+          "account_login",
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "deposit_product_search",
+          "fixed_deposit_transaction"
+        ]
+      },
+      {
+        "idx": 51,
+        "ref": [
+          "currency_conversion"
+        ],
+        "selected": [
+          "currency_conversion"
+        ]
+      },
+      {
+        "idx": 52,
+        "ref": [
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ],
+        "selected": [
+          "bank_balance_query",
+          "credit_card_debt",
+          "credit_card_progress",
+          "credit_card_repayment"
+        ]
+      },
+      {
+        "idx": 53,
+        "ref": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction"
+        ],
+        "selected": [
+          "create_transaction",
+          "del_transaction"
+        ]
+      },
+      {
+        "idx": 54,
+        "ref": [
+          "create_transaction",
+          "customer_service",
+          "del_transaction",
+          "modify_transaction"
+        ],
+        "selected": [
+          "create_transaction",
+          "del_transaction",
+          "modify_transaction",
+          "send_reminder"
+        ]
+      },
+      {
+        "idx": 55,
+        "ref": [
+          "order_tracking"
+        ],
+        "selected": [
+          "order_tracking"
+        ]
+      },
+      {
+        "idx": 56,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "order_details_api"
+        ],
+        "selected": [
+          "menu_select_api",
+          "order_details_api"
+        ]
+      },
+      {
+        "idx": 57,
+        "ref": [
+          "restaurant_review",
+          "restaurant_review_analyzer",
+          "restaurant_review_tool"
+        ],
+        "selected": [
+          "restaurant_review",
+          "restaurant_review_analyzer",
+          "restaurant_review_tool"
+        ]
+      },
+      {
+        "idx": 58,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "table_booking_api"
+        ],
+        "selected": [
+          "checkout_api",
+          "table_booking_api"
+        ]
+      },
+      {
+        "idx": 59,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 60,
+        "ref": [
+          "restaurant_review",
+          "restaurant_review_analyzer",
+          "restaurant_review_tool"
+        ],
+        "selected": [
+          "restaurant_review",
+          "restaurant_review_analyzer",
+          "restaurant_review_tool"
+        ]
+      },
+      {
+        "idx": 61,
+        "ref": [
+          "checkout_api",
+          "menu_select_api",
+          "place_order"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 62,
+        "ref": [
+          "hotel_booking_modification",
+          "hotel_booking_query"
+        ],
+        "selected": [
+          "hotel_booking_modification"
+        ]
+      },
+      {
+        "idx": 63,
+        "ref": [
+          "check_room_availability",
+          "hotel_booking_modification",
+          "hotel_booking_query"
+        ],
+        "selected": [
+          "hotel_booking_modification"
+        ]
+      },
+      {
+        "idx": 64,
+        "ref": [
+          "check_room_availability",
+          "confirm_room_price_and_policy",
+          "hotel_booking_query",
+          "search_luxury_hotels"
+        ],
+        "selected": [
+          "check_room_availability",
+          "hotel_booking_query",
+          "search_luxury_hotels"
+        ]
+      },
+      {
+        "idx": 65,
+        "ref": [
+          "clock_alarm_change",
+          "clock_alarm_set"
+        ],
+        "selected": [
+          "clock_alarm_change",
+          "clock_alarm_set"
+        ]
+      },
+      {
+        "idx": 66,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_query"
+        ],
+        "selected": [
+          "find_and_book_meeting_room"
+        ]
+      },
+      {
+        "idx": 67,
+        "ref": [
+          "flight_search",
+          "flight_ticket_cancelling"
+        ],
+        "selected": [
+          "flight_search",
+          "flight_ticket_cancelling"
+        ]
+      },
+      {
+        "idx": 68,
+        "ref": [
+          "flight_search",
+          "flight_ticket_changing",
+          "send_ticket"
+        ],
+        "selected": [
+          "flight_ticket_changing"
+        ]
+      },
+      {
+        "idx": 69,
+        "ref": [
+          "search_train",
+          "train_ticket_booking"
+        ],
+        "selected": [
+          "train_ticket_booking"
+        ]
+      },
+      {
+        "idx": 70,
+        "ref": [
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_changing",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "query_past_ticket",
+          "train_ticket_booking"
+        ]
+      },
+      {
+        "idx": 71,
+        "ref": [
+          "search_train",
+          "train_ticket_changing",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 72,
+        "ref": [
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_cancelling",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "train_ticket_booking",
+          "train_ticket_cancelling"
+        ]
+      },
+      {
+        "idx": 73,
+        "ref": [
+          "query_past_ticket",
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_cancelling"
+        ],
+        "selected": []
+      },
+      {
+        "idx": 74,
+        "ref": [
+          "train_ticket_changing",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "train_ticket_changing"
+        ]
+      },
+      {
+        "idx": 75,
+        "ref": [
+          "search_train",
+          "train_ticket_booking",
+          "train_ticket_cancelling",
+          "train_ticket_query"
+        ],
+        "selected": [
+          "confirm_payment_difference",
+          "train_ticket_reschedule_info"
+        ]
+      },
+      {
+        "idx": 76,
+        "ref": [
+          "company_vehicle_service",
+          "outward_reception_approval",
+          "send_notifications"
+        ],
+        "selected": [
+          "company_vehicle_service",
+          "outward_reception_approval"
+        ]
+      },
+      {
+        "idx": 77,
+        "ref": [
+          "official_ticket_platform_search",
+          "scenic_spot_ticket_search"
+        ],
+        "selected": [
+          "official_ticket_platform_search",
+          "scenic_spot_ticket_search"
+        ]
+      },
+      {
+        "idx": 78,
+        "ref": [
+          "schedule_delivery",
+          "souvenir_purchase",
+          "souvenir_recommender",
+          "tourist_souvenir_creator"
+        ],
+        "selected": [
+          "souvenir_purchase",
+          "souvenir_recommender",
+          "tourist_souvenir_creator"
+        ]
+      },
+      {
+        "idx": 79,
+        "ref": [
+          "company_vehicle_service",
+          "internal_purchase",
+          "outward_reception_approval",
+          "purchase_product"
+        ],
+        "selected": [
+          "company_vehicle_service",
+          "internal_purchase",
+          "outward_reception_approval"
+        ]
+      },
+      {
+        "idx": 80,
+        "ref": [
+          "business_travel_standard_search",
+          "submit_subsidy_application",
+          "train_ticket_booking"
+        ],
+        "selected": [
+          "search_and_filter_hotels",
+          "submit_subsidy_application",
+          "train_ticket_booking"
+        ]
+      },
+      {
+        "idx": 81,
+        "ref": [
+          "travel_info_search",
+          "travel_route_search"
+        ],
+        "selected": [
+          "create_itinerary",
+          "search_accommodation",
+          "travel_route_search"
+        ]
+      },
+      {
+        "idx": 82,
+        "ref": [
+          "purchase_missing_items",
+          "travel_backpack_checker",
+          "travel_backpack_generator",
+          "travel_backpack_inventory"
+        ],
+        "selected": [
+          "travel_backpack_generator"
+        ]
+      },
+      {
+        "idx": 83,
+        "ref": [
+          "car_rental_booking",
+          "car_rental_cancelling",
+          "car_rental_changing",
+          "car_rental_query"
+        ],
+        "selected": [
+          "car_rental_booking",
+          "car_rental_cancelling",
+          "car_rental_changing",
+          "car_rental_query"
+        ]
+      },
+      {
+        "idx": 84,
+        "ref": [
+          "theme_park_attractions_search",
+          "theme_park_info_search",
+          "theme_park_ticket_search"
+        ],
+        "selected": [
+          "theme_park_attractions_search",
+          "theme_park_info_search",
+          "theme_park_ticket_search"
+        ]
+      },
+      {
+        "idx": 85,
+        "ref": [
+          "special_vehicle_rental_service",
+          "special_weather_forecast_tool"
+        ],
+        "selected": [
+          "special_vehicle_rental_service",
+          "special_weather_forecast_tool"
+        ]
+      },
+      {
+        "idx": 86,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_booking"
+        ]
+      },
+      {
+        "idx": 87,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_query",
+          "create_virtual_meeting",
+          "send_meeting_notification"
+        ],
+        "selected": [
+          "conference_room_query",
+          "create_virtual_meeting"
+        ]
+      },
+      {
+        "idx": 88,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_cancelling",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_booking",
+          "conference_room_cancelling"
+        ]
+      },
+      {
+        "idx": 89,
+        "ref": [
+          "check_meeting_room_availability",
+          "conference_room_booking",
+          "conference_room_cancelling",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_booking",
+          "conference_room_cancelling"
+        ]
+      },
+      {
+        "idx": 90,
+        "ref": [
+          "conference_room_booking",
+          "conference_room_cancelling",
+          "conference_room_query"
+        ],
+        "selected": [
+          "conference_room_cancelling",
+          "conference_room_query"
+        ]
+      },
+      {
+        "idx": 91,
+        "ref": [
+          "arrange_technical_staff",
+          "conference_room_booking",
+          "conference_room_query",
+          "send_meeting_invitations"
+        ],
+        "selected": [
+          "conference_room_booking"
+        ]
+      },
+      {
+        "idx": 92,
+        "ref": [
+          "assign_staff_to_meeting_room",
+          "book_and_pay_for_meeting_room",
+          "search_and_select_meeting_room",
+          "write_on_whiteboard"
+        ],
+        "selected": [
+          "search_and_select_meeting_room",
+          "write_on_whiteboard"
+        ]
+      },
+      {
+        "idx": 93,
+        "ref": [
+          "add_periodic_event",
+          "contact_restaurant",
+          "order_flowers",
+          "schedule_flower_delivery"
+        ],
+        "selected": [
+          "contact_restaurant",
+          "order_flowers"
+        ]
+      },
+      {
+        "idx": 94,
+        "ref": [
+          "create_document_with_events",
+          "export_calendar",
+          "export_document_to_pdf"
+        ],
+        "selected": [
+          "create_document_with_events"
+        ]
+      },
+      {
+        "idx": 95,
+        "ref": [
+          "add_periodic_event",
+          "generate_unique_id"
+        ],
+        "selected": [
+          "add_periodic_event",
+          "generate_unique_id"
+        ]
+      },
+      {
+        "idx": 96,
+        "ref": [
+          "clock_alarm_change",
+          "clock_alarm_set"
+        ],
+        "selected": [
+          "clock_alarm_change",
+          "clock_alarm_set"
+        ]
+      },
+      {
+        "idx": 97,
+        "ref": [
+          "appliance_repair_request",
+          "check_service_provider_availability",
+          "confirm_repair_cost_and_payment",
+          "find_authorized_service_provider"
+        ],
+        "selected": [
+          "appliance_repair_request"
+        ]
+      },
+      {
+        "idx": 98,
+        "ref": [
+          "appliance_repair_request",
+          "appliance_repair_status_query",
+          "notify_user",
+          "set_reminder"
+        ],
+        "selected": [
+          "appliance_repair_request",
+          "appliance_repair_status_query"
+        ]
+      },
+      {
+        "idx": 99,
+        "ref": [
+          "appliance_repair_request",
+          "call_service_provider",
+          "check_service_provider_coverage",
+          "search_authorized_service_provider"
+        ],
+        "selected": [
+          "appliance_repair_request"
+        ]
+      }
+    ]
+  }
+}
