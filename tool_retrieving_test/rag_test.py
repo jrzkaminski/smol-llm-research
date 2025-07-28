@@ -1,5 +1,4 @@
 import json
-import random
 import shutil
 import statistics
 import tempfile
@@ -9,10 +8,16 @@ from typing import Dict, List, Set, Tuple
 import dotenv
 from langchain_community.vectorstores import Chroma
 from langchain_core.documents import Document
-from langchain_openai import OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+from langchain_core.prompts import ChatPromptTemplate
 
-from tool_utils import load_benchmark, load_tools, ToolSchema
-from config import SEED, BENCHMARK_PATH, TOOLS_PATH, K
+from tool_utils import (
+    load_benchmark,
+    load_tools,
+    format_tool_descriptions,
+    ToolSchema
+)
+from config import BENCHMARK_PATH, TOOLS_PATH, SUBTASK_K, OPENAI_API_KEY, PLANNER_AGENT_SYSTEM_PROMPT, LLM_MODEL
 
 dotenv.load_dotenv()
 
@@ -35,18 +40,53 @@ def build_docs(
     docs: List[Document] = []
     for name in tool_names:
         schema = tools_schema[name]
-        args_schema = schema.arguments
-        if args_schema and args_schema.properties:
-            arg_strings = [
-                f"{arg}: {prop.type} — {prop.description or ''}"
-                for arg, prop in args_schema.properties.items()
-            ]
-            flat_args = " | ".join(arg_strings)
-        else:
-            flat_args = "none"
-        page_text = f"{name}\n{schema.description}\nArguments: {flat_args}"
+        page_text = get_tool_doc(name, schema)
         docs.append(Document(page_content=page_text, metadata={"tool_name": name}))
     return docs
+
+
+def get_tool_doc(tool_name: str, schema: ToolSchema) -> str:
+    args_schema = schema.arguments
+    if args_schema and args_schema.properties:
+        arg_strings = [
+            f"{arg}: {prop.type} — {prop.description or ''}"
+            for arg, prop in args_schema.properties.items()
+        ]
+        flat_args = " | ".join(arg_strings)
+    else:
+        flat_args = "none"
+    return f"{tool_name}\n{schema.description}\nArguments: {flat_args}"
+
+
+def get_noise_tools(ref_tools: Set[str], count: int, tools_schema: Dict[str, ToolSchema], collection: Chroma) -> List[str]:
+    if count == 0:
+        return []
+    buffer = set()
+    result = []
+    for name in ref_tools:
+        tool_doc = get_tool_doc(name, tools_schema[name])
+        searches = collection.similarity_search_with_score(query=tool_doc, k=count)
+        for doc, similarity in searches:
+            buffer.add((doc.metadata['tool_name'], similarity))
+    buffer = sorted(list(buffer), key=lambda x: x[1])
+    for tool_name, similarity in buffer:
+        if tool_name not in ref_tools:
+            result.append(tool_name)
+    return result[:count]
+
+
+def invoke_planner(
+    query: str, llm: ChatOpenAI
+) -> str:
+    prompt = ChatPromptTemplate.from_messages(
+        [("human", PLANNER_AGENT_SYSTEM_PROMPT)]
+    ).format_prompt(user_request=query, error="None")
+    return llm.invoke(prompt).content
+
+
+def parse_planner_subtasks(json_string: str) -> Set[str]:
+    result = json.loads(json_string)
+    return result
 
 
 def run_single_eval(
@@ -54,27 +94,30 @@ def run_single_eval(
     ref_tools: Set[str],
     tools_schema: Dict[str, ToolSchema],
     noise_level: int,
-    k: int,
-    rng: random.Random,
+    subtask_k: int,
+    collection: Chroma,
+    subtasks: Set[str]
 ) -> Tuple[Set[str], float, float, float]:
     """Return (selected_set, precision, recall, f1) for one query using retrieval."""
     all_tool_names = set(tools_schema)
     noise_candidates = list(all_tool_names - ref_tools)
-    noise_tools = rng.sample(
-        noise_candidates, k=min(noise_level, len(noise_candidates))
-    )
+    count = min(noise_level, len(noise_candidates))
+    noise_tools = get_noise_tools(ref_tools=ref_tools, count=count, tools_schema=tools_schema, collection=collection)
 
     docs = build_docs(ref_tools.union(noise_tools), tools_schema)
 
     tmp_dir = tempfile.mkdtemp(prefix="rag_noise_")
     vectordb = Chroma.from_documents(
         documents=docs,
-        embedding=OpenAIEmbeddings(),
+        embedding=OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY),
         collection_name="rag_noise",
         persist_directory=tmp_dir,
     )
-    retrieved_docs = vectordb.similarity_search(query, k=k)
-    retrieved_names: Set[str] = {doc.metadata["tool_name"] for doc in retrieved_docs}
+    buffer: List[str] = []
+    for task in subtasks:
+        retrieved_docs = vectordb.similarity_search(task, k=subtask_k)
+        buffer += [doc.metadata["tool_name"] for doc in retrieved_docs]
+    retrieved_names: Set[str] = set(buffer)
     precision, recall, f1 = compute_metrics(ref_tools, retrieved_names)
     shutil.rmtree(tmp_dir, ignore_errors=True)
     return retrieved_names, precision, recall, f1
@@ -86,7 +129,6 @@ def main() -> None:
     if not bench or not tools_schema:
         raise SystemExit("Failed to load benchmark or tools JSON.")
 
-    rng = random.Random(SEED)
     noise_levels = list(range(0, 51, 10))
 
     if PROGRESS_FILE.exists():
@@ -102,11 +144,25 @@ def main() -> None:
         completed = set()
         detail_table = {n: [] for n in noise_levels}
 
+    documents = build_docs(set(tools_schema), tools_schema)
+    all_tools_vectordb = Chroma.from_documents(
+        documents=documents,
+        embedding=OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY),
+        collection_name="rag_ref_tools",
+        persist_directory=tempfile.mkdtemp(prefix="rag_ref_tools_"),
+    )
+
+    llm = ChatOpenAI(model=LLM_MODEL, api_key=OPENAI_API_KEY, temperature=0)
+
     for i, item in enumerate(bench):
+        print(i)
         if i in completed:
             continue
 
         query = item.question
+        response = invoke_planner(query=query, llm=llm)
+        subtasks = parse_planner_subtasks(response)
+
         ref_tools = {ref.tool for ref in item.reference if ref.tool in tools_schema}
         if not ref_tools:
             completed.add(i)
@@ -118,8 +174,9 @@ def main() -> None:
                 ref_tools=ref_tools,
                 tools_schema=tools_schema,
                 noise_level=noise,
-                k=K,
-                rng=rng,
+                subtask_k=SUBTASK_K,
+                collection=all_tools_vectordb,
+                subtasks=subtasks,
             )
             detail_table[noise].append(
                 {
@@ -148,7 +205,7 @@ def main() -> None:
 
     print("\n===== RAG noise benchmark =====")
     print(f"total questions: {len(completed)}")
-    print(f"K: {K}")
+    print(f"subtask K: {SUBTASK_K}")
     print("number of tools -> precision | recall | f1")
     for noise in noise_levels:
         recs = detail_table[noise]

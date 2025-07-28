@@ -1,5 +1,5 @@
 import json
-import random
+import tempfile
 import statistics
 import sys
 from pathlib import Path
@@ -8,13 +8,15 @@ from typing import Dict, List, Set, Tuple
 import dotenv
 import regex as re
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_openai import ChatOpenAI
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_core.documents import Document
+from langchain_community.vectorstores import Chroma
 
 from config import (
     AGENT_SYSTEM_PROMPT,
     LLM_MODEL,
     OPENAI_API_KEY,
-    SEED,
+    PLANNER_AGENT_SYSTEM_PROMPT,
     BENCHMARK_PATH,
     TOOLS_PATH,
 )
@@ -60,13 +62,69 @@ def parse_called_tools(text: str) -> Set[str]:
 
 
 def invoke_agent(
-    query: str, subset_schema: Dict[str, ToolSchema], llm: ChatOpenAI
+    query: str, subtasks: Set[str], subset_schema: Dict[str, ToolSchema], llm: ChatOpenAI
 ) -> str:
     desc_block = format_tool_descriptions(subset_schema)
     prompt = ChatPromptTemplate.from_messages(
         [("human", AGENT_SYSTEM_PROMPT)]
-    ).format_prompt(tool_descriptions=desc_block, user_request=query, error="None")
+    ).format_prompt(tool_descriptions=desc_block, user_request=query, subtasks=subtasks, error="None")
     return llm.invoke(prompt).content
+
+
+def build_docs(
+    tool_names: Set[str], tools_schema: Dict[str, ToolSchema]
+) -> List[Document]:
+    """Build a list of LangChain Document objects for the given tool names."""
+    docs: List[Document] = []
+    for name in tool_names:
+        schema = tools_schema[name]
+        page_text = get_tool_doc(name, schema)
+        docs.append(Document(page_content=page_text, metadata={"tool_name": name}))
+    return docs
+
+
+def get_tool_doc(tool_name: str, schema: ToolSchema) -> str:
+    args_schema = schema.arguments
+    if args_schema and args_schema.properties:
+        arg_strings = [
+            f"{arg}: {prop.type} — {prop.description or ''}"
+            for arg, prop in args_schema.properties.items()
+        ]
+        flat_args = " | ".join(arg_strings)
+    else:
+        flat_args = "none"
+    return f"{tool_name}\n{schema.description}\nArguments: {flat_args}"
+
+
+def get_noise_tools(ref_tools: Set[str], count: int, tools_schema: Dict[str, ToolSchema], collection: Chroma) -> List[str]:
+    if count == 0:
+        return []
+    buffer = set()
+    result = []
+    for name in ref_tools:
+        tool_doc = get_tool_doc(name, tools_schema[name])
+        searches = collection.similarity_search_with_score(query=tool_doc, k=count)
+        for doc, similarity in searches:
+            buffer.add((doc.metadata['tool_name'], similarity))
+    buffer = sorted(list(buffer), key=lambda x: x[1])
+    for tool_name, similarity in buffer:
+        if tool_name not in ref_tools:
+            result.append(tool_name)
+    return result[:count]
+
+
+def invoke_planner(
+    query: str, llm: ChatOpenAI
+) -> str:
+    prompt = ChatPromptTemplate.from_messages(
+        [("human", PLANNER_AGENT_SYSTEM_PROMPT)]
+    ).format_prompt(user_request=query, error="None")
+    return llm.invoke(prompt).content
+
+
+def parse_planner_subtasks(json_string: str) -> Set[str]:
+    result = json.loads(json_string)
+    return result
 
 
 def run_single_eval(
@@ -74,17 +132,18 @@ def run_single_eval(
     ref_tools: Set[str],
     tools_schema: Dict[str, ToolSchema],
     noise_level: int,
-    rng: random.Random,
     llm: ChatOpenAI,
+    subtasks: Set[str],
+    collection: Chroma
 ) -> Tuple[Set[str], float, float, float]:
     """Return (selected_set, precision, recall, f1)."""
     noise_pool = list(set(tools_schema) - ref_tools)
-    noise_tools = rng.sample(noise_pool, k=min(noise_level, len(noise_pool)))
+    count = min(noise_level, len(noise_pool))
+    noise_tools = get_noise_tools(ref_tools=ref_tools, count=count, tools_schema=tools_schema, collection=collection)
     names: List[str] = list(ref_tools.union(noise_tools))
-    rng.shuffle(names)
     subset_schema = {n: tools_schema[n] for n in names}
 
-    response = invoke_agent(query, subset_schema, llm)
+    response = invoke_agent(query, subtasks, subset_schema, llm)
     selected = parse_called_tools(response)
 
     precision, recall, f1 = compute_metrics(ref_tools, selected)
@@ -98,7 +157,6 @@ def main() -> None:
     if not bench or not tools_schema:
         sys.exit("Failed to load benchmark or tools JSON.")
 
-    rng = random.Random(SEED)
     noise_levels = list(range(0, 51, 10))
 
     if PROGRESS_FILE.exists():
@@ -113,6 +171,14 @@ def main() -> None:
         completed = set()
         detail_table = {n: [] for n in noise_levels}
 
+    documents = build_docs(set(tools_schema), tools_schema)
+    all_tools_vectordb = Chroma.from_documents(
+        documents=documents,
+        embedding=OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY),
+        collection_name="rag_ref_tools",
+        persist_directory=tempfile.mkdtemp(prefix="rag_ref_tools_"),
+    )
+
     llm = ChatOpenAI(model=LLM_MODEL, api_key=OPENAI_API_KEY, temperature=0)
 
     for idx, item in enumerate(bench):
@@ -124,14 +190,19 @@ def main() -> None:
             completed.add(idx)
             continue
 
+        query = item.question
+        response = invoke_planner(query=query, llm=llm)
+        subtasks = parse_planner_subtasks(response)
+
         for noise in noise_levels:
             selected, prec, rec, f1 = run_single_eval(
-                query=item.question,
+                query=query,
                 ref_tools=ref,
                 tools_schema=tools_schema,
                 noise_level=noise,
-                rng=rng,
                 llm=llm,
+                collection=all_tools_vectordb,
+                subtasks=subtasks
             )
             detail_table[noise].append(
                 {

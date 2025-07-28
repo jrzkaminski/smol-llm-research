@@ -9,6 +9,19 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 LLM_MODEL = "gpt-4o-mini"
 
 K = 10
+SUBTASK_K = 5
+
+
+PLANNER_AGENT_SYSTEM_PROMPT = """
+Rewrite the USER REQUEST as the smallest sequence of independent, solvable sub-requests.
+
+Rules:
+1. Each sub-request must be a self-contained natural-language instruction; no code or tool names.
+2. Preserve order and any quoted literals (file names, texts, numbers).
+3. Return ONLY a JSON array of strings. No keys, no commentary.
+
+User request: "{user_request}"
+"""
 
 
 AGENT_SYSTEM_PROMPT = """You are a specialized agent for performing user tasks. You have a set of tools for that.
@@ -16,6 +29,12 @@ You have access to the following tools:
 {tool_descriptions}
 
 Your task is to process the user request: "{user_request}"
+
+The user's question is broken down into sub-questions:
+{subtasks}
+
+You need to follow the sub-questions to choose the right tools.
+
 You must select the appropriate tool(s) from *your* available list and determine the correct arguments to fulfill the request.
 You need to output a list of proposed tool calls. Each tool call should be a dictionary with 'tool' (the tool name), 'param' (a dictionary of arguments), and 'input_source' (indicating where the required information comes from).
 
