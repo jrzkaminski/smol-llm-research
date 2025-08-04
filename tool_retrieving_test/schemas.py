@@ -47,6 +47,8 @@ class ToolSchema(BaseModel):
     description: str
     arguments: Optional[ToolIOSchema] = None
     results: Optional[ToolIOSchema] = None
+    description_expanded: Optional[str] = None
+    synthetic_questions: Optional[List[str]] = None
 
 
 class ToolCall(BaseModel):

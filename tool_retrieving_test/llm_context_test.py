@@ -29,7 +29,7 @@ from schemas import ToolSchema
 
 dotenv.load_dotenv()
 
-PROGRESS_FILE = Path("tmp_llm_context_progress.json")
+PROGRESS_FILE = Path("tmp_llm_context_progress_expanded.json")
 
 
 def compute_metrics(ref: Set[str], selected: Set[str]) -> Tuple[float, float, float]:
@@ -62,12 +62,20 @@ def parse_called_tools(text: str) -> Set[str]:
 
 
 def invoke_agent(
-    query: str, subtasks: Set[str], subset_schema: Dict[str, ToolSchema], llm: ChatOpenAI
+    query: str,
+    subset_schema: Dict[str, ToolSchema],
+    llm: ChatOpenAI,
+    user_request: str,
 ) -> str:
     desc_block = format_tool_descriptions(subset_schema)
     prompt = ChatPromptTemplate.from_messages(
         [("human", AGENT_SYSTEM_PROMPT)]
-    ).format_prompt(tool_descriptions=desc_block, user_request=query, subtasks=subtasks, error="None")
+    ).format_prompt(
+        tool_descriptions=desc_block,
+        current_subtask=query,
+        user_request=user_request,
+    )
+    # print(prompt)
     return llm.invoke(prompt).content
 
 
@@ -96,7 +104,12 @@ def get_tool_doc(tool_name: str, schema: ToolSchema) -> str:
     return f"{tool_name}\n{schema.description}\nArguments: {flat_args}"
 
 
-def get_noise_tools(ref_tools: Set[str], count: int, tools_schema: Dict[str, ToolSchema], collection: Chroma) -> List[str]:
+def get_noise_tools(
+    ref_tools: Set[str],
+    count: int,
+    tools_schema: Dict[str, ToolSchema],
+    collection: Chroma,
+) -> List[str]:
     if count == 0:
         return []
     buffer = set()
@@ -105,7 +118,7 @@ def get_noise_tools(ref_tools: Set[str], count: int, tools_schema: Dict[str, Too
         tool_doc = get_tool_doc(name, tools_schema[name])
         searches = collection.similarity_search_with_score(query=tool_doc, k=count)
         for doc, similarity in searches:
-            buffer.add((doc.metadata['tool_name'], similarity))
+            buffer.add((doc.metadata["tool_name"], similarity))
     buffer = sorted(list(buffer), key=lambda x: x[1])
     for tool_name, similarity in buffer:
         if tool_name not in ref_tools:
@@ -113,13 +126,31 @@ def get_noise_tools(ref_tools: Set[str], count: int, tools_schema: Dict[str, Too
     return result[:count]
 
 
-def invoke_planner(
-    query: str, llm: ChatOpenAI
-) -> str:
+# Initialize the tool description string (will be populated dynamically later)
+tool_desc_string: str = ""
+
+
+def invoke_planner(query: str, llm: ChatOpenAI) -> str:
     prompt = ChatPromptTemplate.from_messages(
-        [("human", PLANNER_AGENT_SYSTEM_PROMPT)]
-    ).format_prompt(user_request=query, error="None")
-    return llm.invoke(prompt).content
+        [
+            (
+                "human",
+                PLANNER_AGENT_SYSTEM_PROMPT
+                + "\n\nAvailable tools:\n"
+                + tool_desc_string,
+            )
+        ]
+    ).format_prompt(user_request=query)
+    response_content = llm.invoke(prompt).content
+
+    # Extract the JSON list of subtasks from the planner’s response
+    start_idx = response_content.find("[")
+    end_idx = response_content.rfind("]")
+    return (
+        response_content[start_idx : end_idx + 1]
+        if start_idx != -1 and end_idx != -1
+        else "[]"
+    )
 
 
 def parse_planner_subtasks(json_string: str) -> Set[str]:
@@ -134,17 +165,27 @@ def run_single_eval(
     noise_level: int,
     llm: ChatOpenAI,
     subtasks: Set[str],
-    collection: Chroma
+    collection: Chroma,
 ) -> Tuple[Set[str], float, float, float]:
-    """Return (selected_set, precision, recall, f1)."""
+    """Return (selected_set, precision, recall, f1) aggregated across subtasks."""
     noise_pool = list(set(tools_schema) - ref_tools)
     count = min(noise_level, len(noise_pool))
-    noise_tools = get_noise_tools(ref_tools=ref_tools, count=count, tools_schema=tools_schema, collection=collection)
+    noise_tools = get_noise_tools(
+        ref_tools=ref_tools,
+        count=count,
+        tools_schema=tools_schema,
+        collection=collection,
+    )
     names: List[str] = list(ref_tools.union(noise_tools))
     subset_schema = {n: tools_schema[n] for n in names}
 
-    response = invoke_agent(query, subtasks, subset_schema, llm)
-    selected = parse_called_tools(response)
+    selected: Set[str] = set()
+    for task in subtasks:
+        print("!task", task)
+        response = invoke_agent(task, subset_schema, llm, query)
+        parsed_tools = parse_called_tools(response)
+        print("!parsed_tools", parsed_tools)
+        selected.update(parsed_tools)
 
     precision, recall, f1 = compute_metrics(ref_tools, selected)
     return selected, precision, recall, f1
@@ -191,9 +232,22 @@ def main() -> None:
             continue
 
         query = item.question
+
+        # Retrieve the top-15 most relevant tools to guide the planner
+        retrieved_docs = all_tools_vectordb.similarity_search(query, k=15)
+        top_tool_names = [doc.metadata["tool_name"] for doc in retrieved_docs]
+        top_tools = {
+            name: tools_schema[name] for name in top_tool_names if name in tools_schema
+        }
+
+        # Update global tool description string so the planner sees only these tools
+        global tool_desc_string
+        tool_desc_string = format_tool_descriptions(top_tools)
+
+        # Run the planner and parse its subtasks
         response = invoke_planner(query=query, llm=llm)
         subtasks = parse_planner_subtasks(response)
-
+        print(idx)
         for noise in noise_levels:
             selected, prec, rec, f1 = run_single_eval(
                 query=query,
@@ -202,7 +256,7 @@ def main() -> None:
                 noise_level=noise,
                 llm=llm,
                 collection=all_tools_vectordb,
-                subtasks=subtasks
+                subtasks=subtasks,
             )
             detail_table[noise].append(
                 {

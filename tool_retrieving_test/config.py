@@ -1,6 +1,6 @@
 import os
 
-TOOLS_PATH = "../data/ultratool/tools.json"
+TOOLS_PATH = "../data/ultratool/tools_expanded.json"
 BENCHMARK_PATH = "../data/ultratool/top_benchmarks_enriched.json"
 SEED = 42
 
@@ -15,6 +15,11 @@ SUBTASK_K = 5
 PLANNER_AGENT_SYSTEM_PROMPT = """
 Rewrite the USER REQUEST as the smallest sequence of independent, solvable sub-requests.
 
+Context: you have access to 15 tools provided in a separate context section (via RAG). Use them to
+think how the request can be decomposed so that every sub-request can be solved by SOME tool
+from the list. Split as aggressively as possible – the more fine-grained the better (but preserve
+logical order). 
+
 Rules:
 1. Each sub-request must be a self-contained natural-language instruction; no code or tool names.
 2. Preserve order and any quoted literals (file names, texts, numbers).
@@ -24,52 +29,25 @@ User request: "{user_request}"
 """
 
 
-AGENT_SYSTEM_PROMPT = """You are a specialized agent for performing user tasks. You have a set of tools for that.
-You have access to the following tools:
+AGENT_SYSTEM_PROMPT = """
+You are an execution agent working on a SINGLE sub-task: \"{current_subtask}\".
+Full-task: \"{user_request}\"
+
+Available tools:
 {tool_descriptions}
 
-Your task is to process the user request: "{user_request}"
+Select the best tool(s) (one or many or all) to accomplish the sub-task. For tools that perform the same
+high-level action (e.g. file_write vs create_document) include ALL candidates.
 
-The user's question is broken down into sub-questions:
-{subtasks}
-
-You need to follow the sub-questions to choose the right tools.
-
-You must select the appropriate tool(s) from *your* available list and determine the correct arguments to fulfill the request.
-You need to output a list of proposed tool calls. Each tool call should be a dictionary with 'tool' (the tool name), 'param' (a dictionary of arguments), and 'input_source' (indicating where the required information comes from).
-
-For the 'input_source' field:
-- Use "question" if the required information is present in the user request/question
-- Use "tool_name tool" if the required information comes from the output of a previous tool that should be run first (e.g., "file_write tool", "account_login tool")
-
-If you CANNOT complete the entire task, IN ANY CASE, WRITE DOWN THE FUNCTIONS that, in your opinion, CAN BRING you CLOSER to solving the problem in JSON format.
-Use tools ONLY FROM THE LIST PROVIDED TO YOU!
-If the function is not available to you, DO NOT WRITE it in JSON.
-Make sure that your response in JSON format is correct!!
-
-Example Output Format:
+Return ONLY a JSON array of tool calls following the format:
 [
   {{
-    "tool": "tool_name_1",
-    "param": {{
-      "arg_name_1": "value_1",
-      "arg_name_2": "value_2"
-    }},
-    "input_source": "question"
+    "tool": "tool_name",
+    "param": {{ ... }},
+    "input_source": "question" | "<prev_tool> tool"
   }},
-  {{
-    "tool": "tool_name_2",
-    "param": {{
-      "arg_name_3": "value_3"
-    }},
-    "input_source": "tool_name_1 tool"
-  }}
+  ...
 ]
 
-If you receive an error message about an invalid tool call, analyze the error and try again with corrected tool name or arguments.
-Error: {error}
-
-Based on the request and your available tools, propose the sequence of tool calls.
-
-Return ONLY a JSON. No keys, no commentary.
+Do NOT output any commentary.
 """

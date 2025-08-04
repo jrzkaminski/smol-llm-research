@@ -11,17 +11,21 @@ from langchain_core.documents import Document
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 
-from tool_utils import (
-    load_benchmark,
-    load_tools,
-    format_tool_descriptions,
-    ToolSchema
+tool_desc_string: str = ""
+
+from tool_utils import load_benchmark, load_tools, format_tool_descriptions, ToolSchema
+from config import (
+    BENCHMARK_PATH,
+    TOOLS_PATH,
+    SUBTASK_K,
+    OPENAI_API_KEY,
+    PLANNER_AGENT_SYSTEM_PROMPT,
+    LLM_MODEL,
 )
-from config import BENCHMARK_PATH, TOOLS_PATH, SUBTASK_K, OPENAI_API_KEY, PLANNER_AGENT_SYSTEM_PROMPT, LLM_MODEL
 
 dotenv.load_dotenv()
 
-PROGRESS_FILE = Path("tmp_rag_progress.json")
+PROGRESS_FILE = Path("tmp_rag_progress_expanded.json")
 
 
 def compute_metrics(ref: Set[str], selected: Set[str]) -> Tuple[float, float, float]:
@@ -55,10 +59,17 @@ def get_tool_doc(tool_name: str, schema: ToolSchema) -> str:
         flat_args = " | ".join(arg_strings)
     else:
         flat_args = "none"
-    return f"{tool_name}\n{schema.description}\nArguments: {flat_args}"
+    doc = f"{tool_name}\n{schema.description_expanded}\nArguments: {flat_args}\nSynthetic questions: {schema.synthetic_questions}"
+    # print(doc)
+    return doc
 
 
-def get_noise_tools(ref_tools: Set[str], count: int, tools_schema: Dict[str, ToolSchema], collection: Chroma) -> List[str]:
+def get_noise_tools(
+    ref_tools: Set[str],
+    count: int,
+    tools_schema: Dict[str, ToolSchema],
+    collection: Chroma,
+) -> List[str]:
     if count == 0:
         return []
     buffer = set()
@@ -67,7 +78,7 @@ def get_noise_tools(ref_tools: Set[str], count: int, tools_schema: Dict[str, Too
         tool_doc = get_tool_doc(name, tools_schema[name])
         searches = collection.similarity_search_with_score(query=tool_doc, k=count)
         for doc, similarity in searches:
-            buffer.add((doc.metadata['tool_name'], similarity))
+            buffer.add((doc.metadata["tool_name"], similarity))
     buffer = sorted(list(buffer), key=lambda x: x[1])
     for tool_name, similarity in buffer:
         if tool_name not in ref_tools:
@@ -75,13 +86,26 @@ def get_noise_tools(ref_tools: Set[str], count: int, tools_schema: Dict[str, Too
     return result[:count]
 
 
-def invoke_planner(
-    query: str, llm: ChatOpenAI
-) -> str:
+def invoke_planner(query: str, llm: ChatOpenAI) -> str:
     prompt = ChatPromptTemplate.from_messages(
-        [("human", PLANNER_AGENT_SYSTEM_PROMPT)]
-    ).format_prompt(user_request=query, error="None")
-    return llm.invoke(prompt).content
+        [
+            (
+                "human",
+                PLANNER_AGENT_SYSTEM_PROMPT
+                + "\n\nAvailable tools:\n"
+                + tool_desc_string,
+            )
+        ]
+    ).format_prompt(user_request=query)
+    response_content = llm.invoke(prompt).content
+    print(response_content)
+
+    start_idx = response_content.find("[")
+    end_idx = response_content.rfind("]")
+    json_str = response_content[start_idx : end_idx + 1]
+    # parsed_data = json.loads(json_str)
+    # parsed_outcome = [str(item).strip() for item in parsed_data if item]
+    return json_str
 
 
 def parse_planner_subtasks(json_string: str) -> Set[str]:
@@ -96,13 +120,18 @@ def run_single_eval(
     noise_level: int,
     subtask_k: int,
     collection: Chroma,
-    subtasks: Set[str]
+    subtasks: Set[str],
 ) -> Tuple[Set[str], float, float, float]:
     """Return (selected_set, precision, recall, f1) for one query using retrieval."""
     all_tool_names = set(tools_schema)
     noise_candidates = list(all_tool_names - ref_tools)
     count = min(noise_level, len(noise_candidates))
-    noise_tools = get_noise_tools(ref_tools=ref_tools, count=count, tools_schema=tools_schema, collection=collection)
+    noise_tools = get_noise_tools(
+        ref_tools=ref_tools,
+        count=count,
+        tools_schema=tools_schema,
+        collection=collection,
+    )
 
     docs = build_docs(ref_tools.union(noise_tools), tools_schema)
 
@@ -160,6 +189,16 @@ def main() -> None:
             continue
 
         query = item.question
+
+        retrieved_docs = all_tools_vectordb.similarity_search(query, k=15)
+        top_tool_names = [doc.metadata.get("tool_name") for doc in retrieved_docs]
+        top_tools = {
+            name: tools_schema[name] for name in top_tool_names if name in tools_schema
+        }
+
+        global tool_desc_string
+        tool_desc_string = format_tool_descriptions(top_tools)
+
         response = invoke_planner(query=query, llm=llm)
         subtasks = parse_planner_subtasks(response)
 
