@@ -2,7 +2,7 @@ import json
 import os
 import time
 from pathlib import Path
-from typing import List, Dict, Any
+from typing import Any
 
 from openai import OpenAI
 
@@ -22,7 +22,7 @@ RETRY_DELAY = float(os.getenv("OPENAI_RETRY_DELAY", 1))
 client = OpenAI(api_key=API_KEY)
 
 
-def load_existing() -> List[Dict[str, Any]]:
+def load_existing() -> list[dict[str, Any]]:
     """Load existing expanded tools list (if file exists)."""
     if not OUTPUT_PATH.exists():
         return []
@@ -33,7 +33,7 @@ def load_existing() -> List[Dict[str, Any]]:
         return []
 
 
-def already_processed(existing: List[Dict[str, Any]]) -> set[str]:
+def already_processed(existing: list[dict[str, Any]]) -> set[str]:
     """Return a set with names of tools already present in existing list."""
     return {t.get("name") for t in existing if isinstance(t, dict)}
 
@@ -55,7 +55,7 @@ def call_llm(prompt: str) -> str:
             time.sleep(RETRY_DELAY)
 
 
-def build_prompt(tool: Dict[str, Any], n_questions: int = 5) -> str:
+def build_prompt(tool: dict[str, Any], n_questions: int = 5) -> str:
     """Generate a prompt asking the model to enrich description and propose synthetic questions."""
     arguments = json.dumps(tool.get("arguments", {}), ensure_ascii=False)
     results = json.dumps(tool.get("results", {}), ensure_ascii=False)
@@ -73,9 +73,9 @@ def build_prompt(tool: Dict[str, Any], n_questions: int = 5) -> str:
 
 def main(n_questions_per_tool: int = 5) -> None:
     with TOOLS_PATH.open() as f:
-        tools: List[Dict[str, Any]] = json.load(f)
+        tools: list[dict[str, Any]] = json.load(f)
 
-    existing_expanded: List[Dict[str, Any]] = load_existing()
+    existing_expanded: list[dict[str, Any]] = load_existing()
     processed = already_processed(existing_expanded)
     total = len(tools)
     print(f"Total tools: {total}. Already processed: {len(processed)}.")
@@ -98,7 +98,7 @@ def main(n_questions_per_tool: int = 5) -> None:
             ):
                 raise ValueError("Missing required fields in LLM response")
 
-            merged_tool: Dict[str, Any] = {**tool, **obj}
+            merged_tool: dict[str, Any] = {**tool, **obj}
         except Exception as e:
             print(
                 f"Failed to parse or validate response for tool '{name}': {e}. Skipping."

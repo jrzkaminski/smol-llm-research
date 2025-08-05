@@ -3,15 +3,16 @@ import shutil
 import statistics
 import tempfile
 from pathlib import Path
-from typing import Dict, List, Set, Tuple
 
 import dotenv
+from sentence_transformers import SentenceTransformer
+
 from langchain_community.vectorstores import Chroma
 from langchain_core.documents import Document
-from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+from langchain_core.embeddings import Embeddings
+from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 
-tool_desc_string: str = ""
 
 from tool_utils import load_benchmark, load_tools, format_tool_descriptions, ToolSchema
 from config import (
@@ -25,10 +26,33 @@ from config import (
 
 dotenv.load_dotenv()
 
-PROGRESS_FILE = Path("tmp_rag_progress_expanded.json")
+PROGRESS_FILE = Path("tmp_rag_progress_expanded_alibaba.json")
+
+tool_desc_string: str = ""
 
 
-def compute_metrics(ref: Set[str], selected: Set[str]) -> Tuple[float, float, float]:
+class STEmbeddings(Embeddings):
+    """
+    Thin adapter so LangChain's Chroma integration can use SentenceTransformers.
+    Uses gte's instruction format by setting prompt_name="query" for queries.
+    """
+
+    def __init__(
+        self, st_model: SentenceTransformer, *, query_prompt_name: str = "query"
+    ):
+        self.model = st_model
+        self.query_prompt_name = query_prompt_name
+
+    def embed_documents(self, texts: list[str]) -> list[list[float]]:
+        return self.model.encode(texts, normalize_embeddings=False).tolist()
+
+    def embed_query(self, text: str) -> list[float]:
+        return self.model.encode(
+            [text], prompt_name=self.query_prompt_name, normalize_embeddings=False
+        )[0].tolist()
+
+
+def compute_metrics(ref: set[str], selected: set[str]) -> tuple[float, float, float]:
     """Return (precision, recall, f1) for one query."""
     tp = len(ref & selected)
     precision = tp / len(selected) if selected else (1.0 if not ref else 0.0)
@@ -38,10 +62,10 @@ def compute_metrics(ref: Set[str], selected: Set[str]) -> Tuple[float, float, fl
 
 
 def build_docs(
-    tool_names: Set[str], tools_schema: Dict[str, ToolSchema]
-) -> List[Document]:
+    tool_names: set[str], tools_schema: dict[str, ToolSchema]
+) -> list[Document]:
     """Build a list of LangChain Document objects for the given tool names."""
-    docs: List[Document] = []
+    docs: list[Document] = []
     for name in tool_names:
         schema = tools_schema[name]
         page_text = get_tool_doc(name, schema)
@@ -59,28 +83,32 @@ def get_tool_doc(tool_name: str, schema: ToolSchema) -> str:
         flat_args = " | ".join(arg_strings)
     else:
         flat_args = "none"
-    doc = f"{tool_name}\n{schema.description_expanded}\nArguments: {flat_args}\nSynthetic questions: {schema.synthetic_questions}"
-    # print(doc)
+    doc = (
+        f"{tool_name}\n"
+        f"{schema.description_expanded}\n"
+        f"Arguments: {flat_args}\n"
+        f"Synthetic questions: {schema.synthetic_questions}"
+    )
     return doc
 
 
 def get_noise_tools(
-    ref_tools: Set[str],
+    ref_tools: set[str],
     count: int,
-    tools_schema: Dict[str, ToolSchema],
+    tools_schema: dict[str, ToolSchema],
     collection: Chroma,
-) -> List[str]:
+) -> list[str]:
     if count == 0:
         return []
     buffer = set()
-    result = []
+    result: list[str] = []
     for name in ref_tools:
         tool_doc = get_tool_doc(name, tools_schema[name])
         searches = collection.similarity_search_with_score(query=tool_doc, k=count)
         for doc, similarity in searches:
             buffer.add((doc.metadata["tool_name"], similarity))
     buffer = sorted(list(buffer), key=lambda x: x[1])
-    for tool_name, similarity in buffer:
+    for tool_name, _similarity in buffer:
         if tool_name not in ref_tools:
             result.append(tool_name)
     return result[:count]
@@ -103,25 +131,23 @@ def invoke_planner(query: str, llm: ChatOpenAI) -> str:
     start_idx = response_content.find("[")
     end_idx = response_content.rfind("]")
     json_str = response_content[start_idx : end_idx + 1]
-    # parsed_data = json.loads(json_str)
-    # parsed_outcome = [str(item).strip() for item in parsed_data if item]
     return json_str
 
 
-def parse_planner_subtasks(json_string: str) -> Set[str]:
+def parse_planner_subtasks(json_string: str) -> set[str]:
     result = json.loads(json_string)
-    return result
+    return set(result)
 
 
 def run_single_eval(
-    query: str,
-    ref_tools: Set[str],
-    tools_schema: Dict[str, ToolSchema],
+    ref_tools: set[str],
+    tools_schema: dict[str, ToolSchema],
     noise_level: int,
     subtask_k: int,
     collection: Chroma,
-    subtasks: Set[str],
-) -> Tuple[Set[str], float, float, float]:
+    subtasks: set[str],
+    st_embeddings: STEmbeddings,
+) -> tuple[set[str], float, float, float]:
     """Return (selected_set, precision, recall, f1) for one query using retrieval."""
     all_tool_names = set(tools_schema)
     noise_candidates = list(all_tool_names - ref_tools)
@@ -138,15 +164,16 @@ def run_single_eval(
     tmp_dir = tempfile.mkdtemp(prefix="rag_noise_")
     vectordb = Chroma.from_documents(
         documents=docs,
-        embedding=OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY),
+        embedding=st_embeddings,
         collection_name="rag_noise",
         persist_directory=tmp_dir,
     )
-    buffer: List[str] = []
+
+    buffer: list[str] = []
     for task in subtasks:
         retrieved_docs = vectordb.similarity_search(task, k=subtask_k)
         buffer += [doc.metadata["tool_name"] for doc in retrieved_docs]
-    retrieved_names: Set[str] = set(buffer)
+    retrieved_names: set[str] = set(buffer)
     precision, recall, f1 = compute_metrics(ref_tools, retrieved_names)
     shutil.rmtree(tmp_dir, ignore_errors=True)
     return retrieved_names, precision, recall, f1
@@ -163,8 +190,8 @@ def main() -> None:
     if PROGRESS_FILE.exists():
         with PROGRESS_FILE.open("r", encoding="utf-8") as f:
             progress = json.load(f)
-        completed: Set[int] = set(progress.get("completed", []))
-        detail_table: Dict[int, List[Dict]] = {
+        completed: set[int] = set(progress.get("completed", []))
+        detail_table: dict[int, list[dict]] = {
             int(k): v for k, v in progress.get("detail_table", {}).items()
         }
         for n in noise_levels:
@@ -173,10 +200,16 @@ def main() -> None:
         completed = set()
         detail_table = {n: [] for n in noise_levels}
 
+    st_model = SentenceTransformer(
+        "Alibaba-NLP/gte-Qwen2-1.5B-instruct", trust_remote_code=True
+    )
+    st_model.max_seq_length = 8192
+    st_embeddings = STEmbeddings(st_model)
+
     documents = build_docs(set(tools_schema), tools_schema)
     all_tools_vectordb = Chroma.from_documents(
         documents=documents,
-        embedding=OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY),
+        embedding=st_embeddings,
         collection_name="rag_ref_tools",
         persist_directory=tempfile.mkdtemp(prefix="rag_ref_tools_"),
     )
@@ -209,13 +242,13 @@ def main() -> None:
 
         for noise in noise_levels:
             selected_set, precision, recall, f1 = run_single_eval(
-                query=query,
                 ref_tools=ref_tools,
                 tools_schema=tools_schema,
                 noise_level=noise,
                 subtask_k=SUBTASK_K,
                 collection=all_tools_vectordb,
                 subtasks=subtasks,
+                st_embeddings=st_embeddings,
             )
             detail_table[noise].append(
                 {
