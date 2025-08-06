@@ -33,7 +33,7 @@ from schemas import ToolSchema
 
 dotenv.load_dotenv()
 
-PROGRESS_FILE = Path("tmp_llm_context_progress_expanded_alibaba.json")
+PROGRESS_FILE = Path("results/tmp_llm_context_progress_expanded_alibaba.json")
 
 
 class STEmbeddings(Embeddings):

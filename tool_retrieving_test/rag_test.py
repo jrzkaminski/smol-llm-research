@@ -28,7 +28,7 @@ from config import (
 
 dotenv.load_dotenv()
 
-PROGRESS_FILE = Path("tmp_rag_progress_expanded_alibaba.json")
+PROGRESS_FILE = Path("results/tmp_rag_progress_expanded_alibaba.json")
 
 tool_desc_string: str = ""
 
