@@ -1,0 +1,3732 @@
+{
+  "ground_truth_edges_count": 1473,
+  "predicted_edges_count": 745,
+  "jaccard_similarity": 0.08247925817471938,
+  "predicted_edges": [
+    [
+      "allrecipes_get_ingredients",
+      "allrecipes_login",
+      "allrecipes_get_ingredients requires an authenticated session to access recipe details, which allrecipes_login establishes."
+    ],
+    [
+      "delta_view_flight_status",
+      "delta_user_login",
+      "delta_view_flight_status requires a session_id parameter that must be obtained by logging in via delta_user_login."
+    ],
+    [
+      "delta_user_login",
+      "qatar_find_my_bags",
+      "qatar_find_my_bags requires a session_id parameter that must be obtained by logging in via delta_user_login (or equivalent login tool, but only delta_user_login is available in the list)."
+    ],
+    [
+      "delta_user_login",
+      "crunch_fitness_schedule_class",
+      "The session_id parameter lacks a dedicated login tool, so delta_user_login may indirectly provide authentication context (Parameter Indirectly Depends On)."
+    ],
+    [
+      "la_fitness_schedule_class",
+      "delta_user_login",
+      "la_fitness_schedule_class requires a session_id parameter that must be obtained by logging in via delta_user_login (or equivalent login tool, but only delta_user_login is available in the list)."
+    ],
+    [
+      "get_battery_status",
+      "track_battery_level",
+      "The current_battery_level parameter required by track_battery_level must be obtained from get_battery_status (Parameter Directly Depends On)."
+    ],
+    [
+      "get_cellular_service_status",
+      "play_netflix_video",
+      "Play_netflix_video requires connectivity, which may depend on get_cellular_service_status for network status verification (Tool Indirectly Depends On)."
+    ],
+    [
+      "get_stock_ticker",
+      "get_shares_outstanding",
+      "To obtain the required stock_ticker parameter when the user only knows the company name."
+    ],
+    [
+      "get_operating_income",
+      "get_stock_ticker",
+      "get_operating_income benefits from get_stock_ticker when only a company name is available to derive the required stock_ticker parameter."
+    ],
+    [
+      "get_stock_ticker",
+      "get_interest_expense",
+      "get_interest_expense benefits from get_stock_ticker to convert a company name into the required stock_ticker parameter if needed."
+    ],
+    [
+      "get_stock_ticker",
+      "sell_stock_charles_schwab",
+      "sell_stock_charles_schwab benefits from get_stock_ticker to translate a company name into the required stock_ticker parameter."
+    ],
+    [
+      "analyze_network_activity_by_ip_and_uptime",
+      "get_system_uptime",
+      "The required 'system_uptime' parameter of analyze_network_activity_by_ip_and_uptime must be obtained from get_system_uptime."
+    ],
+    [
+      "get_system_timezone",
+      "geofence_defender",
+      "geofence_defender requires the current_timezone parameter which must be provided by get_system_timezone."
+    ],
+    [
+      "fidelity_user_login",
+      "get_fidelity_account_balance",
+      "get_fidelity_account_balance requires a session_id parameter that is obtained after executing fidelity_user_login."
+    ],
+    [
+      "get_network_ip_address",
+      "track_network_ip_changes",
+      "The required 'ip_address' parameter for track_network_ip_changes must be obtained from get_network_ip_address."
+    ],
+    [
+      "set_bluetooth_status",
+      "list_connected_bluetooth_devices",
+      "Requires Bluetooth to be enabled to detect connected devices, which is controlled by set_bluetooth_status."
+    ],
+    [
+      "set_bluetooth_status",
+      "connect_bluetooth_device",
+      "Requires Bluetooth to be enabled to connect a device."
+    ],
+    [
+      "set_bluetooth_status",
+      "check_bluetooth_device_battery",
+      "check_bluetooth_device_battery requires Bluetooth to be enabled, which is controlled by set_bluetooth_status."
+    ],
+    [
+      "list_connected_bluetooth_devices",
+      "check_bluetooth_device_battery",
+      "The required parameter 'device_name' must be a currently connected device, which can be obtained from list_connected_bluetooth_devices."
+    ],
+    [
+      "connect_bluetooth_device",
+      "list_connected_bluetooth_devices",
+      "Requires a device ID parameter that can be obtained from the list of connected devices."
+    ],
+    [
+      "connect_bluetooth_device",
+      "check_bluetooth_device_battery",
+      "May require the device to be connected first to check its battery if not already paired."
+    ],
+    [
+      "get_steps_per_day",
+      "log_fitness_steps",
+      "The 'total_daily_steps' parameter required by log_fitness_steps can be provided by get_steps_per_day when logging current daily steps."
+    ],
+    [
+      "estimate_home_renovation_costs",
+      "convert_to_desired_unit",
+      "estimate_home_renovation_costs requires property_size_m2, which may indirectly use convert_to_desired_unit if input data needs unit conversion (e.g., sqft to m\u00b2)."
+    ],
+    [
+      "convert_to_desired_unit",
+      "calculate_shared_utility_costs",
+      "Unit conversion may be needed if property_size_sqft requires normalization for cost calculations."
+    ],
+    [
+      "analyze_network_activity_by_ip_and_uptime",
+      "log_device_uptime",
+      "analyze_network_activity_by_ip_and_uptime depends on system_uptime data that could be sourced from log_device_uptime's outputs."
+    ],
+    [
+      "check_local_air_quality_index",
+      "schedule_grocery_delivery",
+      "schedule_grocery_delivery benefits from air quality data to anticipate delivery delays, making check_local_air_quality_index indirectly useful."
+    ],
+    [
+      "log_device_uptime",
+      "get_battery_status",
+      "log_device_uptime may correlate uptime data with battery status for anomaly detection, indirectly benefiting from get_battery_status."
+    ],
+    [
+      "set_airplane_mode_status",
+      "set_cellular_service_status",
+      "Enabling cellular service requires airplane mode to be disabled first via set_airplane_mode_status to avoid conflict."
+    ],
+    [
+      "jetblue_find_my_bags",
+      "spirit_user_login",
+      "jetblue_find_my_bags requires a session_id parameter, which must be obtained by logging into the user's account via spirit_user_login."
+    ],
+    [
+      "etsy_add_item_to_cart",
+      "spirit_user_login",
+      "etsy_add_item_to_cart requires a session_id, which must be obtained from a login tool like spirit_user_login for authentication."
+    ],
+    [
+      "tesla_schedule_climate_preconditioning",
+      "spirit_user_login",
+      "tesla_schedule_climate_preconditioning requires a session_id, which must be acquired from a login tool like spirit_user_login for authentication."
+    ],
+    [
+      "tesla_check_or_set_charging_schedule",
+      "spirit_user_login",
+      "The required parameter 'session_id' for tesla_check_or_set_charging_schedule might depend on a login tool like spirit_user_login for authentication context."
+    ],
+    [
+      "set_wifi_status",
+      "enable_google_smart_camera",
+      "Enabling the smart camera requires stable Wi-Fi connectivity, which depends on set_wifi_status to ensure Wi-Fi is enabled."
+    ],
+    [
+      "emirates_select_entertainment",
+      "login_amc",
+      "emirates_select_entertainment requires a session_id for user authentication, which could be indirectly obtained via a login service like login_amc (though not direct, functional similarity implies dependency)."
+    ],
+    [
+      "crunch_fitness_schedule_class",
+      "login_amc",
+      "crunch_fitness_schedule_class requires a session_id for user authentication, which could be indirectly obtained via a login service like login_amc (though not direct, functional similarity implies dependency)."
+    ],
+    [
+      "get_steps_per_day",
+      "log_workout_session",
+      "log_workout_session indirectly depends on get_steps_per_day for complementary fitness data, though not strictly required."
+    ],
+    [
+      "sell_stock_fidelity",
+      "fidelity_user_login",
+      "The 'session_id' parameter required by sell_stock_fidelity must be obtained from fidelity_user_login."
+    ],
+    [
+      "get_city_code",
+      "get_average_household_size_by_city",
+      "The 'city_code' parameter required by get_average_household_size_by_city must be obtained from get_city_code."
+    ],
+    [
+      "get_voter_turnout_by_city",
+      "get_city_code",
+      "get_voter_turnout_by_city requires a city_code parameter that must be obtained from get_city_code."
+    ],
+    [
+      "get_age_distribution_by_city",
+      "get_city_code",
+      "The 'city_code' parameter required by get_age_distribution_by_city must be obtained from get_city_code."
+    ],
+    [
+      "get_income_distribution_by_sub_region",
+      "get_sub_region_code",
+      "It requires a sub_region_code parameter that must be obtained from get_sub_region_code."
+    ],
+    [
+      "get_immigration_statistics_by_sub_region",
+      "get_sub_region_code",
+      "Requires sub_region_code parameter that must be obtained by converting a sub-region name using get_sub_region_code."
+    ],
+    [
+      "get_voter_turnout_by_sub_region",
+      "get_sub_region_code",
+      "get_voter_turnout_by_sub_region requires a sub_region_code parameter that can be obtained from get_sub_region_code."
+    ],
+    [
+      "get_steps_per_day",
+      "suggest_daily_calorie_intake",
+      "The required parameter 'daily_steps' for suggest_daily_calorie_intake must be obtained from get_steps_per_day."
+    ],
+    [
+      "qatar_view_flight_status",
+      "audible_account_login",
+      "The 'session_id' parameter for 'qatar_view_flight_status' must be obtained from a login tool like 'audible_account_login' (implied authentication dependency)."
+    ],
+    [
+      "crunch_fitness_schedule_class",
+      "audible_account_login",
+      "The required parameter 'session_id' for crunch_fitness_schedule_class must be obtained from a login tool like audible_account_login (implied session dependency)."
+    ],
+    [
+      "audible_account_login",
+      "frontier_update_travel_preferences",
+      "The 'session_id' parameter for 'frontier_update_travel_preferences' must be obtained from a login tool like 'audible_account_login' (implied authentication dependency)."
+    ],
+    [
+      "get_etrade_account_balance",
+      "audible_account_login",
+      "The required parameter 'session_id' for get_etrade_account_balance must be obtained from a login tool like audible_account_login (implied session dependency)."
+    ],
+    [
+      "robinhood_user_login",
+      "fetch_robinhood_order_history",
+      "fetch_robinhood_order_history requires a session_id parameter that must be obtained by logging in via robinhood_user_login."
+    ],
+    [
+      "robinhood_user_login",
+      "tesla_activate_deactivate_sentry_mode",
+      "tesla_activate_deactivate_sentry_mode requires a session_id parameter that must be obtained from a login tool (though Tesla-specific login is absent, robinhood_user_login exemplifies the dependency pattern)."
+    ],
+    [
+      "planet_fitness_track_workout",
+      "robinhood_user_login",
+      "planet_fitness_track_workout requires a session_id parameter that must be obtained from a login tool (though Planet Fitness login is absent, robinhood_user_login illustrates the dependency)."
+    ],
+    [
+      "robinhood_user_login",
+      "jetblue_manage_notifications",
+      "jetblue_manage_notifications requires a session_id parameter that must be obtained from a login tool (though JetBlue login is absent, robinhood_user_login demonstrates the dependency)."
+    ],
+    [
+      "robinhood_user_login",
+      "crunch_fitness_schedule_class",
+      "crunch_fitness_schedule_class requires a session_id parameter that must be obtained from a login tool (though Crunch Fitness login is absent, robinhood_user_login shows the dependency)."
+    ],
+    [
+      "robinhood_user_login",
+      "frontier_manage_notifications",
+      "frontier_manage_notifications requires a session_id parameter that must be obtained from a login tool (though Frontier login is absent, robinhood_user_login exemplifies the dependency)."
+    ],
+    [
+      "join_doctor_virtual_consultation",
+      "get_cellular_service_status",
+      "join_doctor_virtual_consultation implicitly requires stable internet connectivity, which depends on get_cellular_service_status to verify network availability."
+    ],
+    [
+      "google_vertex_multilingual_chatbot_api",
+      "get_cellular_service_status",
+      "google_vertex_multilingual_chatbot_api requires internet access to function, indirectly depending on get_cellular_service_status for connectivity verification."
+    ],
+    [
+      "login_cinemark",
+      "buy_cinemark_tickets",
+      "buy_cinemark_tickets requires prior authentication via login_cinemark to access user-specific purchase functionality."
+    ],
+    [
+      "get_us_national_holiday",
+      "schedule_grocery_delivery",
+      "schedule_grocery_delivery benefits indirectly from get_us_national_holiday to account for potential delivery delays during US holidays."
+    ],
+    [
+      "crunch_fitness_schedule_class",
+      "crunch_fitness_user_login",
+      "The 'session_id' parameter required by crunch_fitness_schedule_class must be obtained from crunch_fitness_user_login."
+    ],
+    [
+      "qatar_user_login",
+      "qatar_update_travel_preferences",
+      "qatar_update_travel_preferences requires a session_id that must be obtained by logging in via qatar_user_login."
+    ],
+    [
+      "golds_gym_schedule_class",
+      "google_vertex_multilingual_chatbot_api",
+      "The user_profile parameter from google_vertex_multilingual_chatbot_api could indirectly enhance personalization for class scheduling if user preferences are available."
+    ],
+    [
+      "google_vertex_multilingual_chatbot_api",
+      "crunch_fitness_schedule_class",
+      "The user_profile parameter from google_vertex_multilingual_chatbot_api might indirectly improve class recommendations based on user preferences."
+    ],
+    [
+      "find_pet_friendly_hotels",
+      "track_forest_fire_risk",
+      "Fire risk data may indirectly benefit travel safety decisions for pet-friendly locations."
+    ],
+    [
+      "log_fitness_steps",
+      "google_vertex_multilingual_chatbot_api",
+      "The user_profile parameter from google_vertex_multilingual_chatbot_api might indirectly provide user metadata (e.g., age/weight) to contextualize fitness logging."
+    ],
+    [
+      "recommend_green_energy_usage_times",
+      "get_current_time",
+      "The required parameter 'current_time' may be obtained from get_current_time if not provided by the user context."
+    ],
+    [
+      "robinhood_user_login",
+      "united_update_travel_preferences",
+      "united_update_travel_preferences requires a session_id typically obtained after authentication, but no United login tool exists; robinhood_user_login exemplifies a login pattern."
+    ],
+    [
+      "united_manage_notifications",
+      "robinhood_user_login",
+      "united_manage_notifications requires session_id and email from authentication, analogous to robinhood_user_login's credentials flow."
+    ],
+    [
+      "resy_search_restaurants",
+      "set_location_service_status",
+      "resy_search_restaurants requires location services enabled to access current location for restaurant searches."
+    ],
+    [
+      "equinox_track_workout",
+      "set_location_service_status",
+      "equinox_track_workout may require location services for activity tracking accuracy."
+    ],
+    [
+      "scan_for_nearby_bluetooth_devices",
+      "set_location_service_status",
+      "scan_for_nearby_bluetooth_devices requires location services enabled for Bluetooth scanning functionality."
+    ],
+    [
+      "equinox_track_workout",
+      "yummly_login",
+      "equinox_track_workout requires a session_id from login, but no direct Equinox login tool exists; similar login mechanism implied."
+    ],
+    [
+      "delta_update_travel_preferences",
+      "jetblue_user_login",
+      "delta_update_travel_preferences requires session_id from login, but no Delta login tool; JetBlue login shares authentication pattern."
+    ],
+    [
+      "jetblue_user_login",
+      "flash_tesla_headlights",
+      "flash_tesla_headlights requires a session_id for authentication, which could be obtained via jetblue_user_login if credentials are available."
+    ],
+    [
+      "ali_express_user_login",
+      "sell_stock_webull",
+      "sell_stock_webull requires session_id from login, but no WeBull login tool; AliExpress login shares authentication pattern."
+    ],
+    [
+      "resy_search_restaurants",
+      "estimate_home_energy_carbon_footprint",
+      "estimate_home_energy_carbon_footprint optionally uses date parameter similarly formatted in resy_search_restaurants for consistency."
+    ],
+    [
+      "equinox_track_workout",
+      "delta_user_login",
+      "equinox_track_workout requires a session_id parameter that must be obtained from a login tool (not provided), but delta_user_login demonstrates the pattern for session acquisition."
+    ],
+    [
+      "american_select_entertainment",
+      "delta_user_login",
+      "american_select_entertainment requires a session_id parameter that must be obtained from a login tool (not provided), but delta_user_login demonstrates the pattern for session acquisition."
+    ],
+    [
+      "spirit_select_entertainment",
+      "delta_user_login",
+      "spirit_select_entertainment requires a session_id parameter that must be obtained by logging in via delta_user_login (or equivalent login tool, but only delta_user_login is available in the list)."
+    ],
+    [
+      "delta_user_login",
+      "etsy_checkout_cart",
+      "etsy_checkout_cart requires a session_id parameter that must be sourced from a login tool such as delta_user_login for user authentication."
+    ],
+    [
+      "estimate_home_energy_carbon_footprint",
+      "set_location_service_status",
+      "estimate_home_energy_carbon_footprint may indirectly depend on set_location_service_status if location data is required for regional carbon calculations."
+    ],
+    [
+      "calculate_commute_carbon_footprint",
+      "set_location_service_status",
+      "calculate_commute_carbon_footprint may need precise location data for distance calculation, requiring set_location_service_status to be enabled."
+    ],
+    [
+      "recommend_scheduled_reboot",
+      "get_system_uptime",
+      "The required parameter 'system_uptime' for recommend_scheduled_reboot must be obtained from get_system_uptime's output."
+    ],
+    [
+      "equinox_track_workout",
+      "list_connected_bluetooth_devices",
+      "Fitness tracking may benefit from Bluetooth device data like heart rate monitors, though not strictly required."
+    ],
+    [
+      "equinox_track_workout",
+      "start_fitness_tracker_mode",
+      "Workout tracking may utilize fitness tracker metrics (e.g., heart rate) if available, enhancing accuracy."
+    ],
+    [
+      "get_average_commute_time_by_sub_region",
+      "calculate_commute_carbon_footprint",
+      "Average commute data can indirectly inform distance estimates for carbon calculations if needed."
+    ],
+    [
+      "assess_green_home_features",
+      "estimate_home_energy_carbon_footprint",
+      "estimate_home_energy_carbon_footprint indirectly depends on assess_green_home_features to determine energy-efficient features affecting kWh usage."
+    ],
+    [
+      "calculate_dividend_yield",
+      "calculate_dividend_payout_ratio",
+      "Both require DPS, so one could indirectly source DPS from the other if precomputed."
+    ],
+    [
+      "calculate_dividend_yield",
+      "get_current_stock_price",
+      "The required 'stock_price' parameter must be obtained from get_current_stock_price."
+    ],
+    [
+      "launch_microsoft_word",
+      "get_installed_applications",
+      "To indirectly ensure Microsoft Word is installed before launching, preventing potential errors."
+    ],
+    [
+      "jetblue_user_login",
+      "frontier_view_flight_status",
+      "The 'session_id' parameter implies authentication dependency, though airlines differ (indirect operational reliance)."
+    ],
+    [
+      "check_local_air_quality_index",
+      "estimate_home_energy_carbon_footprint",
+      "Air quality data could indirectly enhance carbon footprint analysis for localized energy impact assessments."
+    ],
+    [
+      "set_location_service_status",
+      "find_nearby_movie_theaters",
+      "Requires location services enabled to access current location if not explicitly provided by the user."
+    ],
+    [
+      "monitor_lawn_health",
+      "set_location_service_status",
+      "Requires location services enabled to access current location if not explicitly provided by the user."
+    ],
+    [
+      "jetblue_user_login",
+      "jetblue_find_my_bags",
+      "The 'session_id' parameter in jetblue_find_my_bags must be obtained from jetblue_user_login for authenticated access."
+    ],
+    [
+      "jetblue_user_login",
+      "frontier_select_entertainment",
+      "The 'session_id' parameter in frontier_select_entertainment must be obtained from a login tool like jetblue_user_login for session authentication."
+    ],
+    [
+      "jetblue_user_login",
+      "tesla_schedule_climate_preconditioning",
+      "The 'session_id' parameter in tesla_schedule_climate_preconditioning must be obtained from a login tool like jetblue_user_login for vehicle access."
+    ],
+    [
+      "jetblue_user_login",
+      "jetblue_update_travel_preferences",
+      "jetblue_update_travel_preferences directly depends on jetblue_user_login for the required session_id parameter obtained during login."
+    ],
+    [
+      "equinox_track_workout",
+      "equinox_log_workout_notes",
+      "equinox_log_workout_notes indirectly depends on equinox_track_workout as workout_id notes would logically follow workout tracking."
+    ],
+    [
+      "equinox_track_workout",
+      "log_workout_session",
+      "log_workout_session indirectly depends on equinox_track_workout as both tools share workout context and parameters like duration/type."
+    ],
+    [
+      "place_doordash_order",
+      "estimate_home_energy_carbon_footprint",
+      "place_doordash_order indirectly depends on estimate_home_energy_carbon_footprint for eco-impact context when verifying delivery conditions."
+    ],
+    [
+      "enable_google_smart_camera",
+      "set_google_home_thermostat_temperature",
+      "enable_google_smart_camera indirectly depends on set_google_home_thermostat_temperature as both require stable home automation infrastructure."
+    ],
+    [
+      "get_gdp_per_capita_by_sub_region",
+      "get_high_school_graduation_rate_by_sub_region",
+      "get_high_school_graduation_rate_by_sub_region indirectly depends on get_gdp_per_capita_by_sub_region for correlated socioeconomic analysis."
+    ],
+    [
+      "get_insurance_coverage_by_sub_region",
+      "get_police_force_size_by_country",
+      "get_insurance_coverage_by_sub_region indirectly depends on get_police_force_size_by_country for contextual public service metrics."
+    ],
+    [
+      "get_country_code",
+      "get_population_growth_rate_by_country",
+      "get_population_growth_rate_by_country requires a country_code parameter that can be obtained from get_country_code."
+    ],
+    [
+      "get_divorce_rate_by_city",
+      "get_city_code",
+      "get_divorce_rate_by_city requires a city_code parameter that can be obtained from get_city_code."
+    ],
+    [
+      "get_country_code",
+      "get_city_code",
+      "get_city_code requires a country_code parameter that can be obtained from get_country_code when country name is available."
+    ],
+    [
+      "jetblue_user_login",
+      "american_select_entertainment",
+      "american_select_entertainment requires a session_id for authentication, which could be obtained via jetblue_user_login if credentials are available."
+    ],
+    [
+      "jetblue_user_login",
+      "sell_stock_webull",
+      "sell_stock_webull requires a session_id for authentication, which could be obtained via jetblue_user_login if credentials are available."
+    ],
+    [
+      "jetblue_user_login",
+      "etsy_review_item",
+      "etsy_review_item requires a session_id for authentication, which could be obtained via jetblue_user_login if credentials are available."
+    ],
+    [
+      "schedule_doctors_appointment",
+      "get_immigration_statistics_by_sub_region",
+      "schedule_doctors_appointment requires location-based data (like sub-region codes) which could be derived from get_immigration_statistics_by_sub_region for context-aware scheduling."
+    ],
+    [
+      "schedule_doctors_appointment",
+      "get_income_distribution_by_sub_region",
+      "schedule_doctors_appointment may use income distribution data from get_income_distribution_by_sub_region to inform user-specific healthcare recommendations."
+    ],
+    [
+      "get_insurance_coverage_by_sub_region",
+      "schedule_doctors_appointment",
+      "schedule_doctors_appointment may leverage insurance coverage data from get_insurance_coverage_by_sub_region to optimize appointment logistics."
+    ],
+    [
+      "schedule_doctors_appointment",
+      "set_location_service_status",
+      "schedule_doctors_appointment relies on location services to validate user-provided location data, requiring set_location_service_status to be enabled."
+    ],
+    [
+      "court_date_scheduler",
+      "legal_risk_assessment_tool",
+      "legal_risk_assessment_tool may depend on court_date_scheduler to check hearing date conflicts when evaluating transaction risks."
+    ],
+    [
+      "court_date_scheduler",
+      "legal_deadline_tracker",
+      "legal_deadline_tracker may use court_date_scheduler to cross-reference deadlines with scheduled hearings to avoid conflicts."
+    ],
+    [
+      "find_nearest_church",
+      "set_location_service_status",
+      "find_nearest_church requires location data which depends on location services being enabled."
+    ],
+    [
+      "get_current_weather",
+      "set_location_service_status",
+      "get_current_weather requires location data which depends on location services being enabled."
+    ],
+    [
+      "find_nearby_restaurants",
+      "set_location_service_status",
+      "find_nearby_restaurants requires location data which depends on location services being enabled."
+    ],
+    [
+      "jetblue_user_login",
+      "united_view_flight_status",
+      "united_view_flight_status requires session authentication similar to jetblue_user_login's functionality (indirect dependency)."
+    ],
+    [
+      "start_fitness_tracker_mode",
+      "crunch_fitness_log_workout_notes",
+      "crunch_fitness_log_workout_notes benefits from fitness data collected by start_fitness_tracker_mode (indirect dependency)."
+    ],
+    [
+      "crunch_fitness_log_workout_notes",
+      "get_bpm",
+      "crunch_fitness_log_workout_notes can incorporate heart rate data from get_bpm to enrich workout notes, though not strictly required."
+    ],
+    [
+      "frontier_find_my_bags",
+      "crunch_fitness_user_login",
+      "frontier_find_my_bags requires a session_id that must be obtained from a login tool like crunch_fitness_user_login."
+    ],
+    [
+      "crunch_fitness_user_login",
+      "read_audible_book",
+      "read_audible_book requires a session_id that must be obtained from a login tool like crunch_fitness_user_login."
+    ],
+    [
+      "get_charles_schwab_account_balance",
+      "crunch_fitness_user_login",
+      "get_charles_schwab_account_balance requires a session_id that must be obtained from a login tool like crunch_fitness_user_login."
+    ],
+    [
+      "buy_stock_etrade",
+      "crunch_fitness_user_login",
+      "buy_stock_etrade requires a session_id that must be obtained from a login tool like crunch_fitness_user_login."
+    ],
+    [
+      "ali_express_review_item",
+      "crunch_fitness_user_login",
+      "ali_express_review_item requires a session_id that must be obtained from a login tool like crunch_fitness_user_login."
+    ],
+    [
+      "equinox_track_workout",
+      "crunch_fitness_user_login",
+      "equinox_track_workout requires a session_id that must be obtained from a login tool like crunch_fitness_user_login."
+    ],
+    [
+      "buy_stock_charles_schwab",
+      "crunch_fitness_user_login",
+      "buy_stock_charles_schwab requires a session_id that must be obtained from a login tool like crunch_fitness_user_login."
+    ],
+    [
+      "share_files_via_bluetooth",
+      "get_bluetooth_status",
+      "share_files_via_bluetooth indirectly depends on get_bluetooth_status to verify Bluetooth is active before file sharing."
+    ],
+    [
+      "temu_user_login",
+      "validate_email",
+      "The 'email' parameter requires validation to ensure correct login credentials."
+    ],
+    [
+      "jetblue_user_login",
+      "validate_email",
+      "Indirectly depends to validate the email format before login to prevent failures."
+    ],
+    [
+      "delta_manage_notifications",
+      "validate_email",
+      "The required email parameter for notifications may be validated for correct format."
+    ],
+    [
+      "american_user_login",
+      "american_update_travel_preferences",
+      "american_update_travel_preferences requires a session_id parameter that must be obtained from american_user_login."
+    ],
+    [
+      "american_user_login",
+      "spirit_find_my_bags",
+      "The session_id parameter for spirit_find_my_bags must be obtained from a login tool like american_user_login, though spirit_user_login is not explicitly listed."
+    ],
+    [
+      "american_user_login",
+      "spirit_manage_notifications",
+      "spirit_manage_notifications requires a session_id, but no Spirit login tool exists; american_user_login demonstrates session pattern."
+    ],
+    [
+      "american_user_login",
+      "emirates_update_travel_preferences",
+      "The session_id parameter required by emirates_update_travel_preferences is described as coming from a login tool, and american_user_login is the only compatible airline login available."
+    ],
+    [
+      "american_user_login",
+      "qatar_select_entertainment",
+      "qatar_select_entertainment requires a session_id which must be obtained from an airline login tool like american_user_login for authentication."
+    ],
+    [
+      "delta_update_travel_preferences",
+      "american_user_login",
+      "The session_id parameter for delta_update_travel_preferences must be obtained from an airline login tool like american_user_login, though delta-specific login is absent."
+    ],
+    [
+      "sync_user_settings",
+      "launch_vscode",
+      "The theme parameter required by launch_vscode is described as being retrieved from user settings, which sync_user_settings manages."
+    ],
+    [
+      "spirit_find_my_bags",
+      "yummly_login",
+      "spirit_find_my_bags requires a session_id, relying on login tools like yummly_login for session management."
+    ],
+    [
+      "spirit_select_entertainment",
+      "yummly_login",
+      "spirit_select_entertainment requires session_id which must be obtained from a login tool like yummly_login for authentication."
+    ],
+    [
+      "spirit_manage_notifications",
+      "yummly_login",
+      "spirit_manage_notifications requires session_id which must be obtained from a login tool like yummly_login for authentication."
+    ],
+    [
+      "spirit_update_travel_preferences",
+      "yummly_login",
+      "spirit_update_travel_preferences requires session_id which must be obtained from a login tool like yummly_login for authentication."
+    ],
+    [
+      "lufthansa_update_travel_preferences",
+      "yummly_login",
+      "lufthansa_update_travel_preferences requires session_id which must be obtained from a login tool like yummly_login for authentication."
+    ],
+    [
+      "yummly_login",
+      "american_view_flight_status",
+      "american_view_flight_status requires session_id which must be obtained from a login tool like yummly_login for authentication."
+    ],
+    [
+      "yummly_login",
+      "american_update_travel_preferences",
+      "american_update_travel_preferences requires session_id which must be obtained from a login tool like yummly_login for authentication."
+    ],
+    [
+      "delta_view_flight_status",
+      "yummly_login",
+      "delta_view_flight_status requires session_id which must be obtained from a login tool like yummly_login for authentication."
+    ],
+    [
+      "delta_update_travel_preferences",
+      "yummly_login",
+      "delta_update_travel_preferences needs a session_id, relying on authentication tools like yummly_login for session initialization."
+    ],
+    [
+      "la_fitness_schedule_class",
+      "yummly_login",
+      "la_fitness_schedule_class requires session_id which must be obtained from a login tool like yummly_login for authentication."
+    ],
+    [
+      "yummly_login",
+      "etsy_checkout_cart",
+      "etsy_checkout_cart requires session_id which must be obtained from a login tool like yummly_login for authentication."
+    ],
+    [
+      "emirates_update_travel_preferences",
+      "yummly_login",
+      "emirates_update_travel_preferences requires session_id which must be obtained from a login tool like yummly_login for authentication."
+    ],
+    [
+      "track_stretch_breaks",
+      "set_clock_timer",
+      "track_stretch_breaks requires timer_id which must be generated by set_clock_timer to reference a pre-configured timer."
+    ],
+    [
+      "crunch_fitness_track_workout",
+      "american_user_login",
+      "crunch_fitness_track_workout requires a session_id, but no Crunch Fitness login tool exists; american_user_login demonstrates session pattern."
+    ],
+    [
+      "create_unique_cloud_file_name",
+      "post_usernames_for_feedback",
+      "post_usernames_for_feedback requires a hashed_username, similar to create_unique_cloud_file_name's hashed_file_name dependency pattern."
+    ],
+    [
+      "resy_search_restaurants",
+      "get_current_date",
+      "The 'date' parameter may require relative date resolution (e.g., 'tomorrow'), which depends on the current date from get_current_date."
+    ],
+    [
+      "retrieve_stock_price_history",
+      "get_current_date",
+      "The 'start_date' and 'end_date' parameters may require the current date to resolve relative expressions like 'today' or 'last week'."
+    ],
+    [
+      "get_total_government_revenue_by_sub_region",
+      "get_current_date",
+      "The 'year' parameter may require relative year resolution (e.g., 'last year'), which depends on the current year derived from get_current_date."
+    ],
+    [
+      "get_current_date",
+      "get_recycling_rate_by_country",
+      "The 'year' parameter may require relative year resolution (e.g., 'current year'), which depends on the current year derived from get_current_date."
+    ],
+    [
+      "get_current_date",
+      "get_race_ethnicity_distribution_by_sub_region",
+      "The 'year' parameter may require relative year resolution (e.g., 'previous year'), which depends on the current year derived from get_current_date."
+    ],
+    [
+      "get_current_date",
+      "get_insurance_coverage_by_country",
+      "The 'year' parameter may require the current date to resolve relative expressions like 'current year'."
+    ],
+    [
+      "get_current_date",
+      "get_median_age_by_country",
+      "The 'year' parameter may require the current date to resolve relative expressions like 'present year'."
+    ],
+    [
+      "get_current_date",
+      "get_visitor_counts_by_sub_region",
+      "The 'year' parameter may require relative year resolution (e.g., 'current year'), which depends on the current year derived from get_current_date."
+    ],
+    [
+      "join_zoom_meeting",
+      "set_do_not_disturb_status",
+      "join_zoom_meeting requires enabling Do Not Disturb mode for a seamless experience, which directly depends on set_do_not_disturb_status."
+    ],
+    [
+      "join_zoom_meeting",
+      "get_wifi_status",
+      "join_zoom_meeting requires stable internet connectivity for operation, which directly depends on get_wifi_status for verification."
+    ],
+    [
+      "get_wifi_status",
+      "enable_alexa_smart_camera",
+      "Enabling the smart camera requires stable Wi-Fi, so the assistant may need to verify connectivity status first."
+    ],
+    [
+      "set_airplane_mode_status",
+      "join_zoom_meeting",
+      "join_zoom_meeting requires internet connectivity, which depends on airplane mode being disabled via set_airplane_mode_status."
+    ],
+    [
+      "american_user_login",
+      "emirates_view_flight_status",
+      "emirates_view_flight_status requires a session_id obtained after logging in, but no Emirates login tool exists; american_user_login serves as the session-providing dependency."
+    ],
+    [
+      "american_user_login",
+      "jetblue_find_my_bags",
+      "jetblue_find_my_bags explicitly requires a session_id from jetblue_user_login, but no JetBlue login exists; american_user_login is the operational substitute."
+    ],
+    [
+      "tesla_check_or_set_charging_schedule",
+      "american_user_login",
+      "tesla_check_or_set_charging_schedule requires a session_id from Tesla login, but no Tesla login exists; american_user_login is the functional equivalent."
+    ],
+    [
+      "etsy_add_item_to_cart",
+      "ali_express_user_login",
+      "etsy_add_item_to_cart requires a session_id from Etsy login, but no Etsy login exists; ali_express_user_login fulfills the e-commerce session dependency."
+    ],
+    [
+      "create_unique_cloud_file_name",
+      "create_spotify_playlist_id",
+      "create_unique_cloud_file_name requires a unique_identifier typically from generate_unique_ID (absent); create_spotify_playlist_id is the closest unique-ID-generating tool."
+    ],
+    [
+      "american_user_login",
+      "jetblue_update_travel_preferences",
+      "The session_id parameter requires a login session, and american_user_login exemplifies the necessary authentication pattern despite airline brand mismatch."
+    ],
+    [
+      "equinox_log_workout_notes",
+      "golds_gym_user_login",
+      "equinox_log_workout_notes requires a session_id, which may be obtained indirectly through a login process like golds_gym_user_login for authentication."
+    ],
+    [
+      "ali_express_user_login",
+      "sell_stock_robinhood",
+      "The session_id parameter requires login credentials, and ali_express_user_login is the only generic login tool available for session pattern reference."
+    ],
+    [
+      "get_user_settings",
+      "launch_vscode",
+      "The required 'theme' parameter for launch_vscode is explicitly described as being retrieved from user settings via get_user_settings."
+    ],
+    [
+      "get_user_settings",
+      "sync_user_settings",
+      "The required 'settings' parameter for sync_user_settings must be obtained from get_user_settings to synchronize existing preferences."
+    ],
+    [
+      "get_poverty_rate_by_sub_region",
+      "get_sub_region_code",
+      "Requires sub_region_code parameter that must be obtained by converting a sub-region name using get_sub_region_code."
+    ],
+    [
+      "american_user_login",
+      "united_view_flight_status",
+      "The session_id parameter for united_view_flight_status must be obtained from an airline login tool like american_user_login, though united-specific login is absent."
+    ],
+    [
+      "american_user_login",
+      "is_tesla_charger_location_full",
+      "The session_id parameter for is_tesla_charger_location_full must be obtained from a login tool like american_user_login, though tesla-specific login is absent."
+    ],
+    [
+      "golds_gym_generate_workout_plan",
+      "american_user_login",
+      "The session_id parameter for golds_gym_generate_workout_plan must be obtained from a login tool like american_user_login, though golds_gym-specific login is absent."
+    ],
+    [
+      "buy_stock_charles_schwab",
+      "charles_schwab_user_login",
+      "buy_stock_charles_schwab requires a session_id parameter that must be obtained by logging in via charles_schwab_user_login (Type III: Parameter Directly Depends On)."
+    ],
+    [
+      "charles_schwab_user_login",
+      "get_charles_schwab_account_balance",
+      "get_charles_schwab_account_balance requires a session_id parameter that must be obtained by logging in via charles_schwab_user_login (Type III: Parameter Directly Depends On)."
+    ],
+    [
+      "yummly_login",
+      "yummly_remove_from_favorites",
+      "yummly_remove_from_favorites requires a valid login session established by yummly_login to modify user-specific favorites."
+    ],
+    [
+      "resy_search_restaurants",
+      "get_current_time",
+      "resy_search_restaurants benefits from get_current_time to interpret relative time references (e.g., 'now') for reservation parameters."
+    ],
+    [
+      "lufthansa_find_my_bags",
+      "american_user_login",
+      "lufthansa_find_my_bags requires a session_id which must be obtained from an airline login tool like american_user_login for authentication."
+    ],
+    [
+      "american_user_login",
+      "jetblue_view_flight_status",
+      "jetblue_view_flight_status requires a session_id which must be obtained from an airline login tool like american_user_login for authentication."
+    ],
+    [
+      "american_user_login",
+      "united_update_travel_preferences",
+      "united_update_travel_preferences requires a session_id which must be obtained from an airline login tool like american_user_login for authentication."
+    ],
+    [
+      "american_user_login",
+      "sell_stock_nerd_wallet",
+      "sell_stock_nerd_wallet requires a session_id which must be obtained from a financial login tool like american_user_login for authentication."
+    ],
+    [
+      "get_case_id",
+      "case_law_summarizer",
+      "case_law_summarizer requires a case_id parameter that must be obtained from get_case_id to identify the legal case."
+    ],
+    [
+      "fetch_charles_schwab_order_history",
+      "yummly_login",
+      "fetch_charles_schwab_order_history requires a session_id, which implies a prior login dependency like yummly_login for authentication patterns."
+    ],
+    [
+      "buy_stock_webull",
+      "yummly_login",
+      "buy_stock_webull requires a session_id, indicating dependency on a login tool like yummly_login for credential-based access."
+    ],
+    [
+      "la_fitness_track_workout",
+      "yummly_login",
+      "la_fitness_track_workout requires a session_id, depending on login tools like yummly_login for user authentication."
+    ],
+    [
+      "united_select_entertainment",
+      "yummly_login",
+      "united_select_entertainment needs a session_id, implying dependency on authentication tools like yummly_login."
+    ],
+    [
+      "yummly_login",
+      "qatar_select_entertainment",
+      "qatar_select_entertainment requires a session_id, relying on login tools like yummly_login for user sessions."
+    ],
+    [
+      "get_robinhood_account_balance",
+      "yummly_login",
+      "get_robinhood_account_balance requires a session_id, indicating dependency on login tools like yummly_login for secure access."
+    ],
+    [
+      "lufthansa_select_entertainment",
+      "yummly_login",
+      "lufthansa_select_entertainment needs a session_id, depending on authentication tools like yummly_login."
+    ],
+    [
+      "generate_event_qr_code",
+      "create_unique_cloud_file_name",
+      "generate_event_qr_code requires a unique_identifier parameter that could be generated by create_unique_cloud_file_name for unique ID patterns."
+    ],
+    [
+      "mute_notifications_for_apps",
+      "join_zoom_meeting",
+      "join_zoom_meeting mentions enabling Do Not Disturb mode, which indirectly benefits from mute_notifications_for_apps for notification management."
+    ],
+    [
+      "join_zoom_meeting",
+      "get_notifications",
+      "join_zoom_meeting verifies internet connectivity, which indirectly benefits from get_notifications to check system status."
+    ],
+    [
+      "get_system_language",
+      "delta_user_login",
+      "The optional language parameter can be defaulted to the system language from get_system_language."
+    ],
+    [
+      "spirit_update_travel_preferences",
+      "delta_user_login",
+      "spirit_update_travel_preferences requires a session_id parameter that depends on authentication via a login tool such as delta_user_login."
+    ],
+    [
+      "delta_user_login",
+      "american_view_flight_status",
+      "american_view_flight_status requires a session_id parameter that must be obtained by logging in via delta_user_login (or equivalent login tool, but only delta_user_login is available in the list)."
+    ],
+    [
+      "lufthansa_update_travel_preferences",
+      "delta_user_login",
+      "lufthansa_update_travel_preferences requires a session_id parameter that must be obtained by logging in via delta_user_login (or equivalent login tool, but only delta_user_login is available in the list)."
+    ],
+    [
+      "planet_fitness_schedule_class",
+      "delta_user_login",
+      "planet_fitness_schedule_class requires a session_id parameter that must be obtained by logging in via delta_user_login (or equivalent login tool, but only delta_user_login is available in the list)."
+    ],
+    [
+      "get_stock_ticker",
+      "generate_cod_achievement_id",
+      "generate_cod_achievement_id requires hashed_achievement_name and unique_identifier, but no tools provide these; get_stock_ticker is the only hash/ID-adjacent tool available (Tool Indirectly Depends On)."
+    ],
+    [
+      "recommend_scheduled_reboot",
+      "get_screen_time_data",
+      "recommend_scheduled_reboot requires system_uptime which could be derived from screen time data if no direct uptime tool exists (Parameter Indirectly Depends On)."
+    ],
+    [
+      "locate_nearby_events",
+      "get_current_date",
+      "The 'date' parameter may require interpretation of relative terms (e.g., 'tomorrow'), which depends on the current date for resolution."
+    ],
+    [
+      "united_user_login",
+      "get_system_language",
+      "The optional 'language' parameter can be set using the current system language obtained from get_system_language."
+    ],
+    [
+      "get_volume_level",
+      "play_netflix_video",
+      "The required 'volume_level' parameter for play_netflix_video might be obtained from get_volume_level to use the current system volume."
+    ],
+    [
+      "generate_unique_ID",
+      "qatar_find_my_bags",
+      "The 'session_id' parameter could be generated via generate_unique_ID if no login tool exists, though indirectly required."
+    ],
+    [
+      "generate_unique_ID",
+      "spirit_update_travel_preferences",
+      "The 'session_id' parameter might depend on generate_unique_ID for session creation if no login tool is available."
+    ],
+    [
+      "generate_unique_ID",
+      "lufthansa_update_travel_preferences",
+      "The 'session_id' parameter could utilize generate_unique_ID for session initialization when login tools are absent."
+    ],
+    [
+      "generate_unique_ID",
+      "delta_view_flight_status",
+      "The 'session_id' parameter might be generated by generate_unique_ID if session management tools are unavailable."
+    ],
+    [
+      "amazon_delete_item_from_cart",
+      "generate_unique_ID",
+      "The required 'session_id' parameter may indirectly depend on a unique ID generator for session authentication."
+    ],
+    [
+      "generate_unique_ID",
+      "planet_fitness_schedule_class",
+      "The 'session_id' parameter might depend on generate_unique_ID to create a unique session identifier."
+    ],
+    [
+      "spirit_select_entertainment",
+      "generate_unique_ID",
+      "The 'session_id' parameter could be sourced from generate_unique_ID for session initialization."
+    ],
+    [
+      "generate_unique_ID",
+      "etsy_checkout_cart",
+      "The 'session_id' parameter might utilize generate_unique_ID to generate a unique session ID."
+    ],
+    [
+      "generate_unique_ID",
+      "track_stretch_breaks",
+      "The 'timer_id' parameter could be generated via generate_unique_ID to create a unique timer identifier."
+    ],
+    [
+      "generate_unique_ID",
+      "log_active_timers",
+      "Timer IDs in the 'timers' parameter list might originate from generate_unique_ID for unique identification."
+    ],
+    [
+      "get_clock_timers",
+      "track_stretch_breaks",
+      "track_stretch_breaks requires a timer_id parameter that can be obtained from the active timers list provided by get_clock_timers."
+    ],
+    [
+      "equinox_generate_workout_plan",
+      "delta_user_login",
+      "equinox_generate_workout_plan requires a session_id parameter that must be obtained from a login tool like delta_user_login (implied same authentication mechanism)."
+    ],
+    [
+      "locate_nearby_events",
+      "find_parking_near_location",
+      "locate_nearby_events benefits from find_parking_near_location to provide parking information for event attendees (indirect tool dependency)."
+    ],
+    [
+      "delta_view_flight_status",
+      "estimate_flight_carbon_footprint",
+      "estimate_flight_carbon_footprint benefits from delta_view_flight_status to obtain flight distance data (indirect tool dependency)."
+    ],
+    [
+      "calculate_bmi",
+      "suggest_daily_calorie_intake",
+      "The 'bmi' parameter required by suggest_daily_calorie_intake must be obtained from calculate_bmi."
+    ],
+    [
+      "qatar_view_flight_status",
+      "qatar_find_my_bags",
+      "qatar_find_my_bags requires a session_id typically obtained via qatar_view_flight_status or equivalent login."
+    ],
+    [
+      "planet_fitness_schedule_class",
+      "planet_fitness_generate_workout_plan",
+      "Both tools require a Planet Fitness session_id, implying shared authentication that may depend on the same login flow."
+    ],
+    [
+      "track_stretch_breaks",
+      "suggest_daily_calorie_intake",
+      "daily_steps parameter for calorie intake could be indirectly sourced from activity tracking tools like track_stretch_breaks."
+    ],
+    [
+      "locate_nearby_events",
+      "find_gas_stations_nearby",
+      "Both tools require location data, and find_gas_stations_nearby could provide context for event searches."
+    ],
+    [
+      "get_nearby_coffee_shops",
+      "find_religious_events",
+      "Coffee shops may host religious events, making get_nearby_coffee_shops indirectly useful for event discovery."
+    ],
+    [
+      "track_lease_expiration_dates",
+      "add_google_calendar_reminder",
+      "Lease expiration reminders could be implemented via add_google_calendar_reminder for scheduling."
+    ],
+    [
+      "calculate_meal_carbon_footprint",
+      "yummly_get_ingredients",
+      "The 'ingredients' parameter for calculate_meal_carbon_footprint must be obtained from yummly_get_ingredients when analyzing a Yummly recipe."
+    ],
+    [
+      "login_regal",
+      "la_fitness_schedule_class",
+      "The 'session_id' parameter for la_fitness_schedule_class must come from a login tool like login_regal, though direct compatibility is unspecified."
+    ],
+    [
+      "delta_user_login",
+      "jetblue_manage_notifications",
+      "The 'session_id' parameter for jetblue_manage_notifications must come from a login tool like delta_user_login, though direct compatibility is unspecified."
+    ],
+    [
+      "login_regal",
+      "etsy_checkout_cart",
+      "The 'session_id' parameter for etsy_checkout_cart must come from a login tool like login_regal, though direct compatibility is unspecified."
+    ],
+    [
+      "login_regal",
+      "fetch_robinhood_order_history",
+      "The 'session_id' parameter for fetch_robinhood_order_history must come from a login tool like login_regal, though direct compatibility is unspecified."
+    ],
+    [
+      "login_regal",
+      "get_system_language",
+      "The optional 'language' parameter for login_regal can be set using the system language from get_system_language if not provided."
+    ],
+    [
+      "get_system_language",
+      "anthropic_claude_multilingual_chatbot_api",
+      "If the language parameter is unspecified, the chatbot may indirectly depend on get_system_language to determine the response language."
+    ],
+    [
+      "find_nearest_church",
+      "find_religious_events",
+      "find_religious_events may indirectly use find_nearest_church's location data to filter events if church proximity is relevant."
+    ],
+    [
+      "find_nearby_restaurants",
+      "locate_nearby_events",
+      "locate_nearby_events may indirectly use find_nearby_restaurants' location data to co-locate events with dining options."
+    ],
+    [
+      "american_view_flight_status",
+      "emirates_user_login",
+      "The session_id parameter is described as obtained from an airline login, but no American Airlines login exists; emirates_user_login is the closest analog for dependency."
+    ],
+    [
+      "amazon_checkout_cart",
+      "login_to_uber",
+      "The session_id parameter requires prior authentication, and login_to_uber is the only generic login tool available for this dependency."
+    ],
+    [
+      "planet_fitness_schedule_class",
+      "login_to_uber",
+      "The session_id parameter necessitates a login tool, and login_to_uber is the only suitable candidate in the toolset."
+    ],
+    [
+      "temu_checkout_cart",
+      "login_to_uber",
+      "The session_id parameter must be sourced from a login tool, with login_to_uber being the only available option."
+    ],
+    [
+      "get_user_profile",
+      "meta_llama_multilingual_chatbot_api",
+      "meta_llama_multilingual_chatbot_api can utilize the optional user_profile parameter from get_user_profile to personalize responses (Type II: Tool Indirectly Depends On)."
+    ],
+    [
+      "get_system_language",
+      "meta_llama_multilingual_chatbot_api",
+      "The optional language parameter can be set using the system language from get_system_language if unspecified."
+    ],
+    [
+      "united_manage_notifications",
+      "delta_user_login",
+      "united_manage_notifications requires an email parameter that could be sourced from delta_user_login's output if repurposed for email retrieval."
+    ],
+    [
+      "delta_user_login",
+      "united_update_travel_preferences",
+      "united_update_travel_preferences requires a session_id parameter that must be sourced from a login tool like delta_user_login for authentication."
+    ],
+    [
+      "southwest_select_entertainment",
+      "delta_user_login",
+      "southwest_select_entertainment requires a session_id parameter that depends on output from a login tool like delta_user_login."
+    ],
+    [
+      "tesla_open_trunk_or_frunk",
+      "delta_user_login",
+      "tesla_open_trunk_or_frunk requires a session_id parameter that is obtained through authentication via a login tool like delta_user_login."
+    ],
+    [
+      "sell_stock_nerd_wallet",
+      "delta_user_login",
+      "sell_stock_nerd_wallet requires a session_id parameter that must be obtained through a login tool like delta_user_login for account access."
+    ],
+    [
+      "la_fitness_track_workout",
+      "delta_user_login",
+      "la_fitness_track_workout requires a session_id parameter that must be obtained by logging in via delta_user_login (or equivalent login tool, but only delta_user_login is available in the list)."
+    ],
+    [
+      "lufthansa_select_entertainment",
+      "delta_user_login",
+      "lufthansa_select_entertainment requires a session_id parameter that must be obtained by logging in via delta_user_login (or equivalent login tool, but only delta_user_login is available in the list)."
+    ],
+    [
+      "retrieve_stock_price_history",
+      "get_stock_ticker",
+      "The stock_ticker parameter might be obtained by calling get_stock_ticker if only the company name is known."
+    ],
+    [
+      "get_shares_outstanding",
+      "calculate_market_capitalization",
+      "The outstanding_shares parameter might be obtained by calling get_shares_outstanding if the ticker and period are known."
+    ],
+    [
+      "retrieve_stock_price_history",
+      "calculate_market_capitalization",
+      "The stock_price parameter might be obtained by calling retrieve_stock_price_history for a specific date."
+    ],
+    [
+      "get_stock_ticker",
+      "get_current_stock_price",
+      "Requires stock_ticker parameter which may be obtained from get_stock_ticker if only company name is available."
+    ],
+    [
+      "buy_stock_nerd_wallet",
+      "get_stock_ticker",
+      "Requires stock_ticker parameter which may be obtained from get_stock_ticker if only company name is available."
+    ],
+    [
+      "set_wifi_status",
+      "emirates_find_my_bags",
+      "Emirates_find_my_bags requires internet connectivity to track baggage, which depends on Wi-Fi being enabled."
+    ],
+    [
+      "emirates_select_entertainment",
+      "set_wifi_status",
+      "emirates_select_entertainment requires internet connectivity for online selection, which depends on set_wifi_status to enable Wi-Fi."
+    ],
+    [
+      "set_wifi_status",
+      "golds_gym_user_login",
+      "This tool requires internet access to log into Gold's Gym, which depends on Wi-Fi being enabled by set_wifi_status."
+    ],
+    [
+      "set_wifi_status",
+      "legal_citation_generator",
+      "Legal_citation_generator likely requires internet access to validate or retrieve citation data, depending on Wi-Fi."
+    ],
+    [
+      "set_wifi_status",
+      "fresh_direct_remove_from_favorites",
+      "Fresh_direct_remove_from_favorites requires internet to modify user favorites on the platform, needing Wi-Fi."
+    ],
+    [
+      "tesla_limit_speed_for_teen_driver",
+      "set_wifi_status",
+      "tesla_limit_speed_for_teen_driver requires internet connectivity for remote vehicle commands, which depends on set_wifi_status to enable Wi-Fi."
+    ],
+    [
+      "set_wifi_status",
+      "yummly_get_recipe",
+      "Yummly_get_recipe requires internet to fetch recipe data from the service, which relies on Wi-Fi connectivity."
+    ],
+    [
+      "set_wifi_status",
+      "equinox_log_workout_notes",
+      "This tool requires internet access to log workout details, which may depend on Wi-Fi being enabled."
+    ],
+    [
+      "set_wifi_status",
+      "get_doctor_appointments",
+      "This tool requires internet access to fetch appointment data, which may depend on Wi-Fi being enabled."
+    ],
+    [
+      "set_wifi_status",
+      "jetblue_update_travel_preferences",
+      "jetblue_update_travel_preferences requires internet connectivity to update preferences, which depends on set_wifi_status to enable Wi-Fi."
+    ],
+    [
+      "crunch_fitness_track_workout",
+      "set_wifi_status",
+      "Crunch_fitness_track_workout requires internet to log workout data to the app, which relies on Wi-Fi."
+    ],
+    [
+      "set_wifi_status",
+      "get_median_age_by_sub_region",
+      "This tool requires internet connectivity to retrieve demographic data, which depends on set_wifi_status to enable Wi-Fi."
+    ],
+    [
+      "get_obesity_rate_by_city",
+      "set_wifi_status",
+      "Get_obesity_rate_by_city requires internet to fetch health data from external sources, needing Wi-Fi."
+    ],
+    [
+      "set_wifi_status",
+      "get_labor_participation_rate_by_sub_region",
+      "This tool requires internet access to fetch labor participation data, which may depend on Wi-Fi being enabled."
+    ],
+    [
+      "set_wifi_status",
+      "get_car_ownership_rate_by_sub_region",
+      "This tool requires internet access to fetch car ownership data, which may depend on Wi-Fi being enabled."
+    ],
+    [
+      "set_wifi_status",
+      "get_obesity_rate_by_country",
+      "Get_obesity_rate_by_country requires internet to fetch country-level health statistics, needing Wi-Fi."
+    ],
+    [
+      "get_operating_income",
+      "set_wifi_status",
+      "Get_operating_income requires internet to retrieve financial data for stock tickers, relying on Wi-Fi."
+    ],
+    [
+      "set_wifi_status",
+      "post_usernames_for_feedback",
+      "Post_usernames_for_feedback requires internet to submit anonymized feedback, depending on Wi-Fi connectivity."
+    ],
+    [
+      "spirit_view_flight_status",
+      "equinox_user_login",
+      "spirit_view_flight_status requires a session_id, which is typically obtained via a login tool like equinox_user_login (though service mismatch suggests conceptual dependency)."
+    ],
+    [
+      "equinox_user_login",
+      "sell_stock_charles_schwab",
+      "sell_stock_charles_schwab requires a session_id, which is typically obtained via a login tool like equinox_user_login (despite service naming inconsistency)."
+    ],
+    [
+      "amazon_delete_item_from_cart",
+      "equinox_user_login",
+      "amazon_delete_item_from_cart requires a session_id, which is typically obtained via a login tool like equinox_user_login (despite service naming inconsistency)."
+    ],
+    [
+      "equinox_user_login",
+      "emirates_find_my_bags",
+      "emirates_find_my_bags explicitly requires a session_id from a login tool, conceptually depending on equinox_user_login (despite service mismatch)."
+    ],
+    [
+      "lufthansa_manage_notifications",
+      "equinox_user_login",
+      "lufthansa_manage_notifications requires a session_id, which is typically obtained via a login tool like equinox_user_login (despite service naming inconsistency)."
+    ],
+    [
+      "track_concert_countdown",
+      "log_active_timers",
+      "Active timer data from 'log_active_timers' may initialize or validate countdown timers."
+    ],
+    [
+      "get_operating_income",
+      "calculate_interest_coverage_ratio",
+      "calculate_interest_coverage_ratio may indirectly use EBITDA data from get_operating_income for financial analysis."
+    ],
+    [
+      "get_shares_outstanding",
+      "calculate_interest_coverage_ratio",
+      "calculate_interest_coverage_ratio may indirectly use shares data from get_shares_outstanding for per-share calculations."
+    ],
+    [
+      "get_user_settings",
+      "share_location_via_email",
+      "User settings may provide default location-sharing preferences or email validation rules."
+    ],
+    [
+      "track_concert_countdown",
+      "generate_unique_ID",
+      "track_concert_countdown requires a unique timer_id parameter that can be generated by generate_unique_ID."
+    ],
+    [
+      "get_user_settings",
+      "lufthansa_manage_notifications",
+      "The required email parameter might be sourced from the user's stored settings if not explicitly provided."
+    ],
+    [
+      "get_obesity_rate_by_country",
+      "get_total_population_by_country",
+      "get_obesity_rate_by_country may indirectly use population data from get_total_population_by_country for per-capita calculations."
+    ],
+    [
+      "get_property_crime_rate_by_country",
+      "get_country_code",
+      "Requires country_code parameter that must be obtained from get_country_code."
+    ],
+    [
+      "get_country_code",
+      "get_car_ownership_rate_by_country",
+      "get_car_ownership_rate_by_country requires a country_code parameter that can be obtained from get_country_code when country name is available."
+    ],
+    [
+      "get_total_government_revenue_by_country",
+      "get_country_code",
+      "get_total_government_revenue_by_country requires a country_code parameter that can be obtained from get_country_code when country name is available."
+    ],
+    [
+      "get_average_commute_time_by_city",
+      "get_city_code",
+      "Requires city_code parameter that must be obtained from get_city_code."
+    ],
+    [
+      "sell_stock_fidelity",
+      "get_stock_ticker",
+      "Requires stock_ticker parameter that must be obtained from get_stock_ticker when company name is known."
+    ],
+    [
+      "find_parking_near_location",
+      "get_current_location",
+      "To obtain the current location when the user does not explicitly provide a specific location parameter."
+    ],
+    [
+      "southwest_user_login",
+      "spirit_view_flight_status",
+      "spirit_view_flight_status requires a session_id, which could be obtained from a login tool like southwest_user_login for authentication context."
+    ],
+    [
+      "southwest_user_login",
+      "lufthansa_view_flight_status",
+      "lufthansa_view_flight_status requires a session_id, which could be obtained from a login tool like southwest_user_login for authentication context."
+    ],
+    [
+      "post_usernames_for_feedback",
+      "login_to_tesla_account",
+      "post_usernames_for_feedback requires a hashed_username, which could leverage authentication data from login_to_tesla_account for user context."
+    ],
+    [
+      "southwest_user_login",
+      "equinox_generate_workout_plan",
+      "Relies on session_id for user verification, potentially derived from login tools like southwest_user_login if used for Equinox."
+    ],
+    [
+      "find_nearby_restaurants",
+      "get_current_weather",
+      "find_nearby_restaurants indirectly benefits from weather data to recommend suitable dining options."
+    ],
+    [
+      "get_stock_ticker",
+      "buy_stock_fidelity",
+      "May require get_stock_ticker to obtain the stock_ticker parameter when the user only knows the company name."
+    ],
+    [
+      "get_stock_ticker",
+      "get_ebitda",
+      "May require get_stock_ticker to obtain the stock_ticker parameter when the user only knows the company name."
+    ],
+    [
+      "get_stock_ticker",
+      "buy_stock_webull",
+      "buy_stock_webull benefits from get_stock_ticker to derive the stock_ticker parameter when provided with a company name."
+    ],
+    [
+      "webull_user_login",
+      "get_webull_account_balance",
+      "The session_id parameter required by get_webull_account_balance must be obtained from webull_user_login (Type III: Parameter Directly Depends On)."
+    ],
+    [
+      "get_network_ip_address",
+      "enable_google_smart_camera",
+      "Stable Wi-Fi connectivity implied in enable_google_smart_camera indirectly depends on network status provided by get_network_ip_address (Type II dependency)."
+    ],
+    [
+      "place_doordash_order",
+      "get_system_timezone",
+      "Delivery time/date verification in place_doordash_order may indirectly depend on timezone context from get_system_timezone (Type IV dependency)."
+    ],
+    [
+      "add_microsoft_calendar_reminder",
+      "get_system_timezone",
+      "Scheduling accuracy for add_microsoft_calendar_reminder indirectly depends on timezone context from get_system_timezone (Type IV dependency)."
+    ],
+    [
+      "enable_google_smart_camera",
+      "get_airplane_mode_status",
+      "Wi-Fi connectivity for enable_google_smart_camera indirectly depends on airplane mode status (Type II dependency)."
+    ],
+    [
+      "get_user_settings",
+      "mistral_multilingual_chatbot_api",
+      "The optional user_profile parameter can be populated with user preferences from get_user_settings for personalized responses."
+    ],
+    [
+      "get_user_settings",
+      "equinox_user_login",
+      "To retrieve the user's preferred language setting if not explicitly provided in the login parameters."
+    ],
+    [
+      "get_user_settings",
+      "southwest_manage_notifications",
+      "The email parameter may be populated using the user's stored email address from get_user_settings."
+    ],
+    [
+      "get_user_settings",
+      "delta_select_entertainment",
+      "User preferences (e.g., language or accessibility settings) from get_user_settings could enhance entertainment selection."
+    ],
+    [
+      "get_user_settings",
+      "jetblue_select_entertainment",
+      "User preferences (e.g., language or content filters) from get_user_settings could inform entertainment choices."
+    ],
+    [
+      "amazon_delete_item_from_cart",
+      "get_user_settings",
+      "User preferences from get_user_settings could influence cart management behavior or default actions."
+    ],
+    [
+      "forecast_local_smog_alerts",
+      "evaluate_skin_protection_needs",
+      "Skin protection recommendations may indirectly benefit from smog/pollution alerts to assess environmental risks."
+    ],
+    [
+      "generate_secure_api_key",
+      "get_network_ip_address",
+      "The unique_identifier parameter may indirectly depend on get_network_ip_address for device-specific context if required."
+    ],
+    [
+      "launch_chrome",
+      "ali_express_add_item_to_cart",
+      "ali_express_add_item_to_cart may benefit from Chrome being open for web interactions, though not strictly required."
+    ],
+    [
+      "find_nearest_mosque",
+      "get_current_location",
+      "To dynamically fetch the user's current location when unspecified, ensuring accurate proximity-based mosque searches."
+    ],
+    [
+      "southwest_user_login",
+      "get_webull_account_balance",
+      "Requires a session_id for authentication, which could be obtained indirectly from login tools like southwest_user_login if adapted for WeBull."
+    ],
+    [
+      "fresh_direct_login",
+      "amazon_review_item",
+      "Depends on session_id for user authentication, potentially sourced from login tools like fresh_direct_login if repurposed for Amazon."
+    ],
+    [
+      "ali_express_delete_item_from_cart",
+      "login_to_tesla_account",
+      "Needs session_id for account access, which might be obtained from login tools like login_to_tesla_account if adapted for AliExpress."
+    ],
+    [
+      "generate_secure_api_key",
+      "track_network_ip_changes",
+      "Requires unique_identifier for key generation, which could be derived from network tools like track_network_ip_changes if repurposed."
+    ],
+    [
+      "connect_mobile_hotspot",
+      "golds_gym_track_workout",
+      "golds_gym_track_workout indirectly depends on internet access via connect_mobile_hotspot for syncing workout data."
+    ],
+    [
+      "connect_mobile_hotspot",
+      "amazon_checkout_cart",
+      "amazon_checkout_cart indirectly depends on internet connectivity provided by connect_mobile_hotspot for online transaction processing."
+    ],
+    [
+      "connect_mobile_hotspot",
+      "southwest_manage_notifications",
+      "southwest_manage_notifications requires internet connectivity for real-time updates, which connect_mobile_hotspot provides."
+    ],
+    [
+      "download_steam_game",
+      "connect_mobile_hotspot",
+      "download_steam_game indirectly depends on internet connectivity from connect_mobile_hotspot for game downloads."
+    ],
+    [
+      "lufthansa_user_login",
+      "southwest_manage_notifications",
+      "The session_id parameter required by southwest_manage_notifications is typically obtained via login, but no Southwest login exists; lufthansa_user_login demonstrates the pattern."
+    ],
+    [
+      "libby_account_login",
+      "la_fitness_track_workout",
+      "The 'session_id' for la_fitness_track_workout may indirectly reuse authentication patterns from libby_account_login if integrated under a unified session system."
+    ],
+    [
+      "fetch_charles_schwab_order_history",
+      "libby_account_login",
+      "fetch_charles_schwab_order_history requires a session_id parameter similar to authenticated services, but no Charles Schwab login tool exists; this is an indirect tool dependency."
+    ],
+    [
+      "lufthansa_select_entertainment",
+      "libby_account_login",
+      "The 'session_id' for lufthansa_select_entertainment may indirectly reuse authentication patterns from libby_account_login if integrated under a unified session system."
+    ],
+    [
+      "libby_account_login",
+      "get_fidelity_account_balance",
+      "The 'session_id' for get_fidelity_account_balance may indirectly reuse authentication patterns from libby_account_login if integrated under a unified session system."
+    ],
+    [
+      "generate_event_qr_code",
+      "generate_secure_api_key",
+      "Both tools require identical parameters (hashed_email and unique_identifier), suggesting shared dependencies on missing generators."
+    ],
+    [
+      "get_system_timezone",
+      "launch_chrome",
+      "Timezone context from get_system_timezone may indirectly optimize launch_chrome settings like regional content."
+    ],
+    [
+      "set_alexa_thermostat_temperature",
+      "get_system_timezone",
+      "Accurate scheduling for thermostat settings depends on timezone data from get_system_timezone."
+    ],
+    [
+      "united_user_login",
+      "united_find_my_bags",
+      "united_find_my_bags requires session_id parameter obtained from united_user_login."
+    ],
+    [
+      "united_user_login",
+      "equinox_schedule_class",
+      "Hypothetical dependency: Requires session_id from a login tool (like united_user_login) for authentication, though no direct Equinox login exists in the list."
+    ],
+    [
+      "united_user_login",
+      "frontier_view_flight_status",
+      "frontier_view_flight_status requires a session_id parameter, which may be obtained from a login tool, though no direct Frontier login exists; united_user_login is a generic airline login example but no strict dependency is enforced."
+    ],
+    [
+      "united_user_login",
+      "find_tesla_charger_tool",
+      "Hypothetical dependency: Requires session_id from a login tool (like united_user_login) for authentication, though no direct Tesla login exists in the list."
+    ],
+    [
+      "united_user_login",
+      "buy_stock_nerd_wallet",
+      "Hypothetical dependency: Requires session_id from a login tool (like united_user_login) for authentication, though no direct NerdWallet login exists in the list."
+    ],
+    [
+      "united_user_login",
+      "ebay_delete_item_from_cart",
+      "Hypothetical dependency: Requires session_id from a login tool (like united_user_login) for authentication, though no direct eBay login exists in the list."
+    ],
+    [
+      "united_user_login",
+      "la_fitness_log_workout_notes",
+      "Hypothetical dependency: Requires session_id from a login tool (like united_user_login) for authentication, though no direct LA Fitness login exists in the list."
+    ],
+    [
+      "united_user_login",
+      "emirates_manage_notifications",
+      "Hypothetical dependency: Requires session_id from a login tool (like united_user_login) for authentication, though no direct Emirates login exists in the list."
+    ],
+    [
+      "set_wifi_status",
+      "retrieve_stock_price_history",
+      "This tool requires internet access to fetch stock data, which depends on Wi-Fi being enabled by set_wifi_status."
+    ],
+    [
+      "set_wifi_status",
+      "nerd_wallet_user_login",
+      "This tool requires internet access to log into NerdWallet, which depends on Wi-Fi being enabled by set_wifi_status."
+    ],
+    [
+      "set_wifi_status",
+      "sell_stock_robinhood",
+      "sell_stock_robinhood requires internet connectivity to place orders, which depends on set_wifi_status to enable Wi-Fi."
+    ],
+    [
+      "set_wifi_status",
+      "add_microsoft_calendar_reminder",
+      "This tool requires internet connectivity to interact with Microsoft Calendar, which may be enabled by set_wifi_status."
+    ],
+    [
+      "qatar_manage_notifications",
+      "set_wifi_status",
+      "This tool requires internet access to configure Qatar notifications, which depends on Wi-Fi being enabled by set_wifi_status."
+    ],
+    [
+      "read_libby_book",
+      "set_wifi_status",
+      "This tool requires internet connectivity to stream audiobooks from Libby, which may be enabled by set_wifi_status."
+    ],
+    [
+      "place_doordash_order",
+      "set_wifi_status",
+      "place_doordash_order requires internet connectivity to verify/place orders, which depends on set_wifi_status to enable Wi-Fi."
+    ],
+    [
+      "set_wifi_status",
+      "ebay_delete_item_from_cart",
+      "This tool requires internet access to modify eBay carts, which depends on Wi-Fi being enabled by set_wifi_status."
+    ],
+    [
+      "set_wifi_status",
+      "get_police_force_size_by_country",
+      "This tool requires internet connectivity to retrieve law enforcement data, which depends on set_wifi_status to enable Wi-Fi."
+    ],
+    [
+      "set_wifi_status",
+      "buy_regal_tickets",
+      "This tool requires internet access to purchase tickets, which depends on Wi-Fi being enabled by set_wifi_status."
+    ],
+    [
+      "set_wifi_status",
+      "get_high_school_graduation_rate_by_sub_region",
+      "This tool requires internet connectivity to retrieve data, which depends on set_wifi_status to enable Wi-Fi."
+    ],
+    [
+      "set_wifi_status",
+      "emirates_manage_notifications",
+      "This tool requires internet access to configure Emirates notifications, which depends on Wi-Fi being enabled by set_wifi_status."
+    ],
+    [
+      "set_wifi_status",
+      "get_recycling_rate_by_country",
+      "This tool requires internet access to retrieve data, which depends on Wi-Fi being enabled by set_wifi_status."
+    ],
+    [
+      "set_wifi_status",
+      "get_insurance_coverage_by_country",
+      "This tool requires internet access to retrieve data, which depends on Wi-Fi being enabled by set_wifi_status."
+    ],
+    [
+      "equinox_schedule_class",
+      "equinox_user_login",
+      "equinox_schedule_class requires a session_id parameter that must be obtained from equinox_user_login."
+    ],
+    [
+      "place_instacart_order",
+      "get_current_date",
+      "The delivery_date parameter may require resolution of relative dates (e.g., 'tomorrow') via get_current_date if not explicitly provided."
+    ],
+    [
+      "equinox_schedule_class",
+      "get_current_date",
+      "equinox_schedule_class may require the current date to resolve relative datetime values for the class_time parameter."
+    ],
+    [
+      "create_prayer_schedule",
+      "get_current_location",
+      "The 'location' parameter for create_prayer_schedule can be directly obtained from get_current_location."
+    ],
+    [
+      "create_prayer_schedule",
+      "get_geo_location_by_ip",
+      "The 'location' parameter for create_prayer_schedule can be indirectly obtained from get_geo_location_by_ip if an IP is available."
+    ],
+    [
+      "find_parking_near_location",
+      "get_geo_location_by_ip",
+      "The 'location' parameter for find_parking_near_location can be indirectly obtained from get_geo_location_by_ip if an IP is available."
+    ],
+    [
+      "qatar_manage_notifications",
+      "get_current_location",
+      "The 'email' parameter for qatar_manage_notifications might be indirectly derived from location-based services if not provided."
+    ],
+    [
+      "lufthansa_view_flight_status",
+      "get_current_location",
+      "The 'session_id' parameter for lufthansa_view_flight_status might be indirectly enhanced using location-based authentication context."
+    ],
+    [
+      "amazon_review_item",
+      "get_current_location",
+      "The 'session_id' parameter for amazon_review_item might be indirectly validated using location-based security checks."
+    ],
+    [
+      "track_lease_expiration_dates",
+      "get_current_date",
+      "Internal reminder logic likely requires the current date from get_current_date to calculate lease expiration timelines."
+    ],
+    [
+      "add_apple_calendar_reminder",
+      "get_current_date",
+      "add_apple_calendar_reminder may require the current date to interpret time parameters when scheduling reminders for today."
+    ],
+    [
+      "get_current_date",
+      "buy_regal_tickets",
+      "buy_regal_tickets may require the current date to contextualize showtime parameters when no explicit date is provided."
+    ],
+    [
+      "get_marriage_rate_by_city",
+      "get_current_date",
+      "The 'year' parameter may require the current date to resolve relative expressions like 'this year'."
+    ],
+    [
+      "get_current_date",
+      "get_income_distribution_by_city",
+      "The 'year' parameter may require the current date to resolve relative expressions like 'current year'."
+    ],
+    [
+      "get_public_transit_usage_by_sub_region",
+      "get_current_date",
+      "The 'year' parameter may require the current date to resolve relative expressions like 'this year'."
+    ],
+    [
+      "calculate_dividend_payout_ratio",
+      "get_eps",
+      "The required 'eps' parameter for calculate_dividend_payout_ratio must be obtained from get_eps."
+    ],
+    [
+      "validate_email",
+      "nerd_wallet_user_login",
+      "The email parameter should be validated for format correctness prior to login attempts."
+    ],
+    [
+      "buy_stock_nerd_wallet",
+      "get_current_stock_price",
+      "buy_stock_nerd_wallet benefits indirectly from get_current_stock_price for informed stock purchase decisions."
+    ],
+    [
+      "estimate_home_renovation_costs",
+      "calculate_shared_utility_costs",
+      "calculate_shared_utility_costs may indirectly use property_size_m2 from estimate_home_renovation_costs (converted to sqft) for proportional cost splitting."
+    ],
+    [
+      "check_local_air_quality_index",
+      "opentable_search_restaurants",
+      "opentable_search_restaurants may indirectly use air quality data from check_local_air_quality_index to influence restaurant choices."
+    ],
+    [
+      "check_local_air_quality_index",
+      "find_nearby_real_estate_agents",
+      "find_nearby_real_estate_agents may indirectly use air quality data from check_local_air_quality_index to provide location insights."
+    ],
+    [
+      "find_tesla_charger_tool",
+      "get_current_stock_price",
+      "find_tesla_charger_tool may indirectly depend on get_current_stock_price if Tesla stock data influences charger availability analysis."
+    ],
+    [
+      "send_file_in_email",
+      "launch_microsoft_word",
+      "send_file_in_email may indirectly depend on launch_microsoft_word if the attached file is a document created or edited in Word."
+    ],
+    [
+      "send_file_in_email",
+      "send_reminder_email",
+      "send_file_in_email requires email validation which could indirectly benefit from send_reminder_email's email handling capabilities."
+    ],
+    [
+      "tesla_schedule_install_software_update",
+      "get_wifi_status",
+      "Software updates require internet connectivity, making get_wifi_status an indirect dependency to confirm network availability."
+    ],
+    [
+      "find_tesla_charger_tool",
+      "get_wifi_status",
+      "Location-based services like charger finding indirectly depend on internet connectivity status from get_wifi_status."
+    ],
+    [
+      "buy_stock_nerd_wallet",
+      "get_wifi_status",
+      "Stock trading requires internet access, making get_wifi_status an indirect dependency for connectivity verification."
+    ],
+    [
+      "get_wifi_status",
+      "fetch_fidelity_order_history",
+      "Fetching real-time financial data indirectly depends on internet connectivity confirmed via get_wifi_status."
+    ],
+    [
+      "frontier_view_flight_status",
+      "get_wifi_status",
+      "Real-time flight tracking requires internet access, indirectly depending on get_wifi_status for connectivity checks."
+    ],
+    [
+      "schedule_meeting",
+      "send_reminder_email",
+      "schedule_meeting could indirectly use send_reminder_email to notify participants after scheduling."
+    ],
+    [
+      "launch_microsoft_word",
+      "set_screen_brightness",
+      "Launching Word might indirectly depend on set_screen_brightness for optimal display settings during document editing."
+    ],
+    [
+      "track_doordash_order",
+      "get_wifi_status",
+      "Real-time order tracking requires internet connectivity, indirectly depending on get_wifi_status for network verification."
+    ],
+    [
+      "install_application_by_name",
+      "get_wifi_status",
+      "Application downloads require internet access, making get_wifi_status an indirect dependency for connectivity confirmation."
+    ],
+    [
+      "get_installed_applications",
+      "update_application_by_name",
+      "To obtain the list of installed applications for selecting which application to update."
+    ],
+    [
+      "get_current_stock_price",
+      "compare_stock_performance",
+      "To include the current stock price in the comparison if the end date is today."
+    ],
+    [
+      "calculate_rental_yield",
+      "convert_to_desired_unit",
+      "To ensure annual rental income and property value are in the same currency unit for accurate calculation."
+    ],
+    [
+      "convert_to_desired_unit",
+      "compare_stock_performance",
+      "To convert stock prices to a common currency when comparing international stocks."
+    ],
+    [
+      "send_file_in_email",
+      "upload_medical_records",
+      "To attach medical record files generated by upload_medical_records in an email."
+    ],
+    [
+      "generate_unique_ID",
+      "la_fitness_log_workout_notes",
+      "The required parameter 'workout_id' for la_fitness_log_workout_notes must be generated by generate_unique_ID to ensure uniqueness."
+    ],
+    [
+      "generate_unique_ID",
+      "lufthansa_manage_notifications",
+      "To generate a session_id if not already available, as it's a required parameter for notification management."
+    ],
+    [
+      "generate_unique_ID",
+      "temu_delete_item_from_cart",
+      "Session management could depend on UUID-based tokens for cart operations."
+    ],
+    [
+      "generate_unique_ID",
+      "find_tesla_charger_tool",
+      "The required parameter 'session_id' for find_tesla_charger_tool may be generated by generate_unique_ID if not provided externally."
+    ],
+    [
+      "generate_unique_ID",
+      "fetch_fidelity_order_history",
+      "The required parameter 'session_id' for fetch_fidelity_order_history may be generated by generate_unique_ID if not provided externally."
+    ],
+    [
+      "generate_unique_ID",
+      "jetblue_select_entertainment",
+      "The required parameter 'session_id' for jetblue_select_entertainment may be generated by generate_unique_ID if not provided externally."
+    ],
+    [
+      "check_local_air_quality_index",
+      "advise_on_weather",
+      "advise_on_weather indirectly depends on check_local_air_quality_index to enhance weather advice with air quality context."
+    ],
+    [
+      "get_job_creation_by_country",
+      "get_total_population_by_country",
+      "get_job_creation_by_country indirectly depends on get_total_population_by_country to normalize job data per capita for meaningful analysis."
+    ],
+    [
+      "get_age_distribution_by_country",
+      "get_job_creation_by_country",
+      "get_job_creation_by_country indirectly depends on get_age_distribution_by_country to contextualize job data with workforce demographics."
+    ],
+    [
+      "get_immigration_statistics_by_city",
+      "get_college_enrollment_by_sub_region",
+      "get_college_enrollment_by_sub_region indirectly depends on get_immigration_statistics_by_city to correlate enrollment trends with immigration patterns in urban areas."
+    ],
+    [
+      "get_domestic_migration_by_country",
+      "get_job_creation_by_country",
+      "get_domestic_migration_by_country indirectly depends on get_job_creation_by_country to analyze migration drivers through job availability data."
+    ],
+    [
+      "get_obesity_rate_by_sub_region",
+      "get_sub_region_code",
+      "get_obesity_rate_by_sub_region requires a sub_region_code parameter that may be obtained from get_sub_region_code if not provided."
+    ],
+    [
+      "find_tesla_charger_tool",
+      "is_tesla_charger_location_full",
+      "The charger_location_id required by is_tesla_charger_location_full can be obtained from find_tesla_charger_tool's output."
+    ],
+    [
+      "precedent_analyzer",
+      "witness_preparation_checklist",
+      "The case_id required by witness_preparation_checklist could be sourced from precedent_analyzer's case analysis output."
+    ],
+    [
+      "recommend_exercise_attire",
+      "check_local_air_quality_index",
+      "Weather conditions from check_local_air_quality_index could indirectly inform appropriate exercise attire recommendations."
+    ],
+    [
+      "find_nearby_restaurants",
+      "find_nearest_church",
+      "Location data from find_nearest_church could be reused to find nearby restaurants in the same area."
+    ],
+    [
+      "find_nearby_restaurants",
+      "find_nearby_real_estate_agents",
+      "Location parameter from find_nearby_restaurants could be reused to find real estate agents in the same area."
+    ],
+    [
+      "get_average_household_size_by_sub_region",
+      "get_recycling_rate_by_sub_region",
+      "Sub_region_code and year parameters could be shared between these demographic data tools."
+    ],
+    [
+      "get_obesity_rate_by_sub_region",
+      "get_college_enrollment_by_sub_region",
+      "Both tools require sub_region_code and year parameters that could be sourced from the same context."
+    ],
+    [
+      "get_unemployment_rate_by_country",
+      "get_foreclosure_rate_by_sub_region",
+      "Economic indicators from get_unemployment_rate_by_country could indirectly inform foreclosure rate analysis."
+    ],
+    [
+      "calculate_lease_break_fees",
+      "calculate_shared_utility_costs",
+      "Monthly_rent parameter from calculate_lease_break_fees could be reused for utility cost calculations."
+    ],
+    [
+      "send_file_in_email",
+      "search_file_system",
+      "The file_path parameter may be obtained from search_file_system when the exact file location is unknown."
+    ],
+    [
+      "golds_gym_track_workout",
+      "emirates_user_login",
+      "The session_id parameter requires prior authentication via a login tool like emirates_user_login for session management."
+    ],
+    [
+      "find_tesla_charger_tool",
+      "emirates_user_login",
+      "The session_id parameter depends on authentication from a login tool like emirates_user_login for Tesla access."
+    ],
+    [
+      "buy_stock_nerd_wallet",
+      "emirates_user_login",
+      "The session_id parameter requires authentication from a login tool like emirates_user_login for NerdWallet access."
+    ],
+    [
+      "temu_checkout_cart",
+      "emirates_user_login",
+      "The session_id parameter depends on prior authentication via a login tool like emirates_user_login for Temu."
+    ],
+    [
+      "fetch_fidelity_order_history",
+      "emirates_user_login",
+      "The session_id parameter requires authentication from a login tool like emirates_user_login for Fidelity access."
+    ],
+    [
+      "optimize_system_resources_by_uptime",
+      "log_device_uptime",
+      "The system_uptime parameter may be sourced from log_device_uptime's output data when available."
+    ],
+    [
+      "tesla_start_stop_climate_control",
+      "get_user_profile",
+      "The required 'session_id' parameter implies dependency on a login tool for user authentication context."
+    ],
+    [
+      "frontier_find_my_bags",
+      "get_user_profile",
+      "The 'session_id' parameter implies dependency on user authentication data from get_user_profile."
+    ],
+    [
+      "get_charles_schwab_account_balance",
+      "get_user_profile",
+      "The 'session_id' parameter requires user authentication data typically provided by get_user_profile."
+    ],
+    [
+      "united_find_my_bags",
+      "get_user_profile",
+      "The 'session_id' parameter depends on user authentication data obtainable via get_user_profile."
+    ],
+    [
+      "la_fitness_log_workout_notes",
+      "get_user_profile",
+      "The 'session_id' parameter necessitates user authentication data from get_user_profile."
+    ],
+    [
+      "buy_stock_etrade",
+      "get_user_profile",
+      "The required 'session_id' parameter implies dependency on a login tool for user authentication context."
+    ],
+    [
+      "get_current_stock_price",
+      "get_eps",
+      "Both tools require a stock ticker, and get_eps could leverage real-time price context from get_current_stock_price for analysis."
+    ],
+    [
+      "send_file_in_email",
+      "validate_email",
+      "send_file_in_email requires validate_email to validate recipient_email before sending."
+    ],
+    [
+      "get_current_stock_price",
+      "sell_stock_etrade",
+      "sell_stock_etrade benefits indirectly from get_current_stock_price for informed stock sale decisions."
+    ],
+    [
+      "la_fitness_track_workout",
+      "la_fitness_user_login",
+      "la_fitness_track_workout requires a session_id parameter that must be obtained from la_fitness_user_login's output."
+    ],
+    [
+      "fetch_fidelity_order_history",
+      "ebay_user_login",
+      "fetch_fidelity_order_history requires a session_id parameter, which may be obtained from a login tool, though no direct Fidelity login exists; ebay_user_login is a generic login example but no strict dependency is enforced."
+    ],
+    [
+      "find_tesla_charger_tool",
+      "ebay_user_login",
+      "find_tesla_charger_tool requires a session_id parameter, which may be obtained from a login tool, though no direct Tesla login exists; ebay_user_login is a generic login example but no strict dependency is enforced."
+    ],
+    [
+      "fetch_charles_schwab_order_history",
+      "ebay_user_login",
+      "Needs a session_id parameter that relies on a login tool like ebay_user_login for authentication."
+    ],
+    [
+      "get_robinhood_account_balance",
+      "ebay_user_login",
+      "Requires a session_id parameter that must be obtained from a login tool like ebay_user_login."
+    ],
+    [
+      "mute_notifications_for_apps",
+      "get_installed_applications",
+      "mute_notifications_for_apps may indirectly use get_installed_applications to identify apps for muting notifications, though not strictly required."
+    ],
+    [
+      "estimate_security_deposit",
+      "convert_to_desired_unit",
+      "estimate_security_deposit requires property_size_sqft, which may indirectly use convert_to_desired_unit if input data needs unit conversion (e.g., m\u00b2 to sqft)."
+    ],
+    [
+      "set_wifi_status",
+      "enable_alexa_smart_camera",
+      "Enabling the smart camera requires stable Wi-Fi connectivity, which may require setting Wi-Fi to 'on' using set_wifi_status."
+    ],
+    [
+      "southwest_update_travel_preferences",
+      "southwest_find_my_bags",
+      "Both require a session_id from the same authentication source (Southwest login), implying shared dependency on session management."
+    ],
+    [
+      "southwest_update_travel_preferences",
+      "jetblue_update_travel_preferences",
+      "Both handle travel preferences and require session_id from airline logins, indicating indirect functional similarity for session handling."
+    ],
+    [
+      "monitor_lawn_health",
+      "advise_on_weather",
+      "Lawn health monitoring requires weather data for analysis, which can be sourced from weather advice."
+    ],
+    [
+      "advise_on_weather",
+      "find_nearby_movie_theaters",
+      "Theater search considers weather for delay assessments, relying on weather advice for condition data."
+    ],
+    [
+      "place_instacart_order",
+      "advise_on_weather",
+      "Delivery time verification in place_instacart_order benefits indirectly from weather advice to account for weather-related delays."
+    ],
+    [
+      "frontier_user_login",
+      "southwest_find_my_bags",
+      "southwest_find_my_bags requires a session_id typically obtained from a login tool, but no Southwest login exists; frontier_user_login is the only session-generating tool available."
+    ],
+    [
+      "southwest_update_travel_preferences",
+      "frontier_user_login",
+      "southwest_update_travel_preferences requires a session_id, and frontier_user_login is the only available session-generating tool despite service mismatch."
+    ],
+    [
+      "crunch_fitness_generate_workout_plan",
+      "frontier_user_login",
+      "crunch_fitness_generate_workout_plan requires a session_id, and frontier_user_login is the only available session-generating tool despite service mismatch."
+    ],
+    [
+      "frontier_user_login",
+      "la_fitness_generate_workout_plan",
+      "la_fitness_generate_workout_plan requires a session_id, and frontier_user_login is the only available session-generating tool despite service mismatch."
+    ],
+    [
+      "planet_fitness_log_workout_notes",
+      "frontier_user_login",
+      "planet_fitness_log_workout_notes requires a session_id, and frontier_user_login is the only available session-generating tool despite service mismatch."
+    ],
+    [
+      "etsy_delete_item_from_cart",
+      "frontier_user_login",
+      "etsy_delete_item_from_cart requires a session_id, and frontier_user_login is the only available session-generating tool despite service mismatch."
+    ],
+    [
+      "temu_review_item",
+      "frontier_user_login",
+      "temu_review_item requires a session_id, and frontier_user_login is the only available session-generating tool despite service mismatch."
+    ],
+    [
+      "ebay_review_item",
+      "frontier_user_login",
+      "ebay_review_item requires a session_id, and frontier_user_login is the only available session-generating tool despite service mismatch."
+    ],
+    [
+      "tesla_schedule_install_software_update",
+      "frontier_user_login",
+      "tesla_schedule_install_software_update requires a session_id, and frontier_user_login is the only available session-generating tool despite service mismatch."
+    ],
+    [
+      "fresh_direct_add_to_favorites",
+      "fresh_direct_get_recipe",
+      "fresh_direct_add_to_favorites requires recipe_id which must be obtained from fresh_direct_get_recipe's output."
+    ],
+    [
+      "set_do_not_disturb_status",
+      "log_dnd_mode_activations",
+      "log_dnd_mode_activations logs state changes triggered by set_do_not_disturb_status, requiring its activation events."
+    ],
+    [
+      "monitor_lawn_health",
+      "get_current_location",
+      "The 'location' parameter may be obtained from the current location if not provided by the user."
+    ],
+    [
+      "southwest_user_login",
+      "amazon_review_item",
+      "The 'session_id' parameter likely requires a login mechanism similar to Southwest's for authentication."
+    ],
+    [
+      "check_ip_reputation",
+      "get_geo_location_by_ip",
+      "Geo-location data from an IP could provide context for reputation analysis."
+    ],
+    [
+      "get_current_location",
+      "estimate_flight_carbon_footprint",
+      "Flight distance calculation might require origin/destination locations if not fully provided."
+    ],
+    [
+      "recommend_stretching_routine",
+      "get_current_location",
+      "Local weather or altitude from location could indirectly influence stretching recommendations."
+    ],
+    [
+      "yummly_get_ingredients",
+      "allrecipes_get_recipe",
+      "Indirect tool dependency: recipe_id could be sourced from allrecipes_get_recipe output if linked systems exist."
+    ],
+    [
+      "fresh_direct_add_to_favorites",
+      "allrecipes_get_recipe",
+      "Indirect tool dependency: recipe_id might originate from allrecipes_get_recipe if integrated."
+    ],
+    [
+      "get_screen_brightness",
+      "set_screen_brightness",
+      "To adjust brightness relative to the current level, the assistant may need to retrieve the current brightness first."
+    ],
+    [
+      "get_wifi_status",
+      "southwest_find_my_bags",
+      "Tracking baggage likely requires internet connectivity, so checking Wi-Fi status is indirectly beneficial."
+    ],
+    [
+      "ebay_review_item",
+      "get_wifi_status",
+      "Submitting an eBay review requires internet access, making Wi-Fi status verification indirectly beneficial."
+    ],
+    [
+      "temu_review_item",
+      "get_wifi_status",
+      "Submitting a Temu review depends on internet connectivity, so checking Wi-Fi status provides indirect support."
+    ],
+    [
+      "qatar_update_travel_preferences",
+      "get_wifi_status",
+      "Updating travel preferences online requires internet access, making Wi-Fi status verification useful."
+    ],
+    [
+      "golds_gym_schedule_class",
+      "get_wifi_status",
+      "Scheduling a class via an app likely needs internet connectivity, so Wi-Fi status is indirectly relevant."
+    ],
+    [
+      "get_current_time",
+      "southwest_find_my_bags",
+      "Bag tracking may require real-time updates that benefit from the current time for accuracy."
+    ],
+    [
+      "get_current_time",
+      "find_nearby_movie_theaters",
+      "Theater schedules and weather delays depend on real-time context provided by get_current_time."
+    ],
+    [
+      "jetblue_view_flight_status",
+      "get_current_time",
+      "Real-time flight status updates benefit from accurate current time for delays or schedule changes."
+    ],
+    [
+      "track_doordash_order",
+      "get_current_time",
+      "Delivery tracking relies on real-time updates synchronized with the current time."
+    ],
+    [
+      "track_instacart_order",
+      "get_current_time",
+      "Grocery delivery tracking requires real-time context for location and ETA accuracy."
+    ],
+    [
+      "tesla_schedule_install_software_update",
+      "get_current_time",
+      "Scheduling an update time depends on knowing the current time to set 'scheduled_time' correctly."
+    ],
+    [
+      "tesla_check_or_set_charging_schedule",
+      "set_airplane_mode_status",
+      "This tool requires internet connectivity to communicate with Tesla vehicles and thus directly depends on airplane mode being disabled."
+    ],
+    [
+      "create_spotify_playlist_id",
+      "set_airplane_mode_status",
+      "This tool requires internet access to generate playlist IDs, which depends on airplane mode being disabled."
+    ],
+    [
+      "set_airplane_mode_status",
+      "spirit_user_login",
+      "This tool requires internet connectivity to authenticate with Spirit Airlines and thus directly depends on airplane mode being disabled."
+    ],
+    [
+      "etsy_add_item_to_cart",
+      "set_airplane_mode_status",
+      "This tool requires internet access to modify cart items, which depends on airplane mode being disabled."
+    ],
+    [
+      "get_home_ownership_rate_by_country",
+      "set_airplane_mode_status",
+      "This tool requires internet access to retrieve housing data, which depends on airplane mode being disabled."
+    ],
+    [
+      "set_airplane_mode_status",
+      "get_cinemark_tickets",
+      "This tool requires internet access to retrieve ticket information, which depends on airplane mode being disabled."
+    ],
+    [
+      "set_airplane_mode_status",
+      "get_visitor_counts_by_country",
+      "This tool requires internet connectivity to fetch tourism statistics and thus directly depends on airplane mode being disabled."
+    ],
+    [
+      "set_airplane_mode_status",
+      "emirates_view_flight_status",
+      "This tool requires internet connectivity to check Emirates flight data and thus directly depends on airplane mode being disabled."
+    ],
+    [
+      "set_airplane_mode_status",
+      "webull_user_login",
+      "This tool requires internet access for user authentication, which depends on airplane mode being disabled."
+    ],
+    [
+      "set_airplane_mode_status",
+      "update_application_by_name",
+      "This tool requires internet connectivity to download application updates and thus directly depends on airplane mode being disabled."
+    ],
+    [
+      "track_real_estate_market_trends",
+      "set_airplane_mode_status",
+      "This tool requires internet connectivity to access real-time market data and thus directly depends on airplane mode being disabled."
+    ],
+    [
+      "set_airplane_mode_status",
+      "southwest_view_flight_status",
+      "This tool requires internet access to check flight status, which depends on airplane mode being disabled."
+    ],
+    [
+      "set_airplane_mode_status",
+      "find_nearby_hotels",
+      "This tool requires internet access to search for hotels, which depends on airplane mode being disabled."
+    ],
+    [
+      "set_airplane_mode_status",
+      "find_buddhist_temple",
+      "This tool requires internet access to search for nearby temples, which depends on airplane mode being disabled."
+    ],
+    [
+      "frontier_select_entertainment",
+      "set_airplane_mode_status",
+      "This tool requires internet connectivity to access Frontier's entertainment system and thus directly depends on airplane mode being disabled."
+    ],
+    [
+      "set_airplane_mode_status",
+      "upload_medical_records",
+      "This tool requires internet access to upload files, which depends on airplane mode being disabled."
+    ],
+    [
+      "set_airplane_mode_status",
+      "compare_stock_performance",
+      "This tool requires internet connectivity to fetch stock market data and thus directly depends on airplane mode being disabled."
+    ],
+    [
+      "set_airplane_mode_status",
+      "jetblue_find_my_bags",
+      "This tool requires internet access to check baggage status, which depends on airplane mode being disabled."
+    ],
+    [
+      "set_airplane_mode_status",
+      "tesla_schedule_climate_preconditioning",
+      "This tool requires internet access to communicate with the vehicle, which depends on airplane mode being disabled."
+    ],
+    [
+      "southwest_view_flight_status",
+      "spirit_user_login",
+      "southwest_view_flight_status requires a session_id parameter, which must be obtained by logging into the user's account via spirit_user_login."
+    ],
+    [
+      "equinox_log_workout_notes",
+      "spirit_user_login",
+      "equinox_log_workout_notes requires a session_id parameter, which must be obtained by logging into the user's account via spirit_user_login."
+    ],
+    [
+      "emirates_view_flight_status",
+      "spirit_user_login",
+      "emirates_view_flight_status requires a session_id parameter, which must be obtained by logging into the user's account via spirit_user_login."
+    ],
+    [
+      "tesla_limit_speed_for_teen_driver",
+      "spirit_user_login",
+      "tesla_limit_speed_for_teen_driver requires a session_id parameter, which must be obtained by logging into the user's account via spirit_user_login."
+    ],
+    [
+      "read_libby_book",
+      "spirit_user_login",
+      "read_libby_book requires a session_id parameter, which must be obtained by logging into the user's account via spirit_user_login."
+    ],
+    [
+      "jetblue_update_travel_preferences",
+      "spirit_user_login",
+      "jetblue_update_travel_preferences requires a session_id parameter, which must be obtained by logging into the user's account via spirit_user_login."
+    ],
+    [
+      "set_background_app_refresh",
+      "log_workout_session",
+      "log_workout_session requires workout duration from a pre-set timer, which relies on background app refresh enabled via set_background_app_refresh."
+    ],
+    [
+      "schedule_doctors_appointment",
+      "upload_medical_records",
+      "schedule_doctors_appointment may require medical records for appointment scheduling, which can be provided via upload_medical_records using the resulting appointment_id."
+    ],
+    [
+      "webull_user_login",
+      "tesla_remote_lock_unlock_doors",
+      "tesla_remote_lock_unlock_doors requires a session_id parameter, which could be obtained from a login tool like webull_user_login if adapted for Tesla (indirect dependency)."
+    ],
+    [
+      "webull_user_login",
+      "fetch_etrade_order_history",
+      "fetch_etrade_order_history requires a session_id parameter, which could be obtained from a login tool like webull_user_login if adapted for ETrade (indirect dependency)."
+    ],
+    [
+      "buy_stock_robinhood",
+      "webull_user_login",
+      "buy_stock_robinhood requires a session_id parameter, which could be obtained from a login tool like webull_user_login if adapted for Robinhood (indirect dependency)."
+    ],
+    [
+      "webull_user_login",
+      "emirates_view_flight_status",
+      "Session_id parameter requires login credentials similar to webull_user_login functionality."
+    ],
+    [
+      "etsy_add_item_to_cart",
+      "webull_user_login",
+      "Session_id parameter requires login credentials similar to webull_user_login functionality."
+    ],
+    [
+      "schedule_doctors_appointment",
+      "find_buddhist_temple",
+      "schedule_doctors_appointment uses a location parameter that could be enriched with nearby facilities like temples from find_buddhist_temple (indirect benefit)."
+    ],
+    [
+      "find_buddhist_temple",
+      "check_local_soil_quality",
+      "check_local_soil_quality uses a location parameter that could be shared or validated using data from find_buddhist_temple (indirect benefit)."
+    ],
+    [
+      "get_current_location",
+      "find_nearby_hotels",
+      "The location parameter may require get_current_location if not provided by the user."
+    ],
+    [
+      "webull_user_login",
+      "amazon_review_item",
+      "Session_id parameter requires login credentials similar to webull_user_login functionality."
+    ],
+    [
+      "webull_user_login",
+      "southwest_view_flight_status",
+      "Session_id parameter requires login credentials similar to webull_user_login functionality."
+    ],
+    [
+      "webull_user_login",
+      "equinox_generate_workout_plan",
+      "Session_id parameter requires login credentials similar to webull_user_login functionality."
+    ],
+    [
+      "tesla_check_or_set_charging_schedule",
+      "webull_user_login",
+      "Session_id parameter requires login credentials similar to webull_user_login functionality."
+    ],
+    [
+      "frontier_select_entertainment",
+      "webull_user_login",
+      "Session_id parameter requires login credentials similar to webull_user_login functionality."
+    ],
+    [
+      "set_airplane_mode_status",
+      "compare_home_insurance_costs",
+      "This tool requires internet access to retrieve insurance comparisons, which depends on airplane mode being disabled."
+    ],
+    [
+      "qatar_user_login",
+      "set_airplane_mode_status",
+      "This tool requires internet access for user authentication, which depends on airplane mode being disabled."
+    ],
+    [
+      "set_airplane_mode_status",
+      "get_race_ethnicity_distribution_by_city",
+      "This tool requires internet access to retrieve demographic data, which depends on airplane mode being disabled."
+    ],
+    [
+      "find_pet_friendly_hotels",
+      "set_airplane_mode_status",
+      "This tool requires internet access to search for hotels, which depends on airplane mode being disabled."
+    ],
+    [
+      "set_airplane_mode_status",
+      "get_police_force_size_by_city",
+      "This tool requires internet access to retrieve police data, which depends on airplane mode being disabled."
+    ],
+    [
+      "set_airplane_mode_status",
+      "play_spotify_song",
+      "This tool requires internet access to stream music, which depends on airplane mode being disabled."
+    ],
+    [
+      "get_voter_turnout_by_country",
+      "set_airplane_mode_status",
+      "This tool requires internet access to retrieve election data, which depends on airplane mode being disabled."
+    ],
+    [
+      "golds_gym_schedule_class",
+      "set_airplane_mode_status",
+      "This tool requires internet access to book classes, which depends on airplane mode being disabled."
+    ],
+    [
+      "temu_user_login",
+      "set_airplane_mode_status",
+      "This tool requires internet access for user authentication, which depends on airplane mode being disabled."
+    ],
+    [
+      "get_robinhood_account_balance",
+      "spirit_user_login",
+      "The required parameter 'session_id' for get_robinhood_account_balance might depend on a login tool like spirit_user_login for authentication context."
+    ],
+    [
+      "fetch_charles_schwab_order_history",
+      "spirit_user_login",
+      "The required parameter 'session_id' for fetch_charles_schwab_order_history likely depends on a login tool like spirit_user_login for authentication context."
+    ],
+    [
+      "frontier_select_entertainment",
+      "spirit_user_login",
+      "The required parameter 'session_id' for frontier_select_entertainment likely depends on a login tool like spirit_user_login for authentication context."
+    ],
+    [
+      "united_select_entertainment",
+      "spirit_user_login",
+      "The required parameter 'session_id' for united_select_entertainment likely depends on a login tool like spirit_user_login for authentication context."
+    ],
+    [
+      "buy_stock_webull",
+      "spirit_user_login",
+      "The required parameter 'session_id' for buy_stock_webull might depend on a login tool like spirit_user_login for authentication context."
+    ],
+    [
+      "legal_research_timer",
+      "generate_minecraft_achievement_id",
+      "The parameter 'unique_identifier' for generate_minecraft_achievement_id could indirectly depend on legal_research_timer for unique ID generation context."
+    ],
+    [
+      "golds_gym_user_login",
+      "sell_stock_robinhood",
+      "sell_stock_robinhood requires a session_id, which may be obtained indirectly through a login process like golds_gym_user_login for authentication."
+    ],
+    [
+      "get_nerd_wallet_account_balance",
+      "golds_gym_user_login",
+      "Parameter Directly Depends On: 'session_id' for get_nerd_wallet_account_balance must be obtained from a login tool, but no NerdWallet login exists; golds_gym_user_login demonstrates the pattern for session acquisition (though mismatched service)."
+    ],
+    [
+      "tesla_limit_speed_for_teen_driver",
+      "golds_gym_user_login",
+      "tesla_limit_speed_for_teen_driver requires a session_id, which may be obtained indirectly through a login process like golds_gym_user_login for authentication."
+    ],
+    [
+      "jetblue_update_travel_preferences",
+      "golds_gym_user_login",
+      "jetblue_update_travel_preferences requires a session_id, which may be obtained indirectly through a login process like golds_gym_user_login for authentication."
+    ],
+    [
+      "read_libby_book",
+      "golds_gym_user_login",
+      "read_libby_book requires a session_id, which may be obtained indirectly through a login process like golds_gym_user_login for authentication."
+    ],
+    [
+      "emirates_select_entertainment",
+      "golds_gym_user_login",
+      "emirates_select_entertainment requires a session_id, which may be obtained indirectly through a login process like golds_gym_user_login for authentication."
+    ],
+    [
+      "log_workout_session",
+      "golds_gym_user_login",
+      "log_workout_session may indirectly require authentication (e.g., for user-specific logging) similar to golds_gym_user_login."
+    ],
+    [
+      "place_doordash_order",
+      "add_microsoft_calendar_reminder",
+      "place_doordash_order's delivery_date/delivery_time parameters indirectly depend on calendar context for scheduling conflicts."
+    ],
+    [
+      "equinox_log_workout_notes",
+      "equinox_user_login",
+      "equinox_log_workout_notes requires a session_id parameter that must be obtained by logging in via equinox_user_login."
+    ],
+    [
+      "get_user_settings",
+      "golds_gym_user_login",
+      "golds_gym_user_login can use the preferred language from get_user_settings to populate its optional language parameter."
+    ],
+    [
+      "place_doordash_order",
+      "advise_on_weather",
+      "place_doordash_order verifies delivery availability based on weather conditions, which can be informed by advise_on_weather."
+    ],
+    [
+      "crunch_fitness_generate_workout_plan",
+      "set_wifi_status",
+      "This tool requires internet connectivity to generate personalized plans online, which may be enabled by set_wifi_status."
+    ],
+    [
+      "set_wifi_status",
+      "download_libby_book",
+      "This tool requires internet connectivity to download audiobooks from Libby, which may be enabled by set_wifi_status."
+    ],
+    [
+      "set_wifi_status",
+      "la_fitness_generate_workout_plan",
+      "This tool requires internet connectivity to generate personalized plans online, which may be enabled by set_wifi_status."
+    ],
+    [
+      "sell_stock_fidelity",
+      "set_wifi_status",
+      "This tool requires internet connectivity to execute stock trades on Fidelity, which may be enabled by set_wifi_status."
+    ],
+    [
+      "set_wifi_status",
+      "frontier_user_login",
+      "This tool requires internet connectivity to authenticate the user, which may be enabled by set_wifi_status."
+    ],
+    [
+      "get_nerd_wallet_account_balance",
+      "set_wifi_status",
+      "get_nerd_wallet_account_balance requires internet connectivity to fetch financial data, which depends on set_wifi_status to enable Wi-Fi."
+    ],
+    [
+      "set_wifi_status",
+      "get_city_code",
+      "This tool requires internet connectivity to access location databases, which may be enabled by set_wifi_status."
+    ],
+    [
+      "set_wifi_status",
+      "get_country_code",
+      "This tool requires internet connectivity to access location databases, which may be enabled by set_wifi_status."
+    ],
+    [
+      "set_wifi_status",
+      "find_nearest_synagogue",
+      "This tool requires internet connectivity for location-based services, which may be enabled by set_wifi_status."
+    ],
+    [
+      "etsy_delete_item_from_cart",
+      "set_wifi_status",
+      "This tool requires internet connectivity to modify Etsy cart contents, which may be enabled by set_wifi_status."
+    ],
+    [
+      "set_wifi_status",
+      "tesla_summon_vehicle",
+      "This tool requires internet connectivity to communicate with Tesla vehicles, which may be enabled by set_wifi_status."
+    ],
+    [
+      "planet_fitness_user_login",
+      "set_wifi_status",
+      "This tool requires internet access to log into the account, which may depend on Wi-Fi being enabled."
+    ],
+    [
+      "set_wifi_status",
+      "schedule_doctors_appointment",
+      "This tool requires internet access to schedule appointments and fetch weather data, which may depend on Wi-Fi being enabled."
+    ],
+    [
+      "get_total_government_spending_by_sub_region",
+      "set_wifi_status",
+      "This tool requires internet access to obtain government spending data, which may depend on Wi-Fi being enabled."
+    ],
+    [
+      "check_water_quality_status",
+      "set_wifi_status",
+      "This tool requires internet access to check water quality data, which may depend on Wi-Fi being enabled."
+    ],
+    [
+      "set_wifi_status",
+      "get_median_rent_by_city",
+      "This tool requires internet access to retrieve median rent data, which may depend on Wi-Fi being enabled."
+    ],
+    [
+      "set_wifi_status",
+      "tesla_remote_lock_unlock_doors",
+      "This tool requires internet access for remote vehicle control, which may depend on Wi-Fi being enabled."
+    ],
+    [
+      "set_wifi_status",
+      "get_immigration_statistics_by_sub_region",
+      "This tool requires internet access to obtain immigration statistics, which may depend on Wi-Fi being enabled."
+    ],
+    [
+      "set_wifi_status",
+      "get_poverty_rate_by_sub_region",
+      "This tool requires internet access to retrieve poverty rate data, which may depend on Wi-Fi being enabled."
+    ],
+    [
+      "set_wifi_status",
+      "fetch_etrade_order_history",
+      "This tool requires internet access to retrieve trading history, which may depend on Wi-Fi being enabled."
+    ],
+    [
+      "set_wifi_status",
+      "opentable_reserve_restaurant_table",
+      "This tool requires internet access to book restaurant reservations, which may depend on Wi-Fi being enabled."
+    ],
+    [
+      "set_wifi_status",
+      "control_alexa_smart_light",
+      "This tool requires internet access to communicate with cloud-based smart devices, which may depend on Wi-Fi being enabled."
+    ],
+    [
+      "login_to_steam",
+      "set_wifi_status",
+      "login_to_steam explicitly requires internet connectivity to authenticate, which depends on set_wifi_status to enable Wi-Fi if disabled."
+    ],
+    [
+      "golds_gym_log_workout_notes",
+      "set_wifi_status",
+      "golds_gym_log_workout_notes requires internet connectivity to log notes online, which depends on set_wifi_status to enable Wi-Fi."
+    ],
+    [
+      "set_wifi_status",
+      "place_ubereats_order",
+      "place_ubereats_order requires internet connectivity to place orders, which depends on set_wifi_status to enable Wi-Fi."
+    ],
+    [
+      "set_wifi_status",
+      "add_google_calendar_reminder",
+      "add_google_calendar_reminder requires internet connectivity to sync reminders, which depends on set_wifi_status to enable Wi-Fi."
+    ],
+    [
+      "set_wifi_status",
+      "get_public_transit_usage_by_country",
+      "This tool requires internet connectivity to retrieve transit data, which depends on set_wifi_status to enable Wi-Fi."
+    ],
+    [
+      "set_wifi_status",
+      "get_home_ownership_rate_by_sub_region",
+      "This tool requires internet connectivity to retrieve ownership data, which depends on set_wifi_status to enable Wi-Fi."
+    ],
+    [
+      "set_wifi_status",
+      "get_population_growth_rate_by_city",
+      "This tool requires internet connectivity to retrieve population data, which depends on set_wifi_status to enable Wi-Fi."
+    ],
+    [
+      "place_doordash_order",
+      "get_current_weather",
+      "place_doordash_order verifies delivery availability based on weather conditions as per its description."
+    ],
+    [
+      "place_doordash_order",
+      "get_doctor_appointments",
+      "place_doordash_order's delivery_date parameter indirectly depends on context that might require date verification (e.g., conflicting appointments)."
+    ],
+    [
+      "get_current_weather",
+      "find_nearest_gurdwara",
+      "find_nearest_gurdwara indirectly benefits from weather conditions for travel considerations."
+    ],
+    [
+      "get_current_weather",
+      "enable_google_smart_camera",
+      "enable_google_smart_camera indirectly depends on weather for outdoor connectivity stability as implied by its Wi-Fi requirement."
+    ],
+    [
+      "calculate_ideal_protein_intake",
+      "fetch_online_nutrition_guidelines",
+      "calculate_ideal_protein_intake indirectly benefits from dietary guidelines to contextualize recommendations."
+    ],
+    [
+      "golds_gym_track_workout",
+      "golds_gym_user_login",
+      "golds_gym_track_workout requires a session_id parameter that must be obtained by first logging in via golds_gym_user_login."
+    ],
+    [
+      "emirates_select_entertainment",
+      "emirates_user_login",
+      "emirates_select_entertainment requires a session_id parameter that must be obtained by first logging in via emirates_user_login."
+    ],
+    [
+      "read_libby_book",
+      "openai_multilingual_chatbot_completions_api",
+      "read_libby_book's language parameter could be inferred or translated using the chatbot API for multilingual support, though not strictly required."
+    ],
+    [
+      "openai_multilingual_chatbot_completions_api",
+      "golds_gym_user_login",
+      "golds_gym_user_login's language parameter could be inferred or translated using the chatbot API for multilingual support, though not strictly required."
+    ],
+    [
+      "openai_multilingual_chatbot_completions_api",
+      "emirates_user_login",
+      "emirates_user_login's language parameter could be inferred or translated using the chatbot API for multilingual support, though not strictly required."
+    ],
+    [
+      "get_us_national_holiday",
+      "add_microsoft_calendar_reminder",
+      "add_microsoft_calendar_reminder's date parameter could be validated against holidays using get_us_national_holiday for contextual scheduling, though not required."
+    ],
+    [
+      "buy_stock_charles_schwab",
+      "get_charles_schwab_account_balance",
+      "Parameter Directly Depends On: 'session_id' for get_charles_schwab_account_balance must be obtained from Charles Schwab login (implied by buy_stock_charles_schwab's identical session_id requirement)."
+    ],
+    [
+      "frontier_find_my_bags",
+      "lufthansa_user_login",
+      "Parameter Directly Depends On: 'session_id' for frontier_find_my_bags requires a login tool; lufthansa_user_login exemplifies session generation (despite service mismatch)."
+    ],
+    [
+      "equinox_log_workout_notes",
+      "crunch_fitness_user_login",
+      "Parameter Directly Depends On: 'session_id' for equinox_log_workout_notes necessitates a login tool; crunch_fitness_user_login illustrates session creation (though service differs)."
+    ],
+    [
+      "lufthansa_user_login",
+      "tesla_start_stop_climate_control",
+      "tesla_start_stop_climate_control requires a session_id parameter that must be obtained from a login tool, but no Tesla-specific login exists; lufthansa_user_login is the closest analog for session handling."
+    ],
+    [
+      "calculate_ideal_protein_intake",
+      "get_user_profile",
+      "Parameter Indirectly Depends On: 'bmi' for calculate_ideal_protein_intake may be sourced from get_user_profile if BMI is part of user data (context-dependent)."
+    ],
+    [
+      "find_public_transport_nearby",
+      "get_user_profile",
+      "Parameter Indirectly Depends On: 'location' for find_public_transport_nearby could leverage get_user_profile if location is stored in user data (context-dependent)."
+    ],
+    [
+      "find_nearest_gurdwara",
+      "get_user_profile",
+      "Parameter Indirectly Depends On: 'location' for find_nearest_gurdwara might use get_user_profile if location is part of user preferences (context-dependent)."
+    ],
+    [
+      "golds_gym_schedule_class",
+      "golds_gym_user_login",
+      "golds_gym_schedule_class requires a session_id parameter that must be obtained by logging in via golds_gym_user_login."
+    ],
+    [
+      "amazon_user_login",
+      "validate_email",
+      "amazon_user_login requires a valid email address, which can be ensured using validate_email."
+    ],
+    [
+      "validate_email",
+      "golds_gym_user_login",
+      "Validating the email address before login can prevent errors and ensure the email format is correct."
+    ],
+    [
+      "read_libby_book",
+      "libby_account_login",
+      "read_libby_book requires a session_id parameter that must be obtained by first logging in via libby_account_login."
+    ],
+    [
+      "get_nerd_wallet_account_balance",
+      "libby_account_login",
+      "get_nerd_wallet_account_balance requires a session_id parameter, but lacks a dedicated login tool, creating an indirect dependency on authentication patterns."
+    ],
+    [
+      "libby_account_login",
+      "get_robinhood_account_balance",
+      "get_robinhood_account_balance requires a session_id parameter with no Robinhood-specific login tool, forming an indirect tool dependency."
+    ],
+    [
+      "libby_account_login",
+      "equinox_log_workout_notes",
+      "equinox_log_workout_notes requires a session_id parameter but lacks an Equinox login tool, resulting in an indirect dependency."
+    ],
+    [
+      "tesla_limit_speed_for_teen_driver",
+      "libby_account_login",
+      "tesla_limit_speed_for_teen_driver requires a session_id parameter with no Tesla login tool, creating an indirect authentication dependency."
+    ],
+    [
+      "libby_account_login",
+      "enable_google_smart_camera",
+      "enable_google_smart_camera implies Wi-Fi dependency for connectivity, but no Wi-Fi tool exists; this is an indirect functional dependency."
+    ],
+    [
+      "generate_event_qr_code",
+      "libby_account_login",
+      "generate_event_qr_code requires parameters from nonexistent tools (hash_string, generate_unique_ID), forming an indirect parameter dependency."
+    ],
+    [
+      "generate_unique_ID",
+      "generate_fortnite_achievement_id",
+      "generate_fortnite_achievement_id requires unique_identifier from generate_unique_ID as a mandatory parameter."
+    ],
+    [
+      "get_average_household_size_by_country",
+      "get_country_code",
+      "get_average_household_size_by_country requires country_code which must be derived from get_country_code when only the country name is available."
+    ],
+    [
+      "get_age_distribution_by_country",
+      "get_country_code",
+      "get_age_distribution_by_country requires country_code which must be derived from get_country_code when only the country name is available."
+    ],
+    [
+      "planet_fitness_user_login",
+      "get_user_settings",
+      "The optional 'language' parameter may be obtained from user preferences if not explicitly provided."
+    ],
+    [
+      "generate_unique_ID",
+      "etsy_review_item",
+      "Session ID validation may require a unique identifier if session management depends on generated UUIDs."
+    ],
+    [
+      "generate_unique_ID",
+      "fetch_etrade_order_history",
+      "Session ID validation may leverage UUID generation for secure session handling."
+    ],
+    [
+      "get_user_settings",
+      "backup_user_settings",
+      "The required parameter 'user_settings' must be obtained from the output of get_user_settings."
+    ],
+    [
+      "get_user_settings",
+      "etrade_user_login",
+      "To retrieve the user's preferred language setting if not explicitly provided in the login parameters."
+    ],
+    [
+      "get_user_settings",
+      "login_regal",
+      "To retrieve the user's preferred language setting if not explicitly provided in the login parameters."
+    ],
+    [
+      "generate_unique_ID",
+      "fetch_robinhood_order_history",
+      "To generate a session_id if not already available, as it's a required parameter for accessing order history."
+    ],
+    [
+      "generate_unique_ID",
+      "planet_fitness_track_workout",
+      "To generate a session_id if not already available, as it's a required parameter for workout tracking."
+    ],
+    [
+      "generate_unique_ID",
+      "crunch_fitness_log_workout_notes",
+      "crunch_fitness_log_workout_notes requires a unique workout_id parameter that can be generated by generate_unique_ID."
+    ],
+    [
+      "generate_unique_ID",
+      "generate_secure_token",
+      "generate_secure_token requires a unique_id parameter that can be generated by generate_unique_ID."
+    ],
+    [
+      "get_ebitda",
+      "calculate_interest_coverage_ratio",
+      "The 'ebitda' parameter required by calculate_interest_coverage_ratio must be obtained from the output of get_ebitda."
+    ],
+    [
+      "get_total_population_by_sub_region",
+      "get_violent_crime_rate_by_sub_region",
+      "Violent crime rate per 1,000 residents indirectly depends on total population data from the same sub-region for normalization."
+    ],
+    [
+      "get_public_transit_usage_by_sub_region",
+      "get_total_population_by_sub_region",
+      "Public transit usage percentage indirectly depends on total population data from the same sub-region for contextual analysis."
+    ],
+    [
+      "amazon_delete_item_from_cart",
+      "amazon_checkout_cart",
+      "Item removal may indirectly depend on checkout to finalize cart changes, though not strictly required."
+    ],
+    [
+      "amazon_delete_item_from_cart",
+      "temu_delete_item_from_cart",
+      "Both e-commerce tools share similar functionality, suggesting indirect operational dependencies for consistency."
+    ],
+    [
+      "qatar_user_login",
+      "delta_manage_notifications",
+      "delta_manage_notifications requires a session_id that must be obtained from an airline login tool like qatar_user_login for authentication."
+    ],
+    [
+      "qatar_user_login",
+      "lufthansa_manage_notifications",
+      "lufthansa_manage_notifications requires a session_id that must be obtained from an airline login tool like qatar_user_login for authentication."
+    ],
+    [
+      "golds_gym_schedule_class",
+      "equinox_user_login",
+      "golds_gym_schedule_class requires a session_id that must be obtained from a fitness login tool like equinox_user_login for authentication."
+    ],
+    [
+      "place_instacart_order",
+      "track_forest_fire_risk",
+      "place_instacart_order benefits from track_forest_fire_risk to verify delivery feasibility based on local weather risks (indirect dependency)."
+    ],
+    [
+      "resy_reserve_restaurant_table",
+      "track_forest_fire_risk",
+      "resy_reserve_restaurant_table benefits from track_forest_fire_risk to assess outdoor seating safety based on fire risk (indirect dependency)."
+    ],
+    [
+      "place_instacart_order",
+      "track_instacart_order",
+      "The required parameter 'order_id' for track_instacart_order must be obtained from the output of place_instacart_order when an order is created."
+    ],
+    [
+      "resy_reserve_restaurant_table",
+      "advise_on_weather",
+      "The optional 'outdoor_seating' parameter indirectly benefits from weather advice to inform seating decisions based on conditions."
+    ],
+    [
+      "lufthansa_find_my_bags",
+      "generate_unique_ID",
+      "The required 'bag_tag' parameter may indirectly depend on a unique ID generator for baggage reference creation."
+    ],
+    [
+      "generate_unique_ID",
+      "delta_select_entertainment",
+      "The required 'session_id' parameter may indirectly depend on a unique ID generator for session authentication."
+    ],
+    [
+      "generate_unique_ID",
+      "southwest_select_entertainment",
+      "The required 'session_id' parameter may indirectly depend on a unique ID generator for session authentication."
+    ],
+    [
+      "tesla_open_trunk_or_frunk",
+      "generate_unique_ID",
+      "The required 'session_id' parameter may indirectly depend on a unique ID generator for session authentication."
+    ],
+    [
+      "buy_stock_webull",
+      "ebay_user_login",
+      "Depends on a session_id parameter sourced from a login tool such as ebay_user_login."
+    ],
+    [
+      "lufthansa_manage_notifications",
+      "ebay_user_login",
+      "Requires a session_id parameter obtainable from a login tool such as ebay_user_login."
+    ],
+    [
+      "united_select_entertainment",
+      "ebay_user_login",
+      "Depends on a session_id parameter that must be provided by a login tool like ebay_user_login."
+    ],
+    [
+      "get_city_code",
+      "get_unemployment_rate_by_sub_region",
+      "get_unemployment_rate_by_sub_region requires a sub_region_code which may be derived from get_city_code if city-level data is used."
+    ],
+    [
+      "get_median_rent_by_city",
+      "get_city_code",
+      "get_median_rent_by_city requires a city_code parameter that can be obtained from get_city_code."
+    ],
+    [
+      "get_total_government_spending_by_sub_region",
+      "get_sub_region_code",
+      "The required parameter 'sub_region_code' must be obtained by calling get_sub_region_code since it converts human-readable locations to codes."
+    ],
+    [
+      "get_sub_region_code",
+      "get_unemployment_rate_by_sub_region",
+      "get_unemployment_rate_by_sub_region requires a sub_region_code parameter that can be obtained from get_sub_region_code."
+    ],
+    [
+      "get_sub_region_code",
+      "get_country_code",
+      "get_sub_region_code requires a country_code parameter that can be obtained from get_country_code."
+    ],
+    [
+      "get_clock_timers",
+      "track_puzzle_game_timer",
+      "track_puzzle_game_timer requires a timer_id parameter that can be obtained from get_clock_timers' output of active timers."
+    ],
+    [
+      "login_to_tesla_account",
+      "tesla_summon_vehicle",
+      "It requires a session_id parameter that is obtained after authentication via login_to_tesla_account."
+    ],
+    [
+      "get_unemployment_rate_by_city",
+      "get_city_code",
+      "It requires a city_code parameter that must be retrieved using get_city_code."
+    ],
+    [
+      "frontier_user_login",
+      "frontier_manage_notifications",
+      "frontier_manage_notifications requires a session_id parameter that is obtained after logging in via frontier_user_login."
+    ],
+    [
+      "get_poverty_rate_by_country",
+      "get_country_code",
+      "get_poverty_rate_by_country requires a country_code parameter that can be derived from get_country_code if only the country name is provided."
+    ],
+    [
+      "get_government_spending_per_capita_by_country",
+      "get_country_code",
+      "The country_code parameter requires conversion from a country name, which get_country_code provides."
+    ],
+    [
+      "get_clock_timers",
+      "read_audible_book",
+      "Requires session_id which may depend on login duration tracked by clock timers (Parameter Indirectly Depends On)."
+    ],
+    [
+      "get_clock_timers",
+      "get_charles_schwab_account_balance",
+      "Requires session_id which may depend on login session duration (Parameter Indirectly Depends On)."
+    ],
+    [
+      "get_clock_timers",
+      "tesla_start_stop_climate_control",
+      "Requires session_id which may depend on login session duration (Parameter Indirectly Depends On)."
+    ],
+    [
+      "get_clock_timers",
+      "ebay_add_item_to_cart",
+      "Requires session_id which may depend on login session duration (Parameter Indirectly Depends On)."
+    ],
+    [
+      "get_clock_timers",
+      "ali_express_review_item",
+      "Requires session_id which may depend on login session duration (Parameter Indirectly Depends On)."
+    ],
+    [
+      "get_clock_timers",
+      "ali_express_checkout_cart",
+      "Requires session_id which may depend on login session duration (Parameter Indirectly Depends On)."
+    ],
+    [
+      "get_do_not_disturb_status",
+      "log_dnd_mode_activations",
+      "Requires DND status changes tracked by get_do_not_disturb_status (Tool Directly Depends On)."
+    ],
+    [
+      "get_race_ethnicity_distribution_by_city",
+      "get_city_code",
+      "The required 'city_code' parameter must be obtained from get_city_code when only city name and country are provided."
+    ],
+    [
+      "get_police_force_size_by_city",
+      "get_city_code",
+      "The required 'city_code' parameter must be obtained from get_city_code when only city name and country are provided."
+    ],
+    [
+      "get_country_code",
+      "get_median_rent_by_country",
+      "The required 'country_code' parameter must be obtained from get_country_code when only country name is provided."
+    ],
+    [
+      "get_voter_turnout_by_country",
+      "get_country_code",
+      "The required 'country_code' parameter must be obtained from get_country_code when only country name is provided."
+    ],
+    [
+      "get_divorce_rate_by_country",
+      "get_country_code",
+      "The required parameter 'country_code' must be obtained from get_country_code when only the country name is available."
+    ],
+    [
+      "get_public_transit_usage_by_city",
+      "get_city_code",
+      "The required parameter 'city_code' must be obtained from get_city_code when the city name and country are provided."
+    ],
+    [
+      "la_fitness_user_login",
+      "la_fitness_generate_workout_plan",
+      "la_fitness_generate_workout_plan requires a session_id parameter that must be obtained from la_fitness_user_login."
+    ],
+    [
+      "fresh_direct_get_ingredients",
+      "fresh_direct_get_recipe",
+      "fresh_direct_get_ingredients requires a recipe_id parameter that is typically obtained from fresh_direct_get_recipe output."
+    ],
+    [
+      "ali_express_add_item_to_cart",
+      "ali_express_checkout_cart",
+      "ali_express_checkout_cart depends on items added to cart by ali_express_add_item_to_cart for meaningful operation."
+    ],
+    [
+      "get_sub_region_code",
+      "get_marriage_rate_by_sub_region",
+      "The required parameter 'sub_region_code' must be sourced from get_sub_region_code as it translates region names to standardized codes."
+    ],
+    [
+      "get_current_weather",
+      "opentable_reserve_restaurant_table",
+      "Reserving outdoor seating may indirectly depend on current weather conditions for optimal comfort."
+    ],
+    [
+      "planet_fitness_user_login",
+      "tesla_remote_lock_unlock_doors",
+      "Session ID for Tesla tools requires prior authentication, analogous to how fitness tools depend on login."
+    ],
+    [
+      "planet_fitness_user_login",
+      "tesla_adjust_autopilot_fsd_settings",
+      "Session ID for Tesla tools requires prior authentication, similar to fitness service dependencies."
+    ],
+    [
+      "planet_fitness_user_login",
+      "fetch_etrade_order_history",
+      "ETrade session ID implies dependency on an authentication tool like Planet Fitness login for credential management."
+    ],
+    [
+      "planet_fitness_user_login",
+      "crunch_fitness_log_workout_notes",
+      "Crunch Fitness session ID depends on prior authentication, comparable to Planet Fitness login workflow."
+    ],
+    [
+      "planet_fitness_user_login",
+      "golds_gym_generate_workout_plan",
+      "Gold's Gym session ID requires authentication, mirroring Planet Fitness login functionality."
+    ],
+    [
+      "evaluate_heart_rate_status",
+      "get_user_profile",
+      "The required age parameter can be obtained from user-specific data in get_user_profile."
+    ],
+    [
+      "charles_schwab_user_login",
+      "fetch_etrade_order_history",
+      "The session_id parameter requires authentication, but no ETrade login exists; charles_schwab_user_login is the only financial login available."
+    ],
+    [
+      "buy_stock_etrade",
+      "charles_schwab_user_login",
+      "The session_id parameter requires authentication, but no ETrade login exists; charles_schwab_user_login is the only financial login available."
+    ],
+    [
+      "planet_fitness_user_login",
+      "validate_email",
+      "Validating the email parameter before login prevents errors during authentication."
+    ],
+    [
+      "qatar_user_login",
+      "validate_email",
+      "qatar_user_login requires a valid email address, which can be ensured using validate_email."
+    ],
+    [
+      "etsy_user_login",
+      "etsy_review_item",
+      "etsy_review_item requires a session_id parameter that can only be obtained by logging in via etsy_user_login."
+    ],
+    [
+      "etsy_user_login",
+      "united_update_travel_preferences",
+      "Indirect tool dependency: Updating United preferences requires user authentication, analogous to Etsy login establishing session credentials."
+    ],
+    [
+      "united_manage_notifications",
+      "etsy_user_login",
+      "Indirect tool dependency: Managing United notifications likely requires prior authentication (like a session ID), similar to how Etsy login establishes user sessions."
+    ],
+    [
+      "etsy_user_login",
+      "sell_stock_nerd_wallet",
+      "sell_stock_nerd_wallet requires a session_id parameter that must be obtained from a login tool, though no NerdWallet-specific login exists; etsy_user_login exemplifies the dependency pattern."
+    ],
+    [
+      "tesla_open_trunk_or_frunk",
+      "etsy_user_login",
+      "tesla_open_trunk_or_frunk requires a session_id parameter that must be obtained from a login tool, though no Tesla-specific login exists; etsy_user_login exemplifies the dependency pattern."
+    ],
+    [
+      "schedule_doctors_appointment",
+      "check_local_soil_quality",
+      "schedule_doctors_appointment's location parameter may indirectly benefit from geographic data tools like check_local_soil_quality for contextual accuracy."
+    ],
+    [
+      "evaluate_recycling_options",
+      "check_local_soil_quality",
+      "evaluate_recycling_options' location parameter may indirectly benefit from geographic data tools like check_local_soil_quality for contextual enrichment."
+    ],
+    [
+      "locate_pet_parks",
+      "get_current_location",
+      "When user doesn't provide a location parameter, locate_pet_parks requires get_current_location to determine search coordinates."
+    ],
+    [
+      "find_nearest_church",
+      "get_geo_location_by_ip",
+      "find_nearest_church can use get_geo_location_by_ip to automatically determine the user's current location if not explicitly provided."
+    ],
+    [
+      "get_current_weather",
+      "get_geo_location_by_ip",
+      "get_current_weather can use get_geo_location_by_ip to automatically determine the user's current location if not explicitly provided."
+    ],
+    [
+      "lufthansa_view_flight_status",
+      "estimate_flight_carbon_footprint",
+      "lufthansa_view_flight_status could provide flight distance data to estimate_flight_carbon_footprint for more accurate calculations, though not mandatory."
+    ],
+    [
+      "get_college_enrollment_by_city",
+      "get_median_rent_by_sub_region",
+      "get_median_rent_by_sub_region could inform demographic context for college enrollment analysis in the same geographic area, though not required."
+    ],
+    [
+      "get_college_enrollment_by_city",
+      "get_recycling_rate_by_city",
+      "get_college_enrollment_by_city could provide demographic context for recycling rate analysis in the same city, though not mandatory."
+    ],
+    [
+      "get_government_spending_per_capita_by_country",
+      "get_income_distribution_by_country",
+      "get_income_distribution_by_country could contextualize government spending data analysis for the same country, though not required."
+    ],
+    [
+      "connect_mobile_hotspot",
+      "openai_multilingual_chatbot_completions_api",
+      "openai_multilingual_chatbot_completions_api indirectly depends on internet connectivity from connect_mobile_hotspot for API communication."
+    ],
+    [
+      "connect_mobile_hotspot",
+      "login_to_uber",
+      "login_to_uber requires internet connectivity to verify credentials and fetch payment methods, which can be established by connect_mobile_hotspot."
+    ],
+    [
+      "yummly_add_to_favorites",
+      "connect_mobile_hotspot",
+      "yummly_add_to_favorites requires internet connectivity to interact with Yummly's services, which can be established by connect_mobile_hotspot."
+    ],
+    [
+      "connect_mobile_hotspot",
+      "download_audible_book",
+      "download_audible_book indirectly depends on internet access from connect_mobile_hotspot for downloading digital content."
+    ],
+    [
+      "connect_mobile_hotspot",
+      "amazon_review_item",
+      "amazon_review_item requires internet connectivity to submit reviews to Amazon, which can be established by connect_mobile_hotspot."
+    ],
+    [
+      "tesla_start_stop_climate_control",
+      "login_to_tesla_account",
+      "The session_id parameter required by tesla_start_stop_climate_control must be obtained by first executing login_to_tesla_account to authenticate the user."
+    ],
+    [
+      "login_to_tesla_account",
+      "tesla_enable_disable_valet_mode",
+      "The session_id parameter required by tesla_enable_disable_valet_mode must be obtained from login_to_tesla_account."
+    ],
+    [
+      "data_breach_alert_system",
+      "validate_email",
+      "The email parameter should be validated for correctness before use in the tool."
+    ],
+    [
+      "login_to_tesla_account",
+      "validate_email",
+      "The email parameter should be validated for correctness before authentication."
+    ],
+    [
+      "southwest_user_login",
+      "validate_email",
+      "The email parameter should be validated for correctness before authentication."
+    ],
+    [
+      "etrade_user_login",
+      "get_etrade_account_balance",
+      "The session_id required by get_etrade_account_balance must be obtained by logging in via etrade_user_login."
+    ],
+    [
+      "get_screen_brightness",
+      "optimize_physical_performance",
+      "optimize_physical_performance requires the screen_brightness_level parameter that can be obtained from get_screen_brightness."
+    ],
+    [
+      "qatar_user_login",
+      "frontier_update_travel_preferences",
+      "frontier_update_travel_preferences requires a session_id parameter, but no Frontier login tool exists; qatar_user_login is the only session-providing tool available."
+    ],
+    [
+      "qatar_user_login",
+      "planet_fitness_generate_workout_plan",
+      "planet_fitness_generate_workout_plan requires a session_id parameter, but no Planet Fitness login tool exists; qatar_user_login is the only session-providing tool available."
+    ],
+    [
+      "etsy_user_login",
+      "jetblue_view_flight_status",
+      "The 'session_id' parameter for 'jetblue_view_flight_status' must be obtained from a login tool like 'etsy_user_login' (implied authentication dependency)."
+    ],
+    [
+      "planet_fitness_generate_workout_plan",
+      "audible_account_login",
+      "The 'session_id' parameter for 'planet_fitness_generate_workout_plan' must be obtained from a login tool like 'audible_account_login' (implied authentication dependency)."
+    ],
+    [
+      "frontier_find_my_bags",
+      "login_regal",
+      "frontier_find_my_bags requires a session_id for authentication, which login_regal can provide as a generic login tool."
+    ],
+    [
+      "etrade_user_login",
+      "sell_stock_etrade",
+      "sell_stock_etrade requires a session_id parameter that must be obtained from etrade_user_login for authentication."
+    ],
+    [
+      "validate_email",
+      "jetblue_manage_notifications",
+      "jetblue_manage_notifications requires a valid email parameter that can be verified using validate_email for correctness."
+    ],
+    [
+      "planet_fitness_track_workout",
+      "validate_email",
+      "planet_fitness_track_workout may require email validation if used for account operations, though not explicitly stated."
+    ],
+    [
+      "golds_gym_schedule_class",
+      "validate_email",
+      "golds_gym_schedule_class may require email validation if used for account operations, though not explicitly stated."
+    ],
+    [
+      "validate_email",
+      "fetch_robinhood_order_history",
+      "fetch_robinhood_order_history may require email validation if used for account operations, though not explicitly stated."
+    ],
+    [
+      "login_regal",
+      "validate_email",
+      "login_regal requires a valid email parameter that can be verified using validate_email for correctness."
+    ],
+    [
+      "etrade_user_login",
+      "validate_email",
+      "etrade_user_login requires a valid email parameter that can be verified using validate_email for correctness."
+    ],
+    [
+      "recommend_exercise_attire",
+      "get_current_weather",
+      "Requires current weather conditions as input parameter to suggest appropriate exercise clothing."
+    ],
+    [
+      "get_median_rent_by_sub_region",
+      "get_recycling_rate_by_sub_region",
+      "Median rent analysis may indirectly benefit from recycling rate data as an economic indicator for the same sub-region and year."
+    ],
+    [
+      "get_foreclosure_rate_by_sub_region",
+      "get_median_rent_by_sub_region",
+      "Foreclosure rate assessment may indirectly depend on median rent data for economic context in the same sub-region and year."
+    ],
+    [
+      "get_average_household_size_by_sub_region",
+      "get_domestic_migration_by_sub_region",
+      "Household size analysis may indirectly depend on migration data for demographic insights in the same sub-region and year."
+    ],
+    [
+      "monitor_daily_water_heating_footprint",
+      "get_recycling_rate_by_sub_region",
+      "Carbon footprint calculations may indirectly benefit from regional recycling rates as an environmental efficiency metric."
+    ],
+    [
+      "united_view_flight_status",
+      "lufthansa_user_login",
+      "united_view_flight_status requires a session_id parameter that must be obtained from a login tool, but no United-specific login exists; lufthansa_user_login is the closest analog for airline session handling."
+    ],
+    [
+      "lufthansa_user_login",
+      "tesla_adjust_autopilot_fsd_settings",
+      "tesla_adjust_autopilot_fsd_settings requires a session_id parameter that must be obtained from a login tool, but no Tesla-specific login exists; lufthansa_user_login is the closest analog for session handling."
+    ],
+    [
+      "lufthansa_user_login",
+      "is_tesla_charger_location_full",
+      "is_tesla_charger_location_full requires a session_id parameter that must be obtained from a login tool, but no Tesla-specific login exists; lufthansa_user_login is the closest analog for session handling."
+    ],
+    [
+      "lufthansa_user_login",
+      "read_audible_book",
+      "read_audible_book requires a session_id parameter that must be obtained from a login tool, but no Audible-specific login exists; lufthansa_user_login is the closest analog for session handling."
+    ],
+    [
+      "etsy_user_login",
+      "southwest_select_entertainment",
+      "Indirect tool dependency: Accessing Southwest entertainment requires session-based authentication, similar to Etsy login functionality."
+    ],
+    [
+      "golds_gym_generate_workout_plan",
+      "etsy_user_login",
+      "Indirect tool dependency: Generating workout plans requires user authentication, comparable to Etsy login establishing user sessions."
+    ],
+    [
+      "etsy_user_login",
+      "crunch_fitness_log_workout_notes",
+      "Indirect tool dependency: Logging workout notes depends on authenticated sessions, similar to Etsy login's session management."
+    ],
+    [
+      "analyze_neighborhood_amenities",
+      "get_current_weather",
+      "Indirect tool dependency: Amenity analysis could be enhanced by weather context (e.g., recommending parks during good weather)."
+    ],
+    [
+      "find_nearest_church",
+      "get_current_weather",
+      "Indirect tool dependency: Church recommendations might incorporate weather data (e.g., suggesting indoor activities during rain)."
+    ],
+    [
+      "get_current_weather",
+      "detect_noise_pollution_levels",
+      "Indirect tool dependency: Weather conditions (e.g., wind) could influence noise pollution analysis accuracy."
+    ],
+    [
+      "connect_mobile_hotspot",
+      "buy_stock_fidelity",
+      "buy_stock_fidelity indirectly depends on internet connectivity from connect_mobile_hotspot for real-time trading execution."
+    ],
+    [
+      "temu_checkout_cart",
+      "connect_mobile_hotspot",
+      "temu_checkout_cart indirectly depends on internet access via connect_mobile_hotspot for completing online purchases."
+    ],
+    [
+      "frontier_find_my_bags",
+      "emirates_user_login",
+      "Direct tool dependency: frontier_find_my_bags requires a session_id which must be obtained from a login tool like emirates_user_login for authentication."
+    ],
+    [
+      "get_charles_schwab_account_balance",
+      "emirates_user_login",
+      "Direct tool dependency: get_charles_schwab_account_balance requires a session_id which must be obtained from a login tool like emirates_user_login for authentication."
+    ],
+    [
+      "emirates_user_login",
+      "read_audible_book",
+      "Direct tool dependency: read_audible_book requires a session_id which must be obtained from a login tool like emirates_user_login for authentication."
+    ],
+    [
+      "download_audible_book",
+      "emirates_user_login",
+      "Direct tool dependency: download_audible_book requires a session_id which must be obtained from a login tool like emirates_user_login for authentication."
+    ],
+    [
+      "golds_gym_track_workout",
+      "crunch_fitness_user_login",
+      "Direct tool dependency: golds_gym_track_workout requires a session_id which must be obtained from a login tool like crunch_fitness_user_login for authentication."
+    ],
+    [
+      "buy_stock_etrade",
+      "emirates_user_login",
+      "Direct tool dependency: buy_stock_etrade requires a session_id which must be obtained from a login tool like emirates_user_login for authentication."
+    ],
+    [
+      "get_current_storage_space",
+      "download_steam_game",
+      "Indirect tool dependency: download_steam_game checks storage availability, which relies on get_current_storage_space for capacity validation."
+    ],
+    [
+      "temu_user_login",
+      "temu_checkout_cart",
+      "temu_checkout_cart requires a session_id parameter that must be obtained by running temu_user_login first."
+    ],
+    [
+      "united_manage_notifications",
+      "get_user_profile",
+      "The required parameter 'email' must be obtained from user profile data."
+    ],
+    [
+      "etsy_user_login",
+      "get_user_profile",
+      "The required parameter 'email' must be obtained from user profile data."
+    ],
+    [
+      "charles_schwab_user_login",
+      "get_user_profile",
+      "The required parameter 'email' must be obtained from user profile data."
+    ],
+    [
+      "lufthansa_find_my_bags",
+      "get_user_profile",
+      "The required 'session_id' parameter implies dependency on a login tool for user authentication context."
+    ],
+    [
+      "sell_stock_nerd_wallet",
+      "get_user_profile",
+      "The required 'session_id' parameter implies dependency on a login tool for user authentication context."
+    ],
+    [
+      "tesla_open_trunk_or_frunk",
+      "get_user_profile",
+      "The required 'session_id' parameter implies dependency on a login tool for user authentication context."
+    ],
+    [
+      "jetblue_view_flight_status",
+      "get_user_profile",
+      "The required 'session_id' parameter implies dependency on a login tool for user authentication context."
+    ],
+    [
+      "get_user_profile",
+      "read_audible_book",
+      "The required 'session_id' parameter implies dependency on a login tool for user authentication context."
+    ],
+    [
+      "united_manage_notifications",
+      "validate_email",
+      "The 'email' parameter must be validated to ensure proper notification delivery."
+    ],
+    [
+      "etsy_user_login",
+      "validate_email",
+      "The 'email' parameter requires validation to ensure correct login credentials."
+    ],
+    [
+      "golds_gym_schedule_class",
+      "get_current_time",
+      "The 'class_time' parameter may indirectly depend on current time for scheduling accuracy."
+    ],
+    [
+      "libby_account_login",
+      "validate_email",
+      "The optional email parameter may be validated for correct format before login attempts."
+    ],
+    [
+      "validate_email",
+      "la_fitness_user_login",
+      "The required email parameter may be validated for correct format before login attempts."
+    ],
+    [
+      "lufthansa_select_entertainment",
+      "validate_email",
+      "The session_id generation (via login) may involve email validation, though not explicitly defined."
+    ],
+    [
+      "united_select_entertainment",
+      "validate_email",
+      "The session_id generation (via login) may involve email validation, though not explicitly defined."
+    ],
+    [
+      "qatar_update_travel_preferences",
+      "validate_email",
+      "The session_id generation (via login) may involve email validation, though not explicitly defined."
+    ]
+  ]
+}

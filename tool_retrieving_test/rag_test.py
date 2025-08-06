@@ -3,6 +3,7 @@ import shutil
 import statistics
 import tempfile
 from pathlib import Path
+from httpx import Client
 
 import dotenv
 from sentence_transformers import SentenceTransformer
@@ -22,6 +23,7 @@ from config import (
     OPENAI_API_KEY,
     PLANNER_AGENT_SYSTEM_PROMPT,
     LLM_MODEL,
+    HTTP_PROXY,
 )
 
 dotenv.load_dotenv()
@@ -214,7 +216,12 @@ def main() -> None:
         persist_directory=tempfile.mkdtemp(prefix="rag_ref_tools_"),
     )
 
-    llm = ChatOpenAI(model=LLM_MODEL, api_key=OPENAI_API_KEY, temperature=0)
+    llm = ChatOpenAI(
+        model=LLM_MODEL,
+        api_key=OPENAI_API_KEY,
+        temperature=0,
+        http_client=Client(proxy=HTTP_PROXY),
+    )
 
     for i, item in enumerate(bench):
         print(i)

@@ -1,11 +1,11 @@
 import os
 
 TOOLS_PATH = "../data/ultratool/tools_expanded.json"
-BENCHMARK_PATH = "../data/ultratool/top_benchmarks_enriched.json"
+BENCHMARK_PATH = "../data/ultratool/benchmarks_enriched.json"
 SEED = 42
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-
+HTTP_PROXY = os.getenv("HTTP_PROXY")
 LLM_MODEL = "gpt-4o-mini"
 
 K = 10

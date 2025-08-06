@@ -3,6 +3,7 @@ import tempfile
 import statistics
 import sys
 from pathlib import Path
+from httpx import Client
 
 import dotenv
 import regex as re
@@ -21,6 +22,7 @@ from config import (
     PLANNER_AGENT_SYSTEM_PROMPT,
     BENCHMARK_PATH,
     TOOLS_PATH,
+    HTTP_PROXY,
 )
 from tool_utils import (
     load_benchmark,
@@ -248,7 +250,12 @@ def main() -> None:
         persist_directory=tempfile.mkdtemp(prefix="rag_ref_tools_"),
     )
 
-    llm = ChatOpenAI(model=LLM_MODEL, api_key=OPENAI_API_KEY, temperature=0)
+    llm = ChatOpenAI(
+        model=LLM_MODEL,
+        api_key=OPENAI_API_KEY,
+        temperature=0,
+        http_client=Client(proxy=HTTP_PROXY),
+    )
 
     for idx, item in enumerate(bench):
         if idx in completed:
