@@ -243,6 +243,6 @@ def format_tool_descriptions(tools: Dict[str, ToolSchema]) -> str:
         # print("Tool name:", name)
         # print("Tool description:", schema.description_expanded)
         desc.append(
-            f"- {name}: {schema.description_expanded}\nArguments: {args_str}\n syntetic_questions for example: {schema.synthetic_questions}"
+            f"- {name}: {schema.description_expanded}\nArguments: {args_str}\nSyntetic questions for example: {schema.synthetic_questions}"
         )
     return "\n".join(desc)

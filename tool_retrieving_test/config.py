@@ -1,7 +1,10 @@
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 TOOLS_PATH = "../data/ultratool/tools_expanded.json"
-BENCHMARK_PATH = "../data/ultratool/benchmarks_enriched.json"
+BENCHMARK_PATH = "../data/ultratool/top_benchmarks_enriched.json"
 SEED = 42
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -10,6 +13,7 @@ LLM_MODEL = "gpt-4o-mini"
 
 K = 10
 SUBTASK_K = 5
+TOP_M = 15
 
 
 PLANNER_AGENT_SYSTEM_PROMPT = """
@@ -31,7 +35,7 @@ User request: "{user_request}"
 
 AGENT_SYSTEM_PROMPT = """
 You are an execution agent working on a SINGLE sub-task: \"{current_subtask}\".
-Full-task: \"{user_request}\"
+Full-task for context: \"{user_request}\"
 
 Available tools:
 {tool_descriptions}
