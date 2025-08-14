@@ -55,3 +55,27 @@ Return ONLY a JSON array of tool calls following the format:
 
 Do NOT output any commentary.
 """
+
+
+AGENT_SYSTEM_PROMPT_NO_SUBTASKS = """
+You are an execution agent working on question: 
+\"{user_request}\"
+
+Available tools:
+{tool_descriptions}
+
+Select the best tool(s) (one or many or all) to accomplish the sub-task. For tools that perform the same
+high-level action (e.g. file_write vs create_document) include ALL candidates.
+
+Return ONLY a JSON array of tool calls following the format:
+[
+  {{
+    "tool": "tool_name",
+    "param": {{ ... }},
+    "input_source": "question" | "<prev_tool> tool"
+  }},
+  ...
+]
+
+Do NOT output any commentary.
+"""
