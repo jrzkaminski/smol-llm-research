@@ -163,14 +163,8 @@ def invoke_argument_agent(
         args_schema = schema.arguments
         if not (args_schema and args_schema.properties):
             continue
-        arg_strings = [
-            f"{arg}: {prop.type} — {prop.description or ''}"
-            for arg, prop in args_schema.properties.items()
-        ]
-        flat_args = " | ".join(arg_strings)
-
-        # arg_list = ", ".join(args_schema.properties.keys())
-        lines.append(f"{name}: {flat_args}")
+        arg_list = ", ".join(args_schema.properties.keys())
+        lines.append(f"{name}: {arg_list}")
 
     if not lines:
         return []

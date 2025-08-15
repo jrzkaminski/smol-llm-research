@@ -1,0 +1,2165 @@
+{
+  "completed": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99
+  ],
+  "detail_table": [
+    {
+      "idx": 0,
+      "question": "Please plan a trip for me departing on October 1st at 8:00 AM to Japan, returning on October 7th at 11:00 PM, including Tokyo Disneyland, Senso-ji Temple, Ginza, Mount Fuji, Kyoto cultural experience, Universal Studios Osaka, and visiting the Nara Deer Park on October 4th, and help me find hotels where the nightly cost does not exceed 10,000 Japanese yen.",
+      "reference": [
+        "book_ticket",
+        "hotel_search",
+        "transportation_booking",
+        "travel_itinerary_planner"
+      ],
+      "selected": [
+        "calculate_checkout_date",
+        "check_event_impact_on_price",
+        "find_and_select_hotel",
+        "japan_visa_info_query",
+        "plan_daily_itinerary",
+        "search_hotels_within_budget"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "idx": 1,
+      "question": "Please order a Spicy Hot Pot for me at the restaurant, add two extra servings of beef and a plate of hand-torn cabbage, then place the order using my table ID 10, and help me check out.",
+      "reference": [
+        "checkout_api",
+        "get_dish_id",
+        "menu_select_api",
+        "place_order"
+      ],
+      "selected": [
+        "combine_orders",
+        "menu_select_api",
+        "order_dishes",
+        "query_dish_id"
+      ],
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25
+    },
+    {
+      "idx": 2,
+      "question": "Yesterday my washing machine broke down, I need to schedule a repair for the 2015 Samsung washing machine model, the fault description is that it does not spin, my contact number is 13800000000, the service address is Sanlitun SOHO, Chaoyang District, Beijing, and the appointment time for the service is November 16, 2023, at 10:00:00\n",
+      "reference": [
+        "call_service_provider",
+        "confirm_available_appointment_times",
+        "ensure_appointment_confirmation",
+        "finalize_appointment_time",
+        "provide_repair_details",
+        "search_authorized_service_provider",
+        "select_nearest_service_provider"
+      ],
+      "selected": [
+        "brand_service_filter",
+        "confirm_service_area",
+        "extract_common_issues",
+        "notify_user_of_appointment",
+        "provide_repair_details",
+        "save_updated_contact_information",
+        "search_and_confirm_service_center",
+        "search_repair_advice",
+        "service_provider_selection",
+        "submit_new_repair_request"
+      ],
+      "precision": 0.1,
+      "recall": 0.14285714285714285,
+      "f1": 0.11764705882352941
+    },
+    {
+      "idx": 3,
+      "question": "Please outline and provide the complete legal regulation process for company registration in the Shanghai area, including but not limited to capital requirements and a list of documents that must be submitted, and conduct a compliance assessment of 'Future Technology Co., Ltd.' in the information technology industry to ensure it complies with relevant laws and regulations. In addition, list the labor law requirements that must be followed for recruiting full-time and part-time employees in the Shanghai area, and the potential legal risks that may be faced.",
+      "reference": [
+        "labor_law_guide",
+        "legal_compliance_check",
+        "legal_regulation_search"
+      ],
+      "selected": [
+        "analyze_market_trends",
+        "compliance_check",
+        "enterprise_credit_report",
+        "identify_risks",
+        "labor_law_guide",
+        "legal_regulation_search",
+        "policy_compliance_check"
+      ],
+      "precision": 0.2857142857142857,
+      "recall": 0.6666666666666666,
+      "f1": 0.4
+    },
+    {
+      "idx": 4,
+      "question": "Please automatically turn on my living room lights and air conditioning at 7 pm tonight, and set up a twice-daily feeding care plan for my newly adopted two-month-old cat weighing about 1000 grams, taking into account that I have already scheduled vaccinations for next week.",
+      "reference": [
+        "pet_care_tool",
+        "search_information",
+        "set_reminder",
+        "smart_home_control"
+      ],
+      "selected": [
+        "pet_care_tool",
+        "set_vaccine_reminder",
+        "smart_home_control"
+      ],
+      "precision": 0.6666666666666666,
+      "recall": 0.5,
+      "f1": 0.5714285714285715
+    },
+    {
+      "idx": 5,
+      "question": "I need to log into my two different accounts to update information, the account IDs are 123456 and 654321, and the passwords for both are passwd123.\n",
+      "reference": [
+        "account_login",
+        "account_logout",
+        "update_account_info"
+      ],
+      "selected": [
+        "account_login",
+        "request_verification_code",
+        "update_account_info"
+      ],
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "f1": 0.6666666666666666
+    },
+    {
+      "idx": 6,
+      "question": "I need to create a 'Work' schedule with a blue tag and the highest priority, starting from today, Tuesday, 2023-05-02, and covering all the weekdays until Friday of this week.",
+      "reference": [
+        "create_schedule",
+        "save_schedule",
+        "set_schedule_date_range",
+        "set_schedule_priority",
+        "set_schedule_repetition",
+        "set_schedule_tag"
+      ],
+      "selected": [
+        "calculate_next_weekday",
+        "create_schedule",
+        "create_schedule_label",
+        "generate_schedule_tag",
+        "get_weekday",
+        "set_schedule_priority",
+        "set_schedule_repetition"
+      ],
+      "precision": 0.42857142857142855,
+      "recall": 0.5,
+      "f1": 0.4615384615384615
+    },
+    {
+      "idx": 7,
+      "question": "I want to know the balances of my two bank accounts, with account IDs 123456 and 7891011, both passwords are mySecr3tP@ss.\n",
+      "reference": [
+        "account_login",
+        "account_logout",
+        "balance_query"
+      ],
+      "selected": [
+        "account_balance_query",
+        "balance_query",
+        "display_account_balance",
+        "query_balance"
+      ],
+      "precision": 0.25,
+      "recall": 0.3333333333333333,
+      "f1": 0.28571428571428575
+    },
+    {
+      "idx": 8,
+      "question": "Please use my identity information, including name Zhang San, ID number 123456789012345678 and verification code 8888, to inquire about the progress of the credit card application I submitted. Then log in to my online banking account with account ID abc123, password password456 and verification code 5566 to check the account balance of my bank card number 6222000001111111111, and inquire about the amount owed on my credit card account 6222888800000000. Finally, repay 2500 yuan from my debit card number 6222000001111111111 to the credit card account.",
+      "reference": [
+        "account_login",
+        "bank_balance_query",
+        "credit_card_debt",
+        "credit_card_progress",
+        "credit_card_repayment"
+      ],
+      "selected": [
+        "account_login",
+        "application_progress_query",
+        "bank_balance_query",
+        "bank_login",
+        "credit_card_repayment",
+        "currency_type_selector",
+        "query_credit_card_debt"
+      ],
+      "precision": 0.42857142857142855,
+      "recall": 0.6,
+      "f1": 0.5
+    },
+    {
+      "idx": 9,
+      "question": "Please log into my account using username user123 and password password321, check the amount of British pounds I currently hold, and purchase an additional 5000 British pounds at the latest exchange rate.",
+      "reference": [
+        "account_login",
+        "currency_conversion",
+        "exchange_rate_query",
+        "foreign_currency_purchase",
+        "foreign_currency_query"
+      ],
+      "selected": [
+        "currency_exchange_rate",
+        "currency_type_selector",
+        "foreign_currency_query",
+        "login_to_ordering_service",
+        "special_foreign_currency_purchase"
+      ],
+      "precision": 0.2,
+      "recall": 0.2,
+      "f1": 0.20000000000000004
+    },
+    {
+      "idx": 10,
+      "question": "Please reserve a table for dinner for me and another guest at the restaurant, order a serving of Kung Pao Chicken (Dish ID 101) and two bowls of rice (Dish ID 105), combine these two orders, randomly assign a table, and finally use online payment to settle the bill for this dinner.",
+      "reference": [
+        "assign_random_table",
+        "checkout_api",
+        "menu_select_api",
+        "merge_orders"
+      ],
+      "selected": [
+        "assign_random_table",
+        "book_restaurant",
+        "book_table",
+        "check_restaurant_availability",
+        "combine_orders",
+        "menu_select_api",
+        "online_payment",
+        "order_details_api"
+      ],
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1": 0.3333333333333333
+    },
+    {
+      "idx": 11,
+      "question": "Tonight I will go to a restaurant for dinner with two friends, I need to reserve a table and pre-order a serving of Kung Pao Chicken and a serving of Steamed Sea Bass, then please help me combine these two dish orders and prepare the bill, but I will choose to pay with my mobile phone after arriving at the restaurant.",
+      "reference": [
+        "confirm_payment_method",
+        "merge_orders",
+        "request_menu",
+        "submit_preorder",
+        "table_booking_api"
+      ],
+      "selected": [
+        "assign_random_table",
+        "book_restaurant",
+        "book_table",
+        "combine_orders",
+        "confirm_payment_method",
+        "display_order_details",
+        "get_contact_information",
+        "get_special_menu",
+        "menu_recommendation_tool",
+        "reserve_medication",
+        "submit_preorder"
+      ],
+      "precision": 0.18181818181818182,
+      "recall": 0.4,
+      "f1": 0.25000000000000006
+    },
+    {
+      "idx": 12,
+      "question": "Please book table number 5 for me, and order one serving of Tomato Scrambled Eggs with ID 101 and two servings of Steamed Perch with ID 202, then immediately check out for these dishes and the table.",
+      "reference": [
+        "book_table",
+        "checkout_api",
+        "menu_select_api",
+        "place_order"
+      ],
+      "selected": [
+        "confirm_table_availability",
+        "menu_select_api"
+      ],
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333333333333333
+    },
+    {
+      "idx": 13,
+      "question": "Please reserve table number 15 for me at the restaurant, and order two dishes of number 3 and an additional two desserts of number 5, then help me complete the payment.",
+      "reference": [
+        "checkout_api",
+        "menu_select_api",
+        "place_order",
+        "table_booking_api"
+      ],
+      "selected": [
+        "book_table",
+        "check_restaurant_availability",
+        "menu_select_api",
+        "order_dishes",
+        "query_dish_id"
+      ],
+      "precision": 0.2,
+      "recall": 0.25,
+      "f1": 0.22222222222222224
+    },
+    {
+      "idx": 14,
+      "question": "I need to book a dinner table, order two No. 8 steaks and a bottle of No. 16 red wine at table 5, and complete the payment.",
+      "reference": [
+        "checkout_api",
+        "get_contact_information",
+        "menu_select_api",
+        "place_order"
+      ],
+      "selected": [
+        "assign_random_table",
+        "book_dinner",
+        "book_table",
+        "get_restaurant_service_availability",
+        "order_dishes",
+        "table_booking_api"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "idx": 15,
+      "question": "I need to modify my hotel reservation details, the confirmation number is CN12345ABC. Change the check-in date to October 15th, check-out date to October 20th, adjust the room type to Deluxe Suite, and reserve 3 rooms.\n",
+      "reference": [
+        "hotel_booking_modification",
+        "hotel_booking_query"
+      ],
+      "selected": [
+        "additional_room_booking",
+        "check_and_change_room_type",
+        "filter_hotels_by_date",
+        "get_booking_confirmation",
+        "get_confirmation_number",
+        "hotel_booking_modification",
+        "hotel_reservation_search"
+      ],
+      "precision": 0.14285714285714285,
+      "recall": 0.5,
+      "f1": 0.22222222222222224
+    },
+    {
+      "idx": 16,
+      "question": "I would like to change the train ticket for the passenger with the ID number 320521198005017656, changing the departure station to Nanjing and the arrival station to Beijing, with the train number G102, and changing the seat type to second class.\n",
+      "reference": [
+        "identity_verification",
+        "seat_availability_check",
+        "ticket_info_query",
+        "train_ticket_changing"
+      ],
+      "selected": [
+        "change_to_earliest_available_train",
+        "get_passenger_identity",
+        "select_and_change_ticket",
+        "ticket_change_confirmation",
+        "train_ticket_changing"
+      ],
+      "precision": 0.2,
+      "recall": 0.25,
+      "f1": 0.22222222222222224
+    },
+    {
+      "idx": 17,
+      "question": "Inquire and book a train ticket for September 16th at 9 am from Beijing to Shanghai, ensure the seat type is first class, and purchase travel insurance for the ticket collector Li Si (ID number 123456789012345678), also check the weather forecast for that day to make appropriate preparations for the trip.",
+      "reference": [
+        "check_weather",
+        "purchase_travel_insurance",
+        "search_train",
+        "train_ticket_booking"
+      ],
+      "selected": [
+        "book_train_ticket",
+        "purchase_travel_insurance",
+        "select_ticket",
+        "special_weather_forecast_tool",
+        "train_ticket_change_query"
+      ],
+      "precision": 0.2,
+      "recall": 0.25,
+      "f1": 0.22222222222222224
+    },
+    {
+      "idx": 18,
+      "question": "My refrigerator is not cooling and needs repair service. The refrigerator is a Haier BCD-210TMPF, contact number is 13800138000, and the home address is No. 66 Zhichun Road, Haidian District, Beijing. Please help me schedule a repair visit for the nearest workday.\n",
+      "reference": [
+        "appliance_repair_request",
+        "find_nearest_service_center",
+        "get_service_center_working_hours",
+        "select_nearest_working_day"
+      ],
+      "selected": [
+        "appliance_common_issues_list",
+        "authorized_service_center_search",
+        "get_current_date",
+        "phone_call",
+        "search_and_confirm_service_center",
+        "search_authorized_service_provider",
+        "select_nearest_working_day",
+        "service_area_check"
+      ],
+      "precision": 0.125,
+      "recall": 0.25,
+      "f1": 0.16666666666666666
+    },
+    {
+      "idx": 19,
+      "question": "I need to schedule a repair for my TV at 6 PM tomorrow evening. The brand is Sony, model X800H, and there is an issue with the screen. Please book the repair service and tell me the reservation number.\n",
+      "reference": [
+        "appliance_repair_request",
+        "find_authorized_service_provider",
+        "get_service_provider_contact",
+        "notify_user",
+        "select_nearest_service_provider"
+      ],
+      "selected": [
+        "appliance_repair_request",
+        "confirm_repair_support",
+        "confirm_service_area",
+        "find_official_repair_service_contact",
+        "select_nearest_service_provider",
+        "submit_new_repair_request"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 0.4,
+      "f1": 0.3636363636363636
+    },
+    {
+      "idx": 20,
+      "question": "I have recently been experiencing a lack of appetite, low-grade fever, and nausea, suspecting that I may have gastritis. I need to understand how to adjust my diet to alleviate the symptoms, and would like to know what medications should be taken if diagnosed with gastritis.",
+      "reference": [
+        "medical_knowledge_search"
+      ],
+      "selected": [
+        "generate_diet_plan",
+        "get_standard_treatment",
+        "medical_knowledge_search",
+        "self_care_advice_search"
+      ],
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1": 0.4
+    },
+    {
+      "idx": 21,
+      "question": "I need to modify the configuration file \"/etc/system.conf\" on the server, update the content to \"MaxConnections:100\", and then delete the no longer needed log file \"/var/log/old_logs.txt\".\n",
+      "reference": [
+        "check_file_deleted",
+        "file_delete",
+        "file_modify",
+        "ssh_connect",
+        "verify_file_content"
+      ],
+      "selected": [
+        "check_file_content",
+        "file_delete",
+        "file_modify",
+        "find_config_line",
+        "modify_section_title",
+        "system_file_upload"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 0.4,
+      "f1": 0.3636363636363636
+    },
+    {
+      "idx": 22,
+      "question": "I need a tool to calculate and tell me the population numbers of males and females in China for the year 2023, and to verify whether the sum of these two numbers equals the total population of China.",
+      "reference": [
+        "calculate_population_sum",
+        "compare_population",
+        "population_info_search"
+      ],
+      "selected": [
+        "calculate_population_sum",
+        "compare_population",
+        "population_info_search"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "idx": 23,
+      "question": "I need you to change the originally scheduled home cleaning service from next Wednesday to a service that offers eco-friendly cleaning options during 9 AM to 12 PM next Friday, and ensure that the service location remains at No.6 Jianguomenwai Avenue, Chaoyang District, Beijing. After the change, please provide the contact information of the service provider and the confirmation of the new booking time.",
+      "reference": [
+        "filter_cleaning_service",
+        "home_cleaning_booking",
+        "home_cleaning_cancelling",
+        "home_cleaning_query"
+      ],
+      "selected": [
+        "check_cleaning_changes",
+        "confirm_cleaning_availability",
+        "confirm_service_area",
+        "filter_cleaning_service",
+        "get_service_provider_contact",
+        "home_cleaning_changing",
+        "select_suitable_provider",
+        "service_area_check"
+      ],
+      "precision": 0.125,
+      "recall": 0.25,
+      "f1": 0.16666666666666666
+    },
+    {
+      "idx": 24,
+      "question": "I need to book a home cleaning service at 10 a.m. on December 1st to the address at No. 88 Jianguo Road, Chaoyang District, Beijing. I would also like to know if it is possible to change the time to 2 p.m. if it rains on that day, as well as how to check the detailed information of the changed booking, and tell me what information is needed to cancel the booking.",
+      "reference": [
+        "home_cleaning_booking",
+        "home_cleaning_cancelling",
+        "home_cleaning_changing",
+        "home_cleaning_query",
+        "weather_query"
+      ],
+      "selected": [
+        "find_original_booking",
+        "home_cleaning_booking",
+        "home_cleaning_changing",
+        "payment_options_query",
+        "provide_cancellation_info",
+        "retrieve_changed_ticket_info",
+        "send_booking_details"
+      ],
+      "precision": 0.2857142857142857,
+      "recall": 0.4,
+      "f1": 0.3333333333333333
+    },
+    {
+      "idx": 25,
+      "question": "Please rearrange the originally scheduled home cleaning service from next Wednesday to next Friday morning between 9 AM and 12 PM, and select a service provider with good reviews within the address range of No.6 Jianguomenwai Avenue, Chaoyang District, Beijing. After completing the booking, verify and confirm the service provider's reputation score and the new booking details.",
+      "reference": [
+        "check_provider_reputation",
+        "confirm_cleaning_availability",
+        "filter_good_reputation_cleaners",
+        "home_cleaning_booking",
+        "home_cleaning_cancelling"
+      ],
+      "selected": [
+        "check_provider_reputation",
+        "filter_good_reputation_cleaners",
+        "home_cleaning_changing",
+        "notify_user",
+        "order_details_api",
+        "send_booking_details",
+        "send_booking_info"
+      ],
+      "precision": 0.2857142857142857,
+      "recall": 0.4,
+      "f1": 0.3333333333333333
+    },
+    {
+      "idx": 26,
+      "question": "I need to book a home cleaning service at 10 a.m. on May 15, 2023, at No.1 Zhongguancun Street, Haidian District, Beijing, and change the service time to 2 p.m. on the same day after the booking is successful, and finally confirm and view the adjusted booking details.",
+      "reference": [
+        "home_cleaning_booking",
+        "home_cleaning_changing",
+        "home_cleaning_query"
+      ],
+      "selected": [
+        "check_and_change_booking_if_needed",
+        "check_cleaning_changes",
+        "find_original_booking",
+        "home_cleaning_booking",
+        "home_cleaning_changing",
+        "home_cleaning_query",
+        "payment_options_query",
+        "send_booking_details",
+        "send_booking_info"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5
+    },
+    {
+      "idx": 27,
+      "question": "Please organize and display all my schedule for this week, ensuring to use my schedule ID A123 to retrieve and arrange them in chronological order, and schedule a new meeting named 'Strategic Planning Meeting' at 10 a.m. this Wednesday in Meeting Room 5, setting it as the highest priority.",
+      "reference": [
+        "agenda_sorting",
+        "check_room_availability",
+        "manage_schedule",
+        "schedule_sorter"
+      ],
+      "selected": [
+        "check_agenda_for_date",
+        "schedule_meeting",
+        "schedule_sorter",
+        "search_meetings",
+        "select_and_fill_invitation_template",
+        "set_event_name",
+        "set_schedule_priority",
+        "show_agenda"
+      ],
+      "precision": 0.125,
+      "recall": 0.25,
+      "f1": 0.16666666666666666
+    },
+    {
+      "idx": 28,
+      "question": "I need to modify the configuration file config. on the server, changing the database connection string to \"db_connection\": \"Server:localhost;Database:mydb;User:myuser;Password:mypass\". Then delete a backup file named old_config_bak..\n",
+      "reference": [
+        "check_file_existence",
+        "file_delete",
+        "file_modify",
+        "ssh_connect"
+      ],
+      "selected": [
+        "file_delete",
+        "file_modify",
+        "text_replace"
+      ],
+      "precision": 0.6666666666666666,
+      "recall": 0.5,
+      "f1": 0.5714285714285715
+    },
+    {
+      "idx": 29,
+      "question": "I need a new daily report file, and add today's to-do items in it: 'Department meeting at 10 am, discuss new project progress with client Zhang San at 3 pm.'\n",
+      "reference": [
+        "file_modify",
+        "file_write"
+      ],
+      "selected": [
+        "check_pending_items",
+        "create_document",
+        "create_report",
+        "create_todo",
+        "generate_report",
+        "mark_activities_on_timeline",
+        "query_todo_deadline",
+        "retrieve_important_events",
+        "save_and_export_report",
+        "search_reminder",
+        "set_schedule_priority",
+        "time_management"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "idx": 30,
+      "question": "I need to first write a piece of text into the document temp.txt on the D drive, then change the words '临时' to '永久' in the file, and finally delete the file after confirming the changes are correct.\n",
+      "reference": [
+        "check_file_content",
+        "file_delete",
+        "file_modify",
+        "file_write"
+      ],
+      "selected": [
+        "check_summary",
+        "file_delete",
+        "file_write",
+        "text_replace"
+      ],
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    },
+    {
+      "idx": 31,
+      "question": "Can you help me log into my two different platform accounts and then check their account balances? The first account ID is 12345678, password is Password123; the second account ID is 87654321, password is 123Password.\n",
+      "reference": [
+        "account_balance_query",
+        "account_login"
+      ],
+      "selected": [
+        "account_balance_query",
+        "balance_query",
+        "display_account_balance",
+        "login_to_ordering_service",
+        "query_balance"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "f1": 0.28571428571428575
+    },
+    {
+      "idx": 32,
+      "question": "I would like to know today's stock trading information and make a stock purchase. My account number is 123456, and the password is password789. I plan to buy 100 shares of Tencent stock at a price of 450 yuan per share, with the transaction deadline set for 3 pm today.\n",
+      "reference": [
+        "account_login",
+        "check_balance",
+        "foreign_currency_purchase",
+        "stock_query"
+      ],
+      "selected": [
+        "complete_purchase_process",
+        "set_stock_trade_instruction",
+        "stock_buy",
+        "stock_price_query",
+        "stock_query"
+      ],
+      "precision": 0.2,
+      "recall": 0.25,
+      "f1": 0.22222222222222224
+    },
+    {
+      "idx": 33,
+      "question": "I want to check and purchase foreign exchange, my account ID is 12345, and the password is password123. I want to know how much Euro I have and how much RMB is needed to purchase 5000 US dollars.\n",
+      "reference": [
+        "account_login",
+        "calculate_exchange_amount",
+        "foreign_currency_query",
+        "get_exchange_rate"
+      ],
+      "selected": [
+        "check_current_balance",
+        "currency_conversion",
+        "currency_exchange_rate",
+        "currency_purchase_calculation",
+        "currency_type_selector",
+        "foreign_currency_query",
+        "get_exchange_rate"
+      ],
+      "precision": 0.2857142857142857,
+      "recall": 0.5,
+      "f1": 0.36363636363636365
+    },
+    {
+      "idx": 34,
+      "question": "I would like to inquire about the asset status of my corporate account and the recent transaction records. My account ID is 556677, and the password is Pwd2023.\n",
+      "reference": [
+        "account_login",
+        "account_logout",
+        "get_asset_overview",
+        "get_transaction_history"
+      ],
+      "selected": [
+        "get_asset_overview",
+        "get_recent_transaction"
+      ],
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333333333333333
+    },
+    {
+      "idx": 35,
+      "question": "I want to check my Japanese Yen account balance and purchase 5,000 Yen.\n",
+      "reference": [
+        "account_login",
+        "foreign_currency_purchase",
+        "foreign_currency_query"
+      ],
+      "selected": [
+        "currency_purchase_calculation",
+        "foreign_currency_purchase",
+        "foreign_currency_query",
+        "get_current_currency_price",
+        "get_current_exchange_rate"
+      ],
+      "precision": 0.4,
+      "recall": 0.6666666666666666,
+      "f1": 0.5
+    },
+    {
+      "idx": 36,
+      "question": "My account ID is 54321, and the password is PWD2023. I plan to make two foreign exchange transactions. The first is to buy 10,000 euros, and the second is to sell 5,000 US dollars. Please help me operate.\n",
+      "reference": [
+        "account_login",
+        "foreign_currency_purchase",
+        "foreign_currency_query",
+        "foreign_currency_sale"
+      ],
+      "selected": [
+        "account_balance_query",
+        "balance_query",
+        "calculate_exchange_amount",
+        "calculate_local_currency_amount",
+        "check_and_record_balance",
+        "check_balance",
+        "check_current_balance",
+        "currency_exchange_rate",
+        "currency_type_selector",
+        "current_balance_query",
+        "display_account_balance",
+        "display_current_balance",
+        "execute_sell",
+        "foreign_currency_exchange",
+        "foreign_currency_query",
+        "foreign_exchange_rate_search",
+        "special_foreign_currency_purchase"
+      ],
+      "precision": 0.058823529411764705,
+      "recall": 0.25,
+      "f1": 0.09523809523809523
+    },
+    {
+      "idx": 37,
+      "question": "I would like to check the latest debt status of my two credit cards, with card numbers 6222020003334444 and 6251098765432109, please help me handle it.\n",
+      "reference": [
+        "account_login",
+        "credit_card_debt"
+      ],
+      "selected": [
+        "credit_card_debt",
+        "credit_card_info_retrieval",
+        "currency_type_selector"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "f1": 0.4
+    },
+    {
+      "idx": 38,
+      "question": "I need to check my bank account balance and make a transfer. My account ID is 88888888, and the password is Pwd890.\n",
+      "reference": [
+        "account_login",
+        "balance_query",
+        "confirm_transfer",
+        "transfer_money"
+      ],
+      "selected": [
+        "display_account_balance"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "idx": 39,
+      "question": "I want to merge and transfer the balance from my two accounts into my main account, the account IDs are 9527 and 8848, and the password for both is Pwd123.\n",
+      "reference": [
+        "account_login",
+        "transfer_all_to_main_account"
+      ],
+      "selected": [
+        "account_balance_query",
+        "account_details",
+        "balance_query",
+        "display_account_balance",
+        "query_balance",
+        "record_account_balance",
+        "transfer_all_to_main_account"
+      ],
+      "precision": 0.14285714285714285,
+      "recall": 0.5,
+      "f1": 0.22222222222222224
+    },
+    {
+      "idx": 40,
+      "question": "I want to know the balances of my two accounts, which are 123456 and 654321, both passwords are Pwd2023.\n",
+      "reference": [
+        "account_balance_query",
+        "account_login"
+      ],
+      "selected": [
+        "account_balance_query",
+        "account_security_check",
+        "check_last_login_info",
+        "check_two_factor_authentication",
+        "get_last_login_time",
+        "savings_account_balance_query",
+        "verify_account_status"
+      ],
+      "precision": 0.14285714285714285,
+      "recall": 0.5,
+      "f1": 0.22222222222222224
+    },
+    {
+      "idx": 41,
+      "question": "I need to know the detailed information about the 'Happy Savings High Gold' deposit product, including its minimum deposit amount, annual interest rate, and deposit term. Also, I want to use my account number 123456 and password 789123 along with the most recently received verification code 8888 to apply for a loan, and I would like to know the review time for this loan application as well as how to check the status of all my current loan applications.",
+      "reference": [
+        "deposit_product_selection",
+        "detailed_inquiry",
+        "loan_application",
+        "loan_application_time"
+      ],
+      "selected": [
+        "deposit_product_selection",
+        "fixed_deposit_details",
+        "loan_application",
+        "loan_application_time"
+      ],
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75
+    },
+    {
+      "idx": 42,
+      "question": "I need to find a large-denomination time deposit product with an annual interest rate of about 3.5%, the initial deposit amount not exceeding 10,000 yuan, and choose a product named 'Youli Time Deposit' to make a fixed deposit of 5,000 yuan, while checking the current balance of my bank card number 6225880142567890.",
+      "reference": [
+        "account_login",
+        "bank_balance_query",
+        "deposit_product_search",
+        "fixed_deposit_transaction"
+      ],
+      "selected": [
+        "bank_balance_query",
+        "deposit_product_selection",
+        "fixed_deposit_details",
+        "purchase_fixed_deposit",
+        "savings_account_balance_query",
+        "search_customer_service",
+        "search_deposit_products"
+      ],
+      "precision": 0.14285714285714285,
+      "recall": 0.25,
+      "f1": 0.18181818181818182
+    },
+    {
+      "idx": 43,
+      "question": "I need to create a transaction for today (2023-05-13) using my account ID U123456 and merchant ID M654321 for a transaction of 1000 yuan, then change the description of this transaction to 'Purchase of office equipment', then delete this problematic transaction, and use my account ID U123456 to complain to customer service about the merchant, because the office equipment I purchased failed within a week and the merchant refused to provide after-sales service.",
+      "reference": [
+        "create_transaction",
+        "customer_service",
+        "del_transaction",
+        "modify_transaction"
+      ],
+      "selected": [
+        "complaint_merchant",
+        "create_transaction",
+        "del_transaction",
+        "find_transaction_id",
+        "modify_transaction",
+        "request_transaction_deletion",
+        "search_transaction_by_description"
+      ],
+      "precision": 0.42857142857142855,
+      "recall": 0.75,
+      "f1": 0.5454545454545454
+    },
+    {
+      "idx": 44,
+      "question": "I want to travel abroad and need to know how much euros I can get with 1000 US dollars, what is the current exchange rate of US dollars to Japanese yen, and how much US dollars I will get if I exchange 5000 Japanese yen.",
+      "reference": [
+        "currency_exchange_rate",
+        "foreign_currency_exchange"
+      ],
+      "selected": [
+        "currency_conversion",
+        "currency_exchange_rate",
+        "exchange_rate_converter",
+        "exchange_rate_query",
+        "get_exchange_rate"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "f1": 0.28571428571428575
+    },
+    {
+      "idx": 45,
+      "question": "Please inquire about the current debt amount of my credit card with the last five digits 12345, and deduct the corresponding 12000 RMB from my savings card number 6212345678900011 to repay this debt, then help me check the amount of the outstanding bill for the same credit card within 30 days after today.",
+      "reference": [
+        "account_login",
+        "credit_card_debt",
+        "credit_card_repayment"
+      ],
+      "selected": [
+        "check_balance",
+        "credit_card_debt",
+        "credit_card_info_retrieval",
+        "currency_type_selector",
+        "query_bill_details",
+        "savings_account_balance_query",
+        "view_recent_bill"
+      ],
+      "precision": 0.14285714285714285,
+      "recall": 0.3333333333333333,
+      "f1": 0.2
+    },
+    {
+      "idx": 46,
+      "question": "Please help me log into my online banking account using account ID 12345678, password abcd1234, and verification code 8888, then check the balance of my bank card 6225880112345678, and find a time deposit product with an annual interest rate of at least 3% and an initial deposit amount not exceeding 5000 yuan, and finally use my account funds to invest 5000 yuan in this product.",
+      "reference": [
+        "account_login",
+        "bank_balance_query",
+        "deposit_product_search",
+        "fixed_deposit_transaction"
+      ],
+      "selected": [
+        "account_login",
+        "bank_balance_query",
+        "deposit_product_search",
+        "login_gear",
+        "purchase_deposit_product",
+        "search_deposit_products"
+      ],
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6
+    },
+    {
+      "idx": 47,
+      "question": "I need to find a fixed deposit product with an interest rate of no less than 1.5%, the minimum deposit amount does not exceed 5000 yuan, and handle the business of depositing 5000 yuan, then check my bank card balance, and finally make a real-time remittance of 2000 yuan from this card to my brother Wang Qiang's account at the Bank of China, no need for postscripts or SMS notifications.",
+      "reference": [
+        "bank_balance_query",
+        "deposit_product_search",
+        "domestic_remittance",
+        "fixed_deposit_transaction"
+      ],
+      "selected": [
+        "bank_balance_query",
+        "create_fixed_deposit",
+        "detailed_inquiry",
+        "domestic_remittance",
+        "search_deposit_products",
+        "set_sms_notification"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "f1": 0.4
+    },
+    {
+      "idx": 48,
+      "question": "Please query and adjust the transaction record at the SuperMarket merchant for my account ID 123456789 from yesterday, change the incorrectly displayed amount of 300 yuan to the actual 500 yuan, then delete this modified transaction record, and report the issue of incorrect amount displayed by the system to customer service, requesting them to check the system to avoid similar errors in the future.",
+      "reference": [
+        "customer_service",
+        "del_transaction",
+        "find_transaction",
+        "modify_transaction"
+      ],
+      "selected": [
+        "check_for_similar_errors",
+        "del_transaction",
+        "filter_transactions_by_date",
+        "get_transaction_id",
+        "report_issue_to_customer_service",
+        "request_transaction_deletion",
+        "retrieve_transaction_details",
+        "search_and_confirm_transaction",
+        "update_financial_report",
+        "verify_transaction_amount"
+      ],
+      "precision": 0.1,
+      "recall": 0.25,
+      "f1": 0.14285714285714288
+    },
+    {
+      "idx": 49,
+      "question": "Please provide me with the current prices of gold, silver, and platinum, as well as their price change percentages for today, this week, this month, and this year. Also, verify if the price mentioned in my \"Gold Investment Purchase Agreement\" is consistent with the current market price, especially the clause that states 'Party A shall purchase 20 ounces of gold from Party B at the price of $1800 per ounce'.",
+      "reference": [
+        "contract_content_search",
+        "precious_metals_quotes_search"
+      ],
+      "selected": [
+        "precious_metals_quotes_search"
+      ],
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    {
+      "idx": 50,
+      "question": "I need to find a fixed deposit product with an annual interest rate of at least 4%, the initial deposit amount should not exceed 50,000 yuan, and to handle a deposit of 50,000 yuan from my ICBC card 622200202003056789, then I also need to check the balance of this card, the password is 998877.",
+      "reference": [
+        "account_login",
+        "bank_balance_query",
+        "deposit_product_search",
+        "fixed_deposit_transaction"
+      ],
+      "selected": [
+        "deposit_money",
+        "savings_account_balance_query",
+        "search_deposit_products"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "idx": 51,
+      "question": "Please perform a real-time query and inform me how much Japanese Yen can be exchanged with 5000 Chinese Yuan using the latest exchange rate, and also tell me how much Chinese Yuan is 100 Euros according to the current exchange rate.",
+      "reference": [
+        "currency_conversion"
+      ],
+      "selected": [
+        "currency_exchange_rate",
+        "exchange_rate_query",
+        "get_current_exchange_rate",
+        "get_exchange_rate"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "idx": 52,
+      "question": "First, I need to check the progress of my credit card application under my ID card, then check the balance of my ICBC (Industrial and Commercial Bank of China) card, and inquire about the debt amount of my China Merchants Bank credit card. Finally, I want to use the balance of my ICBC card to pay off the 500 yuan debt on my China Merchants Bank credit card.",
+      "reference": [
+        "bank_balance_query",
+        "credit_card_debt",
+        "credit_card_progress",
+        "credit_card_repayment"
+      ],
+      "selected": [
+        "bank_balance_query",
+        "credit_card_debt",
+        "credit_card_progress",
+        "credit_card_repayment",
+        "currency_type_selector",
+        "get_name_from_identity_number",
+        "receive_verification_code",
+        "validate_identity"
+      ],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "idx": 53,
+      "question": "Please create a transaction complaint using my account ID A123456 and merchant ID M654321, record the incorrect transaction amount of 299 yuan and the transaction time at 9 o'clock this morning, then immediately submit a complaint about receiving goods in the wrong color, and finally delete the transaction after the merchant agrees to refund and compensate me 50 yuan for the loss.",
+      "reference": [
+        "create_transaction",
+        "customer_service",
+        "del_transaction"
+      ],
+      "selected": [
+        "check_and_record_recent_transaction",
+        "complaint_merchant",
+        "filter_transactions_by_date",
+        "morning_time_range",
+        "request_transaction_deletion",
+        "verify_transaction_amount"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "idx": 54,
+      "question": "I need to create a transaction record at 5 PM today, with account ID 123456, merchant ID 78910, and the amount of 500 yuan. Then, I need to change the transaction description to \"Office Supplies Purchase\", followed by cancelling and deleting this transaction, and I would like to have a feature that allows customer service to set a reminder for me.",
+      "reference": [
+        "create_transaction",
+        "customer_service",
+        "del_transaction",
+        "modify_transaction"
+      ],
+      "selected": [
+        "check_transaction_cancellable",
+        "create_and_set_reminder",
+        "create_transaction",
+        "del_transaction",
+        "find_transaction_id",
+        "get_transaction_id",
+        "modify_transaction",
+        "receive_cancellation_confirmation",
+        "set_appointment_reminder",
+        "set_manual_reminder",
+        "set_reminder",
+        "set_single_reminder",
+        "set_study_reminder",
+        "set_task_reminder"
+      ],
+      "precision": 0.21428571428571427,
+      "recall": 0.75,
+      "f1": 0.3333333333333333
+    },
+    {
+      "idx": 55,
+      "question": "Please check the latest status of my two orders with the numbers 123456789 and 987654321, and confirm whether they are both associated with my customer ID A123456.",
+      "reference": [
+        "order_tracking"
+      ],
+      "selected": [
+        "check_delivery_status",
+        "check_order_status",
+        "order_tracking",
+        "retrieve_personal_info",
+        "search_transaction_by_description"
+      ],
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1": 0.33333333333333337
+    },
+    {
+      "idx": 56,
+      "question": "I need to use the ordering service to order 2 portions of Tomato and Eggs with ID 101 and 1 portion of Green Pepper Beef with ID 102, and I wish to confirm the details of the generated order.",
+      "reference": [
+        "checkout_api",
+        "menu_select_api",
+        "order_details_api"
+      ],
+      "selected": [
+        "menu_select_api",
+        "order_details_api"
+      ],
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8
+    },
+    {
+      "idx": 57,
+      "question": "I need to understand the overall evaluation of Chinese restaurants in Chaoyang District, Beijing, and also submit a 4-star review for the 'Manhan Quanxi' restaurant, mentioning the elegant environment and authentic Beijing roast duck. I would also like to view my previous review for the 'Jinmanlou' restaurant and predict the star rating I might give.",
+      "reference": [
+        "restaurant_review",
+        "restaurant_review_analyzer",
+        "restaurant_review_tool"
+      ],
+      "selected": [
+        "find_recommended_dishes",
+        "generate_review_draft",
+        "restaurant_review",
+        "restaurant_review_analyzer",
+        "restaurant_review_tool",
+        "search_good_reputation_restaurants",
+        "write_review_with_keywords"
+      ],
+      "precision": 0.42857142857142855,
+      "recall": 1.0,
+      "f1": 0.6
+    },
+    {
+      "idx": 58,
+      "question": "Please arrange a table for four at your restaurant at 7 o'clock tonight, and pre-order a tomato beef brisket pot and a steamed sea bass. Also, complete the payment in advance so that we can enjoy the meal directly.",
+      "reference": [
+        "checkout_api",
+        "menu_select_api",
+        "table_booking_api"
+      ],
+      "selected": [
+        "book_table",
+        "check_restaurant_availability",
+        "order_dishes"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "idx": 59,
+      "question": "Please book a serving of scrambled eggs with tomatoes and two servings of Kung Pao chicken for table number 8 at tonight's party, and help me check out after confirming the order.",
+      "reference": [
+        "checkout_api",
+        "menu_select_api",
+        "place_order"
+      ],
+      "selected": [
+        "check_dish_availability",
+        "confirm_order",
+        "confirm_order_via_email_or_sms",
+        "order_details_api",
+        "order_dishes"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "idx": 60,
+      "question": "I want to find Italian restaurants located in Central, especially those that have received customer reviews in the past month, and conduct sentiment analysis and star rating prediction for a restaurant named La Tavola, and finally, I would like to post a 4-star review saying 'The dishes are exquisite, but the service is a bit slow.'",
+      "reference": [
+        "restaurant_review",
+        "restaurant_review_analyzer",
+        "restaurant_review_tool"
+      ],
+      "selected": [
+        "find_recommended_dishes",
+        "restaurant_review",
+        "restaurant_review_analyzer",
+        "restaurant_review_tool",
+        "restaurant_search",
+        "search_good_reputation_restaurants"
+      ],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "idx": 61,
+      "question": "I need to host a party at home and would like to use a service to select 3 servings of Kung Pao Chicken and 5 servings of Shredded Pork with Green Pepper, add them to the same order, and assign it to my table ID 32. Then confirm the order, prepare the dishes, and help me complete the payment after a bill of 520 yuan is generated.",
+      "reference": [
+        "checkout_api",
+        "menu_select_api",
+        "place_order"
+      ],
+      "selected": [
+        "combine_orders",
+        "confirm_order",
+        "order_dishes",
+        "order_lunch",
+        "query_dish_id",
+        "search_food_preparation",
+        "sum_amounts",
+        "wechat_pay_api"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "idx": 62,
+      "question": "I am Zhang Sanli, I have booked a single room at H1234 Hotel, with the check-in date on January 1, 2023, and the check-out date on January 10, 2023. I now need to change the room type to a deluxe single room and change the check-out date to January 15, 2023.\n",
+      "reference": [
+        "hotel_booking_modification",
+        "hotel_booking_query"
+      ],
+      "selected": [
+        "check_and_change_room_type",
+        "confirm_room_type",
+        "find_original_booking",
+        "get_confirmation_number",
+        "hotel_availability_query",
+        "hotel_booking_modification"
+      ],
+      "precision": 0.16666666666666666,
+      "recall": 0.5,
+      "f1": 0.25
+    },
+    {
+      "idx": 63,
+      "question": "I booked a hotel last month with the confirmation number H12345678, for a single room from March 20, 2023, to March 25, 2023, 1 room. Now I want to change it to a double room and add one more room, with the check-in date unchanged. Please help me modify the reservation.\n",
+      "reference": [
+        "check_room_availability",
+        "hotel_booking_modification",
+        "hotel_booking_query"
+      ],
+      "selected": [
+        "calculate_checkout_date",
+        "check_and_change_room_type",
+        "confirm_additional_charges",
+        "get_booking_confirmation",
+        "hotel_booking_modification",
+        "search_double_room"
+      ],
+      "precision": 0.16666666666666666,
+      "recall": 0.3333333333333333,
+      "f1": 0.2222222222222222
+    },
+    {
+      "idx": 64,
+      "question": "I need to book the most luxurious hotel in Shanghai for May 1st to 5th, the customer's name is Zhang San, booking two suites.\n",
+      "reference": [
+        "check_room_availability",
+        "confirm_room_price_and_policy",
+        "hotel_booking_query",
+        "search_luxury_hotels"
+      ],
+      "selected": [
+        "calculate_checkout_date",
+        "filter_hotels_by_date",
+        "filter_hotels_by_room_type",
+        "hotel_booking",
+        "hotel_selection_and_verification",
+        "random_hotel_selector",
+        "search_luxury_hotels",
+        "select_room_for_booking",
+        "send_comparison_info_to_customer"
+      ],
+      "precision": 0.1111111111111111,
+      "recall": 0.25,
+      "f1": 0.15384615384615383
+    },
+    {
+      "idx": 65,
+      "question": "I need to wake up early tomorrow, I want to set an alarm for both 7:00 AM and 8:30 AM, and because there is an important meeting tomorrow, please change the 7:00 AM alarm to 6:30 AM, and change the original one-time setting to ring every weekday.\n",
+      "reference": [
+        "clock_alarm_change",
+        "clock_alarm_set"
+      ],
+      "selected": [
+        "change_alarm_date_and_time",
+        "clock_alarm_change",
+        "clock_alarm_set",
+        "set_alarm_label",
+        "set_new_alarm"
+      ],
+      "precision": 0.4,
+      "recall": 1.0,
+      "f1": 0.5714285714285715
+    },
+    {
+      "idx": 66,
+      "question": "I would like to book two meeting rooms in Beijing and Shanghai, each for 4 hours, with the meeting starting at 9 a.m. today.\n",
+      "reference": [
+        "conference_room_booking",
+        "conference_room_query"
+      ],
+      "selected": [
+        "find_and_book_meeting_room",
+        "meeting_reservation",
+        "search_and_book_conference_room",
+        "search_and_confirm_room_availability"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "idx": 67,
+      "question": "I would like to change a flight booking, originally scheduled for March 20th at 17:00, flight HU1234, from Beijing to Shanghai. I hope to change it to the same time on March 21st for flight HU4321, passenger name is Zhang San.\n",
+      "reference": [
+        "flight_search",
+        "flight_ticket_cancelling"
+      ],
+      "selected": [
+        "airline_ticket_search",
+        "book_new_flight",
+        "change_flight",
+        "confirm_and_select_seat",
+        "confirm_change_and_select_window_seat",
+        "flight_ticket_changing",
+        "query_flight_change_policy",
+        "query_flight_with_same_time",
+        "seat_selection",
+        "select_earliest_flight",
+        "send_change_confirmation"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "idx": 68,
+      "question": "I need to change the ticket for flight CA1234 from Beijing to Shanghai on April 10th to flight CA5678 on April 11th, with the passenger name being Li Ming.\n",
+      "reference": [
+        "flight_search",
+        "flight_ticket_changing",
+        "send_ticket"
+      ],
+      "selected": [
+        "change_flight",
+        "confirm_and_select_seat",
+        "flight_departure_time",
+        "flight_detail_search",
+        "query_flight_change_policy",
+        "query_flight_departure_info",
+        "retrieve_changed_ticket_info",
+        "send_change_confirmation"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "idx": 69,
+      "question": "I need to purchase a train ticket from Beijing to Shanghai, with a departure time of 8:00 AM on March 17th, and I also need to book a return ticket from Shanghai to Beijing, with a departure time of 3:00 PM on March 20th.\n",
+      "reference": [
+        "search_train",
+        "train_ticket_booking"
+      ],
+      "selected": [
+        "generate_train_ticket_booking_link",
+        "travel_route_search"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "idx": 70,
+      "question": "I need to go on a business trip to Beijing tomorrow, and I need to book a G102 train ticket from Shanghai to Beijing at 8 o'clock tomorrow morning. Also, I need to change the train ticket I booked last month for the G105 from Shanghai to Guangzhou on May 1st to May 3rd.\n",
+      "reference": [
+        "search_train",
+        "train_ticket_booking",
+        "train_ticket_changing",
+        "train_ticket_query"
+      ],
+      "selected": [
+        "book_specific_train",
+        "get_ticket_id_by_identity",
+        "query_past_ticket",
+        "recommend_seat_type",
+        "ticket_change_confirmation",
+        "train_ticket_change_query",
+        "train_ticket_changing"
+      ],
+      "precision": 0.14285714285714285,
+      "recall": 0.25,
+      "f1": 0.18181818181818182
+    },
+    {
+      "idx": 71,
+      "question": "I remember I last booked a train ticket from Beijing to Shanghai on April 18th, but now my plans have changed, and I need to change the ticket to April 20th, and I hope to switch to a soft sleeper seat, my ID number is 1234567890ABCDE.\n",
+      "reference": [
+        "search_train",
+        "train_ticket_changing",
+        "train_ticket_query"
+      ],
+      "selected": [
+        "get_original_ticket_info",
+        "select_and_change_ticket",
+        "ticket_change_confirmation",
+        "train_ticket_change_confirmation",
+        "train_ticket_change_query"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "idx": 72,
+      "question": "I need to cancel the hard sleeper ticket for train number G123 from Beijing to Shanghai tomorrow, my ID number is 123456789012345678, and then book a hard seat ticket for the train number G456 from Beijing to Hangzhou the day after tomorrow.\n",
+      "reference": [
+        "search_train",
+        "train_ticket_booking",
+        "train_ticket_cancelling",
+        "train_ticket_query"
+      ],
+      "selected": [
+        "book_specific_train",
+        "send_booking_info",
+        "train_ticket_cancelling"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 0.25,
+      "f1": 0.28571428571428575
+    },
+    {
+      "idx": 73,
+      "question": "Please help me book a train ticket from Beijing to Shanghai, and cancel my train ticket from December 5th last year, my ID number is 1234567890.\n",
+      "reference": [
+        "query_past_ticket",
+        "search_train",
+        "train_ticket_booking",
+        "train_ticket_cancelling"
+      ],
+      "selected": [
+        "query_past_ticket",
+        "recommend_seat_type",
+        "send_booking_info",
+        "train_best_value_selection",
+        "train_ticket_booking",
+        "train_ticket_cancelling"
+      ],
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6
+    },
+    {
+      "idx": 74,
+      "question": "I want to change my train ticket. The ticket number is T789412, my ID number is 44058219960403256X, I need to change to the Z106 train at 9:30 AM on April 1st, the starting and ending stations remain the same.\n",
+      "reference": [
+        "train_ticket_changing",
+        "train_ticket_query"
+      ],
+      "selected": [
+        "get_original_ticket_info",
+        "get_seat_type_by_ticket_number",
+        "query_flight_departure_info",
+        "ticket_change_confirmation",
+        "train_stops_query",
+        "train_ticket_change_query",
+        "train_ticket_changing",
+        "train_ticket_reschedule_info",
+        "validate_identity"
+      ],
+      "precision": 0.1111111111111111,
+      "recall": 0.5,
+      "f1": 0.1818181818181818
+    },
+    {
+      "idx": 75,
+      "question": "I have an emergency and need to go to Beijing tomorrow, but I have just booked a train ticket to Chengdu. The booking number of the train ticket is T12345, and my ID number is 110101198001011234. I need to change the ticket to Beijing and choose a sleeper ticket.\n",
+      "reference": [
+        "search_train",
+        "train_ticket_booking",
+        "train_ticket_cancelling",
+        "train_ticket_query"
+      ],
+      "selected": [
+        "complete_payment_if_necessary",
+        "filter_sleeper_options",
+        "highest_rated_train_search",
+        "route_query",
+        "search_for_ticket_order",
+        "select_and_change_ticket",
+        "select_best_ticket",
+        "ticket_change_confirmation",
+        "ticket_info_query",
+        "train_ticket_change_query",
+        "train_ticket_changing"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "idx": 76,
+      "question": "Please arrange for a vehicle pick-up service at 2 PM today from the company entrance to the R&D center, and handle the necessary external reception approval procedures so that Manager Li from Top Electronic Technology Co., Ltd. can successfully visit our R&D department's Director Zhang.",
+      "reference": [
+        "company_vehicle_service",
+        "outward_reception_approval",
+        "send_notifications"
+      ],
+      "selected": [
+        "arrange_driver",
+        "arrange_remote_connection_test",
+        "company_vehicle_service",
+        "outward_reception_approval",
+        "reserve_vehicle"
+      ],
+      "precision": 0.4,
+      "recall": 0.6666666666666666,
+      "f1": 0.5
+    },
+    {
+      "idx": 77,
+      "question": "I need to know the ticket price for the Great Wall trip on the morning of July 15th, confirm whether a reservation is needed, and where to purchase on which platform, as well as obtain the link to the official ticket purchasing process guide of that platform.",
+      "reference": [
+        "official_ticket_platform_search",
+        "scenic_spot_ticket_search"
+      ],
+      "selected": [
+        "check_agenda",
+        "check_free_admission_policy",
+        "official_ticket_platform_search",
+        "scenic_spot_ticket_search"
+      ],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "idx": 78,
+      "question": "Please find and recommend information on the price and user experience of Sichuan hydrangea within a budget of 200 yuan for me, then customize a personalized hydrangea souvenir with my name and the date of my trip to Chengdu on June 10th, using the Chengdu travel photos I provided, and purchase and send it from Chengdu Airport on the day I leave Chengdu on June 11th.",
+      "reference": [
+        "schedule_delivery",
+        "souvenir_purchase",
+        "souvenir_recommender",
+        "tourist_souvenir_creator"
+      ],
+      "selected": [
+        "browse_homepage",
+        "get_jd_price",
+        "schedule_delivery",
+        "souvenir_purchase_process",
+        "tourist_souvenir_creator"
+      ],
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444444444444445
+    },
+    {
+      "idx": 79,
+      "question": "As Li Ming from the Human Resources Department, I need to book a company car on Monday, August 28, 2023, at 9:00 AM to go from the company to the Convention Center to receive three clients from Brilliant Technology Company, and apply for external reception approval. Meanwhile, arrange internal procurement with a budget of 2000 RMB to purchase 50 sets of customized notebooks and pens as souvenirs, with the expenses accounted for in the public relations costs, and the approver is Director Zhang from our department.",
+      "reference": [
+        "company_vehicle_service",
+        "internal_purchase",
+        "outward_reception_approval",
+        "purchase_product"
+      ],
+      "selected": [
+        "arrange_remote_connection_test",
+        "department_structure_search",
+        "internal_purchase",
+        "outward_reception_approval",
+        "reserve_vehicle"
+      ],
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444444444444445
+    },
+    {
+      "idx": 80,
+      "question": "As a senior engineer in the technical department, I need to book a second-class seat train ticket for train G102 departing at 09:00 AM tomorrow from Shanghai to Beijing, and reserve a room at the Hilton Hotel in Haidian District from December 4th to 6th, ensuring that the hotel accommodation cost does not exceed 500 yuan per night, and includes a daily meal allowance of 150 yuan and a transportation allowance of 300 yuan.",
+      "reference": [
+        "business_travel_standard_search",
+        "submit_subsidy_application",
+        "train_ticket_booking"
+      ],
+      "selected": [
+        "book_specific_train",
+        "business_travel_standard_search",
+        "compare_price_and_select_room",
+        "complete_hotel_booking",
+        "filter_hotels_by_room_type",
+        "find_and_select_hotel",
+        "generate_train_ticket_booking_link",
+        "get_ticket_id_by_identity",
+        "hotel_id_lookup",
+        "search_hotels_within_budget",
+        "search_train",
+        "seat_availability_check",
+        "select_business_hotel",
+        "select_room_for_booking",
+        "submit_subsidy_application"
+      ],
+      "precision": 0.13333333333333333,
+      "recall": 0.6666666666666666,
+      "f1": 0.2222222222222222
+    },
+    {
+      "idx": 81,
+      "question": "Please plan a free-and-easy trip to Zhangjiajie for me from February 15, 2023, to February 20, 2023, including a budget within 5000 yuan for natural scenery and historical sites tour plan, and inquire about the round-trip route from Shanghai to Zhangjiajie, as well as local accommodation and food recommendations.",
+      "reference": [
+        "travel_info_search",
+        "travel_route_search"
+      ],
+      "selected": [
+        "calculate_checkout_date",
+        "food_recommendation",
+        "free_trip_planner",
+        "plan_daily_itinerary",
+        "scenic_spot_ticket_search",
+        "search_accommodation",
+        "search_attractions",
+        "search_early_flight",
+        "search_food_preparation",
+        "search_traditional_foods",
+        "travel_route_search"
+      ],
+      "precision": 0.09090909090909091,
+      "recall": 0.5,
+      "f1": 0.15384615384615385
+    },
+    {
+      "idx": 82,
+      "question": "To ensure a smooth photography trip to the Sahara Desert in Morocco for a week, please plan a travel backpack for me that does not exceed 10 kilograms, including outdoor photography essentials suitable for a dry climate, such as UV protection sun hat, long-sleeve breathable clothes, sunglasses, quick-dry pants, sunblock, photography equipment, power bank, and water bag, and ensure that the total weight of these items meets the requirements for outdoor photography travel.",
+      "reference": [
+        "purchase_missing_items",
+        "travel_backpack_checker",
+        "travel_backpack_generator",
+        "travel_backpack_inventory"
+      ],
+      "selected": [
+        "arrange_activities",
+        "calculate_equipment_weight_and_size",
+        "travel_assistant",
+        "travel_backpack_checker",
+        "travel_backpack_generator",
+        "travel_backpack_optimizer",
+        "travel_backpack_planner"
+      ],
+      "precision": 0.2857142857142857,
+      "recall": 0.5,
+      "f1": 0.36363636363636365
+    },
+    {
+      "idx": 83,
+      "question": "Please book a mid-size sedan with the ID A001 for me from 9 AM on December 20th to 5 PM on December 22nd, picking up the car in Shanghai and returning it in Nanjing. Then, check the car rental reservation status for this period, and change the return date to 10 AM on December 23rd. Finally, cancel this car rental reservation.",
+      "reference": [
+        "car_rental_booking",
+        "car_rental_cancelling",
+        "car_rental_changing",
+        "car_rental_query"
+      ],
+      "selected": [
+        "book_car",
+        "car_rental_cancelling",
+        "car_rental_changing",
+        "car_rental_query",
+        "check_car_availability",
+        "find_original_booking"
+      ],
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6
+    },
+    {
+      "idx": 84,
+      "question": "I need to plan a one-day trip to Disneyland for the whole family, including checking the park's opening hours on our planned date and the ticket prices for adults and a 10-year-old child, and listing the attractions suitable for a 10-year-old child so that we can enter the park at 9 a.m. when it opens and start having fun.",
+      "reference": [
+        "theme_park_attractions_search",
+        "theme_park_info_search",
+        "theme_park_ticket_search"
+      ],
+      "selected": [
+        "theme_park_attractions_search",
+        "theme_park_info_search",
+        "theme_park_ticket_search"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "idx": 85,
+      "question": "Please provide me with a detailed weather forecast for Shanghai on February 14, 2023, including temperature, humidity, and wind direction and speed. Also, book a business car for me, departing from the hotel in Pudong at 9 am on the same day to the airport. The driver's license type is C1, and there is no need to purchase additional insurance.",
+      "reference": [
+        "special_vehicle_rental_service",
+        "special_weather_forecast_tool"
+      ],
+      "selected": [
+        "company_vehicle_service",
+        "luxury_car_booking",
+        "reserve_vehicle",
+        "special_vehicle_rental_service",
+        "special_weather_forecast_tool",
+        "weather_query"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5
+    },
+    {
+      "idx": 86,
+      "question": "I need to book a meeting room in both Beijing and Shanghai for March 20th from 9 AM to 11 AM, with the topic \"Annual Sales Strategy\".\n",
+      "reference": [
+        "conference_room_booking",
+        "conference_room_query"
+      ],
+      "selected": [
+        "check_meeting_room_availability",
+        "get_attendees_list",
+        "hotel_booking_query",
+        "search_and_confirm_room_availability"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "idx": 87,
+      "question": "I need to organize a sales training meeting in Beijing, the meeting room reservation number is A203, and the meeting time is from 8 am tomorrow until 12 pm at noon. Additionally, considering there might be remote participants, I would also like to reserve an online meeting room, please help me arrange and confirm the reservation status.\n",
+      "reference": [
+        "conference_room_booking",
+        "conference_room_query",
+        "create_virtual_meeting",
+        "send_meeting_notification"
+      ],
+      "selected": [
+        "arrange_remote_connection_test",
+        "book_meeting",
+        "book_online_meeting_room",
+        "check_meeting_room_availability",
+        "check_room_booking_status",
+        "conference_room_booking",
+        "search_and_book_conference_room",
+        "select_best_online_meeting_service"
+      ],
+      "precision": 0.125,
+      "recall": 0.25,
+      "f1": 0.16666666666666666
+    },
+    {
+      "idx": 88,
+      "question": "I need to book a conference room in Shanghai, the room number is SH001, the meeting time is from 9 am to 11 am on March 20, 2023. Additionally, I need to cancel another conference room in Beijing, the room number is BJ002, the original meeting time was from 10 am to 3 pm on March 18, 2023.\n",
+      "reference": [
+        "conference_room_booking",
+        "conference_room_cancelling",
+        "conference_room_query"
+      ],
+      "selected": [
+        "conference_room_booking",
+        "conference_room_cancelling",
+        "conference_room_query"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "idx": 89,
+      "question": "I would like to change the reservation of meeting room No. 823 of the Beijing company, originally scheduled for March 20, 2023, from 14:00 to 16:00, to March 20, 2023, from 9:00 to 11:00.\n",
+      "reference": [
+        "check_meeting_room_availability",
+        "conference_room_booking",
+        "conference_room_cancelling",
+        "conference_room_query"
+      ],
+      "selected": [
+        "check_other_conference_room_facilities",
+        "conference_room_booking",
+        "conference_room_changing"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 0.25,
+      "f1": 0.28571428571428575
+    },
+    {
+      "idx": 90,
+      "question": "I need to change the meeting room reservation from 9 AM to 11 AM on April 6th in Shanghai's room 305 to 3 PM to 5 PM on April 7th, and check if there are any available meeting rooms for the new time slot.\n",
+      "reference": [
+        "conference_room_booking",
+        "conference_room_cancelling",
+        "conference_room_query"
+      ],
+      "selected": [
+        "conference_room_changing",
+        "search_and_confirm_available_room",
+        "search_and_confirm_room_availability"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "idx": 91,
+      "question": "A product launch event is scheduled at 3 PM in Shanghai, requiring the reservation of conference room number SH888, with the meeting time from 3 PM to 5 PM.\n",
+      "reference": [
+        "arrange_technical_staff",
+        "conference_room_booking",
+        "conference_room_query",
+        "send_meeting_invitations"
+      ],
+      "selected": [
+        "arrange_remote_connection_test",
+        "arrange_technical_staff",
+        "check_agenda",
+        "check_conference_room_seating",
+        "check_equipment_availability",
+        "check_room_booking_status",
+        "conference_room_booking",
+        "create_meeting_agenda",
+        "create_meeting_event",
+        "execute_event_on_day",
+        "get_attendees_list",
+        "schedule_meeting"
+      ],
+      "precision": 0.16666666666666666,
+      "recall": 0.5,
+      "f1": 0.25
+    },
+    {
+      "idx": 92,
+      "question": "I have an important meeting at 7 PM, I need to book a meeting room in Beijing, and write 'Welcome everyone to this meeting' on the whiteboard in the meeting room. Please help me arrange it.\n",
+      "reference": [
+        "assign_staff_to_meeting_room",
+        "book_and_pay_for_meeting_room",
+        "search_and_select_meeting_room",
+        "write_on_whiteboard"
+      ],
+      "selected": [
+        "check_room_booking_status",
+        "get_attendees_list",
+        "meeting_room_facilities_check",
+        "search_and_book_meeting_room",
+        "search_and_confirm_room_availability",
+        "search_meetings",
+        "write_on_whiteboard"
+      ],
+      "precision": 0.14285714285714285,
+      "recall": 0.25,
+      "f1": 0.18181818181818182
+    },
+    {
+      "idx": 93,
+      "question": "Arrange family gatherings at my house starting from November 26th, on the next four Sundays at 6 pm, and contact the nearby Italian restaurant two days in advance to find out if they offer special family gathering packages or services, and to obtain their menu and price list. Also, reserve two bouquets of mixed roses and lilies for decoration the day before each gathering, and ensure that the flowers are delivered between 4 pm and 5 pm on the day of the gathering to maintain their freshness.",
+      "reference": [
+        "add_periodic_event",
+        "contact_restaurant",
+        "order_flowers",
+        "schedule_flower_delivery"
+      ],
+      "selected": [
+        "contact_restaurant",
+        "create_family_gathering",
+        "find_florists",
+        "order_flowers",
+        "schedule_flower_delivery",
+        "validate_user_identity"
+      ],
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6
+    },
+    {
+      "idx": 94,
+      "question": "Please organize and export information for my two upcoming events. The first is the monthly operations team meeting held from 10 AM to 11 AM today in the company conference room, with the event ID OP12345. The second is the all-staff outdoor team-building activity taking place all day this Friday at the suburban Sunshine Lawn, with the event ID TB67890. Include the time, location, and detailed description for each event.",
+      "reference": [
+        "create_document_with_events",
+        "export_calendar",
+        "export_document_to_pdf"
+      ],
+      "selected": [
+        "create_meeting_event",
+        "draft_meeting_agenda",
+        "export_calendar",
+        "find_conference_room",
+        "get_location_coordinates",
+        "get_tour_group_details_by_name",
+        "invitation_manager",
+        "search_meetings",
+        "set_event_name",
+        "shared_calendar"
+      ],
+      "precision": 0.1,
+      "recall": 0.3333333333333333,
+      "f1": 0.15384615384615383
+    },
+    {
+      "idx": 95,
+      "question": "Please help me set up two recurring events. The first one is a weekly event named 'Friday Reading Night', which takes place every Friday at 7 PM in the multi-purpose hall of the city library. The second one is a monthly event named 'Monthly Department Meet-up', which occurs on the first Monday of every month at 9 AM in conference room 1 on the 5th floor of the company, and ensure that a unique event id is generated for each activity.",
+      "reference": [
+        "add_periodic_event",
+        "generate_unique_id"
+      ],
+      "selected": [
+        "calculate_next_friday_date",
+        "generate_unique_id",
+        "schedule_recurring_event",
+        "search_meetings"
+      ],
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1": 0.3333333333333333
+    },
+    {
+      "idx": 96,
+      "question": "I need to create a work plan, which includes adjusting my existing alarm clock from 6:30 AM every workday and 10:00 PM rest reminder to ring at 7:00 AM every day, and setting a new daily alarm at 7:00 AM as well as a one-time meeting reminder for 7:30 AM tomorrow.",
+      "reference": [
+        "clock_alarm_change",
+        "clock_alarm_set"
+      ],
+      "selected": [
+        "add_meeting_reminder",
+        "clock_alarm_change",
+        "confirm_existing_alarm",
+        "set_new_alarm"
+      ],
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1": 0.3333333333333333
+    },
+    {
+      "idx": 97,
+      "question": "My washing machine has encountered some problems, the brand is Haier, model XQB50-M808, there are issues with leaking and abnormal noise. Please help me schedule a repair service for tomorrow afternoon at 2 o'clock, my contact number is 13800138000, and my home address is Room 501, Unit 2, Building 10, Shaoyaoju, Chaoyang District, Beijing.\n",
+      "reference": [
+        "appliance_repair_request",
+        "check_service_provider_availability",
+        "confirm_repair_cost_and_payment",
+        "find_authorized_service_provider"
+      ],
+      "selected": [
+        "brand_service_filter",
+        "find_official_repair_service_contact",
+        "get_current_date",
+        "schedule_repair_service",
+        "search_appliance_issues",
+        "search_authorized_service_provider",
+        "select_next_weekday_afternoon"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "idx": 98,
+      "question": "My refrigerator is experiencing abnormal cooling issues, please help me schedule a repair service and perform a status check in two hours. My contact number is 13800138000, and the address is Zhangjiang Town, Pudong New District, Shanghai.\n",
+      "reference": [
+        "appliance_repair_request",
+        "appliance_repair_status_query",
+        "notify_user",
+        "set_reminder"
+      ],
+      "selected": [
+        "appliance_common_issues_list",
+        "appliance_repair_status_query",
+        "save_updated_contact_information",
+        "schedule_repair_service",
+        "search_appliance_issues",
+        "search_appliance_repair_providers",
+        "submit_new_repair_request"
+      ],
+      "precision": 0.14285714285714285,
+      "recall": 0.25,
+      "f1": 0.18181818181818182
+    },
+    {
+      "idx": 99,
+      "question": "My washing machine is malfunctioning, and I need to schedule a technician to come to my house for repairs. The brand of the washing machine is Little Swan, and the model is TCL-123. The problem is that there is a noise during the washing process. My contact number is 13122334455, and the address is in Nanhui New Town, Pudong New District, Shanghai. I hope the repair can be done tomorrow morning at 9 o'clock.\n",
+      "reference": [
+        "appliance_repair_request",
+        "call_service_provider",
+        "check_service_provider_coverage",
+        "search_authorized_service_provider"
+      ],
+      "selected": [
+        "appliance_common_issues_list",
+        "brand_service_filter",
+        "schedule_repair_service",
+        "search_appliance_issues",
+        "search_common_issues",
+        "search_repair_advice",
+        "select_nearest_service_provider",
+        "submit_new_repair_request",
+        "technician_arrival_confirmation"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  ]
+}
