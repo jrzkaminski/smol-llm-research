@@ -11,6 +11,10 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 HTTP_PROXY = os.getenv("HTTP_PROXY")
 LLM_MODEL = "gpt-4o-mini"
 
+OPENROUTER_KEY = os.getenv("OPENROUTER_KEY")
+OPENROUTER_URL = "https://openrouter.ai/api/v1"
+OPENROUTER_MODEL = "openai/gpt-4o-mini"
+
 K = 10
 SUBTASK_K = 5
 TOP_M = 15
