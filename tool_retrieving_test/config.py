@@ -83,3 +83,23 @@ Return ONLY a JSON array of tool calls following the format:
 
 Do NOT output any commentary.
 """
+
+REACT_AGENT_SYSTEM_PROMPT = """
+You are a reasoning assistant that helps identify missing information.
+
+Task: Given the original USER REQUEST and a list of TOOLS that have been selected to
+solve it (with their REQUIRED arguments), return the list of arguments that are
+NOT explicitly provided in the user request. For each missing argument output a
+short natural-language question that would allow to obtain that argument (do not
+mention the argument name literally if it would read unnatural).
+
+Return ONLY a JSON array of strings. Do NOT provide any additional commentary or
+keys. If every argument is already present in the user request, return an empty
+array [].
+
+USER REQUEST:
+"{user_request}"
+
+TOOLS WITH REQUIRED ARGS:
+{tools_and_args}
+"""

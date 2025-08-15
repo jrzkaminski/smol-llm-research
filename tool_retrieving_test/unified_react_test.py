@@ -28,6 +28,7 @@ from config import (
     HTTP_PROXY,
     PLANNER_AGENT_SYSTEM_PROMPT,
     AGENT_SYSTEM_PROMPT,
+    REACT_AGENT_SYSTEM_PROMPT,
 )
 from tool_utils import (
     load_benchmark,
@@ -141,6 +142,54 @@ def invoke_planner(
         return set()
 
 
+def invoke_argument_agent(
+    llm: ChatOpenAI,
+    user_request: str,
+    selected_tool_names: set[str],
+    tools_schema: dict[str, ToolSchema],
+) -> list[str]:
+    """Identify missing arguments via a single LLM call.
+
+    Returns a list of new sub-questions (one per missing argument).
+    """
+    if not selected_tool_names:
+        return []
+
+    lines: list[str] = []
+    for name in sorted(selected_tool_names):
+        schema = tools_schema.get(name)
+        if not schema:
+            continue
+        args_schema = schema.arguments
+        if not (args_schema and args_schema.properties):
+            continue
+        arg_list = ", ".join(args_schema.properties.keys())
+        lines.append(f"{name}: {arg_list}")
+
+    if not lines:
+        return []
+
+    tools_and_args_block = "\n".join(lines)
+
+    prompt = ChatPromptTemplate.from_messages(
+        [("human", REACT_AGENT_SYSTEM_PROMPT)]
+    ).format_prompt(
+        user_request=user_request,
+        tools_and_args=tools_and_args_block,
+    )
+    resp = llm.invoke(prompt).content
+
+    start, end = resp.find("["), resp.rfind("]")
+    json_str = resp[start : end + 1] if start != -1 and end != -1 else "[]"
+    try:
+        items = json.loads(json_str)
+        return (
+            [s for s in items if isinstance(s, str)] if isinstance(items, list) else []
+        )
+    except Exception:
+        return []
+
+
 def invoke_agent(
     llm: ChatOpenAI,
     user_request: str,
@@ -222,6 +271,35 @@ def main() -> None:
                 subtask_tools = set(planner_tools.keys())
 
             sub_schema = {name: tools_schema[name] for name in subtask_tools}
+
+            resp = invoke_agent(
+                llm=llm,
+                user_request=user_request,
+                subtask=subtask,
+                subset_schema=sub_schema,
+            )
+
+            selected_tools.update(parse_called_tools(resp))
+
+        react_subtasks = invoke_argument_agent(
+            llm=llm,
+            user_request=user_request,
+            selected_tool_names=selected_tools,
+            tools_schema=tools_schema,
+        )
+
+        for subtask in react_subtasks:
+            retrieved_docs = vectordb.similarity_search(subtask, k=SUBTASK_K)
+            subtask_tools = {doc.metadata["tool_name"] for doc in retrieved_docs}
+
+            if not subtask_tools:
+                subtask_tools = set(planner_tools.keys())
+
+            sub_schema = {
+                name: tools_schema[name]
+                for name in subtask_tools
+                if name in tools_schema
+            }
 
             resp = invoke_agent(
                 llm=llm,
