@@ -19,10 +19,11 @@ from simple_config import (
     BENCHMARK_PATH,
     TOOLS_PATH,
     TASK_K,
-    LLM_MODEL,
-    OPENAI_API_KEY,
     HTTP_PROXY,
     AGENT_SYSTEM_PROMPT,
+    OPENROUTER_KEY,
+    OPENROUTER_MODEL,
+    OPENROUTER_URL,
 )
 from tool_utils import (
     load_benchmark,
@@ -144,8 +145,9 @@ def main() -> None:
     )
 
     llm = ChatOpenAI(
-        model=LLM_MODEL,
-        api_key=OPENAI_API_KEY,
+        model=OPENROUTER_MODEL,
+        api_key=OPENROUTER_KEY,
+        base_url=OPENROUTER_URL,
         temperature=0,
         http_client=Client(proxy=HTTP_PROXY),
     )
