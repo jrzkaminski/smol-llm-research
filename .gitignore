@@ -168,3 +168,6 @@ agents_knowledge_base/.obsidian/
 
 # dev-files
 json_formatter.ipynb
+
+# md
+*.md

@@ -246,3 +246,25 @@ def format_tool_descriptions(tools: Dict[str, ToolSchema]) -> str:
             f"- {name}: {schema.description_expanded}\nArguments: {args_str}\nSyntetic questions for example: {schema.synthetic_questions}"
         )
     return "\n".join(desc)
+
+
+def simple_format_tool_descriptions(tools: Dict[str, ToolSchema]) -> str:
+    """Formats tool descriptions for the agent prompt, using the nested schema."""
+    if not tools:
+        return "No tools available for this category."
+    desc = []
+    for name, schema in tools.items():
+
+        args_str = "None"
+        if schema.arguments and schema.arguments.properties:
+            args_list = []
+            props = schema.arguments.properties
+            required = set(schema.arguments.required or [])
+            for arg_name, arg_props in props.items():
+                req_marker = " (required)" if arg_name in required else ""
+                args_list.append(
+                    f"{arg_name}: {arg_props.type}{req_marker} ({arg_props.description})"
+                )
+            args_str = ", ".join(args_list)
+        desc.append(f"- {name}: {schema.description}\nArguments: {args_str}")
+    return "\n".join(desc)
