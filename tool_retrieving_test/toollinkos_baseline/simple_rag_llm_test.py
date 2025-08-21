@@ -24,6 +24,7 @@ from simple_toollinkos_config import (
     OPENROUTER_MODEL,
     OPENROUTER_URL,
     AGENT_SYSTEM_PROMPT_NO_SUBTASKS,
+    AGENT_SYSTEM_PROMPT,
     PLANNER_AGENT_SYSTEM_PROMPT,
     ENABLE_DECOMPOSITION
 )
@@ -158,6 +159,24 @@ def invoke_agent(
     return llm.invoke(prompt).content
 
 
+def invoke_agent_subtask(
+    llm: ChatOpenAI,
+    user_request: str,
+    subtask: str,
+    subset_schema: dict[str, ToolSchema],
+) -> str:
+    """Single call of the tool-calling agent."""
+    desc_block = simple_format_tool_descriptions(subset_schema)
+    prompt = ChatPromptTemplate.from_messages(
+        [("human", AGENT_SYSTEM_PROMPT)]
+    ).format_prompt(
+        tool_descriptions=desc_block,
+        current_subtask=subtask,
+        user_request=user_request,
+    )
+    return llm.invoke(prompt).content
+
+
 def main() -> None:
     benchmark = load_benchmark(BENCHMARK_PATH)
     tools_schema = load_tools(TOOLS_PATH)
@@ -254,7 +273,7 @@ def main() -> None:
                     for doc in retrieved_docs
                     if doc.metadata["tool_name"] in tools_schema
                 }
-                tool_desc_block = format_tool_descriptions(planner_tools)
+                tool_desc_block = simple_format_tool_descriptions(planner_tools)
 
                 subtasks = invoke_planner(llm, user_request, tool_desc_block)
 
@@ -269,7 +288,7 @@ def main() -> None:
 
                     sub_schema = {name: tools_schema[name] for name in subtask_tools}
 
-                    resp = invoke_agent(
+                    resp = invoke_agent_subtask(
                         llm=llm,
                         user_request=user_request,
                         subtask=subtask,
