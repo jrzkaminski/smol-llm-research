@@ -220,7 +220,7 @@ def main() -> None:
         sys.exit("Failed to load benchmark or tools JSON.")
 
     st_model = SentenceTransformer(
-        "all-MiniLM-L6-v2", trust_remote_code=True
+        "Alibaba-NLP/gte-Qwen2-1.5B-instruct", trust_remote_code=True
     )
     st_model.max_seq_length = 8192
     embeddings = STEmbeddings(st_model)
