@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 TOOLS_PATH = "../../data/toollinkos/toollinkos_tools.json"
+EXPANDED_TOOLS_PATH = "../../data/toollinkos/toollinkos_tools_expanded.json"
 BENCHMARK_PATH = "../../data/toollinkos/instances.json"
 SEED = 42
 
@@ -20,6 +21,7 @@ SUBTASK_K = 5
 TOP_M = 15
 
 ENABLE_DECOMPOSITION = False
+ENABLE_EXPANDED = False
 
 PLANNER_AGENT_SYSTEM_PROMPT = """
 Rewrite the USER REQUEST as the smallest sequence of independent, solvable sub-requests.

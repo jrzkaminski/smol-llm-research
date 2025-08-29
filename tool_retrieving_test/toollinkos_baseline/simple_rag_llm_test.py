@@ -17,6 +17,7 @@ from langchain_openai import ChatOpenAI
 from simple_toollinkos_config import (
     BENCHMARK_PATH,
     TOOLS_PATH,
+    EXPANDED_TOOLS_PATH,
     K,
     SUBTASK_K,
     TOP_M,
@@ -26,15 +27,17 @@ from simple_toollinkos_config import (
     AGENT_SYSTEM_PROMPT_NO_SUBTASKS,
     AGENT_SYSTEM_PROMPT,
     PLANNER_AGENT_SYSTEM_PROMPT,
-    ENABLE_DECOMPOSITION
+    ENABLE_DECOMPOSITION,
+    ENABLE_EXPANDED
 )
 from tool_utils import (
     load_benchmark,
     load_tools,
     simple_format_tool_descriptions,
+    load_expanded_tools
 )
 
-from schemas import ToolSchema
+from schemas import ToolSchema, ExpandedToolSchema
 
 dotenv.load_dotenv()
 
@@ -84,6 +87,36 @@ def build_docs(
             f"{name}\n"
             f"{schema.description}\n"
             f"Arguments: {flat_args}\n"
+        )
+        docs.append(Document(page_content=page_text, metadata={"tool_name": name}))
+    return docs
+
+
+def build_docs_with_expanded_description(
+    tool_names: set[str], tools_schema: dict[str, ExpandedToolSchema]
+) -> list[Document]:
+    """Convert each tool into a LangChain Document for vector search."""
+    docs: list[Document] = []
+    for name in tool_names:
+        schema = tools_schema[name]
+        args_schema = schema.parameters
+        flat_args = ""
+        for param in args_schema:
+            if param:
+                flat_args += '\n'
+                arg_strings = [
+                    f"param_name: {param.name}",
+                    f"param_type: {param.type}",
+                    f"param_description: {param.description}",
+                ]
+                flat_args += " | ".join(arg_strings)
+        if flat_args == "":
+            flat_args = None
+        page_text = (
+            f"{name}\n"
+            f"{schema.description_expanded}\n"
+            f"Arguments: {flat_args}\n"
+            f"Synthetic questions: {schema.synthetic_questions}"
         )
         docs.append(Document(page_content=page_text, metadata={"tool_name": name}))
     return docs
@@ -179,17 +212,23 @@ def invoke_agent_subtask(
 
 def main() -> None:
     benchmark = load_benchmark(BENCHMARK_PATH)
-    tools_schema = load_tools(TOOLS_PATH)
+    if ENABLE_EXPANDED:
+        tools_schema = load_expanded_tools(EXPANDED_TOOLS_PATH)
+    else:
+        tools_schema = load_tools(TOOLS_PATH)
     if not benchmark or not tools_schema:
         sys.exit("Failed to load benchmark or tools JSON.")
 
     st_model = SentenceTransformer(
-        "Alibaba-NLP/gte-Qwen2-1.5B-instruct", trust_remote_code=True
+        "all-MiniLM-L6-v2", trust_remote_code=True
     )
     st_model.max_seq_length = 8192
     embeddings = STEmbeddings(st_model)
 
-    all_docs = build_docs(set(tools_schema), tools_schema)
+    if ENABLE_EXPANDED:
+        all_docs = build_docs_with_expanded_description(set(tools_schema), tools_schema)
+    else:
+        all_docs = build_docs(set(tools_schema), tools_schema)
     vectordb = Chroma.from_documents(
         documents=all_docs,
         embedding=embeddings,

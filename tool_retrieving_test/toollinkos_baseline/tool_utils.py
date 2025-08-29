@@ -11,6 +11,7 @@ from schemas import (
     SimpleToolProperty,
     AnyToolProperty,
     ToolIOSchema,
+    ExpandedToolSchema
 )
 
 
@@ -45,6 +46,19 @@ def load_tools(path: Path) -> Optional[Dict[str, ToolSchema]]:
     if data:
         try:
             tools_list = [ToolSchema.model_validate(item) for item in data]
+            return {tool.name: tool for tool in tools_list}
+        except Exception as e:
+            print(f"Error validating tool descriptions: {e}")
+            return None
+    return None
+
+
+def load_expanded_tools(path: Path) -> Optional[Dict[str, ExpandedToolSchema]]:
+    """Loads and validates tool descriptions, returning a dict keyed by tool name."""
+    data = load_json(path)
+    if data:
+        try:
+            tools_list = [ExpandedToolSchema.model_validate(item) for item in data]
             return {tool.name: tool for tool in tools_list}
         except Exception as e:
             print(f"Error validating tool descriptions: {e}")

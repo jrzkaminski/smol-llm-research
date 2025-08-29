@@ -55,6 +55,14 @@ class ToolSchema(BaseModel):
     parameters: List[ToolIOSchema] = None
 
 
+class ExpandedToolSchema(BaseModel):
+    name: str
+    description: str
+    parameters: List[ToolIOSchema] = None
+    description_expanded: str
+    synthetic_questions: List[str] = None
+
+
 class ToolCall(BaseModel):
     tool: str
     param: Dict[str, Any] = Field(default_factory=dict)
